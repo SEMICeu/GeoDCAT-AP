@@ -12,7 +12,7 @@ The current version of GeoDCAT-AP (v1.0.1) can be downloaded from:
 
 Any problems encountered, or suggestions for new functionalities can be submitted as [issues on the GeoDCAT-AP repository on GitHub](./issues/). 
 
-> :warning: The GeoDCAT-AP specification does not replace the [INSPIRE Metadata Regulation](http://eur-lex.europa.eu/eli/reg/com/2008/1205) nor the [INSPIRE Metadata technical guidelines based on ISO 19115 and ISO 19119](https://inspire.ec.europa.eu/id/document/tg/metadata-iso19139). Its purpose is give owners of geospatial metadata the possibility to achieve more by providing an additional RDF syntax binding.
+*The GeoDCAT-AP specification does not replace the [INSPIRE Metadata Regulation](http://eur-lex.europa.eu/eli/reg/com/2008/1205) nor the [INSPIRE Metadata technical guidelines based on ISO 19115 and ISO 19119](https://inspire.ec.europa.eu/id/document/tg/metadata-iso19139). Its purpose is give owners of geospatial metadata the possibility to achieve more by providing an additional RDF syntax binding.*
 
 ## Structure of the repository
 
