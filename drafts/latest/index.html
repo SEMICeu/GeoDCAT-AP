@@ -513,10 +513,16 @@
 <ul>
 <li><p>spatial resolution (see <a href="#spatial-resolution-spatial-resolution-of-the-dataset">Annex B, Section B.13</a>);</p></li>
 <li><p>data quality and conformity (<a href="#conformity-and-data-quality---not-in-iso19115-core">Annex B, Section B.14</a>);</p></li>
-<li><p>(coordinate and temporal) reference systems (<a href="#coordinate-reference-systems-and-temporal-reference-systems-reference-system">Annex B, Section B.23</a>).</p>
-<p>The alignments for these elements defined in the current version of GeoDCAT-AP must then be considered as unstable, and are meant to be replaced by appropriate terms defined in standard vocabularies (whether and when available). Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Spatial Data on the Web Working Group planned to standardise the representation of data granularity (which includes spatial resolution), data quality and conformity, and reference systems.</p></li>
-</ul></li>
+<li><p>(coordinate and temporal) reference systems (<a href="#coordinate-reference-systems-and-temporal-reference-systems-reference-system">Annex B, Section B.23</a>).</p></li>
 </ul>
+<p>The alignments for these elements defined in the current version of GeoDCAT-AP must then be considered as unstable, and are meant to be replaced by appropriate terms defined in standard vocabularies (whether and when available). Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Spatial Data on the Web Working Group planned to standardise the representation of data granularity (which includes spatial resolution), data quality and conformity, and reference systems.</p></li>
+</ul>
+<aside class="ednote">
+<p>For possible revisions to the provisional mappings describe above, see the following issues:</p>
+<div class="issue" data-number="3"></div>
+<div class="issue" data-number="7"></div>
+<div class="issue" data-number="2"></div>
+</aside>
 <p>The details of the alignments defined in GeoDCAT-AP are illustrated in the following section.</p>
 </section>
 </section>
@@ -3239,7 +3245,13 @@ prov:wasUsedBy [
 </pre>
 </aside>
 <p>The PROV-O-based approach might be revised in the future – but still supported for backward interoperability –, if future standard vocabularies will be able to address GeoDCAT-AP requirement.</p>
-</section><section id="conditions-for-access-and-use-and-limitations-on-public-access-use-limitation-and-access-other-constraints" class="Annex2"><h2>Conditions for access and use and limitations on public access – Use limitation and access / other constraints</h2>
+<aside class="ednote">
+<p>For possible revisions to how conformity is specified, see the following issue:</p>
+<div class="issue" data-number="7"></div>
+</aside>
+</section>
+<section id="conditions-for-access-and-use-and-limitations-on-public-access-use-limitation-and-access-other-constraints" class="Annex2">
+<h2>Conditions for access and use and limitations on public access – Use limitation and access / other constraints</h2>
 <p>In DCAT-AP, licensing information is specified on (a) data catalogues (services) and on (b) the distribution(s) of a dataset, and not on the dataset itself. The principle is that different dataset distributions may be associated with different licensing terms. Moreover, DCAT-AP recommends the use of <code>dct:accessRights</code> for specifying access conditions.</p>
 <p>Based on this, GeoDCAT-AP models use and access limitations by using, respectively, <code>dct:license</code> and <code>dct:accessRights</code>.</p>
 <p>Since the range of these properties is not a literal, but, respectively, classes <code>dct:LicenseDocument</code> and <code>dct:RightsStatement</code>, the free-text content of the corresponding ISO 19115 / INSPIRE metadata elements can be expressed by using <code>rdfs:label</code>, as illustrated in [[DCWIKI]].</p>
