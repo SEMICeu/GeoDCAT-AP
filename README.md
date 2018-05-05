@@ -16,7 +16,7 @@ Any problems encountered, or suggestions for new functionalities can be submitte
 
 ## Structure of the repository
 
-- [Releases](./releases/): GeoDCAT-AP releases (1.0, etc,); each release might have different distributions.
+- [Releases](./releases/): GeoDCAT-AP releases (1.0, etc.); each release might have different distributions.
 - [Working Drafts](./drafts/): Working drafts including revisions to the latest GeoDCAT-AP release.
 
 ## Licence
