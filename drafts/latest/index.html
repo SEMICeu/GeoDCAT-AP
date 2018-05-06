@@ -2324,7 +2324,11 @@
 <ul>
 <li><p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service">http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service</a></p></li>
 </ul>
-<p>For the reason explained above, the core profile of GeoDCAT-AP includes only the mappings for catalogue services (i.e., <code>dcat:Catalog</code>), whereas the mappings of other types of services are supported only in the extended profile of GeoDCAT-AP</p>
+<p>For the reason explained above, the core profile of GeoDCAT-AP includes only the mappings for catalogue services (i.e., <code>dcat:Catalog</code>), whereas the mappings of other types of services are supported only in the extended profile of GeoDCAT-AP.</p>
+
+<div class="issue" data-number="10">
+</div>
+
 <aside class="example">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>## Resource type for datasets
@@ -2477,6 +2481,10 @@
 </tr>
 </tbody>
 </table>
+
+<div class="issue" data-number="9">
+</div>
+
 <aside class="example">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>## Resource locator for datasets and series
@@ -2787,6 +2795,10 @@
 <h3>Keyword in services</h3>
 <p>As far as service metadata are concerned, keywords can classify either a service or the datasets / series operated by the service itself. For the latter, INSPIRE Metadata Regulation requires using at least one of the keywords from the ISO 19119 code list of spatial data service categories.</p>
 <p>Both DCAT and DCAT-AP do not foresee any specific property for keywords classifying either a service or the datasets / series operated by a service. Moreover, <code>dcat:theme</code> and <code>dcat:keyword</code> cannot be used for services, since their domain is restricted to <code>dcat:Dataset</code>.</p>
+
+<div class="issue" data-number="8">
+</div>
+
 <p>In order to keep the distinction between these two types of keywords, the proposed solution is as follows:</p>
 <ul>
 <li><p>Keywords from the ISO 19119 codelists of spatial data service type and categories are mapped to <code>dct:type</code>, and expressed by the corresponding URI in the INSPIRE Registry – reference registers:</p>
