@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
-
-	<head>
-		<title>GeoDCAT-AP (1.0.1.*)</title>
-		 <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+  <head>
+    <title>GeoDCAT-AP (v1.0.1.*)</title>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
     <meta content="width=device-width,initial-scale=1" name="viewport" />
     <meta name="generator" content="pandoc" />
     <script class="remove" src="./respec-isa-common.js"></script>
@@ -36,9 +35,9 @@
     <style type="text/css">
       table {font-size:small;}
     </style>
-	</head>
-
+  </head>
 <body>
+
 <!--
 <section id="document-metadata" class="introductory">
 <h2>Document Metadata</h2>
@@ -327,11 +326,15 @@
 </tbody>
 </table>
 </section>
-<section id="introduction"><h1>Introduction</h1>
+
+<section id="introduction">
+<h1>Introduction</h1>
 <p>This document contains the specification for GeoDCAT-AP, an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]] for describing geospatial datasets, dataset series, and services.</p>
 <p>Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better searchable across borders and sectors. This can be achieved by the exchange of descriptions of data sets among data portals. For this purpose, GeoDCAT-AP provides an RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 [[ISO-19115]] and those defined in the framework of the INSPIRE Directive [[INSPIRE-DIR]].</p>
 <p><strong>The GeoDCAT-AP specification does not replace the INSPIRE Metadata Regulation</strong> [[INSPIRE-MD-REG]] <strong>nor the INSPIRE Metadata technical guidelines</strong> [[INSPIRE-MD-20131029]] <strong>based on ISO 19115 and ISO 19119.</strong> Its purpose is to give owners of geospatial metadata the possibility to achieve more by providing the means of an <em>additional</em> implementation through harmonised RDF syntax bindings. Conversion rules to RDF syntax would allow Member States to maintain their collections of INSPIRE-relevant datasets following the INSPIRE Metadata technical guidelines based on ISO 19115 and ISO 19119 [[ISO-19119]], while at the same time publishing these collections on DCAT-AP-conformant data portals. A conversion to RDF syntax allows additional metadata elements to be displayed on general-purposed data portals, provided that such data portals are capable of displaying additional metadata elements. Additionally, data portals may be capable of providing machine-to-machine interfaces where additional metadata could be provided.</p>
-<section id="objectives"><h2>Objectives</h2>
+
+<section id="objectives">
+<h2>Objectives</h2>
 <p>The objective of this work is to define an <em>RDF syntax</em> that can be used for the exchange of descriptions of <em>spatial</em> datasets, dataset series, and services among data portals. The RDF syntax should extend the DCAT Application Profile for data portals in Europe [[DCAT-AP]].</p>
 <ul>
 <li><p>To provide an RDF syntax binding for the <em>union</em> of the elements in the INSPIRE metadata schema and the core profile of ISO 19115:2003. The guiding design principle is to make the resulting RDF syntax as simple as possible; thereby maximally using existing RDF vocabularies – such as the Dublin Core and DCAT-AP –, and as much as possible avoiding minting new terms. The defined syntax binding must enable the conversion of metadata records <em>from</em> ISO 19115 / INSPIRE <em>to</em> a harmonised RDF representation. The ability to convert metadata records from RDF to ISO 19115 / INSPIRE is not a requirement.</p></li>
@@ -346,7 +349,9 @@
 <li><p>To design executable transformation rules (i.e., an XSLT script [[GEODCAT-XSLT]]), as a reference implementation of the mappings defined in the GeoDCAT-AP specification.</p></li>
 <li><p>To define an RDF syntax binding for the elements in ISO 19115-1:2014.</p>
 </section>
-<section id="structure-of-this-document"><h2>Structure of this document</h2></li>
+
+<section id="structure-of-this-document">
+<h2>Structure of this document</h2></li>
 <p>This document consists of the following sections:</p>
 <ul>
 <li><p><a href="#introduction">Section 1</a> introduces this document;</p></li>
@@ -363,35 +368,49 @@
 <li><p><a href="#comparison-between-inspire-and-iso19115-12014">Annex C</a> carries out a comparison of INSPIRE metadata with ISO 19115-1:2014.</p></li>
 </ul>
 </section>
+
 </section>
-<section id="related-standards-and-work"><h1>Related standards and work</h1>
+
+<section id="related-standards-and-work">
+<h1>Related standards and work</h1>
 <p>This section contains an overview of related standards and work.</p>
-<section id="iso191152003-iso19139-and-iso19115-12014"><h2>ISO 19115:2003, ISO 19139 and ISO 19115-1:2014</h2>
+
+<section id="iso191152003-iso19139-and-iso19115-12014">
+<h2>ISO 19115:2003, ISO 19139 and ISO 19115-1:2014</h2>
 <p>ISO 19115:2003 [[ISO-19115]], a standard of the International Organization for Standardization (ISO), defines how to describe geographical information. ISO 19139 [[ISO-19139]] defines the XML-based implementation for ISO 19115.</p>
 <p>ISO 19115-1:2014 [[ISO-19115-1]] has superseded ISO 19115:2003. At the date of publication of this document, the XML-based implementation of ISO 19115-1:2014 (namely, ISO 19115-3), was finalised but not yet officially released. <a href="#comparison-between-inspire-and-iso19115-12014">Annex C</a> contains an overview of the most important changes.</p>
 <p>As documented in the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20131029]], the conformance of a metadata set to the core profile of ISO 19115 does not guarantee conformance to the INSPIRE metadata specifications, although there is a large correspondence.</p>
 </section>
-<section id="ogc-catalog-service-for-the-web"><h2>OGC Catalog Service for the Web</h2>
+
+<section id="ogc-catalog-service-for-the-web">
+<h2>OGC Catalog Service for the Web</h2>
 <p>Catalog Service for the Web (CSW) [[CSW]] is a standard of the Open Geospatial Consortium (OGC) for exposing a catalogue of geospatial records on the Web. It specifies <em>the interfaces, bindings, and a framework for defining application profiles required to publish and access digital catalogues of metadata for geospatial data, services, and related resource information. </em></p>
 <aside class="note">
 <p>A profile of CSW is used in the INSPIRE Technical Guidance on Discovery Services [[INSPIRE-DS]].</p>
 </aside>
 </section>
-<section id="inspire-metadata-regulation-and-inspire-metadata-technical-guidelines"><h2>INSPIRE Metadata Regulation and INSPIRE Metadata Technical Guidelines</h2>
+
+<section id="inspire-metadata-regulation-and-inspire-metadata-technical-guidelines">
+<h2>INSPIRE Metadata Regulation and INSPIRE Metadata Technical Guidelines</h2>
 <p>The INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20131029]] include rules for the description of resources based on ISO 19115 (datasets and series) and ISO 19119 (services), and by using their XML-based implementation defined in ISO 19139.</p>
 <p><a href="http://inspire.ec.europa.eu/">INSPIRE</a>
 <!--<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a>-->
 [[INSPIRE-DIR]] is a Directive of the European Parliament and of the Council aiming to establish a EU-wide spatial data infrastructure to give cross-border access to information that can be used to support EU environmental policies, as well as other policies or activities having an impact on the environment. The actual scope of this information corresponds to <a href="http://inspire.ec.europa.eu/theme">34 environmental themes</a>, covering also areas having cross-sector relevance – e.g., addresses, buildings, population distribution and demography.</p>
 <p>In order to ensure cross-border interoperability of data infrastructures operated by EU Member States, INSPIRE sets out a framework based on common specifications for metadata, data, network services, data and service sharing, monitoring and reporting. Such specifications consist of a set of implementing rules (which take the form of Commission Regulations, i.e., they are legally binding in the EU Member States), along with the corresponding technical guidelines, defined by a regulatory committee composed of representatives of both EU Member States and European Union bodies and institutions.</p>
 </section>
+
 <section id="dcat-and-dcat-ap"><h2>DCAT and DCAT-AP</h2>
 <p>The DCAT Application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]] is a specification based on the W3C’s Data Catalogue vocabulary (DCAT) [[VOCAB-DCAT]] for describing public sector datasets in Europe. Its basic use case is to enable cross-data portal search for data sets and make public sector data better searchable across borders and sectors. This can be achieved by the exchange of descriptions of datasets among data portals.</p>
 <p>The application profile is a specification for metadata records to meet the specific application needs of data portals in Europe, while providing semantic interoperability with other applications on the basis of reuse of established controlled vocabularies (e.g. EuroVoc) and mappings to existing metadata vocabularies (e.g., Dublin Core, SDMX, INSPIRE metadata, etc.).</p>
 </section>
-<section id="alignment-of-inspire-metadata-with-dublin-core"><h2>Alignment of INSPIRE metadata with Dublin Core</h2>
+
+<section id="alignment-of-inspire-metadata-with-dublin-core">
+<h2>Alignment of INSPIRE metadata with Dublin Core</h2>
 <p>In 2008, JRC published a report [[INSPIRE-DC]] on the progress made in defining the proper way of expressing elements of INSPIRE metadata in conformance with ISO 15836 (Dublin Core).</p>
 </section>
-<section id="alignment-of-inspire-metadata-with-dcat-ap"><h2>Alignment of INSPIRE metadata with DCAT-AP</h2>
+
+<section id="alignment-of-inspire-metadata-with-dcat-ap">
+<h2>Alignment of INSPIRE metadata with DCAT-AP</h2>
 <p>The GeoDCAT-AP specification builds upon prior work conducted by the European Commission’s Joint Research Centre in 2014. This work consisted of an alignment exercise between INSPIRE metadata and DCAT-AP (version 1.0) in the framework of ISA Action 1.17 [[INSPIRE-DCAT]]. The results of this alignment exercise, referred to as INSPIRE+DCAT-AP, are divided in two parts:</p>
 <ul>
 <li><p>A Core version which defines alignments for the <em>subset</em> of INSPIRE metadata elements supported by DCAT-AP.</p></li>
@@ -402,13 +421,17 @@
 <li><p>Some of the metadata elements in the core profile of ISO 19115 – i.e., those related to the metadata character set, metadata identifier and metadata standard. <em>The GeoDCAT-AP Extended profile – in this document – does provide an RDF syntax binding for these metadata elements</em>.</p></li>
 <li><p>The INSPIRE metadata elements recommended in the data specifications technical guidelines, summarised in Appendix B.2 to INSPIRE Metadata Technical Guidelines (version 1.3) [[INSPIRE-MD-20131029]]. <em>The GeoDCAT-AP Extended profile – in this document – provides a partial syntax binding for data quality (limited to conformity) and maintenance information (limited to maintenance and update frequency).</em></p>
 </section>
-<section id="alignment-of-eurovoc-gemet-inspire-themes"><h2>Alignment of EuroVoc – GEMET – INSPIRE themes</h2></li>
+
+<section id="alignment-of-eurovoc-gemet-inspire-themes">
+<h2>Alignment of EuroVoc – GEMET – INSPIRE themes</h2></li>
 <p>EuroVoc is a multilingual, multidisciplinary thesaurus covering the activities of the EU, and it is one of the controlled vocabularies recommended in DCAT-AP.</p>
 <p>The Publications Office of the EU has defined and published alignments between EuroVoc and other vocabularies, including those typically used in geospatial metadata – in particular, <a href="http://aims.fao.org/vest-registry/vocabularies/agrovoc-multilingual-agricultural-thesaurus">AGROVOC</a>, <a href="https://www.eionet.europa.eu/gemet/">GEMET</a>, the <a href="http://inspire.ec.europa.eu/theme">INSPIRE themes</a> and the <a href="http://inspire.ec.europa.eu/featureconcept">INSPIRE feature concept dictionary</a>. It is worth noting that the use of the INSPIRE themes is a legal obligation in INSPIRE metadata.</p>
 <p>These alignments are available from the Metadata Registry of the EU Publications Office:</p>
 <p><a href="http://publications.europa.eu/mdr/eurovoc/">http://publications.europa.eu/mdr/eurovoc/</a></p>
 </section>
-<section id="geodcat-ap-xslt-script-and-api"><h2>GeoDCAT-AP XSLT script and API</h2>
+
+<section id="geodcat-ap-xslt-script-and-api">
+<h2>GeoDCAT-AP XSLT script and API</h2>
 <p>In the context of ISA Action 1.17 (ARE3NA – Reusable INSPIRE Reference Platform) an XSLT script [[GEODCAT-XSLT]] was created, that can be used to transform ISO 19139 metadata into Geo/DCAT-AP. This XSLT is maintained on the Commission’s Git repository:</p>
 <p><a href="https://webgate.ec.europa.eu/CITnet/stash/projects/ODCKAN/repos/iso-19139-to-dcat-ap/">https://webgate.ec.europa.eu/CITnet/stash/projects/ODCKAN/repos/iso-19139-to-dcat-ap/</a></p>
 <p>The XSLT is complemented with documentation summarising how the GeoDCAT-AP specification has been implemented. This documentation includes:</p>
@@ -424,8 +447,11 @@
 <p>The source code of the API is available from the Commission’s Git repository:</p>
 <p><a href="https://webgate.ec.europa.eu/CITnet/stash/projects/ODCKAN/repos/iso-19139-to-dcat-ap/browse/api">https://webgate.ec.europa.eu/CITnet/stash/projects/ODCKAN/repos/iso-19139-to-dcat-ap/browse/api</a></p>
 </section>
+
 </section>
-<section id="motivation-and-use-cases"><h1>Motivation and use cases</h1>
+
+<section id="motivation-and-use-cases">
+<h1>Motivation and use cases</h1>
 <p>The basic use case that GeoDCAT-AP intends to enable is a cross-domain data portal search for datasets, as documented in the DCAT-AP specification [[DCAT-AP]]. GeoDCAT-AP will make it easier to share descriptions of spatial datasets between spatial data portals and general data portals, and thus help increase public and cross-sector access to such high value datasets. The datasets could include:</p>
 <ul>
 <li><p><strong>Datasets on the INSPIRE Geoportal</strong>. The <a href="http://inspire-geoportal.ec.europa.eu/">INSPIRE Geoportal</a> aggregates metadata for over 100k datasets across Europe. It provides the means to search for spatial data sets and spatial data services, and subject to access restrictions, to view spatial data sets from the EU Member States within the framework of the INSPIRE Directive. The metadata stored on this portal is structured according to the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20131029]]. In order to maximise visibility and re-use, spatial datasets could also be listed on general-purpose Open Data Portals, such as the <a href="http://data.europa.eu/euodp/">European Union Open Data Portal</a> (EU ODP)
@@ -445,8 +471,11 @@
 <p>An additional RDF syntax for INSPIRE and ISO 19115 metadata elements is beneficial, especially when other data portals support the DCAT-AP metadata elements only.</p>
 <p>Conversion rules to RDF syntax would allow Member States to maintain their collections of INSPIRE-relevant datasets following the INSPIRE Metadata Technical Guidelines based on ISO 19115 and ISO 19119, while at the same time publishing these collections on DCAT-AP-conformant data portals. A conversion to RDF syntax – using for example the GeoDCAT-AP XSLT script [[GEODCAT-XSLT]] - allows additional metadata elements to be displayed on general-purposed data portals, provided that such data portals are capable of displaying additional metadata elements. Furthermore, data portals frequently are complemented by a triple store, making that the full set of GeoDCAT-AP metadata can be queried through a SPARQL endpoint.</p>
 </section>
+
 </section>
-<section id="methodology-and-summary-of-results"><h1>Methodology and summary of results</h1>
+
+<section id="methodology-and-summary-of-results">
+<h1>Methodology and summary of results</h1>
 <p>Methodologically, the development of GeoDCAT-AP implied three main interrelated tasks:</p>
 <ol style="list-style-type: decimal">
 <li><p>Definition of alignment criteria and requirements.</p></li>
@@ -454,7 +483,9 @@
 <li><p>Definition of alignments for the metadata elements to be covered by GeoDCAT-AP.</p></li>
 </ol>
 <p>These tasks and their results are described in the following sections.</p>
-<section id="alignment-criteria-and-requirements"><h2>Alignment criteria and requirements</h2>
+
+<section id="alignment-criteria-and-requirements">
+<h2>Alignment criteria and requirements</h2>
 <p>The objective of the GeoDCAT-AP is twofold:</p>
 <ol style="list-style-type: decimal">
 <li><p>Provide a DCAT-AP-conformant representation of geospatial metadata.</p></li>
@@ -470,7 +501,9 @@
 <p>Finally, as already mentioned in <a href="#objectives">Section 1.1</a>, whenever no suitable candidates were available in existing vocabularies to represent geospatial metadata elements, the possibility of defining new terms was not excluded. However, this option needed to be carefully assessed, and discarded whenever it might have led to a specification that was conflicting with standards under preparation. For example, this was the case of the work carried out by the <a href="https://www.w3.org/2013/dwbp/">W3C Data on the Web Best Practices Working Group</a> and the <a href="https://www.w3.org/2015/spatial/">joint W3C/OGC Spatial Data on the Web Working Group</a>.</p>
 <p>As it will be explained in <a href="#alignments-defined-in-geodcat-ap">Section 4.3</a>, no new terms have been defined in the current version of GeoDCAT-AP.</p>
 </section>
-<section id="metadata-elements-to-be-covered-by-geodcat-ap"><h2>Metadata elements to be covered by GeoDCAT-AP</h2>
+
+<section id="metadata-elements-to-be-covered-by-geodcat-ap">
+<h2>Metadata elements to be covered by GeoDCAT-AP</h2>
 <p>The general criterion used for this task was that GeoDCAT-AP would ideally cover <em>all</em> the metadata elements of the core profile of ISO 19115 and those defined in INSPIRE, with the requirement that only <em>optional</em> elements <em>might</em> be excluded.</p>
 <p>Based on this, the current version of GeoDCAT-AP covers the following set of metadata elements:</p>
 <ul>
@@ -496,7 +529,9 @@
 </ul>
 <p>Support to these metadata elements might be provided in future versions of GeoDCAT-AP.</p>
 </section>
-<section id="alignments-defined-in-geodcat-ap"><h2>Alignments defined in GeoDCAT-AP</h2>
+
+<section id="alignments-defined-in-geodcat-ap">
+<h2>Alignments defined in GeoDCAT-AP</h2>
 <p>The alignments defined in the current version of GeoDCAT-AP are the result of an iterative revision process, following the criteria illustrated in the previous sections and the review of the GeoDCAT-AP WG.</p>
 <p>The work started with the review of the suite of specifications concerning the INSPIRE profile of DCAT-AP (INSPIRE+DCAT-AP) [[INSPIRE-DCAT]], and of the preliminary proposals concerning the metadata elements not covered by INSPIRE+DCAT-AP.</p>
 <p>In two specific cases, feedback has been asked to relevant standardisation bodies, in order to validate the proposal made in GeoDCAT-AP. In particular, this concerned feedback provided by the W3C Provenance Working Group on the use of the W3C PROV ontology to model responsible party roles and conformance results (data quality).</p>
@@ -526,10 +561,14 @@
 <p>The details of the alignments defined in GeoDCAT-AP are illustrated in the following section.</p>
 </section>
 </section>
-<section id="rdf-syntax-bindings-for-inspire-and-iso19115-metadata-elements"><h1>RDF syntax bindings for INSPIRE and ISO 19115 metadata elements </h1>
+
+<section id="rdf-syntax-bindings-for-inspire-and-iso19115-metadata-elements">
+<h1>RDF syntax bindings for INSPIRE and ISO 19115 metadata elements </h1>
 <p>The following sections provide the list of the bindings defined in GeoDCAT-AP for the RDF representation of INSPIRE metadata and the core profile of ISO 19115:2003.</p>
 <p>For detailed usage notes and examples of each of the metadata elements covered by GeoDCAT-AP, we refer the reader to <a href="#detailed-usage-notes-and-examples">Annex B</a> (the relevant section is specified in the “comments” column of the mapping table).</p>
-<section id="used-namespaces"><h2>Used namespaces</h2>
+
+<section id="used-namespaces">
+<h2>Used namespaces</h2>
 <p>Table 1 gives an overview of the namespaces (and prefixes) used in the remainder of this document.</p>
 <table id="table-1" class="simple">
 <caption>Table 1: Namespace prefixes</caption>
@@ -633,7 +672,9 @@
 -->
 
 </section>
-<section id="overview-of-bindings-for-geodcat-ap-core"><h2>Overview of bindings for GeoDCAT-AP Core</h2>
+
+<section id="overview-of-bindings-for-geodcat-ap-core">
+<h2>Overview of bindings for GeoDCAT-AP Core</h2>
 <p>Table 2 provides an overview of <strong>GeoDCAT-AP Core</strong>. This includes bindings for metadata elements of the INSPIRE metadata and metadata elements in the core profile of ISO 19115:2003 core <em>for which DCAT-AP provides an RDF syntax binding</em>. Those metadata elements for which DCAT-AP does not provide a binding are part of the GeoDCAT-AP Extended profile described in <a href="#overview-of-bindings-for-geodcat-ap-extended">Section 5.3</a>.</p>
 <p>GeoDCAT-AP Core is meant to enable the harvesting and re-use of spatial metadata records through DCAT-AP-conformant applications and services, including data portals and APIs. The alignments for INSPIRE and ISO 19115:2003 metadata elements that are not included in GeoDCAT-AP Core are defined in GeoDCAT-AP Extended, see <a href="#overview-of-bindings-for-geodcat-ap-extended">Section 5.3</a>.</p>
 <p>In addition to this, GeoDCAT-AP Core does not provide alignments from metadata records concerning services, with the only exception of catalogue or discovery services, which are the only ones supported in DCAT-AP.</p>
@@ -959,7 +1000,9 @@
 </table>
 
 </section>
-<section id="overview-of-bindings-for-geodcat-ap-extended"><h2>Overview of bindings for GeoDCAT-AP Extended</h2>
+
+<section id="overview-of-bindings-for-geodcat-ap-extended">
+<h2>Overview of bindings for GeoDCAT-AP Extended</h2>
 <p>This section provides an overview of the RDF syntax bindings in GeoDCAT-AP Extended. This GeoDCAT-AP profile covers elements defined in INSPIRE and the core profile of ISO 19115:2003, for which DCAT-AP does not provide a syntax binding. GeoDCAT-AP Extended is a <em>superset</em> of GeoDCAT-AP Core.</p>
 <p>Table 3 contains the suggested RDF syntax binding for INSPIRE metadata. In the table below, the starred elements (*) are used to indicate the corresponding metadata element in the core profile of ISO 19115:2003. For each metadata element, it is indicated whether the element is mandatory (M), optional (O), conditional (C), or recommended (R) in either specification.</p>
 <p>Please note that some metadata elements have an RDF syntax binding in both the GeoDCAT-AP Core and Extended profile. These elements fall in one of these categories:</p>
@@ -1192,7 +1235,9 @@
 
 </section>
 </section>
-<section id="controlled-vocabularies"><h1>Controlled vocabularies</h1>
+
+<section id="controlled-vocabularies">
+<h1>Controlled vocabularies</h1>
 <p>This section lists the controlled vocabularies that must be used according to the GeoDCAT-AP Core Profile and the GeoDCAT-AP Extended Profile.</p>
 <table id="table-4" class="simple">
 <caption>Table 4: Controlled vocabularies to be used</caption>
@@ -1364,6 +1409,7 @@
 </ul></li>
 </ul>
 </section>
+
 <section id="acknowledgements">
 <h1 class="ListParagraph">Acknowledgements</h1>
 <p>This work was elaborated by a Working Group under the ISA programme. The Working Group was chaired by <strong>Andrea Perego</strong> from the Joint Research Centre of the European Commission. The ISA Programme of the European Commission was represented by <strong>Vassilios Peristeras</strong> and <strong>Athanasios Karalopoulos</strong>. <strong>Andrea Perego</strong> and <strong>Stijn Goedertier</strong> were the editors of the specification.</p>
@@ -1902,9 +1948,12 @@
 -->
 </section>
 </section>
-<section id="overview-of-metadata-elements-covered-by-geodcat-ap" class="appendix"><h1>Overview of metadata elements covered by GeoDCAT-AP</h1>
+
+<section id="overview-of-metadata-elements-covered-by-geodcat-ap" class="appendix">
+<h1>Overview of metadata elements covered by GeoDCAT-AP</h1>
 <p>The following table provides an overview of the metadata elements in the INSPIRE metadata schema and in the core profile of ISO 19115, and the available mappings in DCAT-AP and GeoDCAT-AP. Columns titled with “obligation” specify whether the corresponding metadata elements are mandatory (M), conditional (C), and optional (O) (where “conditional” means “mandatory under given conditions”).</p>
 <p>Note that the mappings covered by DCAT-AP correspond to those defined in GeoDCAT-AP <em>core</em>, whereas those covered only by GeoDCAT-AP correspond to those defined in the GeoDCAT-AP <em>extended</em>.</p>
+
 <table id="table-5" class="simple">
 <caption>Table 5: Overview of covered metadata elements</caption>
 <thead>
@@ -2194,11 +2243,15 @@
 </table>
 </section>
 
-<section id="detailed-usage-notes-and-examples" class="appendix"><h1>Detailed usage notes and examples</h1>
+<section id="detailed-usage-notes-and-examples" class="appendix">
+<h1>Detailed usage notes and examples</h1>
 <p>This annex contains further usage notes and examples on the mappings summarised in <a href="#rdf-syntax-bindings-for-inspire-and-iso19115-metadata-elements">Section 5</a> of the GeoDCAT-AP specification.</p>
-<section id="resource-title---dataset-title" class="Annex2"><h2>Resource title - *Dataset title </h2>
+
+<section id="resource-title---dataset-title">
+<h2>Resource title - *Dataset title </h2>
 <p>The content of the element ‘resource title’ can be represented in RDF as a plain literal, and by using property <code>dct:title</code>.</p>
 <p>This binding may also include the specification of the language by using attribute <code>@xml:lang</code> [[XML]]. The language to be specified is the one indicated by element metadata language, mapped to the language identifiers defined by IETF BCP 47 [[BCP47]].</p>
+
 <aside class="example">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>[] dct:title &quot;Forest / Non-Forest Map 2006&quot;@en.</pre>
@@ -2221,8 +2274,11 @@
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
 </aside>
+
 </section>
-<section id="resource-abstract---abstract-describing-the-dataset" class="Annex2"><h2>Resource abstract - *Abstract describing the dataset</h2>
+
+<section id="resource-abstract---abstract-describing-the-dataset">
+<h2>Resource abstract - *Abstract describing the dataset</h2>
 <p>The content of the elements ‘resource abstract’ can be represented in RDF as a plain literal, and by using property <code>dct:description</code>.</p>
 <p>This binding may also include the specification of the language by using attribute <code>@xml:lang</code> [[XML]]. The language to be specified is the one indicated by element metadata language, mapped to the language identifiers defined by IETF BCP 47 [[BCP47]].</p>
 <aside class="example">
@@ -2254,7 +2310,9 @@
 &lt;/gmd:MD_Metadata&gt;</pre>
 </aside>
 </section>
-<section id="resource-type---not-in-iso19115-core" class="Annex2"><h2>Resource type - *not in ISO 19115 core</h2>
+
+<section id="resource-type---not-in-iso19115-core">
+<h2>Resource type - *not in ISO 19115 core</h2>
 <p>In [[VOCAB-DCAT]], the notion of dataset is quite broad, and may include both the INSPIRE notions of <strong>dataset</strong> and <strong>dataset series</strong>. Moreover, currently no existing vocabulary provides suitable candidates for the INSPIRE notions of dataset series – the existing ones are very generic (e.g., <code>dctype:Collection</code> is defined as &quot;An aggregation of resources&quot; [[DCTERMS]]).</p>
 <p>Based on this, in GeoDCAT-AP both INSPIRE datasets and dataset series are specified as instances of <code>dcat:Dataset</code>.</p>
 <p>Moreover, in order to maintain the INSPIRE distinction between datasets and dataset series, following the work on aligning INSPIRE Metadata and Dublin Core [[INSPIRE-DC]], in the extended profile of GeoDCAT-AP they will be denoted by using the resource type code list operated by the INSPIRE Registry, and by using <code>dct:type</code>. More precisely, the following URIs should be used to denote, respectively, dataset and series:</p>
@@ -2330,7 +2388,9 @@
 &lt;/gmd:MD_Metadata&gt;</pre>
 </aside>
 </section>
-<section id="resource-locator---on-line-resource" class="Annex2"><h2>Resource locator - *On-line resource</h2>
+
+<section id="resource-locator---on-line-resource">
+<h2>Resource locator - *On-line resource</h2>
 <p>In INSPIRE, this element, quoting, “defines the link(s) to the resource and/or the link to additional information about the resource”.</p>
 <p>For datasets, [[VOCAB-DCAT]] foresees a property, namely, <code>dcat:landingPage</code>, having exactly the same purpose. By contrast, the only property foreseen in DCAT for linking a service to an online resource is <code>foaf:homepage</code>.</p>
 <p>ISO 19115 offers however the ability to specify the “type” of resource locator by using a specific code list (CI_OnlineFunctionCode), described in the following table:</p>
@@ -2484,7 +2544,10 @@
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
 </aside>
-</section><section id="unique-resource-identifier---not-in-iso19115-core" class="Annex2"><h2>Unique resource identifier - *not in ISO 19115 core</h2>
+</section>
+
+<section id="unique-resource-identifier---not-in-iso19115-core">
+<h2>Unique resource identifier - *not in ISO 19115 core</h2>
 <p>In INSPIRE, this element is meant to uniquely identify a resource (dataset, series or service), and it is mandatory for datasets and series. It is specified by (a) a <em>mandatory</em> character string code and by (b) an <em>optional</em> character string namespace.</p>
 <p>Based on DCAT-AP, unique resource identifiers are mapped to <code>dct:identifier</code> (see the following example). The actual value is obtained by the concatenation of the values of the namespace (if specified) and of the code in the original metadata record.</p>
 <aside class="example">
@@ -2559,7 +2622,10 @@
   ...
 &lt;/gmd:MD_Metadata&gt;</td>
 </aside>
-</section><section id="coupled-resource---not-in-iso19115-core" class="Annex2"><h2>Coupled resource - *not in ISO 19115 core</h2>
+</section>
+
+<section id="coupled-resource---not-in-iso19115-core">
+<h2>Coupled resource - *not in ISO 19115 core</h2>
 <p>This element is used to link a service to the target datasets or dataset series.</p>
 <p>This relationship is modelled by using <code>dct:hasPart</code>. This mapping is supported only in the extended profile of GeoDCAT-AP.</p>
 <aside class="note">
@@ -2608,7 +2674,10 @@
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
 </aside>
-</section><section id="resource-language-and-metadata-language---dataset-language-and-metadata-language" class="Annex2"><h2>Resource language and metadata language - *Dataset language and Metadata language</h2>
+</section>
+
+<section id="resource-language-and-metadata-language---dataset-language-and-metadata-language">
+<h2>Resource language and metadata language - *Dataset language and Metadata language</h2>
 <p>In INSPIRE metadata, metadata and resource languages (which may be different) are specified by using the three-letter language codes defined in [[ISO-639-2]].</p>
 <p>Based on DCAT-AP, both elements are specified with property <code>dct:language</code>, with the URI of the relevant language available from the relevant register operated by the EU Publications Office [[MDR-LANG]].</p>
 <p>The following example assumes that the metadata language is Dutch, and the resource language is German.</p>
@@ -2648,7 +2717,10 @@
 </aside>
 <p>The metadata language can be also used to specify the language of textual elements of resource metadata by using the <code>@xml:lang</code> attribute [[XML]].</p>
 <p>Since <code>@xml:lang</code> takes as value language identifiers defined by IETF BCP 47 [[BCP47]], a mapping from the actual value of the metadata language is needed.</p>
-</section><section id="topic-category-originating-controlled-vocabulary-and-keyword-value---dataset-topic-category" class="Annex2"><h2>Topic category, originating controlled vocabulary, and keyword value - *Dataset topic category</h2>
+</section>
+
+<section id="topic-category-originating-controlled-vocabulary-and-keyword-value---dataset-topic-category">
+<h2>Topic category, originating controlled vocabulary, and keyword value - *Dataset topic category</h2>
 <p>In INSPIRE, these two elements have specific purposes. Quoting from the INSPIRE Metadata Regulation [[INSPIRE-MD-REG]] (<a href="http://data.europa.eu/eli/reg/2008/1205#d1e233-14-1">§2.1</a> and <a href="http://data.europa.eu/eli/reg/2008/1205#d1e233-14-1">§3.1</a>, respectively):</p>
 <ul>
 <li><p>The topic category is a high-level classification scheme to assist in the grouping and topic-based search of available spatial data resources.</p></li>
@@ -2660,7 +2732,8 @@
 <li><p>keywords taken from a controlled vocabulary.</p></li>
 </ul>
 <p>Finally, topic categories apply only to datasets and dataset series.</p>
-<section id="topic-category-and-keyword-in-datasets-and-dataset-series" class="Annex3">
+
+<section id="topic-category-and-keyword-in-datasets-and-dataset-series">
 <h3>Topic category and keyword in datasets and dataset series</h3>
 <p>As far as dataset metadata are concerned, in both DCAT and DCAT-AP, a distinction is made only between free keywords and keywords from controlled vocabularies, associated with a URI. For the former, <code>dcat:keyword</code> is used, whereas for the latter <code>dcat:theme</code> (which is a sub-property of <code>dct:subject</code>). Since the INSPIRE Registry operates URI registers for topic categories and INSPIRE spatial data themes, and in order to keep the distinction existing in INSPIRE between topic categories and keywords, the mapping is as follows:</p>
 <ul>
@@ -2709,7 +2782,8 @@
 <p>At the date of publication of this specification, work is under-way to define a set of harmonised mappings between the relevant vocabularies. The status of this work, and links to a machine readable representation of the mappings, is documented on the dedicated page on Joinup, available at:</p>
 <p><a href="https://joinup.ec.europa.eu/node/148245/">https://joinup.ec.europa.eu/node/148245/</a></p>
 </section>
-<section id="keyword-in-services" class="Annex3">
+
+<section id="keyword-in-services">
 <h3>Keyword in services</h3>
 <p>As far as service metadata are concerned, keywords can classify either a service or the datasets / series operated by the service itself. For the latter, INSPIRE Metadata Regulation requires using at least one of the keywords from the ISO 19119 code list of spatial data service categories.</p>
 <p>Both DCAT and DCAT-AP do not foresee any specific property for keywords classifying either a service or the datasets / series operated by a service. Moreover, <code>dcat:theme</code> and <code>dcat:keyword</code> cannot be used for services, since their domain is restricted to <code>dcat:Dataset</code>.</p>
@@ -2889,10 +2963,14 @@
 </aside>
 </section>
 </section>
-<section id="spatial-data-service-type---not-in-iso19115-core" class="Annex2">
+
+<section id="spatial-data-service-type---not-in-iso19115-core">
 <h2>Spatial data service type - *not in ISO 19115 core</h2>
 <p>See <a href="#resource-type---not-in-iso19115-core">Annex B, Section B.3</a> on resource type.</p>
-</section><section id="geographic-bounding-box---geographic-location-of-the-dataset-by-4-coordinates-or-by-geographic-identifier" class="Annex2"><h2>Geographic bounding box - *Geographic location of the dataset (by 4 coordinates or by geographic identifier)</h2>
+</section>
+
+<section id="geographic-bounding-box---geographic-location-of-the-dataset-by-4-coordinates-or-by-geographic-identifier">
+<h2>Geographic bounding box - *Geographic location of the dataset (by 4 coordinates or by geographic identifier)</h2>
 <p>In the core profile of ISO 19115, spatial coverage can be specified either with a bounding box (a geometry) or a geographic identifier. INSPIRE is more restrictive, in that it requires to use a bounding box</p>
 <p>Based on that, GeoDCAT-AP models spatial coverage as follows:</p>
 <ul>
@@ -3002,7 +3080,10 @@
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
 </aside>
-</section><section id="temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp" class="Annex2"><h2>Temporal reference and metadata date –*Additional extent information for the dataset (vertical and temporal) and *Metadata date stamp</h2>
+</section>
+
+<section id="temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp">
+<h2>Temporal reference and metadata date –*Additional extent information for the dataset (vertical and temporal) and *Metadata date stamp</h2>
 <p>Temporal reference is a composite element consisting of the following possible child elements:</p>
 <ul>
 <li><p>temporal extent (temporal coverage);</p></li>
@@ -3086,7 +3167,10 @@
   &lt;/gmd:identificationInfo&gt;
 &lt;/gmd:MD_Metadata&gt;</pre>
 </aside>
-</section><section id="lineage---lineage" class="Annex2"><h2>Lineage - *Lineage</h2>
+</section>
+
+<section id="lineage---lineage">
+<h2>Lineage - *Lineage</h2>
 <p>Following DCAT-AP, this element is mapped to property <code>dct:provenance</code>.</p>
 <p>Since the range of <code>dct:provenance</code> is not a literal, but class <code>dct:ProvenanceStatement</code>, the free-text content of element “lineage” can be expressed by using <code>rdfs:label</code>, as illustrated in the DCMI user guide on publishing metadata [[DCWIKI]].</p>
 <aside class="example">
@@ -3117,7 +3201,10 @@
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
 </aside>
-</section><section id="spatial-resolution-spatial-resolution-of-the-dataset" class="Annex2"><h2>Spatial resolution – Spatial resolution of the dataset</h2>
+</section>
+
+<section id="spatial-resolution-spatial-resolution-of-the-dataset">
+<h2>Spatial resolution – Spatial resolution of the dataset</h2>
 <p>In DCAT-AP, no equivalent term is foreseen.</p>
 <p>There are currently no candidates in existing vocabularies to represent such metadata elements.</p>
 <p>Based on this, GeoDCAT-AP defines a provisional mapping, representing spatial resolution in a human-readable form only, using property <code>rdfs:comment</code>.</p>
@@ -3144,7 +3231,10 @@
   &lt;/gmd:equivalentScale&gt;
 &lt;/gmd:MD_Resolution&gt;</pre>
 </aside>
-</section><section id="conformity-and-data-quality---not-in-iso19115-core" class="Annex2"><h2>Conformity and data quality - *not in ISO 19115 core</h2>
+</section>
+
+<section id="conformity-and-data-quality---not-in-iso19115-core">
+<h2>Conformity and data quality - *not in ISO 19115 core</h2>
 <p>The GeoDCAT-AP specification only provides a syntax binding for conformity and not for data quality in general.</p>
 <p>In ISO 19115, conformance and quality information is encoded as a quality report containing the result of a test (an evaluation) of a given quality measure, according to an evaluation method, with either a quantitative result (a metric) or a conformance result (pass or fail) as most important outcome.</p>
 <p>For encoding conformance, GeoDCAT-AP proposes to use <code>dct:conformsTo</code> and the W3C Provenance Ontology (PROV-O) [[PROV-O]] as explained in the following paragraphs. For encoding other aspects of data quality, GeoDCAT-AP does not provide a syntax binding as there is a risk that the (future) work of other standards bodies on data quality may make the proposed syntax binding for GeoDCAT-AP outdated. For example, the <a href="https://www.w3.org/2013/dwbp/">W3C Data on the Web Best Practices WG</a> is working on a Data Quality Vocabulary (DQV) [[VOCAB-DQV]]. To limit the impact, it was decided to only provide a partial mapping for Data Quality / Conformance.</p>
@@ -3250,7 +3340,8 @@ prov:wasUsedBy [
 <div class="issue" data-number="7"></div>
 </aside>
 </section>
-<section id="conditions-for-access-and-use-and-limitations-on-public-access-use-limitation-and-access-other-constraints" class="Annex2">
+
+<section id="conditions-for-access-and-use-and-limitations-on-public-access-use-limitation-and-access-other-constraints">
 <h2>Conditions for access and use and limitations on public access – Use limitation and access / other constraints</h2>
 <p>In DCAT-AP, licensing information is specified on (a) data catalogues (services) and on (b) the distribution(s) of a dataset, and not on the dataset itself. The principle is that different dataset distributions may be associated with different licensing terms. Moreover, DCAT-AP recommends the use of <code>dct:accessRights</code> for specifying access conditions.</p>
 <p>Based on this, GeoDCAT-AP models use and access limitations by using, respectively, <code>dct:license</code> and <code>dct:accessRights</code>.</p>
@@ -3317,7 +3408,10 @@ dct:accessRights [ a dct:RightsStatement ;
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
 </aside>
-</section><section id="responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact" class="Annex2"><h2>Responsible party and metadata point of contact - *Dataset responsible party and *Metadata point of contact</h2>
+</section>
+
+<section id="responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact">
+<h2>Responsible party and metadata point of contact - *Dataset responsible party and *Metadata point of contact</h2>
 <p>DCAT-AP supports properties to denote the publisher and the contact point for a dataset.</p>
 <p>By contrast, ISO 19115 and the INSPIRE Metadata Regulation foresee 11 possible relationships between a resource (a dataset, a dataset series, a service) and an agent (organisation), plus one for metadata. For some of them, suitable candidates exist from widely used vocabularies (in particular, DCMI Metadata Terms [[DCTERMS]]). However, for some of them no suitable candidate is available in the existing vocabularies (in particular, for roles “user” and “processor”).</p>
 <p>In the extended profile of GeoDCAT-AP, the W3C PROV ontology [[PROV-O]] is used to specify the relationship between the resource and the responsible organisation. The W3C vCard ontology [[VCARD-RDF]] will then be used to specify the contact information concerning the responsible party. Finally, the responsible party role will be specified by using <code>dct:type</code>, and using the relevant code list values from the INSPIRE Registry – reference register:</p>
@@ -3518,7 +3612,10 @@ dct:accessRights [ a dct:RightsStatement ;
   &lt;/gmd:contact&gt;
   ...
 &lt;/gmd:MD_Metadata&gt;</pre></aside>
-</section><section id="metadata-file-identifier" class="Annex2"><h2>*Metadata file identifier</h2>
+</section>
+
+<section id="metadata-file-identifier">
+<h2>*Metadata file identifier</h2>
 <p>This element identifies a metadata record.</p>
 <p>Metadata file identifiers are mapped to <code>dct:identifier</code>.</p>
 <aside class="example"><p>Metadata on metadata in GeoDCAT-AP:</p>
@@ -3541,7 +3638,10 @@ dct:accessRights [ a dct:RightsStatement ;
   dct:identifier 
     &quot;http://some.site/some/path/947e5a55-e548-11e1-9105-0017085a97ab&quot;^^xsd:anyURI .</pre>
 </aside>
-</section><section id="metadata-standard-name-metadata-standard-version" class="Annex2"><h2>*Metadata standard name, *Metadata standard version</h2>
+</section>
+
+<section id="metadata-standard-name-metadata-standard-version">
+<h2>*Metadata standard name, *Metadata standard version</h2>
 <p>Following DCAT-AP, GeoDCAT-AP uses <code>dct:conformsTo</code> to encode information about the metadata standard name and metadata standard version.</p>
 <p>The metadata on metadata is encoded as a <code>dcat:CatalogRecord</code>.</p>
 
@@ -3608,15 +3708,30 @@ dct:accessRights [ a dct:RightsStatement ;
     &lt;gco:CharacterString&gt;Nederlands metadata profiel op ISO 19115 voor geografie 1.3&lt;/gco:CharacterString&gt;
   &lt;/gmd:metadataStandardVersion&gt;
 &lt;/gmd:MD_Metadata&gt;</pre></aside>
-</section><section id="metadata-characterset" class="Annex2"><h2>*Metadata characterset</h2>
+</section>
+
+<section id="metadata-characterset">
+<h2>*Metadata characterset</h2>
 <p>See <a href="#character-encoding---dataset-character-set-and-metadata-character-set">Annex B, Section B.24</a>.</p>
-</section><section id="metadata-point-of-contact---metadata-point-of-contact" class="Annex2"><h2>Metadata point of contact - *Metadata point of contact</h2>
+</section>
+
+<section id="metadata-point-of-contact---metadata-point-of-contact">
+<h2>Metadata point of contact - *Metadata point of contact</h2>
 <p>See <a href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact">Annex B, Section B.16</a>.</p>
-</section><section id="metadata-date---metadata-date-stamp" class="Annex2"><h2>Metadata date - *Metadata date stamp</h2>
+</section>
+
+<section id="metadata-date---metadata-date-stamp">
+<h2>Metadata date - *Metadata date stamp</h2>
 <p>See <a href="#temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp">Annex B, Section B.11</a>.</p>
-</section><section id="metadata-language---metadata-language" class="Annex2"><h2>Metadata language - *Metadata language</h2>
+</section>
+
+<section id="metadata-language---metadata-language">
+<h2>Metadata language - *Metadata language</h2>
 <p>See <a href="#resource-language-and-metadata-language---dataset-language-and-metadata-language">Annex B, Section B.7</a>.</p>
-</section><section id="coordinate-reference-systems-and-temporal-reference-systems-reference-system" class="Annex2"><h2>Coordinate reference systems and Temporal reference systems – *Reference System</h2>
+</section>
+
+<section id="coordinate-reference-systems-and-temporal-reference-systems-reference-system">
+<h2>Coordinate reference systems and Temporal reference systems – *Reference System</h2>
 <p>In DCAT-AP, no equivalent term is foreseen. This is also the case for the NeoGeo [[NEOGEO]], GeoSPARQL [[GeoSPARQL]], and the Core Location Vocabulary [[LOCN]].</p>
 <p>Based on this, these elements are provisionally mapped to property <code>dct:conformsTo</code>. Moreover, in order to indicate that the object of <code>dct:conformsTo</code> denotes a reference system, an additional statement with predicate <code>dct:type</code> is added, with a code list value defining the notion of (spatial / temporal) reference system, taken from the glossary operated by the INSPIRE Registry.</p>
 <p>More precisely, the following URIs should be used to denote, respectively, spatial and temporal reference systems:</p>
@@ -3673,7 +3788,10 @@ dct:accessRights [ a dct:RightsStatement ;
     &lt;/gmd:referenceSystemIdentifier&gt;
   &lt;/gmd:MD_ReferenceSystem&gt;
 &lt;/gmd:referenceSystemInfo&gt;</pre></aside>
-</section><section id="character-encoding---dataset-character-set-and-metadata-character-set" class="Annex2"><h2>Character encoding - *Dataset character set and *Metadata character set</h2>
+</section>
+
+<section id="character-encoding---dataset-character-set-and-metadata-character-set">
+<h2>Character encoding - *Dataset character set and *Metadata character set</h2>
 <p>In DCAT and DCAT-AP, the specification of the character encoding of a dataset and the character encoding of a metadata record is not explicitly foreseen.</p>
 <p>According to RFC 4288 [[RFC4288]], the character set can be part of the media type specification, but only for type “text”. By contrast, in INSPIRE the character set can be specified also for other media types.</p>
 <p>The W3C Content vocabulary [[Content-in-RDF10]] provides a possibly suitable candidate, namely, property <code>cnt:characterEncoding</code>, taking as value the character set names in the IANA register [[CHARSETS]]. GeoDCAT-AP uses this property.</p>
@@ -3866,7 +3984,10 @@ dct:accessRights [ a dct:RightsStatement ;
   &lt;/gmd:identificationInfo&gt;
   ...
 &lt;/gmd:MD_Metadata&gt;</pre></aside>
-</section><section id="encoding---distribution-format" class="Annex2"><h2>Encoding - *Distribution format</h2>
+</section>
+
+<section id="encoding---distribution-format">
+<h2>Encoding - *Distribution format</h2>
 <p>In both DCAT and DCAT-AP, this information is specified for the distribution(s) of a dataset, and not for the dataset itself.</p>
 <p>Two properties are foreseen:</p>
 <ul>
@@ -3899,7 +4020,10 @@ dct:accessRights [ a dct:RightsStatement ;
   &lt;/gmd:distributionInfo&gt;
   ...
 &lt;/gmd:MD_Metadata&gt;</pre></aside>
-</section><section id="spatial-representation-type-spatial-representation-type" class="Annex2"><h2>Spatial representation type – *Spatial representation type</h2>
+</section>
+
+<section id="spatial-representation-type-spatial-representation-type">
+<h2>Spatial representation type – *Spatial representation type</h2>
 <p>In DCAT-AP, no equivalent term is foreseen.</p>
 <p>In ISO 19115, element “Spatial representation type” is meant mainly to describe the “method used to represent geographic information in the dataset”, by using a code list (see the table below).</p>
 <p>The <abbr title="Asset Description Metadata Schema">ADMS</abbr> vocabulary [[VOCAB-ADMS]] includes a property, namely, <code>adms:representationTechnique</code> that could be used for this purpose. It is worth noting that, in the ADMS specification, <code>adms:representationTechnique</code> decribes a distribution, and not the dataset. Moreover, the ISO 19115 code list of spatial representation types might be in the future available as a URI register from the INSPIRE Registry.</p>
@@ -3957,7 +4081,10 @@ dct:accessRights [ a dct:RightsStatement ;
     codeListValue=&quot;vector&quot; 
     codeList=&quot;http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_SpatialRepresentationTypeCode&quot;&gt;vector&lt;/gmd:MD_SpatialRepresentationTypeCode&gt;
 &lt;/gmd:spatialRepresentationType&gt;</pre></aside>
-</section><section id="maintenance-information---not-in-iso19115-core" class="Annex2"><h2>Maintenance information - *not in ISO 19115 core</h2>
+</section>
+
+<section id="maintenance-information---not-in-iso19115-core">
+<h2>Maintenance information - *not in ISO 19115 core</h2>
 <p>In ISO 19115, element “Maintenance information” is meant mainly to describe how frequently a resource is updated.</p>
 <p>DCAT and DCAT-AP, the update frequency is expressed through <code>dct:accrualPeriodicity</code>, with the frequency codes defined in the Dublin Core Collection Description Frequency Vocabulary [[CLD-FREQ]], which can be partially mapped to the ones used in ISO 19115, as shown in the following table (the missing alignments are in bold). A similar mapping was added for the MDR Frequency Named Authority List [[MDR-FREQ]].</p>
 <p>The ISO 19115 code list of maintenance frequency codes might be in the future available as a URI register from the INSPIRE Registry.</p>
@@ -4096,13 +4223,17 @@ dct:accessRights [ a dct:RightsStatement ;
 &lt;/gmd:MD_MaintenanceInformation&gt;</pre></aside>
 </section>
 </section>
-<section id="comparison-between-inspire-and-iso19115-12014" class="appendix"><h1>Comparison between INSPIRE and ISO 19115-1:2014</h1>
+
+<section id="comparison-between-inspire-and-iso19115-12014" class="appendix">
+<h1>Comparison between INSPIRE and ISO 19115-1:2014</h1>
 <p>In ISO 19115-1:2014 the concept of ‘Core metadata’ was removed; it was translated into a normative annex (Annex F) “Discovery metadata for geographic resources”. In the Annex F metadata elements for the discovery are listed in 2 tables:</p>
 <ul>
 <li><p>the metadata elements to be used for discovery of geographic datasets and series are identified in F.1;</p></li>
 <li><p>the metadata elements to be used for discovery of service resources are identified in F.2.</p></li>
 </ul>
-<section id="spatial-dataset-and-spatial-dataset-series" class="Annex2"><h2>Spatial dataset and spatial dataset series</h2>
+
+<section id="spatial-dataset-and-spatial-dataset-series">
+<h2>Spatial dataset and spatial dataset series</h2>
 <p>The table below compares the core requirements of ISO 19115:2003 (see Table 3 in 6.5 of ISO 19115:2003), the requirements of INSPIRE for spatial dataset and spatial dataset series as defined in the Implementing Rules for metadata and the discovery metadata for geographic datasets and series (see Table F.1 in annex F of ISO 19115-1:2014). For those last metadata elements in the last field of the table the path is indicated. For each element, in brackets the obligation/max occurrence (3rd field).</p>
 <table id="table-11" class="simple">
 <caption>Table 11: Metadata elements used for discovery of geographic datasets and series</caption>
@@ -4287,7 +4418,8 @@ dct:accessRights [ a dct:RightsStatement ;
 </table>
 </section>
 
-<section id="services" class="Annex2"><h2>Services</h2>
+<section id="services">
+<h2>Services</h2>
 <p>The table below compares the core requirements of ISO 19115:2003 (see Table 3 in 6.5 of ISO 19115:2003), the requirements of INSPIRE for services as defined in the Implementing Rules for metadata and the discovery metadata for services (see Table F.2 in annex F of ISO 19115-1:2014). For those metadata elements in the last field of the table the path is indicated. For each element, in brackets the obligation/max occurrence (3<sup>rd</sup> field).</p>
 <table id="table-12" class="simple">
 <caption>Table 12: Metadata elements used for discovery of service resources</caption>
