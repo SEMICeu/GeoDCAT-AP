@@ -33,6 +33,7 @@ var respecConfig = {
       uri: "http://data.europa.eu/w21/f106d0e0-4777-4ae2-bfc7-54c4f1d72b79",
     }],    
 */
+    implementationReportURI:"https://joinup.ec.europa.eu/node/144843",
     license: "isa-open-metadata",
     specStatus: "unofficial",
     shortName: "geodcat-ap",
