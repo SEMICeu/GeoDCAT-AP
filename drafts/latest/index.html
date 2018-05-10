@@ -552,12 +552,16 @@
 </ul>
 <p>The alignments for these elements defined in the current version of GeoDCAT-AP must then be considered as unstable, and are meant to be replaced by appropriate terms defined in standard vocabularies (whether and when available). Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Spatial Data on the Web Working Group planned to standardise the representation of data granularity (which includes spatial resolution), data quality and conformity, and reference systems.</p></li>
 </ul>
+<!--
 <aside class="ednote">
 <p>For possible revisions to the provisional mappings describe above, see the following issues:</p>
+-->
 <div class="issue" data-number="3"></div>
 <div class="issue" data-number="7"></div>
 <div class="issue" data-number="2"></div>
+<!--
 </aside>
+-->
 <p>The details of the alignments defined in GeoDCAT-AP are illustrated in the following section.</p>
 </section>
 </section>
@@ -2999,10 +3003,14 @@
 <aside class="note">
 <p>Please note that the Core Location Vocabulary does not restrict <a href="https://www.w3.org/ns/locn#locn:geometry"><code>locn:geometry</code></a> to bounding box geometries only.</p>
 </aside>
+<!--
 <aside class="ednote">
 <p>For a possible revision to how bounding boxes should be specified, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/1">Issue #1</a>:</p>
+-->
 <div class="issue" data-number="1"></div>
+<!--
 </aside>
+-->
 <!--
 <aside class="note">
 -->
@@ -3026,14 +3034,22 @@
 <p>The following example shows how to specify the spatial coverage.</p>
 <aside class="example">
 <p>Resource metadata in GeoDCAT-AP using a geographic bounding box. This example uses multiple encodings, namely, the recommended ones (WKT and GML), plus GeoJSON. To denote the datatype of the GeoJSON literal, <a href="https://www.iana.org/assignments/media-types/application/vnd.geo+json">the URL of the corresponding IANA media type</a>.</p>
+<!--
 <aside class="ednote">
 <p>For a possible revision to how the GeoJSON datatype should be specified, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/4">Issue #4</a>:</p>
+-->
 <div class="issue" data-number="4"></div>
+<!--
 </aside>
+-->
+<!--
 <aside class="ednote">
 <p>For a possible revision to the use of GeoJSON in GeoDCAT-AP, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/6">Issue #6</a>:</p>
+-->
 <div class="issue" data-number="6"></div>
+<!--
 </aside>
+-->
 <pre>[] dct:spatial [ a dct:Location ;
   locn:geometry &quot;POLYGON((-10.58 70.09,34.59 70.09,34.59 34.56,-10.58 34.56,
     -10.58 70.09))&quot;^^gsp:wktLiteral ;
@@ -3102,10 +3118,13 @@
 <li><p>date of publication, last revision, and/or creation.</p></li>
 </ul>
 <p>Based on DCAT-AP, temporal extent is mapped to <code>dct:temporal</code>, having as range <code>dct:PeriodOfTime</code>. The time instant or interval is specified by using properties <code>schema:startDate</code> and <code>schema:endDate</code>, respectively.</p>
-<aside class="ednote">
+<!--<aside class="ednote">
 <p>For a possible revision to how start / end date(time) should be specified, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/5">Issue #5</a>:</p>
+-->
 <div class="issue" data-number="5"></div>
+<!--
 </aside>
+-->
 <p>By contrast, date of publication, last revision, and creation are mapped, respectively, to <code>dct:issued</code>, <code>dct:modified</code> (both core and extended GeoDCAT-AP profiles), and <code>dct:created</code> (only for the extended profile of GeoDCAT-AP).</p>
 <p>DCAT-AP does not foresee a property equivalent to the INSPIRE metadata element metadata date. In INSPIRE, this element is defined as follows (<a href="http://data.europa.eu/eli/reg/2008/1205#d1e576-14-1">Part B, §10.2</a>):</p>
 <blockquote>
@@ -3220,10 +3239,14 @@
 <p>In DCAT-AP, no equivalent term is foreseen.</p>
 <p>There are currently no candidates in existing vocabularies to represent such metadata elements.</p>
 <p>Based on this, GeoDCAT-AP defines a provisional mapping, representing spatial resolution in a human-readable form only, using property <code>rdfs:comment</code>.</p>
+<!--
 <aside class="ednote">
 <p>For a possible revision to how spatial / temporal resolution should be specified, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/3">Issue #3</a>:</p>
+-->
 <div class="issue" data-number="3"></div>
+<!--
 </aside>
+-->
 <aside class="example">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre># Spatial resolution as equivalent scale
@@ -3347,10 +3370,14 @@ prov:wasUsedBy [
 </pre>
 </aside>
 <p>The PROV-O-based approach might be revised in the future – but still supported for backward interoperability –, if future standard vocabularies will be able to address GeoDCAT-AP requirement.</p>
+<!--
 <aside class="ednote">
 <p>For possible revisions to how conformity is specified, see the following issue:</p>
+-->
 <div class="issue" data-number="7"></div>
+<!--
 </aside>
+-->
 </section>
 
 <section id="conditions-for-access-and-use-and-limitations-on-public-access-use-limitation-and-access-other-constraints">
@@ -3757,10 +3784,14 @@ dct:accessRights [ a dct:RightsStatement ;
 <p>followed by the number identifying the coordinate reference system in the EPSG register. For instance, the following URI</p>
 <p><a href="http://www.opengis.net/def/crs/EPSG/0/4258">http://www.opengis.net/def/crs/EPSG/0/4258</a></p>
 <p>identifies coordinate reference system EPSG 4258, corresponding to ETRS89 (European Terrestrial Referent System 1989).</p>
+<!--
 <aside class="ednote">
 <p>For a possible revision to how spatial / temporal reference systems should be specified, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/2">Issue #2</a>:</p>
+-->
 <div class="issue" data-number="2"></div>
+<!--
 </aside>
+-->
 <aside class="example"><p>Resource metadata in GeoDCAT-AP:</p>
 <pre>[] a dcat:Dataset ;
   dct:conformsTo &lt;http://www.opengis.net/def/crs/EPSG/0/4258&gt; .
