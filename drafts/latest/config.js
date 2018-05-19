@@ -1,8 +1,8 @@
 var respecConfig = {
 // ISA specific
     version: "1.0.1.*",
-    versionURL: "https://github.com/semiceu/geodcat-ap/drafts/latest/",
-    latestVersionURL: "https://github.com/semiceu/geodcat-ap/drafts/latest/",
+    versionURL: "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
+    latestVersionURL: "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
 
 //	preProcess: [dfn_index],
     logos: [{
@@ -37,12 +37,12 @@ var respecConfig = {
     license: "isa-open-metadata",
     specStatus: "unofficial",
     shortName: "geodcat-ap",
-    canonicalURI: "https://github.com/semiceu/geodcat-ap/drafts/latest/",
+    canonicalURI: "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
 //    prevRecURI:           "https://joinup.ec.europa.eu/release/geodcat-ap/v101",
     previousPublishDate:  "2016-08-02",
     previousMaturity:     "final",
     previousURI:          "http://data.europa.eu/w21/81fd7288-6929-4b42-8707-2da604490d30",
-    edDraftURI:           "https://github.com/semiceu/geodcat-ap/drafts/latest/",
+    edDraftURI:           "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
     issueBase:            "https://github.com/semiceu/geodcat-ap/issues/",
     github:               "https://github.com/semiceu/geodcat-ap/",
     formerEditors: [{
