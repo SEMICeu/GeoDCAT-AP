@@ -137,7 +137,7 @@ var respecConfig = {
         "publisher":"Wikipedia"
        },
       "GEODCAT-XSLT":{
-        "href":"https://webgate.ec.europa.eu/CITnet/stash/projects/ODCKAN/repos/iso-19139-to-dcat-ap/",
+        "href":"https://github.com/SEMICeu/iso-19139-to-dcat-ap",
         "title":"XSLT for converting ISO 19139 metadata into DCAT-AP",
         "authors":["Andrea Perego"],
 //        "publisher":"",
