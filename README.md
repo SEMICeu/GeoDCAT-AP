@@ -19,6 +19,13 @@ Any problems encountered, or suggestions for new functionalities can be submitte
 - [Releases](./releases/): GeoDCAT-AP releases (1.0, etc.); each release might have different distributions.
 - [Working Drafts](./drafts/): Working drafts including revisions to the latest GeoDCAT-AP release.
 
+## Implementations
+
+- [GeoDCAT-AP XSLT & API](https://github.com/SEMICeu/iso-19139-to-dcat-ap): Reference XSLT-based implementation and API
+- [EPSG to RDF XSLT](https://github.com/SEMICeu/epsg-to-rdf): Proof of concept for the RDF representation of the [OGC EPSG register of coordinate reference systems](http://www.opengis.net/def/crs/EPSG/0/), extending the RDF mappings for reference systems defined in GeoDCAT-AP.
+
+Additional GeoDCAT-AP implementations are documented in the [dedicated page on Joinup](https://joinup.ec.europa.eu/document/geodcat-ap-implementations).
+
 ## Licence
 
 GeoDCAT-AP releases and working drafts are distributed under the [ISA Open Metadata Licence v1.1](https://joinup.ec.europa.eu/licence/isa-open-metadata-licence-v11).
