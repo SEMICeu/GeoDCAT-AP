@@ -213,12 +213,12 @@ var respecConfig = {
         "date": "4 August 2015"
       },
       "MDR-CONT":{
-        "href":"https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/continent/",
+        "href":"https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/continent",
         "title":"Named Authority List: Continents",
         "publisher":"Publications Office of the European Union"
        },
       "MDR-COUNTRIES":{
-        "href":"https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/country/",
+        "href":"https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/country",
         "title":"Named Authority List: Countries",
         "publisher":"Publications Office of the European Union"
        },
@@ -228,27 +228,27 @@ var respecConfig = {
         "publisher":"Publications Office of the European Union"
        },
       "MDR-FREQ":{
-        "href":"https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency/",
+        "href":"https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency",
         "title":"Named Authority List: Frequencies",
         "publisher":"Publications Office of the European Union"
        },
       "MDR-FT":{
-        "href":"https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type/",
+        "href":"https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type",
         "title":"Named Authority List: File types",
         "publisher":"Publications Office of the European Union"
        },
       "MDR-LANG":{
-        "href":"https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/language/",
+        "href":"https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/language",
         "title":"Named Authority List: Languages",
         "publisher":"Publications Office of the European Union"
        },
       "MDR-PLACES":{
-        "href":"https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/place/",
+        "href":"https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/place",
         "title":"Named Authority List: Places",
         "publisher":"Publications Office of the European Union"
        },
       "MDR-THEMES":{
-        "href":"http://publications.europa.eu/mdr/authority/data-theme/",
+        "href":"https://publications.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/data-theme",
         "title":"Named Authority List: Data Themes",
         "publisher":"Publications Office of the European Union"
        },
