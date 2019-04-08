@@ -1,10 +1,13 @@
 var respecConfig = {
 // ISA specific
+/*
     version: "1.0.1.*",
     versionURL: "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
     latestVersionURL: "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
-
+*/
 //	preProcess: [dfn_index],
+/*** Uncomment to add the ISA2 logo **/
+/*
     logos: [{
 //      src: './images/eu-isa-programme.png',
       src: "./images/eu-isa2-programme.jpg",
@@ -18,10 +21,14 @@ var respecConfig = {
 //      height: 42,
       id: 'logo-eu-isa-programme',
     }],
+*/
+    addSectionLinks: true,
     noRecTrack: true,    
     subtitle: "A geospatial extension for the DCAT application profile for data portals in Europe",
+/*
     copyrightHolder: "European Union",
     copyrightURL: "https://europa.eu/",
+*/
     copyrightStart: 2015,
 //    publishDate: "2016-08-02",
 /*
@@ -45,6 +52,7 @@ var respecConfig = {
     edDraftURI:           "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
     issueBase:            "https://github.com/semiceu/geodcat-ap/issues/",
     github:               "https://github.com/semiceu/geodcat-ap/",
+    overrideCopyright:    '<p class="copyright"><a href="https://europa.eu/european-union/abouteuropa/legal_notices_en#copyright_notice">Copyright</a> © 2015-2019 <a href="https://europa.eu/">European Union</a>. This document is licensed under the <a rel="license" href="https://joinup.ec.europa.eu/category/licence/isa-open-metadata-licence-v11"><abbr title="Interoperability Solutions for European Public Administrations">ISA</abbr> Open Metadata Licence v1.1</a>.</p>',
     formerEditors: [{
       name:       "Andrea Perego",
       company:    "European Commission, Joint Research Centre",
