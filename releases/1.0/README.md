@@ -6,8 +6,8 @@ Release page:
 
 ## Distributions
 
-- [PDF version](./geodcat-ap_version_1.0.pdf)
-- [DOCX version](./geodcat-ap_version_1.0.docx)
+- [PDF version](./geodcat-ap_1.0.pdf)
+- [DOCX version](./geodcat-ap_1.0.docx)
 
 ## Licence
 
