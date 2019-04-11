@@ -45,10 +45,10 @@ var respecConfig = {
     specStatus: "unofficial",
     shortName: "geodcat-ap",
     canonicalURI: "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
-//    prevRecURI:           "https://joinup.ec.europa.eu/release/geodcat-ap/v101",
+//    prevRecURI:           "https://joinup.ec.europa.eu/release/geodcat-ap/101",
     previousPublishDate:  "2016-08-02",
     previousMaturity:     "final",
-    previousURI:          "http://data.europa.eu/w21/81fd7288-6929-4b42-8707-2da604490d30",
+    previousURI:          "https://joinup.ec.europa.eu/release/geodcat-ap/101",
     edDraftURI:           "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
     issueBase:            "https://github.com/semiceu/geodcat-ap/issues/",
     github:               "https://github.com/semiceu/geodcat-ap/",
@@ -106,24 +106,14 @@ var respecConfig = {
 //            value: "Antonio Rotundo",
 //            href: "xx"
 //        }]
-//      },
-//        {
-//        key: "Editors of previous version",
-//        data: [{
-//            value: "Fadi Maali, DERI",
-//            href: "http://www.deri.ie/"
-//        },{
-//            value: "John Erickson, Tetherless World Constellation (RPI)",
-//            href: "http://tw.rpi.edu/"
-//        }]
 //      }
 //    ],
     wg: "GeoDCAT-AP Working Group",
-    wgURI: "https://joinup.ec.europa.eu/release/geodcat-ap-working-drafts",
+    wgURI: "https://joinup.ec.europa.eu/solution/geodcat-ap",
 //    wgPublicList: "public-dxwg-comments",
 //    wgPatentURI: "https://www.w3.org/2004/01/pp-impl/99375/status",
     inlineCSS: "true",
-	  lint: "false",
+    lint: "false",
     localBiblio: {
       "DCWIKI": {
         "href":"http://wiki.dublincore.org/index.php/User_Guide/Publishing_Metadata",

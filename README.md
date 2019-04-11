@@ -1,14 +1,14 @@
 # GeoDCAT-AP
 
-This is the issue tracker for the maintenance of [GeoDCAT-AP](http://data.europa.eu/w21/c9dae5aa-c3d0-43a7-96e3-9f16cd8d5b6d).
+This is the issue tracker for the maintenance of [GeoDCAT-AP](https://joinup.ec.europa.eu/solution/geodcat-application-profile-data-portals-europe).
 
-GeoDCAT-AP is an extension of [DCAT-AP](http://data.europa.eu/w21/ac376c94-74cf-4dd7-ade7-267d6a4ec4dc) for describing geospatial datasets, dataset series, and services. It provides an RDF syntax binding for the union of metadata elements defined in the core profile of [ISO 19115:2003](https://www.iso.org/standard/26020.html) and those defined in the framework of the [EU INSPIRE Directive](https://inspire.ec.europa.eu/). Its basic use case is to make spatial datasets, data series, and services searchable on general data portals, thereby making geospatial information better searchable across borders and sectors.
+GeoDCAT-AP is an extension of [DCAT-AP](https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe) for describing geospatial datasets, dataset series, and services. It provides an RDF syntax binding for the union of metadata elements defined in the core profile of [ISO 19115:2003](https://www.iso.org/standard/26020.html) and those defined in the framework of the [EU INSPIRE Directive](https://inspire.ec.europa.eu/). Its basic use case is to make spatial datasets, data series, and services searchable on general data portals, thereby making geospatial information better searchable across borders and sectors.
 
 GeoDCAT-AP is a joint initiative of the [European Commission's Joint Research Centre (JRC)](https://ec.europa.eu/jrc/), the [Publications Office of the European Union (PO)](https://publications.europa.eu/), the [EU ISA Programme](https://ec.europa.eu/isa2/) and [DG CONNECT](https://ec.europa.eu/info/departments/communications-networks-content-and-technology). More than 52 people from 12 EU Member States contributed to the specification in the Working Group or during the public review period.
 
 The current version of GeoDCAT-AP (v1.0.1) can be downloaded from:
 
-[http://data.europa.eu/w21/81fd7288-6929-4b42-8707-2da604490d30](http://data.europa.eu/w21/81fd7288-6929-4b42-8707-2da604490d30)
+[https://joinup.ec.europa.eu/release/geodcat-ap/101](https://joinup.ec.europa.eu/release/geodcat-ap/101)
 
 Any problems encountered, or suggestions for new functionalities can be submitted as [issues on the GeoDCAT-AP repository on GitHub](https://github.com/SEMICeu/GeoDCAT-AP/issues). 
 
