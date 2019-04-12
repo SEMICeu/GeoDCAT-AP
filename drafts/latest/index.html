@@ -69,16 +69,17 @@ table {font-size:small;}
 <h2>Change history</h2>
 <p>This version of GeoDCAT-AP 1.0 has been amended with respect to the original one with editorial changes.</p>
 <p>None of such changes affect the actual content of the original specification (GeoDCAT-AP v1.0), or the mapping rules defined thereby.</p>
-<section id="changes-since-v1-0-1">
+<section id="changes-since-v1-0-1" class="introductory">
 <h3>Changes since GeoDCAT-AP v1.0.1</h3>
 <ul>
+<li>Revised use of words as "must", "should", "recommended", to be consistent with [[RFC2119]].</li>
 <li>Updated URLs of controlled vocabularies maintained by the EU Publications Office (see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/11">Issue 11</a>).</li>
-<li>Correction of typos (including repeated and omitted words).</li>
+<li>Correction of typos (including repeated and omitted words) and incorred use of English.</li>
 <li>Inclusion of references to the vocabularies listed in <a href="#table-1">Table&nbsp;1</a>.</li>
 <li>Addition of links.</li>
 </ul>
 </section>
-<section id="changes-since-v1-0">
+<section id="changes-since-v1-0" class="introductory">
 <h3>Changes since GeoDCAT-AP v1.0</h3>
 <ul>
 <li>Corrected a typo concerning the URIs of the code lists of the INSPIRE Registry.</li>
@@ -370,7 +371,7 @@ table {font-size:small;}
 <dt>Datasets on national <abbr title="Spatial Data Infrastructures">SDIs</abbr></dt>
 <dd><p>GeoDCAT-AP would facilitate the integration of SDIs operated by EU Member States with any data catalogue able to consume [[DCAT-AP]]-compliant metadata.</p></dd>
 <dt>General geospatial datasets</dt>
-<dd><p>The geospatial community shares a common background and makes consistent use of consolidated standards and technologies. In particular, as far as metadata are concerned, it is widespread to use standards like ISO 19115 / 19139, for the representation and encoding of metadata, and OGC’s CSW (Catalog Service for the Web) for accessing and querying metadata records. These standards are also those currently recommended in INSPIRE.</p></dd>
+<dd><p>The geospatial community shares a common background and makes consistent use of consolidated standards and technologies. In particular, as far as metadata are concerned, it is widespread to use standards like ISO 19115 / 19139, for the representation and encoding of metadata, and OGC’s [[?CSW]] (Catalog Service for the Web) for accessing and querying metadata records. These standards are also those currently recommended in INSPIRE.</p></dd>
 </dl>
 <p>An additional RDF syntax for INSPIRE and ISO 19115 metadata elements is beneficial, especially when other data portals support the [[DCAT-AP]] metadata elements only.</p>
 <p>Conversion rules to RDF syntax would allow Member States to maintain their collections of INSPIRE-relevant datasets following the INSPIRE Metadata Technical Guidelines based on ISO 19115 and ISO 19119, while at the same time publishing these collections on [[DCAT-AP]]-conformant data portals. A conversion to RDF syntax – using for example the GeoDCAT-AP XSLT script [[GEODCAT-XSLT]] - allows additional metadata elements to be displayed on general-purposed data portals, provided that such data portals are capable of displaying additional metadata elements. Furthermore, data portals frequently are complemented by a triple store, making that the full set of GeoDCAT-AP metadata can be queried through a SPARQL endpoint.</p>
@@ -1147,7 +1148,7 @@ table {font-size:small;}
 
 <section id="controlled-vocabularies">
 <h1>Controlled vocabularies</h1>
-<p>This section lists the controlled vocabularies that MUST be used according to the GeoDCAT-AP Core Profile and the GeoDCAT-AP Extended Profile.</p>
+<p>This section lists the controlled vocabularies that SHOULD be used according to the GeoDCAT-AP Core Profile and the GeoDCAT-AP Extended Profile.</p>
 <table id="table-4" class="simple">
 <caption>Table 4: Controlled vocabularies to be used</caption>
 <thead>
@@ -2019,12 +2020,12 @@ table {font-size:small;}
 <h2>Resource type - *not in ISO 19115 core</h2>
 <p>In [[VOCAB-DCAT]], the notion of dataset is quite broad, and may include both the INSPIRE notions of <strong>dataset</strong> and <strong>dataset series</strong>. Moreover, currently no existing vocabulary provides suitable candidates for the INSPIRE notions of dataset series – the existing ones are very generic (e.g., <code>dctype:Collection</code> is defined as &quot;An aggregation of resources&quot; [[DCTERMS]]).</p>
 <p>Based on this, in GeoDCAT-AP both INSPIRE datasets and dataset series are specified as instances of <code>dcat:Dataset</code>.</p>
-<p>Moreover, in order to maintain the INSPIRE distinction between datasets and dataset series, following the work on aligning INSPIRE Metadata and Dublin Core [[?INSPIRE-DC]], in the extended profile of GeoDCAT-AP they will be denoted by using the resource type code list operated by the INSPIRE Registry, and by using <code>dct:type</code>. More precisely, the following URIs should be used to denote, respectively, dataset and series:</p>
+<p>Moreover, in order to maintain the INSPIRE distinction between datasets and dataset series, following the work on aligning INSPIRE Metadata and Dublin Core [[?INSPIRE-DC]], in the extended profile of GeoDCAT-AP they will be denoted by using the resource type code list operated by the INSPIRE Registry, and by using <code>dct:type</code>. More precisely, the following URIs SHOULD be used to denote, respectively, dataset and series:</p>
 <ul>
 <li><p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset">http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset</a></p></li>
 <li><p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType/series">http://inspire.ec.europa.eu/metadata-codelist/ResourceType/series</a></p></li>
 </ul>
-<p>As far as the INSPIRE notion of <strong>service</strong> is concerned, [[VOCAB-DCAT]] and [[DCAT-AP]] provide a single class, namely, <code>dcat:Catalog</code>, which only matches the notion of ‘discovery service’ in INSPIRE. Other services will be of type <code>dctype:Service</code>. Additionally, the spatial data service type can be specified by using <code>dct:type</code> with the corresponding code lists operated by the INSPIRE Registry. More precisely, the following URI should be used to denote services:</p>
+<p>As far as the INSPIRE notion of <strong>service</strong> is concerned, [[VOCAB-DCAT]] and [[DCAT-AP]] provide a single class, namely, <code>dcat:Catalog</code>, which only matches the notion of ‘discovery service’ in INSPIRE. Other services will be of type <code>dctype:Service</code>. Additionally, the spatial data service type can be specified by using <code>dct:type</code> with the corresponding code lists operated by the INSPIRE Registry. More precisely, the following URI SHOULD be used to denote services:</p>
 <ul>
 <li><p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service">http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service</a></p></li>
 </ul>
@@ -2343,7 +2344,7 @@ table {font-size:small;}
 <aside class="note">
 <p>The notion of “coupled resource” does not apply to catalogue / discovery services. As per the [[DCAT-AP]], in GeoDCAT-AP (core and extended profiles) the relationship between the catalogue and the available datasets is modelled by using <code>dcat:dataset</code>, which is a sub-property of <code>dct:hasPart</code>.</p>
 </aside>
-<p>The target dataset or series should be preferably referred to by using its unique resource identifier (as in the following example).</p>
+<p>The target dataset or series SHOULD be preferably referred to by using its unique resource identifier (as in the following example).</p>
 <aside class="example">
 <p>Resource metadata in GeoDCAT-AP</p>
 <pre>[] a dctype:Service ;
@@ -2456,8 +2457,8 @@ table {font-size:small;}
 <p><a href="http://inspire.ec.europa.eu/theme">http://inspire.ec.europa.eu/theme</a></p></li>
 <li><p>Keywords associated with other controlled vocabularies are mapped to <code>dcat:theme</code>.</p></li>
 </ul>
-<p>Following [[DCAT-AP]] recommendations, keywords from controlled vocabularies should be preferably specified with dereferenceable HTTP URIs. In such a case, the information concerning the originating controlled vocabulary can be omitted.</p>
-<p>When keywords cannot be specified with HTTP URIs, they should be modelled as a <code>skos:Concept</code> associated with a <code>skos:ConceptScheme</code> (modelling the originating controlled vocabulary), and annotated with the textual content and reference date(s) in the relevant INSPIRE metadata elements.</p>
+<p>Following [[DCAT-AP]] recommendations, keywords from controlled vocabularies SHOULD be preferably specified with dereferenceable HTTP URIs. In such a case, the information concerning the originating controlled vocabulary can be omitted.</p>
+<p>When keywords cannot be specified with HTTP URIs, they SHOULD be modelled as a <code>skos:Concept</code> associated with a <code>skos:ConceptScheme</code> (modelling the originating controlled vocabulary), and annotated with the textual content and reference date(s) in the relevant INSPIRE metadata elements.</p>
 <p>The representation of the information concerning the controlled vocabulary is illustrated in the following table.</p>
 <table id="table-6" class="simple">
 <caption>Table 6: Mappings for metadata element ‘originating controlled vocabulary’</caption>
@@ -2490,7 +2491,7 @@ table {font-size:small;}
 </tbody>
 </table>
 <p>For conformance with [[DCAT-AP]], GeoDCAT-AP records MUST also include keywords from the MDR Data Theme Named Authority List [[MDR-THEMES]].</p>
-<p>In order to ensure consistency, the relevant MDR Data Theme keywords should be selected based on mappings with the controlled vocabularies used in INSPIRE / ISO 19115 metadata.</p>
+<p>In order to ensure consistency, the relevant MDR Data Theme keywords SHOULD be selected based on mappings with the controlled vocabularies used in INSPIRE / ISO 19115 metadata.</p>
 <p>At the date of publication of this specification, work is under-way to define a set of harmonised mappings between the relevant vocabularies. The status of this work, and links to a machine readable representation of the mappings, is documented on the dedicated page on Joinup, available at:</p>
 <p><a href="https://joinup.ec.europa.eu/node/148245/">https://joinup.ec.europa.eu/node/148245/</a></p>
 </section>
@@ -2515,7 +2516,7 @@ table {font-size:small;}
 <ul>
 <li><p><a href="http://inspire.ec.europa.eu/theme">http://inspire.ec.europa.eu/theme</a></p></li>
 </ul></li>
-<li><p>Keywords associated with other controlled vocabularies are mapped to <code>dct:subject</code>. If not denoted by an HTTP URI, they should be expressed as a <code>skos:Concept</code> associated with a <code>skos:ConceptScheme</code>, and annotated with the textual content and reference date(s) in the relevant INSPIRE metadata elements.</p></li>
+<li><p>Keywords associated with other controlled vocabularies are mapped to <code>dct:subject</code>. If not denoted by an HTTP URI, they SHOULD be expressed as a <code>skos:Concept</code> associated with a <code>skos:ConceptScheme</code>, and annotated with the textual content and reference date(s) in the relevant INSPIRE metadata elements.</p></li>
 </ul>
 <aside class="example">
 <p>Resource metadata in GeoDCAT-AP:</p>
@@ -2723,7 +2724,7 @@ table {font-size:small;}
 </dd>
 <dt>Geographic identifier</dt>
 <dd>
-<p>ISO 19115 core also allows specifying the geographic location using a geographic identifier. Following [[DCAT-AP]], for this, it is recommended to use an HTTP URI from one of the following registers / gazetteers:</p>
+<p>ISO 19115 core also allows specifying the geographic location using a geographic identifier. Following [[DCAT-AP]], for this, it is RECOMMENDED to use an HTTP URI from one of the following registers / gazetteers:</p>
 <ul>
 <li><p>The Named Authority Lists operated by the Metadata Registry of the EU Publications office concerning continents [[MDR-CONT]], countries [[MDR-COUNTRIES]], and places [[MDR-PLACES]].</p></li>
 </ul>
@@ -3087,7 +3088,7 @@ prov:wasUsedBy [
 <p>Based on this, GeoDCAT-AP models use and access limitations by using, respectively, <code>dct:license</code> and <code>dct:accessRights</code>.</p>
 <p>Since the range of these properties is not a literal, but, respectively, classes <code>dct:LicenseDocument</code> and <code>dct:RightsStatement</code>, the free-text content of the corresponding ISO 19115 / INSPIRE metadata elements can be expressed by using <code>rdfs:label</code>, as illustrated in [[?DCWIKI]].</p>
 <aside class="note">
-<p>It is a recommended good practice to mint URIs for licence documents and right statements.</p>
+<p>It is a RECOMMENDED good practice to mint URIs for licence documents and right statements.</p>
 </aside>
 <aside class="example">
 <p>Resource metadata in GeoDCAT-AP:</p>
@@ -3474,12 +3475,12 @@ dct:accessRights [ a dct:RightsStatement ;
 <h2>Coordinate reference systems and Temporal reference systems – *Reference System</h2>
 <p>In [[DCAT-AP]], no equivalent term is provided. This is also the case for the NeoGeo [[?NEOGEO]], GeoSPARQL [[?GeoSPARQL]], and the Core Location Vocabulary [[?LOCN]].</p>
 <p>Based on this, these elements are provisionally mapped to property <code>dct:conformsTo</code>. Moreover, in order to indicate that the object of <code>dct:conformsTo</code> denotes a reference system, an additional statement with predicate <code>dct:type</code> is added, with a code list value defining the notion of (spatial / temporal) reference system, taken from the glossary operated by the INSPIRE Registry.</p>
-<p>More precisely, the following URIs should be used to denote, respectively, spatial and temporal reference systems:</p>
+<p>More precisely, the following URIs SHOULD be used to denote, respectively, spatial and temporal reference systems:</p>
 <ul>
 <li><p><a href="http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem">http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem</a></p></li>
 <li><p><a href="http://inspire.ec.europa.eu/glossary/TemporalReferenceSystem">http://inspire.ec.europa.eu/glossary/TemporalReferenceSystem</a></p></li>
 </ul>
-<p>The reference system identifier should be preferably represented with an HTTP URI. In particular, spatial reference systems should be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by the Open Geospatial Consortium.</p>
+<p>The reference system identifier SHOULD be preferably represented with an HTTP URI. In particular, spatial reference systems should be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by the Open Geospatial Consortium.</p>
 <p>In this register, the URI prefix for coordinate reference systems is the following one:</p>
 <p><a href="http://www.opengis.net/def/crs/EPSG/0/">http://www.opengis.net/def/crs/EPSG/0/</a></p>
 <p>followed by the number identifying the coordinate reference system in the EPSG register. For instance, the following URI</p>
