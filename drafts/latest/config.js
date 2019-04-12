@@ -188,6 +188,14 @@ var respecConfig = {
         "publisher":"OJ L 326",
         "date":"4 December 2008"
       },
+      "INSPIRE-DS": {
+        "href":"http://inspire.jrc.ec.europa.eu/documents/Network_Services/TechnicalGuidance_DiscoveryServices_v3.1.pdf",
+        "title":"Technical Guidance for the implementation of INSPIRE Discovery Services. Version 3.1",
+//        "authors":["European Commission"],
+        "publisher":"European Commission",
+        "date":"7 November 2011"
+      },
+/*
       "INSPIRE-MT": {
         "href":"http://inspire.ec.europa.eu/media-types/",
         "title":"INSPIRE Media Type Register",
@@ -195,12 +203,51 @@ var respecConfig = {
         "publisher":"European Commission",
         "date":"7 November 2011"
       },
-      "INSPIRE-DS": {
-        "href":"http://inspire.jrc.ec.europa.eu/documents/Network_Services/TechnicalGuidance_DiscoveryServices_v3.1.pdf",
-        "title":"Technical Guidance for the implementation of INSPIRE Discovery Services. Version 3.1",
-//        "authors":["European Commission"],
-        "publisher":"European Commission",
-        "date":"7 November 2011"
+*/
+      "INSPIRE-MT": {
+        "href":"http://inspire.ec.europa.eu/media-types/",
+        "title":"INSPIRE Registry: Media types",
+        "publisher":"European Commission"
+      },
+      "INSPIRE-DoC": {
+        "href":"http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/",
+        "title":"INSPIRE Registry: Degrees of conformity",
+        "publisher":"European Commission"
+      },
+      "INSPIRE-RPR": {
+        "href":"http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/",
+        "title":"INSPIRE Registry: Responsible party roles",
+        "publisher":"European Commission"
+      },
+      "INSPIRE-SDSC": {
+        "href":"http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/",
+        "title":"INSPIRE Registry: Classification of spatial data services",
+        "publisher":"European Commission"
+      },
+      "INSPIRE-THEMES": {
+        "href":"http://inspire.ec.europa.eu/theme/",
+        "title":"INSPIRE Registry: INSPIRE themes",
+        "publisher":"European Commission"
+      },
+      "INSPIRE-TC": {
+        "href":"http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/",
+        "title":"INSPIRE Registry: Topic categories in accordance with EN ISO 19115",
+        "publisher":"European Commission"
+      },
+      "INSPIRE-SDST": {
+        "href":"http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/",
+        "title":"INSPIRE Registry: Spatial data service types",
+        "publisher":"European Commission"
+      },
+      "INSPIRE-RT": {
+        "href":"http://inspire.ec.europa.eu/metadata-codelist/ResourceType/",
+        "title":"INSPIRE Registry: Resource types",
+        "publisher":"European Commission"
+      },
+      "OGC-EPSG": {
+        "href":"http://www.opengis.net/def/crs/EPSG/",
+        "title":"EPSG CRS Register",
+        "publisher":"OGC"
       },
       "KML": {
         "href": "http://www.opengeospatial.org/standards/kml",
