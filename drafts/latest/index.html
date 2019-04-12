@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>GeoDCAT-AP (v1.0.1.*)</title>
-    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
-    <meta content="width=device-width,initial-scale=1" name="viewport" />
-    <meta name="generator" content="pandoc" />
+<html lang="en">
+<head>
+<title>GeoDCAT-AP (v1.0.1.*)</title>
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+<meta content="width=device-width,initial-scale=1" name="viewport" />
 <!--
-    <script class="remove" src="./respec-isa-common.js"></script>
-    <script class="remove" src="respec-w3c-common.js"></script>
+<script class="remove" src="./respec-isa-common.js"></script>
+<script class="remove" src="respec-w3c-common.js"></script>
 -->
-    <script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c-common"></script>
-    <script class="remove" src="config.js"></script>
+<script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c-common"></script>
+<script class="remove" src="config.js"></script>
 <!--    
-    <style type="text/css">
-      body { counter-reset: tables; }
-      table > caption { counter-increment: tables; }
-      table > caption:before { content: 'Table ' counter(tables) ': '; }
-    </style>
+<style type="text/css">
+body { counter-reset: tables; }
+table > caption { counter-increment: tables; }
+table > caption:before { content: 'Table ' counter(tables) ': '; }
+</style>
 -->    
-    <script class="remove" type="text/javascript">
+<script class="remove">
 /*
-      $(document).ready(function(){
-        $(".secno").text().replace(/^(A)/,"I");
+$(document).ready(function(){
+  $(".secno").text().replace(/^(A)/,"I");
 //        $('.secno').each(function(){
 //          switch ($(this).text()) {
 //            case "A. ":
@@ -29,48 +28,14 @@
 //              break;
 //          }
 //        });
-      });
+});
 */
-    </script>
-    <style type="text/css">
-      table {font-size:small;}
-    </style>
-  </head>
+</script>
+<style>
+table {font-size:small;}
+</style>
+</head>
 <body>
-
-<!--
-<section id="document-metadata" class="introductory">
-<h2>Document Metadata</h2>
-<table class="simple" width="100%">
-<tbody>
-<tr>
-<td>Date</td>
-<td><time date="2016-08-02">2016-08-02</time></td>
-</tr>
-<tr>
-<td>Status</td>
-<td>Final</td>
-</tr>
-<tr>
-<td>Version</td>
-<td>1.0.1</td>
-</tr>
-<tr>
-<td>Access URL</td>
-<td><a href="https://joinup.ec.europa.eu/node/154143/">https://joinup.ec.europa.eu/node/154143/</a></td>
-</tr>
-<tr>
-<td>Rights</td>
-<td>© 2015-2016 <a href="http://europa.eu/">European Union</a></td>
-</tr>
-<tr>
-<td>Licence</td>
-<td><a href="https://joinup.ec.europa.eu/category/licence/isa-open-metadata-licence-v11">ISA Open Metadata Licence v1.1</a></td>
-</tr>
-</tbody>
-</table>
-</section>
--->
 
 <section id="abstract">
 <p>This document contains the specification for GeoDCAT-AP, an extension of the DCAT application profile for data portals in Europe (DCAT-AP) for describing geospatial datasets, dataset series, and services.</p>
@@ -265,7 +230,7 @@
 <td>Internet Assigned Numbers Authority</td>
 </tr>
 <tr>
-<td><abbr title="Infrastructure for Spatial Information in the European Community">INSPIRE</a></td>
+<td><abbr title="Infrastructure for Spatial Information in the European Community">INSPIRE</abbr></td>
 <td>Infrastructure for Spatial Information in the European Community</td>
 </tr>
 <tr>
@@ -348,11 +313,12 @@
 <ul>
 <li><p>To define new controlled vocabularies or define mappings between controlled vocabularies;</p></li>
 <li><p>To design executable transformation rules (i.e., an XSLT script [[GEODCAT-XSLT]]), as a reference implementation of the mappings defined in the GeoDCAT-AP specification.</p></li>
-<li><p>To define an RDF syntax binding for the elements in ISO 19115-1:2014.</p>
+<li><p>To define an RDF syntax binding for the elements in ISO 19115-1:2014.</p></li>
+</ul>
 </section>
 
 <section id="structure-of-this-document">
-<h2>Structure of this document</h2></li>
+<h2>Structure of this document</h2>
 <p>This document consists of the following sections:</p>
 <ul>
 <li><p><a href="#introduction">Section 1</a> introduces this document;</p></li>
@@ -420,11 +386,12 @@
 <p>However, INSPIRE+DCAT-AP did not define alignments for the following elements:</p>
 <ul>
 <li><p>Some of the metadata elements in the core profile of ISO 19115 – i.e., those related to the metadata character set, metadata identifier and metadata standard. <em>The GeoDCAT-AP Extended profile – in this document – does provide an RDF syntax binding for these metadata elements</em>.</p></li>
-<li><p>The INSPIRE metadata elements recommended in the data specifications technical guidelines, summarised in Appendix B.2 to INSPIRE Metadata Technical Guidelines (version 1.3) [[INSPIRE-MD-20131029]]. <em>The GeoDCAT-AP Extended profile – in this document – provides a partial syntax binding for data quality (limited to conformity) and maintenance information (limited to maintenance and update frequency).</em></p>
+<li><p>The INSPIRE metadata elements recommended in the data specifications technical guidelines, summarised in Appendix B.2 to INSPIRE Metadata Technical Guidelines (version 1.3) [[INSPIRE-MD-20131029]]. <em>The GeoDCAT-AP Extended profile – in this document – provides a partial syntax binding for data quality (limited to conformity) and maintenance information (limited to maintenance and update frequency).</em></p></li>
+</ul>
 </section>
 
 <section id="alignment-of-eurovoc-gemet-inspire-themes">
-<h2>Alignment of EuroVoc – GEMET – INSPIRE themes</h2></li>
+<h2>Alignment of EuroVoc – GEMET – INSPIRE themes</h2>
 <p>EuroVoc is a multilingual, multidisciplinary thesaurus covering the activities of the EU, and it is one of the controlled vocabularies recommended in DCAT-AP.</p>
 <p>The Publications Office of the EU has defined and published alignments between EuroVoc and other vocabularies, including those typically used in geospatial metadata – in particular, <a href="http://aims.fao.org/vest-registry/vocabularies/agrovoc-multilingual-agricultural-thesaurus">AGROVOC</a>, <a href="https://www.eionet.europa.eu/gemet/">GEMET</a>, the <a href="http://inspire.ec.europa.eu/theme">INSPIRE themes</a> and the <a href="http://inspire.ec.europa.eu/featureconcept">INSPIRE feature concept dictionary</a>. It is worth noting that the use of the INSPIRE themes is a legal obligation in INSPIRE metadata.</p>
 <p>These alignments are available from the Metadata Registry of the EU Publications Office [[MDR-EUROVOC]].</p>
@@ -473,8 +440,6 @@
 </ul>
 <p>An additional RDF syntax for INSPIRE and ISO 19115 metadata elements is beneficial, especially when other data portals support the DCAT-AP metadata elements only.</p>
 <p>Conversion rules to RDF syntax would allow Member States to maintain their collections of INSPIRE-relevant datasets following the INSPIRE Metadata Technical Guidelines based on ISO 19115 and ISO 19119, while at the same time publishing these collections on DCAT-AP-conformant data portals. A conversion to RDF syntax – using for example the GeoDCAT-AP XSLT script [[GEODCAT-XSLT]] - allows additional metadata elements to be displayed on general-purposed data portals, provided that such data portals are capable of displaying additional metadata elements. Furthermore, data portals frequently are complemented by a triple store, making that the full set of GeoDCAT-AP metadata can be queried through a SPARQL endpoint.</p>
-</section>
-
 </section>
 
 <section id="methodology-and-summary-of-results" class="informative">
@@ -1425,7 +1390,7 @@
 <section id="acknowledgements">
 <h1 class="ListParagraph">Acknowledgements</h1>
 <p>This work was elaborated by a Working Group under the ISA programme. The Working Group was chaired by <strong>Andrea Perego</strong> from the Joint Research Centre of the European Commission. The ISA Programme of the European Commission was represented by <strong>Vassilios Peristeras</strong> and <strong>Athanasios Karalopoulos</strong>. <strong>Andrea Perego</strong> and <strong>Stijn Goedertier</strong> were the editors of the specification.</p>
-<p>A special acknowledgement is due to <strong>Antonio Rotundo</strong>, from Agenzia per l’Italia Digitale, who contributed a study comparing INSPIRE and ISO 19115-1:2014, included in <a href="#comparison-between-inspire-and-iso19115-12014"></a> to this specification.</p>
+<p>A special acknowledgement is due to <strong>Antonio Rotundo</strong>, from Agenzia per l’Italia Digitale, who contributed a study comparing INSPIRE and ISO 19115-1:2014, included in <a href="#comparison-between-inspire-and-iso19115-12014">annex</a> to this specification.</p>
 <p>The following table lists all the people who contributed to the development and revision of this specification, either as members of the GeoDCAT-AP Working Group or as external reviewers.</p>
 <table class="simple">
 <thead>
@@ -1752,213 +1717,6 @@
 </tr>
 </tbody>
 </table>
-</section>
-<!--
-<h1 id="references-or" class="ListParagraph">References</h1>
-<table class="simple">
-<thead>
-<tr>
-<td>[[BCP47]]</td>
-<td>IETF, “IEFT BCP 47 Tags for Identifying Languages,” 2009. [Online]. Available: <a href="http://tools.ietf.org/html/bcp47">http://tools.ietf.org/html/bcp47</a></td>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>[[CLD-FREQ]]</td>
-<td>DCMI, “Dublin Core Collection Description Frequency Vocabulary,” 2007. [Online]. Available: <a href="http://dublincore.org/groups/collections/frequency/">http://dublincore.org/groups/collections/frequency/</a></td>
-</tr>
-<tr>
-<td>[[Content-in-RDF10]]</td>
-<td>W3C, “Representing Content in RDF - W3C Content Vocabulary,” [Online]. Available: <a href="http://www.w3.org/TR/Content-in-RDF10/">http://www.w3.org/TR/Content-in-RDF10/</a></td>
-</tr>
-<tr>
-<td>[[CSW]]</td>
-<td>Open Geospatial Consortium, “Catalogue Services Specification 2.0.2, OGC 07-045, ISO Metadata Application Profile for CSW 2.0,” 2007. [Online]. Available: <a href="http://www.opengeospatial.org/standards/cat">http://www.opengeospatial.org/standards/cat</a></td>
-</tr>
-<tr>
-<td>[[VOCAB-DCAT]]</td>
-<td>W3C, “Data Catalog Vocabulary (DCAT),” 2014. [Online]. Available: <a href="http://www.w3.org/TR/vocab-dcat/">http://www.w3.org/TR/vocab-dcat/</a></td>
-</tr>
-<tr>
-<td>[[DCAT-AP]]</td>
-<td>European Commission, ISA Programme, “DCAT Application Profile for data portals in Europe,” 2015. [Online]. Available: <a href="https://joinup.ec.europa.eu/node/63567">https://joinup.ec.europa.eu/node/63567</a></td>
-</tr>
-<tr>
-<td>[[DCTERMS]]</td>
-<td>DCMI, “DCMI Metadata Terms,” 2012. [Online]. Available: <a href="http://dublincore.org/documents/2012/06/14/dcmi-terms/">http://dublincore.org/documents/2012/06/14/dcmi-terms/</a></td>
-</tr>
-<tr>
-<td>[[DCWIKI]]</td>
-<td>DCMI, “User Guide / Publishing Metadata,” [Online]. Available: <a href="http://wiki.dublincore.org/index.php/User_Guide/Publishing_Metadata">http://wiki.dublincore.org/index.php/User_Guide/Publishing_Metadata</a></td>
-</tr>
-<tr>
-<td>[[EARL10]]</td>
-<td>W3C, “W3C Evaluation and Report Language (EARL),” 2011. [Online]. Available: <a href="http://www.w3.org/TR/EARL10-Schema/">http://www.w3.org/TR/EARL10-Schema/</a></td>
-</tr>
-<tr>
-<td>[[GEODCAT-XSLT]]</td>
-<td>A. Perego, “XSLT for converting ISO 19139 metadata into DCAT-AP,” 2015. [Online]. Available: <a href="https://github.com/SEMICeu/iso-19139-to-dcat-ap/">https://github.com/SEMICeu/iso-19139-to-dcat-ap/</a></td>
-</tr>
-<tr>
-<td>[[GEOHASH]]</td>
-<td>Wikipedia, “Geohash,” [Online]. Available: <a href="http://en.wikipedia.org/wiki/Geohash">http://en.wikipedia.org/wiki/Geohash</a></td>
-</tr>
-<tr>
-<td>[[GEOHASH-36]]</td>
-<td>Wikipedia, “Geohash-36,” [Online]. Available: <a href="http://en.wikipedia.org/wiki/Geohash-36">http://en.wikipedia.org/wiki/Geohash-36</a></td>
-</tr>
-<tr>
-<td>[[GEOJSON]]</td>
-<td>H. Butler, M. Daly, A. Doyle, S. Gillies, T. Schaub and C. Schmidt, “The GeoJSON Format Specification,” 2008. [Online]. Available: <a href="http://geojson.org/geojson-spec.html">http://geojson.org/geojson-spec.html</a></td>
-</tr>
-<tr>
-<td>[[GEONAMES]]</td>
-<td>geonames.org, “Geonames.org,” [Online]. Available: <a href="http://www.geonames.org/">http://www.geonames.org/</a></td>
-</tr>
-<tr>
-<td>[[GeoSPARQL]]</td>
-<td>Open Geospatial Consortium, “GeoSPARQL - A Geographic Query Language for RDF Data,” 2012. [Online]. Available: <a href="http://www.opengeospatial.org/standards/geosparql">http://www.opengeospatial.org/standards/geosparql</a></td>
-</tr>
-<tr>
-<td>[[GML]]</td>
-<td>Open Geospatial Consortium, “Geography Markup Language,” [Online]. Available: <a href="http://www.opengeospatial.org/standards/gml">http://www.opengeospatial.org/standards/gml</a></td>
-</tr>
-<tr>
-<td>[[CHARSETS]]</td>
-<td>IANA, “Character Sets,” [Online]. Available: <a href="http://www.iana.org/assignments/character-sets/character-sets.xhtml">http://www.iana.org/assignments/character-sets/character-sets.xhtml</a></td>
-</tr>
-<tr>
-<td>[[IANA-MEDIA-TYPES]]</td>
-<td>IANA, “Media Types Register,” [Online]. Available: <a href="http://www.iana.org/assignments/media-types/media-types.xhtml">http://www.iana.org/assignments/media-types/media-types.xhtml</a></td>
-</tr>
-<tr>
-<td>[[INSPIRE-SDSS-REG]]</td>
-<td>European Commission, “Commission Regulation (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services,” 2010. [Online]. Available: <a href="http://eur-lex.europa.eu/eli/reg/com/2010/1089">http://eur-lex.europa.eu/eli/reg/com/2010/1089</a> .</td>
-</tr>
-<tr>
-<td>[[INSPIRE-DC]]</td>
-<td>European Commission, “State of progress in the development of guidelines to express elements of the INSPIRE metadata implementing rules using ISO 15836 (Dublin core),” [Online]. Available: <a href="http://inspire.ec.europa.eu/reports/ImplementingRules/metadata/MD_IR_and_DC_state%20of%20progress.pdf">http://inspire.ec.europa.eu/reports/ImplementingRules/metadata/MD_IR_and_DC_state%20of%20progress.pdf</a></td>
-</tr>
-<tr>
-<td>[[INSPIRE-DCAT]]</td>
-<td>INSPIRE Maintenance and Implementation Group, “Alignment of INSPIRE metadata with DCAT-AP,” 2014. [Online]. Available: <a href="https://ies-svn.jrc.ec.europa.eu/projects/metadata/wiki/Alignment_of_INSPIRE_metadata_with_DCAT-AP">https://ies-svn.jrc.ec.europa.eu/projects/metadata/wiki/Alignment_of_INSPIRE_metadata_with_DCAT-AP</a></td>
-</tr>
-<tr>
-<td>[[INSPIRE-DIR]]</td>
-<td>European Parliament, “DIRECTIVE 2007/2/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE),” 2007. [Online]. Available: <a href="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2007:108:0001:0014:en:PDF">http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2007:108:0001:0014:en:PDF</a></td>
-</tr>
-<tr>
-<td>[[INSPIRE-DS]]</td>
-<td>European Commission, “Technical Guidance for the implementation of INSPIRE Discovery Services. Version 3.1,” 2011. [Online]. Available: <a href="http://inspire.jrc.ec.europa.eu/documents/Network_Services/TechnicalGuidance_DiscoveryServices_v3.1.pdf">http://inspire.jrc.ec.europa.eu/documents/Network_Services/TechnicalGuidance_DiscoveryServices_v3.1.pdf</a></td>
-</tr>
-<tr>
-<td>[[INSPIRE-MD-REG]]</td>
-<td>European Commission, “Commission Regulation (EC) No 1205/2008 of 3 December 2008 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards metadata,” 2008. [Online]. Available: <a href="http://data.europa.eu/eli/reg/2008/1205">http://data.europa.eu/eli/reg/2008/1205</a></td>
-</tr>
-<tr>
-<td>[[INSPIRE-MD-20131029]]</td>
-<td>European Commission, “INSPIRE Metadata Implementing Rules: Technical Guidelines based on EN ISO 19115 and EN ISO 19119,” 2013. [Online]. Available: <a href="http://inspire.ec.europa.eu/index.cfm/pageid/101">http://inspire.ec.europa.eu/index.cfm/pageid/101</a></td>
-</tr>
-<tr>
-<td>[[INSPIRE-MT]]</td>
-<td>European Commission, “INSPIRE Media Type Register,” [Online]. Available: <a href="http://inspire.ec.europa.eu/media-types/">http://inspire.ec.europa.eu/media-types/</a></td>
-</tr>
-<tr>
-<td>[[ISO-19115]]</td>
-<td>ISO (International Organization for Standardization), “ISO 19115:2003 Geographic information -- Metadata,” 2003. [Online]. Available: <a href="http://www.iso.org/iso/catalogue_detail?csnumber=26020">http://www.iso.org/iso/catalogue_detail?csnumber=26020</a></td>
-</tr>
-<tr>
-<td>[[ISO-19115-1]]</td>
-<td>ISO (International Organization for Standardization), “ISO 19115-1:2014 -- Geographic information -- Metadata -- Part 1: Fundamentals,” 2014. [Online]. Available: <a href="http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=53798">http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=53798</a></td>
-</tr>
-<tr>
-<td>[[ISO-19119]]</td>
-<td>ISO (International Organization for Standardization), “ISO 19119:2005 -- Geographic information -- Services,” 2005. [Online]. Available: <a href="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=39890">http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=39890</a></td>
-</tr>
-<tr>
-<td>[[ISO-19125-1]]</td>
-<td>ISO (International Organization for Standardization), “ISO 19125-1:2004 Geographic information -- Simple feature access -- Part 1: Common architecture,” 2004. [Online]. Available: <a href="http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=40114">http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=40114</a></td>
-</tr>
-<tr>
-<td>[[ISO-19139]]</td>
-<td>ISO (International Organization for Standardization), “ISO/TS 19139:2007 - Geographic information -- Metadata -- XML schema implementation,” 2007. [Online]. Available: <a href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=32557">http://www.iso.org/iso/catalogue_detail.htm?csnumber=32557</a></td>
-</tr>
-<tr>
-<td>[[ISO-639-2]]</td>
-<td>ISO (International Organization for Standardization), “ISO 639-2:1998 Codes for the representation of names of languages -- Part 2: Alpha-3 code,” 1998. [Online]. Available: <a href="http://www.iso.org/iso/catalogue_detail?csnumber=4767">http://www.iso.org/iso/catalogue_detail?csnumber=4767</a></td>
-</tr>
-<tr>
-<td>[[KML]]</td>
-<td>Open Geospatial Consortium, “Keyhole Markup Language (KML),” [Online]. Available: <a href="http://www.opengeospatial.org/standards/kml">http://www.opengeospatial.org/standards/kml</a></td>
-</tr>
-<tr>
-<td>[[W3C-BASIC-GEO]]</td>
-<td>W3C, “WGS84 Geo Positioning: an RDF vocabulary,” 2009. [Online]. Available: <a href="http://www.w3.org/2003/01/geo/wgs84_pos">http://www.w3.org/2003/01/geo/wgs84_pos#</a></td>
-</tr>
-<tr>
-<td>[[LOCN]]</td>
-<td>European Commission, ISA Programme, “ISA Programme Location Core Vocabulary,” 2015. [Online]. Available: <a href="http://www.w3.org/ns/locn">http://www.w3.org/ns/locn#</a></td>
-</tr>
-<tr>
-<td>[[MDR-CONT]]</td>
-<td>Publications Office of the EU, “Named Authority List: Continents,” [Online]. Available: <a href="http://publications.europa.eu/mdr/authority/continent/">http://publications.europa.eu/mdr/authority/continent/</a></td>
-</tr>
-<tr>
-<td>[[MDR-COUNTRIES]]</td>
-<td>Publications Office of the EU, “Named Authority List: Countries,” [Online]. Available: <a href="http://publications.europa.eu/mdr/authority/country/">http://publications.europa.eu/mdr/authority/country/</a></td>
-</tr>
-<tr>
-<td>[[MDR-FREQ]]</td>
-<td>Publications Office of the EU, “Named Authority List: Frequencies,” [Online]. Available: <a href="http://publications.europa.eu/mdr/authority/frequency/">http://publications.europa.eu/mdr/authority/frequency/</a></td>
-</tr>
-<tr>
-<td>[[MDR-FT]]</td>
-<td>Publications Office of the EU, “Named Authority List: File Types,” [Online]. Available: <a href="http://publications.europa.eu/mdr/authority/file-type/">http://publications.europa.eu/mdr/authority/file-type/</a></td>
-</tr>
-<tr>
-<td>[[MDR-LANG]]</td>
-<td>Publications Office of the EU, “Named Authority List: Languages,” [Online]. Available: <a href="http://publications.europa.eu/mdr/authority/language/">http://publications.europa.eu/mdr/authority/language/</a></td>
-</tr>
-<tr>
-<td>[[MDR-PLACES]]</td>
-<td>Publications Office of the EU, “Named Authority List: Places,” [Online]. Available: <a href="http://publications.europa.eu/mdr/authority/place/">http://publications.europa.eu/mdr/authority/place/</a></td>
-</tr>
-<tr>
-<td>[[MDR-THEMES]]</td>
-<td>Publications Office of the EU, “Named Authority List: Data Themes,” [Online]. Available: <a href="http://publications.europa.eu/mdr/authority/data-theme/">http://publications.europa.eu/mdr/authority/data-theme/</a></td>
-</tr>
-<tr>
-<td>[[NEOGEO]]</td>
-<td>GeoVocab.org, “NeoGeo Vocabulary Specification - Madrid Edition,” 2012. [Online]. Available: <a href="http://geovocab.org/doc/neogeo/">http://geovocab.org/doc/neogeo/</a></td>
-</tr>
-<tr>
-<td>[[PROV-O]]</td>
-<td>W3C, “PROV-O: The PROV Ontology,” 2013. [Online]. Available: <a href="http://www.w3.org/TR/prov-o/">http://www.w3.org/TR/prov-o/</a></td>
-</tr>
-<tr>
-<td>[[RFC4288]]</td>
-<td>IETF, “RFC 4288 – Media Type Specifications and Registration Procedures,” 2005. [Online]. Available: <a href="https://tools.ietf.org/html/rfc4288">https://tools.ietf.org/html/rfc4288</a></td>
-</tr>
-<tr>
-<td>[[RFC5870]]</td>
-<td>IETF, “RFC 5870 - A Uniform Resource Identifier for Geographic Locations ('geo' URI),” 2010. [Online]. Available: <a href="https://tools.ietf.org/html/rfc5870">https://tools.ietf.org/html/rfc5870</a></td>
-</tr>
-<tr>
-<td>[[SCHEMA-ORG]]</td>
-<td>“Schema.org,” [Online]. Available: <a href="http://schema.org">http://schema.org</a></td>
-</tr>
-<tr>
-<td>[[VCARD-RDF]]</td>
-<td>W3C, “vCard Ontology for describing persons and organisations,” 2013. [Online]. Available: <a href="http://www.w3.org/TR/vcard-rdf/">http://www.w3.org/TR/vcard-rdf/</a></td>
-</tr>
-<tr>
-<td>[[XML]]</td>
-<td>W3C, “Extensible Markup Language (XML) 1.0 (Fifth Edition),” [Online]. Available: <a href="http://www.w3.org/TR/2008/REC-xml-20081126/">http://www.w3.org/TR/2008/REC-xml-20081126/</a></td>
-</tr>
-</tbody>
-</table>
--->
-</section>
 </section>
 
 <section id="overview-of-metadata-elements-covered-by-geodcat-ap" class="appendix">
@@ -2640,7 +2398,7 @@
     &lt;/gmd:MD_DataIdentification&gt;
   &lt;/gmd:identificationInfo&gt;
   ...
-&lt;/gmd:MD_Metadata&gt;</td>
+&lt;/gmd:MD_Metadata&gt;</pre>
 </aside>
 </section>
 
@@ -2703,7 +2461,7 @@
 <p>The following example assumes that the metadata language is Dutch, and the resource language is German.</p>
 <aside class="example">
 <p>Resource metadata in GeoDCAT-AP</p>
-<pre># Resource metadata</p>
+<pre># Resource metadata
 [] dct:language
   &lt;http://publications.europa.eu/resource/authority/language/DEU&gt; ;
   foaf:isPrimaryTopicOf
@@ -2997,12 +2755,10 @@
 <h2>Geographic bounding box - *Geographic location of the dataset (by 4 coordinates or by geographic identifier)</h2>
 <p>In the core profile of ISO 19115, spatial coverage can be specified either with a bounding box (a geometry) or a geographic identifier. INSPIRE is more restrictive, in that it requires to use a bounding box</p>
 <p>Based on that, GeoDCAT-AP models spatial coverage as follows:</p>
-<ul>
-<li><p><strong>Bounding box</strong>: When the area corresponding to the spatial coverage is denoted by a geometry, as in INSPIRE, DCAT-AP recommends the use of the Core Location Vocabulary [[LOCN]], where this is done by using property <a href="https://www.w3.org/ns/locn#locn:geometry"><code>locn:geometry</code></a>, having as range a geometry
-<!--
-<a href="#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a>
--->
- specified as</p>
+<dl>
+<dt>Bounding box</dt>
+<dd>
+<p>When the area corresponding to the spatial coverage is denoted by a geometry, as in INSPIRE, DCAT-AP recommends the use of the Core Location Vocabulary [[LOCN]], where this is done by using property <a href="https://www.w3.org/ns/locn#locn:geometry"><code>locn:geometry</code></a>, having as range a geometry specified as</p>
 <ul>
 <li><p>a URI - e.g., by using the geo URI scheme (IET RFC-5870) [[?RFC5870]], or a geohash URI [[?GEOHASH]], [[?GEOHASH-36]];</p></li>
 <li><p>a syntax encoding scheme - e.g., geohashes [[?GEOHASH]], [[?GEOHASH-36]], WKT [[?ISO-19125-1]], GML [[?GML]], KML [[?KML]], GeoJSON [[?GEOJSON]]; or</p></li>
@@ -3030,14 +2786,18 @@
 <li><p>Geometries can be provided in multiple encodings, but at least one of the following MUST be made available: GML and WKT.</p></li>
 <li><p>For GML and WKT, the CRS MUST be specified as defined in GeoSPARQL [[GeoSPARQL]].</p></li>
 </ul>
-</li<li><p><strong>Geographic identifier</strong>: ISO 19115 core also allows specifying the geographic location using a geographic identifier. Following DCAT-AP, for this, it is reo to use an HTTP URI from one of the following registers / gazetteers:</p>
-<li><p><strong>Geographic identifier</strong>: ISO 19115 core also allows specifying the geographic location using a geographic identifier. Following DCAT-AP, for this, it is recommended to use an HTTP URI from one of the following registers / gazetteers:</p>
+</dd>
+<dt>Geographic identifier</dt>
+<dd>
+<p>ISO 19115 core also allows specifying the geographic location using a geographic identifier. Following DCAT-AP, for this, it is recommended to use an HTTP URI from one of the following registers / gazetteers:</p>
+<ul>
 <li><p>The Named Authority Lists operated by the Metadata Registry of the EU Publications office concerning continents [[MDR-CONT]], countries [[MDR-COUNTRIES]], and places [[MDR-PLACES]].</p></li>
-</ul><p>If none of the above provides the relevant geographic identifiers, Geonames [[?GEONAMES]] SHOULD be used.</p>
-<p>If an HTTP URI is not available, the geographical identifier must be expressed with <code>skos:prefLabel</code>, and the reference to the originating controlled vocabulary (if any) must be specified with <code>skos:inScheme</code>. The controlled vocabulary will be described by a name (<code>dct:title</code>) and a last modified data (<code>dct:modified</code>).</p>
-</li>
 </ul>
-<p>As far as geographic identifiers are concerned, following DCAT-AP, GeoDCAT-AP does not prevent the use other vocabularies in addition to the recommended ones. The vocabularies identified by the GeoDCAT-AP WG are listed in <a href="#controlled-vocabularies"></a> of the GeoDCAT-AP specification.</p>
+<p>If none of the above provides the relevant geographic identifiers, Geonames [[?GEONAMES]] SHOULD be used.</p>
+<p>If an HTTP URI is not available, the geographical identifier must be expressed with <code>skos:prefLabel</code>, and the reference to the originating controlled vocabulary (if any) must be specified with <code>skos:inScheme</code>. The controlled vocabulary will be described by a name (<code>dct:title</code>) and a last modified data (<code>dct:modified</code>).</p>
+</dd>
+</dl>
+<p>As far as geographic identifiers are concerned, following DCAT-AP, GeoDCAT-AP does not prevent the use other vocabularies in addition to the recommended ones. The vocabularies identified by the GeoDCAT-AP WG are listed in <a href="#controlled-vocabularies"></a>.</p>
 <p>The following example shows how to specify the spatial coverage.</p>
 <aside class="example">
 <p>Resource metadata in GeoDCAT-AP using a geographic bounding box. This example uses multiple encodings, namely, the recommended ones (WKT and GML), plus GeoJSON. To denote the datatype of the GeoJSON literal, <a href="https://www.iana.org/assignments/media-types/application/vnd.geo+json">the URL of the corresponding IANA media type</a>.</p>
@@ -3072,7 +2832,7 @@
 []
   dct:spatial &lt;http://publications.europa.eu/resource/authority/country/NLD&gt; .
 
-# If no URI is used for the geographic identifier</p>
+# If no URI is used for the geographic identifier
 []
   dct:spatial [
   skos:preflabel &quot;Netherlands&quot;@en;
@@ -4006,7 +3766,7 @@ dct:accessRights [ a dct:RightsStatement ;
   dcat:distribution [ a dcat:Distribution ;
     cnt:characterEncoding &quot;UTF-8&quot;^^xsd:string ] .
     
-# Metadata on metadata in GeoDCAT-AP</p>
+# Metadata on metadata in GeoDCAT-AP
 [] a dcat:CatalogRecord ;
   cnt:characterEncoding &quot;UTF-8&quot;^^xsd:string .</pre>
 <p>Resource metadata in ISO 19139:</p>
@@ -4122,7 +3882,7 @@ dct:accessRights [ a dct:RightsStatement ;
 </tbody>
 </table>
 <aside class="example"><p>Resource metadata in GeoDCAT-AP:</p>
-<pre>[] a dcat:Dataset ;</p>
+<pre>[] a dcat:Dataset ;
   dcat:distribution [ a dcat:Distribution
     adms:representionTechnique &lt;http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode/vector&gt;
 ] .</pre><p>Resource metadata in ISO 19139:</p>
@@ -4264,12 +4024,12 @@ dct:accessRights [ a dct:RightsStatement ;
 <pre>[] a dcat:Dataset ;
   dct:accrualPeriodicity &lt;http://publications.europa.eu/resource/authority/frequency/DAILY&gt; .</pre>
 <p>Resource metadata in ISO 19139:</p>
-<pre>&lt;gmd:MD_MaintenanceInformation&gt;</p>
-  &lt;gmd:maintenanceAndUpdateFrequency gco:nilReason=&quot;missing&quot;&gt;</p>
+<pre>&lt;gmd:MD_MaintenanceInformation&gt;
+  &lt;gmd:maintenanceAndUpdateFrequency gco:nilReason=&quot;missing&quot;&gt;
     &lt;gmd:MD_MaintenanceFrequencyCode 
       codeList=&quot;http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/ML_gmxCodelists.xml#MD_MaintenanceFrequencyCode&quot; 
-      codeListValue=&quot;daily&quot;&gt;daily&lt;/gmd:MD_MaintenanceFrequencyCode&gt;</p>
-  &lt;/gmd:maintenanceAndUpdateFrequency&gt;</p>
+      codeListValue=&quot;daily&quot;&gt;daily&lt;/gmd:MD_MaintenanceFrequencyCode&gt;
+  &lt;/gmd:maintenanceAndUpdateFrequency&gt;
 &lt;/gmd:MD_MaintenanceInformation&gt;</pre></aside>
 </section>
 </section>
@@ -4678,38 +4438,5 @@ dct:accessRights [ a dct:RightsStatement ;
 </table>
 </section>
 </section>
-<!--
-<div class="footnotes">
-<hr />
-<ol>
--->
-<!--
-<li id="fn1"><p><a href="http://publications.europa.eu/mdr/eurovoc/">http://publications.europa.eu/mdr/eurovoc/</a><a href="#fnref1">↩</a></p></li>
--->
-<!--
-<li id="fn2"><p>European Commission – Joint Research Centre. INSPIRE Web site: <a href="http://inspire.ec.europa.eu/">http://inspire.ec.europa.eu/</a><a href="#fnref2">↩</a></p></li>
--->
-<!--
-<li id="fn3"><p><a href="https://github.com/SEMICeu/iso-19139-to-dcat-ap/tree/master/documentation/Mappings.md">https://github.com/SEMICeu/iso-19139-to-dcat-ap/tree/master/documentation/Mappings.md</a><a href="#fnref3">↩</a></p></li>
--->
-<!--
-<li id="fn4"><p><a href="https://github.com/SEMICeu/iso-19139-to-dcat-ap/tree/master/documentation/HTTP-URIs.md">https://github.com/SEMICeu/iso-19139-to-dcat-ap/tree/master/documentation/HTTP-URIs.md</a><a href="#fnref4">↩</a></p></li>
--->
-<!--
-<li id="fn5"><p><a href="https://open-data.europa.eu/">https://open-data.europa.eu/</a><a href="#fnref5">↩</a></p></li>
--->
-<!--
-<li id="fn6"><p><a href="http://www.europeandataportal.eu/">http://www.europeandataportal.eu/</a><a href="#fnref6">↩</a></p></li>
--->
-<!--
-<li id="fn7"><p>Please note that the Core Location Vocabulary does not restrict locn:geometry to bounding box geometries only.<a href="#fnref7">↩</a></p></li>
--->
-<!--
-<li id="fn8"><p><a href="http://www.iana.org/assignments/character-sets/">http://www.iana.org/assignments/character-sets/</a><a href="#fnref8">↩</a></p></li>
--->
-<!--
-</ol>
-</div>
--->
 </body>
 </html>
