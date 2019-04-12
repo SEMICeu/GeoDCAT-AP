@@ -1950,7 +1950,7 @@ table {font-size:small;}
 
 <section id="detailed-usage-notes-and-examples" class="appendix">
 <h1>Detailed usage notes and examples</h1>
-<p>This annex contains further usage notes and examples on the mappings summarised in <a href="#rdf-syntax-bindings-for-inspire-and-iso19115-metadata-elements"></a> of the GeoDCAT-AP specification.</p>
+<p>This annex contains further usage notes and examples on the mappings summarised in <a href="#rdf-syntax-bindings-for-inspire-and-iso19115-metadata-elements"></a>.</p>
 
 <section id="resource-title---dataset-title">
 <h2>Resource title - *Dataset title </h2>
@@ -2492,7 +2492,7 @@ table {font-size:small;}
 </table>
 <p>For conformance with [[DCAT-AP]], GeoDCAT-AP records MUST also include keywords from the MDR Data Theme Named Authority List [[MDR-THEMES]].</p>
 <p>In order to ensure consistency, the relevant MDR Data Theme keywords SHOULD be selected based on mappings with the controlled vocabularies used in INSPIRE / ISO 19115 metadata.</p>
-<p>At the date of publication of this specification, work is under-way to define a set of harmonised mappings between the relevant vocabularies. The status of this work, and links to a machine readable representation of the mappings, is documented on the dedicated page on Joinup, available at:</p>
+<p>At the date of publication of this specification [2015-12-23], work is under-way to define a set of harmonised mappings between the relevant vocabularies. The status of this work, and links to a machine readable representation of the mappings, is documented on the dedicated page on Joinup, available at:</p>
 <p><a href="https://joinup.ec.europa.eu/node/148245/">https://joinup.ec.europa.eu/node/148245/</a></p>
 </section>
 
@@ -2977,7 +2977,7 @@ table {font-size:small;}
 <p>For encoding conformance, GeoDCAT-AP proposes to use <code>dct:conformsTo</code> and the W3C Provenance Ontology (PROV-O) [[PROV-O]] as explained in the following paragraphs. For encoding other aspects of data quality, GeoDCAT-AP does not provide a syntax binding as there is a risk that the (future) work of other standards bodies on data quality may make the proposed syntax binding for GeoDCAT-AP outdated. For example, the <a href="https://www.w3.org/2013/dwbp/">W3C Data on the Web Best Practices WG</a> is working on a Data Quality Vocabulary (DQV) [[?VOCAB-DQV]]. To limit the impact, it was decided to only provide a partial mapping for Data Quality / Conformance.</p>
 <p>[[DCAT-AP]] provides a single candidate, <code>dct:conformsTo</code>, which however can be used to map only a conformity of degree ‘conformant’. This is suitable for the core profile of GeoDCAT-AP.</p>
 <p>Considering how conformity must be expressed in extended profile of GeoDCAT-AP (see the INSPIRE Metadata Regulation, Part B, <a href="http://data.europa.eu/eli/reg/2008/1205#d1e415-14-1">§7</a>), possible candidates are the W3C Evaluation and Report Language (EARL) [[?EARL10]] and the W3C Provenance Ontology (PROV-O) [[PROV-O]]. The latter candidate was chosen by the GeoDCAT-AP Working Group, since it would enable wider re-use with respect to the EARL vocabulary, which is more specific, and its use is limited.</p>
-<p>PROV-O allows encoding conformity as a test activity (<code>prov:Activity</code>) that generated a result encoded with property ‘<code>prov:generated</code>’, corresponding to the degree of conformity, for which the INSPIRE Registry maintains a URI set, see <a href="#controlled-vocabularies"></a> of the GeoDCAT-AP specification. The specification against which the conformance is asserted is encoded via a qualified association (<code>prov:QualifiedAssociation</code>) with a test plan (a <code>prov:Plan</code>) in turn derived from a standard (<code>dct:Standard</code>, also <code>prov:Entity</code>). These associations are made via a chain of properties: ‘<code>prov:qualifiedAssociation</code>’, ‘<code>prov:hadPlan</code>’, and ‘<code>prov:wasDerivedFrom</code>’.</p>
+<p>PROV-O allows encoding conformity as a test activity (<code>prov:Activity</code>) that generated a result encoded with property ‘<code>prov:generated</code>’, corresponding to the degree of conformity, for which the INSPIRE Registry maintains a URI set, see <a href="#controlled-vocabularies"></a>. The specification against which the conformance is asserted is encoded via a qualified association (<code>prov:QualifiedAssociation</code>) with a test plan (a <code>prov:Plan</code>) in turn derived from a standard (<code>dct:Standard</code>, also <code>prov:Entity</code>). These associations are made via a chain of properties: ‘<code>prov:qualifiedAssociation</code>’, ‘<code>prov:hadPlan</code>’, and ‘<code>prov:wasDerivedFrom</code>’.</p>
 <table id="table-7" class="simple">
 <caption>Table 7: Mappings for metadata element ‘conformity’</caption>
 <thead>
