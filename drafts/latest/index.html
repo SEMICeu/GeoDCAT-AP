@@ -297,7 +297,7 @@ table {font-size:small;}
 <h1>Introduction</h1>
 <p>This document contains the specification for GeoDCAT-AP, an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]] for describing geospatial datasets, dataset series, and services.</p>
 <p>Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better searchable across borders and sectors. This can be achieved by the exchange of descriptions of data sets among data portals. For this purpose, GeoDCAT-AP provides an RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 [[ISO-19115]] and those defined in the framework of the INSPIRE Directive [[INSPIRE-DIR]].</p>
-<p><strong>The GeoDCAT-AP specification does not replace the INSPIRE Metadata Regulation</strong> [[INSPIRE-MD-REG]] <strong>nor the INSPIRE Metadata technical guidelines</strong> [[INSPIRE-MD-20131029]] <strong>based on ISO 19115 and ISO 19119.</strong> Its purpose is to give owners of geospatial metadata the possibility to achieve more by providing the means of an <em>additional</em> implementation through harmonised RDF syntax bindings. Conversion rules to RDF syntax would allow Member States to maintain their collections of INSPIRE-relevant datasets following the INSPIRE Metadata technical guidelines based on ISO 19115 and ISO 19119 [[ISO-19119]], while at the same time publishing these collections on DCAT-AP-conformant data portals. A conversion to RDF syntax allows additional metadata elements to be displayed on general-purposed data portals, provided that such data portals are capable of displaying additional metadata elements. Additionally, data portals may be capable of providing machine-to-machine interfaces where additional metadata could be provided.</p>
+<p><strong>The GeoDCAT-AP specification does not replace the INSPIRE Metadata Regulation</strong> [[?INSPIRE-MD-REG]] <strong>nor the INSPIRE Metadata technical guidelines</strong> [[INSPIRE-MD-20131029]] <strong>based on ISO 19115 and ISO 19119.</strong> Its purpose is to give owners of geospatial metadata the possibility to achieve more by providing the means of an <em>additional</em> implementation through harmonised RDF syntax bindings. Conversion rules to RDF syntax would allow Member States to maintain their collections of INSPIRE-relevant datasets following the INSPIRE Metadata technical guidelines based on ISO 19115 and ISO 19119 [[ISO-19119]], while at the same time publishing these collections on DCAT-AP-conformant data portals. A conversion to RDF syntax allows additional metadata elements to be displayed on general-purposed data portals, provided that such data portals are capable of displaying additional metadata elements. Additionally, data portals may be capable of providing machine-to-machine interfaces where additional metadata could be provided.</p>
 
 <section id="objectives">
 <h2>Objectives</h2>
@@ -373,7 +373,7 @@ table {font-size:small;}
 
 <section id="alignment-of-inspire-metadata-with-dublin-core">
 <h2>Alignment of INSPIRE metadata with Dublin Core</h2>
-<p>In 2008, JRC published a report [[INSPIRE-DC]] on the progress made in defining the proper way of expressing elements of INSPIRE metadata in conformance with ISO 15836 (Dublin Core).</p>
+<p>In 2008, JRC published a report [[?INSPIRE-DC]] on the progress made in defining the proper way of expressing elements of INSPIRE metadata in conformance with ISO 15836 (Dublin Core).</p>
 </section>
 
 <section id="alignment-of-inspire-metadata-with-dcat-ap">
@@ -480,7 +480,7 @@ table {font-size:small;}
 </ul>
 <p>More precisely, the supported INSPIRE metadata elements include:</p>
 <ul>
-<li><p>The set of metadata elements defined in the INSPIRE Metadata Regulation [[INSPIRE-MD-REG]].</p></li>
+<li><p>The set of metadata elements defined in the INSPIRE Metadata Regulation [[?INSPIRE-MD-REG]].</p></li>
 <li><p>The set of metadata elements defined in the INSPIRE Data and Services Regulation (Article 13: “Metadata required for Interoperability”) [[INSPIRE-SDSS-REG]]. These elements are also listed in Appendix B.1 to the INSPIRE Metadata Technical Guidelines (version 1.3) [[INSPIRE-MD-20131029]].</p></li>
 <li><p>The set of metadata elements recommended as common to all the INSPIRE spatial data themes in the INSPIRE Data Specifications Technical Guidelines, and listed in the first table included in Appendix B.2 to the INSPIRE Metadata Technical Guidelines (version 1.3) [[INSPIRE-MD-20131029]]. These elements are the following ones:</p>
 <ul>
@@ -2085,7 +2085,7 @@ table {font-size:small;}
 <h2>Resource type - *not in ISO 19115 core</h2>
 <p>In [[VOCAB-DCAT]], the notion of dataset is quite broad, and may include both the INSPIRE notions of <strong>dataset</strong> and <strong>dataset series</strong>. Moreover, currently no existing vocabulary provides suitable candidates for the INSPIRE notions of dataset series – the existing ones are very generic (e.g., <code>dctype:Collection</code> is defined as &quot;An aggregation of resources&quot; [[DCTERMS]]).</p>
 <p>Based on this, in GeoDCAT-AP both INSPIRE datasets and dataset series are specified as instances of <code>dcat:Dataset</code>.</p>
-<p>Moreover, in order to maintain the INSPIRE distinction between datasets and dataset series, following the work on aligning INSPIRE Metadata and Dublin Core [[INSPIRE-DC]], in the extended profile of GeoDCAT-AP they will be denoted by using the resource type code list operated by the INSPIRE Registry, and by using <code>dct:type</code>. More precisely, the following URIs should be used to denote, respectively, dataset and series:</p>
+<p>Moreover, in order to maintain the INSPIRE distinction between datasets and dataset series, following the work on aligning INSPIRE Metadata and Dublin Core [[?INSPIRE-DC]], in the extended profile of GeoDCAT-AP they will be denoted by using the resource type code list operated by the INSPIRE Registry, and by using <code>dct:type</code>. More precisely, the following URIs should be used to denote, respectively, dataset and series:</p>
 <ul>
 <li><p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset">http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset</a></p></li>
 <li><p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType/series">http://inspire.ec.europa.eu/metadata-codelist/ResourceType/series</a></p></li>
@@ -2456,7 +2456,7 @@ table {font-size:small;}
 
 <section id="resource-language-and-metadata-language---dataset-language-and-metadata-language">
 <h2>Resource language and metadata language - *Dataset language and Metadata language</h2>
-<p>In INSPIRE metadata, metadata and resource languages (which may be different) are specified by using the three-letter language codes defined in [[ISO-639-2]].</p>
+<p>In INSPIRE metadata, metadata and resource languages (which may be different) are specified by using the three-letter language codes defined in [[?ISO-639-2]].</p>
 <p>Based on DCAT-AP, both elements are specified with property <code>dct:language</code>, with the URI of the relevant language available from the relevant register operated by the EU Publications Office [[MDR-LANG]].</p>
 <p>The following example assumes that the metadata language is Dutch, and the resource language is German.</p>
 <aside class="example">
@@ -2499,7 +2499,7 @@ table {font-size:small;}
 
 <section id="topic-category-originating-controlled-vocabulary-and-keyword-value---dataset-topic-category">
 <h2>Topic category, originating controlled vocabulary, and keyword value - *Dataset topic category</h2>
-<p>In INSPIRE, these two elements have specific purposes. Quoting from the INSPIRE Metadata Regulation [[INSPIRE-MD-REG]] (<a href="http://data.europa.eu/eli/reg/2008/1205#d1e233-14-1">§2.1</a> and <a href="http://data.europa.eu/eli/reg/2008/1205#d1e233-14-1">§3.1</a>, respectively):</p>
+<p>In INSPIRE, these two elements have specific purposes. Quoting from the INSPIRE Metadata Regulation [[?INSPIRE-MD-REG]] (<a href="http://data.europa.eu/eli/reg/2008/1205#d1e233-14-1">§2.1</a> and <a href="http://data.europa.eu/eli/reg/2008/1205#d1e233-14-1">§3.1</a>, respectively):</p>
 <ul>
 <li><p>The topic category is a high-level classification scheme to assist in the grouping and topic-based search of available spatial data resources.</p></li>
 <li><p>The keyword value is a commonly used word, formalised word or phrase used to describe the subject. While the topic category is too coarse for detailed queries, keywords help narrowing a full text search and they allow for structured keyword search.</p></li>
@@ -3896,7 +3896,7 @@ dct:accessRights [ a dct:RightsStatement ;
 <section id="maintenance-information---not-in-iso19115-core">
 <h2>Maintenance information - *not in ISO 19115 core</h2>
 <p>In ISO 19115, element “Maintenance information” is meant mainly to describe how frequently a resource is updated.</p>
-<p>DCAT and DCAT-AP, the update frequency is expressed through <code>dct:accrualPeriodicity</code>, with the frequency codes defined in the Dublin Core Collection Description Frequency Vocabulary [[CLD-FREQ]], which can be partially mapped to the ones used in ISO 19115, as shown in the following table (the missing alignments are in bold). A similar mapping was added for the MDR Frequency Named Authority List [[MDR-FREQ]].</p>
+<p>DCAT and DCAT-AP, the update frequency is expressed through <code>dct:accrualPeriodicity</code>, with the frequency codes defined in the Dublin Core Collection Description Frequency Vocabulary [[[[?CLD-FREQ]], which can be partially mapped to the ones used in ISO 19115, as shown in the following table (the missing alignments are in bold). A similar mapping was added for the MDR Frequency Named Authority List [[MDR-FREQ]].</p>
 <p>The ISO 19115 code list of maintenance frequency codes might be in the future available as a URI register from the INSPIRE Registry.</p>
 <p>Based on this, maintenance frequency is modelled in GeoDCAT-AP by using <code>dct:accrualPeriodicity</code> with the MDR Frequency Named Authority List [[MDR-FREQ]].</p>
 <p>For the frequency codes not covered by the MDR Frequency code list, the approach will be as follows:</p>
@@ -3908,7 +3908,7 @@ dct:accessRights [ a dct:RightsStatement ;
 <thead>
 <tr>
 <th>ISO 19115 - MD_MaintenanceFrequencyCode</th>
-<th>Dublin Core Collection Description Frequency Vocabulary [[CLD-FREQ]]</th>
+<th>Dublin Core Collection Description Frequency Vocabulary [[[[?CLD-FREQ]]</th>
 <th>MDR Frequency Named Authority List [[MDR-FREQ]]</th>
 </tr>
 </thead>
