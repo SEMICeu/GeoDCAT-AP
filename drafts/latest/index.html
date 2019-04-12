@@ -478,7 +478,7 @@ table {font-size:small;}
 
 <section id="used-namespaces">
 <h2>Used namespaces</h2>
-<p>Table 1 gives an overview of the namespaces (and prefixes) used in the remainder of this document.</p>
+<p>Table 1 lists the RDF namespaces (and prefixes) used in the remainder of this document.</p>
 <table id="table-1" class="simple">
 <caption>Table 1: Namespace prefixes</caption>
 <thead>
@@ -2101,7 +2101,7 @@ table {font-size:small;}
 <h2>Resource locator - *On-line resource</h2>
 <p>In INSPIRE, this element, quoting, “defines the link(s) to the resource and/or the link to additional information about the resource”.</p>
 <p>For datasets, [[VOCAB-DCAT]] has a property, namely, <code>dcat:landingPage</code>, having exactly the same purpose. By contrast, the only property available in [[VOCAB-DCAT]] for linking a service to an online resource is <code>foaf:homepage</code>.</p>
-<p>ISO 19115 offers however the ability to specify the “type” of resource locator by using a specific code list (CI_OnlineFunctionCode), described in the following table:</p>
+<p>ISO 19115 offers however the ability to specify the “type” of resource locator by using a specific code list (<code>CI_OnlineFunctionCode</code>), described in the following table:</p>
 <table class="simple">
 <thead>
 <tr>
@@ -2728,7 +2728,7 @@ table {font-size:small;}
 <li><p>The Named Authority Lists operated by the Metadata Registry of the EU Publications office concerning continents [[MDR-CONT]], countries [[MDR-COUNTRIES]], and places [[MDR-PLACES]].</p></li>
 </ul>
 <p>If none of the above provides the relevant geographic identifiers, Geonames [[?GEONAMES]] SHOULD be used.</p>
-<p>If an HTTP URI is not available, the geographical identifier must be expressed with <code>skos:prefLabel</code>, and the reference to the originating controlled vocabulary (if any) must be specified with <code>skos:inScheme</code>. The controlled vocabulary will be described by a name (<code>dct:title</code>) and a last modified data (<code>dct:modified</code>).</p>
+<p>If an HTTP URI is not available, the geographical identifier MUST be expressed with <code>skos:prefLabel</code>, and the reference to the originating controlled vocabulary (if any) MUST be specified with <code>skos:inScheme</code>. The controlled vocabulary will be described by a name (<code>dct:title</code>) and a last modified data (<code>dct:modified</code>).</p>
 </dd>
 </dl>
 <p>As far as geographic identifiers are concerned, following [[DCAT-AP]], GeoDCAT-AP does not prevent the use other vocabularies in addition to the recommended ones. The vocabularies identified by the GeoDCAT-AP WG are listed in <a href="#controlled-vocabularies"></a>.</p>
@@ -3498,7 +3498,8 @@ dct:accessRights [ a dct:RightsStatement ;
   dct:conformsTo &lt;http://www.opengis.net/def/crs/EPSG/0/4258&gt; .
   
 &lt;http://www.opengis.net/def/crs/EPSG/0/4258&gt;
-  dct:type &lt;http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem&gt; .</pre><p>Resource metadata in ISO 19139:</p>
+  dct:type &lt;http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem&gt; .</pre>
+<p>Resource metadata in ISO 19139:</p>
 <pre>&lt;gmd:referenceSystemInfo&gt;
   &lt;gmd:MD_ReferenceSystem&gt;
     &lt;gmd:referenceSystemIdentifier&gt;
@@ -3513,7 +3514,7 @@ dct:accessRights [ a dct:RightsStatement ;
     &lt;/gmd:referenceSystemIdentifier&gt;
   &lt;/gmd:MD_ReferenceSystem&gt;
 &lt;/gmd:referenceSystemInfo&gt;</pre></aside>
-<p>If not represented with an HTTP URI, the reference system identifier must be mapped to dct:identifier, as in the following example.</p>
+<p>If not represented with an HTTP URI, the reference system identifier MUST be mapped to <code>dct:identifier</code>, as in the following example.</p>
 <aside class="example"><p>Resource metadata in GeoDCAT-AP:</p>
 <pre>[] a dcat:Dataset ;
   dct:conformsTo [
@@ -3970,7 +3971,7 @@ dct:accessRights [ a dct:RightsStatement ;
 
 <section id="comparison-between-inspire-and-iso19115-12014" class="appendix">
 <h1>Comparison between INSPIRE and ISO 19115-1:2014</h1>
-<p>In ISO 19115-1:2014 the concept of ‘Core metadata’ was removed; it was translated into a normative annex (Annex F) “Discovery metadata for geographic resources”. In the Annex F metadata elements for the discovery are listed in 2 tables:</p>
+<p>In [[?ISO-19115-1]] the concept of ‘Core metadata’ was removed; it was translated into a normative annex (Annex F) “Discovery metadata for geographic resources”. In the Annex F metadata elements for the discovery are listed in 2 tables:</p>
 <ul>
 <li><p>the metadata elements to be used for discovery of geographic datasets and series are identified in F.1;</p></li>
 <li><p>the metadata elements to be used for discovery of service resources are identified in F.2.</p></li>
@@ -3978,7 +3979,7 @@ dct:accessRights [ a dct:RightsStatement ;
 
 <section id="spatial-dataset-and-spatial-dataset-series">
 <h2>Spatial dataset and spatial dataset series</h2>
-<p>The table below compares the core requirements of ISO 19115:2003 (see Table 3 in 6.5 of ISO 19115:2003), the requirements of INSPIRE for spatial dataset and spatial dataset series as defined in the Implementing Rules for metadata and the discovery metadata for geographic datasets and series (see Table F.1 in annex F of ISO 19115-1:2014). For those last metadata elements in the last field of the table the path is indicated. For each element, in brackets the obligation/max occurrence (3rd field).</p>
+<p>The table below compares the core requirements of ISO 19115:2003 (see Table 3 in 6.5 of [[?ISO-19115]]), the requirements of INSPIRE for spatial dataset and spatial dataset series as defined in the Implementing Rules for metadata and the discovery metadata for geographic datasets and series (see Table F.1 in annex F of [[?ISO-19115-1]]). For those last metadata elements in the last field of the table the path is indicated. For each element, in brackets the obligation/max occurrence (3rd field).</p>
 <table id="table-11" class="simple">
 <caption>Table 11: Metadata elements used for discovery of geographic datasets and series</caption>
 <thead>
