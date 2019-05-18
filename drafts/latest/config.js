@@ -40,7 +40,8 @@ var respecConfig = {
       uri: "http://data.europa.eu/w21/f106d0e0-4777-4ae2-bfc7-54c4f1d72b79",
     }],    
 */
-    implementationReportURI:"https://joinup.ec.europa.eu/node/144843",
+//    implementationReportURI:"https://joinup.ec.europa.eu/node/144843",
+    implementationReportURI:"https://joinup.ec.europa.eu/document/geodcat-ap-implementations",
     license: "isa-open-metadata",
     specStatus: "unofficial",
     shortName: "geodcat-ap",
@@ -56,7 +57,7 @@ var respecConfig = {
     formerEditors: [{
       name:       "Andrea Perego",
       company:    "European Commission, Joint Research Centre",
-      url: "",
+      orcid:      "0000-0001-9300-2694",
       companyURL: "https://ec.europa.eu/jrc/"
     },{
       name: "Stijn Goedertier",
@@ -71,25 +72,12 @@ var respecConfig = {
     editors: [{
       name:       "Andrea Perego",
       company:    "European Commission, Joint Research Centre",
-      url: "",
+      orcid:      "0000-0001-9300-2694",
       companyURL: "https://ec.europa.eu/jrc/"
-    },
-/*    
-    {
-      name: "Stijn Goedertier",
-      company: "PwC EU Services",
-      companyURL: "https://www.pwc.com/gx/en/services/european-union.html"
-    },
-    {
-      name: "Antonio Rotundo",
-      company: "Agenzia per l'Italia Digitale",
-      url: "",
-      companyURL: "http://www.agid.gov.it/"
-    }
-*/    
-    ],
+    }],
     authors: [{
       name: "GeoDCAT-AP Working Group",
+      url: "https://joinup.ec.europa.eu/solution/geodcat-ap",
       company: "EU ISA Programme",
       companyURL: "https://ec.europa.eu/isa/",
     }],    
