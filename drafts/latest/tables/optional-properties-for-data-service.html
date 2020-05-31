@@ -1,0 +1,331 @@
+<table class="simple">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="property optional">
+<td>
+<p>access rights</p>
+</td>
+<td>
+<p><code>dct:accessRights</code></p>
+</td>
+<td>
+<p><code>dct:RightsStatement</code></p>
+</td>
+<td>
+<p>This property MAY include information regarding access or restrictions based on privacy, security, or other policies.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="data-service-conforms-to">
+<td>
+<p>*conforms to</p>
+</td>
+<td>
+<p><code>dct:conformsTo</code></p>
+</td>
+<td>
+<p><code>dct:Standard</code></p>
+</td>
+<td>
+<p>This property is used to indicate the general standard or specification that the endpoints implement.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="data-service-contact-point">
+<td>
+<p>*contact point</p>
+</td>
+<td>
+<p><code>dcat:contactPoint</code></p>
+</td>
+<td>
+<p><code>vcard:Kind</code></p>
+</td>
+<td>
+<p>This property contains contact information that can be used for sending comments about the Data Service.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="data-service-creation-date">
+<td>
+<p>*creation date</p>
+</td>
+<td>
+<p><code>dct:created</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the date on which the Catalogue Record has been first created.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="data-service-creator">
+<td>
+<p>*creator</p>
+</td>
+<td>
+<p><code>dct:creator</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>This property refers to the entity primarily responsible for producing the Data Service..</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional">
+<td>
+<p>description</p>
+</td>
+<td>
+<p><code>dct:description</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains a free-text account of the Data Service. This property can be repeated for parallel language versions of the description.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="data-service-identifier">
+<td>
+<p>*identifier</p>
+</td>
+<td>
+<p><code>dct:identifier</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains the main identifier for the Data Service, e.g. the URI or other unique identifier in the context of the Catalogue.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional">
+<td>
+<p>licence</p>
+</td>
+<td>
+<p><code>dct:license</code></p>
+</td>
+<td>
+<p><code>dct:LicenseDocument</code></p>
+</td>
+<td>
+<p>This property contains the licence under which the Data service is made available.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="data-service-publisher">
+<td>
+<p>*publisher</p>
+</td>
+<td>
+<p><code>dct:publisher</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>This property refers to an entity (organisation) responsible for making the Data Service available.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="data-service-qualified-attribution">
+<td>
+<p>*qualified attribution</p>
+</td>
+<td>
+<p><code>prov:qualifiedAttribution</code></p>
+</td>
+<td>
+<p><code>prov:Attribution</code></p>
+</td>
+<td>
+<p>This property refers to a link to an Agent having some form of responsibility for the Data Service.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="data-service-reference-system">
+<td>
+<p>*reference system</p>
+</td>
+<td>
+<p><code>dct:conformsTo</code></p>
+</td>
+<td>
+<p><code>dct:Standard</code></p>
+</td>
+<td>
+<p>This property SHOULD be used to specify the reference system used in the Data Service.</p>
+<p>Spatial reference systems SHOULD be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by <abbr title="Open Geospatial Consortium">OGC</abbr> [[OGC-EPSG]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="data-service-rights-holder">
+<td>
+<p>*rights holder</p>
+</td>
+<td>
+<p><code>dct:rightsHolder</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>This property refers to an entity (organisation) holding rights on the Data Service..</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="data-service-service-category">
+<td>
+<p>*service category</p>
+</td>
+<td>
+<p><code>dct:type</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>In GeoDCAT-AP, this property SHOULD take as value one of the URIs of the "Classification of spatial data services" code list operated by the INSPIRE Registry [[INSPIRE-SDSC]].</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="data-service-service-type">
+<td>
+<p>*service type</p>
+</td>
+<td>
+<p><code>dct:type</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>In GeoDCAT-AP, this property SHOULD take as value one of the URIs of the "Spatial data service types" code list operated by the INSPIRE Registry [[INSPIRE-SDST]].</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="data-service-category">
+<td>
+<p>*theme / category</p>
+</td>
+<td>
+<p><code>dcat:theme</code>, subproperty of <code>dct:subject</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property refers to a category of the Data Service. A Data Service may be associated with multiple themes.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="data-service-topic-category">
+<td>
+<p>*topic category</p>
+</td>
+<td>
+<p><code>dct:subject</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>In GeoDCAT-AP, this property SHOULD take as value one of the URIs of the "Topic categories in accordance with EN ISO 19115" code list operated by the INSPIRE Registry [[INSPIRE-TC]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="data-service-type">
+<td>
+<p>*type</p>
+</td>
+<td>
+<p><code>dct:type</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>In GeoDCAT-AP, this property SHOULD take as value one of the URIs of the "Resource types" code list operated by the INSPIRE Registry [[INSPIRE-RT]] - namely the one corresponding to "Spatial data service".</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="data-service-was-used-by">
+<td>
+<p>*was used by</p>
+</td>
+<td>
+<p><code>prov:wasUsedBy</code></p>
+</td>
+<td>
+<p><code>prov:Activity</code></p>
+</td>
+<td>
+<p>This property refers to an activity that used the Data Service.</p>
+<p>In GeoDCAT-AP, this property MAY be used to specify a testing activity over a Data Service, against a given Standard, producing as output a conformance degree.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+</tbody>
+</table>

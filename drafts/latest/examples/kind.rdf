@@ -1,0 +1,15 @@
+  <rdf:Description>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+    <vcard:fn xml:lang="en">European Environment Agency</vcard:fn>
+    <vcard:hasEmail rdf:resource="mailto:sdi@eea.europa.eu"/>
+    <vcard:hasTelephone rdf:resource="tel:+451234567890"/>
+    <vcard:hasAddress>
+      <vcard:Address>
+        <vcard:street-address>Kongens Nytorv 6</vcard:street-address>
+        <vcard:locality>Copenhagen</vcard:locality>
+        <vcard:region>K</vcard:region>
+        <vcard:postal-code>1050</vcard:postal-code>
+        <vcard:country-name>Denmark</vcard:country-name>
+      </vcard:Address>
+    </vcard:hasAddress>
+  </rdf:Description>

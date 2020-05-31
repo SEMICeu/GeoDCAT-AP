@@ -1,0 +1,334 @@
+<table class="simple">
+<thead>
+<tr>
+<th>
+<p>Class name</p>
+</th>
+<th>
+<p>Usage note for the Application Profile</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Reference</p>
+</th>
+</thead>
+<tbody>
+</tr>
+<tr class="class optional ap-ext" id="activity">
+<td>
+<p>*<a href="#properties-for-activity">Activity</a></p>
+</td>
+<td>
+<p>An activity carried out by an Agent over an entity, according to a plan, and generating another entity.</p>
+<p>In GeoDCAT-AP, this class SHOULD be used to specify a testing activity over a resource, against a given Standard, producing as output a conformance degree.</p>
+</td>
+<td>
+<p><code>prov:Activity</code></p>
+</td>
+<td>
+<p>
+<a data-cite="PROV-O#Activity">§&nbsp;(2) Class: prov:Activity</a> [[PROV-O]]; 
+<a class="src-ref" data-cite="VOCAB-DCAT-2#quality-conformance-degree">§&nbsp;<bdi class="secno">12.2.2 </bdi>Relationships between datasets and agents</a> [[VOCAB-DCAT-2]]</p>
+</td>
+</tr>
+<tr class="class optional ap-ext" id="address-agent">
+<td>
+<p>*<a href="#properties-for-address-agent">Address (Agent)</a></p>
+</td>
+<td>
+<p>A postal address of the Agent.</p>
+</td>
+<td>
+<p><code>locn:Address</code></p>
+</td>
+<td>
+<p><a data-cite="LOCN#locn:Address">§&nbsp;Class Address</a> [[LOCN]]</p>
+</td>
+</tr>
+<tr class="class optional ap-ext" id="attribution">
+<td>
+<p>*<a href="#properties-for-attribution">Attribution</a></p>
+</td>
+<td>
+<p>A responsibility of an Agent for a resource.</p>
+</td>
+<td>
+<p><code>prov:Attribution</code></p>
+</td>
+<td>
+<p>
+<a data-cite="PROV-O#Attribution">§&nbsp;(50) Class: prov:Attribution</a> [[PROV-O]]; 
+<a class="src-ref" data-cite="VOCAB-DCAT-2#qualified-attribution">§&nbsp;<bdi class="secno">13.1 </bdi>Relationships between datasets and agents</a> [[VOCAB-DCAT-2]]</p>
+</td>
+</tr>
+<tr class="class optional" id="catalogue-record">
+<td>
+<a href="#properties-for-catalogue-record">Catalogue Record</a>
+</td>
+<td>
+<p>A description of a Dataset's entry in the Catalogue.</p>
+</td>
+<td>
+<p><code>dcat:CatalogRecord</code></p>
+</td>
+<td>
+<p><a data-cite="VOCAB-DCAT-2#Class:Catalog_Record">§&nbsp;<bdi class="secno">6.5 </bdi>Class: Catalog Record</a> [[VOCAB-DCAT-2]]</p>
+</td>
+</tr>
+<tr class="class optional" id="data-service">
+<td>
+<a href="#properties-for-data-service">Data Service</a>
+</td>
+<td>
+<p>A collection of operations that provides access to one or more datasets or data processing functions.</p>
+</td>
+<td>
+<p><code>dcat:DataService</code></p>
+</td>
+<td>
+<p><a data-cite="VOCAB-DCAT-2#Class:Data_Service">§&nbsp;<bdi class="secno">6.8 </bdi>Class: Data Service</a> [[VOCAB-DCAT-2]]</p>
+</td>
+</tr>
+<tr class="class optional" id="checksum">
+<td>
+<a href="#properties-for-checksum">Checksum</a>
+</td>
+<td>
+<p>A value that allows the contents of a file to be authenticated. This class allows the results of a variety of checksum and cryptographic message digest algorithms to be represented.</p>
+</td>
+<td>
+<p><code>spdx:Checksum</code></p>
+</td>
+<td>
+<p><a class="sec-ref" data-cite="SPDX#d4e1930">§&nbsp;checksum</a> [[SPDX]]</p>
+</td>
+</tr>
+<tr class="class optional" id="document">
+<td>
+<a href="#properties-for-document">Document</a>
+</td>
+<td>
+<p>A textual resource intended for human consumption that contains information, e.g. a Web page about a Dataset.</p>
+</td>
+<td>
+<p><code>foaf:Document</code></p>
+</td>
+<td>
+<p><a class="sec-ref" data-cite="FOAF#term_Document">§&nbsp;Class: foaf:Document</a> [[FOAF]]</p>
+</td>
+</tr>
+<tr class="class optional" id="frequency">
+<td>
+<p>Frequency</p>
+</td>
+<td>
+<p>A rate at which something recurs, e.g. the publication of a Dataset.</p>
+</td>
+<td>
+<p><code>dct:Frequency</code></p>
+</td>
+<td>
+<p><a data-cite="DCTERMS#terms-Frequency">§&nbsp;Term name: Frequency</a> [[DCTERMS]]</p>
+</td>
+</tr>
+<tr class="class optional" id="identifier">
+<td>
+<a href="#properties-for-identifier">Identifier</a>
+</td>
+<td>
+<p>An identifier in a particular context, consisting of the string that is the identifier; an optional identifier for the identifier scheme; an optional identifier for the version of the identifier scheme; an optional identifier for the agency that manages the identifier scheme</p>
+</td>
+<td>
+<p><code>adms:Identifier</code></p>
+</td>
+<td>
+<p><a class="sec-ref" data-cite="VOCAB-ADMS#identifier">§&nbsp;<bdi class="secno">5.2.6 </bdi>Identifier</a> [[VOCAB-ADMS]]</p>
+</td>
+</tr>
+<tr class="class optional" id="kind">
+<td>
+<a href="#properties-for-kind">Kind</a>
+</td>
+<td>
+<p>A description following the vCard specification, e.g. to provide telephone number and e-mail address for a contact point. Note that the class Kind is the parent class for the four explicit types of vCards (Individual, Organization, Location, Group).</p>
+</td>
+<td>
+<p><code>vcard:Kind</code></p>
+</td>
+<td>
+<p><a class="sec-ref" data-cite="VCARD-RDF-20140522#d4e1819">§&nbsp;Kind</a> [[VCARD-RDF]]</p>
+</td>
+</tr>
+<tr class="class optional ap-ext" id="address-kind">
+<td>
+<p>*<a href="#properties-for-address-kind">Address (Kind)</a></p>
+</td>
+<td>
+<p>A postal address of the Kind.</p>
+</td>
+<td>
+<p><code>vcard:Address</code></p>
+</td>
+<td>
+<p><a data-cite="VCARD-RDF#d4e1292">§&nbsp;Address</a> [[VCARD-RDF]]</p>
+</td>
+</tr>
+<tr class="class optional" id="linguistic-system">
+<td>
+<p>Linguistic system</p>
+</td>
+<td>
+<p>A system of signs, symbols, sounds, gestures, or rules used in communication, e.g. a language</p>
+</td>
+<td>
+<p><code>dct:LinguisticSystem</code></p>
+</td>
+<td>
+<p><a data-cite="DCTERMS#terms-LinguisticSystem">§&nbsp;Term name: LinguisticSystem</a> [[DCTERMS]]</p>
+</td>
+</tr>
+<tr class="class optional" id="location">
+<td>
+<a href="#properties-for-location">Location</a>
+</td>
+<td>
+<p>A spatial region or named place. It can be represented using a controlled vocabulary or with geographic coordinates. In the latter case, the use of the Core Location Vocabulary [[CLV]] is recommended, following the approach described in the [[GeoDCAT-AP]] specification.</p>
+</td>
+<td>
+<p><code>dct:Location</code></p>
+</td>
+<td>
+<p><a data-cite="DCTERMS#terms-Location">§&nbsp;Term name: Location</a> [[DCTERMS]]</p>
+</td>
+</tr>
+<tr class="class optional" id="media-type">
+<td>
+<p>Media type</p>
+</td>
+<td>
+<p>A media type, e.g. the format of a computer file</p>
+</td>
+<td>
+<p><code>dct:MediaType</code></p>
+</td>
+<td>
+<p><a data-cite="DCTERMS#terms-MediaType">§&nbsp;Term name: MediaType</a> [[DCTERMS]]</p>
+</td>
+</tr>
+<tr class="class optional" id="period-of-time">
+<td>
+<a href="#properties-for-period-of-time">Period of time</a>
+</td>
+<td>
+<p>An interval of time that is named or defined by its start and end dates.</p>
+</td>
+<td>
+<p><code>dct:PeriodOfTime</code></p>
+</td>
+<td>
+<p><a data-cite="DCTERMS#terms-PeriodOfTime">§&nbsp;Term name: PeriodOfTime</a> [[DCTERMS]]</p>
+</td>
+</tr>
+<tr class="class optional" id="provenance-statement">
+<td>
+<a href="#properties-for-provenance-statement">Provenance Statement</a>
+</td>
+<td>
+<p>A statement of any changes in ownership and custody of a resource since its creation that are significant for its authenticity, integrity, and interpretation</p>
+</td>
+<td>
+<p><code>dct:ProvenanceStatement</code></p>
+</td>
+<td>
+<p><a data-cite="DCTERMS#terms-ProvenanceStatement">§&nbsp;Term name: ProvenanceStatement</a> [[DCTERMS]]</p>
+</td>
+</tr>
+<tr class="class optional" id="publisher-type">
+<td>
+<p>Publisher type</p>
+</td>
+<td>
+<p>A type of organisation that acts as a publisher</p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p><a class="sec-ref" data-cite="VOCAB-ADMS#dcterms-type">§&nbsp;<bdi class="secno">5.3.41 </bdi>dcterms:type</a> [[VOCAB-ADMS]]</p>
+</td>
+</tr>
+<tr class="class optional" id="relationship">
+<td>
+<a href="#properties-for-relationship">Relationship</a>
+</td>
+<td>
+<p>An association class for attaching additional information to a relationship between DCAT Resources</p>
+</td>
+<td>
+<p><code>dcat:Relationship</code></p>
+</td>
+<td>
+<p><a data-cite="VOCAB-DCAT-2#Class:Relationship">§&nbsp;<bdi class="secno">6.12 </bdi>Class: Relationship</a> [[VOCAB-DCAT-2]]</p>
+</td>
+</tr>
+<tr class="class optional" id="rights-statement">
+<td>
+<a href="#properties-for-rights-statement">Rights statement</a>
+</td>
+<td>
+<p>A statement about the intellectual property rights (IPR) held in or over a resource, a legal document giving official permission to do something with a resource, or a statement about access rights.</p>
+</td>
+<td>
+<p><code>dct:RightsStatement</code></p>
+</td>
+<td>
+<p><a data-cite="DCTERMS#terms-RightsStatement">§&nbsp;Term name: RightsStatement</a> [[DCTERMS]]</p>
+</td>
+</tr>
+<tr class="class optional" id="role">
+<td>
+<p>Role</p>
+</td>
+<td>
+<p>A role is the function of a resource or agent with respect to another resource, in the context of resource attribution or resource relationships.</p>
+<p>Note it is a subclass of <code>skos:Concept</code>.</p>
+</td>
+<td>
+<p><code>dcat:Role</code></p>
+</td>
+<td>
+<p><a data-cite="VOCAB-DCAT-2#Class:Role">§&nbsp;<bdi class="secno">6.13 </bdi>Class: Role</a> [[VOCAB-DCAT-2]]</p>
+</td>
+</tr>
+<tr class="class optional" id="standard">
+<td>
+<a href="#properties-for-standard">Standard</a>
+</td>
+<td>
+<p>A standard or other specification to which a Dataset or Distribution conforms</p>
+</td>
+<td>
+<p><code>dct:Standard</code></p>
+</td>
+<td>
+<p><a data-cite="DCTERMS#terms-Standard">§&nbsp;Term name: Standard</a> [[DCTERMS]]</p>
+</td>
+</tr>
+<tr class="class optional" id="status">
+<td>
+<p>Status</p>
+</td>
+<td>
+<p>An indication of the maturity of a Distribution or the type of change of a Catalogue Record.</p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p><a class="src-ref" data-cite="VOCAB-ADMS#status">§&nbsp;<bdi class="secno">5.2.13 </bdi>Status</a> [[VOCAB-ADMS]]</p>
+</td>
+</tr>
+</tbody>
+</table>

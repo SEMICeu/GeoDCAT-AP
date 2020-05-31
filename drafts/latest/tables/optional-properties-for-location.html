@@ -1,0 +1,91 @@
+<table class="simple">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="property optional ap-ext" id="location-gazetteer"> 
+<td>
+<p>*gazetteer</p>
+</td>
+<td>
+<p><code>skos:inScheme</code></p>
+</td>
+<td>
+<p><code>skos:ConceptScheme</code></p>
+</td>
+<td>
+<p>This property MAY be used to specify the gazetteer to which the Location belongs.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="location-geographic-identifier">
+<td>
+<p>*geographic identifier</p>
+</td>
+<td>
+<p><code>dct:identifier</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains the geographic identifier for the Location, e.g. the URI or other unique identifier in the context of the relevant gazetteer.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="location-geographic-name"> 
+<td> 
+<p>*geographic name</p> 
+</td> 
+<td> 
+<p><code>skos:prefLabel</code></p> 
+</td> 
+<td> 
+<p><code>rdfs:Literal</code></p> 
+</td> 
+<td> 
+<p>This property contains a preferred label of the Location. This property can be repeated for parallel language versions of the label - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p> 
+</td> 
+<td> 
+<p>1..n</p> 
+</td> 
+</tr> 
+<tr class="property optional">
+<td>
+<p>geometry</p>
+</td>
+<td>
+<p><code>locn:geometry</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>gsp:wktLiteral</code> or <code>gsp:gmlLiteral</code></p>
+</td>
+<td>
+<p>This property associates any resource with the corresponding geometry.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+</tbody>
+</table>

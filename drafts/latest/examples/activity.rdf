@@ -1,0 +1,14 @@
+  <prov:Activity>
+    <prov:qualifiedAssociation rdf:parseType="Resource">
+      <prov:hadPlan rdf:parseType="Resource">
+        <prov:wasDerivedFrom rdf:parseType="Resource">
+          <dct:title xml:lang="en">Commission Regulation (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services</dct:title>
+          <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-12-08</dct:issued>
+        </prov:wasDerivedFrom>
+      </prov:hadPlan>
+    </prov:qualifiedAssociation>
+    <prov:generated rdf:parseType="Resource">
+      <dct:type rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated"/>
+      <dct:description xml:lang="en">See the referenced specification</dct:description>
+    </prov:generated>
+  </prov:Activity>

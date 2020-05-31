@@ -1,0 +1,129 @@
+<table class="simple">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<!--
+<tr class="property recommended ap-ext" id="kind-address">
+<td>
+<p>*address</p>
+</td>
+<td>
+<p><code>vcard:hasAddress</code></p>
+</td>
+<td>
+<p><code>vcard:Address</code></p>
+</td>
+<td>
+<p>This property MAY be used to specify the postal address of the Kind.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property recommended ap-ext" id="kind-affiliation">
+<td>
+<p>*affiliation</p>
+</td>
+<td>
+<p><code>vcard:organization-name</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property MAY be used to specify the affiliation of the Kind.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+-->
+<tr class="property recommended ap-ext" id="kind-email">
+<td>
+<p>*email</p>
+</td>
+<td>
+<p><code>vcard:hasEmail</code></p>
+</td>
+<td>
+<p><code>owl:Thing</code></p>
+</td>
+<td>
+<p>This property contains an email address of the Kind, specified using fully qualified <code>mailto:</code> URI scheme [[RFC6068]].</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property recommended ap-ext" id="kind-name">
+<td>
+<p>*name</p>
+</td>
+<td>
+<p><code>vcard:fn</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains a name of the Kind. This property can be repeated for different versions of the name (e.g. the name in different languages) - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<!--
+<tr class="property recommended ap-ext" id="kind-phone">
+<td>
+<p>*phone</p>
+</td>
+<td>
+<p><code>vcard:hasTelephone</code></p>
+</td>
+<td>
+<p><code>owl:Thing</code></p>
+</td>
+<td>
+<p>This property MAY be used to provide the phone number of the Kind, specified using fully qualified <code>tel:</code> URI scheme [[RFC3966]].</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+-->
+</tr>
+<tr class="property recommended ap-ext" id="kind-url">
+<td>
+<p>*URL</p>
+</td>
+<td>
+<p><code>vcard:hasURL</code></p>
+</td>
+<td>
+<p><code>owl:Thing</code></p>
+</td>
+<td>
+<p>This property points to a Web site of the Kind.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+</tbody>
+</table>

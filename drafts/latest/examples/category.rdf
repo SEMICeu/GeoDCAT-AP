@@ -1,0 +1,9 @@
+  <skos:Concept>
+    <skos:prefLabel xml:lang="en">geospatial data</skos:prefLabel>
+    <skos:inScheme>
+      <skos:ConceptScheme>
+        <dct:title xml:lang="en">EEA categories</dct:title>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-07-06</dct:issued>
+      </skos:ConceptScheme>
+    </skos:inScheme>
+  </skos:Concept>

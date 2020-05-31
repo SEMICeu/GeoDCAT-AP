@@ -1,0 +1,332 @@
+<table class="simple">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="property optional ap-ext" id="catalogue-access-rights">
+<td>
+<p>*access rights</p>
+</td>
+<td>
+<p><code>dct:accessRights</code></p>
+</td>
+<td>
+<p><code>dct:RightsStatement</code></p>
+</td>
+<td>
+<p>This property MAY include information regarding access or restrictions based on privacy, security, or other policies.</p>
+<p>For INSPIRE metadata, this property SHOULD be used with the URIs of the "Limitations on public access" code list operated by the INSPIRE Registry [[INSPIRE-LPA]].</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="catalogue-conforms-to">
+<td>
+<p>*conforms to</p>
+</td>
+<td>
+<p><code>dct:conformsTo</code></p>
+</td>
+<td>
+<p><code>dct:Standard</code></p>
+</td>
+<td>
+<p>This property refers to an implementing rule or other specification.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="catalogue-contact-point">
+<td>
+<p>*contact point</p>
+</td>
+<td>
+<p><code>dcat:contactPoint</code></p>
+</td>
+<td>
+<p><code>vcard:Kind</code></p>
+</td>
+<td>
+<p>This property contains contact information that can be used for sending comments about the Catalogue.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional">
+<td>
+<p>catalogue</p>
+</td>
+<td>
+<p><code>dcat:catalog</code></p>
+</td>
+<td>
+<p><code>dcat:Catalog</code></p>
+</td>
+<td>
+<p>This property refers to a catalog whose contents are of interest in the context of this catalog</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="catalogue-creation-date">
+<td>
+<p>*creation date</p>
+</td>
+<td>
+<p><code>dct:created</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the date on which the Catalogue has been first created.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional">
+<td>
+<p>creator</p>
+</td>
+<td>
+<p><code>dct:creator</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>This property refers to the entity primarily responsible for producing the catalogue</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional">
+<td>
+<p>has part</p>
+</td>
+<td>
+<p><code>dct:hasPart</code></p>
+</td>
+<td>
+<p><code>dcat:Catalog</code></p>
+</td>
+<td>
+<p>This property refers to a related Catalogue that is part of the described Catalogue</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="catalogue-identifier">
+<td>
+<p>*identifier</p>
+</td>
+<td>
+<p><code>dct:identifier</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains the main identifier for the Catalogue, e.g. the URI or other unique identifier.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional">
+<td>
+<p>is part of</p>
+</td>
+<td>
+<p><code>dct:isPartOf</code></p>
+</td>
+<td>
+<p><code>dcat:Catalog</code></p>
+</td>
+<td>
+<p>This property refers to a related Catalogue in which the described Catalogue is physically or logically included.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="catalogue-qualified-attribution">
+<td>
+<p>*qualified attribution</p>
+</td>
+<td>
+<p><code>prov:qualifiedAttribution</code></p>
+</td>
+<td>
+<p><code>prov:Attribution</code></p>
+</td>
+<td>
+<p>This property refers to a link to an Agent having some form of responsibility for the Catalogue.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional">
+<td>
+<p>record</p>
+</td>
+<td>
+<p><code>dcat:record</code></p>
+</td>
+<td>
+<p><code>dcat:CatalogRecord</code></p>
+</td>
+<td>
+<p>This property refers to a Catalogue Record that is part of the Catalogue</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional">
+<td>
+<p>rights</p>
+</td>
+<td>
+<p><code>dct:rights</code></p>
+</td>
+<td>
+<p><code>dct:RightsStatement</code></p>
+</td>
+<td>
+<p>This property refers to a statement that specifies rights associated with the Catalogue.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="catalogue-reference-system">
+<td>
+<p>*reference system</p>
+</td>
+<td>
+<p><code>dct:conformsTo</code></p>
+</td>
+<td>
+<p><code>dct:Standard</code></p>
+</td>
+<td>
+<p>This property SHOULD be used to specify the reference system used in the Catalogue.</p>
+<p>Spatial reference systems SHOULD be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by <abbr title="Open Geospatial Consortium">OGC</abbr> [[OGC-EPSG]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="catalogue-rights-holder">
+<td>
+<p>*rights holder</p>
+</td>
+<td>
+<p><code>dct:rightsHolder</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>This property refers to an entity (organisation) holding rights on the Catalogue.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional">
+<td>
+<p>service</p>
+</td>
+<td>
+<p><code>dcat:service</code></p>
+</td>
+<td>
+<p><code>dcat:DataService</code></p>
+</td>
+<td>
+<p>This property refers to a site or end-point that is listed in the catalog.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="catalogue-category">
+<td>
+<p>*theme / category</p>
+</td>
+<td>
+<p><code>dcat:theme</code>, subproperty of <code>dct:subject</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property refers to a category of the Catalogue. A Catalogue may be associated with multiple themes.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="catalogue-topic-category">
+<td>
+<p>*topic category</p>
+</td>
+<td>
+<p><code>dct:subject</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>In GeoDCAT-AP, this property SHOULD take as value one of the URIs of the "Topic categories in accordance with EN ISO 19115" code list operated by the INSPIRE Registry [[INSPIRE-TC]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="catalogue-was-used-by">
+<td>
+<p>*was used by</p>
+</td>
+<td>
+<p><code>prov:wasUsedBy</code></p>
+</td>
+<td>
+<p><code>prov:Activity</code></p>
+</td>
+<td>
+<p>This property refers to an activity that used the Catalogue.</p>
+<p>In GeoDCAT-AP, this property MAY be used to specify a testing activity over a Catalogue, against a given Standard, producing as output a conformance degree.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+</tbody>
+</table>

@@ -1,0 +1,228 @@
+<table class="simple">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="property optional ap-ext" id="catalogue-record-character-encoding">
+<td>
+<p>*character encoding</p>
+</td>
+<td>
+<p><code>cnt:characterEncoding</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property SHOULD be used to specify the character encoding of the Catalogue Recordi, by using as value the character set names in the IANA register [[IANA-CHARSETS]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="catalogue-record-contact-point">
+<td>
+<p>*contact point</p>
+</td>
+<td>
+<p><code>dcat:contactPoint</code></p>
+</td>
+<td>
+<p><code>vcard:Kind</code></p>
+</td>
+<td>
+<p>This property contains contact information that can be used for sending comments about the Catalogue Record.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="catalogue-record-creation-date">
+<td>
+<p>*creation date</p>
+</td>
+<td>
+<p><code>dct:created</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the date on which the Catalogue Record has been first created.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="catalogue-record-creator">
+<td>
+<p>*creator</p>
+</td>
+<td>
+<p><code>dct:creator</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>This property refers to the entity primarily responsible for producing the Catalogue Record.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional">
+<td>
+<p>description</p>
+</td>
+<td>
+<p><code>dct:description</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains a free-text account of the Catalogue Record. This property can be repeated for parallel language versions of the description - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="catalogue-record-identifier">
+<td>
+<p>*identifier</p>
+</td>
+<td>
+<p><code>dct:identifier</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains the main identifier for the Catalogue Record, e.g. the URI or other unique identifier in the context of the Catalogue.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional">
+<td>
+<p>language</p>
+</td>
+<td>
+<p><code>dct:language</code></p>
+</td>
+<td>
+<p><code>dct:LinguisticSystem</code></p>
+</td>
+<td>
+<p>This property refers to a language used in the textual metadata describing titles, descriptions, etc. of the Catalogue Record. This property can be repeated if the metadata is provided in multiple languages - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="catalogue-record-publisher">
+<td>
+<p>*publisher</p>
+</td>
+<td>
+<p><code>dct:publisher</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>This property refers to an entity (organisation) responsible for making the Catalogue Record available.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="catalogue-record-qualified-attribution">
+<td>
+<p>*qualified attribution</p>
+</td>
+<td>
+<p><code>prov:qualifiedAttribution</code></p>
+</td>
+<td>
+<p><code>prov:Attribution</code></p>
+</td>
+<td>
+<p>This property refers to a link to an Agent having some form of responsibility for the Catalogue Record.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="catalogue-record-rights-holder">
+<td>
+<p>*rights holder</p>
+</td>
+<td>
+<p><code>dct:rightsHolder</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>This property refers to an entity (organisation) holding rights on the Catalogue Record.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional">
+<td>
+<p>source metadata</p>
+</td>
+<td>
+<p><code>dct:source</code></p>
+</td>
+<td>
+<p><code>dcat:CatalogRecord</code></p>
+</td>
+<td>
+<p>This property refers to the original metadata record that was used in creating the Catalogue Record.</p>
+<p>In GeoDCAT-AP, this MAY refer to an INSPIRE / [[ISO-19115]] record that was transformed into the current Geo/DCAT-AP one.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property optional">
+<td>
+<p>title</p>
+</td>
+<td>
+<p><code>dct:title</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains a name given to the Catalogue Record. This property can be repeated for parallel language versions of the name - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+</tbody>
+</table>

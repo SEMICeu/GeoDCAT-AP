@@ -1,0 +1,4 @@
+  <skos:ConceptScheme>
+    <dct:title xml:lang="en">EEA keyword list</dct:title>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-03-01</dct:issued>
+  </skos:ConceptScheme>

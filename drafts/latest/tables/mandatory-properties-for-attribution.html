@@ -1,0 +1,58 @@
+<table class="simple">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="property mandatory ap-ext" id="attribution-agent">
+<td>
+<p>*agent</p>
+</td>
+<td>
+<p><code>prov:agent</code></p>
+</td>
+<td>
+<p><code>prov:Entity</code></p>
+</td>
+<td>
+<p>This property refers to the Agent to whom the resource is attributed.</p>
+</td>
+<td>
+<p>1..n</p>
+</td>
+</tr>
+<tr class="property mandatory ap-ext" id="attribution-had-role">
+<td>
+<p>*had role</p>
+</td>
+<td>
+<p><code>dcat:hadRole</code></p>
+</td>
+<td>
+<p><code>dcat:Role</code></p>
+</td>
+<td>
+<p>This property refers to the function of an Agent with respect to another entity or resource.</p>
+<p>In GeoDCAT-AP, this property SHOULD take as value one of the URIs of the "Responsible party roles" code list operated by the INSPIRE Registry [[INSPIRE-RPR]].</p>
+</td>
+<td>
+<p>1..n</p>
+</td>
+</tr>
+</tbody>
+</table>

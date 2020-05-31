@@ -1,0 +1,62 @@
+<table class="simple">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="property recommended" id="period-of-time-start-date">
+<td>
+<p>start date</p>
+</td>
+<td>
+<p><code>dcat:startDate</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the start of the period</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property recommended" id="period-of-time-end-date">
+<td>
+<p>end date</p>
+</td>
+<td>
+<p><code>dcat:endDate</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the end of the period</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<aside class="note">
+<p>Please note that while both properties are recommended, one of the two must be present for each instance of the class <code>dct:PeriodOfTime</code>, if such an instance is present.</p>
+<p>The start of the period should be understood as the start of the date, hour, minute etc. given (e.g. starting at midnight at the beginning of the day if the value is a date); the end of the period should be understood as the end of the date, hour, minute etc. given (e.g. ending at midnight at the end of the day if the value is a date).</p>
+</aside>

@@ -1,0 +1,11 @@
+  <dct:ProvenanceStatement>
+    <rdfs:label xml:lang="en">
+      The raster data sets have been created out of the Noise Spatial Database, 
+      which in turn contains all versions delivered by the relevant countries 
+      (EU and EFTA) to Reportnet (CDR). The data from Reportnet is automatically 
+      incorporated into the database, with the exception of those data sets which 
+      require a manual review (due to problems with naming conventions or 
+      Coordinate Reference System). The data set covers any submission by the 
+      countries until 01/01/2019.
+    </rdfs:label>
+  </dct:ProvenanceStatement>

@@ -1,0 +1,7 @@
+  <vcard:Address>
+    <vcard:street-address>Kongens Nytorv 6</vcard:street-address>
+    <vcard:locality>Copenhagen</vcard:locality>
+    <vcard:region>K</vcard:region>
+    <vcard:postal-code>1050</vcard:postal-code>
+    <vcard:country-name>Denmark</vcard:country-name>
+  </vcard:Address>

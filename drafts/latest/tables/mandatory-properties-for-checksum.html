@@ -1,0 +1,57 @@
+<table class="simple">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="property mandatory">
+<td>
+<p>algorithm</p>
+</td>
+<td>
+<p><code>spdx:algorithm</code></p>
+</td>
+<td>
+<p><code>spdx:checksumAlgorithm_sha1</code></p>
+</td>
+<td>
+<p>This property identifies the algorithm used to produce the subject Checksum. Currently, SHA-1 is the only supported algorithm. It is anticipated that other algorithms will be supported at a later time.</p>
+</td>
+<td>
+<p>1..1</p>
+</td>
+</tr>
+<tr class="property mandatory">
+<td>
+<p>checksum value</p>
+</td>
+<td>
+<p><code>spdx:checksumValue</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:hexBinary</code></p>
+</td>
+<td>
+<p>This property provides a lower case hexadecimal encoded digest value produced using a specific algorithm.</p>
+</td>
+<td>
+<p>1..1</p>
+</td>
+</tr>
+</tbody>
+</table>
