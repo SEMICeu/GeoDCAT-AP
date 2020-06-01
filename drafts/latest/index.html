@@ -1535,15 +1535,18 @@ The views expressed are purely those of the author and may not in any circumstan
 <p>To be revised</p>
 </aside>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/quick-reference-of-classes-and-properties.html"></div>
+<table id="table-test">
+<tbody>
+</tbody>
+</table>
 
-</section>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/quick-reference-of-classes-and-properties.html"></div>
 
 <!-- Classes and Properties added by GeoDCAT-AP --> 
 
 <section id="geodcat-ap-classes-and-properties" class="appendix informative">
 
-<h2>Classes and Properties added by GeoDCAT-AP</h2>
+<h2>Classes and properties added by GeoDCAT-AP</h2>
 
 <aside class="ednote">
 <p>TBD</p>
@@ -1562,8 +1565,45 @@ The views expressed are purely those of the author and may not in any circumstan
 <tbody>
 </tbody>
 </table>
-
+<!--
 <div data-include-format="html" data-include-replace="true" data-include="./tables/geodcat-ap-classes-and-properties.html"></div>
+-->
+</section>
+
+<!-- Deprecated classes and properties --> 
+
+<section id="deprecated-classes-and-properties" class="appendix informative">
+
+<h2>Deprecated classes and properties</h2>
+
+<aside class="ednote">
+<p>TBD</p>
+</aside>
+
+<table class="simple" id="table-deprecated-classes-and-properties">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Replaced by</p>
+</th>
+<th>
+<p>Deprecated in</p>
+</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<!--
+<div data-include-format="html" data-include-replace="true" data-include="./tables/geodcat-ap-classes-and-properties.html"></div>
+-->
+</section>
 
 </section>
 
@@ -1663,19 +1703,69 @@ The views expressed are purely those of the author and may not in any circumstan
 //document.addEventListener("DOMContentLoaded", () => {
 $(document).ready( function() {
 
-var rows = document.querySelectorAll('tr:not(.deprecated).property.ap-ext'), i;
-var table = document.getElementById('table-geodcat-ap-classes-and-properties').getElementsByTagName('tbody')[0];
+waitForEl('#maintenance-information---not-in-iso19115-core', function() {
 
-for (i = 0; i < rows.length; ++i) {
-  var row = table.insertRow(i);
-  var cells = rows[i].querySelectorAll('td'), j;
-  for (j = 0; j < cells.length; j++) {
-    var cell = row.insertCell(j);
-    cell.innerHTML = cells[j].innerHTML;
+  var rows = document.querySelectorAll('tr:not(.deprecated).class'), i;
+  var table = document.getElementById('table-test').getElementsByTagName('tbody')[0];
+
+  for (i = 0; i < rows.length; ++i) {
+    var id = rows[i].getAttribute('id');
+    var row = table.insertRow(i);
+    var cells = rows[i].querySelectorAll('td'), j;
+    var name = cells[0].textContent;
+    var uri = cells[2].textContent;
+    var prefix = '';
+    if (name.startsWith('*')) {
+      prefix = '*';
+    }
+    var cName = row.insertCell(0);
+    cName.innerHTML = prefix + '<a href="#' + id + '">' + name + '</a>';
+    var cURI = row.insertCell(1);
+    cURI.innerHTML = '<code>' + uri + '</code>';
+/*	  
+    for (j = 0; j < cells.length; j++) {
+      var cell = row.insertCell(j);
+      cell.innerHTML = cells[j].innerHTML;
+    }
+*/
   }
-}
+
+  var rows = document.querySelectorAll('tr:not(.deprecated).property.ap-ext'), i;
+  var table = document.getElementById('table-geodcat-ap-classes-and-properties').getElementsByTagName('tbody')[0];
+
+  for (i = 0; i < rows.length; ++i) {
+    var row = table.insertRow(i);
+    var cells = rows[i].querySelectorAll('td'), j;
+    for (j = 0; j < cells.length; j++) {
+      var cell = row.insertCell(j);
+      cell.innerHTML = cells[j].innerHTML;
+    }
+  }
+
+  var rows = document.querySelectorAll('tr.deprecated.property'), i;
+  var table = document.getElementById('table-deprecated-classes-and-properties').getElementsByTagName('tbody')[0];
+
+  for (i = 0; i < rows.length; ++i) {
+    var row = table.insertRow(i);
+    var cells = rows[i].querySelectorAll('td'), j;
+    for (j = 0; j < cells.length; j++) {
+      var cell = row.insertCell(j);
+      cell.innerHTML = cells[j].innerHTML;
+    }
+  }
+});
 
 });
+var waitForEl = function(selector, callback) {
+  if (jQuery(selector).length) {
+    callback();
+  } else {
+    setTimeout(function() {
+      waitForEl(selector, callback);
+    }, 100);
+  }
+};
+
 </script>
 
 </body>
