@@ -1,3 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF 
+  xmlns:rdf       = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:vcard     = "http://www.w3.org/2006/vcard/ns#"
+  xmlns:xsd       = "http://www.w3.org/2001/XMLSchema#"
+>
+
   <rdf:Description>
     <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
     <vcard:fn xml:lang="en">European Environment Agency</vcard:fn>
@@ -13,3 +20,5 @@
       </vcard:Address>
     </vcard:hasAddress>
   </rdf:Description>
+
+</rdf:RDF>

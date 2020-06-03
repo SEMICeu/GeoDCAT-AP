@@ -20,6 +20,7 @@
   xmlns:schema    = "http://schema.org/" 
   xmlns:skos      = "http://www.w3.org/2004/02/skos/core#" 
   xmlns:spdx      = "http://spdx.org/rdf/terms#" 
+  xmlns:time      = "http://www.w3.org/2006/time#" 
   xmlns:vcard     = "http://www.w3.org/2006/vcard/ns#"
   xmlns:xsd       = "http://www.w3.org/2001/XMLSchema#"
 >

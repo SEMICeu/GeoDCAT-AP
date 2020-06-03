@@ -1,3 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF 
+  xmlns:cnt       = "http://www.w3.org/2011/content#" 
+  xmlns:dcat      = "http://www.w3.org/ns/dcat#" 
+  xmlns:dct       = "http://purl.org/dc/terms/" 
+  xmlns:foaf      = "http://xmlns.com/foaf/0.1/" 
+  xmlns:locn      = "http://www.w3.org/ns/locn#" 
+  xmlns:owl       = "http://www.w3.org/2002/07/owl#" 
+  xmlns:prov      = "http://www.w3.org/ns/prov#" 
+  xmlns:rdf       = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:rdfs      = "http://www.w3.org/2000/01/rdf-schema#" 
+  xmlns:vcard     = "http://www.w3.org/2006/vcard/ns#"
+  xmlns:xsd       = "http://www.w3.org/2001/XMLSchema#"
+>
+
   <rdf:Description>
     <rdf:type rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
     <dct:conformsTo rdf:resource="http://data.europa.eu/930/"/>
@@ -37,7 +52,6 @@
             </locn:address>
           </rdf:Description>
         </prov:agent>
-        <dct:type rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact"/>
         <dcat:hadRole rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact"/>
       </prov:Attribution>
     </prov:qualifiedAttribution>
@@ -50,3 +64,5 @@
       </dct:conformsTo>
     </dct:source>
   </rdf:Description>
+
+</rdf:RDF>

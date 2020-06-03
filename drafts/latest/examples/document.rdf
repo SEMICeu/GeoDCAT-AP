@@ -1,3 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF 
+  xmlns:dct       = "http://purl.org/dc/terms/" 
+  xmlns:foaf      = "http://xmlns.com/foaf/0.1/" 
+  xmlns:rdf       = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:xsd       = "http://www.w3.org/2001/XMLSchema#"
+>
+
   <foaf:Document rdf:about="https://noise.eea.europa.eu/">
     <dct:title xml:lang="en">The NOISE Observation &amp; Information Service for Europe</dct:title>
   </foaf:Document>
+
+</rdf:RDF>

@@ -13,7 +13,7 @@
 <script class="remove" src="./config.js"></script>
 <style>
 table {width:100%;}
-table.small {font-size:small;}
+table.simple {font-size:small;}
 .note ul {column-count:2;}
 /*
 table.definition th {width:20%}
@@ -209,7 +209,7 @@ The views expressed are purely those of the author and may not in any circumstan
 </blockquote>
 </aside>
 
-<p>Finally, classes and properties added in this Application Profile and extending [[DCAT-AP]] are marked with an asterisk (*), and summarised in the reference table in <a class="no-secRef" href="#geodcat-ap-classes-and-properties"></a>.</p>
+<p>Finally, classes and properties added in this Application Profile and extending [[DCAT-AP]] are marked with a &ldquo;plus&rdquo; sign (+), and summarised in the reference table in <a class="no-secRef" href="#geodcat-ap-classes-and-properties"></a>.</p>
 
 <section id="namespaces">
 
@@ -225,14 +225,22 @@ The views expressed are purely those of the author and may not in any circumstan
 
 <h3>Application Profile Overview</h3>
 
+<p>This Application Profile extends [[DCAT-AP-20191120]] in order to provide a DCAT-AP-compliant representation of INSPIRE and [[ISO-19115]] metadata records. In particular, this Application Profile extends [[DCAT-AP-20191120]] with</p>
+<ul>
+<li>Additional classes and properties.</li>
+<li>Additional recommendations on the use of classes and properties.</li>
+<li>Additional controlled vocabularies.</li>
+<li>Some classes and properties have been deprecated.</li>
+</ul>
+
 <aside class="ednote">
 <p>To be created, by extending the DCAT-AP one.</p>
 </aside>
 
-<p><a href="#fig-geodcat-ap-uml-class-diagram"></a> shows a UML diagram of all classes and properties included in GeoDCAT-AP.</p>
+<p><a href="#fig-geodcat-ap-uml-class-diagram"></a> shows a UML diagram of all classes and properties included in the Application Profile.</p>
 
 <figure id="fig-geodcat-ap-uml-class-diagram">
-<a href="./geodcat-ap-v2.0.0.svg" title="view full-size image"><img src="./geodcat-ap-v2.0.0.svg" alt="GeoDCAT-AP UML Class Diagram"/></a>
+<a href="./geodcat-ap_v2.0.0.svg" title="view full-size image"><img src="./geodcat-ap_v2.0.0.svg" alt="GeoDCAT-AP UML Class Diagram"/></a>
 <figcaption>GeoDCAT-AP UML Class Diagram</figcaption>
 </figure>
 
@@ -274,10 +282,10 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following classes are not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#activity">Activity</a></li>
-<li>*<a href="#address-agent">Address (Agent)</a></li>
-<li>*<a href="#attribution">Attribution</a></li>
-<li>*<a href="#address-kind">Address (Kind)</a></li>
+<li>+<a href="#activity">Activity</a></li>
+<li>+<a href="#address-agent">Address (Agent)</a></li>
+<li>+<a href="#attribution">Attribution</a></li>
+<li>+<a href="#address-kind">Address (Kind)</a></li>
 </ul>
 </aside>
 
@@ -346,17 +354,17 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#catalogue-access-rights">access rights</a></li>
-<li>*<a href="#catalogue-conforms-to">conforms to</a></li>
-<li>*<a href="#catalogue-contact-point">contact point</a></li>
-<li>*<a href="#catalogue-creation-date">creation date</a></li>
-<li>*<a href="#catalogue-identifier">identifier</a></li>
-<li>*<a href="#catalogue-qualified-attribution">qualified attribution</a></li>
-<li>*<a href="#catalogue-reference-system">reference system</a></li>
-<li>*<a href="#catalogue-rights-holder">rights holder</a></li>
-<li>*<a href="#catalogue-category">theme / category</a></li>
-<li>*<a href="#catalogue-topic-category">topic category</a></li>
-<li>*<a href="#catalogue-was-used-by">was used by</a></li>
+<li>+<a href="#catalogue-access-rights">access rights</a></li>
+<li>+<a href="#catalogue-conforms-to">conforms to</a></li>
+<li>+<a href="#catalogue-contact-point">contact point</a></li>
+<li>+<a href="#catalogue-creation-date">creation date</a></li>
+<li>+<a href="#catalogue-identifier">identifier</a></li>
+<li>+<a href="#catalogue-qualified-attribution">qualified attribution</a></li>
+<li>+<a href="#catalogue-reference-system">reference system</a></li>
+<li>+<a href="#catalogue-rights-holder">rights holder</a></li>
+<li>+<a href="#catalogue-category">theme / category</a></li>
+<li>+<a href="#catalogue-topic-category">topic category</a></li>
+<li>+<a href="#catalogue-was-used-by">was used by</a></li>
 </ul>
 </aside>
 
@@ -377,7 +385,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Examples for Catalogue</h4>
 
 <aside class="example" id="ex-catalogue" title="Catalogue">
-<pre data-include-format="text" data-include="./examples/catalogue.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/catalogue.ttl"></pre>
 </aside>
 
 </section>
@@ -413,14 +421,14 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#catalogue-record-character-encoding">character encoding</a></li>
-<li>*<a href="#catalogue-record-contact-point">contact point</a></li>
-<li>*<a href="#catalogue-record-creation-date">creation date</a></li>
-<li>*<a href="#catalogue-record-creator">creator</a></li>
-<li>*<a href="#catalogue-record-identifier">identifier</a></li>
-<li>*<a href="#catalogue-record-publisher">publisher</a></li>
-<li>*<a href="#catalogue-record-qualified-attribution">qualified attribution</a></li>
-<li>*<a href="#catalogue-record-rights-holder">rights holder</a></li>
+<li>+<a href="#catalogue-record-character-encoding">character encoding</a></li>
+<li>+<a href="#catalogue-record-contact-point">contact point</a></li>
+<li>+<a href="#catalogue-record-creation-date">creation date</a></li>
+<li>+<a href="#catalogue-record-creator">creator</a></li>
+<li>+<a href="#catalogue-record-identifier">identifier</a></li>
+<li>+<a href="#catalogue-record-publisher">publisher</a></li>
+<li>+<a href="#catalogue-record-qualified-attribution">qualified attribution</a></li>
+<li>+<a href="#catalogue-record-rights-holder">rights holder</a></li>
 </ul>
 </aside>
 
@@ -433,7 +441,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Examples for Catalogue Record</h4>
 
 <aside class="example" id="ex-catalogue-record" title="Catalogue Record">
-<pre data-include-format="text" data-include="./examples/catalogue-record.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/catalogue-record.ttl"></pre>
 </aside>
 
 </section>
@@ -469,20 +477,26 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#data-service-conforms-to">conforms to</a></li>
-<li>*<a href="#data-service-contact-point">contact point</a></li>
-<li>*<a href="#data-service-creation-date">creation date</a></li>
-<li>*<a href="#data-service-identifier">identifier</a></li>
-<li>*<a href="#data-service-publisher">publisher</a></li>
-<li>*<a href="#data-service-qualified-attribution">qualified attribution</a></li>
-<li>*<a href="#data-service-reference-system">reference system</a></li>
-<li>*<a href="#data-service-rights-holder">rights holder</a></li>
-<li>*<a href="#data-service-service-category">service category</a></li>
-<li>*<a href="#data-service-service-type">service type</a></li>
-<li>*<a href="#data-service-category">theme / category</a></li>
-<li>*<a href="#data-service-topic-category">topic category</a></li>
-<li>*<a href="#data-service-type">type</a></li>
-<li>*<a href="#data-service-was-used-by">was used by</a></li>
+<li>+<a href="#data-service-conforms-to">conforms to</a></li>
+<li>+<a href="#data-service-contact-point">contact point</a></li>
+<li>+<a href="#data-service-creation-date">creation date</a></li>
+<li>+<a href="#data-service-creator">creator</a></li>
+<li>+<a href="#data-service-identifier">identifier</a></li>
+<li>+<a href="#data-service-publisher">publisher</a></li>
+<li>+<a href="#data-service-qualified-attribution">qualified attribution</a></li>
+<li>+<a href="#data-service-reference-system">reference system</a></li>
+<li>+<a href="#data-service-rights-holder">rights holder</a></li>
+<li>+<a href="#data-service-service-category">service category</a></li>
+<li>+<a href="#data-service-service-type">service type</a></li>
+<li>+<a href="#data-service-spatial-coverage">spatial / geographic coverage</a></li>
+<li>+<a href="#data-service-spatial-resolution">spatial resolution</a></li>
+<li>+<a href="#data-service-spatial-resolution-general">spatial resolution as equivalent scale, angular distance, vertical distance</a></li>
+<li>+<a href="#data-service-temporal-coverage">temporal coverage</a></li>
+<li>+<a href="#data-service-temporal-resolution">temporal resolution</a></li>
+<li>+<a href="#data-service-category">theme / category</a></li>
+<li>+<a href="#data-service-topic-category">topic category</a></li>
+<li>+<a href="#data-service-type">type</a></li>
+<li>+<a href="#data-service-was-used-by">was used by</a></li>
 </ul>
 </aside>
 
@@ -503,7 +517,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Examples for Data Service</h4>
 
 <aside class="example" id="ex-data-service" title="Data Service">
-<pre data-include-format="text" data-include="./examples/data-service.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/data-service.ttl"></pre>
 </aside>
 
 </section>
@@ -539,12 +553,12 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#dataset-creation-date">creation date</a></li>
-<li>*<a href="#dataset-reference-system">reference system</a></li>
-<li>*<a href="#dataset-rights-holder">rights holder</a></li>
-<li>*<a href="#dataset-spatial-resolution-general">spatial resolution as equivalent scale, angular distance, vertical distance</a></li>
-<li>*<a href="#dataset-topic-category">topic category</a></li>
-<li>*<a href="#dataset-was-used-by">was used by</a></li>
+<li>+<a href="#dataset-creation-date">creation date</a></li>
+<li>+<a href="#dataset-reference-system">reference system</a></li>
+<li>+<a href="#dataset-rights-holder">rights holder</a></li>
+<li>+<a href="#dataset-spatial-resolution-general">spatial resolution as equivalent scale, angular distance, vertical distance</a></li>
+<li>+<a href="#dataset-topic-category">topic category</a></li>
+<li>+<a href="#dataset-was-used-by">was used by</a></li>
 </ul>
 </aside>
 
@@ -565,7 +579,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Examples for Dataset</h4>
 
 <aside class="example" id="ex-dataset" title="Dataset">
-<pre data-include-format="text" data-include="./examples/dataset.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/dataset.ttl"></pre>
 </aside>
 
 </section>
@@ -601,10 +615,10 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#distribution-access-rights">access rights</a></li>
-<li>*<a href="#distribution-reference-system">reference system</a></li>
-<li>*<a href="#distribution-representation-technique">representation technique</a></li>
-<li>*<a href="#distribution-spatial-resolution-general">spatial resolution as equivalent scale, angular distance, vertical distance</a></li>
+<li>+<a href="#distribution-access-rights">access rights</a></li>
+<li>+<a href="#distribution-reference-system">reference system</a></li>
+<li>+<a href="#distribution-representation-technique">representation technique</a></li>
+<li>+<a href="#distribution-spatial-resolution-general">spatial resolution as equivalent scale, angular distance, vertical distance</a></li>
 </ul>
 </aside>
 
@@ -625,7 +639,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Examples for Distribution</h4>
 
 <aside class="example" id="ex-distribution" title="Distribution">
-<pre data-include-format="text" data-include="./examples/distribution.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/distribution.ttl"></pre>
 </aside>
 
 </section>
@@ -661,11 +675,11 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#agent-address">address</a></li>
-<li>*<a href="#agent-affiliation">affiliation</a></li>
-<li>*<a href="#agent-email">email</a></li>
-<li>*<a href="#agent-phone">phone</a></li>
-<li>*<a href="#agent-url">URL</a></li>
+<li>+<a href="#agent-address">address</a></li>
+<li>+<a href="#agent-affiliation">affiliation</a></li>
+<li>+<a href="#agent-email">email</a></li>
+<li>+<a href="#agent-phone">phone</a></li>
+<li>+<a href="#agent-url">URL</a></li>
 </ul>
 </aside>
 
@@ -678,7 +692,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Examples for Agent</h4>
 
 <aside class="example" id="ex-agent" title="Agent">
-<pre data-include-format="text" data-include="./examples/agent.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/agent.ttl"></pre>
 </aside>
 
 </section>
@@ -706,10 +720,10 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#category-scheme-creation-date">creation date</a></li>
-<li>*<a href="#category-scheme-release-date">release date</a></li>
-<li>*<a href="#category-scheme-modification-date">update / modification date</a></li>
-<li>*<a href="#category-scheme-version">version</a></li>
+<li>+<a href="#category-scheme-creation-date">creation date</a></li>
+<li>+<a href="#category-scheme-release-date">release date</a></li>
+<li>+<a href="#category-scheme-modification-date">update / modification date</a></li>
+<li>+<a href="#category-scheme-version">version</a></li>
 </ul>
 </aside>
 
@@ -722,7 +736,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Examples for Category Scheme</h4>
 
 <aside class="example" id="ex-category-scheme" title="Category Scheme">
-<pre data-include-format="text" data-include="./examples/category-scheme.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/category-scheme.ttl"></pre>
 </aside>
 
 </section>
@@ -750,7 +764,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following property is not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#category-category-scheme">category scheme</a></li>
+<li>+<a href="#category-category-scheme">category scheme</a></li>
 </ul>
 </aside>
 
@@ -763,7 +777,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Examples for Category</h4>
 
 <aside class="example" id="ex-category" title="Category">
-<pre data-include-format="text" data-include="./examples/category.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/category.ttl"></pre>
 </aside>
 
 </section>
@@ -823,7 +837,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following property is not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#licence-document-licence-text">licence text</a></li>
+<li>+<a href="#licence-document-licence-text">licence text</a></li>
 </ul>
 </aside>
 
@@ -836,7 +850,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Examples for Licence Document</h4>
 
 <aside class="example" id="ex-licence-document" title="Licence Document">
-<pre data-include-format="text" data-include="./examples/licence-document.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/licence-document.ttl"></pre>
 </aside>
 
 </section>
@@ -864,9 +878,9 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#location-gazetteer">gazetteer</a></li>
-<li>*<a href="#location-geographic-identifier">geographic identifier</a></li>
-<li>*<a href="#location-geographic-name">geographic name</a></li>
+<li>+<a href="#location-gazetteer">gazetteer</a></li>
+<li>+<a href="#location-geographic-identifier">geographic identifier</a></li>
+<li>+<a href="#location-geographic-name">geographic name</a></li>
 </ul>
 </aside>
 
@@ -879,11 +893,11 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Examples for Location</h4>
 
 <aside class="example" id="ex-location-gn" title="Location as geographical name">
-<pre data-include-format="text" data-include="./examples/location-gn.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/location-gn.ttl"></pre>
 </aside>
 
 <aside class="example" id="ex-location-geom" title="Location as geometry">
-<pre data-include-format="text" data-include="./examples/location-geom.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/location-geom.ttl"></pre>
 </aside>
 
 </section>
@@ -917,6 +931,22 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Deprecated properties for Period of Time</h4>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-period-of-time.html"></div>
+
+</section>
+
+<section id="examples-for-period-of-time">
+
+<h4>Examples for Period of Time</h4>
+
+<aside class="example" id="ex-period-of-time" title="Period of Time">
+<pre data-include-format="text" data-include="./examples/period-of-time.ttl"></pre>
+</aside>
+
+<p><a href="#ex-period-of-time-with-owl-time"></a> is equivalent to <a href="#ex-period-of-time"></a>, but it uses the [[OWL-TIME]] properties in <a class="no-sectionRef" href="#optional-properties-for-period-of-time"></a>.</p>
+
+<aside class="example" id="ex-period-of-time-with-owl-time" title="Period of Time using properties time:hasBeginning and time:hasEnd">
+<pre data-include-format="text" data-include="./examples/period-of-time-with-owl-time.ttl"></pre>
+</aside>
 
 </section>
 
@@ -957,8 +987,8 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#activity-generated">generated</a></li>
-<li>*<a href="#activity-qualified-association">qualified association</a></li>
+<li>+<a href="#activity-generated">generated</a></li>
+<li>+<a href="#activity-qualified-association">qualified association</a></li>
 </ul>
 </aside>
 
@@ -971,7 +1001,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Examples for Activity</h4>
 
 <aside class="example" id="ex-activity" title="Activity">
-<pre data-include-format="text" data-include="./examples/activity.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/activity.ttl"></pre>
 </aside>
 
 </section>
@@ -995,11 +1025,11 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#address-agent-administrative-area">administrative area</a></li>
-<li>*<a href="#address-agent-city">city</a></li>
-<li>*<a href="#address-agent-country">country</a></li>
-<li>*<a href="#address-agent-postal-code">postal code</a></li>
-<li>*<a href="#address-agent-street-address">street address</a></li>
+<li>+<a href="#address-agent-administrative-area">administrative area</a></li>
+<li>+<a href="#address-agent-city">city</a></li>
+<li>+<a href="#address-agent-country">country</a></li>
+<li>+<a href="#address-agent-postal-code">postal code</a></li>
+<li>+<a href="#address-agent-street-address">street address</a></li>
 </ul>
 </aside>
 
@@ -1012,7 +1042,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Examples for Address (Agent)</h4>
 
 <aside class="example" id="ex-address-agent" title="Address (Agent)">
-<pre data-include-format="text" data-include="./examples/address-agent.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/address-agent.ttl"></pre>
 </aside>
 
 </section>
@@ -1036,11 +1066,11 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#address-kind-administrative-area">administrative area</a></li>
-<li>*<a href="#address-kind-city">city</a></li>
-<li>*<a href="#address-kind-country">country</a></li>
-<li>*<a href="#address-kind-postal-code">postal code</a></li>
-<li>*<a href="#address-kind-street-address">street address</a></li>
+<li>+<a href="#address-kind-administrative-area">administrative area</a></li>
+<li>+<a href="#address-kind-city">city</a></li>
+<li>+<a href="#address-kind-country">country</a></li>
+<li>+<a href="#address-kind-postal-code">postal code</a></li>
+<li>+<a href="#address-kind-street-address">street address</a></li>
 </ul>
 </aside>
 
@@ -1053,7 +1083,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Examples for Address (Kind)</h4>
 
 <aside class="example" id="ex-address-kind" title="Address (Kind)">
-<pre data-include-format="text" data-include="./examples/address-kind.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/address-kind.ttl"></pre>
 </aside>
 
 </section>
@@ -1077,8 +1107,8 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#attribution-agent">agent</a></li>
-<li>*<a href="#attribution-had-role">had role</a></li>
+<li>+<a href="#attribution-agent">agent</a></li>
+<li>+<a href="#attribution-had-role">had role</a></li>
 </ul>
 </aside>
 
@@ -1099,7 +1129,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Examples for Attribution</h4>
 
 <aside class="example" id="ex-attribution" title="Attribution">
-<pre data-include-format="text" data-include="./examples/attribution.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/attribution.ttl"></pre>
 </aside>
 
 </section>
@@ -1119,8 +1149,8 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#document-description">description</a></li>
-<li>*<a href="#document-title">title</a></li>
+<li>+<a href="#document-description">description</a></li>
+<li>+<a href="#document-title">title</a></li>
 </ul>
 </aside>
 
@@ -1133,7 +1163,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Examples for Document</h4>
 
 <aside class="example" id="ex-document" title="Document">
-<pre data-include-format="text" data-include="./examples/document.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/document.ttl"></pre>
 </aside>
 
 </section>
@@ -1153,9 +1183,9 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#kind-email">email</a></li>
-<li>*<a href="#kind-name">name</a></li>
-<li>*<a href="#kind-url">URL</a></li>
+<li>+<a href="#kind-email">email</a></li>
+<li>+<a href="#kind-name">name</a></li>
+<li>+<a href="#kind-url">URL</a></li>
 </ul>
 </aside>
 
@@ -1170,10 +1200,10 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#kind-address">address</a></li>
-<li>*<a href="#kind-affiliation">affiliation</a></li>
-<li>*<a href="#kind-name">name</a></li>
-<li>*<a href="#kind-phone">phone</a></li>
+<li>+<a href="#kind-address">address</a></li>
+<li>+<a href="#kind-affiliation">affiliation</a></li>
+<li>+<a href="#kind-name">name</a></li>
+<li>+<a href="#kind-phone">phone</a></li>
 </ul>
 </aside>
 
@@ -1186,7 +1216,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Examples for Kind</h4>
 
 <aside class="example" id="ex-kind" title="Kind">
-<pre data-include-format="text" data-include="./examples/kind.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/kind.ttl"></pre>
 </aside>
 
 </section>
@@ -1206,7 +1236,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following property is not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#provenance-statement-provenance-statement-text">provenance statement text</a></li>
+<li>+<a href="#provenance-statement-provenance-statement-text">provenance statement text</a></li>
 </ul>
 </aside>
 
@@ -1219,7 +1249,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Examples for Provenance Statement</h4>
 
 <aside class="example" id="ex-provenance-statement" title="Provenance Statement">
-<pre data-include-format="text" data-include="./examples/provenance-statement.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/provenance-statement.ttl"></pre>
 </aside>
 
 </section>
@@ -1239,7 +1269,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following property is not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#rights-statement-rights-statement-text">rights statement text</a></li>
+<li>+<a href="#rights-statement-rights-statement-text">rights statement text</a></li>
 </ul>
 </aside>
 
@@ -1252,7 +1282,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Examples for Rights Statement</h4>
 
 <aside class="example" id="ex-rights-statement" title="Rights Statement">
-<pre data-include-format="text" data-include="./examples/rights-statement.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/rights-statement.ttl"></pre>
 </aside>
 
 </section>
@@ -1272,15 +1302,15 @@ The views expressed are purely those of the author and may not in any circumstan
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20191120]]:</p>
 <ul>
-<li>*<a href="#standard-creation-date">creation date</a></li>
-<li>*<a href="#standard-description">description</a></li>
-<li>*<a href="#standard-identifier">identifier</a></li>
-<li>*<a href="#standard-reference-register">reference register</a></li>
-<li>*<a href="#standard-release-date">release date</a></li>
-<li>*<a href="#standard-title">title</a></li>
-<li>*<a href="#standard-type">type</a></li>
-<li>*<a href="#standard-modification-date">update / modification date</a></li>
-<li>*<a href="#standard-version">version</a></li>
+<li>+<a href="#standard-creation-date">creation date</a></li>
+<li>+<a href="#standard-description">description</a></li>
+<li>+<a href="#standard-identifier">identifier</a></li>
+<li>+<a href="#standard-reference-register">reference register</a></li>
+<li>+<a href="#standard-release-date">release date</a></li>
+<li>+<a href="#standard-title">title</a></li>
+<li>+<a href="#standard-type">type</a></li>
+<li>+<a href="#standard-modification-date">update / modification date</a></li>
+<li>+<a href="#standard-version">version</a></li>
 </ul>
 </aside>
 
@@ -1293,15 +1323,15 @@ The views expressed are purely those of the author and may not in any circumstan
 <h4>Examples for Standard</h4>
 
 <aside class="example" id="ex-standard-md" title="Metadata standard">
-<pre data-include-format="text" data-include="./examples/standard-md.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/standard-md.ttl"></pre>
 </aside>
 
 <aside class="example" id="ex-standard-ir" title="Implementing rule">
-<pre data-include-format="text" data-include="./examples/standard-ir.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/standard-ir.ttl"></pre>
 </aside>
 
 <aside class="example" id="ex-standard-crs" title="Coordinate reference system">
-<pre data-include-format="text" data-include="./examples/standard-crs.rdf"></pre>
+<pre data-include-format="text" data-include="./examples/standard-crs.ttl"></pre>
 </aside>
 
 </section>
@@ -1530,17 +1560,38 @@ The views expressed are purely those of the author and may not in any circumstan
 <!-- Quick Reference of Classes and Properties --> 
 
 <h2>Quick Reference of Classes and Properties</h2>
-
+<!--
 <aside class="ednote">
 <p>To be revised</p>
 </aside>
-
-<table id="table-test">
+-->
+<table class="simple" id="table-quick-reference-of-classes-and-properties">
+<thead>
+<tr>
+<th>
+<p>Class</p>
+</th>
+<th>
+<p>Class URI</p>
+</th>
+<th>
+<p>Mandatory prop.</p>
+</th>
+<th>
+<p>Recommended prop.</p>
+</th>
+<th>
+<p>Optional properties</p>
+</th>
+</tr>
+</thead>
 <tbody>
 </tbody>
 </table>
 
+<!--
 <div data-include-format="html" data-include-replace="true" data-include="./tables/quick-reference-of-classes-and-properties.html"></div>
+-->
 
 <!-- Classes and Properties added by GeoDCAT-AP --> 
 
@@ -1705,24 +1756,84 @@ $(document).ready( function() {
 
 waitForEl('#maintenance-information---not-in-iso19115-core', function() {
 
-  var rows = document.querySelectorAll('tr:not(.deprecated).class'), i;
-  var table = document.getElementById('table-test').getElementsByTagName('tbody')[0];
+  var rows = document.querySelectorAll('#classes tr:not(.deprecated).class'), i;
+  var table = document.getElementById('table-quick-reference-of-classes-and-properties').getElementsByTagName('tbody')[0];
 
-  for (i = 0; i < rows.length; ++i) {
+  for (i = 0; i < rows.length; i++) {
     var id = rows[i].getAttribute('id');
     var row = table.insertRow(i);
     var cells = rows[i].querySelectorAll('td'), j;
-    var name = cells[0].textContent;
-    var uri = cells[2].textContent;
+    var name = cells[0].textContent.trim();
+    var prop = '';
+    if (cells[0].getElementsByTagName('a')[0]) {
+      prop = cells[0].getElementsByTagName('a')[0].getAttribute('href');
+    }
+//    var prop = cells[0].getAttribute('href');
+	  console.log(name + ' ' + prop)
+    var uri = cells[2].textContent.trim();
     var prefix = '';
-    if (name.startsWith('*')) {
-      prefix = '*';
+    if (name.startsWith('+')) {
+      name = name.substr(1);
+      prefix = '+';
     }
     var cName = row.insertCell(0);
     cName.innerHTML = prefix + '<a href="#' + id + '">' + name + '</a>';
     var cURI = row.insertCell(1);
     cURI.innerHTML = '<code>' + uri + '</code>';
-/*	  
+    var cMP = row.insertCell(2);
+    var cRP = row.insertCell(3);
+    var cOP = row.insertCell(4);
+ 
+    if (prop != '') {
+
+      var prows = document.querySelectorAll(prop + ' tr:not(.deprecated).property.mandatory'), pi;
+      var cont = '';
+      for (pi = 0; pi < prows.length; pi++) {
+        var pid = prows[pi].getAttribute('id');
+        var pcells = prows[pi].querySelectorAll('td'), pj;
+        var pname = pcells[0].textContent.trim();
+        var puri = pcells[1].textContent.trim();
+        var prefix = '';
+        if (pname.startsWith('+')) {
+          prefix = '+';
+        }
+        cont += '<p>' + prefix + '<a title="' + pname + '" href="#' + pid + '"><code>' + puri + '</code></a></p>\n';
+      }
+      cMP.innerHTML = cont;
+
+      var prows = document.querySelectorAll(prop + ' tr:not(.deprecated).property.recommended'), pi;
+      var cont = '';
+      for (pi = 0; pi < prows.length; pi++) {
+        var pid = prows[pi].getAttribute('id');
+        var pcells = prows[pi].querySelectorAll('td'), pj;
+        var pname = pcells[0].textContent.trim();
+        var puri = pcells[1].textContent.trim();
+        var prefix = '';
+        if (pname.startsWith('+')) {
+          prefix = '+';
+        }
+        cont += '<p>' + prefix + '<a title="' + pname + '" href="#' + pid + '"><code>' + puri + '</code></a></p>\n';
+      }
+      cRP.innerHTML = cont;
+
+      var prows = document.querySelectorAll(prop + ' tr:not(.deprecated).property.optional'), pi;
+      var cont = '';
+      for (pi = 0; pi < prows.length; pi++) {
+        var pid = prows[pi].getAttribute('id');
+        var pcells = prows[pi].querySelectorAll('td'), pj;
+        var pname = pcells[0].textContent.trim();
+        var puri = pcells[1].textContent.trim();
+        var prefix = '';
+        if (pname.startsWith('+')) {
+          prefix = '+';
+        }
+        cont += '<p>' + prefix + '<a title="' + pname + '" href="#' + pid + '"><code>' + puri + '</code></a></p>\n';
+      }
+      cOP.innerHTML = cont;
+
+    }
+
+/*
     for (j = 0; j < cells.length; j++) {
       var cell = row.insertCell(j);
       cell.innerHTML = cells[j].innerHTML;

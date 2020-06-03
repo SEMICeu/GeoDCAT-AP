@@ -1,4 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF 
+  xmlns:dct       = "http://purl.org/dc/terms/" 
+  xmlns:owl       = "http://www.w3.org/2002/07/owl#" 
+  xmlns:rdf       = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:xsd       = "http://www.w3.org/2001/XMLSchema#"
+>
+
   <dct:Standard>
     <dct:title xml:lang="en">ISO 19119/19139</dct:title>
     <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
-  </Standard>
+  </dct:Standard>
+
+</rdf:RDF>

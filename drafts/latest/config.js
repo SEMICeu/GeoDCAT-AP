@@ -27,28 +27,32 @@ var respecConfig = {
 
     alternateFormats: [
     {
-      label: "PDF",
-      uri: "./geodcat-ap_2.0.0.pdf",
+      label: "PDF (TBD)",
+      uri: "./geodcat-ap_v2.0.0.pdf",
     }, 
     {
-      label: "DOCX",
-      uri: "./geodcat-ap_2.0.0.docx",
+      label: "DOCX (TBD)",
+      uri: "./geodcat-ap_v2.0.0.docx",
     },
     {
-      label: "ODT",
-      uri: "./geodcat-ap_2.0.0.odt",
+      label: "ODT (TBD)",
+      uri: "./geodcat-ap_v2.0.0.odt",
     },
     {
       label: "RDF/XML",
-      uri: "./geodcat-ap_2.0.0.rdf",
+      uri: "./geodcat-ap_v2.0.0.rdf",
     },
     {
-      label: "JSON-LD",
-      uri: "./geodcat-ap_2.0.0.jsonld",
+      label: "Turtle",
+      uri: "./geodcat-ap_v2.0.0.ttl",
     },
     {
-      label: "SHACL",
-      uri: "./geodcat-ap_2.0.0_shacl_shapes.ttl",
+      label: "JSON-LD (TBD)",
+      uri: "./geodcat-ap_v2.0.0.jsonld",
+    },
+    {
+      label: "SHACL (TBD)",
+      uri: "./geodcat-ap_v2.0.0_shacl_shapes.ttl",
     }
     ],    
 

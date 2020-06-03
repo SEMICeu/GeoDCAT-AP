@@ -1,0 +1,24 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a dct:Location,
+    skos:Concept ;
+  dct:identifier """
+    202
+  """^^xsd:string ;
+  skos:inScheme [ a skos:ConceptScheme ;
+      dct:issued """
+      2018-11-16T00:01:27+01:00
+    """^^xsd:dateTime ;
+      dct:title """
+      UNSD - Methodology - Standard country or area codes 
+      for statistical use (M49)
+    """@en ] ;
+  skos:prefLabel """
+    Sub-Saharan Africa
+  """@en .
+

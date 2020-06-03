@@ -1,3 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF 
+  xmlns:locn      = "http://www.w3.org/ns/locn#" 
+  xmlns:rdf       = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:xsd       = "http://www.w3.org/2001/XMLSchema#"
+>
+
   <locn:Address>
     <locn:thoroughfare>Kongens Nytorv 6</locn:thoroughfare>
     <locn:postName>Copenhagen</locn:postName>
@@ -5,3 +12,5 @@
     <locn:postCode>1050</locn:postCode>
     <locn:adminUnitL1>Denmark</locn:adminUnitL1>
   </locn:Address>
+
+</rdf:RDF>

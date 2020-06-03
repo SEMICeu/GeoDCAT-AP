@@ -1,3 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF 
+  xmlns:foaf      = "http://xmlns.com/foaf/0.1/" 
+  xmlns:locn      = "http://www.w3.org/ns/locn#" 
+  xmlns:rdf       = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:xsd       = "http://www.w3.org/2001/XMLSchema#"
+>
+
   <rdf:Description>
     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
     <foaf:name xml:lang="en">European Environment Agency</foaf:name>
@@ -13,3 +21,5 @@
       </locn:Address>
     </locn:address>
   </rdf:Description>
+
+</rdf:RDF>

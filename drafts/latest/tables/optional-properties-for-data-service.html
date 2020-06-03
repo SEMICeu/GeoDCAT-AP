@@ -19,7 +19,7 @@
 </tr>
 </thead>
 <tbody>
-<tr class="property optional">
+<tr class="property optional" id="data-service-access-rights">
 <td>
 <p>access rights</p>
 </td>
@@ -38,7 +38,7 @@
 </tr>
 <tr class="property optional ap-ext" id="data-service-conforms-to">
 <td>
-<p>*conforms to</p>
+<p>+conforms to</p>
 </td>
 <td>
 <p><code>dct:conformsTo</code></p>
@@ -55,7 +55,7 @@
 </tr>
 <tr class="property optional ap-ext" id="data-service-contact-point">
 <td>
-<p>*contact point</p>
+<p>+contact point</p>
 </td>
 <td>
 <p><code>dcat:contactPoint</code></p>
@@ -72,7 +72,7 @@
 </tr>
 <tr class="property optional ap-ext" id="data-service-creation-date">
 <td>
-<p>*creation date</p>
+<p>+creation date</p>
 </td>
 <td>
 <p><code>dct:created</code></p>
@@ -89,7 +89,7 @@
 </tr>
 <tr class="property optional ap-ext" id="data-service-creator">
 <td>
-<p>*creator</p>
+<p>+creator</p>
 </td>
 <td>
 <p><code>dct:creator</code></p>
@@ -104,7 +104,7 @@
 <p>0..1</p>
 </td>
 </tr>
-<tr class="property optional">
+<tr class="property optional" id="data-service-description">
 <td>
 <p>description</p>
 </td>
@@ -123,7 +123,7 @@
 </tr>
 <tr class="property optional ap-ext" id="data-service-identifier">
 <td>
-<p>*identifier</p>
+<p>+identifier</p>
 </td>
 <td>
 <p><code>dct:identifier</code></p>
@@ -138,7 +138,7 @@
 <p>0..n</p>
 </td>
 </tr>
-<tr class="property optional">
+<tr class="property optional" id="data-service-licence">
 <td>
 <p>licence</p>
 </td>
@@ -157,7 +157,7 @@
 </tr>
 <tr class="property optional ap-ext" id="data-service-publisher">
 <td>
-<p>*publisher</p>
+<p>+publisher</p>
 </td>
 <td>
 <p><code>dct:publisher</code></p>
@@ -174,7 +174,7 @@
 </tr>
 <tr class="property optional ap-ext" id="data-service-qualified-attribution">
 <td>
-<p>*qualified attribution</p>
+<p>+qualified attribution</p>
 </td>
 <td>
 <p><code>prov:qualifiedAttribution</code></p>
@@ -191,7 +191,7 @@
 </tr>
 <tr class="property optional ap-ext" id="data-service-reference-system">
 <td>
-<p>*reference system</p>
+<p>+reference system</p>
 </td>
 <td>
 <p><code>dct:conformsTo</code></p>
@@ -209,7 +209,7 @@
 </tr>
 <tr class="property optional ap-ext" id="data-service-rights-holder">
 <td>
-<p>*rights holder</p>
+<p>+rights holder</p>
 </td>
 <td>
 <p><code>dct:rightsHolder</code></p>
@@ -226,7 +226,7 @@
 </tr>
 <tr class="property optional ap-ext" id="data-service-service-category">
 <td>
-<p>*service category</p>
+<p>+service category</p>
 </td>
 <td>
 <p><code>dct:type</code></p>
@@ -243,7 +243,7 @@
 </tr>
 <tr class="property optional ap-ext" id="data-service-service-type">
 <td>
-<p>*service type</p>
+<p>+service type</p>
 </td>
 <td>
 <p><code>dct:type</code></p>
@@ -260,10 +260,10 @@
 </tr>
 <tr class="property optional ap-ext" id="data-service-category">
 <td>
-<p>*theme / category</p>
+<p>+theme / category</p>
 </td>
 <td>
-<p><code>dcat:theme</code>, subproperty of <code>dct:subject</code></p>
+<p><code>dcat:theme</code></p>
 </td>
 <td>
 <p><code>skos:Concept</code></p>
@@ -275,9 +275,94 @@
 <p>0..n</p>
 </td>
 </tr>
+<tr class="property optional ap-ext" id="data-service-spatial-coverage">
+<td>
+<p>+spatial / geographical coverage</p>
+</td>
+<td>
+<p><code>dct:spatial</code></p>
+</td>
+<td>
+<p><code>dct:Location</code></p>
+</td>
+<td>
+<p>This property refers to a geographic region that is covered by the Data Service.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="data-service-spatial-resolution">
+<td>
+<p>+spatial resolution</p>
+</td>
+<td>
+<p><code>dcat:spatialResolutionInMeters</code></p>
+</td>
+<td>
+<p><code>xsd:decimal</code></p>
+</td>
+<td>
+<p>This property refers to the minimum spatial separation resolvable in a Data Service, measured in meters.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="data-service-spatial-resolution-general">
+<td>
+<p>+spatial resolution as equivalent scale, angular distance, vertical distance</p>
+</td>
+<td>
+<p><code>rdfs:comment</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property MAY be used to express spatial resolution types that cannot be specified via <code>dcat:spatialResolutionInMeters</code> - i.e., spatial resolution as equivalent scale, angular distance, vertical distance.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="data-service-temporal-coverage">
+<td>
+<p>+temporal coverage</p>
+</td>
+<td>
+<p><code>dct:temporal</code></p>
+</td>
+<td>
+<p><code>dct:PeriodOfTime</code></p>
+</td>
+<td>
+<p>This property refers to a temporal period that the Data Service covers.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property optional ap-ext" id="data-service-temporal-resolution">
+<td>
+<p>+temporal resolution</p>
+</td>
+<td>
+<p><code>dcat:temporalResolution</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:duration</code></p>
+</td>
+<td>
+<p>This property refers to the minimum time period resolvable in the Data Service.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
 <tr class="property optional ap-ext" id="data-service-topic-category">
 <td>
-<p>*topic category</p>
+<p>+topic category</p>
 </td>
 <td>
 <p><code>dct:subject</code></p>
@@ -294,7 +379,7 @@
 </tr>
 <tr class="property optional ap-ext" id="data-service-type">
 <td>
-<p>*type</p>
+<p>+type</p>
 </td>
 <td>
 <p><code>dct:type</code></p>
@@ -311,7 +396,7 @@
 </tr>
 <tr class="property optional ap-ext" id="data-service-was-used-by">
 <td>
-<p>*was used by</p>
+<p>+was used by</p>
 </td>
 <td>
 <p><code>prov:wasUsedBy</code></p>
