@@ -1,4 +1,4 @@
-<table class="simple">
+<table class="simple" id="table-controlled-vocabularies-to-be-used">
 <thead>
 <tr>
 <th>
@@ -24,7 +24,7 @@
 <p><code>dcat:mediaType</code></p>
 </td>
 <td>
-<p>Distribution</p>
+<p><a href="#distribution-media-type">Distribution</a></p>
 </td>
 <td>
 <p>IANA Media Types [[IANA-MEDIA-TYPES]]</p>
@@ -35,12 +35,10 @@
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td rowspan=2">
+<td>
 <p><code>dcat:theme</code></p>
 </td>
-<td rowspan="2">
-<p><a href="#catalogue-category">Catalogue</a></p>
-<p><a href="#data-service-category">Data Service</a></p>
+<td>
 <p><a href="#dataset-category">Dataset</a></p>
 </td>
 <td>
@@ -50,10 +48,17 @@
 <p><a href="http://publications.europa.eu/resource/authority/data-theme">http://publications.europa.eu/resource/authority/data-theme</a></p>
 </td>
 <td>
-<p>The values to be used for this property are the URIs of the concepts in the vocabulary. The use of this property for Catalogues and Data Services is a GeoDCAT-AP extension.</p>
+<p>The values to be used for this property are the URIs of the concepts in the vocabulary.</p>
 </td>
 </tr>
 <tr>
+<td>
+<p>+<code>dcat:theme</code></p>
+</td>
+<td>
+<p><a href="#catalogue-category">Catalogue</a></p>
+<p><a href="#data-service-category">Data Service</a></p>
+</td>
 <td>
 <p>INSPIRE Spatial Data Themes [[INSPIRE-THEMES]]</p>
 </td>
@@ -66,10 +71,29 @@
 </tr>
 <tr>
 <td>
+<p>+<code>dct:subject</code></p>
+</td>
+<td>
+<p><a href="#catalogue-topic-category">Catalogue</a></p>
+<p><a href="#data-service-topic-category">Data Service</a></p>
+<p><a href="#dataset-topic-category">Dataset</a></p>
+</td>
+<td>
+<p>INSPIRE Topic Categories [[INSPIRE-TC]]</p>
+</td>
+<td>
+<p><a href="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory">http://inspire.ec.europa.eu/metadata-codelist/TopicCategory</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP extension.</p>
+</td>
+</tr>
+<tr>
+<td>
 <p><code>dcat:themeTaxonomy</code></p>
 </td>
 <td>
-<p>Catalogue</p>
+<p><a href="#catalogue-themes">Catalogue</a></p>
 </td>
 <td>
 <p>Dataset Theme Vocabulary [[EUV-THEMES]]</p>
@@ -86,7 +110,7 @@
 <p><code>dct:accrualPeriodicity</code></p>
 </td>
 <td>
-<p>Dataset</p>
+<p><a href="#dataset-frequency">Dataset</a></p>
 </td>
 <td>
 <p>EU Vocabularies Frequency Named Authority List [[EUV-FREQ]]</p>
@@ -101,7 +125,7 @@
 <p><code>dct:format</code></p>
 </td>
 <td>
-<p>Distribution</p>
+<p><a href="#distribution-format">Distribution</a></p>
 </td>
 <td>
 <p>EU Vocabularies File Type Named Authority List [[EUV-FT]]</p>
@@ -116,7 +140,10 @@
 <p><code>dct:language</code></p>
 </td>
 <td>
-<p lang="fr-BE">Catalogue, Dataset, Catalogue Record, Distribution</p>
+<p><a href="#catalogue-language">Catalogue</a></p>
+<p><a href="#dataset-language">Dataset</a></p>
+<p><a href="#catalogue-record-language">Catalogue Record</a></p>
+<p><a href="#distribution-language">Distribution</a></p>
 </td>
 <td>
 <p>EU Vocabularies Languages Named Authority List [[EUV-LANG]]</p>
@@ -131,8 +158,8 @@
 <p><code>dct:publisher</code></p>
 </td>
 <td>
-<p>Catalogue</p>
-<p>Dataset</p>
+<p><a href="#catalogue-publisher">Catalogue</a></p>
+<p><a href="#dataset-publisher">Dataset</a></p>
 </td>
 <td>
 <p>EU Vocabularies Corporate bodies Named Authority List [[EUV-CB]]</p>
@@ -149,13 +176,13 @@
 <p><code>dct:spatial</code></p>
 </td>
 <td>
-<p>Catalogue</p>
-<p>Dataset</p>
+<p><a href="#catalogue-spatial-coverage">Catalogue</a></p>
+<p><a href="#dataset-spatial-coverage">Dataset</a></p>
 </td>
-<td>
+<td rowspan="2">
 <p>EU Vocabularies Continents Named Authority List [[EUV-CONT]], EU Vocabularies Countries Named Authority List [[EUV-COUNTRIES]], EU Vocabularies Places Named Authority List [[EUV-PLACES]], [[GEONAMES]]</p>
 </td>
-<td>
+<td rowspan="2">
 <p><a href="http://publications.europa.eu/resource/authority/continent">http://publications.europa.eu/resource/authority/continent</a></p> 
 <p><a href="http://publications.europa.eu/resource/authority/country">http://publications.europa.eu/resource/authority/country</a></p> 
 <p><a href="http://publications.europa.eu/resource/authority/place">http://publications.europa.eu/resource/authority/place</a></p> 
@@ -167,10 +194,38 @@
 </tr>
 <tr>
 <td>
+<p>+<code>dct:spatial</code></p>
+</td>
+<td>
+<p><a href="#data-service-spatial-coverage">Data Service</a></p>
+</td>
+<td>
+<p>The use of this property for Data Services is a GeoDCAT-AP extension.</p>
+</td>
+</tr>
+<tr>
+<td>
 <p><code>adms:status</code></p>
 </td>
 <td>
-<p>Distribution</p>
+<p><a href="#catalogue-record-change-type">Catalogue Record</a></p>
+</td>
+<td>
+<p>TBD</p>
+</td>
+<td>
+<p>TBD</p>
+</td>
+<td>
+<p>TBD</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>adms:status</code></p>
+</td>
+<td>
+<p><a href="#distribution-status">Distribution</a></p>
 </td>
 <td>
 <p>ADMS status [[ADMS-SKOS]] vocabulary</p>
@@ -187,7 +242,7 @@
 <p><code>dct:type</code></p>
 </td>
 <td>
-<p><a href="#publisher-type">Agent</a></p>
+<p><a href="#agent-type">Agent</a></p>
 </td>
 <td>
 <p>ADMS publisher type [[ADMS-SKOS]] vocabulary</p>
@@ -201,39 +256,28 @@
 </tr>
 <tr>
 <td>
-<p>+<code>dct:type</code></p>
+<p><code>dct:type</code></p>
 </td>
 <td>
-<p><a href="#catalogue-topic-category">Catalogue</a></p>
-<p><a href="#data-service-topic-category">Data Service</a></p>
-<p><a href="dataset-topic-category">Dataset</a></p>
+<p><a href="#dataset-type">Dataset</a></p>
 </td>
-<td>
-<p>INSPIRE Topic Categories [[INSPIRE-TC]]</p>
+<td rowspan="2">
+<p>INSPIRE Resource Types [[INSPIRE-RT]]</p>
 </td>
-<td>
-<p><a href="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory">http://inspire.ec.europa.eu/metadata-codelist/TopicCategory</a></p>
+<td rowspan="2">
+<p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType">http://inspire.ec.europa.eu/metadata-codelist/ResourceType</a></p>
 </td>
-<td>
+<td rowspan="2">
 <p>GeoDCAT-AP extension.</p>
+<p>No code list defined in [[DCAT-AP-20191120]].</p>
 </td>
 </tr>
 <tr>
 <td>
-<p><code>dct:type</code></p>
+<p>+<code>dct:type</code></p>
 </td>
 <td>
 <p><a href="#data-service-type">Data Service</a></p>
-<p><a href="dataset-type">Dataset</a></p>
-</td>
-<td>
-<p>INSPIRE Resource Types [[INSPIRE-RT]]</p>
-</td>
-<td>
-<p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType">http://inspire.ec.europa.eu/metadata-codelist/ResourceType</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP extension. No code list defined in [[DCAT-AP-20191120]].</p>
 </td>
 </tr>
 <tr>
@@ -275,7 +319,7 @@
 <p><code>dct:type</code></p>
 </td>
 <td>
-<p>Licence Document</p>
+<p><a href="#licence-document-licence-type">Licence Document</a></p>
 </td>
 <td>
 <p>ADMS licence type [[ADMS-SKOS]] vocabulary</p>
@@ -292,7 +336,7 @@
 <p><code>dcatap:availability</code></p>
 </td>
 <td>
-<p>Distribution</p>
+<p><a href="#distribution-availability">Distribution</a></p>
 </td>
 <td>
 <p>Distribution availability vocabulary [[DCAT-AP-DA]]</p>
@@ -321,6 +365,25 @@
 </td>
 <td>
 <p>GeoDCAT-AP extension.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>+<code>+dct:type</code></p>
+</td>
+<td>
+<p><a href="#standard-type">Standard</a></p>
+</td>
+<td>
+<p>INSPIRE Glossary [[INSPIRE-GLOSSARY]]</p>
+</td>
+<td>
+<p><a href="http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem">http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem</a></p>
+<p><a href="http://inspire.ec.europa.eu/glossary/TemporalReferenceSystem">http://inspire.ec.europa.eu/glossary/TemporalReferenceSystem</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP extension.</p>
+<p>When the Standard is a spatial or temporal reference system, the relevant URIs from the [[INSPIRE-GLOSSARY]] SHOULD be used.</p>
 </td>
 </tr>
 <tr>
