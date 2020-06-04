@@ -209,7 +209,7 @@ The views expressed are purely those of the author and may not in any circumstan
 </blockquote>
 </aside>
 
-<p>Finally, classes and properties added in this Application Profile and extending [[DCAT-AP]] are marked with a &ldquo;plus&rdquo; sign (+), and summarised in the reference table in <a class="no-secRef" href="#geodcat-ap-classes-and-properties"></a>.</p>
+<p>Finally, classes and properties added in this Application Profile and extending [[DCAT-AP]] are marked with a prepended &ldquo;plus&rdquo; sign (+), and summarised in the reference table in <a class="no-secRef" href="#geodcat-ap-classes-and-properties"></a>.</p>
 
 <section id="namespaces">
 
@@ -225,13 +225,17 @@ The views expressed are purely those of the author and may not in any circumstan
 
 <h3>Application Profile Overview</h3>
 
-<p>This Application Profile extends [[DCAT-AP-20191120]] in order to provide a DCAT-AP-compliant representation of INSPIRE and [[ISO-19115]] metadata records. In particular, this Application Profile extends [[DCAT-AP-20191120]] with</p>
+<p>This Application Profile extends [[DCAT-AP-20191120]] by including</p>
 <ul>
-<li>Additional classes and properties.</li>
-<li>Additional recommendations on the use of classes and properties.</li>
-<li>Additional controlled vocabularies.</li>
-<li>Some classes and properties have been deprecated.</li>
+<li>additional classes and properties (marked with a prepended &ldquo;plus&rdquo; sign (+) in this document, and summarised in <a class="no-sectionRef" href="#geodcat-ap-classes-and-properties"></a>);</li>
+<li>additional recommendations on the use of classes and properties (documented in <a class="no-sectionRef" href="#classes"></a> and <a class="no-sectionRef" href="#properties"></a>);</li>
+<li>additional controlled vocabularies (documented in <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>, along with the ones used in [[DCAT-AP-20191120]]).</li>
 </ul>
+
+<p>These extensions are meant to provide a DCAT-AP-conformant representation of geospatial metadata, identified by defining RDF syntax mappings covering the union of the elements in the INSPIRE metadata schema [[INSPIRE-MD-REG]] [[INSPIRE-MD]] and the core profile of [[ISO-19115]], following the criteria illustrated in <a class="no-sectionRef" href="#inspire-and-iso-19115-mappings"></a>.</p>
+
+<p>This current specification does not change the set of geospatial metadata elements already covered in its previous version [[GeoDCAT-AP-20160802]], but rather it updates some of the corresponding mappings based on the new classes and properties included in [[DCAT-AP-20191120]], following the release of version 2 of the W3C Data Catalog (DCAT) Vocabulary [[VOCAB-DCAT-2]], and to align with version 2.0.1 of the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20170302]]. As a result, some of the classes and properties defined in [[GeoDCAT-AP-20160802]] have been deprecated and replaced by the equivalent ones in [[DCAT-AP-20191120]].</p>
+<p>The list of deprecated classes and properties is summarised in <a class="no-sectionRef" href="#deprecated-classes-and-properties"></a>.</p>
 
 <aside class="ednote">
 <p>To be created, by extending the DCAT-AP one.</p>
@@ -1616,9 +1620,11 @@ The views expressed are purely those of the author and may not in any circumstan
 <tbody>
 </tbody>
 </table>
+
 <!--
 <div data-include-format="html" data-include-replace="true" data-include="./tables/geodcat-ap-classes-and-properties.html"></div>
 -->
+
 </section>
 
 <!-- Deprecated classes and properties --> 
@@ -1651,9 +1657,11 @@ The views expressed are purely those of the author and may not in any circumstan
 <tbody>
 </tbody>
 </table>
+
 <!--
-<div data-include-format="html" data-include-replace="true" data-include="./tables/geodcat-ap-classes-and-properties.html"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-classes-and-properties.html"></div>
 -->
+
 </section>
 
 </section>
@@ -1853,8 +1861,10 @@ waitForEl('#maintenance-information---not-in-iso19115-core', function() {
     }
   }
 
-  var rows = document.querySelectorAll('tr.deprecated.property'), i;
+  var rows = document.querySelectorAll('tr.deprecated'), i;
   var table = document.getElementById('table-deprecated-classes-and-properties').getElementsByTagName('tbody')[0];
+
+  var id = rows[0].getAttribute('id');
 
   for (i = 0; i < rows.length; ++i) {
     var row = table.insertRow(i);
@@ -1862,6 +1872,9 @@ waitForEl('#maintenance-information---not-in-iso19115-core', function() {
     for (j = 0; j < cells.length; j++) {
       var cell = row.insertCell(j);
       cell.innerHTML = cells[j].innerHTML;
+      if (j == 0) {
+        cell.innerHTML = '<a href="#' + id + '">' + cells[j].innerHTML + '</a>';
+      }
     }
   }
 });
