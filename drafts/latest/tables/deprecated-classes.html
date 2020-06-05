@@ -2,7 +2,10 @@
 <thead>
 <tr>
 <th>
-<p>Class</p>
+<p>Class name</p>
+</th>
+<th>
+<p>Usage note for the Application Profile</p>
 </th>
 <th>
 <p>URI</p>
@@ -21,6 +24,10 @@
 <p>+Service</p>
 </td>
 <td>
+<p>A system that provides one or more functions [[DCTERMS]].</p>
+<p>In the geospatial domain, a service is defined as <q cite="https://inspire.ec.europa.eu/glossary/SpatialDataServices">the set of operations which may be performed, by invoking a computer application, on the spatial data contained in spatial data sets or on the related metadata</q> [[INSPIRE-GLOSSARY]].</p>
+</td>
+<td>
 <p><code>dctype:Service</code></p>
 </td>
 <td>
@@ -32,3 +39,9 @@
 </tr>
 </tbody>
 </table>
+
+<aside class="note">
+<p>Until GeoDCAT-AP version 1.0.1 [[GeoDCAT-AP-20160802]], class <code>dctype:Service</code> was used to type resources as Data Services, as a more specific class was missing in reference vocabularies.</p>
+<p>[[VOCAB-DCAT-2]] has defined a specific class for this purpose, namely, <code>dcat:DataService</code>, which has been adopted in [[DCAT-AP-20191120]]. Therefore, <code>dcat:DataService</code> replaces <code>dctype:Service</code> starting from this version of GeoDCAT-AP.</p>
+<p>It is worth noting that <code>dcat:DataService</code> is a subclass of <code>dctype:Service</code>.</p>
+</aside>

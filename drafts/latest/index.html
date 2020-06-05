@@ -1573,38 +1573,8 @@ The views expressed are purely those of the author and may not in any circumstan
 <!-- Quick Reference of Classes and Properties --> 
 
 <h2>Quick Reference of Classes and Properties</h2>
-<!--
-<aside class="ednote">
-<p>To be revised</p>
-</aside>
--->
-<table class="simple" id="table-quick-reference-of-classes-and-properties">
-<thead>
-<tr>
-<th>
-<p>Class</p>
-</th>
-<th>
-<p>Class URI</p>
-</th>
-<th>
-<p>Mandatory prop.</p>
-</th>
-<th>
-<p>Recommended prop.</p>
-</th>
-<th>
-<p>Optional properties</p>
-</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
 
-<!--
 <div data-include-format="html" data-include-replace="true" data-include="./tables/quick-reference-of-classes-and-properties.html"></div>
--->
 
 <!-- Classes and Properties added by GeoDCAT-AP --> 
 
@@ -1612,51 +1582,7 @@ The views expressed are purely those of the author and may not in any circumstan
 
 <h2>Classes and properties added by GeoDCAT-AP</h2>
 
-<aside class="ednote">
-<p>TBD</p>
-</aside>
-<!--
-<table class="simple" id="table-geodcat-ap-classes-and-properties">
-<thead>
-<tr>
-<th>Property</th>
-<th>URI</th>
-<th>Range</th>
-<th>Usage note</th>
-<th>Card.</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
--->
-<table class="simple" id="table-geodcat-ap-classes-and-properties">
-<thead>
-<tr>
-<th>
-<p>Class</p>
-</th>
-<th>
-<p>Class URI</p>
-</th>
-<th>
-<p>Mandatory prop.</p>
-</th>
-<th>
-<p>Recommended prop.</p>
-</th>
-<th>
-<p>Optional properties</p>
-</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
-<!--
 <div data-include-format="html" data-include-replace="true" data-include="./tables/geodcat-ap-classes-and-properties.html"></div>
--->
 
 </section>
 
@@ -1673,18 +1599,11 @@ The views expressed are purely those of the author and may not in any circumstan
 <table class="simple" id="table-deprecated-classes-and-properties">
 <thead>
 <tr>
-<th>
-<p>Class / Property</p>
-</th>
-<th>
-<p>URI</p>
-</th>
-<th>
-<p>Replaced by</p>
-</th>
-<th>
-<p>Deprecated in</p>
-</th>
+<th>Class / Property</th>
+<th>URI</th>
+<th>Domain<</th>
+<th>Replaced by</th>
+<th>Deprecated in</th>
 </tr>
 </thead>
 <tbody>
@@ -1706,7 +1625,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h2>INSPIRE and ISO 19115 Mappings</h2>
 
 <aside class="ednote">
-<p>TBD</p>
+<p>To be revised and updated</p>
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./appendices/inspire-and-iso-19115-mappings.html"></div>
@@ -1750,265 +1669,16 @@ The views expressed are purely those of the author and may not in any circumstan
 <p>The table below summarises the changes applied to the current release of GeoDCAT-AP.</p>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/change-log.html"></div>
-<!--
-<p>Further textual changes (release 1.2):</p>
-<ul>
-<li>Updated the change management process in chapter 1 as now is based on Change and Release Management Policy for DCAT-AP. </li>
-<li>Updated Figure 1 - DCAT Application Profile UML Class Diagram</li>
-<li>Added column Release in the change log table</li>
-<li>Editorial fix in the quick reference in Annex I</li>
-</ul>
-<p>Further textual changes (release 1.2.1):</p>
-<ul>
-<li>Updated Figure 1 - DCAT Application Profile UML Class Diagram</li>
-<li>Updated references 21-27 and 41 to point from Metadata Registry (MDR) to EU Vocabularies</li>
-<li>In section 5.2 Controlled vocabularies to be used, updated the entries in table column “Vocabulary name” (MDR &rarr; EU Vocabularies)</li>
-<li>MDR has been replaced with EU Vocabularies within text.</li>
-<li>Updated Joinup references: 6, 13, 28, 35, 36, 46.</li>
-</ul>
-<p>Further textual changes (release 2.0.0)</p>
-<ul>
-<li>Throughout the document, links are made clickable</li>
-<li>Apply various typo fixes indicated in the public review</li>
-<li>Page 15, Table 4.4.3, Optional properties for Distribution, the usage note for <code>adms:status</code> property has been updated to include &ldquo;It MUST take one of the values Completed, Deprecated, Under Development, Withdrawn&rdquo;</li>
-<li>Page 8, the following namespaces has been added:
-<ul>
-<li>vann: http://purl.org/vocab/vann/</li>
-<li>dcatap: http://data.europa.eu/r5r/</li>
-<li>voaf: http://purl.org/vocommons/voaf/#</li>
-<li>odrl: http://www.w3.org/ns/odrl/2/</li>
-<li>locn: http://www.w3.org/ns/locn#</li>
-</ul>
-</li>
-<li>Section 4. Added explanatory paragraph on the relationship with W3C DCAT 2.0</li>
-<li>Page 29, updated text to reflect agent roles and their relations to dataset using new added properties.</li>
-<li>Section Acknowledgements, added list of contributors.</li>
-</ul>
--->
+
 </section>
 
 <!--
 </article>
 -->
 
-<script>
-
-function buildSummaryTable(class_selector,property_selectors,min_prop_nr,target) {
-
-  var rows = document.querySelectorAll(class_selector), i;
-  var table = document.getElementById(target).getElementsByTagName('tbody')[0];
-
-  for (i = 0; i < rows.length; i++) {
-
-    var id = rows[i].getAttribute('id');
-    var cells = rows[i].querySelectorAll('td'), j;
-    var prop = '';
-    if (cells[0].getElementsByTagName('a')[0]) {
-      prop = cells[0].getElementsByTagName('a')[0].getAttribute('href');
-    }
-//    var prop = cells[0].getAttribute('href');
-    var prop_nr = 0;
-    if (prop != '') {
-      for (var j = 0; j < property_selectors.length; j++) {
-        prop_nr += document.querySelectorAll(prop + ' ' + property_selectors[j]).length;
-      }
-    }
-
-    console.log('PROP NR: ' + prop_nr);
-
-    if (prop_nr >= min_prop_nr) {
-
-      var row = table.insertRow(i);
-      var name = cells[0].textContent.trim();
-      var uri = cells[2].textContent.trim();
-      var prefix = '';
-      if (name.startsWith('+')) {
-        name = name.substr(1);
-        prefix = '+';
-      }
-      var cName = row.insertCell(0);
-      cName.innerHTML = prefix + '<a href="#' + id + '">' + name + '</a>';
-      var cURI = row.insertCell(1);
-      cURI.innerHTML = '<code>' + uri + '</code>';
- 
-      for (var j = 0, k = 2; j < property_selectors.length; j++, k++) {
-        var c = row.insertCell(k);
-        if (prop != '') {
-          var prows = document.querySelectorAll(prop + ' ' + property_selectors[j]), pi;
-          var cont = '';
-          for (pi = 0; pi < prows.length; pi++) {
-            var pid = prows[pi].getAttribute('id');
-            var pcells = prows[pi].querySelectorAll('td'), pj;
-            var pname = pcells[0].textContent.trim();
-            var puri = pcells[1].textContent.trim();
-            var prefix = '';
-            if (pname.startsWith('+')) {
-              prefix = '+';
-            }
-            cont += '<p>' + prefix + '<a title="' + pname + '" href="#' + pid + '"><code>' + puri + '</code></a></p>\n';
-          }
-          c.innerHTML = cont;
-        }
-      }
-    }
-  }
-};
-	
-//document.addEventListener("DOMContentLoaded", () => {
-$(document).ready( function() {
-
-waitForEl('#maintenance-information---not-in-iso19115-core', function() {
-
-  var class_selector = '#classes tr:not(.deprecated).class';
-  var property_selectors = new Array();
-  property_selectors[0] = 'tr:not(.deprecated).property.mandatory';
-  property_selectors[1] = 'tr:not(.deprecated).property.recommended';
-  property_selectors[2] = 'tr:not(.deprecated).property.optional';
-  var min_prop_nr = 0;
-  var target = 'table-quick-reference-of-classes-and-properties';
-
-  buildSummaryTable(class_selector,property_selectors,min_prop_nr,target);
-
-  var class_selector = '#classes tr:not(.deprecated).class';
-  var property_selectors = new Array();
-  property_selectors[0] = 'tr:not(.deprecated).property.mandatory.ap-ext';
-  property_selectors[1] = 'tr:not(.deprecated).property.recommended.ap-ext';
-  property_selectors[2] = 'tr:not(.deprecated).property.optional.ap-ext';
-  var min_prop_nr = 0;
-  var target = 'table-geodcat-ap-classes-and-properties';
-
-  buildSummaryTable(class_selector,property_selectors,min_prop_nr,target);
-
-/*
-  var rows = document.querySelectorAll('#classes tr:not(.deprecated).class'), i;
-  var table = document.getElementById('table-quick-reference-of-classes-and-properties').getElementsByTagName('tbody')[0];
-
-  for (i = 0; i < rows.length; i++) {
-    var id = rows[i].getAttribute('id');
-    var row = table.insertRow(i);
-    var cells = rows[i].querySelectorAll('td'), j;
-    var name = cells[0].textContent.trim();
-    var prop = '';
-    if (cells[0].getElementsByTagName('a')[0]) {
-      prop = cells[0].getElementsByTagName('a')[0].getAttribute('href');
-    }
-//    var prop = cells[0].getAttribute('href');
-	  console.log(name + ' ' + prop)
-    var uri = cells[2].textContent.trim();
-    var prefix = '';
-    if (name.startsWith('+')) {
-      name = name.substr(1);
-      prefix = '+';
-    }
-    var cName = row.insertCell(0);
-    cName.innerHTML = prefix + '<a href="#' + id + '">' + name + '</a>';
-    var cURI = row.insertCell(1);
-    cURI.innerHTML = '<code>' + uri + '</code>';
-    var cMP = row.insertCell(2);
-    var cRP = row.insertCell(3);
-    var cOP = row.insertCell(4);
- 
-    if (prop != '') {
-
-      var prows = document.querySelectorAll(prop + ' tr:not(.deprecated).property.mandatory'), pi;
-      var cont = '';
-      for (pi = 0; pi < prows.length; pi++) {
-        var pid = prows[pi].getAttribute('id');
-        var pcells = prows[pi].querySelectorAll('td'), pj;
-        var pname = pcells[0].textContent.trim();
-        var puri = pcells[1].textContent.trim();
-        var prefix = '';
-        if (pname.startsWith('+')) {
-          prefix = '+';
-        }
-        cont += '<p>' + prefix + '<a title="' + pname + '" href="#' + pid + '"><code>' + puri + '</code></a></p>\n';
-      }
-      cMP.innerHTML = cont;
-
-      var prows = document.querySelectorAll(prop + ' tr:not(.deprecated).property.recommended'), pi;
-      var cont = '';
-      for (pi = 0; pi < prows.length; pi++) {
-        var pid = prows[pi].getAttribute('id');
-        var pcells = prows[pi].querySelectorAll('td'), pj;
-        var pname = pcells[0].textContent.trim();
-        var puri = pcells[1].textContent.trim();
-        var prefix = '';
-        if (pname.startsWith('+')) {
-          prefix = '+';
-        }
-        cont += '<p>' + prefix + '<a title="' + pname + '" href="#' + pid + '"><code>' + puri + '</code></a></p>\n';
-      }
-      cRP.innerHTML = cont;
-
-      var prows = document.querySelectorAll(prop + ' tr:not(.deprecated).property.optional'), pi;
-      var cont = '';
-      for (pi = 0; pi < prows.length; pi++) {
-        var pid = prows[pi].getAttribute('id');
-        var pcells = prows[pi].querySelectorAll('td'), pj;
-        var pname = pcells[0].textContent.trim();
-        var puri = pcells[1].textContent.trim();
-        var prefix = '';
-        if (pname.startsWith('+')) {
-          prefix = '+';
-        }
-        cont += '<p>' + prefix + '<a title="' + pname + '" href="#' + pid + '"><code>' + puri + '</code></a></p>\n';
-      }
-      cOP.innerHTML = cont;
-
-    }
-*/
-/*
-    for (j = 0; j < cells.length; j++) {
-      var cell = row.insertCell(j);
-      cell.innerHTML = cells[j].innerHTML;
-    }
-*/
-/*
-  }
-*/
-/*
-  var rows = document.querySelectorAll('tr:not(.deprecated).property.ap-ext'), i;
-  var table = document.getElementById('table-geodcat-ap-classes-and-properties').getElementsByTagName('tbody')[0];
-
-  for (i = 0; i < rows.length; i++) {
-    var row = table.insertRow(i);
-    var cells = rows[i].querySelectorAll('td'), j;
-    for (j = 0; j < cells.length; j++) {
-      var cell = row.insertCell(j);
-      cell.innerHTML = cells[j].innerHTML;
-    }
-  }
-*/
-  var rows = document.querySelectorAll('tr.deprecated'), i;
-  var table = document.getElementById('table-deprecated-classes-and-properties').getElementsByTagName('tbody')[0];
-
-  var id = rows[0].getAttribute('id');
-
-  for (i = 0; i < rows.length; i++) {
-    var row = table.insertRow(i);
-    var cells = rows[i].querySelectorAll('td'), j;
-    for (j = 0; j < cells.length; j++) {
-      var cell = row.insertCell(j);
-      cell.innerHTML = cells[j].innerHTML;
-      if (j == 0) {
-        cell.innerHTML = '<a href="#' + id + '">' + cells[j].innerHTML + '</a>';
-      }
-    }
-  }
-});
-
-});
-var waitForEl = function(selector, callback) {
-  if (jQuery(selector).length) {
-    callback();
-  } else {
-    setTimeout(function() {
-      waitForEl(selector, callback);
-    }, 100);
-  }
-};
-
-</script>
+<!--
+<script src="./js/script.js"></script>
+-->
 
 </body>
 </html>

@@ -32,3 +32,8 @@
 </tr>
 </tbody>
 </table>
+
+<aside class="note">
+<p>Until GeoDCAT-AP version 1.0.1 [[GeoDCAT-AP-20160802]], property <code>rdfs:comment</code> was used with class <code>dcat:Dataset</code> to specify the spatial resolution of a Dataset, since a more specific property was not available in reference vocabularies.</p>
+<p>[[VOCAB-DCAT-2]] has defined a specific property to specify spatial resolution as distance in metres, namely, <code>dcat:theme</code>, which has been adopted by [[DCAT-AP-20191120]]. Therefore, <code>dcat:theme</code> replaces <code>rdfs:comment</code> starting from this version of GeoDCAT-AP, but only when spatial resolution is expressed as distance in metres.</p>
+</aside>
