@@ -211,8 +211,9 @@
   $html .= '</tbody>' . "\n";
   $html .= '</table>' . "\n";
 
-//  file_put_contents($folder . $tv['id'] . '.html', $html);
-  echo $html;
+  file_put_contents($folder . $tv['id'] . '.html', $html);
+//  echo $html;
+//  echo $folder . $tv['id'] . '.html' . "\n";
 
   }
 

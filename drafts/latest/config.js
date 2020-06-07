@@ -254,12 +254,19 @@ var respecConfig = {
         "status":"Namespace Document",
         "date":"2005"
       },
+      "GeoDCAT-ACV":{
+        "href":"https://joinup.ec.europa.eu/node/148245/",
+        "title":"Joinup - GeoDCAT-AP: Alignment of controlled vocabularies",
+//        "authors":["Andrea Perego"],
+        "publisher":"European Commission",
+//        "date":"2015"
+       },
       "GeoDCAT-XSLT":{
         "href":"https://github.com/semiceu/iso-19139-to-dcat-ap/",
         "title":"Reference XSLT-based implementation of GeoDCAT-AP",
-        "authors":["Andrea Perego"],
-//        "publisher":"",
-        "date":"2015"
+//        "authors":["Andrea Perego"],
+        "publisher":"European Commission",
+//        "date":"2015"
        },
       "GEOHASH":{
         "href":"http://en.wikipedia.org/wiki/Geohash",
@@ -718,6 +725,19 @@ var respecConfig = {
         "href":"http://www.theodi.org/",
         "title":"ODI"
       },
-
+// To be pushed to SpecRef
+      "SPS": {
+        "href":"http://www.ogc.org/standards/sps",
+        "title":"OGC® Sensor Planning Service Implementation Standard ",
+        "publisher":"OGC",
+        "date":"28 March 2011",
+        "author":["Ingo Simonis","Johannes Echterhoff"]
+      },
+      "WCS": {
+        "href":"http://www.ogc.org/standards/wcs",
+        "title":"OGC Web Coverage Service (WCS) 2.1 Interface Standard - Core",
+        "publisher":"OGC",
+        "date":"16 August 2018"
+      },
     }
   };
