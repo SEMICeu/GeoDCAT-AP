@@ -114,9 +114,9 @@ For example, this was the case of the work carried out by the <a href="https://w
 <h2>Alignments defined in GeoDCAT-AP</h2>
 
 <p>The alignments defined in the current version of GeoDCAT-AP are the result of an iterative revision process of [[GeoDCAT-AP-20160802]], following the criteria illustrated in the previous sections and the review of the GeoDCAT-AP WG.</p>
-<p>The work started with the review of [[DCAT-AP-20191120]] and [[VOCAB-DCAT-2]], and the identification of possible disalignments of the mappings defined in [[GeoDCAT-AP]], as well as possible gaps in [[DCAT-AP-20191120]] and [[VOCAB-DCAT-2]], possibly requiring the use of different vocabularies or the definition of new classes and/or properties in the GeoDCAT-AP namespace. In all these cases, backward compatibility with [[GeoDCAT-AP-20160802]] has been taken into account when implementing revisions.</p>
+<p>The work started with the review of [[DCAT-AP-20191120]], [[VOCAB-DCAT-2]], and [[INSPIRE-MD-20170302]], with the purpose of identifying possible disalignments of the mappings defined in [[GeoDCAT-AP]], as well as possible gaps in [[DCAT-AP-20191120]] and [[VOCAB-DCAT-2]], which may require the use of different vocabularies or the definition of new classes and/or properties in the GeoDCAT-AP namespace. In all these cases, backward compatibility with [[GeoDCAT-AP-20160802]] has been taken into account when implementing revisions.</p>
 <p>Finally, the GeoDCAT-AP WG has worked in close coordination with the DCAT-AP WG, in order to ensure mutual compliance of the proposed solutions.</p>
-<!--
+<!---
 <p>The alignments defined in the current version of GeoDCAT-AP are the result of an iterative revision process, following the criteria illustrated in the previous sections and the review of the GeoDCAT-AP WG.</p>
 <p>The work started with the review of the suite of specifications concerning the INSPIRE profile of [[DCAT-AP]] (INSPIRE+DCAT-AP) [[INSPIRE-DCAT]], and of the preliminary proposals concerning the metadata elements not covered by INSPIRE+DCAT-AP.</p>
 <p>In two specific cases, feedback has been asked to relevant standardisation bodies, in order to validate the proposal made in GeoDCAT-AP. In particular, this concerned feedback provided by the W3C Provenance Working Group on the use of the W3C PROV ontology [[PROV-O]] to model responsible party roles and conformance results (data quality).</p>
@@ -182,7 +182,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 
 <h2>Overview of bindings for GeoDCAT-AP Core</h2>
 
-<p>This section provides an overview of <strong>GeoDCAT-AP Core</strong>. This includes bindings for metadata elements of the INSPIRE metadata and metadata elements in the core profile of [[ISO-19115-2003]] core <em>for which DCAT-AP provides an RDF syntax binding</em>. Those metadata elements for which [[DCAT-AP-20191120]] does not provide a binding are part of the GeoDCAT-AP Extended profile described in <a href="#overview-of-bindings-for-geodcat-ap-extended"></a>.</p>
+<p>This section provides an overview of <strong>GeoDCAT-AP Core</strong>. This includes bindings for metadata elements of the INSPIRE metadata and metadata elements in the core profile of [[ISO-19115-2003]] core <em>for which DCAT-AP provides an RDF syntax binding</em>. Those metadata elements for which [[DCAT-AP-20191120]] does not provide a binding are part of the GeoDCAT-AP Extended mapping profile described in <a href="#overview-of-bindings-for-geodcat-ap-extended"></a>.</p>
 <p>GeoDCAT-AP Core is meant to enable the harvesting and re-use of spatial metadata records through [[DCAT-AP-20191120]]-conformant applications and services, including data portals and APIs. The alignments for INSPIRE and [[ISO-19115-2003]] metadata elements that are not included in GeoDCAT-AP Core are defined in GeoDCAT-AP Extended, see <a href="#overview-of-bindings-for-geodcat-ap-extended"></a>.</p>
 <p>In addition to this, GeoDCAT-AP Core does not provide alignments from metadata records concerning services, with the only exception of catalogue or discovery services, which are the only ones supported in [[DCAT-AP-20191120]].</p>
 <p>In Table 2 the starred elements (*) are used to indicate the corresponding metadata element in the core profile of [[ISO-19115-2003]]. For each element, it is indicated whether the element is mandatory (<abbr title="mandatory">M</abbr>), optional (<abbr title="optional">O</abbr>), conditional (<abbr title="conditional">C</abbr>), or recommended (<abbr title="recommended">R</abbr>) in either specification.</p>
@@ -237,7 +237,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <td></td>
 <td></td>
 <td></td>
-<td>See <a href="#resource-locator---on-line-resource"></a>. The proposed encoding depends whether the resource is a service or a dataset or data series. Also, the value of the function code (CI_OnlineFunctionCode) must be taken into account.</td>
+<td>See <a href="#resource-locator---on-line-resource"></a>. The defined encoding depends whether the resource is a service or a dataset or data series. Also, the value of the function code (CI_OnlineFunctionCode) must be taken into account.</td>
 </tr>
 <tr>
 <td><blockquote>
@@ -513,14 +513,14 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 
 <h2>Overview of bindings for GeoDCAT-AP Extended</h2>
 
-<p>This section provides an overview of the RDF syntax bindings in GeoDCAT-AP Extended. This GeoDCAT-AP profile covers elements defined in INSPIRE and the core profile of [[ISO-19115-2003]], for which [[DCAT-AP-20191120]] does not provide a syntax binding. GeoDCAT-AP Extended is a <em>superset</em> of GeoDCAT-AP Core.</p>
+<p>This section provides an overview of the RDF syntax bindings in GeoDCAT-AP Extended. This GeoDCAT-AP mapping profile covers elements defined in INSPIRE and the core profile of [[ISO-19115-2003]], for which [[DCAT-AP-20191120]] does not provide a syntax binding. GeoDCAT-AP Extended is a <em>superset</em> of GeoDCAT-AP Core.</p>
 <p>Table 3 contains the suggested RDF syntax binding for INSPIRE metadata. In the table below, the starred elements (*) are used to indicate the corresponding metadata element in the core profile of [[ISO-19115-2003]]. For each metadata element, it is indicated whether the element is mandatory (M), optional (O), conditional (C), or recommended (R) in either specification.</p>
-<p>Please note that some metadata elements have an RDF syntax binding in both the GeoDCAT-AP Core and Extended profile. These elements fall in one of these categories:</p>
+<p>Please note that some metadata elements have an RDF syntax binding in both the GeoDCAT-AP Core and Extended mapping profile. These elements fall in one of these categories:</p>
 <ol style="list-style-type: decimal">
 <li><p><strong>Partial coverage by a [[DCAT-AP-20191120]] binding</strong>: This concerns conformity (only degree of conformity conformant is supported) and responsible organisation (only responsible party roles publisher and point of contact are supported).</p></li>
 <li><p><strong>Subsumption by a GeoDCAT-AP RDF binding</strong>: ISO metadata elements available in GeoDCAT-AP Core, but for which only a many-to-one mapping is supported in [[DCAT-AP-20191120]]. This concerns resource types, since the [[VOCAB-DCAT-2]] notion of dataset models both the ISO/INSPIRE notions of data set and data series; the [[VOCAB-DCAT-2]] notion of data catalogue models only one of the types of spatial data services.</p></li>
 </ol>
-<p>In order to preserve the original semantics, the extended profile of GeoDCAT-AP defines additional mappings to those included in GeoDCAT-AP Core. The two sets of alignments are not mutually exclusive, and can coexist without creating conflicts.</p>
+<p>In order to preserve the original semantics, the extended mapping profile of GeoDCAT-AP defines additional mappings to those included in GeoDCAT-AP Core. The two sets of alignments are not mutually exclusive, and can coexist without creating conflicts.</p>
 <table id="table-3" class="simple">
 <caption>Table 3: Element bindings for GeoDCAT-AP Extended</caption>
 <thead>
@@ -747,8 +747,10 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 </section>
 
 <section id="overview-of-metadata-elements-covered-by-geodcat-ap" class="appendix">
+
 <h1>Overview of metadata elements covered by GeoDCAT-AP</h1>
-<p>The following table provides an overview of the metadata elements in the INSPIRE metadata schema and in the core profile of ISO 19115, and the available mappings in [[DCAT-AP-20191120]] and GeoDCAT-AP. Columns titled with “obligation” specify whether the corresponding metadata elements are mandatory (M), conditional (C), and optional (O) (where “conditional” means “mandatory under given conditions”).</p>
+
+<p>The following table provides an overview of the metadata elements in the INSPIRE metadata schema and in the core profile of [[ISO-19115]], and the available mappings in [[DCAT-AP-20191120]] and GeoDCAT-AP. Columns titled with “obligation” specify whether the corresponding metadata elements are mandatory (M), conditional (C), and optional (O) (where “conditional” means “mandatory under given conditions”).</p>
 <p>Note that the mappings covered by [[DCAT-AP-20191120]] correspond to those defined in GeoDCAT-AP <em>core</em>, whereas those covered only by GeoDCAT-AP correspond to those defined in the GeoDCAT-AP <em>extended</em>.</p>
 
 <table id="table-5" class="simple">
@@ -1123,13 +1125,13 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>In particular:</p>
 <ul>
 <li>Class <code>dctype:Service</code> has been <a href="#service">deprecated</a>, and replaced by class <code>dcat:DataService</code> to denote services.</li>
-<li>Mappings for services have been moved to the core profile of GeoDCAT-AP, following their support in [[DCAT-AP-20191120]], with the exception of property <code>dct:type</code>.</li>
+<li>Mappings for services have been moved to the core mapping profile of GeoDCAT-AP, following their support in [[DCAT-AP-20191120]], with the exception of property <code>dct:type</code>.</li>
 </ul>
 </aside>
 
 <p>In [[VOCAB-DCAT-2]], the notion of dataset is quite broad, and may include both the INSPIRE notions of <strong>dataset</strong> and <strong>dataset series</strong>. Moreover, currently no existing vocabulary provides suitable candidates for the INSPIRE notions of dataset series – the existing ones are very generic (e.g., <code>dctype:Collection</code> is defined as <q>An aggregation of resources</q> [[DCTERMS]]).</p>
 <p>Based on this, in GeoDCAT-AP both INSPIRE datasets and dataset series are specified as instances of <code>dcat:Dataset</code>.</p>
-<p>Moreover, in order to maintain the INSPIRE distinction between datasets and dataset series, following the work on aligning INSPIRE Metadata and Dublin Core [[?INSPIRE-DC]], in the extended profile of GeoDCAT-AP they will be denoted by using the resource type code list operated by the INSPIRE Registry [[INSPIRE-RT]], and by using <code>dct:type</code>. More precisely, the following URIs SHOULD be used to denote, respectively, dataset and series:</p>
+<p>Moreover, in order to maintain the INSPIRE distinction between datasets and dataset series, following the work on aligning INSPIRE Metadata and Dublin Core [[?INSPIRE-DC]], in the extended mapping profile of GeoDCAT-AP they will be denoted by using the resource type code list operated by the INSPIRE Registry [[INSPIRE-RT]], and by using <code>dct:type</code>. More precisely, the following URIs SHOULD be used to denote, respectively, dataset and series:</p>
 <ul>
 <li><p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset">http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset</a></p></li>
 <li><p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType/series">http://inspire.ec.europa.eu/metadata-codelist/ResourceType/series</a></p></li>
@@ -1142,7 +1144,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <li><p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service">http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service</a></p></li>
 </ul>
 <!--
-<p>For the reason explained above, the core profile of GeoDCAT-AP includes only the mappings for catalogue services (i.e., <code>dcat:Catalog</code>), whereas the mappings of other types of services are supported only in the extended profile of GeoDCAT-AP.</p>
+<p>For the reason explained above, the core mapping profile of GeoDCAT-AP includes only the mappings for catalogue services (i.e., <code>dcat:Catalog</code>), whereas the mappings of other types of services are supported only in the extended mapping profile of GeoDCAT-AP.</p>
 -->
 <div class="issue" data-number="10">
 </div>
@@ -1221,7 +1223,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <li>The original mapping rules have been updated in case the resource locator points to a service endpoint.</li>
 <li>Property <code>foaf:homepage</code> has been <a href="#data-service-homepage">deprecated</a>, and replaced by property <code>dcat:endointURL</code> to specify resource locators for services.</li>
 <li>The mapping has been complemented with two additional properties, namely, <code>dcat:endpointDescription</code> and <code>dct:conformsTo</code>.</li>
-<li>The mappings to properties <code>dcat:endpointURL</code> and <code>dcat:endpointURL</code> have been moved to the core profile of GeoDCAT-AP, as they are both part of [[DCAT-AP-20191120]], whereas the mapping to <code>dct:conformsTo</code> is available only in the extended profile.</li>
+<li>The mappings to properties <code>dcat:endpointURL</code> and <code>dcat:endpointURL</code> have been moved to the core mapping profile of GeoDCAT-AP, as they are both part of [[DCAT-AP-20191120]], whereas the mapping to <code>dct:conformsTo</code> is available only in the extended mapping profile.</li>
 </ul>
 </aside>
 
@@ -1543,18 +1545,18 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>In particular:</p>
 <ul>
 <li>Property <code>dct:hasPart</code> has been <a href="#data-service-has-part">deprecated</a>, and replaced by property <code>dcat:servesDataset</code> to specify coupled resources.</li>
-<li>This mapping has  been moved to the core profile of GeoDCAT-AP, as property <code>dcat:servesDataset</code> is part of [[DCAT-AP-20191120]].</li>
+<li>This mapping has  been moved to the core mapping profile of GeoDCAT-AP, as property <code>dcat:servesDataset</code> is part of [[DCAT-AP-20191120]].</li>
 </ul>
 </aside>
 
 <p>This element is used to link a service to the target datasets or dataset series.</p>
 <p>Following [[VOCAB-DCAT-2]] and [DCAT-AP-20191120], this relationship is modelled by using property <code>dcat:servesDataset</code>.</p>
 <!--
-<p>This relationship is modelled by using <code>dct:hasPart</code>. This mapping is supported only in the extended profile of GeoDCAT-AP.</p>
+<p>This relationship is modelled by using <code>dct:hasPart</code>. This mapping is supported only in the extended mapping profile of GeoDCAT-AP.</p>
 -->
 
 <aside class="note">
-<p>The notion of “coupled resource” does not apply to catalogue / discovery services. As per the [[DCAT-AP-20191120]], in GeoDCAT-AP (core and extended profiles) the relationship between the catalogue and the available datasets is modelled by using <code>dcat:dataset</code>, which is a sub-property of <code>dct:hasPart</code>.</p>
+<p>The notion of “coupled resource” does not apply to catalogue / discovery services. As per the [[DCAT-AP-20191120]], in GeoDCAT-AP (core and extended mapping profiles) the relationship between the catalogue and the available datasets is modelled by using <code>dcat:dataset</code>, which is a sub-property of <code>dct:hasPart</code>.</p>
 </aside>
 
 <p>The target dataset or series SHOULD be preferably referred to by using its unique resource identifier (as in the following example).</p>
@@ -1656,7 +1658,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 
 <h2>Topic category, originating controlled vocabulary, and keyword value - *Dataset topic category</h2>
 
-<p>In INSPIRE, these two elements have specific purposes. Quoting from the INSPIRE Metadata Regulation [[?INSPIRE-MD-REG]] (<a href="http://data.europa.eu/eli/reg/2008/1205#d1e233-14-1">§2.1</a> and <a href="http://data.europa.eu/eli/reg/2008/1205#d1e233-14-1">§3.1</a>, respectively):</p>
+<p>In INSPIRE, these two elements have specific purposes. Quoting from the INSPIRE Metadata Regulation [[?INSPIRE-MD-REG]] (§2.1 and §3.1, respectively):</p>
 <ul>
 <li><p>The topic category is a high-level classification scheme to assist in the grouping and topic-based search of available spatial data resources.</p></li>
 <li><p>The keyword value is a commonly used word, formalised word or phrase used to describe the subject. While the topic category is too coarse for detailed queries, keywords help narrowing a full text search and they allow for structured keyword search.</p></li>
@@ -1744,7 +1746,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <div class="issue" data-number="8">
 </div>
 
-<p>In order to keep the distinction between these two types of keywords, the proposed solution is as follows:</p>
+<p>In order to keep the distinction between these two types of keywords, the adopted solution is as follows:</p>
 <ul>
 <li><p>Keywords from the ISO 19119 codelists of spatial data service type and categories are mapped to <code>dct:type</code>, and expressed by the corresponding URI in the INSPIRE Registry – reference registers:</p>
 <ul>
@@ -2114,12 +2116,12 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <!--
 </aside>
 -->
-<p>By contrast, date of publication, last revision, and creation are mapped, respectively, to <code>dct:issued</code>, <code>dct:modified</code> (both core and extended GeoDCAT-AP profiles), and <code>dct:created</code> (only for the extended profile of GeoDCAT-AP).</p>
-<p>[[DCAT-AP-20191120]] does not have a property equivalent to the INSPIRE metadata element metadata date. In INSPIRE, this element is defined as follows (<a href="http://data.europa.eu/eli/reg/2008/1205#d1e576-14-1">Part B, §10.2</a>):</p>
+<p>By contrast, date of publication, last revision, and creation are mapped, respectively, to <code>dct:issued</code>, <code>dct:modified</code> (both core and extended GeoDCAT-AP mapping profiles), and <code>dct:created</code> (only for the extended mapping profile of GeoDCAT-AP).</p>
+<p>[[DCAT-AP-20191120]] does not have a property equivalent to the INSPIRE metadata element metadata date. In INSPIRE, this element is defined as follows (see [[INSPIRE-MD-REG]], Part B, §10.2):</p>
 <blockquote>
 <p>The date which specifies when the metadata record was created or updated.</p>
 </blockquote>
-<p>Due to this ambiguity, the proposed mapping for this element is <code>dct:modified</code>.</p>
+<p>Due to this ambiguity, the defined mapping for this element is <code>dct:modified</code>.</p>
 
 <aside class="example" id="ex-mapping-temporal-reference">
 <p>Resource metadata in GeoDCAT-AP</p>
@@ -2282,15 +2284,23 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 
 <h2>Conformity and data quality - *not in ISO 19115 core</h2>
 
-<p>The GeoDCAT-AP specification only provides a syntax binding for conformity and not for data quality in general.</p>
 <p>In [[ISO-19115]], conformance and quality information is encoded as a quality report containing the result of a test (an evaluation) of a given quality measure, according to an evaluation method, with either a quantitative result (a metric) or a conformance result (pass or fail) as most important outcome.</p>
-<p>For encoding conformance, GeoDCAT-AP proposes to use <code>dct:conformsTo</code> and the W3C Provenance Ontology (PROV-O) [[PROV-O]] as explained in the following paragraphs. For encoding other aspects of data quality, GeoDCAT-AP does not provide a syntax binding as there is a risk that the (future) work of other standards bodies on data quality may make the proposed syntax binding for GeoDCAT-AP outdated. For example, the <a href="https://www.w3.org/2013/dwbp/">W3C Data on the Web Best Practices WG</a> is working on a Data Quality Vocabulary (DQV) [[?VOCAB-DQV]]. To limit the impact, it was decided to only provide a partial mapping for Data Quality / Conformance.</p>
-<p>[[DCAT-AP-20191120]] provides a single candidate, <code>dct:conformsTo</code>, which however can be used to map only a conformity of degree ‘conformant’. This is suitable for the core profile of GeoDCAT-AP.</p>
-<p>Considering how conformity must be expressed in extended profile of GeoDCAT-AP (see [[INSPIRE-MD-REG]], Part B, <a href="http://data.europa.eu/eli/reg/2008/1205#d1e415-14-1">§7</a>), possible candidates are the W3C Evaluation and Report Language (EARL) [[?EARL10]] and the W3C Provenance Ontology (PROV-O) [[PROV-O]]. The latter candidate was chosen by the GeoDCAT-AP Working Group, since it would enable wider re-use with respect to the EARL vocabulary, which is more specific, and its use is limited.</p>
-<p>[[PROV-O]] allows encoding conformity as a test activity (<code>prov:Activity</code>) that generated a result encoded with property <code>prov:generated</code>, corresponding to the degree of conformity, for which the INSPIRE Registry maintains a URI set [[INSPIRE-DoC]]. The specification against which the conformance is asserted is encoded via a qualified association (<code>prov:QualifiedAssociation</code>) with a test plan (a <code>prov:Plan</code>) in turn derived from a standard (<code>dct:Standard</code>, also <code>prov:Entity</code>). These associations are made via a property chain: <code>prov:qualifiedAssociation</code>, <code>prov:hadPlan</code>, and <code>prov:wasDerivedFrom</code>.</p>
+<p>The current version of GeoDCAT-AP only defines a syntax binding for conformity and not for data quality in general, making use of property <code>dct:conformsTo</code> and the W3C Provenance Ontology (PROV-O) [[PROV-O]] as explained in the following paragraphs. 
+<!--
+<p>For encoding conformance, GeoDCAT-AP uses <code>dct:conformsTo</code> and the W3C Provenance Ontology (PROV-O) [[PROV-O]] as explained in the following paragraphs. 
+For encoding other aspects of data quality, GeoDCAT-AP does not provide a syntax binding as there is a risk that the (future) work of other standards bodies on data quality may make the defined syntax binding for GeoDCAT-AP outdated.
+For example, the <a href="https://www.w3.org/2013/dwbp/">W3C Data on the Web Best Practices WG</a> is working on a Data Quality Vocabulary (DQV) [[?VOCAB-DQV]].
+To limit the impact, it was decided to only provide a partial mapping for Data Quality / Conformance.</p>
+-->
+<p>[[DCAT-AP-20191120]] provides a single candidate, <code>dct:conformsTo</code>, which however can be used to map only a conformity of degree ‘conformant’. This is suitable for the core mapping profile of GeoDCAT-AP.</p>
+<p>Considering how conformity must be expressed in extended mapping profile of GeoDCAT-AP (see [[INSPIRE-MD-REG]], Part B, §7), possible candidates are the W3C Evaluation and Report Language (EARL) [[?EARL10]] and the W3C Provenance Ontology (PROV-O) [[PROV-O]]. The latter candidate was chosen by the GeoDCAT-AP Working Group, since it would enable wider re-use with respect to the EARL vocabulary, which is more specific, and its use is limited.</p>
+<p>[[PROV-O]] allows encoding conformity as a test activity (<code>prov:Activity</code>) that generated a result specified with property <code>prov:generated</code>, corresponding to the degree of conformity, for which the INSPIRE Registry maintains a URI set [[INSPIRE-DoC]]. The specification against which the conformance is asserted is specified via a qualified association (<code>prov:qualifiedAssociation</code>) with a test plan (a <code>prov:Plan</code>) in turn derived from a standard (<code>dct:Standard</code>, also <code>prov:Entity</code>). These associations are made via a property chain: <code>prov:qualifiedAssociation</code>, <code>prov:hadPlan</code>, and <code>prov:wasDerivedFrom</code>.</p>
+<p>This pattern is illustrated in the following table.</p>
 
 <table id="table-7" class="simple">
+<!--
 <caption>Table 7: Mappings for metadata element ‘conformity’</caption>
+-->
 <thead>
 <tr>
 <th colspan="4">Metadata element</th>
@@ -2321,12 +2331,12 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 </tr>
 <tr>
 <td colspan="3">Degree (M)</td>
-<td colspan="2"><code>prov:generated</code></td>
+<td colspan="2"><code>prov:generated</code> (range <code>prov:Entity</code>)</td>
 </tr>
 </tbody>
 </table>
 
-<p>In order to grant interoperability with [[DCAT-AP-20191120]], when conformity is of degree “conformant”, the proposal is to use both PROV-O and <code>dct:conformsTo</code> for GeoDCAT-AP Extended.</p>
+<p>In order to grant interoperability with [[DCAT-AP-20191120]], when conformity is of degree “conformant”, the proposal is to use both [[PROV-O]] and <code>dct:conformsTo</code> for GeoDCAT-AP Extended.</p>
 
 <aside class="example" id="ex-mapping-conformity">
 <p>Resource metadata in GeoDCAT-AP:</p>
@@ -2385,8 +2395,8 @@ prov:wasUsedBy [
 </pre>
 </aside>
 
-<p>The PROV-O-based approach might be revised in the future – but still supported for backward interoperability –, if future standard vocabularies will be able to address GeoDCAT-AP requirement.</p>
 <!--
+<p>The PROV-O-based approach might be revised in the future – but still supported for backward interoperability –, if future standard vocabularies will be able to address GeoDCAT-AP requirement.</p>
 <aside class="ednote">
 <p>For possible revisions to how conformity is specified, see the following issue:</p>
 -->
@@ -2485,18 +2495,20 @@ prov:wasUsedBy [
 
 <p>[[DCAT-AP-20191120]] supports properties to denote the publisher, the creator, and the contact point for a dataset.</p>
 <p>By contrast, [[ISO-19115]] and [[INSPIRE-MD-REG]] supports 11 possible relationships between a resource (a dataset, a dataset series, a service) and an agent (organisation), plus one for metadata. For some of them, suitable candidates exist from widely used vocabularies (in particular, DCMI Metadata Terms [[DCTERMS]]). However, for some of them no suitable candidate is available in the existing vocabularies (in particular, for roles “user” and “processor”).</p>
-<p>In the extended profile of GeoDCAT-AP, the W3C PROV ontology [[PROV-O]] is used to specify the relationship between the resource and the responsible organisation. The FOAF Vocabulary [[FOAF]] will then be used to specify the contact information concerning the responsible party. Finally, the responsible party role will be specified by using <code>dcat:hadRole</code>, and using the relevant code list values from the INSPIRE Registry – reference register [[INSPIRE-RPR]]:</p>
+<p>In the extended mapping profile of GeoDCAT-AP, the W3C PROV ontology [[PROV-O]] is used to specify the relationship between the resource and the responsible organisation. The FOAF Vocabulary [[FOAF]] will then be used to specify the contact information concerning the responsible party. Finally, the responsible party role will be specified by using <code>dcat:hadRole</code>, and using the relevant code list values from the INSPIRE Registry – reference register [[INSPIRE-RPR]]:</p>
 <p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole">http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole</a></p>
 <!--
 <p>[[DCAT-AP-20191120]] supports properties to denote the publisher and the contact point for a dataset.</p>
 <p>By contrast, [[ISO-19115]] and the INSPIRE Metadata Regulation supports 11 possible relationships between a resource (a dataset, a dataset series, a service) and an agent (organisation), plus one for metadata. For some of them, suitable candidates exist from widely used vocabularies (in particular, DCMI Metadata Terms [[DCTERMS]]). However, for some of them no suitable candidate is available in the existing vocabularies (in particular, for roles “user” and “processor”).</p>
-<p>In the extended profile of GeoDCAT-AP, the W3C PROV ontology [[PROV-O]] is used to specify the relationship between the resource and the responsible organisation. The W3C vCard ontology [[VCARD-RDF]] will then be used to specify the contact information concerning the responsible party. Finally, the responsible party role will be specified by using <code>dct:type</code>, and using the relevant code list values from the INSPIRE Registry – reference register:</p>
+<p>In the extended mapping profile of GeoDCAT-AP, the W3C PROV ontology [[PROV-O]] is used to specify the relationship between the resource and the responsible organisation. The W3C vCard ontology [[VCARD-RDF]] will then be used to specify the contact information concerning the responsible party. Finally, the responsible party role will be specified by using <code>dct:type</code>, and using the relevant code list values from the INSPIRE Registry – reference register:</p>
 <p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole">http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole</a></p>
 -->
 <p>These mappings are illustrated in the following table.</p>
 
 <table id="table-8" class="simple">
+<!--
 <caption>Table 8: Mappings for metadata element ‘responsible party’</caption>
+-->
 <thead>
 <tr>
 <th colspan="3">Metadata element</th>
@@ -2518,9 +2530,10 @@ prov:wasUsedBy [
 </tr>
 <tr>
 <td colspan="2">Responsible party role</td>
-<td colspan="2"><code>dcat:hadRole</code></td>
+<td colspan="2"><code>dcat:hadRole</code> (range <code>dcat:Role</code>)</td>
 </tr>
 </tbody>
+</table>
 <!--
 </table>
 <table id="table-8" class="simple">
@@ -2561,15 +2574,17 @@ prov:wasUsedBy [
 <li><p>If suitable candidates exist from widely used vocabularies, use them to represent the corresponding responsible parties and their roles, based on an agreed definition of 1-to-1 mappings. Otherwise:</p></li>
 <li><p>Represent responsible organisations by using [[PROV-O]].</p></li>
 </ul>
-<p>As mentioned earlier, the latter option is supported only in the extended profile of GeoDCAT-AP.</p>
+<p>As mentioned earlier, the latter option is supported only in the extended mapping profile of GeoDCAT-AP.</p>
 <p>The following table lists the GeoDCAT-AP mappings for responsible party roles, taking into account only widely used vocabularies.</p>
 
 <table id="table-9" class="simple">
+<!--
 <caption>Table 9: Responsible party roles</caption>
+-->
 <thead>
 <tr>
-<th>[[ISO-19115-2003]]</th>
-<th>INSPIRE Metadata Regulation</th>
+<th>[[ISO-19115]]</th>
+<th>[[INSPIRE-MD-REG]]</th>
 <th>Description</th>
 <th><p>Proposed RDF mapping</p>
 <p>(where not available <code>prov:qualifiedAttribution</code> can be used)</p></th>
@@ -2578,67 +2593,67 @@ prov:wasUsedBy [
 <tbody>
 <tr>
 <td>Resource provider</td>
-<td><a href="http://data.europa.eu/eli/reg/2008/1205#d1e2082-14-1"><strong>Part B §6.1</strong></a></td>
+<td>Part B, §6.1</td>
 <td>Party that supplies the resource.</td>
 <td>N/A</td>
 </tr>
 <tr>
 <td>Custodian</td>
-<td><a href="http://data.europa.eu/eli/reg/2008/1205#d1e2092-14-1"><strong>Part B §6.2</strong></a></td>
+<td>Part B, §6.2</td>
 <td>Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource.</td>
 <td>N/A</td>
 </tr>
 <tr>
 <td>Owner</td>
-<td><a href="http://data.europa.eu/eli/reg/2008/1205#d1e2102-14-1"><strong>Part B §6.3</strong></a></td>
+<td>Part B, §6.3</td>
 <td>Party that owns the resource.</td>
 <td><code>dct:rightsHolder</code></td>
 </tr>
 <tr>
 <td>User</td>
-<td><a href="http://data.europa.eu/eli/reg/2008/1205#d1e2112-14-1"><strong>Part B §6.4</strong></a></td>
+<td>Part B, §6.4</td>
 <td>Party who uses the resource.</td>
 <td>N/A</td>
 </tr>
 <tr>
 <td>Distributor</td>
-<td><a href="http://data.europa.eu/eli/reg/2008/1205#d1e2122-14-1"><strong>Part B §6.5</strong></a></td>
+<td>Part B, §6.5</td>
 <td>Party who distributes the resource</td>
 <td>N/A</td>
 </tr>
 <tr>
 <td>Originator</td>
-<td><a href="http://data.europa.eu/eli/reg/2008/1205#d1e2132-14-1"><strong>Part B §6.6</strong></a></td>
+<td>Part B, §6.6</td>
 <td>Party who created the resource.</td>
 <td>N/A</td>
 </tr>
 <tr>
 <td>Point of contact</td>
-<td><a href="http://data.europa.eu/eli/reg/2008/1205#d1e2142-14-1"><strong>Part B §6.7</strong></a></td>
+<td>Part B, §6.7</td>
 <td>Party who can be contacted for acquiring knowledge about or acquisition of the resource.</td>
 <td><code>dcat:contactPoint</code></td>
 </tr>
 <tr>
 <td>Principal investigator</td>
-<td><a href="http://data.europa.eu/eli/reg/2008/1205#d1e2152-14-1"><strong>Part B §6.8</strong></a></td>
+<td>Part B, §6.8</td>
 <td>Key party responsible for gathering information and conducting research</td>
 <td>N/A</td>
 </tr>
 <tr>
 <td>Processor</td>
-<td><a href="http://data.europa.eu/eli/reg/2008/1205#d1e2162-14-1"><strong>Part B §6.9</strong></a></td>
+<td>Part B, §6.9</td>
 <td>Party who has processed the data in a manner such that the resource has been modified.</td>
 <td>N/A</td>
 </tr>
 <tr>
 <td>Publisher</td>
-<td><a href="http://data.europa.eu/eli/reg/2008/1205#d1e2172-14-1"><strong>Part B §6.10</strong></a></td>
+<td>Part B, §6.10</td>
 <td>Party who published the resource</td>
 <td><code>dct:publisher</code></td>
 </tr>
 <tr>
 <td>Author</td>
-<td><a href="http://data.europa.eu/eli/reg/2008/1205#d1e2183-14-1"><strong>Part B §6.11</strong></a></td>
+<td>Part B, §6.11</td>
 <td>Party who authored the resource.</td>
 <td><code>dct:creator</code></td>
 </tr>
@@ -2767,11 +2782,13 @@ prov:wasUsedBy [
 
 <h2>*Metadata standard name, *Metadata standard version</h2>
 
-<p>Following [[DCAT-AP-20191120]], GeoDCAT-AP uses <code>dct:conformsTo</code> to encode information about the metadata standard name and metadata standard version.</p>
-<p>The metadata on metadata is encoded as a <code>dcat:CatalogRecord</code>.</p>
+<p>Following [[DCAT-AP-20191120]], GeoDCAT-AP uses <code>dct:conformsTo</code> to specify the metadata standard, and properties <code>dct:title</code> and <code>owl:versionInfo</code> are used to specify the standard name and version, respectively.</p>
+<p>This pattern is illustrated in the following table.</p>
 
 <table id="table-10" class="simple">
+<!--
 <caption>Table 10: Metadata standard name and metadata standard version</caption>
+-->
 <thead>
 <tr>
 <th colspan="2">Metadata element</th>
@@ -2782,7 +2799,7 @@ prov:wasUsedBy [
 <tr>
 <td rowspan="2"><strong>Metadata standard</strong></td>
 <td>Metadata standard name</td>
-<td rowspan="2"><code>dct:conformsTo</code></td>
+<td rowspan="2"><code>dct:conformsTo</code> (range <code>dct:Standard</code>)</td>
 <td><code>dct:title</code></td>
 </tr>
 <tr>
@@ -2797,11 +2814,15 @@ prov:wasUsedBy [
 <aside class="example" id="ex-mapping-metadata-standard">
 <p>Metadata on metadata in GeoDCAT-AP:</p>
 <pre>[] a dcat:CatalogRecord ;
-  dct:conformsTo [
+  dct:conformsTo &lt;https://joinup.ec.europa.eu/release/geodcat-ap/10&gt; ;
+.
+
+&lt;https://joinup.ec.europa.eu/release/geodcat-ap/10&gt;
 # Standard name and version of the GeoDCAT-AP record
-    dct:title &quot;GeoDCAT-AP Extended profile&quot;@en ;
-    owl:versionInfo &quot;1.0&quot;.
-  ] .</pre><p>Resource metadata in ISO 19139 for datasets:</p>
+  dct:title &quot;GeoDCAT-AP&quot;@en ;
+  owl:versionInfo &quot;1.0&quot; ;
+.</pre>
+<p>Resource metadata in ISO 19139 for datasets:</p>
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:metadataStandardName&gt;
@@ -2810,22 +2831,30 @@ prov:wasUsedBy [
   &lt;gmd:metadataStandardVersion&gt;
     &lt;gco:CharacterString&gt;Nederlands metadata profiel op ISO 19115 voor geografie 1.3&lt;/gco:CharacterString&gt;
   &lt;/gmd:metadataStandardVersion&gt;
-&lt;/gmd:MD_Metadata&gt;</pre></aside>
+&lt;/gmd:MD_Metadata&gt;</pre>
+</aside>
+
 <p>To represent the standard name and version of the source ISO record, the GeoDCAT-AP metadata record must be extended as in the following example.</p>
-<aside class="example"><p>Metadata on metadata in GeoDCAT-AP:</p>
+
+<aside class="example" id="ex-mapping-metadata-standard-with-source-record">
+<p>Metadata on metadata in GeoDCAT-AP:</p>
 <pre>[] a dcat:CatalogRecord ;
-  dct:conformsTo [
-# Standard name and version of the GeoDCAT-AP record
-    dct:title &quot;GeoDCAT-AP Extended profile&quot;@en ;
-    owl:versionInfo &quot;1.0&quot;.
-  ] ;
+  dct:conformsTo &lt;https://joinup.ec.europa.eu/release/geodcat-ap/10&gt; ;
   dct:source [
 # Standard name and version of the source ISO 19115 record
     a dcat:CatalogRecord ;
     dct:conformsTo [
       dct:title &quot;ISO 19115&quot;@en ;
       owl:versionInfo &quot;Nederlands metadata profiel op ISO 19115 voor geografie 1.3&quot;.
-    ] ] .</pre><p>Resource metadata in ISO 19139 for datasets:</p>
+    ] ] ;
+.
+
+&lt;https://joinup.ec.europa.eu/release/geodcat-ap/10&gt;
+# Standard name and version of the GeoDCAT-AP record
+  dct:title &quot;GeoDCAT-AP&quot;@en ;
+  owl:versionInfo &quot;1.0&quot; ;
+.</pre>
+<p>Resource metadata in ISO 19139 for datasets:</p>
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:metadataStandardName&gt;
@@ -2882,7 +2911,7 @@ prov:wasUsedBy [
 <li><p><a href="http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem">http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem</a></p></li>
 <li><p><a href="http://inspire.ec.europa.eu/glossary/TemporalReferenceSystem">http://inspire.ec.europa.eu/glossary/TemporalReferenceSystem</a></p></li>
 </ul>
-<p>The reference system identifier SHOULD be preferably represented with an HTTP URI. In particular, spatial reference systems should be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by the Open Geospatial Consortium.</p>
+<p>The reference system identifier SHOULD be preferably represented with an HTTP URI. In particular, spatial reference systems should be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by the Open Geospatial Consortium [[OGC-EPSG]].</p>
 <p>In this register, the URI prefix for coordinate reference systems is the following one:</p>
 <p><a href="http://www.opengis.net/def/crs/EPSG/0/">http://www.opengis.net/def/crs/EPSG/0/</a></p>
 <p>followed by the number identifying the coordinate reference system in the EPSG register. For instance, the following URI</p>
@@ -2945,9 +2974,9 @@ prov:wasUsedBy [
 <h2>Character encoding - *Dataset character set and *Metadata character set</h2>
 
 <p>In [[VOCAB-DCAT-2]] and [[DCAT-AP-20191120]], the specification of the character encoding of a dataset and the character encoding of a metadata record is not explicitly supported.</p>
-<p>According to RFC 4288 [[?RFC4288]], the character set can be part of the media type specification, but only for type “text”. By contrast, in INSPIRE the character set can be specified also for other media types.</p>
+<p>According to [[?RFC4288]], the character set can be part of the media type specification, but only for type “text”. By contrast, in INSPIRE the character set can be specified also for other media types.</p>
 <p>The W3C Content vocabulary [[Content-in-RDF10]] provides a possibly suitable candidate, namely, property <code>cnt:characterEncoding</code>, taking as value the character set names in the IANA register [[IANA-CHARSETS]]. GeoDCAT-AP uses this property.</p>
-<p>Character encoding in [[ISO-19115]] metadata is specified with a code list that can be mapped to the corresponding codes in the <a href="http://www.iana.org/assignments/character-sets/">IANA Character Sets register</a>
+<p>Character encoding in [[ISO-19115]] metadata is specified with a code list that can be mapped to the corresponding codes in [[IANA-CHARSETS]]
 <!--
 <a href="#fn8" class="footnoteRef" id="fnref8"><sup>8</sup></a>
 -->
@@ -3151,17 +3180,19 @@ prov:wasUsedBy [
 <p>Two properties are available:</p>
 <ul>
 <li><p><code>dcat:mediaType</code>: to be used when the format corresponds to one of the media types registered by IANA [[IANA-MEDIA-TYPES]].</p></li>
-<li><p><code>dct:format</code>: to be used in all the other cases.</p></li>
+<li><p><code>dct:format</code>: to be used in all the other cases, to be used with file type register operated by the Publications Office of the EU [[EUV-FT]].</p></li>
 </ul>
 <p>The same approach is used in GeoDCAT-AP for ISO 19115 / INSPIRE metadata.</p>
+<!--
 <p>In both cases, [[DCAT-AP-20191120]] recommends the use of the URI file type register [[EUV-FT]], operated by the Metadata Registry of the Publications Office of the EU, to specify formats/media types. However, this register does not include many of the formats/media types typically used for INSPIRE data – as, e.g., GML, shapefiles and raster files – which are available through the INSPIRE media type register [[INSPIRE-MT]].</p>
 <p>The proposal is then to use the file type register of the Publications Office, if it includes the relevant format/media type, and the INSPIRE Media Types register otherwise.</p>
-
+-->
 <aside class="example" id="ex-mapping-encoding">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>[] a dcat:Dataset ;
   dcat:distribution [ a dcat:Distribution ;
-    dcat:mediaType &lt;http://publications.europa.eu/resource/authority/file-type/TIFF&gt; ] .</pre><p>Resource metadata in ISO 19139:</p>
+    dcat:mediaType &lt;http://publications.europa.eu/resource/authority/file-type/TIFF&gt; ] .</pre>
+<p>Resource metadata in ISO 19139:</p>
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:distributionInfo&gt;
@@ -3193,7 +3224,7 @@ prov:wasUsedBy [
 <p>In [[ISO-19115]], element “Spatial representation type” is meant mainly to describe the “method used to represent geographic information in the dataset”, by using a code list (see the table below).</p>
 <p>The <abbr title="Asset Description Metadata Schema">ADMS</abbr> vocabulary [[VOCAB-ADMS]] includes a property, namely, <code>adms:representationTechnique</code> that could be used for this purpose. It is worth noting that, in the ADMS specification, <code>adms:representationTechnique</code> decribes a distribution, and not the dataset. Moreover, the [[ISO-19115]] code list of spatial representation types might be in the future available as a URI register from the INSPIRE Registry.</p>
 <p>Based on this, GeoDCAT-AP models this information by using property <code>adms:representationTechnique</code>, with the spatial representation type URIs that will be operated by the INSPIRE Registry.</p>
-<p>This mapping is supported only in the extended profile of GeoDCAT-AP.</p>
+<p>This mapping is supported only in the extended mapping profile of GeoDCAT-AP.</p>
 <p>The spatial representation types defined in [[ISO-19115]] are listed in the following table. It is important to note that, as stated in the INSPIRE Data Specifications, the only spatial representation types in scope of INSPIRE are the following ones: “vector”, “grid”, and “tin”.</p>
 
 <table class="simple">
@@ -3261,9 +3292,13 @@ prov:wasUsedBy [
 <p>Based on this, maintenance frequency is modelled in GeoDCAT-AP by using <code>dct:accrualPeriodicity</code> with the MDR Frequency Named Authority List [[EUV-FREQ]].</p>
 <p>For the frequency codes not covered by the MDR Frequency code list, the approach will be as follows:</p>
 <ul>
-<li><p>In the core profile of GeoDCAT-AP these codes will be ignored:</p></li>
-<li><p>The extended profile of GeoDCAT-AP will use the code list of ISO maintenance frequency codes operated by the INSPIRE Registry.</p></li>
+<li><p>In the core mapping profile of GeoDCAT-AP these codes will be ignored.</p></li>
+<li><p>The extended mapping profile of GeoDCAT-AP will use the code list of ISO maintenance frequency codes operated by the INSPIRE Registry.</p></li>
 </ul>
+
+<aside class="ednote">
+<p>A possible option to address this disalignment is to submit a request to have [[EUV-FREQ]] updated accordingly.</p>
+</aside>
 
 <table class="simple">
 <thead>

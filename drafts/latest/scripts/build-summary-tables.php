@@ -85,7 +85,7 @@
                 $c[$cid]['prop-optional'][] = $p[$pid];
               }
               if (in_array('deprecated', $p[$pid]['types'])) {
-                $c[$cid]['deprecated'][] = $p[$pid];
+                $c[$cid]['prop-deprecated'][] = $p[$pid];
               }
               if (in_array('ap-ext', $p[$pid]['types'])) {
                 $c[$cid]['prop-ap-ext'][] = $p[$pid];
@@ -128,6 +128,7 @@
   if ($tv['type'] == 'deprecated') {
     $html .= '<th>Class / Property </th>' . "\n";
     $html .= '<th>URI</th>' . "\n";
+    $html .= '<th>Domain</th>' . "\n";
     $html .= '<th>Replaced by</th>' . "\n";
     $html .= '<th>Deprecated in</th>' . "\n";
   }
@@ -170,7 +171,7 @@
     }
     foreach ($tv['groups'] as $gk => $gv) {
       if ($tv['type'] == 'deprecated') {
-        $html .= '<tr>' . "\n";
+//        $html .= '<tr>' . "\n";
       }
       else {
         $html .= '<td>' . "\n";
@@ -183,11 +184,13 @@
               $pprefix = '+';
             }
             if ($tv['type'] == 'deprecated') {
+              $html .= '<tr>' . "\n";
               $html .= '<td>' . $pprefix . '<a href="#' . $pv['id'] . '">' . $pv['name'] . '</a></td>' . "\n";
               $html .= '<td><code>' . $pv['uri'] . '</code></td>' . "\n";
               $html .= '<td>' . $cprefix . '<a title="' . $c[$k]['name'] . '" href="#' . $k . '"><code>' . $c[$k]['uri'] . '</code></a></td>' . "\n";
               $html .= '<td><a href="' . $pv['replaced-by-href']  . '"><code>' . $pv['replaced-by-uri'] . '</code></a></td>' . "\n";
               $html .= '<td>' . $pv['deprecated-in'] . '</td>' . "\n";
+              $html .= '</tr>' . "\n";
             }
             else {
               $html .= '<p>' . $pprefix . '<a title="' . $pv['name'] . '" href="#' . $pv['id'] . '"><code>' . $pv['uri'] . '</code></a></p>' . "\n";
@@ -196,7 +199,7 @@
         }  
       }
       if ($tv['type'] == 'deprecated') {
-        $html .= '</tr>' . "\n";
+//        $html .= '</tr>' . "\n";
       }
       else {
         $html .= '</td>' . "\n";
