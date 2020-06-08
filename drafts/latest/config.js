@@ -207,12 +207,12 @@ var respecConfig = {
         "publisher":"European Commission",
 //        "date":"2016"
       },
-      "DCWIKI": {
-        "href":"http://wiki.dublincore.org/index.php/User_Guide/Publishing_Metadata",
-        "title":"User Guide / Publishing Metadata",
-//        "authors":["Dublin Core Metadata Initiative"],
+      "DC-UG-PM": {
+        "href":"https://www.dublincore.org/resources/userguide/publishing_metadata/",
+        "title":"Dublin Core™ User Guide: Publishing Metadata",
+        "authors":["Stefanie Rühle","Tom Baker","Pete Johnston"],
         "publisher":"Dublin Core Metadata Initiative",
-        "date":"9 March 2007"
+//        "date":"9 March 2007"
       },
       "EPRINTS-AR": {
         "href":"http://purl.org/eprint/accessRights/",
