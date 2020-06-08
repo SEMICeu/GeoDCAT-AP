@@ -98,8 +98,31 @@
     }
   }
 
-//  print_r($c);
-//  exit; 
+  array_multisort(array_column($c, 'name'), $c);
+  foreach ($c as $k => $v) {
+    if (isset($c[$k]['prop-mandatory'])) {
+      array_multisort(array_column($c[$k]['prop-mandatory'], 'uri'), $c[$k]['prop-mandatory']);
+    } 
+    if (isset($c[$k]['prop-recommended'])) {
+      array_multisort(array_column($c[$k]['prop-recommended'], 'uri'), $c[$k]['prop-recommended']);
+    } 
+    if (isset($c[$k]['prop-optional'])) {
+      array_multisort(array_column($c[$k]['prop-optional'], 'uri'), $c[$k]['prop-optional']);
+    } 
+    if (isset($c[$k]['prop-ap-ext'])) {
+      array_multisort(array_column($c[$k]['prop-ap-ext'], 'uri'), $c[$k]['prop-ap-ext']);
+    } 
+    if (isset($c[$k]['prop-deprecated'])) {
+      array_multisort(array_column($c[$k]['prop-deprecated'], 'name'), $c[$k]['prop-deprecated']);
+    } 
+  }
+
+//  foreach ($c as $k => $v) {
+//    echo $v['name'] . "\n";
+//  }
+//  exit;
+//print_r($c);
+//exit; 
 
   $tables[0]['id'] = 'quick-reference-of-classes-and-properties';
   $tables[0]['classes'] = ['mandatory', 'recommended', 'optional'];
@@ -117,7 +140,7 @@
   $tables[2]['classes'] = ['mandatory', 'recommended', 'optional', 'deprecated'];
   $tables[2]['groups'] = ['prop-deprecated'];
   $tables[2]['type'] = 'deprecated';
-  $tables[2]['min-prop'] = 1;
+  $tables[2]['min-prop'] = 0;
 
   foreach ($tables as $tk => $tv) {
 
@@ -148,23 +171,27 @@
 //  print_r(array_intersect($tv['classes'], $c[$k]['types']));
 //  exit;
   if (count(array_intersect($tv['classes'], $c[$k]['types'])) > 0) {
-	  
-  if (count($c[$k]['prop']) > $tv['min-prop'] && ($tv['type'] == '' || isset($c[$k]['prop-' . $tv['type']]) && count($c[$k]['prop-' . $tv['type']]) > 0)) {
+  if (count($c[$k]['prop']) >= $tv['min-prop'] && (in_array($tv['type'], $c[$k]['types']) || $tv['type'] == '' || isset($c[$k]['prop-' . $tv['type']]) && count($c[$k]['prop-' . $tv['type']]) > 0)) {
+//echo $c[$k]['name'] . "\n";	  
 
     $cprefix = '';
     if (in_array('ap-ext',$c[$k]['types'])) {
       $cprefix = '+';
     }
-    if ($tv['type'] == 'deprecated' && in_array('deprecated', $c[$k]['types'])) {
-      $html .= '<tr>' . "\n";
-      $html .= '<td>' . $cprefix . '<a href="#' . $k . '">' . $c[$k]['name'] . '</a></td>' . "\n";
-      $html .= '<td><code>' . $c[$k]['uri'] . '</code></td>' . "\n";
-      $html .= '<td></td>' . "\n";
-      $html .= '<td><a href="' . $c[$k]['replaced-by-href']  . '"><code>' . $c[$k]['replaced-by-uri'] . '</code></a></td>' . "\n";
-      $html .= '<td>' . $c[$k]['deprecated-in'] . '</td>' . "\n";
-      $html .= '</tr>' . "\n";
+    if ($tv['type'] == 'deprecated') {
+      if (in_array('deprecated', $c[$k]['types'])) {
+//echo '<td>' . $cprefix . '<a href="#' . $k . '">' . $c[$k]['name'] . '</a></td>' . "\n";
+        $html .= '<tr>' . "\n";
+        $html .= '<td>' . $cprefix . '<a href="#' . $k . '">' . $c[$k]['name'] . '</a></td>' . "\n";
+        $html .= '<td><code>' . $c[$k]['uri'] . '</code></td>' . "\n";
+        $html .= '<td></td>' . "\n";
+        $html .= '<td><a href="' . $c[$k]['replaced-by-href']  . '"><code>' . $c[$k]['replaced-by-uri'] . '</code></a></td>' . "\n";
+        $html .= '<td>' . $c[$k]['deprecated-in'] . '</td>' . "\n";
+        $html .= '</tr>' . "\n";
+      }
     }
     else {
+//echo '<td>' . $cprefix . '<a href="#' . $k . '">' . $c[$k]['name'] . '</a></td>' . "\n";
       $html .= '<tr>' . "\n";
       $html .= '<td>' . $cprefix . '<a href="#' . $k . '">' . $c[$k]['name'] . '</a></td>' . "\n";
       $html .= '<td><code>' . $c[$k]['uri'] . '</code></td>' . "\n";

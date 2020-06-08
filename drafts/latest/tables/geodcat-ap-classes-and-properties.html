@@ -10,6 +10,48 @@
 </thead>
 <tbody>
 <tr>
+<td>+<a href="#activity">Activity</a></td>
+<td><code>prov:Activity</code></td>
+<td>
+<p>+<a title="generated" href="#activity-generated"><code>prov:generated</code></a></p>
+<p>+<a title="qualified association" href="#activity-qualified-association"><code>prov:qualifiedAssociation</code></a></p>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>+<a href="#address-agent">Address (Agent)</a></td>
+<td><code>locn:Address</code></td>
+<td>
+</td>
+<td>
+<p>+<a title="country" href="#address-agent-country"><code>locn:adminUnitL1</code></a></p>
+<p>+<a title="administrative area" href="#address-agent-administrative-area"><code>locn:adminUnitL2</code></a></p>
+<p>+<a title="postal code" href="#address-agent-postal-code"><code>locn:postCode</code></a></p>
+<p>+<a title="city" href="#address-agent-city"><code>locn:postName</code></a></p>
+<p>+<a title="street address" href="#address-agent-street-address"><code>locn:thoroughfare</code></a></p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>+<a href="#address-kind">Address (Kind)</a></td>
+<td><code>vcard:Address</code></td>
+<td>
+</td>
+<td>
+<p>+<a title="country" href="#address-kind-country"><code>vcard:country-name</code></a></p>
+<p>+<a title="city" href="#address-kind-city"><code>vcard:locality</code></a></p>
+<p>+<a title="postal code" href="#address-kind-postal-code"><code>vcard:postal-code</code></a></p>
+<p>+<a title="administrative area" href="#address-kind-administrative-area"><code>vcard:region</code></a></p>
+<p>+<a title="street address" href="#address-kind-street-address"><code>vcard:street-address</code></a></p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
 <td><a href="#agent">Agent</a></td>
 <td><code>foaf:Agent</code></td>
 <td>
@@ -17,11 +59,23 @@
 <td>
 </td>
 <td>
-<p>+<a title="address" href="#agent-address"><code>locn:address</code></a></p>
-<p>+<a title="affiliation" href="#agent-affiliation"><code>org:memberOf</code></a></p>
 <p>+<a title="email" href="#agent-email"><code>foaf:mbox</code></a></p>
 <p>+<a title="phone" href="#agent-phone"><code>foaf:phone</code></a></p>
 <p>+<a title="URL" href="#agent-url"><code>foaf:workplaceHompage</code></a></p>
+<p>+<a title="address" href="#agent-address"><code>locn:address</code></a></p>
+<p>+<a title="affiliation" href="#agent-affiliation"><code>org:memberOf</code></a></p>
+</td>
+</tr>
+<tr>
+<td>+<a href="#attribution">Attribution</a></td>
+<td><code>prov:Attribution</code></td>
+<td>
+<p>+<a title="had role" href="#attribution-had-role"><code>dcat:hadRole</code></a></p>
+<p>+<a title="agent" href="#attribution-agent"><code>prov:agent</code></a></p>
+</td>
+<td>
+</td>
+<td>
 </td>
 </tr>
 <tr>
@@ -32,34 +86,36 @@
 <td>
 </td>
 <td>
+<p>+<a title="contact point" href="#catalogue-contact-point"><code>dcat:contactPoint</code></a></p>
+<p>+<a title="theme / category" href="#catalogue-category"><code>dcat:theme</code></a></p>
 <p>+<a title="access rights" href="#catalogue-access-rights"><code>dct:accessRights</code></a></p>
 <p>+<a title="conforms to" href="#catalogue-conforms-to"><code>dct:conformsTo</code></a></p>
-<p>+<a title="contact point" href="#catalogue-contact-point"><code>dcat:contactPoint</code></a></p>
+<p>+<a title="reference system" href="#catalogue-reference-system"><code>dct:conformsTo</code></a></p>
 <p>+<a title="creation date" href="#catalogue-creation-date"><code>dct:created</code></a></p>
 <p>+<a title="identifier" href="#catalogue-identifier"><code>dct:identifier</code></a></p>
-<p>+<a title="qualified attribution" href="#catalogue-qualified-attribution"><code>prov:qualifiedAttribution</code></a></p>
-<p>+<a title="reference system" href="#catalogue-reference-system"><code>dct:conformsTo</code></a></p>
 <p>+<a title="rights holder" href="#catalogue-rights-holder"><code>dct:rightsHolder</code></a></p>
-<p>+<a title="temporal coverage" href="#catalogue-temporal-coverage"><code>dct:temporal</code></a></p>
-<p>+<a title="theme / category" href="#catalogue-category"><code>dcat:theme</code></a></p>
 <p>+<a title="topic category" href="#catalogue-topic-category"><code>dct:subject</code></a></p>
+<p>+<a title="temporal coverage" href="#catalogue-temporal-coverage"><code>dct:temporal</code></a></p>
+<p>+<a title="qualified attribution" href="#catalogue-qualified-attribution"><code>prov:qualifiedAttribution</code></a></p>
 <p>+<a title="was used by" href="#catalogue-was-used-by"><code>prov:wasUsedBy</code></a></p>
 </td>
 </tr>
 <tr>
-<td><a href="#dataset">Dataset</a></td>
-<td><code>dcat:Dataset</code></td>
+<td><a href="#catalogue-record">Catalogue Record</a></td>
+<td><code>dcat:CatalogRecord</code></td>
 <td>
 </td>
 <td>
 </td>
 <td>
-<p>+<a title="creation date" href="#dataset-creation-date"><code>dct:created</code></a></p>
-<p>+<a title="reference system" href="#dataset-reference-system"><code>dct:conformsTo</code></a></p>
-<p>+<a title="rights holder" href="#dataset-rights-holder"><code>dct:rightsHolder</code></a></p>
-<p>+<a title="spatial resolution as equivalent scale, angular distance, vertical distance" href="#dataset-spatial-resolution-general"><code>rdfs:comment</code></a></p>
-<p>+<a title="topic category" href="#dataset-topic-category"><code>dct:subject</code></a></p>
-<p>+<a title="was used by" href="#dataset-was-used-by"><code>prov:wasUsedBy</code></a></p>
+<p>+<a title="character encoding" href="#catalogue-record-character-encoding"><code>cnt:characterEncoding</code></a></p>
+<p>+<a title="contact point" href="#catalogue-record-contact-point"><code>dcat:contactPoint</code></a></p>
+<p>+<a title="creation date" href="#catalogue-record-creation-date"><code>dct:created</code></a></p>
+<p>+<a title="creator" href="#catalogue-record-creator"><code>dct:creator</code></a></p>
+<p>+<a title="identifier" href="#catalogue-record-identifier"><code>dct:identifier</code></a></p>
+<p>+<a title="publisher" href="#catalogue-record-publisher"><code>dct:publisher</code></a></p>
+<p>+<a title="rights holder" href="#catalogue-record-rights-holder"><code>dct:rightsHolder</code></a></p>
+<p>+<a title="qualified attribution" href="#catalogue-record-qualified-attribution"><code>prov:qualifiedAttribution</code></a></p>
 </td>
 </tr>
 <tr>
@@ -88,103 +144,6 @@
 </td>
 </tr>
 <tr>
-<td><a href="#distribution">Distribution</a></td>
-<td><code>dcat:Distribution</code></td>
-<td>
-</td>
-<td>
-</td>
-<td>
-<p>+<a title="access rights" href="#distribution-access-rights"><code>dct:accessRights</code></a></p>
-<p>+<a title="reference system" href="#distribution-reference-system"><code>dct:conformsTo</code></a></p>
-<p>+<a title="representation technique" href="#distribution-representation-technique"><code>adms:representationTechnique</code></a></p>
-<p>+<a title="spatial resolution as equivalent scale, angular distance, vertical distance" href="#distribution-spatial-resolution-general"><code>rdfs:comment</code></a></p>
-</td>
-</tr>
-<tr>
-<td><a href="#licence-document">Licence Document</a></td>
-<td><code>dct:LicenseDocument</code></td>
-<td>
-</td>
-<td>
-</td>
-<td>
-<p>+<a title="licence text" href="#licence-document-licence-text"><code>rdfs:label</code></a></p>
-</td>
-</tr>
-<tr>
-<td>+<a href="#activity">Activity</a></td>
-<td><code>prov:Activity</code></td>
-<td>
-<p>+<a title="generated" href="#activity-generated"><code>prov:generated</code></a></p>
-<p>+<a title="qualified association" href="#activity-qualified-association"><code>prov:qualifiedAssociation</code></a></p>
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>+<a href="#address-agent">Address (Agent)</a></td>
-<td><code>locn:Address</code></td>
-<td>
-</td>
-<td>
-<p>+<a title="administrative area" href="#address-agent-administrative-area"><code>locn:adminUnitL2</code></a></p>
-<p>+<a title="city" href="#address-agent-city"><code>locn:postName</code></a></p>
-<p>+<a title="country" href="#address-agent-country"><code>locn:adminUnitL1</code></a></p>
-<p>+<a title="postal code" href="#address-agent-postal-code"><code>locn:postCode</code></a></p>
-<p>+<a title="street address" href="#address-agent-street-address"><code>locn:thoroughfare</code></a></p>
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>+<a href="#address-kind">Address (Kind)</a></td>
-<td><code>vcard:Address</code></td>
-<td>
-</td>
-<td>
-<p>+<a title="administrative area" href="#address-kind-administrative-area"><code>vcard:region</code></a></p>
-<p>+<a title="city" href="#address-kind-city"><code>vcard:locality</code></a></p>
-<p>+<a title="country" href="#address-kind-country"><code>vcard:country-name</code></a></p>
-<p>+<a title="postal code" href="#address-kind-postal-code"><code>vcard:postal-code</code></a></p>
-<p>+<a title="street address" href="#address-kind-street-address"><code>vcard:street-address</code></a></p>
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td>+<a href="#attribution">Attribution</a></td>
-<td><code>prov:Attribution</code></td>
-<td>
-<p>+<a title="agent" href="#attribution-agent"><code>prov:agent</code></a></p>
-<p>+<a title="had role" href="#attribution-had-role"><code>dcat:hadRole</code></a></p>
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-<tr>
-<td><a href="#catalogue-record">Catalogue Record</a></td>
-<td><code>dcat:CatalogRecord</code></td>
-<td>
-</td>
-<td>
-</td>
-<td>
-<p>+<a title="character encoding" href="#catalogue-record-character-encoding"><code>cnt:characterEncoding</code></a></p>
-<p>+<a title="contact point" href="#catalogue-record-contact-point"><code>dcat:contactPoint</code></a></p>
-<p>+<a title="creation date" href="#catalogue-record-creation-date"><code>dct:created</code></a></p>
-<p>+<a title="creator" href="#catalogue-record-creator"><code>dct:creator</code></a></p>
-<p>+<a title="identifier" href="#catalogue-record-identifier"><code>dct:identifier</code></a></p>
-<p>+<a title="publisher" href="#catalogue-record-publisher"><code>dct:publisher</code></a></p>
-<p>+<a title="qualified attribution" href="#catalogue-record-qualified-attribution"><code>prov:qualifiedAttribution</code></a></p>
-<p>+<a title="rights holder" href="#catalogue-record-rights-holder"><code>dct:rightsHolder</code></a></p>
-</td>
-</tr>
-<tr>
 <td><a href="#data-service">Data Service</a></td>
 <td><code>dcat:DataService</code></td>
 <td>
@@ -193,27 +152,57 @@
 <p>+<a title="keyword / tag" href="#data-service-keyword"><code>dcat:keyword</code></a></p>
 </td>
 <td>
-<p>+<a title="conforms to" href="#data-service-conforms-to"><code>dct:conformsTo</code></a></p>
 <p>+<a title="contact point" href="#data-service-contact-point"><code>dcat:contactPoint</code></a></p>
+<p>+<a title="spatial resolution" href="#data-service-spatial-resolution"><code>dcat:spatialResolutionInMeters</code></a></p>
+<p>+<a title="temporal resolution" href="#data-service-temporal-resolution"><code>dcat:temporalResolution</code></a></p>
+<p>+<a title="theme / category" href="#data-service-category"><code>dcat:theme</code></a></p>
+<p>+<a title="conforms to" href="#data-service-conforms-to"><code>dct:conformsTo</code></a></p>
+<p>+<a title="reference system" href="#data-service-reference-system"><code>dct:conformsTo</code></a></p>
 <p>+<a title="creation date" href="#data-service-creation-date"><code>dct:created</code></a></p>
 <p>+<a title="creator" href="#data-service-creator"><code>dct:creator</code></a></p>
 <p>+<a title="identifier" href="#data-service-identifier"><code>dct:identifier</code></a></p>
 <p>+<a title="language" href="#data-service-language"><code>dct:language</code></a></p>
 <p>+<a title="publisher" href="#data-service-publisher"><code>dct:publisher</code></a></p>
-<p>+<a title="qualified attribution" href="#data-service-qualified-attribution"><code>prov:qualifiedAttribution</code></a></p>
-<p>+<a title="reference system" href="#data-service-reference-system"><code>dct:conformsTo</code></a></p>
 <p>+<a title="rights holder" href="#data-service-rights-holder"><code>dct:rightsHolder</code></a></p>
+<p>+<a title="spatial / geographical coverage" href="#data-service-spatial-coverage"><code>dct:spatial</code></a></p>
+<p>+<a title="topic category" href="#data-service-topic-category"><code>dct:subject</code></a></p>
+<p>+<a title="temporal coverage" href="#data-service-temporal-coverage"><code>dct:temporal</code></a></p>
 <p>+<a title="service category" href="#data-service-service-category"><code>dct:type</code></a></p>
 <p>+<a title="service type" href="#data-service-service-type"><code>dct:type</code></a></p>
-<p>+<a title="theme / category" href="#data-service-category"><code>dcat:theme</code></a></p>
-<p>+<a title="spatial / geographical coverage" href="#data-service-spatial-coverage"><code>dct:spatial</code></a></p>
-<p>+<a title="spatial resolution" href="#data-service-spatial-resolution"><code>dcat:spatialResolutionInMeters</code></a></p>
-<p>+<a title="spatial resolution as equivalent scale, angular distance, vertical distance" href="#data-service-spatial-resolution-general"><code>rdfs:comment</code></a></p>
-<p>+<a title="temporal coverage" href="#data-service-temporal-coverage"><code>dct:temporal</code></a></p>
-<p>+<a title="temporal resolution" href="#data-service-temporal-resolution"><code>dcat:temporalResolution</code></a></p>
-<p>+<a title="topic category" href="#data-service-topic-category"><code>dct:subject</code></a></p>
 <p>+<a title="type" href="#data-service-type"><code>dct:type</code></a></p>
+<p>+<a title="qualified attribution" href="#data-service-qualified-attribution"><code>prov:qualifiedAttribution</code></a></p>
 <p>+<a title="was used by" href="#data-service-was-used-by"><code>prov:wasUsedBy</code></a></p>
+<p>+<a title="spatial resolution as equivalent scale, angular distance, vertical distance" href="#data-service-spatial-resolution-general"><code>rdfs:comment</code></a></p>
+</td>
+</tr>
+<tr>
+<td><a href="#dataset">Dataset</a></td>
+<td><code>dcat:Dataset</code></td>
+<td>
+</td>
+<td>
+</td>
+<td>
+<p>+<a title="reference system" href="#dataset-reference-system"><code>dct:conformsTo</code></a></p>
+<p>+<a title="creation date" href="#dataset-creation-date"><code>dct:created</code></a></p>
+<p>+<a title="rights holder" href="#dataset-rights-holder"><code>dct:rightsHolder</code></a></p>
+<p>+<a title="topic category" href="#dataset-topic-category"><code>dct:subject</code></a></p>
+<p>+<a title="was used by" href="#dataset-was-used-by"><code>prov:wasUsedBy</code></a></p>
+<p>+<a title="spatial resolution as equivalent scale, angular distance, vertical distance" href="#dataset-spatial-resolution-general"><code>rdfs:comment</code></a></p>
+</td>
+</tr>
+<tr>
+<td><a href="#distribution">Distribution</a></td>
+<td><code>dcat:Distribution</code></td>
+<td>
+</td>
+<td>
+</td>
+<td>
+<p>+<a title="representation technique" href="#distribution-representation-technique"><code>adms:representationTechnique</code></a></p>
+<p>+<a title="access rights" href="#distribution-access-rights"><code>dct:accessRights</code></a></p>
+<p>+<a title="reference system" href="#distribution-reference-system"><code>dct:conformsTo</code></a></p>
+<p>+<a title="spatial resolution as equivalent scale, angular distance, vertical distance" href="#distribution-spatial-resolution-general"><code>rdfs:comment</code></a></p>
 </td>
 </tr>
 <tr>
@@ -234,14 +223,25 @@
 <td>
 </td>
 <td>
-<p>+<a title="email" href="#kind-email"><code>vcard:hasEmail</code></a></p>
 <p>+<a title="name" href="#kind-name"><code>vcard:fn</code></a></p>
+<p>+<a title="email" href="#kind-email"><code>vcard:hasEmail</code></a></p>
 <p>+<a title="URL" href="#kind-url"><code>vcard:hasURL</code></a></p>
 </td>
 <td>
 <p>+<a title="address" href="#kind-address"><code>vcard:hasAddress</code></a></p>
-<p>+<a title="affiliation" href="#kind-affiliation"><code>vcard:organization-name</code></a></p>
 <p>+<a title="phone" href="#kind-phone"><code>vcard:hasTelephone</code></a></p>
+<p>+<a title="affiliation" href="#kind-affiliation"><code>vcard:organization-name</code></a></p>
+</td>
+</tr>
+<tr>
+<td><a href="#licence-document">Licence Document</a></td>
+<td><code>dct:LicenseDocument</code></td>
+<td>
+</td>
+<td>
+</td>
+<td>
+<p>+<a title="licence text" href="#licence-document-licence-text"><code>rdfs:label</code></a></p>
 </td>
 </tr>
 <tr>
@@ -252,9 +252,31 @@
 <td>
 </td>
 <td>
-<p>+<a title="gazetteer" href="#location-gazetteer"><code>skos:inScheme</code></a></p>
 <p>+<a title="geographic identifier" href="#location-geographic-identifier"><code>dct:identifier</code></a></p>
+<p>+<a title="gazetteer" href="#location-gazetteer"><code>skos:inScheme</code></a></p>
 <p>+<a title="geographic name" href="#location-geographic-name"><code>skos:prefLabel</code></a></p>
+</td>
+</tr>
+<tr>
+<td><a href="#provenance-statement">Provenance Statement</a></td>
+<td><code>dct:ProvenanceStatement</code></td>
+<td>
+</td>
+<td>
+<p>+<a title="provenance statement text" href="#provenance-statement-provenance-statement-text"><code>rdfs:label</code></a></p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td><a href="#rights-statement">Rights statement</a></td>
+<td><code>dct:RightsStatement</code></td>
+<td>
+</td>
+<td>
+<p>+<a title="rights statement text" href="#rights-statement-rights-statement-text"><code>rdfs:label</code></a></p>
+</td>
+<td>
 </td>
 </tr>
 <tr>
@@ -265,15 +287,13 @@
 <td>
 <p>+<a title="description" href="#standard-description"><code>dct:description</code></a></p>
 <p>+<a title="identifier" href="#standard-identifier"><code>dct:identifier</code></a></p>
-<p>+<a title="reference register" href="#standard-reference-register"><code>skos:inScheme</code></a></p>
 <p>+<a title="release date" href="#standard-release-date"><code>dct:issued</code></a></p>
 <p>+<a title="title" href="#standard-title"><code>dct:title</code></a></p>
 <p>+<a title="type" href="#standard-type"><code>dct:type</code></a></p>
 <p>+<a title="version" href="#standard-version"><code>owl:versionInfo</code></a></p>
+<p>+<a title="reference register" href="#standard-reference-register"><code>skos:inScheme</code></a></p>
 </td>
 <td>
-<p>+<a title="creation date" href="#standard-creation-date"><code>dct:created</code></a></p>
-<p>+<a title="update / modification date" href="#standard-modification-date"><code>dct:modified</code></a></p>
 <p>+<a title="creation date" href="#standard-creation-date"><code>dct:created</code></a></p>
 <p>+<a title="update / modification date" href="#standard-modification-date"><code>dct:modified</code></a></p>
 </td>
