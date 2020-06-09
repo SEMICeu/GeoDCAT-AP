@@ -6,8 +6,13 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] a prov:Activity ;
-  prov:generated [ dct:description "See the referenced specification"@en ;
+  prov:generated [ a prov:Entity ;
+      dct:description "See the referenced specification"@en ;
       dct:type <http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated> ] ;
-  prov:qualifiedAssociation [ prov:hadPlan [ prov:wasDerivedFrom [ dct:issued "2010-12-08"^^xsd:date ;
+  prov:qualifiedAssociation [ a prov:Association ;
+      prov:hadPlan [ a prov:Plan ;
+          prov:wasDerivedFrom [ a dct:Standard,
+                prov:Entity ;
+              dct:issued "2010-12-08"^^xsd:date ;
               dct:title "Commission Regulation (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services"@en ] ] ] .
 
