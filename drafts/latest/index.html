@@ -320,7 +320,13 @@ The views expressed are purely those of the author and may not in any circumstan
 <p>An option would be to group classes into specific sections - mandatory classes, recommended classes, optional classes - and to list them in alphabetical order, as done in <a class="no-sectionRef" href="#classes"></a>.</p>
 </aside>
 
-<p>A quick reference table of properties per class is included in <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a>. The list of included properties contains all the properties in [[DCAT-AP-20191120]], plus a selection of properties from [[VOCAB-DCAT-2]] and [[DCTERMS]], on which GeoDCAT-AP expresses additional constraints or on which GeoDCAT-AP wants to emphasise their usage. A property which is not mentioned but would be applicable for a class according to [[VOCAB-DCAT-2]] is considered out of scope for GeoDCAT-AP.</p>
+<p>A quick reference table of properties per class is included in <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a>. The list of included properties contains all the properties in [[DCAT-AP-20191120]], plus a selection of properties from [[VOCAB-DCAT-2]] and [[DCTERMS]], on which GeoDCAT-AP expresses additional constraints or on which GeoDCAT-AP wants to emphasise their usage.
+<!--
+A property which is not mentioned but would be applicable for a class according to [[VOCAB-DCAT-2]] is considered out of scope for GeoDCAT-AP.
+-->
+</p>
+
+<p>Examples on the use of these properties, encoded in [[Turtle]], are included in the relevant sections. The examples are also available in [[Turtle]] and RDF/XML [[RDF-SYNTAX-GRAMMAR]] from a <a href="./examples/">separate folder</a>.</p>
 
 <!-- Catalogue -->
 
@@ -1249,6 +1255,39 @@ The views expressed are purely those of the author and may not in any circumstan
 
 <aside class="example" id="ex-provenance-statement" title="Provenance Statement">
 <pre data-include-format="text" data-include="./examples/provenance-statement.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
+<!-- Media Type -->
+
+<section id="properties-for-media-type">
+
+<h3>Media Type</h3>
+
+<section id="recommended-properties-for-media-type">
+
+<h4>Recommended property for Media Type</h4>
+
+<aside class="note">
+<p>The following property is not included in [[DCAT-AP-20191120]]:</p>
+<ul>
+<li>+<a href="#media-type-label">label</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-media-type.html"></div>
+
+</section>
+
+<section id="examples-for-media-type">
+
+<h4>Examples for Media Type</h4>
+
+<aside class="example" id="ex-media-type" title="Media Type">
+<pre data-include-format="text" data-include="./examples/media-type.ttl"></pre>
 </aside>
 
 </section>

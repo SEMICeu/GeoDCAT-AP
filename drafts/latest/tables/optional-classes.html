@@ -166,7 +166,7 @@
 <a href="#properties-for-kind">Kind</a>
 </td>
 <td>
-<p>A description following the vCard specification, e.g. to provide telephone number and e-mail address for a contact point. Note that the class Kind is the parent class for the four explicit types of vCards (Individual, Organization, Location, Group).</p>
+<p>A description following the [[VCARD-RDF]] specification, e.g. to provide telephone number and e-mail address for a contact point. Note that the class <code>vcard:Kind</code> is the parent class for the four explicit types of vCards (<code>vcard:Individual</code>, <code>vcard:Organization</code>, <code>vcard:Location</vcard>, <code>vcard:Group</code>).</p>
 </td>
 <td>
 <p><code>vcard:Kind</code></p>
@@ -194,7 +194,11 @@
 <a href="#properties-for-location">Location</a>
 </td>
 <td>
-<p>A spatial region or named place. It can be represented using a controlled vocabulary or with geographic coordinates. In the latter case, the use of the Core Location Vocabulary [[CLV]] is recommended, following the approach described in the [[GeoDCAT-AP]] specification.</p>
+<p>A spatial region or named place. It can be represented using a controlled vocabulary or with geographic coordinates.
+<!--
+In the latter case, the use of the Core Location Vocabulary [[CLV]] is recommended, following the approach described in the [[GeoDCAT-AP]] specification.
+-->
+</p>
 </td>
 <td>
 <p><code>dct:Location</code></p>
@@ -205,10 +209,10 @@
 </tr>
 <tr class="class optional" id="media-type">
 <td>
-<p>Media type</p>
+<p><a href="#properties-for-media-type">Media type</a></p>
 </td>
 <td>
-<p>A media type, e.g. the format of a computer file</p>
+<p>A media type, e.g. the format of a computer file.</p>
 </td>
 <td>
 <p><code>dct:MediaType</code></p>

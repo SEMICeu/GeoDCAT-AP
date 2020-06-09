@@ -20,10 +20,14 @@
   xmlns:schema    = "http://schema.org/" 
   xmlns:skos      = "http://www.w3.org/2004/02/skos/core#" 
   xmlns:spdx      = "http://spdx.org/rdf/terms#" 
-  xmlns:time      = "http://www.w3.org/2006/time#" 
+  xmlns:time      = "http://www.w3.org/2006/time#"
+  xmlns:vann      = "http://purl.org/vocab/vann/" 
   xmlns:vcard     = "http://www.w3.org/2006/vcard/ns#"
+  xmlns:voaf      = "http://purl.org/vocommons/voaf#"
   xmlns:xsd       = "http://www.w3.org/2001/XMLSchema#"
 >
+
+<!-- Spatial resolution -->
 
   <rdf:Description rdf:about="http://data.europa.eu/930/spatialResolutionAsScale">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/> 

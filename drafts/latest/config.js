@@ -203,7 +203,7 @@ var respecConfig = {
       },
       "DCAT-AP-IG":{
         "href":"https://joinup.ec.europa.eu/solution/dcat-application-profile-implementation-guidelines",
-        "title":"DCAT application profile implementation guidelines",
+        "title":"Joinup. DCAT application profile implementation guidelines",
         "publisher":"European Commission",
 //        "date":"2016"
       },
@@ -256,7 +256,7 @@ var respecConfig = {
       },
       "GeoDCAT-ACV":{
         "href":"https://joinup.ec.europa.eu/node/148245/",
-        "title":"Joinup - GeoDCAT-AP: Alignment of controlled vocabularies",
+        "title":"Joinup. GeoDCAT-AP: Alignment of controlled vocabularies",
 //        "authors":["Andrea Perego"],
         "publisher":"European Commission",
 //        "date":"2015"
@@ -619,7 +619,7 @@ var respecConfig = {
        },
       "GeoDCAT-AP-RPR": {
         "href":"https://joinup.ec.europa.eu/discussion/geodcat-ap-how-express-different-responsible-party-roles-supported-iso-19115-inspire",
-        "title":"Joinup. DCAT application profile for data portals in Europe.  GeoDCAT-AP – How to express the different responsible party roles supported in ISO 19115 / INSPIRE",
+        "title":"Joinup. DCAT application profile for data portals in Europe. GeoDCAT-AP – How to express the different responsible party roles supported in ISO 19115 / INSPIRE",
         "publisher":"European Commission"
       },
       "VOCAB-DCAT-QA": {
