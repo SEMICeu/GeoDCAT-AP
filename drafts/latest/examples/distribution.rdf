@@ -23,9 +23,7 @@
       </dct:LicenseDocument>
     </dct:license>
     <adms:representationTechnique rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode/grid"/>
-    <dct:format rdf:parseType="Resource">
-      <rdfs:label>GTiff</rdfs:label>
-    </dct:format>
+    <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/TIFF"/>
   </dcat:Distribution>
 
 </rdf:RDF>
