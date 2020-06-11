@@ -11,6 +11,9 @@
   $props[]   = 'optional-properties-for-';
   $props[]   = 'deprecated-properties-for-';
 
+  $cextnr = 0;
+  $pextnr = 0;
+
   foreach ($classes as $k => $v) {
     if (file_exists($folder . $v)) {
       $doc = new DOMDocument();
@@ -34,6 +37,9 @@
 	$c[$cid]['uri'] = $curi;
 	$c[$cid]['prop'] = array();
 
+	if (in_array('ap-ext', $ctypes) && !in_array('deprecated', $ctypes)) {
+          $cextnr++;
+	}
 	if (in_array('deprecated', $ctypes)) {
 	  $c[$cid]['replaced-by-uri'] = ltrim(trim($nodes[$ck]->getElementsByTagName('td')->item(3)->nodeValue),'+');
 	  $c[$cid]['replaced-by-href'] = '';
@@ -41,6 +47,11 @@
             $c[$cid]['replaced-by-href'] = $nodes[$ck]->getElementsByTagName('td')->item(3)->getElementsByTagName('a')->item(0)->getAttribute('href');
           }	
 	  $c[$cid]['deprecated-in'] = trim($nodes[$ck]->getElementsByTagName('td')->item(4)->nodeValue);
+
+	  $deprecated[$cid] = $c[$cid];
+	  $deprecated[$cid]['domain-name'] = '';
+	  $deprecated[$cid]['domain-uri'] = '';
+	  $deprecated[$cid]['domain-id'] = '';
 	}
 
 	foreach ($props as $pk => $pv) {
@@ -84,11 +95,18 @@
               if (in_array('optional', $p[$pid]['types'])) {
                 $c[$cid]['prop-optional'][] = $p[$pid];
               }
-              if (in_array('deprecated', $p[$pid]['types'])) {
-                $c[$cid]['prop-deprecated'][] = $p[$pid];
-              }
               if (in_array('ap-ext', $p[$pid]['types'])) {
                 $c[$cid]['prop-ap-ext'][] = $p[$pid];
+              }
+              if (in_array('deprecated', $p[$pid]['types'])) {
+                $c[$cid]['prop-deprecated'][] = $p[$pid];
+	        $deprecated[$pid] = $p[$pid];
+	        $deprecated[$pid]['domain-name'] = $c[$cid]['name'];
+	        $deprecated[$pid]['domain-uri'] = $c[$cid]['uri'];
+	        $deprecated[$pid]['domain-id'] = $cid;
+              }
+              if (in_array('ap-ext', $p[$pid]['types']) && !in_array('deprecated', $p[$pid]['types'])) {
+                $pextnr++;
               }
 	    }
 	  }
@@ -115,6 +133,9 @@
     if (isset($c[$k]['prop-deprecated'])) {
       array_multisort(array_column($c[$k]['prop-deprecated'], 'name'), $c[$k]['prop-deprecated']);
     } 
+    if (isset($deprecated)) {
+      array_multisort(array_column($deprecated, 'name'), $deprecated);
+    } 
   }
 
 //  foreach ($c as $k => $v) {
@@ -122,6 +143,8 @@
 //  }
 //  exit;
 //print_r($c);
+//exit; 
+//print_r($deprecated);
 //exit; 
 
   $tables[0]['id'] = 'quick-reference-of-classes-and-properties';
@@ -145,6 +168,9 @@
   foreach ($tables as $tk => $tv) {
 
   $html  = '';
+  if ($tv['type'] == 'ap-ext') {
+    $html .= '<p>This version of GeoDCAT-AP extends [[DCAT-AP-20191120]] with ' . $cextnr . ' additional classes and ' . $pextnr . ' additional properties, listed in the following table.</p>' . "\n\n";
+  }
   $html .= '<table class="simple" id="table-' . $tv['id'] . '">' . "\n";
   $html .= '<thead>' . "\n";
   $html .= '<tr>' . "\n";
