@@ -985,6 +985,8 @@ A property which is not mentioned but would be applicable for a class according 
 <p>This class is not included in [[DCAT-AP-20191120]].</p>
 </aside>
 
+<p>The use of this class in GeoDCAT-AP is illustrated in <a class="no-sectionRef" href="#conformance-test-results"></a>.</p>
+
 <section id="mandatory-properties-for-activity">
 
 <h4>Mandatory properties for Activity</h4>
@@ -1005,7 +1007,9 @@ A property which is not mentioned but would be applicable for a class according 
 
 <h4>Examples for Activity</h4>
 
-<aside class="example" id="ex-activity" title="Activity">
+<p><a href="#ex-activity"></a> shows the use of class <code>prov:Activity</code> to specify the results of a testing activity assessing the conformance of a given resource against a given specification - as illustrated in <a class="no-sectionRef" href="#conformance-test-results"></a>.</p>
+
+<aside class="example" id="ex-activity" title="A testing activity">
 <pre data-include-format="text" data-include="./examples/activity.ttl"></pre>
 </aside>
 
@@ -1104,6 +1108,8 @@ A property which is not mentioned but would be applicable for a class according 
 <aside class="note">
 <p>This class is not included in [[DCAT-AP-20191120]].</p>
 </aside>
+
+<p>The use of this class in GeoDCAT-AP is illustrated in <a class="no-sectionRef" href="#agent-roles"></a>.</p>
 
 <section id="mandatory-properties-for-attribution">
 
@@ -1429,6 +1435,9 @@ A property which is not mentioned but would be applicable for a class according 
 
 <p>In the table below, a number of properties are listed with controlled vocabularies that MUST be used for the listed properties. The declaration of the following controlled vocabularies as mandatory ensures a minimum level of interoperability.</p>
 
+<p>Compared with [[DCAT-AP-20191120]], GeoDCAT-AP makes use of additional controlled vocabularies mandated by [[INSPIRE-MD-REG]], and operated by the INSPIRE Registry - with the only exceptions of the coordinate reference systems register maintained by OGC [[OGC-EPSG]].</p>
+<p>For two of these controlled vocabularies, namely the INSPIRE spatial data themes [[INSPIRE-THEMES]] and the ISO topic categories [[INSPIRE-TC]], the GeoDCAT-AP Working Group has defined a set of harmonised mappings to the EU Vocabularies Data Themes [[EUV-THEMES]], in order to facilitate the identification of the relevant theme in [[EUV-THEMES]] for geospatial metadata. The status of this work, along with links to a machine readable representation of the mappings, is documented on a dedicated page in Joinup [[GeoDCAT-ACV]].</p>
+
 <div data-include-format="html" data-include-replace="true" data-include="./tables/controlled-vocabularies-to-be-used.html"></div>
 
 </section>
@@ -1541,11 +1550,11 @@ A property which is not mentioned but would be applicable for a class according 
 <section id="agent-roles" class="informative">
 
 <h2>Agent Roles</h2>
-
+<!--
 <aside class="ednote">
 <p>To be revised</p>
 </aside>
-
+-->
 <p>GeoDCAT-AP supports the 11 agent roles defined in [[INSPIRE-MD-REG]] and [[ISO-19115]] by using two different approaches. More precisely, GeoDCAT-AP makes use of the relevant properties from [[DCAT-AP-20191120]] and [[DCTERMS]], which overall cover 4 of the relevant roles - namely, <code>dcat:contactPoint</code>, <code>dct:creator</code>, <code>dct:publisher</code>, and <code>dct:rightsHolder</code>. Moreover, for the remaining 7 agent roles, GeoDCAT-AP makes use of [[PROV-O]], specifying agent roles via a &ldquo;qualified attribution&rdquo; (<code>prov:qualifiedAttribution</code>). More precisely, the relevant Agent is specified via property <code>prov:agent</code>, whereas the role is specified with property <code>dcat:hasRole</code>, which takes as value one of the responsible party roles defined in [[INSPIRE-MD-REG]] and [[ISO-19115]], and included in the relevant code list operated by the INSPIRE Registry [[INSPIRE-RPR]]. This pattern is illustrated in <a href="#ex-attribution"></a>.</p>
 <p>It is important to note that, following [[INSPIRE-MD-REG]] and [[ISO-19115]], in GeoDCAT-AP all these agent roles can be specified on Catalogues, Catalogue Records, Datasets, and Data Services.</p>
 <p>More details on these solutions are available in <a class="no-sectionRef" href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"></a>.</p>
@@ -1565,10 +1574,15 @@ A property which is not mentioned but would be applicable for a class according 
 <section id="conformance-test-results" class="informative">
 
 <h2>Conformance Test Results</h2>
-
+<!--
 <aside class="ednote">
 <p>TBD</p>
 </aside>
+-->
+<p>Following [[INSPIRE-MD-REG]] and [[ISO-19115]], GeoDCAT-AP supports the specification of test results to assess the degree of conformity of a resource (i.e., a Catalogue, a Dataset, a Data Service) with a given specification (e.g., a standard, a set of implementing rules, a set of data quality or interoperability criteria).</p>
+<p>For this purpose, GeoDCAT-AP makes use of two different but not mutually exclusive approaches. More precisely, property <code>dct:conformsTo</code> is used when the test result states that a resource is conformant with a given specification. The more general approach is based on [[PROV-O]], and it specifies conformance test results as a testing activity (<code>prov:Activity</code>) that generates a result (specified with property <code>prov:generated</code>), corresponding to one of the degrees of conformity defined in [[INSPIRE-MD-REG]], and available from the INSPIRE Registry [[INSPIRE-DoC]]. The specification against which the testing activity is carried out is specified via a &ldquo;qualified association&rdquo; (<code>prov:qualifiedAssociation</code>), linked to a &ldquo;plan&rdquo; (<code>prov:hadPlan</code>) derived from (<code>prov:wasDerivedFrom</code>) the specification itself.</p> 
+<p>This pattern is illustrated in <a href="#ex-activity"></a>.</p>
+<p>More details on these solutions are available in <a class="no-sectionRef" href="#conformity-and-data-quality---not-in-iso19115-core"></a>.</p>
 
 </section>
 

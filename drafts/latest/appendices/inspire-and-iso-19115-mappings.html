@@ -1718,8 +1718,8 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 </tbody>
 </table>
 
-<p>For conformance with [[DCAT-AP-20191120]], GeoDCAT-AP records MUST also include keywords from the MDR Data Theme Named Authority List [[EUV-THEMES]].</p>
-<p>In order to ensure consistency, the relevant MDR Data Theme keywords SHOULD be selected based on mappings with the controlled vocabularies used in INSPIRE / ISO 19115 metadata.</p>
+<p>For conformance with [[DCAT-AP-20191120]], GeoDCAT-AP records MUST also include keywords from the EU Vocabularies Data Theme Named Authority List [[EUV-THEMES]].</p>
+<p>In order to ensure consistency, the relevant EU Vocabularies Data Theme keywords SHOULD be selected based on mappings with the controlled vocabularies used in INSPIRE / ISO 19115 metadata.</p>
 
 <aside class="note">
 <p>The GeoDCAT-AP WG has defined a set of harmonised mappings between the relevant vocabularies. The status of this work, and links to a machine readable representation of the mappings, is documented on a dedicated page in Joinup [[?GeoDCAT-ACV]].</p>
@@ -3295,10 +3295,10 @@ prov:wasUsedBy [
 <h2>Maintenance information - *not in ISO 19115 core</h2>
 
 <p>In [[ISO-19115]], element “Maintenance information” is meant mainly to describe how frequently a resource is updated.</p>
-<p>[[VOCAB-DCAT-2]] and [[DCAT-AP-20191120]], the update frequency is expressed through <code>dct:accrualPeriodicity</code>, with the frequency codes defined in the Dublin Core Collection Description Frequency Vocabulary [[?CLD-FREQ]], which can be partially mapped to the ones used in [[ISO-19115]], as shown in the following table (the missing alignments are in bold). A similar mapping was added for the MDR Frequency Named Authority List [[EUV-FREQ]].</p>
+<p>[[VOCAB-DCAT-2]] and [[DCAT-AP-20191120]], the update frequency is expressed through <code>dct:accrualPeriodicity</code>, with the frequency codes defined in the Dublin Core Collection Description Frequency Vocabulary [[?CLD-FREQ]], which can be partially mapped to the ones used in [[ISO-19115]], as shown in the following table (the missing alignments are in bold). A similar mapping was added for the EU Vocabularies Frequency Named Authority List [[EUV-FREQ]].</p>
 <p>The [[ISO-19115]] code list of maintenance frequency codes might be in the future available as a URI register from the INSPIRE Registry.</p>
-<p>Based on this, maintenance frequency is modelled in GeoDCAT-AP by using <code>dct:accrualPeriodicity</code> with the MDR Frequency Named Authority List [[EUV-FREQ]].</p>
-<p>For the frequency codes not covered by the MDR Frequency code list, the approach will be as follows:</p>
+<p>Based on this, maintenance frequency is modelled in GeoDCAT-AP by using <code>dct:accrualPeriodicity</code> with the EU Vocabularies Frequency Named Authority List [[EUV-FREQ]].</p>
+<p>For the frequency codes not covered by the EU Vocabularies Frequency code list, the approach will be as follows:</p>
 <ul>
 <li><p>In the core mapping profile of GeoDCAT-AP these codes will be ignored.</p></li>
 <li><p>The extended mapping profile of GeoDCAT-AP will use the code list of ISO maintenance frequency codes operated by the INSPIRE Registry.</p></li>
@@ -3313,7 +3313,7 @@ prov:wasUsedBy [
 <tr>
 <th>ISO 19115 - MD_MaintenanceFrequencyCode</th>
 <th>Dublin Core Collection Description Frequency Vocabulary [[[[?CLD-FREQ]]</th>
-<th>MDR Frequency Named Authority List [[EUV-FREQ]]</th>
+<th>EU Vocabularies Frequency Named Authority List [[EUV-FREQ]]</th>
 </tr>
 </thead>
 <tbody>
