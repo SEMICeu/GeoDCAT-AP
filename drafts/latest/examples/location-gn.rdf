@@ -8,21 +8,12 @@
 
   <dct:Location>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <dct:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-      202
-    </dct:identifier>
-    <skos:prefLabel xml:lang="en">
-      Sub-Saharan Africa
-    </skos:prefLabel>
+    <dct:identifier>202</dct:identifier>
+    <skos:prefLabel xml:lang="en">Sub-Saharan Africa</skos:prefLabel>
     <skos:inScheme>
       <skos:ConceptScheme>
-        <dct:title xml:lang="en">
-          UNSD - Methodology - Standard country or area codes 
-          for statistical use (M49)
-        </dct:title>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">
-          2018-11-16T00:01:27+01:00
-        </dct:issued>
+        <dct:title xml:lang="en">UNSD - Methodology - Standard country or area codes for statistical use (M49)</dct:title>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-16T00:01:27+01:00</dct:issued>
       </skos:ConceptScheme>
     </skos:inScheme>
   </dct:Location>

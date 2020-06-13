@@ -7,17 +7,12 @@
 >
 
   <prov:Activity>
+    <prov:used rdf:resource="https://some.site/resource/1234567890"/>
     <prov:qualifiedAssociation>
       <prov:Association>
         <prov:hadPlan>
           <prov:Plan>
-            <prov:wasDerivedFrom>
-              <prov:Entity>
-                <rdf:type rdf:resource="http://purl.org/dc/terms/Standard"/>
-                <dct:title xml:lang="en">Commission Regulation (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services</dct:title>
-                <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-12-08</dct:issued>
-              </prov:Entity>
-            </prov:wasDerivedFrom>
+            <prov:wasDerivedFrom rdf:resource="http://data.europa.eu/eli/reg/2010/1089"/>
           </prov:Plan>
         </prov:hadPlan>
       </prov:Association>
@@ -29,5 +24,17 @@
       </prov:Entity>
     </prov:generated>
   </prov:Activity>
+
+  <rdf:Description rdf:about="http://data.europa.eu/eli/reg/2010/1089">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/Standard"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <dct:title xml:lang="en">
+      Commission Regulation (EU) No 1089/2010 of 23 November 2010 
+      implementing Directive 2007/2/EC of the European Parliament 
+      and of the Council as regards interoperability of spatial 
+      data sets and services
+    </dct:title>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-12-08</dct:issued>
+  </rdf:Description>
 
 </rdf:RDF>

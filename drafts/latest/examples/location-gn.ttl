@@ -7,18 +7,9 @@
 
 [] a dct:Location,
     skos:Concept ;
-  dct:identifier """
-    202
-  """^^xsd:string ;
+  dct:identifier "202" ;
   skos:inScheme [ a skos:ConceptScheme ;
-      dct:issued """
-      2018-11-16T00:01:27+01:00
-    """^^xsd:dateTime ;
-      dct:title """
-      UNSD - Methodology - Standard country or area codes 
-      for statistical use (M49)
-    """@en ] ;
-  skos:prefLabel """
-    Sub-Saharan Africa
-  """@en .
+      dct:issued "2018-11-16T00:01:27+01:00"^^xsd:dateTime ;
+      dct:title "UNSD - Methodology - Standard country or area codes for statistical use (M49)"@en ] ;
+  skos:prefLabel "Sub-Saharan Africa"@en .
 

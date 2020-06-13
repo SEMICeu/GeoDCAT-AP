@@ -296,6 +296,11 @@ var respecConfig = {
         "publisher":"19th International Conference on Information Integration and Web-based Applications & Services (iiWAS'17). Salzburg, Austria, 4-6 Dec 2017 ",
         "date": "2017"
       },
+      "INSPIRE-CAU": {
+        "href":"http://inspire.ec.europa.eu/metadata-codelist/ConditionsApplyingToAccessAndUse",
+        "title":"INSPIRE Registry: Conditions applying to access and use",
+        "publisher":"European Commission"
+      },
       "INSPIRE-DC": {
         "href":"https://inspire.ec.europa.eu/reports/ImplementingRules/metadata/MD_IR_and_DC_state%20of%20progress.pdf",
         "title":"State of progress in the development of guidelines to express elements of the INSPIRE metadata implementing rules using ISO 15836 (Dublin core)",
@@ -317,7 +322,7 @@ var respecConfig = {
         "date":"25 April 2007"
       },
       "INSPIRE-GLOSSARY": {
-        "href":"http://inspire.ec.europa.eu/glossary/",
+        "href":"http://inspire.ec.europa.eu/glossary",
         "title":"INSPIRE Glossary",
         "publisher":"European Commission"
       },
@@ -328,7 +333,7 @@ var respecConfig = {
         "date":"8 December 2010"
       },
       "INSPIRE-LPA": {
-        "href":"http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/",
+        "href":"http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess",
         "title":"INSPIRE Registry: Limitations on public access",
         "publisher":"European Commission"
       },
@@ -339,7 +344,7 @@ var respecConfig = {
         "date":"4 December 2008"
       },
       "INSPIRE-MT": {
-        "href":"http://inspire.ec.europa.eu/media-types/",
+        "href":"http://inspire.ec.europa.eu/media-types",
         "title":"INSPIRE Media Type Register",
 //        "authors":["European Commission"],
         "publisher":"European Commission",
@@ -353,42 +358,42 @@ var respecConfig = {
         "date":"7 November 2011"
       },
       "INSPIRE-DoC": {
-        "href":"http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/",
+        "href":"http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity",
         "title":"INSPIRE Registry: Degrees of conformity",
         "publisher":"European Commission"
       },
       "INSPIRE-RPR": {
-        "href":"http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/",
+        "href":"http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole",
         "title":"INSPIRE Registry: Responsible party roles",
         "publisher":"European Commission"
       },
       "INSPIRE-SDSC": {
-        "href":"http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/",
+        "href":"http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory",
         "title":"INSPIRE Registry: Classification of spatial data services",
         "publisher":"European Commission"
       },
       "INSPIRE-THEMES": {
-        "href":"http://inspire.ec.europa.eu/theme/",
+        "href":"http://inspire.ec.europa.eu/theme",
         "title":"INSPIRE Registry: INSPIRE themes",
         "publisher":"European Commission"
       },
       "INSPIRE-TC": {
-        "href":"http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/",
+        "href":"http://inspire.ec.europa.eu/metadata-codelist/TopicCategory",
         "title":"INSPIRE Registry: Topic categories in accordance with EN ISO 19115",
         "publisher":"European Commission"
       },
       "INSPIRE-SDST": {
-        "href":"http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/",
+        "href":"http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType",
         "title":"INSPIRE Registry: Spatial data service types",
         "publisher":"European Commission"
       },
       "INSPIRE-RPR": {
-        "href":"http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/",
+        "href":"http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole",
         "title":"INSPIRE Registry: Responsible party roles",
         "publisher":"European Commission"
       },
       "INSPIRE-RT": {
-        "href":"http://inspire.ec.europa.eu/metadata-codelist/ResourceType/",
+        "href":"http://inspire.ec.europa.eu/metadata-codelist/ResourceType",
         "title":"INSPIRE Registry: Resource types",
         "publisher":"European Commission"
       },

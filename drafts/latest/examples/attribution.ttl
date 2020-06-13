@@ -7,15 +7,18 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-[] a prov:Attribution ;
-  dcat:hadRole <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact> ;
-  prov:agent [ a foaf:Organization ;
-      locn:address [ a locn:Address ;
-          locn:adminUnitL1 "Denmark" ;
-          locn:adminUnitL2 "K" ;
-          locn:postCode "1050" ;
-          locn:postName "Copenhagen" ;
-          locn:thoroughfare "Kongens Nytorv 6" ] ;
-      foaf:mbox <mailto:sdi@eea.europa.eu> ;
-      foaf:name "European Environment Agency"@en ] .
+<https://some.site/resource/1234567890> prov:qualifiedAttribution [ a prov:Attribution ;
+      dcat:hadRole <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact> ;
+      prov:agent <http://publications.europa.eu/resource/authority/corporate-body/EEA> ] .
+
+<http://publications.europa.eu/resource/authority/corporate-body/EEA> a prov:Organization,
+    foaf:Organization ;
+  locn:address [ a locn:Address ;
+      locn:adminUnitL1 "Denmark" ;
+      locn:adminUnitL2 "K" ;
+      locn:postCode "1050" ;
+      locn:postName "Copenhagen" ;
+      locn:thoroughfare "Kongens Nytorv 6" ] ;
+  foaf:mbox <mailto:sdi@eea.europa.eu> ;
+  foaf:name "European Environment Agency"@en .
 
