@@ -8,7 +8,7 @@
   xmlns:xsd       = "http://www.w3.org/2001/XMLSchema#"
 >
 
-  <rdf:Description rdf:about="https://some.site/resource/1234567890">
+  <rdf:Description rdf:about="https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00">
     <prov:qualifiedAttribution>
       <prov:Attribution>
         <prov:agent rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/EEA"/>

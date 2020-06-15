@@ -22,5 +22,5 @@
   prov:qualifiedAssociation [ a prov:Association ;
       prov:hadPlan [ a prov:Plan ;
           prov:wasDerivedFrom <http://data.europa.eu/eli/reg/2010/1089> ] ] ;
-  prov:used <https://some.site/resource/1234567890> .
+  prov:used <https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00> .
 

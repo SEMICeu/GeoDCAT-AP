@@ -7,7 +7,7 @@
 >
 
   <prov:Activity>
-    <prov:used rdf:resource="https://some.site/resource/1234567890"/>
+    <prov:used rdf:resource="https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00"/>
     <prov:qualifiedAssociation>
       <prov:Association>
         <prov:hadPlan>

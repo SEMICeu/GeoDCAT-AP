@@ -13,8 +13,9 @@
   xmlns:xsd       = "http://www.w3.org/2001/XMLSchema#"
 >
 
-  <rdf:Description>
+  <rdf:Description rdf:about="https://some.catalogue/record/af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb">
     <rdf:type rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    <foaf:primaryTopic rdf:resource="https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00"/>
     <dct:conformsTo rdf:resource="http://data.europa.eu/930/"/>
     <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-03-25</dct:modified>

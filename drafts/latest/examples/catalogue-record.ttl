@@ -11,7 +11,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-[] a dcat:CatalogRecord ;
+<https://some.catalogue/record/af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb> a dcat:CatalogRecord ;
   dct:conformsTo <http://data.europa.eu/930/> ;
   dct:identifier "af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb"^^xsd:string ;
   dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
@@ -38,5 +38,6 @@
               locn:postName "Copenhagen" ;
               locn:thoroughfare "Kongens Nytorv 6" ] ;
           foaf:mbox <mailto:sdi@eea.europa.eu> ;
-          foaf:name "European Environment Agency"@en ] ] .
+          foaf:name "European Environment Agency"@en ] ] ;
+  foaf:primaryTopic <https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00> .
 
