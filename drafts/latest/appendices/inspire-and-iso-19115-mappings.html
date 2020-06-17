@@ -254,7 +254,10 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>(<code>dcat:Dataset</code> (M))</p>
 <p>(<code>dcat:DataService</code> (0))</p>
 </td>
-<td><p><code>rdfs:Class</code> (values <code>dcat:Dataset</code>, <code>dcat:Catalog</code>)</p></td>
+<td>
+<p><code>rdfs:Class</code></p>
+<p>(values <code>dcat:Catalog</code>, <code>dcat:Dataset</code>, <code>dcat:DataService</code>)</p>
+</td>
 <td>See <a href="#resource-type---not-in-iso19115-core"></a>. [[DCAT-AP-20191120]] does not distinguish between datasets and dataset series. <code>dcat:Catalog</code> can be used for catalogue / discovery services, in addition to <code>dcat:DataService</code>.</td>
 </tr>
 
@@ -285,7 +288,11 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>(<code>dcat:Catalog</code> (M))</p>
 <p>(<code>dcat:DataService</code> (O))</p>
 </td>
-<td><code>foaf:Document</code></td>
+<td>
+<code>foaf:Document</code>
+<code>rdfs:Resource</code>
+<code>foaf:Document</code>
+</td>
 <td>See <a href="#resource-locator---on-line-resource"></a>. Properties <code>dcat:endpointURL</code> and <code>dcat:endpointDescription</code> are used when the resource locator points to a service endpoint.</td>
 </tr>
 
@@ -487,7 +494,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>*Spatial resolution of the dataset (O)</p>
 </td>
 <td>
-<p><code>dcat:spatialResolutionInMeters</code></p>
+<p><code>dcat:spatialResolutionInMeters</code> (O)</p>
 </td>
 <td>
 <p>-</p>
@@ -502,7 +509,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>Lineage (M)</p>
 <p>*Lineage (O)</p>
 </td>
-<td><code>dct:provenance</code></td>
+<td><code>dct:provenance</code> (O)</td>
 <td><p>-</p>
 <p>-</p>
 <p>(<code>dcat:Dataset</code> (M)</p>
@@ -532,10 +539,10 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>*not in ISO&nbsp;19115 core</p>
 </td>
 <td>
-<p><code>dct:title</code></p>
-<p><code>dct:issued</code></p>
-<p><code>dct:modified</code></p>
-<p><code>dct:created</code></p>
+<p><code>dct:title</code> (R)</p>
+<p><code>dct:issued</code> (R)</p>
+<p><code>dct:modified</code> (O)</p>
+<p><code>dct:created</code> (O)</p>
 <p>(see also binding for GeoDCAT-AP Extended)</p>
 </td>
 <td><code>rdfs:Resource</code></td>
@@ -576,28 +583,30 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 </tr>
 
 <tr>
-<td>
+<td rowspan="2">
 <p>Responsible party (M)</p>
 <p>*Dataset responsible party (O)</p>
 </td>
-<td><code>dct:publisher</code> (M), <code>dct:creator</code> (O)</td>
+<td>
+<p><code>dct:publisher</code> (M)</p>
+<p><code>dct:creator</code> (O)</p>
+</td>
 <td>
 <p>-</p>
 <p>(<code>dcat:Catalog</code> (M))</p>
 </td>
 <td>
 <p><code>dct:Agent</code></p>
-<p><code>vcard:Kind</code></p>
 </td>
-<td>See <a href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"></a>. [[DCAT-AP-20191120]] supports only 3 of the 11 responsible party roles supported in INSPIRE. GeoDCAT-AP Extended makes use of [[PROV-O]] to model information concerning provenance not covered in [[DCAT-AP-20191120]].</td>
+<td rowspan="2">See <a href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"></a>. [[DCAT-AP-20191120]] supports only 3 of the 11 responsible party roles supported in INSPIRE. GeoDCAT-AP Extended makes use of [[PROV-O]] to model information concerning provenance not covered in [[DCAT-AP-20191120]].</td>
 </tr>
 
 <tr>
 <td>
-<p>Responsible party (M)</p>
-<p>*Dataset responsible party (O)</p>
+<p><code>dct:publisher</code> (R)</p>
+<p><code>dcat:contactPoint</code> (R)</p>
+<p><code>dct:creator</code> (O)</p>
 </td>
-<td><code>dct:publisher</code> (R), <code>dcat:contactPoint</code> (R), <code>dct:creator</code> (O)</td>
 <td>
 <p>-</p>
 <p>(<code>dcat:Dataset</code> (M))</p>
@@ -605,8 +614,8 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <td>
 <p><code>dct:Agent</code></p>
 <p><code>vcard:Kind</code></p>
+<p><code>dct:Agent</code></p>
 </td>
-<td>See <a href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"></a>. [[DCAT-AP-20191120]] supports only 3 of the 11 responsible party roles supported in INSPIRE. GeoDCAT-AP Extended makes use of [[PROV-O]] to model information concerning provenance not covered in [[DCAT-AP-20191120]].</td>
 </tr>
 
 <tr>
@@ -751,7 +760,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>Unique resource identifier (M)</p>
 <p>*not in ISO&nbsp;19115 core</p>
 </td>
-<td><code>dct:identifier</code> (O)</td>
+<td><code>dct:identifier</code></td>
 <td>
 <p>-</p>
 <p>(<code>dcat:Catalog</code> (M))</p>
@@ -871,7 +880,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>Date of publication (C)</p>
 <p>*Dataset reference date (M) – publication</p>
 </td>
-<td><code>dct:issued</code> (R for <code>dcat:Catalog</code> and O for <code>dcat:Dataset</code>)</td>
+<td><code>dct:issued</code></td>
 <td>
 <p>-</p>
 <p>(<code>dcat:DataService</code> (O))</p>
@@ -885,7 +894,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>Date of last revision (C)</p>
 <p>*Dataset reference date (M) – revision</p>
 </td>
-<td><code>dct:modified</code> (R for <code>dcat:Catalog</code> and O for <code>dcat:Dataset</code>)</td>
+<td><code>dct:modified</code></td>
 <td>
 <p>-</p>
 <p>(<code>dcat:DataService</code> (O))</p>
@@ -1018,10 +1027,12 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>Responsible party (M)</p>
 <p>*Dataset responsible party (O)</p>
 </td>
-<td><code>dct:publisher</code> (M for <code>dcat:Catalog</code>, R for <code>dcat:Dataset</code>), <code>dct:creator</code> (O)</td>
+<td>
+<p><code>dct:publisher</code></p>
+<p><code>dct:creator</code></p>
+</td>
 <td>
 <p>-</p>
-<p>(<code>dcat:Catalog</code> (M))</p>
 <p>(<code>dcat:DataService</code> (O))</p>
 </td>
 <td><code>dct:Agent</code></td>
