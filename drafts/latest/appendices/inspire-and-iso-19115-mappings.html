@@ -5,15 +5,20 @@
 <p>The objective of this work is to define an <em>RDF syntax</em> that can be used for the exchange of descriptions of <em>spatial</em> datasets, dataset series, and services among data portals. The RDF syntax should extend the DCAT Application Profile for data portals in Europe [[DCAT-AP]].</p>
 <ul>
 <li><p>To provide an RDF syntax binding for the <em>union</em> of the elements in the INSPIRE metadata schema [[INSPIRE-MD-REG]], [[INSPIRE-MD]] and the core profile of ISO 19115:2003 [[ISO-19115]]. The guiding design principle is to make the resulting RDF syntax as simple as possible; thereby maximally using existing RDF vocabularies – such as the Dublin Core [[DCTERMS]] and [[DCAT-AP]] –, and as much as possible avoiding minting new terms. The defined syntax binding must enable the conversion of metadata records <em>from</em> ISO 19115 / INSPIRE <em>to</em> a harmonised RDF representation. The ability to convert metadata records from RDF to ISO 19115 / INSPIRE is not a requirement.</p></li>
+<!--
 <li><p>To formulate recommendations to the Working Group dealing with the revision of the [[DCAT-AP]], to maximally align [[DCAT-AP]] and GeoDCAT-AP.</p></li>
+-->
+<li><p>To update the reference XSLT implementation [[GeoDCAT-XSLT]] of the mappings defined in the GeoDCAT-AP specification.</p></li>
 <li><p>To take into account and refer to alignment of relevant controlled vocabularies (e.g., the alignments between GEMET, INSPIRE themes, EuroVoc carried out by the Publications Office of the EU [[EUV-EUROVOC]]).</p></li>
 <!--<a href="http://publications.europa.eu/mdr/eurovoc/">http://publications.europa.eu/mdr/eurovoc/</a>).</p></li>-->
 <!--<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>)</p></li>-->
 </ul>
 <p>Additionally, the following outcomes may be achieved, outside the context of this specification:</p>
 <ul>
-<li><p>To define new controlled vocabularies or define mappings between controlled vocabularies;</p></li>
+<li><p>To define new controlled vocabularies or define mappings between controlled vocabularies.</p></li>
+<!--
 <li><p>To design executable transformation rules (i.e., an XSLT script [[GeoDCAT-XSLT]]), as a reference implementation of the mappings defined in the GeoDCAT-AP specification.</p></li>
+-->
 <li><p>To define an RDF syntax binding for the elements in ISO 19115-1:2014 [[?ISO-19115-1]].</p></li>
 </ul>
 
@@ -113,7 +118,8 @@ For example, this was the case of the work carried out by the <a href="https://w
 
 <h2>Alignments defined in GeoDCAT-AP</h2>
 
-<p>The alignments defined in the current version of GeoDCAT-AP are the result of an iterative revision process of [[GeoDCAT-AP-20160802]], following the criteria illustrated in the previous sections and the review of the GeoDCAT-AP WG.</p>
+<p>The alignments defined in the current version of GeoDCAT-AP are the result of an iterative revision process of [[GeoDCAT-AP-20160802]], following the criteria illustrated in the previous sections and the review of the GeoDCAT-AP WG. Alignments for [[ISO-19115-1]] have not been defined. <a class="no-sectionRef" href="#comparison-between-inspire-and-iso19115-12014"></a> contains an overview of the most important changes with respect to [[ISO-19115]].</p>
+
 <p>The work started with the review of [[DCAT-AP-20191120]], [[VOCAB-DCAT-2]], and [[INSPIRE-MD-20170302]], with the purpose of identifying possible disalignments of the mappings defined in [[GeoDCAT-AP]], as well as possible gaps in [[DCAT-AP-20191120]] and [[VOCAB-DCAT-2]], which may require the use of different vocabularies or the definition of new classes and/or properties in the GeoDCAT-AP namespace. In all these cases, backward compatibility with [[GeoDCAT-AP-20160802]] has been taken into account when implementing revisions.</p>
 <p>Finally, the GeoDCAT-AP WG has worked in close coordination with the DCAT-AP WG, in order to ensure mutual compliance of the proposed solutions.</p>
 <!---
@@ -3419,7 +3425,7 @@ prov:wasUsedBy [
 <p><a href="http://www.opengis.net/def/crs/EPSG/0/">http://www.opengis.net/def/crs/EPSG/0/</a></p>
 <p>followed by the number identifying the coordinate reference system in the EPSG register. For instance, the following URI</p>
 <p><a href="http://www.opengis.net/def/crs/EPSG/0/4258">http://www.opengis.net/def/crs/EPSG/0/4258</a></p>
-<p>identifies coordinate reference system EPSG 4258, corresponding to ETRS89 (European Terrestrial Referent System 1989).</p>
+<p>identifies coordinate reference system EPSG 4258, corresponding to ETRS89 (European Terrestrial Reference System 1989).</p>
 <!--
 <aside class="ednote">
 <p>For a possible revision to how spatial / temporal reference systems should be specified, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/2">Issue #2</a>:</p>
@@ -3733,6 +3739,13 @@ prov:wasUsedBy [
 
 <aside class="ednote">
 <p>The relevant register has not been eventually created.</p>
+<p>A possible option is to use the corresponding URIs from <a href="https://github.com/ISO-TC211/GOM/blob/master/isotc211_GOM_harmonizedOntology/iso19115/2003/IdentificationInformation.rdf">the relevant ISO 19115 ontology</a>, although they are not dereferenceable (as the ones currently used in GeoDCAT-AP) - namely:</p>
+<ul>
+<li><code>http://def.isotc211.org/iso19115/2003/IdentificationInformation/code/MD_SpatialRepresentationTypeCode/vector</code></li>
+<li><code>http://def.isotc211.org/iso19115/2003/IdentificationInformation/code/MD_SpatialRepresentationTypeCode/grid</code></li>
+<li><code>http://def.isotc211.org/iso19115/2003/IdentificationInformation/code/MD_SpatialRepresentationTypeCode/tin</code></li>
+</ul>
+<p>There is however some work in ISO to set up a linked data registry, so it may eventually provide dereferenceable URIs, although the URIs may not necessarily correspond to the ones above.</p>
 </aside>
 
 <p>Based on this, GeoDCAT-AP models this information by using property <code>adms:representationTechnique</code>, with the spatial representation type URIs that will be operated by the INSPIRE Registry.</p>
@@ -3819,6 +3832,12 @@ prov:wasUsedBy [
 <aside class="ednote">
 <p>A possible option to address this disalignment is to submit a request to have [[EUV-FREQ]] updated accordingly.</p>
 <p>Otherwise, the missing codes could be mapped to existing ones in [[EUV-FREQ]].</p>
+<p>Another option is to use the corresponding URIs from <a href="https://github.com/ISO-TC211/GOM/blob/master/isotc211_GOM_harmonizedOntology/iso19115/2003/MaintenanceInformation.rdf">the relevant ISO 19115 ontology</a>, although they are not dereferenceable (as the ones currently used in GeoDCAT-AP) - namely:</p>
+<ul>
+<li><code>http://def.isotc211.org/iso19115/2003/MaintenanceInformation/code/MD_MaintenanceFrequencyCode/asNeeded</code></li>
+<li><code>http://def.isotc211.org/iso19115/2003/MaintenanceInformation/code/MD_MaintenanceFrequencyCode/notPlanned</code></li>
+</ul>
+<p>There is however some work in ISO to set up a linked data registry, so it may eventually provide dereferenceable URIs, although the URIs may not necessarily correspond to the ones above.</p>
 </aside>
 
 <table class="simple">
@@ -3956,3 +3975,419 @@ prov:wasUsedBy [
 
 </section>
 
+<section id="comparison-between-inspire-and-iso19115-12014" class="appendix">
+
+<h1>Comparison between INSPIRE and ISO 19115-1:2014</h1>
+
+<p>In [[?ISO-19115-1]] the concept of ‘Core metadata’ was removed; it was translated into a normative annex (Annex F) “Discovery metadata for geographic resources”. In the Annex F metadata elements for the discovery are listed in 2 tables:</p>
+<ul>
+<li><p>the metadata elements to be used for discovery of geographic datasets and series are identified in F.1;</p></li>
+<li><p>the metadata elements to be used for discovery of service resources are identified in F.2.</p></li>
+</ul>
+
+<section id="spatial-dataset-and-spatial-dataset-series">
+
+<h2>Spatial dataset and spatial dataset series</h2>
+<p>The table below compares the core requirements of ISO 19115:2003 (see Table 3 in 6.5 of [[?ISO-19115]]), the requirements of INSPIRE for spatial dataset and spatial dataset series as defined in the Implementing Rules for metadata and the discovery metadata for geographic datasets and series (see Table F.1 in annex F of [[?ISO-19115-1]]). For those last metadata elements in the last field of the table the path is indicated. For each element, in brackets the obligation/max occurrence (3rd field).</p>
+
+<table id="table-comparison-datasets-and-series" class="simple">
+<!--
+<caption>Table 11: Metadata elements used for discovery of geographic datasets and series</caption>
+-->
+<thead>
+<tr>
+<th>ISO 19115 Core</th>
+<th>INSPIRE Implementing Rules for Metadata</th>
+<th>ISO 19115-1:2014 Discovery metadata for datasets and series (Table F.1)</th>
+<th>ISO 19115-1:2014 Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset title (M)</td>
+<td>Part B 1.1 Resource Title</td>
+<td>Resource title (M/1)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification.citation</code> &gt; <code>CI_Citation.title</code></td>
+</tr>
+<tr>
+<td>Dataset reference date (M)</td>
+<td>Part B 5 Temporal Reference</td>
+<td>Resource reference date (O/N)</td>
+<td><code>MD_Metadata.idenitificationInfo</code> &gt; <code>MD_DataIdentification.citation</code> &gt; <code>CI_Citation.date</code></td>
+</tr>
+<tr>
+<td>Dataset responsible party (O)</td>
+<td>Part B 9 Responsible organisation</td>
+<td>Resource point of contact (O/N)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification.pointOf-Contact</code> &gt; <code>CI_Responsibility</code></td>
+</tr>
+<tr>
+<td>Geographic location of the dataset (C)</td>
+<td>Part B 4.1 Geographic Bounding Box</td>
+<td>Geographic location (C/N)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification.extent</code> &gt; <code>EX_Extent.geographicElement</code> &gt; <code>EX_GeographicExtent</code> &gt; <code>EX_GeographicBoundingBox</code> -or- <code>EX_GeographicDescription</code>)</td>
+</tr>
+<tr>
+<td>Dataset language (M)</td>
+<td>Part B 1.7 Resource Language</td>
+<td>Resource language (C/N)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification.defaultLocale</code> &gt; <code>PT_Locale</code></td>
+</tr>
+<tr>
+<td>Dataset character set (C)</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Dataset topic category (M)</td>
+<td>Part B 2.1 Topic Category</td>
+<td>Resource topic category (C/N)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification.topicCategory</code> &gt; <code>MD_TopicCategoryCode</code></td>
+</tr>
+<tr>
+<td>Spatial resolution of the dataset (O)</td>
+<td>Part B 6.2 Spatial Resolution</td>
+<td>Spatial resolution (O/N)</td>
+<td><p><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_Identification.spatialResolution</code> &gt; <code>MD_Resolution.equivalentScale</code> <code>MD_Resolution.distance</code>, <code>MD_Resolution.vertical</code>, or <code>MD_Resolution.angularDistance</code>, or <code>MD_Resolution.levelOfDetail</code></p></td>
+</tr>
+<tr>
+<td>Abstract describing the dataset (M)</td>
+<td>Part B 1.2 Resource abstract</td>
+<td>Resource abstract (M/1)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification.abstract</code></td>
+</tr>
+<tr>
+<td>Distribution format (O)</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Additional extent information for the dataset (vertical and temporal) (O)</td>
+<td>Part B 5.1 Temporal extent</td>
+<td>Extent information for the dataset (additional) (O/N)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_Identification.extent</code>  &gt;  <code>EX_Extent</code> &gt; <code>EX_TemporalExtent</code> or <code>EX_VerticalExtent</code></td>
+</tr>
+<tr>
+<td>Spatial representation type (O)</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Reference system (O)</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Lineage (O)</td>
+<td>Part B 6.1 Lineage</td>
+<td>Resource lineage (O/N)</td>
+<td><code>MD_Metadata</code> &gt; <code>resourceLineage</code> &gt; <code>LI_Lineage.statement</code></td>
+</tr>
+<tr>
+<td>On-line resource (O)</td>
+<td>Part B 1.4 Resource Locator</td>
+<td>Resource on-line Link (O/N)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification.citation</code> &gt; <code>CI_Citation.onlineResource</code> &gt; <code>CI_OnlineResource</code></td>
+</tr>
+<tr>
+<td>Metadata file identifier (O)</td>
+<td>-</td>
+<td>Metadata reference information (O/1)</td>
+<td><code>MD_Metadata.metadataIdentifier</code></td>
+</tr>
+<tr>
+<td>Metadata standard name (O)</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Metadata standard version (O)</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Metadata language (C)</td>
+<td>Part B 10.3 Metadata Language</td>
+<td>-</td>
+<td><code>MD_Metadata.defaultLocale</code> &gt; <code>PT_Locale.language</code></td>
+</tr>
+<tr>
+<td>Metadata character set (C)</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Metadata point of contact (M)</td>
+<td>Part B 10.1 Metadata point of contact</td>
+<td>Metadata point of contact (M/N)</td>
+<td><code>MD_Metadata.contact</code> &gt; <code>CI_Responsibility</code></td>
+</tr>
+<tr>
+<td>Metadata date stamp (M)</td>
+<td>Part B 10.2 Metadata Date</td>
+<td>Metadata date stamp (M/N)</td>
+<td><code>MD_Metadata.dateInfo</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>Part B 1.3 Resource Type</td>
+<td>Resource type (C/1)</td>
+<td><code>MD_Metadata.metadataScope</code> &gt; <code>MD_Scope.resourceScope</code></td>
+</tr>
+<tr>
+<td></td>
+<td>Part B 1.5 Unique Resource Identifier</td>
+<td>Resource identifier (O/N)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification.citation</code> &gt; <code>CI_Citation.identifier</code> &gt; <code>MD_Identifier</code></td>
+</tr>
+<tr>
+<td></td>
+<td>Part B 3 Keyword</td>
+<td>Keywords (O/N)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification</code> &gt; <code>descriptiveKeywords</code> &gt; <code>MD_Keywords</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>Part B 7 Conformity</td>
+<td>-</td>
+<td><code>MD_Metadata.dataQualityInfo</code> &gt; <code>DQ_DataQuality.report</code> &gt; <code>DQ_UsabilityElement.result</code> &gt; <code>DQ_ConformanceResult</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>Part B 8.1 Conditions for access and use</td>
+<td>Constraints on resource access and use (O/N)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification</code> &gt; <code>MD_Constraints.useLimitations</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>Part B 8.2 Limitations on public access</td>
+<td>Constraints on resource access and use (O/N)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification</code> &gt;  <code>MD_LegalConstraints.accessConstraint</code> and/or <code>MD_LegalConstraints.otherConstraint</code> and/or <code>MD_SecurityConstraints.classification</code></td>
+</tr>
+</tbody>
+</table>
+
+</section>
+
+<section id="services">
+
+<h2>Services</h2>
+
+<p>The table below compares the core requirements of ISO 19115:2003 (see Table 3 in 6.5 of ISO 19115:2003), the requirements of INSPIRE for services as defined in the Implementing Rules for metadata and the discovery metadata for services (see Table F.2 in annex F of ISO 19115-1:2014). For those metadata elements in the last field of the table the path is indicated. For each element, in brackets the obligation/max occurrence (3<sup>rd</sup> field).</p>
+
+<table id="table-comparison-services" class="simple">
+<!--
+<caption>Table 12: Metadata elements used for discovery of service resources</caption>
+-->
+<thead>
+<tr>
+<th>ISO 19115 Core</th>
+<th>INSPIRE</th>
+<th>ISO 19115-1:2014 Discovery metadata for services (Table F.2)</th>
+<th>Path ISO 19115-1:2014</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dataset title (M)</td>
+<td>Part B 1.1 Resource Title</td>
+<td>Service title (M/1)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>SV_ServiceIdentification.citation</code> &gt; <code>CI_Citation.title</code></td>
+</tr>
+<tr>
+<td>Dataset reference date (M)</td>
+<td>Part B 5 Temporal Reference</td>
+<td>Reference date (O/1)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>SV_ServiceIdentification.citation</code> &gt; <code>CI_Citation.date</code></td>
+</tr>
+<tr>
+<td>Dataset responsible party (O)</td>
+<td>Part B 9 Responsible organisation</td>
+<td>Responsible party (O/N)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>SV_ServiceIdentification.pointOfContact</code> &gt; <code>CI_Responsibility</code></td>
+</tr>
+<tr>
+<td>Geographic location of the dataset (C)</td>
+<td><strong>-</strong></td>
+<td>Geographic location (M/1)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>SV_ServiceIdentification.extent</code> &gt; <code>EX_Extent.geographicElement</code>  &gt; <code>EX_GeographicExtent</code> &gt; <code>EX_GeographicBoundingBox</code> -or- <code>EX_GeographicDescription</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>Part B 4.1 Geographic Bounding Box</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Dataset language (M)</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Dataset character set (C)</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Dataset topic category (M)</td>
+<td>-</td>
+<td>Service topic category (O/N)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>SV_ServiceIdentification.topicCategory</code> &gt; <code>MD_TopicCategoryCode</code></td>
+</tr>
+<tr>
+<td>Spatial resolution of the dataset (O)</td>
+<td>Part B 6.2 Spatial Resolution</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Abstract describing the dataset (M)</td>
+<td>Part B 1.2 Resource abstract</td>
+<td>Resource abstract (M/1)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>SV_ServiceIdentification.abstract</code></td>
+</tr>
+<tr>
+<td>Distribution format (O)</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Additional extent information for the dataset (O)</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Spatial representation type (O)</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Reference system (O)</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Lineage (O)</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>On-line resource (O)</td>
+<td>Part B 1.4 Resource Locator</td>
+<td>On-line Link (O/N)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>SV_ServiceIdentification.citation</code> &gt; <code>CI_Citation.onlineResource</code> &gt; <code>CI_OnlineResource</code></td>
+</tr>
+<tr>
+<td>Metadata file identifier (O)</td>
+<td>-</td>
+<td>Metadata reference information (O/1)</td>
+<td><code>MD_Metadata.metadataIdentifier</code></td>
+</tr>
+<tr>
+<td>Metadata standard name (O)</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Metadata standard version (O)</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Metadata language (C)</td>
+<td>Part B 10.3 Metadata Language</td>
+<td>-</td>
+<td><code>MD_Metadata.defaultLocale</code> &gt; <code>PT_Locale.language</code></td>
+</tr>
+<tr>
+<td>Metadata character set (C)</td>
+<td>-</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td>Metadata point of contact (M)</td>
+<td>Part B 10.1 Metadata point of contact</td>
+<td>Metadata point of contact (M/N)</td>
+<td><code>MD_Metadata.contact</code> &gt; <code>CI_Responsibility</code></td>
+</tr>
+<tr>
+<td>Metadata date stamp (M)</td>
+<td>Part B 10.2 Metadata Date</td>
+<td>Metadata date stamp (M/N)</td>
+<td><code>MD_Metadata.dateInfo</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>Part B 1.3 Resource Type</td>
+<td>Resource type (M/1)</td>
+<td><code>MD_Metadata.metadataScope</code> &gt; <code>MD_Scope.resourceScope</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>Part B 1.6 Coupled Resource</td>
+<td>Coupled Resource (C/N)</td>
+<td><code>MD_Metadata</code> &gt; <code>SV_ServiceIdentification.coupledResource</code> &gt; <code>SV_CoupledResource</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>Part B 2.2 Spatial Data Service Type</td>
+<td>-</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Part B 3 Keyword</td>
+<td>Keywords (O/N)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>SV_ServiceIdentification</code> &gt; <code>MD_Keywords</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>Part B 7 Conformity</td>
+<td>-</td>
+<td><code>MD_Metadata.dataQualityInfo</code> &gt; <code>DQ_DataQuality.report</code> &gt; <code>DQ_UsabilityElement.result</code> &gt; <code>DQ_ConformanceResult</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>Part B 8.1 Conditions for access and use</td>
+<td>Constraints on access and use (O/N)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification</code> &gt; <code>MD_Constraints.useLimitations</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>Part B 8.2 Limitations on public access</td>
+<td>Constraints on access and use (O/N)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification</code> &gt;  <code>MD_LegalConstraints.accessConstraint</code> and/or <code>MD_LegalConstraints.otherConstraint</code> and/or <code>MD_SecurityConstraints.classification</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>Coupled resource type (C/1)</td>
+<td><code>MD_Metadata</code> &gt; <code>SV_ServiceIdentification.couplingType</code> &gt; <code>SV_CouplingType</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>-</td>
+<td>Resource identifier (O/N)</td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>SV_ServiceIdentification.citation</code> &gt; <code>CI_Citation.identifier</code> &gt; <code>MD_Identifier</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>

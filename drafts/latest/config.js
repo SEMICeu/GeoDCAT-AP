@@ -26,6 +26,7 @@ var respecConfig = {
 //    publishDate: "2019-11-20",
 
     alternateFormats: [
+/*
     {
       label: "PDF (TBD)",
       uri: "./geodcat-ap_v2.0.0.pdf",
@@ -38,6 +39,7 @@ var respecConfig = {
       label: "ODT (TBD)",
       uri: "./geodcat-ap_v2.0.0.odt",
     },
+*/
     {
       label: "RDF/XML",
       uri: "./geodcat-ap_v2.0.0.rdf",
@@ -46,6 +48,7 @@ var respecConfig = {
       label: "Turtle",
       uri: "./geodcat-ap_v2.0.0.ttl",
     },
+/*
     {
       label: "JSON-LD (TBD)",
       uri: "./geodcat-ap_v2.0.0.jsonld",
@@ -54,6 +57,7 @@ var respecConfig = {
       label: "SHACL (TBD)",
       uri: "./geodcat-ap_v2.0.0_shacl_shapes.ttl",
     }
+*/
     ],    
 
 //    license: "cc-by",
