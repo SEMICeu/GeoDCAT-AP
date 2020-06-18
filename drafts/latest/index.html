@@ -108,7 +108,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h3>Context</h3>
 
 <aside class="ednote">
-<p>To be revised</p>
+<p>To be revised - especially the 2nd paragraph, which is citing references dating back to 2011, and nothing of what happened after that - one for all, the Open Data Directive.</p>
 </aside>
 
 <p>This document has been prepared in the context of Action 1.1 – Improving semantic interoperability in European eGovernment systems [[SEMIC]] of the European Commission’s Interoperability solutions for public administrations, businesses and citizens (ISA²) programme [[ISA2]].</p> 
@@ -1565,7 +1565,7 @@ A property which is not mentioned but would be applicable for a class according 
 <p>The DCAT Application Profile specified in this document has a single property to relate an Agent (typically, an organisation) to a Dataset. The only such ‘agent role’ that can be expressed in the current version of the profile is through the property <a href="http://purl.org/dc/terms/publisher"><code>dct:publisher</code></a>, defined as “An entity responsible for making the dataset available”. A second property is available in the DCAT recommendation, <a data-cite="VOCAB-DCAT-20140116#Property:dataset_contactPoint"><code>dcat:contactPoint</code></a>, defined as “Link a dataset to relevant contact information which is provided using VCard”, but this is not an agent role as the value of this property is contact data, rather than a representation of the organisation as such.</p>
 <p>In specific cases, for example in exchanging data among domain-specific portals, it may be useful to express other, more specific agent roles. In such cases, extensions to the base profile may be defined using additional properties with more specific meanings.</p>
 <p>Two possible approaches have been discussed, particular in the context of the development of the domain-specific GeoDCAT Application Profile [[GeoDCAT-AP]], an extension of the base DCAT Application Profile. </p>
-<p>The first possible approach is based on the use of a predicate vocabulary that provides a set of properties that represent additional types of relationships between Datasets and Agents. For example, properties could be defined, such as <code>foo:owner</code>, <code>foo:curator</code> or <code>foo:responsibleParty</code>, in addition to the use of existing well-known properties, such as <code>dct:creator</code> and <code>dct:rightsHolder</code>. A possible source for such additional properties is the Roles Named Authority List [[EUV-ROLES]] maintained by the Publications Office of the EU. Other domain-specific sources for additional properties are the INSPIRE Responsible Party roles [[INSPIRE-RPR]], the Library of Congress’ MARC relators [[MARC-REL]] and DataCite’s contributor types [[DATACITE-TYPES]]. To enable the use of such properties, they must be defined as RDF properties with URIs in a well-managed namespace.</p>
+<p>The first possible approach is based on the use of a predicate vocabulary that provides a set of properties that represent additional types of relationships between Datasets and Agents. For example, properties could be defined, such as <code>foo:owner</code>, <code>foo:curator</code> or <code>foo:responsibleParty</code>, in addition to the use of existing well-known properties, such as <code>dct:creator</code> and <code>dct:rightsHolder</code>. A possible source for such additional properties is the Roles Named Authority List [[EUV-ROLES]] maintained by the Publications Office of the EU. Other domain-specific sources for additional properties are the INSPIRE Responsible Party roles [[INSPIRE-RPR]], the Library of Congress’ MARC relators [[MARC-REL]] and DataCite’s contributor types [[DataCite-Types]]. To enable the use of such properties, they must be defined as RDF properties with URIs in a well-managed namespace.</p>
 <p>A second approach is based on the use of W3C’s PROV ontology [[PROV-O]] which provides a powerful mechanism to express a set of classes, properties, and restrictions that can be used to represent and interchange provenance information generated in different systems and under different contexts. In the context of work on GeoDCAT-AP, a PROV-conformant solution for expressing agent roles was agreed [[GeoDCAT-AP-RPR]]. This solution uses <code>prov:qualifiedAttribution</code> in combination with a <code>dct:type</code> assertion pointing to the code list for Responsible Party Role in the INSPIRE registry. To enable the use of such types, they must be defined with URIs in a well-managed namespace. </p>
 <p>Based on the experience gained with the use of domain-specific extensions for additional ‘agent roles’ in the exchange of information about Datasets and on the requests of implementors and stakeholders, the  DCAT Application Profile release 2.0.0 is  extended with additional roles as proposed by DCAT Version 2, W3C Working Draft 28 May 2019 [[VOCAB-DCAT-2-20190528]] that have proven to be useful across domains. Precisely, properties <code>dct:creator</code>, <code>prov:qualifiedAttribution</code> and <code>prov:qualifiedRelation</code> have been added to <code>dcat:Dataset</code> class to further facilitate relationships between datasets and agents [[VOCAB-DCAT-QA]].</p>
 <p>It should be noted that, even if a more expressive approach is used in a particular implementation, the provision of information using <code>dct:publisher</code> for the Catalogue is still mandatory under the rules laid down in the Conformance Statement in <a class="no-sectionRef" href="#conformance"></a>, while the provision of information using <code>dct:publisher</code> is strongly recommended for Dataset. The provision of such information using <code>dct:publisher</code> will ensure interoperability with implementations that use the basic approach of DCAT-AP.</p>
@@ -1682,7 +1682,7 @@ A property which is not mentioned but would be applicable for a class according 
 
 <!-- INSPIRE and ISO 19115 Mappings --> 
 
-<section id="inspire-and-iso-19115-mappings" class="appendix informative">
+<section id="inspire-and-iso-19115-mappings" class="appendix">
 
 <h2>INSPIRE and ISO 19115 Mappings</h2>
 
@@ -1728,7 +1728,7 @@ A property which is not mentioned but would be applicable for a class according 
 <p>To be revised</p>
 </aside>
 
-<p>The table below summarises the changes applied to the current release of GeoDCAT-AP.</p>
+<p>The table below summarises the changes applied to the current release of GeoDCAT-AP, including those inherited from [[DCAT-AP]].</p>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/change-log.html"></div>
 

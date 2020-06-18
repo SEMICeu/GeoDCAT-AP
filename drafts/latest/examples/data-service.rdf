@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF 
-  xmlns:adms   = "http://www.w3.org/ns/adms#" 
   xmlns:dcat   = "http://www.w3.org/ns/dcat#" 
   xmlns:dct    = "http://purl.org/dc/terms/" 
   xmlns:foaf   = "http://xmlns.com/foaf/0.1/" 
@@ -12,29 +11,43 @@
   xmlns:vcard  = "http://www.w3.org/2006/vcard/ns#"
 >
 
-  <rdf:Description rdf:about="https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00">
-    <foaf:isPrimaryTopicOf rdf:resource="https://some.catalogue/record/af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb"/>
+  <rdf:Description rdf:about="https://some.catalogue/resource/eea_v_4326_250_k_wise-eionet-monitoring-sites_service">
+    <foaf:isPrimaryTopicOf rdf:resource="https://some.catalogue/record/29e08b66-e6f6-4b4f-95ad-b582d9fe3df5"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/dcat#DataService"/>
     <dct:type rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service"/>
-    <dct:title xml:lang="en">EU27_2020 basemap for EEA internal use - web service</dct:title>
-    <dct:description xml:lang="en">This Discomap web map service provides an EU-27 (2020) basemap for internal EEA use as a background layer in viewers or any other web application. It is provided as REST and as OGC WMS services, dynamic and cached. The cached service has a custom cache at the following scales: 1/50.000.000 1/42.000.000 1/36.000.000 (Europe's size) 1/30.000.000 1/20.000.000 1/10.000.000 1/5.000.000 1/2.500.000 1/1.000.000.</dct:description>
-    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/GOVE"/>
-    <dcat:theme rdf:resource="http://inspire.ec.europa.eu/theme/au"/>
-    <dcat:theme rdf:resource="http://www.eionet.europa.eu/gemet/concept/14932"/>
-    <dct:identifier>eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00</dct:identifier>
+    <dct:title xml:lang="en">EIONET monitoring sites - Web Service</dct:title>
+    <dct:description xml:lang="en">
+      The service contains information on European surface water and groundwater 
+      monitoring sites reported to the European Environment Agency between 
+      2001-11-29 and 2020-01-17. The information was reported to the European 
+      Environment Agency under the State of Environment reporting obligations. 
+      ...
+    </dct:description>
+    <dcat:keyword xml:lang="en">Water Information System for Europe</dcat:keyword>
+    <dcat:keyword xml:lang="en">Groundwater body</dcat:keyword>
+    <dcat:keyword xml:lang="en">Surface water body</dcat:keyword>
+    <dcat:keyword xml:lang="en">Monitoring Site</dcat:keyword>
+    <dcat:theme rdf:resource="http://inspire.ec.europa.eu/theme/ef"/>
+    <dcat:theme rdf:resource="http://www.eionet.europa.eu/gemet/concept/5352"/>
+    <dcat:theme rdf:resource="http://www.eionet.europa.eu/gemet/concept/8229"/>
+    <dcat:theme rdf:resource="http://www.eionet.europa.eu/gemet/concept/3780"/>
+    <dcat:theme rdf:resource="http://www.eionet.europa.eu/gemet/concept/12301"/>
+    <dct:identifier>eea_v_4326_250_k_wise-eionet-monitoring-sites_service</dct:identifier>
+    <dcat:servesDataset rdf:resource="https://some.catalogue/resource/eea_v_4326_250_k_wise-eionet_p_2001-2020_v01_r04"/>
     <dct:type rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view"/>
     <dct:spatial rdf:parseType="Resource">
-      <dcat:bbox rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral"><![CDATA[POLYGON((-179.999989 83.623594,179.999989 83.623594,179.999989 -7.436252,-179.999989 -7.436252,-179.999989 83.623594))]]></dcat:bbox>
-      <dcat:bbox rdf:datatype="http://www.opengis.net/ont/geosparql#gmlLiteral"><![CDATA[<gml:Envelope srsName="http://www.opengis.net/def/crs/OGC/1.3/CRS84"><gml:lowerCorner>-179.999989 -7.436252</gml:lowerCorner><gml:upperCorner>179.999989 83.623594</gml:upperCorner></gml:Envelope>]]></dcat:bbox>
+      <dcat:bbox rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral"><![CDATA[POLYGON((-62.9951 70.620781,55.813367 70.620781,55.813367 -21.378367,-62.9951 -21.378367,-62.9951 70.620781))]]></dcat:bbox>
+      <dcat:bbox rdf:datatype="http://www.opengis.net/ont/geosparql#gmlLiteral"><![CDATA[<gml:Envelope srsName="http://www.opengis.net/def/crs/OGC/1.3/CRS84"><gml:lowerCorner>-62.9951 -21.378367</gml:lowerCorner><gml:upperCorner>55.813367 70.620781</gml:upperCorner></gml:Envelope>]]></dcat:bbox>
     </dct:spatial>
-    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-01</dct:issued>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-09-15</dct:issued>
+    <dct:conformsTo rdf:resource="http://www.opengis.net/def/crs/EPSG/0/4326"/>
     <dct:conformsTo rdf:resource="http://www.opengis.net/def/crs/EPSG/0/3857"/>
     <dct:conformsTo rdf:resource="http://www.opengis.net/def/crs/EPSG/0/102100"/>
-    <dct:conformsTo rdf:resource="http://www.opengis.net/def/crs/EPSG/0/4326"/>
+    <dct:conformsTo rdf:resource="http://www.opengis.net/def/crs/OGC/1.3/CRS84"/>
     <dct:accessRights rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"/>
     <dct:license>
       <dct:LicenseDocument>
-        <rdfs:label xml:lang="en">Only for internal EEA use.</rdfs:label>
+        <rdfs:label xml:lang="en">No limitations in the use of this web service.</rdfs:label>
       </dct:LicenseDocument>
     </dct:license>
     <prov:wasUsedBy>
@@ -50,14 +63,10 @@
         </prov:generated>
       </prov:Activity>
     </prov:wasUsedBy>
-    <dcat:endpointURL rdf:resource="https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EU_27_WM/MapServer/WMSServer"/>
-    <dcat:endpointDescription rdf:resource="https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EU_27_WM/MapServer/WMSServer?request=GetCapabilities&amp;service=WMS"/>
-    <dcat:endpointURL rdf:resource="http://bio.discomap.eea.europa.eu/arcgis/rest/services/Internal/Basemap_EU_27_WM/MapServer"/>
-    <dcat:endpointDescription rdf:resource="http://bio.discomap.eea.europa.eu/arcgis/rest/services/Internal/Basemap_EU_27_WM/MapServer"/>
-    <dcat:endpointURL rdf:resource="https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EU_27_WM_Cached/MapServer/WMSServer"/>
-    <dcat:endpointDescription rdf:resource="https://bio.discomap.eea.europa.eu/arcgis/services/Internal/Basemap_EU_27_WM_Cached/MapServer/WMSServer?request=GetCapabilities&amp;service=WMS"/>
-    <dcat:endpointURL rdf:resource="http://bio.discomap.eea.europa.eu/arcgis/rest/services/Internal/Basemap_EU_27_WM_Cached/MapServer"/>
-    <dcat:endpointDescription rdf:resource="http://bio.discomap.eea.europa.eu/arcgis/rest/services/Internal/Basemap_EU_27_WM_Cached/MapServer"/>
+    <dcat:endpointURL rdf:resource="https://water.discomap.eea.europa.eu/arcgis/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer/WMSServer"/>
+    <dcat:endpointDescription rdf:resource="https://water.discomap.eea.europa.eu/arcgis/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer/WMSServer?request=GetCapabilities&amp;service=WMS"/>
+    <dcat:endpointURL rdf:resource="https://water.discomap.eea.europa.eu/arcgis/rest/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer"/>
+    <dcat:endpointDescription rdf:resource="https://water.discomap.eea.europa.eu/arcgis/rest/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer"/>
     <dcat:contactPoint>
       <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
@@ -75,6 +84,24 @@
         </vcard:hasAddress>
       </rdf:Description>
     </dcat:contactPoint>
+    <prov:qualifiedAttribution>
+      <prov:Attribution>
+        <prov:agent>
+          <rdf:Description>
+            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+            <foaf:name xml:lang="en">Tracasa</foaf:name>
+            <foaf:mbox rdf:resource="mailto:wisesoe.helpdesk@eionet.europa.eu"/>
+          </rdf:Description>
+        </prov:agent>
+        <dcat:hadRole rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor"/>
+      </prov:Attribution>
+    </prov:qualifiedAttribution>
+    <prov:qualifiedAttribution>
+      <prov:Attribution>
+        <prov:agent rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/EEA"/>
+        <dcat:hadRole rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian"/>
+      </prov:Attribution>
+    </prov:qualifiedAttribution>
   </rdf:Description>
 
 </rdf:RDF>

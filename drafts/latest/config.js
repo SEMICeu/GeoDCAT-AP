@@ -167,7 +167,7 @@ var respecConfig = {
       },
       "DCAT-AP-EG":{
         "href":"https://joinup.ec.europa.eu/release/dcat-ap-how-extend-dcat-ap",
-        "title":"Joinup. How to extend DCAT-AP?",
+        "title":"Joinup. DCAT-AP Implementation Guidelines: How to extend DCAT-AP?",
         "publisher":"European Commission",
       },
       "CiteDCAT-AP": {
@@ -641,7 +641,7 @@ var respecConfig = {
         "title":"MARC Code List for Relators",
         "publisher":"Library of Congress"
       },
-      "DATACITE-TYPES": {
+      "DataCite-Types": {
         "href":"https://schema.datacite.org/meta/kernel-3/doc/DataCite-MetadataKernel_v3.1.pdf",
         "title":"DataCite Metadata Schema for the Publication and Citation of Research Data, version 3.1. Appendix 1, table 5",
         "publisher":"DataCite"
@@ -687,7 +687,7 @@ var respecConfig = {
         "title":"Permanent Identifiers for the Web",
         "publisher":"W3C Permanent Identifier Community Group"
       },
-      "DATACITE-RIS": {
+      "DataCite-RIS": {
         "href":"http://purl.org/spar/datacite/ResourceIdentifierScheme",
         "title":"DataCite Resource Identifier Scheme"
       },

@@ -51,6 +51,11 @@
           dcat:endpointDescription <https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&service=WMS> ;
           dcat:endpointURL <https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer> ] ;
       dcat:accessURL <https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&service=WMS> ] ;
+  dcat:keyword "Environmental Noise Directive"@en,
+    "Noise map"@en,
+    "agglomerations"@en,
+    "noise contour"@en,
+    "noise source"@en ;
   dcat:spatialResolutionInMeters 10.0 ;
   dcat:theme <http://inspire.ec.europa.eu/theme/hh>,
     <http://publications.europa.eu/resource/authority/data-theme/HEAL>,
