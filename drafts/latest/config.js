@@ -223,6 +223,13 @@ var respecConfig = {
         "title":"Eprints AccessRights Vocabulary Encoding Scheme",
         "date":"14 May 2008"
       },
+      "EPSG-RDF":{
+        "href":"https://github.com/semiceu/epsg-to-rdf/",
+        "title":"Proof of concept for the RDF representation of the OGC EPSG register of coordinate reference systems",
+//        "authors":["Andrea Perego"],
+        "publisher":"European Commission",
+//        "date":"2015"
+       },
       "EU-OD-DIR": {
         "href":"http://data.europa.eu/eli/dir/2019/1024/oj",
         "title":"Directive (EU) 2019/1024 of the European Parliament and of the Council of 20 June 2019 on open data and the re-use of public sector information",

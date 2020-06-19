@@ -3412,9 +3412,11 @@ prov:wasUsedBy [
 <section id="coordinate-reference-systems-and-temporal-reference-systems-reference-system">
 
 <h2>Coordinate reference systems and Temporal reference systems – *Reference System</h2>
-
+<!--
 <p>In [[DCAT-AP-20191120]], no equivalent term is provided. This is also the case for the NeoGeo [[?NEOGEO]], GeoSPARQL [[?GeoSPARQL]], and the Core Location Vocabulary [[?LOCN]].</p>
 <p>Based on this, these elements are provisionally mapped to property <code>dct:conformsTo</code>. Moreover, in order to indicate that the object of <code>dct:conformsTo</code> denotes a reference system, an additional statement with predicate <code>dct:type</code> is added, with a code list value defining the notion of (spatial / temporal) reference system, taken from the glossary operated by the INSPIRE Registry.</p>
+-->
+<p>In GeoDCAT-AP, these elements are mapped to property <code>dct:conformsTo</code>. Moreover, in order to indicate that the object of <code>dct:conformsTo</code> denotes a reference system, an additional statement with predicate <code>dct:type</code> is added, with a code list value defining the notion of (spatial / temporal) reference system, taken from the glossary operated by the INSPIRE Registry.</p>
 <p>More precisely, the following URIs SHOULD be used to denote, respectively, spatial and temporal reference systems:</p>
 <ul>
 <li><p><a href="http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem">http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem</a></p></li>
@@ -3426,6 +3428,16 @@ prov:wasUsedBy [
 <p>followed by the number identifying the coordinate reference system in the EPSG register. For instance, the following URI</p>
 <p><a href="http://www.opengis.net/def/crs/EPSG/0/4258">http://www.opengis.net/def/crs/EPSG/0/4258</a></p>
 <p>identifies coordinate reference system EPSG 4258, corresponding to ETRS89 (European Terrestrial Reference System 1989).</p>
+
+<aside class="note">
+<p>It is important to note that [[OGC-EPSG]] currently does not support an RDF representation of spatial reference systems, but only an XML one. An XML-to-RDF mapping proposal, built upon and extending the GeoDCAT-AP approach, is maintained in [[?EPSG-RDF]].</p>
+</aside>
+
+<p>In case the reference system is not specified as an HTTP URI, the mapping covers also other information included in the source metadata - as the identifier (<code>dct:identifier</code>), name (<code>dct:title</code>), and version (<code>owl:versionInfo</code>), plus a reference to the relevant register, if available (<code>skos:inScheme</code>). If a reference register is available, the reference system is implicitly also a <code>skos:Concept</code>, and its name can be specified by using <code>skos:prefLabel</code>.</p>
+
+<aside class="note">
+<p>The GeoDCAT-AP approach for the specification of reference systems is also documented in [[SDW-BP]] (<a data-cite="?SDW-BP#bp-crs">Best Practice 8</a>, Example 22) and in [[VOCAB-DCAT-2]] (<a data-cite="VOCAB-DCAT-2#ex-dataset-crs">Example 34</a>).</p>
+</aside>
 <!--
 <aside class="ednote">
 <p>For a possible revision to how spatial / temporal reference systems should be specified, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/2">Issue #2</a>:</p>
