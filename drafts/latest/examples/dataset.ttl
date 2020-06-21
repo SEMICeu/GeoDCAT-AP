@@ -7,11 +7,13 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix record: <https://some.catalogue/record/> .
+@prefix resource: <https://some.catalogue/resource/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://some.catalogue/resource/eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00> a dcat:Dataset ;
+resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
   dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
   dct:conformsTo <http://www.opengis.net/def/crs/EPSG/0/3035> ;
   dct:created "2019-10-31"^^xsd:date ;
@@ -67,6 +69,6 @@
       prov:generated [ dct:description "See the referenced specification"@en ;
           dct:type <http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated> ] ;
       prov:qualifiedAssociation [ prov:hadPlan [ prov:wasDerivedFrom <http://data.europa.eu/eli/reg/2010/1089> ] ] ] ;
-  foaf:isPrimaryTopicOf <https://some.catalogue/record/e7807ecb-a8e6-4a33-baa2-d119eec9ce24> ;
+  foaf:isPrimaryTopicOf record:e7807ecb-a8e6-4a33-baa2-d119eec9ce24 ;
   foaf:page <https://noise.eea.europa.eu/> .
 

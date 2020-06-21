@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF 
-  xmlns:dcat      = "http://www.w3.org/ns/dcat#" 
-  xmlns:foaf      = "http://xmlns.com/foaf/0.1/" 
-  xmlns:locn      = "http://www.w3.org/ns/locn#" 
-  xmlns:prov      = "http://www.w3.org/ns/prov#" 
-  xmlns:rdf       = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
-  xmlns:xsd       = "http://www.w3.org/2001/XMLSchema#"
+  xmlns:dcat     = "http://www.w3.org/ns/dcat#" 
+  xmlns:foaf     = "http://xmlns.com/foaf/0.1/" 
+  xmlns:locn     = "http://www.w3.org/ns/locn#" 
+  xmlns:prov     = "http://www.w3.org/ns/prov#" 
+  xmlns:rdf      = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:xsd      = "http://www.w3.org/2001/XMLSchema#"
+  xmlns:resource = "https://some.catalogue/resource/"
 >
 
   <rdf:Description rdf:about="https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00">

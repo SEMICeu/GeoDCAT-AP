@@ -4,10 +4,11 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix resource: <https://some.catalogue/resource/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00> prov:qualifiedAttribution [ a prov:Attribution ;
+resource:eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00 prov:qualifiedAttribution [ a prov:Attribution ;
       dcat:hadRole <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact> ;
       prov:agent <http://publications.europa.eu/resource/authority/corporate-body/EEA> ] .
 

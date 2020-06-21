@@ -6,11 +6,13 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix record: <https://some.catalogue/record/> .
+@prefix resource: <https://some.catalogue/resource/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://some.catalogue/resource/eea_v_4326_250_k_wise-eionet-monitoring-sites_service> a dcat:DataService ;
+resource:eea_v_4326_250_k_wise-eionet-monitoring-sites_service a dcat:DataService ;
   dct:accessRights <http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations> ;
   dct:conformsTo <http://www.opengis.net/def/crs/EPSG/0/102100>,
     <http://www.opengis.net/def/crs/EPSG/0/3857>,
@@ -50,20 +52,20 @@
     "Monitoring Site"@en,
     "Surface water body"@en,
     "Water Information System for Europe"@en ;
-  dcat:servesDataset <https://some.catalogue/resource/eea_v_4326_250_k_wise-eionet_p_2001-2020_v01_r04> ;
+  dcat:servesDataset resource:eea_v_4326_250_k_wise-eionet_p_2001-2020_v01_r04 ;
   dcat:theme <http://inspire.ec.europa.eu/theme/ef>,
     <http://www.eionet.europa.eu/gemet/concept/12301>,
     <http://www.eionet.europa.eu/gemet/concept/3780>,
     <http://www.eionet.europa.eu/gemet/concept/5352>,
     <http://www.eionet.europa.eu/gemet/concept/8229> ;
   prov:qualifiedAttribution [ a prov:Attribution ;
-      dcat:hadRole <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian> ;
-      prov:agent <http://publications.europa.eu/resource/authority/corporate-body/EEA> ],
-    [ a prov:Attribution ;
       dcat:hadRole <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor> ;
       prov:agent [ a foaf:Organization ;
           foaf:mbox <mailto:wisesoe.helpdesk@eionet.europa.eu> ;
-          foaf:name "Tracasa"@en ] ] ;
+          foaf:name "Tracasa"@en ] ],
+    [ a prov:Attribution ;
+      dcat:hadRole <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian> ;
+      prov:agent <http://publications.europa.eu/resource/authority/corporate-body/EEA> ] ;
   prov:wasUsedBy [ a prov:Activity ;
       prov:generated [ dct:description "See the referenced specification"@en ;
           dct:type <http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated> ] ;
