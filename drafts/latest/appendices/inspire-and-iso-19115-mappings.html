@@ -1521,7 +1521,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>The content of the element ‘resource title’ can be represented in RDF as a plain literal, and by using property <code>dct:title</code>.</p>
 <p>This binding may also include the specification of the language by using attribute <code>@xml:lang</code> [[XML]]. The language to be specified is the one indicated by element metadata language, mapped to the language identifiers defined by IETF BCP 47 [[BCP47]].</p>
 
-<aside class="example" id="ex-mapping-resource-title">
+<aside class="example" id="ex-mapping-resource-title" title="Resource title">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>[] dct:title &quot;Forest / Non-Forest Map 2006&quot;@en.</pre>
 <p>Resource metadata in ISO 19139:</p>
@@ -1551,7 +1551,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>The content of the elements ‘resource abstract’ can be represented in RDF as a plain literal, and by using property <code>dct:description</code>.</p>
 <p>This binding may also include the specification of the language by using attribute <code>@xml:lang</code> [[XML]]. The language to be specified is the one indicated by element metadata language, mapped to the language identifiers defined by IETF BCP 47 [[BCP47]].</p>
 
-<aside class="example" id="ex-mapping-resource-abstract">
+<aside class="example" id="ex-mapping-resource-abstract" title="Resource abstract">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>[] dct:description &quot;Pan-European Forest / Non Forest Map with target year 2006,
   Data Source: Landsat ETM+ and Corine Land Cover 2006, Classes: for-est, non-forest,
@@ -1615,7 +1615,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <div class="issue" data-number="10">
 </div>
 
-<aside class="example" id="ex-mapping-resource-type">
+<aside class="example" id="ex-mapping-resource-type" title="Resource type">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>## Resource type for datasets
 [] a dcat:Dataset;
@@ -1842,7 +1842,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <div class="issue" data-number="9">
 </div>
 
-<aside class="example" id="ex-mapping-resource-locator">
+<aside class="example" id="ex-mapping-resource-locator" title="Resource locator">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>## Resource locator for datasets and series
 [] a dcat:Dataset;
@@ -1925,7 +1925,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>In INSPIRE, this element is meant to uniquely identify a resource (dataset, series or service), and it is mandatory for datasets and series. It is specified by (a) a <em>mandatory</em> character string code and by (b) an <em>optional</em> character string namespace.</p>
 <p>Based on [[DCAT-AP-20191120]], unique resource identifiers are mapped to <code>dct:identifier</code> (see <a href="#ex-mapping-resource-identifier-as-string"></a>). The actual value is obtained by the concatenation of the values of the namespace (if specified) and of the code in the original metadata record.</p>
 
-<aside class="example" id="ex-mapping-resource-identifier-as-string">
+<aside class="example" id="ex-mapping-resource-identifier-as-string" title="Resource identifier as string">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>[] dct:identifier &quot;1234567890&quot;^^xsd:string .</pre>
 <p>Resource metadata in ISO 19139</p>
@@ -1949,7 +1949,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 
 <p>If the unique resource identifier is specified with or can be encoded as an HTTP URI, it can be used as the URI of the resource (see <a href="#ex-mapping-resource-identifier-as-uri"></a>).</p>
 
-<aside class="example" id="ex-mapping-resource-identifier-as-uri">
+<aside class="example" id="ex-mapping-resource-identifier-as-uri" title="Resource identifier as URI">
 <p>Resource metadata in GeoDCAT-AP</p>
 <pre>&lt;https://some.site/resource/1234567890&gt;
   dct:identifier &quot;https://some.site/resource/1234567890&quot;^^xsd:anyURI .</pre>
@@ -2027,7 +2027,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 
 <p>The target dataset or series SHOULD be preferably referred to by using its unique resource identifier, as in <a href="#ex-mapping-coupled-resource"></a>.</p>
 
-<aside class="example" id="ex-mapping-coupled-resource">
+<aside class="example" id="ex-mapping-coupled-resource" title="Coupled resource">
 <p>Resource metadata in GeoDCAT-AP</p>
 <pre>[] a dcat:DataService ;
   dct:type &lt;http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service&gt; ,
@@ -2080,7 +2080,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>Based on [[DCAT-AP-20191120]], both elements are specified with property <code>dct:language</code>, with the URI of the relevant language available from the relevant register operated by the EU Publications Office [[EUV-LANG]].</p>
 <p><a href="#ex-mapping-resource-language"></a> assumes that the metadata language is Dutch, and the resource language is German.</p>
 
-<aside class="example" id="ex-mapping-resource-language">
+<aside class="example" id="ex-mapping-resource-language" title="Resource language">
 <p>Resource metadata in GeoDCAT-AP</p>
 <pre># Resource metadata
 [] dct:language
@@ -2237,7 +2237,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 -->
 </ul>
 
-<aside class="example">
+<aside class="example" id="ex-topic-category-and-keyword" title="Topic categories and keywords">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>## Datasets and series
 [] a dcat:Dataset ;
@@ -2473,7 +2473,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>As far as geographic identifiers are concerned, following [[DCAT-AP-20191120]], GeoDCAT-AP does not prevent the use other vocabularies in addition to the recommended ones. The vocabularies identified by the GeoDCAT-AP WG are listed in <a href="#controlled-vocabularies-to-be-used"></a>.</p>
 <p><a href="#ex-mapping-geo-bbox"></a> shows how to specify the spatial coverage.</p>
 
-<aside class="example" id="ex-mapping-geo-bbox">
+<aside class="example" id="ex-mapping-geo-bbox" title="Spatial coverage as a bounding box">
 <p>Resource metadata in GeoDCAT-AP using a geographic bounding box. This example uses multiple encodings, namely, the recommended ones (WKT and GML), plus GeoJSON. To denote the datatype of the GeoJSON literal, <a href="https://www.iana.org/assignments/media-types/application/vnd.geo+json">the URL of the corresponding IANA media type</a>.</p>
 <!--
 <aside class="ednote">
@@ -2591,7 +2591,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 </blockquote>
 <p>Due to this ambiguity, the defined mapping for this element is <code>dct:modified</code>.</p>
 
-<aside class="example" id="ex-mapping-temporal-reference">
+<aside class="example" id="ex-mapping-temporal-reference" title="Temporal extent">
 <p>Resource metadata in GeoDCAT-AP</p>
 <pre>## Creation, publication and last revision dates
 [] dct:created &quot;2010-03-01&quot;^^xsd:date ;
@@ -2667,7 +2667,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>Following [[DCAT-AP-20191120]], this element is mapped to property <code>dct:provenance</code>.</p>
 <p>Since the range of <code>dct:provenance</code> is not a literal, but class <code>dct:ProvenanceStatement</code>, the free-text content of element “lineage” can be expressed by using <code>rdfs:label</code>, as illustrated in [[?DC-UG-PM]].</p>
 
-<aside class="example" id="ex-mapping-lineage">
+<aside class="example" id="ex-mapping-lineage" title="Lineage">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>[] a dcat:Dataset ;
   dct:provenance [ a dct:ProvenanceStatement ;
@@ -2726,7 +2726,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <!--
 </aside>
 -->
-<aside class="example" id="ex-mapping-spatial-resolution">
+<aside class="example" id="ex-mapping-spatial-resolution" title="Spatial resolution">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre># Spatial resolution as equivalent scale
 [] a dcat:Dataset ;
@@ -2810,7 +2810,7 @@ To limit the impact, it was decided to only provide a partial mapping for Data Q
 
 <p>In order to grant interoperability with [[DCAT-AP-20191120]], when conformity is of degree “conformant”, the proposal is to use both [[PROV-O]] and <code>dct:conformsTo</code> for GeoDCAT-AP Extended.</p>
 
-<aside class="example" id="ex-mapping-conformity">
+<aside class="example" id="ex-mapping-conformity" title="Conformity">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>
 prov:wasUsedBy [
@@ -2897,7 +2897,7 @@ prov:wasUsedBy [
 -->
 </aside>
 
-<aside class="example" id="ex-mapping-conditions-for-access-and-use">
+<aside class="example" id="ex-mapping-conditions-for-access-and-use" title="Conditions for access and use">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>[] dcat:distribution [ a dcat:Distribution ;
   dct:license [ a dct:LicenseDocument ;
@@ -3171,7 +3171,7 @@ prov:wasUsedBy [
 
 <p>In <a href="#ex-mapping-responsible-party"></a>, the same organisation is both the data custodian and the metadata point of contact.</p>
 
-<aside class="example" id="ex-mapping-responsible-party">
+<aside class="example" id="ex-mapping-responsible-party" title="Responsible party">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>[] dcat:contactPoint [ a vcard:Organization ;
   vcard:hasEmail &lt;mailto:bag@kadaster.nl&gt; ;
@@ -3260,7 +3260,7 @@ prov:wasUsedBy [
 <p>This element identifies a metadata record.</p>
 <p>Metadata file identifiers are mapped to <code>dct:identifier</code>.</p>
 
-<aside class="example" id="ex-mapping-metadata-file-identifier-as-string">
+<aside class="example" id="ex-mapping-metadata-file-identifier-as-string" title="Metadata file identifier as string">
 <p>Metadata on metadata in GeoDCAT-AP:</p>
 <pre>[] a dcat:CatalogRecord ;
   dct:identifier &quot;947e5a55-e548-11e1-9105-0017085a97ab&quot;^^xsd:string .</pre><p>Resource metadata in ISO 19139:</p>
@@ -3277,7 +3277,7 @@ prov:wasUsedBy [
 
 <p>If the metadata file identifier is or can be encoded as an HTTP URI, it can also be used as the URI of the catalogue record (see <a href="#ex-mapping-metadata-file-identifier-as-uri"></a>).</p>
 
-<aside class="example" id="ex-mapping-metadata-file-identifier-as-uri">
+<aside class="example" id="ex-mapping-metadata-file-identifier-as-uri" title="Metadata file identifier as URI">
 <p>Metadata on metadata in GeoDCAT-AP:</p>
 <pre>&lt;https://some.site/some/path/947e5a55-e548-11e1-9105-0017085a97ab&gt;
   a dcat:CatalogRecord ;
@@ -3320,7 +3320,7 @@ prov:wasUsedBy [
 
 <p><a href="#ex-mapping-metadata-standard"></a> shows a GeoDCAT-AP metadata record obtained from one conformant with [[ISO-19115]].</p>
 
-<aside class="example" id="ex-mapping-metadata-standard">
+<aside class="example" id="ex-mapping-metadata-standard" title="Metadata standard">
 <p>Metadata on metadata in GeoDCAT-AP:</p>
 <pre>[] a dcat:CatalogRecord ;
   dct:conformsTo &lt;https://joinup.ec.europa.eu/release/geodcat-ap/10&gt; ;
@@ -3345,7 +3345,7 @@ prov:wasUsedBy [
 
 <p>To represent the standard name and version of the source ISO record, the GeoDCAT-AP metadata record must be extended as in <a href="#ex-mapping-metadata-standard-with-source-record"></a>.</p>
 
-<aside class="example" id="ex-mapping-metadata-standard-with-source-record">
+<aside class="example" id="ex-mapping-metadata-standard-with-source-record" title="Metadata standard of source record">
 <p>Metadata on metadata in GeoDCAT-AP:</p>
 <pre>[] a dcat:CatalogRecord ;
   dct:conformsTo &lt;https://joinup.ec.europa.eu/release/geodcat-ap/10&gt; ;
@@ -3447,7 +3447,7 @@ prov:wasUsedBy [
 </aside>
 -->
 
-<aside class="example" id="ex-mapping-reference-system-as-uri">
+<aside class="example" id="ex-mapping-reference-system-as-uri" title="Reference system as URI">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>[] a dcat:Dataset ;
   dct:conformsTo &lt;http://www.opengis.net/def/crs/EPSG/0/4258&gt; .
@@ -3473,7 +3473,7 @@ prov:wasUsedBy [
 
 <p>If not represented with an HTTP URI, the reference system identifier MUST be mapped to <code>dct:identifier</code>, as in <a href="#ex-mapping-reference-system-as-string"></a>.</p>
 
-<aside class="example" id="ex-mapping-reference-system-as-string">
+<aside class="example" id="ex-mapping-reference-system-as-string" title="Reference system as string">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>[] a dcat:Dataset ;
   dct:conformsTo [
@@ -3659,7 +3659,7 @@ prov:wasUsedBy [
 </tbody>
 </table>
 
-<aside class="example" id="ex-mapping-charset">
+<aside class="example" id="ex-mapping-charset" title="Charset">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>[] a dcat:Dataset ;
   dcat:distribution [ a dcat:Distribution ;
@@ -3712,7 +3712,7 @@ prov:wasUsedBy [
 <p>In both cases, [[DCAT-AP-20191120]] recommends the use of the URI file type register [[EUV-FT]], operated by the Metadata Registry of the Publications Office of the EU, to specify formats/media types. However, this register does not include many of the formats/media types typically used for INSPIRE data – as, e.g., GML, shapefiles and raster files – which are available through the INSPIRE media type register [[INSPIRE-MT]].</p>
 <p>The proposal is then to use the file type register of the Publications Office, if it includes the relevant format/media type, and the INSPIRE Media Types register otherwise.</p>
 -->
-<aside class="example" id="ex-mapping-encoding">
+<aside class="example" id="ex-mapping-encoding" title="Encoding">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>[] a dcat:Dataset ;
   dcat:distribution [ a dcat:Distribution ;
@@ -3806,7 +3806,7 @@ prov:wasUsedBy [
 </tbody>
 </table>
 
-<aside class="example" id="ex-mapping-spatial-representation-type">
+<aside class="example" id="ex-mapping-spatial-representation-type" title="Spatial representation type">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>[] a dcat:Dataset ;
   dcat:distribution [ a dcat:Distribution
@@ -3969,7 +3969,7 @@ prov:wasUsedBy [
 </tbody>
 </table>
 
-<aside class="example" id="ex-mapping-maintenance-information">
+<aside class="example" id="ex-mapping-maintenance-information" title="Maintenance information">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>[] a dcat:Dataset ;
   dct:accrualPeriodicity &lt;http://publications.europa.eu/resource/authority/frequency/DAILY&gt; .</pre>

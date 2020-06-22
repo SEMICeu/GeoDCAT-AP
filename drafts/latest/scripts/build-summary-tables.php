@@ -49,9 +49,12 @@
 	  $c[$cid]['deprecated-in'] = trim($nodes[$ck]->getElementsByTagName('td')->item(4)->nodeValue);
 
 	  $deprecated[$cid] = $c[$cid];
-	  $deprecated[$cid]['domain-name'] = '';
-	  $deprecated[$cid]['domain-uri'] = '';
+/*	  
 	  $deprecated[$cid]['domain-id'] = '';
+	  $deprecated[$cid]['domain-name'] = '';
+	  $deprecated[$cid]['domain-types'] = '';
+	  $deprecated[$cid]['domain-uri'] = '';
+*/
 	}
 
 	foreach ($props as $pk => $pv) {
@@ -101,9 +104,10 @@
               if (in_array('deprecated', $p[$pid]['types'])) {
                 $c[$cid]['prop-deprecated'][] = $p[$pid];
 	        $deprecated[$pid] = $p[$pid];
-	        $deprecated[$pid]['domain-name'] = $c[$cid]['name'];
-	        $deprecated[$pid]['domain-uri'] = $c[$cid]['uri'];
 	        $deprecated[$pid]['domain-id'] = $cid;
+	        $deprecated[$pid]['domain-name'] = $c[$cid]['name'];
+	        $deprecated[$pid]['domain-types'] = $c[$cid]['types'];
+	        $deprecated[$pid]['domain-uri'] = $c[$cid]['uri'];
               }
               if (in_array('ap-ext', $p[$pid]['types']) && !in_array('deprecated', $p[$pid]['types'])) {
                 $pextnr++;
@@ -167,6 +171,8 @@
 
   foreach ($tables as $tk => $tv) {
 
+// New
+
   $html  = '';
   if ($tv['type'] == 'ap-ext') {
     $html .= '<p>This version of GeoDCAT-AP extends [[DCAT-AP-20191120]] with ' . $cextnr . ' additional classes and ' . $pextnr . ' additional properties, listed in the following table.</p>' . "\n\n";
@@ -191,81 +197,64 @@
   $html .= '</tr>' . "\n";
   $html .= '</thead>' . "\n";
   $html .= '<tbody>' . "\n";
-  foreach ($c as $k => $v) {
-//  print_r($tv['classes']);
-//  print_r($c[$k]['types']);
-//  print_r(array_intersect($tv['classes'], $c[$k]['types']));
-//  exit;
-  if (count(array_intersect($tv['classes'], $c[$k]['types'])) > 0) {
-  if (count($c[$k]['prop']) >= $tv['min-prop'] && (in_array($tv['type'], $c[$k]['types']) || $tv['type'] == '' || isset($c[$k]['prop-' . $tv['type']]) && count($c[$k]['prop-' . $tv['type']]) > 0)) {
-//echo $c[$k]['name'] . "\n";	  
-
-    $cprefix = '';
-    if (in_array('ap-ext',$c[$k]['types'])) {
-      $cprefix = '+';
-    }
-    if ($tv['type'] == 'deprecated') {
-      if (in_array('deprecated', $c[$k]['types'])) {
-//echo '<td>' . $cprefix . '<a href="#' . $k . '">' . $c[$k]['name'] . '</a></td>' . "\n";
-        $html .= '<tr>' . "\n";
-        $html .= '<td>' . $cprefix . '<a href="#' . $k . '">' . $c[$k]['name'] . '</a></td>' . "\n";
-        $html .= '<td><code>' . $c[$k]['uri'] . '</code></td>' . "\n";
-        $html .= '<td></td>' . "\n";
-        $html .= '<td><a href="' . $c[$k]['replaced-by-href']  . '"><code>' . $c[$k]['replaced-by-uri'] . '</code></a></td>' . "\n";
-        $html .= '<td>' . $c[$k]['deprecated-in'] . '</td>' . "\n";
-        $html .= '</tr>' . "\n";
+  if ($tv['type'] == 'deprecated') {
+    foreach ($deprecated as $k => $v) {
+      $tprefix = '';
+      if (in_array('ap-ext',$v['types'])) {
+        $tprefix = '+';
       }
-    }
-    else {
-//echo '<td>' . $cprefix . '<a href="#' . $k . '">' . $c[$k]['name'] . '</a></td>' . "\n";
       $html .= '<tr>' . "\n";
-      $html .= '<td>' . $cprefix . '<a href="#' . $k . '">' . $c[$k]['name'] . '</a></td>' . "\n";
-      $html .= '<td><code>' . $c[$k]['uri'] . '</code></td>' . "\n";
-    }
-    foreach ($tv['groups'] as $gk => $gv) {
-      if ($tv['type'] == 'deprecated') {
-//        $html .= '<tr>' . "\n";
+      $html .= '<td>' . $tprefix . '<a href="#' . $k . '">' . $v['name'] . '</a></td>' . "\n";
+      $html .= '<td><code>' . $v['uri'] . '</code></td>' . "\n";
+      if (isset($v['domain-id'])) {
+        $dprefix = '';
+        if (in_array('ap-ext',$v['domain-types'])) {
+          $dprefix = '+';
+        }
+        $html .= '<td>' . $dprefix . '<a title="' . $v['domain-name'] . '" href="#' . $v['domain-id'] . '"><code>' . $v['domain-uri'] . '</code></a></td>' . "\n";
       }
       else {
-        $html .= '<td>' . "\n";
+        $html .= '<td></td>' . "\n";
       }
-      if (isset($c[$k][$gv])) {
-        foreach ($c[$k][$gv] as $pk => $pv) {
-          if ($tv['type'] == '' || in_array($tv['type'], $pv['types'])) {
-            $pprefix = '';
-            if (in_array('ap-ext',$pv['types'])) {
-              $pprefix = '+';
-            }
-            if ($tv['type'] == 'deprecated') {
-              $html .= '<tr>' . "\n";
-              $html .= '<td>' . $pprefix . '<a href="#' . $pv['id'] . '">' . $pv['name'] . '</a></td>' . "\n";
-              $html .= '<td><code>' . $pv['uri'] . '</code></td>' . "\n";
-              $html .= '<td>' . $cprefix . '<a title="' . $c[$k]['name'] . '" href="#' . $k . '"><code>' . $c[$k]['uri'] . '</code></a></td>' . "\n";
-              $html .= '<td><a href="' . $pv['replaced-by-href']  . '"><code>' . $pv['replaced-by-uri'] . '</code></a></td>' . "\n";
-              $html .= '<td>' . $pv['deprecated-in'] . '</td>' . "\n";
-              $html .= '</tr>' . "\n";
-            }
-            else {
-              $html .= '<p>' . $pprefix . '<a title="' . $pv['name'] . '" href="#' . $pv['id'] . '"><code>' . $pv['uri'] . '</code></a></p>' . "\n";
-            }
-          }  
-        }  
-      }
-      if ($tv['type'] == 'deprecated') {
-//        $html .= '</tr>' . "\n";
-      }
-      else {
-        $html .= '</td>' . "\n";
-      }
-    }
-    if ($tv['type'] != 'deprecated') {
+      $html .= '<td><a href="' . $v['replaced-by-href']  . '"><code>' . $v['replaced-by-uri'] . '</code></a></td>' . "\n";
+      $html .= '<td>' . $v['deprecated-in'] . '</td>' . "\n";
       $html .= '</tr>' . "\n";
     }
   }
-  }
+  else {
+    foreach ($c as $k => $v) {
+      if (count(array_intersect($tv['classes'], $c[$k]['types'])) > 0) {
+        if (count($c[$k]['prop']) >= $tv['min-prop'] && (in_array($tv['type'], $c[$k]['types']) || $tv['type'] == '' || isset($c[$k]['prop-' . $tv['type']]) && count($c[$k]['prop-' . $tv['type']]) > 0)) {
+          $cprefix = '';
+          if (in_array('ap-ext',$c[$k]['types'])) {
+            $cprefix = '+';
+          }
+          $html .= '<tr>' . "\n";
+          $html .= '<td>' . $cprefix . '<a href="#' . $k . '">' . $c[$k]['name'] . '</a></td>' . "\n";
+          $html .= '<td><code>' . $c[$k]['uri'] . '</code></td>' . "\n";
+          foreach ($tv['groups'] as $gk => $gv) {
+            $html .= '<td>' . "\n";
+            if (isset($c[$k][$gv])) {
+              foreach ($c[$k][$gv] as $pk => $pv) {
+                if ($tv['type'] == '' || in_array($tv['type'], $pv['types'])) {
+                  $pprefix = '';
+                  if (in_array('ap-ext',$pv['types'])) {
+                    $pprefix = '+';
+	          }
+                  $html .= '<p>' . $pprefix . '<a title="' . $pv['name'] . '" href="#' . $pv['id'] . '"><code>' . $pv['uri'] . '</code></a></p>' . "\n";
+                }  
+              }  
+            }
+            $html .= '</td>' . "\n";
+          }
+          $html .= '</tr>' . "\n";
+        }
+      }
+    }
   }
   $html .= '</tbody>' . "\n";
   $html .= '</table>' . "\n";
+
 
   file_put_contents($folder . $tv['id'] . '.html', $html);
 //  echo $html;
