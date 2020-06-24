@@ -1951,8 +1951,8 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 
 <aside class="example" id="ex-mapping-resource-identifier-as-uri" title="Resource identifier as URI">
 <p>Resource metadata in GeoDCAT-AP</p>
-<pre>&lt;https://some.site/resource/1234567890&gt;
-  dct:identifier &quot;https://some.site/resource/1234567890&quot;^^xsd:anyURI .</pre>
+<pre>&lt;https://some.catalogue/resource/1234567890&gt;
+  dct:identifier &quot;https://some.catalogue/resource/1234567890&quot;^^xsd:anyURI .</pre>
 <p>Resource metadata in ISO 19139</p>
 <pre>&lt;!-- Unique resource identifier specified only with code --&gt;
 &lt;gmd:MD_Metadata&gt;
@@ -1964,7 +1964,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
         &lt;gmd:MD_Identifier&gt;
           &lt;gmd:code&gt;
             &lt;gco:CharacterString&gt;
-              https://some.site/resource/1234567890
+              https://some.catalogue/resource/1234567890
             &lt;/gco:CharacterString&gt;
           &lt;/gmd:code&gt;
         &lt;/gmd:MD_Identifier&gt;
@@ -1989,7 +1989,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
           &lt;/gmd:code&gt;
           &lt;gmd:codeSpace&gt;
             &lt;gco:CharacterString&gt;
-              https://some.site/dataset/
+              https://some.catalogue/resource/
             &lt;/gco:CharacterString&gt;
           &lt;/gmd:codeSpace&gt;
         &lt;/gmd:RS_Identifier&gt;
@@ -2467,7 +2467,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <li><p>The Named Authority Lists operated by the Metadata Registry of the EU Publications office concerning continents [[EUV-CONT]], countries [[EUV-COUNTRIES]], and places [[EUV-PLACES]].</p></li>
 </ul>
 <p>If none of the above provides the relevant geographic identifiers, Geonames [[?GEONAMES]] SHOULD be used.</p>
-<p>If an HTTP URI is not available, the geographical identifier MUST be expressed with <code>skos:prefLabel</code>, and the reference to the originating controlled vocabulary (if any) MUST be specified with <code>skos:inScheme</code>. The controlled vocabulary will be described by a name (<code>dct:title</code>) and a last modified data (<code>dct:modified</code>).</p>
+<p>If an HTTP URI is not available, the geographic identifier MUST be expressed with <code>skos:prefLabel</code>, and the reference to the originating controlled vocabulary (if any) MUST be specified with <code>skos:inScheme</code>. The controlled vocabulary will be described by a name (<code>dct:title</code>) and a last modified data (<code>dct:modified</code>).</p>
 </dd>
 </dl>
 <p>As far as geographic identifiers are concerned, following [[DCAT-AP-20191120]], GeoDCAT-AP does not prevent the use other vocabularies in addition to the recommended ones. The vocabularies identified by the GeoDCAT-AP WG are listed in <a href="#controlled-vocabularies-to-be-used"></a>.</p>
@@ -3279,10 +3279,10 @@ prov:wasUsedBy [
 
 <aside class="example" id="ex-mapping-metadata-file-identifier-as-uri" title="Metadata file identifier as URI">
 <p>Metadata on metadata in GeoDCAT-AP:</p>
-<pre>&lt;https://some.site/some/path/947e5a55-e548-11e1-9105-0017085a97ab&gt;
+<pre>&lt;https://some.catalogue/record/947e5a55-e548-11e1-9105-0017085a97ab&gt;
   a dcat:CatalogRecord ;
   dct:identifier
-    &quot;https://some.site/some/path/947e5a55-e548-11e1-9105-0017085a97ab&quot;^^xsd:anyURI .</pre>
+    &quot;https://some.catalogue/record/947e5a55-e548-11e1-9105-0017085a97ab&quot;^^xsd:anyURI .</pre>
 </aside>
 
 </section>
