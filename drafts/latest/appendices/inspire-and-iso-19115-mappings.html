@@ -2010,8 +2010,8 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>This mapping has been revised in this version of the GeoDCAT-AP specification.</p>
 <p>In particular:</p>
 <ul>
-<li>Property <code>dct:hasPart</code> has been <a href="#data-service-has-part">deprecated</a>, and replaced by property <code>dcat:servesDataset</code> to specify coupled resources.</li>
-<li>This mapping has  been moved to the core mapping profile of GeoDCAT-AP, as property <code>dcat:servesDataset</code> is part of [[DCAT-AP-20191120]].</li>
+<li>Property <code>dct:hasPart</code> has been <a href="#data-service-has-part">deprecated</a>, and replaced by property <code>dcat:servesDataset</code> to specify coupled resources and by property <code>dcat:service</code> in case of catalogue / discovery services.</li>
+<li>This mapping has  been moved to the core mapping profile of GeoDCAT-AP, as properties <code>dcat:servesDataset</code> and <code>dcat:service</code> are part of [[DCAT-AP-20191120]].</li>
 </ul>
 </aside>
 
@@ -2022,7 +2022,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 -->
 
 <aside class="note">
-<p>The notion of “coupled resource” does not apply to catalogue / discovery services. As per the [[DCAT-AP-20191120]], in GeoDCAT-AP (core and extended mapping profiles) the relationship between the catalogue and the available datasets is specified by using <code>dcat:dataset</code>, which is a sub-property of <code>dct:hasPart</code>.</p>
+	<p>The notion of “coupled resource” does not apply to catalogue / discovery services. As per the [[DCAT-AP-20191120]], in GeoDCAT-AP (core and extended mapping profiles) the relationship between the catalogue and the available resources is specified by using <code>dcat:dataset</code> (for Datasets) and <code>dcat:service</code> (for Data Services).</p>
 </aside>
 
 <p>The target dataset or series SHOULD be preferably referred to by using its unique resource identifier, as in <a href="#ex-mapping-coupled-resource"></a>.</p>
