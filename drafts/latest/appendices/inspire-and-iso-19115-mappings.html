@@ -165,9 +165,12 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <aside class="ednote">
 <p>For possible revisions to the provisional mappings describe above, see the following issues:</p>
 -->
+<!--
 <div class="issue" data-number="3"></div>
+<div class="issue" data-number="16"></div>
 <div class="issue" data-number="7"></div>
 <div class="issue" data-number="2"></div>
+-->
 <!--
 </aside>
 -->
@@ -2711,6 +2714,9 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 </ul>
 </aside>
 
+<div class="issue" data-number="15">
+</div>
+
 <p>[[VOCAB-DCAT-2]] and [[DCAT-AP-20191120]] provide property <code>dcat:spatialResolutionInMeters</code>, to specify spatial resolution as distance in meters. However, no reference vocabulary currently provides properties or classes to specify spatial resolution as equivalent scale, angular distance, and vertical distance.</p>
 <p>Based on this, GeoDCAT-AP makes use of <code>dcat:spatialResolutionInMeters</code> for spatial resolution as distance in meteres, and for the other cases defines a provisional mapping, representing spatial resolution in a human-readable form only, using property <code>rdfs:comment</code>.</p>
 <!--
@@ -3001,6 +3007,9 @@ prov:wasUsedBy [
 <li>A typo has been fixed concerning the vocabulary used to describe an agent via property <code>prov:agent</code> - [[GeoDCAT-AP-20160802]] indicated [[VCARD-RDF]] whereas the correct one is [[FOAF]].</li>
 </ul>
 </aside>
+
+<div class="issue" data-number="16">
+</div>
 
 <p>[[DCAT-AP-20191120]] supports properties to denote the publisher, the creator, and the contact point for a dataset.</p>
 <p>By contrast, [[ISO-19115]] and [[INSPIRE-MD-REG]] supports 11 possible relationships between a resource (a dataset, a dataset series, a service) and an agent (organisation), plus one for metadata. For some of them, suitable candidates exist from widely used vocabularies (in particular, DCMI Metadata Terms [[DCTERMS]]). However, for some of them no suitable candidate is available in the existing vocabularies (in particular, for roles “user” and “processor”).</p>
