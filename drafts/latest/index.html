@@ -155,6 +155,10 @@ The views expressed are purely those of the author and may not in any circumstan
 <section id="terminology">
 
 <h2>Terminology used in the Application Profile</h2>
+<aside class="ednote">
+<p>This section has been copied from DCAT-AP. It covers 2 aspects, a) (a partial set of) definitions of the domain specific core concepts and b) an reading guide on specification terminology. 
+Proposal is to remove the definitions of the domain specific terminology and leave that to the appropriate places below. </p>
+</aside>
 
 <aside class="ednote">
 <p>It is missing a definition for "Data Service", as well as for "Resource" - the superclass of all resources documented in a catalogue.</p>
@@ -192,6 +196,8 @@ The views expressed are purely those of the author and may not in any circumstan
 <li><strong>Mandatory property</strong>: a receiver MUST be able to process the information for that property; a sender MUST provide the information for that property.</li>
 <li><strong>Recommended property</strong>: a receiver MUST be able to process the information for that property; a sender SHOULD provide the information for that property if it is available.</li>
 <li><strong>Optional property</strong>: a receiver MUST be able to process the information for that property; a sender MAY provide the information for that property but is not obliged to do so.</li>
+<li><strong>Deprecated class</strong>: a receiver SHOULD be able to process information about instances of that class; a sender SHOULD NOT provide information about instances of that class.</li>
+<li><strong>Deprecated property</strong>: a receiver SHOULD be able to process information about instances of that property; a sender SHOULD NOT provide the information about instances of that propertry.</li>
 </ul>
 
 <p>The meaning of the terms MUST, MUST NOT, SHOULD and MAY in this section and in the following sections are as defined in [[RFC2119]].</p>
@@ -211,6 +217,8 @@ The views expressed are purely those of the author and may not in any circumstan
 <p>Classes no longer included in this version of the specification, or replaced with other ones, are classified as ‘Deprecated’ in <a class="no-sectionRef" href="#deprecated-classes"></a>.</p>
 </blockquote>
 </aside>
+
+<p>Classes no longer included in this version of the specification, or replaced with other ones, are classified as ‘Deprecated’ in <a class="no-sectionRef" href="#deprecated-classes"></a>.</p>
 
 <p>Finally, classes and properties added in this Application Profile and extending [[DCAT-AP]] are marked with a prepended &ldquo;plus&rdquo; sign (+), and summarised in the reference table in <a class="no-secRef" href="#geodcat-ap-classes-and-properties"></a>.</p>
 
