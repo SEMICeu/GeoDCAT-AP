@@ -1,7 +1,7 @@
 var respecConfig = {
 // ISA specific
 /*
-    version: "1.0.1.*",
+    version: "1.0.2",
     versionURL: "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
     latestVersionURL: "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
 */
