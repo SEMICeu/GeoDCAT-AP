@@ -1,6 +1,6 @@
 var respecConfig = {
 //	preProcess: [dfn_index],
-    logos: [
+//    logos: [
 //    {
 ////      src: './images/eu-isa-programme.png',
 //      src: "./images/eu-isa2-programme.jpg",
@@ -14,11 +14,11 @@ var respecConfig = {
 ////      height: 42,
 //      id: 'logo-eu-isa-programme',
 //    }
-    ],
+//    ],
 //    includePermalinks: true,
     addSectionLinks: true,
     doJsonLd: true,
-    noRecTrack: true,    
+    noRecTrack: false,    
     subtitle: "A geospatial extension for the DCAT application profile for data portals in Europe",
 //    copyrightHolder: "European Union",
 //    copyrightURL: "https://europa.eu/",
@@ -59,16 +59,28 @@ var respecConfig = {
     }
 */
     ],    
-
+//    implementationReportURI:"https://joinup.ec.europa.eu/document/geodcat-ap-implementations",
+//    errata:"https://github.com/SEMICeu/GeoDCAT-AP/issues?q=is%3Aissue+label%3AErrata+label%3A2.0.0",
 //    license: "cc-by",
-    specStatus: "unofficial",
+//    specStatus: "unofficial",
+    specStatus: "ED",
+//    specStatus: "FPWD",
+//    specStatus: "WD",
+//    specStatus: "LC",
+//    specStatus: "PR",
 //    specStatus: "REC",
     shortName: "geodcat-ap",
-    canonicalURI: "https://semiceu.github.io/geodcat-ap/",
-//    prevRecURI:           "",
+    canonicalURI: "https://semiceu.github.io/geodcat-ap/drafts/latest/",
+    prevRecURI:           "https://joinup.ec.europa.eu/release/geodcat-ap/101",
 //    previousPublishDate:  "2016-08-02",
 //    previousMaturity:     "final",
-    previousURI:          "https://joinup.ec.europa.eu/release/geodcat-ap/101",
+//    previousURI:          "https://joinup.ec.europa.eu/release/geodcat-ap/101",
+/* SEMICEU specific - start */	
+    thisVersionURI:       "https://semiceu.github.io/geodcat-ap/drafts/latest/",
+//    thisVersionURI:       "https://semiceu.github.io/geodcat-ap/drafts/2.0.0-draft-0.1/",
+//    prevVersionURI:       "https://semiceu.github.io/geodcat-ap/drafts/latest/",
+    latestVersionURI:     "https://semiceu.github.io/geodcat-ap/drafts/2.0.0-draft-latest/",
+/* SEMICEU specific - end   */	
     edDraftURI:           "https://semiceu.github.io/geodcat-ap/drafts/latest/",
     issueBase:            "https://github.com/semiceu/geodcat-ap/issues/",
     github:               "https://github.com/semiceu/geodcat-ap/",
@@ -104,7 +116,7 @@ var respecConfig = {
     authors: [
     {
       name: "GeoDCAT-AP Working Group",
-      url: "https://joinup.ec.europa.eu/solution/geodcat-ap",
+      url: "https://github.com/semiceu/geodcat-ap/",
       company: "EU ISA² Programme",
       companyURL: "https://ec.europa.eu/isa2/"
     },

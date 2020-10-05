@@ -6,10 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <!--
-<script class="remove" src="./respec-ec-common.js"></script>
-<script class="remove" src="respec-w3c-common.js"></script>
--->
 <script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c-common"></script>
+-->
+<script class="remove" src="https://semiceu.github.io/respec/builds/respec-semiceu.js"></script>
 <script class="remove" src="./config.js"></script>
 <style>
 table {width:100%;}
@@ -52,7 +51,9 @@ table code, table pre {
 The views expressed are purely those of the author and may not in any circumstances be regarded as stating an official position of the European Commission.
 </aside>
 -->
+<!--
 <p class="copyright"><a href="https://europa.eu/european-union/abouteuropa/legal_notices_en#copyright_notice">Copyright</a> © 2015-2020 <a href="https://europa.eu/">European Union</a>. This document is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" class="subfoot">Creative Commons Attribution 4.0 License</a>.</p>
+-->
 
 <section id="abstract" class="introductory">
 <h2>Abstract</h2>
@@ -1666,6 +1667,15 @@ A property which is not mentioned but would be applicable for a class according 
 <p>For linking to different language versions of associated web pages (e.g. landing pages) or documentation, a content negotiation [[CONNEG]] mechanism may be used whereby different content is served based on the Accept-Languages indicated by the browser. Using such a mechanism, the link to the page or document can resolve to different language versions of the page or document.</p>
 <p>All the occurrences of the property <code>dct:language</code>, which can be repeated if the metadata is provided in multiple languages, must have a URI as their object, not a literal string from the [[ISO-639]] code list.</p>
 <p>How multilingual information is handled in systems, for example in indexing and user interfaces, is outside of the scope of this Application Profile.</p>
+
+</section>
+
+<section id='privsec'>
+
+<h2>Privacy and security considerations </h2>
+
+<p>The GeoDCAT-AP vocabulary supports the attribution of data and metadata to various participants such as resource creators, publishers and other parties or agents, and as such defines terms that may be related to personal information. In addition, it also supports the association of rights and licenses with cataloged Resources and Distributions. These rights and licenses could potentially include or reference sensitive information such as user and asset identifiers as <a data-cite="VOCAB-ODRL#privacy-consideration">described</a> in [[VOCAB-ODRL]].</p>
+<p>Implementations that produce, maintain, publish or consume such vocabulary terms must take steps to ensure security and privacy considerations are addressed at the application level.</p>
 
 </section>
 

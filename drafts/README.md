@@ -1,7 +1,7 @@
 # GeoDCAT-AP Working Drafts
 
 - [Latest working draft](./latest/)
-- [Version 1.0.1.x](./1.0.1.x/)
+- [Version 1.0.2 (Draft 0.1)](./1.0.2-draft-0.1/)
 
 ## Licence
 
