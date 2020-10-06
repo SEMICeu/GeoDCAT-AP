@@ -22,7 +22,7 @@ var respecConfig = {
     subtitle: "A geospatial extension for the DCAT application profile for data portals in Europe",
 //    copyrightHolder: "European Union",
 //    copyrightURL: "https://europa.eu/",
-    copyrightStart: 2015,
+    copyrightStart: 2020,
 //    publishDate: "2019-11-20",
 
     alternateFormats: [
