@@ -1,0 +1,181 @@
+<table class="simple" id="table-recommended-properties-for-standard">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<!--
+<tr class="property optional ap-ext" id="standard-creation-date">
+<td>
+<p>+creation date</p>
+</td>
+<td>
+<p><code>dct:created</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the date on which the Standard has been first created.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+-->
+<tr class="property recommended ap-ext" id="standard-description">
+<td>
+<p>+description</p>
+</td>
+<td>
+<p><code>dct:description</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains a free-text account of the Standard. This property can be repeated for parallel language versions of the description - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property recommended ap-ext" id="standard-identifier">
+<td>
+<p>+identifier</p>
+</td>
+<td>
+<p><code>dct:identifier</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains the main identifier for the Standard, e.g. the URI or other unique identifier in the context of the Catalogue, or of a reference register (e.g., the ISO, OGC, W3C catalogues of their standards, the OGC &ldquo;EPSG coordinate reference systems&rdquo; register [[OGC-EPSG]]).</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property recommended ap-ext" id="standard-reference-register"> 
+<td>
+<p>+reference register</p>
+</td>
+<td>
+<p><code>skos:inScheme</code></p>
+</td>
+<td>
+<p><code>skos:ConceptScheme</code></p>
+</td>
+<td>
+<p>This property MAY be used to specify the reference register to which the Standard belongs.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property recommended ap-ext" id="standard-release-date">
+<td>
+<p>+release date</p>
+</td>
+<td>
+<p><code>dct:issued</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the date of formal issuance (e.g., publication) of the Standard.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property recommended ap-ext" id="standard-title">
+<td>
+<p>+title</p>
+</td>
+<td>
+<p><code>dct:title</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains a name given to the Standard. This property can be repeated for parallel language versions of the name - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property recommended ap-ext" id="standard-type">
+<td>
+<p>+type</p>
+</td>
+<td>
+<p><code>dct:type</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property refers to the type of the Standard. A controlled vocabulary for the values has not been established.</p>
+<p>In GeoDCAT-AP, when the Standard is a spatial or temporal reference system, the relevant URIs from the INSPIRE glossary SHOULD be used [[INSPIRE-GLOSSARY]].</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<!--
+<tr class="property optional ap-ext" id="standard-modification-date">
+<td>
+<p>+update / modification date</p>
+</td>
+<td>
+<p><code>dct:modified</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the most recent date on which the Standard was changed or modified.</p>
+</td>
+<td>
+<p>1..1</p>
+</td>
+</tr>
+-->
+<tr class="property recommended ap-ext" id="standard-version">
+<td>
+<p>+version</p>
+</td>
+<td>
+<p><code>owl:versionInfo</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains a version number or other version designation of the Standard.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+</tbody>
+</table>

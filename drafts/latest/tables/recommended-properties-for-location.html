@@ -1,0 +1,61 @@
+<table class="simple" id="table-recommended-properties-for-location">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="property recommended" id="location-bbox">
+<td>
+<p>bounding box</p>
+</td>
+<td>
+<p><code>dcat:bbox</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>gsp:wktLiteral</code> or <code>gsp:gmlLiteral</code></p>
+</td>
+<td>
+<p>This property refers to he geographic bounding box of a resource.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property recommended" id="location-centroid">
+<td>
+<p>centroid</p>
+</td>
+<td>
+<p><code>dcat:centroid</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>gsp:wktLiteral</code> or <code>gsp:gmlLiteral</code></p>
+</td>
+<td>
+<p>This property refers to the geographic centre (centroid) of a resource.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<aside class="note">
+<p>Please note that the order of usage is as follows: use the most specific geospatial relationship by preference. E.g. if the spatial description is a bbox, use <code>dcat:bbox</code>, otherwise use <code>locn:geometry</code> (see <a class="no-sectionRef" href="#optional-properties-for-location"></a>).</p>
+</aside>

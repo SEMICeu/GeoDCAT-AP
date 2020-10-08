@@ -1,0 +1,91 @@
+<table class="simple" id="table-mandatory-properties-for-catalogue">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="property mandatory" id="catalogue-dataset">
+<td>
+<p>dataset</p>
+</td>
+<td>
+<p><code>dcat:dataset</code></p>
+</td>
+<td>
+<p><code>dcat:Dataset</code></p>
+</td>
+<td>
+<p>This property links the Catalogue with a Dataset that is part of the Catalogue.</p>
+</td>
+<td>
+<p>1..n</p>
+</td>
+</tr>
+<tr class="property mandatory" id="catalogue-description">
+<td>
+<p>description</p>
+</td>
+<td>
+<p><code>dct:description</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains a free-text account of the Catalogue. This property can be repeated for parallel language versions of the description. For further information on multilingual issues, please refer to <a class="no-sectionRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p>1..n</p>
+</td>
+</tr>
+<tr class="property mandatory" id="catalogue-publisher">
+<td>
+<p>publisher</p>
+</td>
+<td>
+<p><code>dct:publisher</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>This property refers to an entity (organisation) responsible for making the Catalogue available.</p>
+</td>
+<td>
+<p>1..1</p>
+</td>
+</tr>
+<tr class="property mandatory" id="catalogue-title">
+<td>
+<p>title</p>
+</td>
+<td>
+<p><code>dct:title</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains a name given to the Catalogue. This property can be repeated for parallel language versions of the name - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p>1..n</p>
+</td>
+</tr>
+</tbody>
+</table>

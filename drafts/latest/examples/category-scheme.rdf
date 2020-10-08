@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF 
+  xmlns:dct       = "http://purl.org/dc/terms/" 
+  xmlns:rdf       = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:skos      = "http://www.w3.org/2004/02/skos/core#" 
+  xmlns:xsd       = "http://www.w3.org/2001/XMLSchema#"
+>
+
+  <skos:ConceptScheme>
+    <dct:title xml:lang="en">EEA keyword list</dct:title>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-03-01</dct:issued>
+  </skos:ConceptScheme>
+
+</rdf:RDF>

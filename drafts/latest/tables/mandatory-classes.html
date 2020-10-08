@@ -1,0 +1,91 @@
+<table class="simple" id="table-mandatory-classes">
+<thead>
+<tr>
+<th>
+<p>Class name</p>
+</th>
+<th>
+<p>Usage note for the Application Profile</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Reference</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="class mandatory" id="agent">
+<td>
+<a href="#properties-for-agent">Agent</a>
+</td>
+<td>
+<p>An entity that is associated with Catalogues and/or Datasets. If the Agent is an organisation, the use of the Organization Ontology [[VOCAB-ORG]] is recommended. See <a class="no-sectionRef" href="#agent-roles"></a> for a discussion on Agent roles.</p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p><a class="sec-ref" data-cite="FOAF#term_Agent">§&nbsp;Class: foaf:Agent</a> [[FOAF]]</p>
+<p>[[VOCAB-ORG]]</p>
+</td>
+</tr>
+<tr class="class mandatory" id="catalogue">
+<td>
+<a href="#properties-for-catalogue">Catalogue</a>
+</td>
+<td>
+<p>A catalogue or repository that hosts the Datasets being described.</p>
+</td>
+<td>
+<p><code>dcat:Catalog</code></p>
+</td>
+<td>
+<p><a data-cite="VOCAB-DCAT-2#Class:Catalog">§&nbsp;<bdi class="secno">6.3 </bdi>Class: Catalog</a> [[VOCAB-DCAT-2]]</p>
+</td>
+</tr>
+<tr class="class mandatory" id="dataset">
+<td>
+<a href="#properties-for-dataset">Dataset</a>
+</td>
+<td>
+<p>A conceptual entity that represents the information published.</p>
+</td>
+<td>
+<p><code>dcat:Dataset</code></p>
+</td>
+<td>
+<p><a data-cite="VOCAB-DCAT-2#Class:Dataset">§&nbsp;<bdi class="secno">6.6 </bdi>Class: Dataset</a> [[VOCAB-DCAT-2]]</p>
+</td>
+</tr>
+<tr class="class mandatory" id="literal">
+<td>
+<p>Literal</p>
+</td>
+<td>
+<p>A literal value such as a string or integer; Literals may be typed, e.g. as a date according to <code>xsd:date</code>. Literals that contain human-readable text have an optional language tag as defined by [[BCP47]].</p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p><a class="sec-ref" data-cite="RDF11-CONCEPTS#section-Graph-Literal">§&nbsp;<bdi class="secno">3.3 </bdi>Literals</a> [[RDF11-CONCEPTS]]</p>
+</td>
+</tr>
+<tr class="class mandatory" id="resource">
+<td>
+<p>Resource</p>
+</td>
+<td>
+<p>Anything described by RDF.</p>
+</td>
+<td>
+<p><code>rdfs:Resource</code></p>
+</td>
+<td>
+<p><a class="sec-ref" data-cite="RDF-SCHEMA#ch_resource">§&nbsp;<bdi class="secno">2.1 </bdi>rdfs:Resource</a> [[RDF-SCHEMA]]</p>
+</td>
+</tr>
+</tbody>
+</table>
