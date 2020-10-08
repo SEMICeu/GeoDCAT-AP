@@ -101,18 +101,18 @@ var respecConfig = {
       url: "",
       companyURL: "http://www.agid.gov.it/"
     }],
-    editors: [{
-      name:       "Andrea Perego",
-      company:    "European Commission, Joint Research Centre",
-      orcid:      "0000-0001-9300-2694",
-      companyURL: "https://ec.europa.eu/jrc/"
-    }],
     editors: [
-    {
-      name: "TBD",
-//      company: "",
-//      companyURL: ""
-    }
+      {
+        name:       "Andrea Perego",
+//        company:    "European Commission, Joint Research Centre",
+        orcid:      "0000-0001-9300-2694",
+//        companyURL: "https://ec.europa.eu/jrc/"
+      },
+      {
+        name: "Bert van Nuffelen",
+        company: "TenForce",
+//        companyURL: ""
+      }
     ],
     authors: [
     {
