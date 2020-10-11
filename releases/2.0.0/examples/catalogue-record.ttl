@@ -1,0 +1,45 @@
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix record: <https://some.catalogue/record/> .
+@prefix resource: <https://some.catalogue/resource/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+record:af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb a dcat:CatalogRecord ;
+  dct:conformsTo <http://data.europa.eu/930/> ;
+  dct:identifier "af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb"^^xsd:string ;
+  dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
+  dct:modified "2020-03-25"^^xsd:date ;
+  dct:source [ dct:conformsTo [ dct:title "ISO 19119/19139"@en ;
+          owl:versionInfo "1.0"@en ] ;
+      cnt:characterEncoding "UTF-8"^^xsd:string ] ;
+  dcat:contactPoint [ a vcard:Organization ;
+      vcard:fn "European Environment Agency"@en ;
+      vcard:hasAddress [ a vcard:Address ;
+          vcard:country-name "Denmark" ;
+          vcard:locality "Copenhagen" ;
+          vcard:postal-code "1050" ;
+          vcard:region "K" ;
+          vcard:street-address "Kongens Nytorv 6" ] ;
+      vcard:hasEmail <mailto:sdi@eea.europa.eu> ] ;
+  prov:qualifiedAttribution [ a prov:Attribution ;
+      dcat:hadRole <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact> ;
+      prov:agent [ a foaf:Organization ;
+          locn:address [ a locn:Address ;
+              locn:adminUnitL1 "Denmark" ;
+              locn:adminUnitL2 "K" ;
+              locn:postCode "1050" ;
+              locn:postName "Copenhagen" ;
+              locn:thoroughfare "Kongens Nytorv 6" ] ;
+          foaf:mbox <mailto:sdi@eea.europa.eu> ;
+          foaf:name "European Environment Agency"@en ] ] ;
+  foaf:primaryTopic resource:eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00 .
+

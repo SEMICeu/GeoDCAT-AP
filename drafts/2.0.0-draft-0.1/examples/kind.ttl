@@ -1,0 +1,17 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a vcard:Organization ;
+  vcard:fn "European Environment Agency"@en ;
+  vcard:hasAddress [ a vcard:Address ;
+      vcard:country-name "Denmark" ;
+      vcard:locality "Copenhagen" ;
+      vcard:postal-code "1050" ;
+      vcard:region "K" ;
+      vcard:street-address "Kongens Nytorv 6" ] ;
+  vcard:hasEmail <mailto:sdi@eea.europa.eu> ;
+  vcard:hasTelephone <tel:+451234567890> .
+
