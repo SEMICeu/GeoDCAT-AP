@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF 
+  xmlns:dcat     = "http://www.w3.org/ns/dcat#" 
+  xmlns:foaf     = "http://xmlns.com/foaf/0.1/" 
+  xmlns:locn     = "http://www.w3.org/ns/locn#" 
+  xmlns:prov     = "http://www.w3.org/ns/prov#" 
+  xmlns:rdf      = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:xsd      = "http://www.w3.org/2001/XMLSchema#"
+  xmlns:resource = "https://some.catalogue/resource/"
+>
+
+  <rdf:Description rdf:about="https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00">
+    <prov:qualifiedAttribution>
+      <prov:Attribution>
+        <prov:agent rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/EEA"/>
+        <dcat:hadRole rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact"/>
+      </prov:Attribution>
+    </prov:qualifiedAttribution>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://publications.europa.eu/resource/authority/corporate-body/EEA">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Organization"/>
+    <foaf:name xml:lang="en">European Environment Agency</foaf:name>
+    <foaf:mbox rdf:resource="mailto:sdi@eea.europa.eu"/>
+    <locn:address>
+      <locn:Address>
+        <locn:thoroughfare>Kongens Nytorv 6</locn:thoroughfare>
+        <locn:postName>Copenhagen</locn:postName>
+        <locn:adminUnitL2>K</locn:adminUnitL2>
+        <locn:postCode>1050</locn:postCode>
+        <locn:adminUnitL1>Denmark</locn:adminUnitL1>
+      </locn:Address>
+    </locn:address>
+  </rdf:Description>
+
+</rdf:RDF>

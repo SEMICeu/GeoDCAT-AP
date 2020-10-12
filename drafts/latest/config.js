@@ -71,6 +71,7 @@ var respecConfig = {
 //    specStatus: "REC",
     shortName: "geodcat-ap",
     canonicalURI: "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
+//    canonicalURI: "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
     prevRecURI:           "https://joinup.ec.europa.eu/release/geodcat-ap/101",
 //    previousPublishDate:  "2016-08-02",
 //    previousMaturity:     "final",
@@ -80,6 +81,7 @@ var respecConfig = {
 //    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
 //    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
 //    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
+    latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
 //    latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-latest/",
 /* SEMICEU specific - end   */	
     edDraftURI:           "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
@@ -135,7 +137,7 @@ var respecConfig = {
       key: "Document version",
       data: [
       {
-        value: "0.0"
+        value: "0.1"
       }
       ]
     },
@@ -161,7 +163,8 @@ var respecConfig = {
 */      
     ],
     wg: "GeoDCAT-AP Working Group",
-    wgURI: "https://joinup.ec.europa.eu/solution/geodcat-ap",
+    wgURI: "https://github.com/semiceu/geodcat-ap/",
+//    wgURI: "https://joinup.ec.europa.eu/solution/geodcat-ap",
 //    wgPublicList: "",
 //    wgPatentURI: "",
     inlineCSS: "true",
