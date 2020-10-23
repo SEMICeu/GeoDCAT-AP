@@ -19,6 +19,10 @@ Any problems encountered, or suggestions for new functionalities can be submitte
 - [Releases](./releases/): GeoDCAT-AP releases (1.0, etc.); each release might have different distributions.
 - [Working Drafts](./drafts/): Working drafts including revisions to the latest GeoDCAT-AP release.
 
+## Public review of current draft
+At this moment the latest version is in public review. The specification can be viewed here https://raw.githack.com/SEMICeu/GeoDCAT-AP/develop/releases/2.0.0/index.html.
+
+
 ## Implementations
 
 - [GeoDCAT-AP XSLT & API](https://github.com/SEMICeu/iso-19139-to-dcat-ap): Reference XSLT-based implementation and API
