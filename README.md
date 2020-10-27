@@ -20,7 +20,9 @@ Any problems encountered, or suggestions for new functionalities can be submitte
 - [Working Drafts](./drafts/): Working drafts including revisions to the latest GeoDCAT-AP release.
 
 ## Public review of current draft
-At this moment the latest version is in public review. The specification can be viewed here https://raw.githack.com/SEMICeu/GeoDCAT-AP/develop/releases/2.0.0/index.html.
+At this moment the latest version is in public review. The specification can be viewed at:
+
+https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/
 
 
 ## Implementations
