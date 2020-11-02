@@ -377,6 +377,11 @@ var respecConfig = {
         "publisher":"European Commission",
         "date":"7 November 2011"
       },
+      "INSPIRE-PV": {
+        "href":"https://inspire.ec.europa.eu/metadata-codelist/ProtocolValue",
+        "title":"INSPIRE Registry: Protocol values",
+        "publisher":"European Commission"
+      },
       "INSPIRE-DS": {
         "href":"https://inspire.ec.europa.eu/documents/Network_Services/TechnicalGuidance_DiscoveryServices_v3.1.pdf",
         "title":"Technical Guidance for the implementation of INSPIRE Discovery Services. Version 3.1",
