@@ -1796,6 +1796,9 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>However, whenever the URL points to a service endpoint, the resource locator SHOULD be always mapped to property <code>dcat:accessURL</code>, and complemented by additional two properties, namely, <code>dcat:endpointURL</code> and <code>dcat:endpointDescription</code>.</p>
 <p>More precisely, if the URL is recognised as pointing to a capabilities document, the URL is mapped to property <code>dcat:endpointDescription</code>, whereas property <code>dcat:endpointURL</code> will take as value the URL without it query string component.</p>
 <p>Properties <code>dcat:endpointURL</code> and <code>dcat:endpointDescription</code> will have as domain class <code>dcat:DataService</code>, linked to the dataset distribution via property <code>dcat:accessService</code>.</p>
+<p>Finally, whenever it is possible to recognise the service protocol, this information will be specified by property <code>dct:conformsTo</code>, taking as value the URI of the relevant specification from the INSPIRE Registry's code list for protocol values [[INSPIRE-PV]]. As an example, the following table lists URIs for service protocols of some OGC services.</p>
+
+<!--
 <p>Finally, whenever it is possible to recognise the service protocol, this information will be specified by property <code>dct:conformsTo</code>, taking as value the URI of the relevant specification. As an example, the following table lists URIs for service protocols of some OGC services.</p>
 
 <table class="simple" id="table-service-protocol-uris">
@@ -1840,6 +1843,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 </tr>
 </tbody>
 </table>
+-->
 
 <p>As far as services are concerned, the resource locator SHOULD be mapped to properties <code>dcat:endpointURL</code>, <code>dcat:endpointDescription</code>, and <code>dct:conformsTo</code>, as described above.</p> 
 
