@@ -1615,9 +1615,10 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <!--
 <p>For the reason explained above, the core mapping profile of GeoDCAT-AP includes only the mappings for catalogue services (i.e., <code>dcat:Catalog</code>), whereas the mappings of other types of services are supported only in the extended mapping profile of GeoDCAT-AP.</p>
 -->
+<!--	
 <div class="issue" data-number="10">
 </div>
-
+-->
 <aside class="example" id="ex-mapping-resource-type" title="Resource type">
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>## Resource type for datasets
@@ -2213,10 +2214,10 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 
 <p>As far as service metadata are concerned, keywords can classify either a service or the datasets / series operated by the service itself. For the latter, INSPIRE Metadata Regulation requires using at least one of the keywords from the ISO 19119 code list of spatial data service categories.</p>
 <p>Both [[VOCAB-DCAT-2]] and [[DCAT-AP-20200608]] do not have any specific property for keywords classifying either a service or the datasets / series operated by a service. Moreover, <code>dcat:theme</code> and <code>dcat:keyword</code> cannot be used for services, since their domain is restricted to <code>dcat:Dataset</code>.</p>
-
+<!--
 <div class="issue" data-number="8">
 </div>
-
+-->
 <p>In order to keep the distinction between these two types of keywords, the adopted solution is as follows:</p>
 <ul>
 <li><p>Keywords from the ISO 19119 codelists of spatial data service type and categories are mapped to <code>dct:type</code>, and expressed by the corresponding URI in the INSPIRE Registry – reference registers:</p>
@@ -2447,7 +2448,9 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <aside class="ednote">
 <p>For a possible revision to how bounding boxes should be specified, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/1">Issue #1</a>:</p>
 -->
+<!--	
 <div class="issue" data-number="1"></div>
+-->
 <!--
 </aside>
 -->
@@ -2583,7 +2586,9 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <!--<aside class="ednote">
 <p>For a possible revision to how start / end date(time) should be specified, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/5">Issue #5</a>:</p>
 -->
+<!--
 <div class="issue" data-number="5"></div>
+-->
 <!--
 </aside>
 -->
@@ -2728,7 +2733,9 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <aside class="ednote">
 <p>For a possible revision to how spatial / temporal resolution should be specified, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/3">Issue #3</a>:</p>
 -->
+<!--	
 <div class="issue" data-number="3"></div>
+-->
 <!--
 </aside>
 -->
@@ -2878,7 +2885,9 @@ prov:wasUsedBy [
 <aside class="ednote">
 <p>For possible revisions to how conformity is specified, see the following issue:</p>
 -->
+<!--
 <div class="issue" data-number="7"></div>
+-->
 <!--
 </aside>
 -->
@@ -3007,10 +3016,10 @@ prov:wasUsedBy [
 <li>A typo has been fixed concerning the vocabulary used to describe an agent via property <code>prov:agent</code> - [[GeoDCAT-AP-20160802]] indicated [[VCARD-RDF]] whereas the correct one is [[FOAF]].</li>
 </ul>
 </aside>
-
+<!--
 <div class="issue" data-number="16">
 </div>
-
+-->
 <p>[[DCAT-AP-20200608]] supports properties to denote the publisher, the creator, and the contact point for a dataset.</p>
 <p>By contrast, [[ISO-19115]] and [[INSPIRE-MD-REG]] supports 11 possible relationships between a resource (a dataset, a dataset series, a service) and an agent (organisation), plus one for metadata. For some of them, suitable candidates exist from widely used vocabularies (in particular, DCMI Metadata Terms [[DCTERMS]]). However, for some of them no suitable candidate is available in the existing vocabularies (in particular, for roles “user” and “processor”).</p>
 <p>In the extended mapping profile of GeoDCAT-AP, the W3C PROV ontology [[PROV-O]] is used to specify the relationship between the resource and the responsible organisation. The FOAF Vocabulary [[FOAF]] will then be used to specify the contact information concerning the responsible party. Finally, the responsible party role will be specified by using <code>dcat:hadRole</code>, and using the relevant code list values from the INSPIRE Registry – reference register [[INSPIRE-RPR]]:</p>
