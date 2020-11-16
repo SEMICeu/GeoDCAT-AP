@@ -1629,6 +1629,12 @@ A property which is not mentioned but would be applicable for a class according 
 <p>Based on the experience gained with the use of domain-specific extensions for additional ‘agent roles’ in the exchange of information about Datasets and on the requests of implementors and stakeholders, the  DCAT Application Profile release 2.0.0 is  extended with additional roles as proposed by DCAT Version 2, W3C Working Draft 28 May 2019 [[VOCAB-DCAT-2-20190528]] that have proven to be useful across domains. Precisely, properties <code>dct:creator</code>, <code>prov:qualifiedAttribution</code> and <code>prov:qualifiedRelation</code> have been added to <code>dcat:Dataset</code> class to further facilitate relationships between datasets and agents [[VOCAB-DCAT-QA]].</p>
 <p>It should be noted that, even if a more expressive approach is used in a particular implementation, the provision of information using <code>dct:publisher</code> for the Catalogue is still mandatory under the rules laid down in the Conformance Statement in <a class="no-sectionRef" href="#conformance"></a>, while the provision of information using <code>dct:publisher</code> is strongly recommended for Dataset. The provision of such information using <code>dct:publisher</code> will ensure interoperability with implementations that use the basic approach of DCAT-AP.</p>
 -->
+  
+<aside class="note">
+<p>The approach based on [[PROV-O]] is meant to give data providers for a mechanism to specify, in a harmonised way, all the roles defined in INSPIRE, thus ensuring interoperability as well as compliance with [[INSPIRE-MD-REG]].</p>
+<p>However, differently from the approach based on [[DCAT-AP-20200608]] and [[DCTERMS]], its use is not mandatory. Depending on their requirements, data providers may decide to use only the approach based on [[DCAT-AP-20200608]] and [[DCTERMS]], or complement it with the one based on [[PROV-O]] for the roles not covered by the former, or use both approaches concurrently.</p>
+</aside>  
+  
 </section>
 
 <!-- Conformance Test Results -->
