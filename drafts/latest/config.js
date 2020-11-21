@@ -640,7 +640,7 @@ var respecConfig = {
         "publisher":"European Commission"
        },
       "DCAT-AP-CRMP":{
-        "href":"https://joinup.ec.europa.eu/document/change-and-release-management-policy-dcat-ap",
+        "href":"https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap",
         "title":"Joinup. Change and Release Management Policy for DCAT-AP",
         "publisher":"European Commission"
        },
