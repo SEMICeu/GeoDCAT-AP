@@ -106,7 +106,7 @@ var respecConfig = {
     editors: [
       {
         name:       "Andrea Perego",
-//        company:    "European Commission, Joint Research Centre",
+        company:    "External Consultant, European Commission, Joint Research Centre",
         orcid:      "0000-0001-9300-2694",
 //        companyURL: "https://ec.europa.eu/jrc/"
       },
