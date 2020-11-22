@@ -80,7 +80,7 @@ var respecConfig = {
     thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
 //    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
 //    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
-//    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
+    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
     latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
 //    latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-latest/",
 /* SEMICEU specific - end   */	
