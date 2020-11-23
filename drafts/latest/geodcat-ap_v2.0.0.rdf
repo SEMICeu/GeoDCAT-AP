@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rdf:RDF 
+<rdf:RDF
   xmlns:adms      = "http://www.w3.org/ns/adms#" 
+  xmlns:bibo      = "http://purl.org/ontology/bibo/" 
   xmlns:cnt       = "http://www.w3.org/2011/content#" 
-  xmlns:dc        = "http://purl.org/dc/elements/1.1/" 
   xmlns:dcat      = "http://www.w3.org/ns/dcat#" 
   xmlns:dcatap    = "http://data.europa.eu/r5r/" 
   xmlns:dct       = "http://purl.org/dc/terms/" 
-  xmlns:dctype    = "http://purl.org/dc/dcmitype/" 
+  xmlns:duv       = "http://www.w3.org/ns/duv#"
   xmlns:foaf      = "http://xmlns.com/foaf/0.1/" 
   xmlns:geodcatap = "http://data.europa.eu/930/" 
-  xmlns:gsp       = "http://www.opengis.net/ont/geosparql#" 
   xmlns:locn      = "http://www.w3.org/ns/locn#" 
   xmlns:owl       = "http://www.w3.org/2002/07/owl#" 
   xmlns:odrl      = "http://www.w3.org/ns/odrl/2/" 
@@ -17,7 +16,6 @@
   xmlns:prov      = "http://www.w3.org/ns/prov#" 
   xmlns:rdf       = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
   xmlns:rdfs      = "http://www.w3.org/2000/01/rdf-schema#" 
-  xmlns:schema    = "http://schema.org/" 
   xmlns:skos      = "http://www.w3.org/2004/02/skos/core#" 
   xmlns:spdx      = "http://spdx.org/rdf/terms#" 
   xmlns:time      = "http://www.w3.org/2006/time#"
@@ -27,27 +25,645 @@
   xmlns:xsd       = "http://www.w3.org/2001/XMLSchema#"
 >
 
-<!-- Spatial resolution -->
+<!-- ========================================= -->
+<!-- Vocabulary description                    -->
+<!-- ========================================= -->
 
-  <rdf:Description rdf:about="http://data.europa.eu/930/spatialResolutionAsScale">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/> 
-    <rdfs:label xml:lang="en">spatial resolution as equivalent scale</rdfs:label>
-    <rdfs:comment xml:lang="en">Spatial resolution of a dataset expressed as equivalent scale, measured by using a representative fraction (e.g., 1:1,000, 1:1,000,000).</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  <rdf:Description rdf:about="http://data.europa.eu/930/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/adms#Asset"/>
+	<dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+	<dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/APROF"/>
+	<adms:status rdf:resource="http://publications.europa.eu/resource/dataset/dataset-status/DEVELOP"/>
+    <vann:preferredNamespacePrefix>geodcatap</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://data.europa.eu/930/</vann:preferredNamespaceUri>
+    <rdfs:label xml:lang="en">GeoDCAT-AP</rdfs:label>
+    <dct:title xml:lang="en">GeoDCAT-AP</dct:title>
+    <dct:alternative xml:lang="en">GeoDCAT-AP: A geospatial extension for the DCAT application profile for data portals in Europe</dct:alternative>
+    <skos:altLabel xml:lang="en">GeoDCAT-AP: A geospatial extension for the DCAT application profile for data portals in Europe</skos:altLabel>
+    <owl:versionInfo xml:lang="en">Version 2.0.0</owl:versionInfo>
+    <rdfs:comment xml:lang="en">GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 and those defined in the framework of the INSPIRE Directive of the European Union.</rdfs:comment>
+    <dct:abstract xml:lang="en">GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 and those defined in the framework of the INSPIRE Directive of the European Union.</dct:abstract>
+    <adms:versionNotes xml:lang="en">This version of GeoDCAT-AP is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP and was built starting from GeoDCAT-AP version 1.0.1, with the purpose of aligning it with DCAT-AP version 2.0.1 and with version 2.0.1 of the INSPIRE Metadata Technical Guidelines.</adms:versionNotes>
+    <dct:conformsTo rdf:resource="https://www.w3.org/TR/vocab-dcat-2/"/>
+    <dct:conformsTo rdf:resource="http://data.europa.eu/r5r/"/>
+    <dct:conformsTo rdf:resource="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements"/>
+    <dct:conformsTo rdf:resource="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap"/>
+    <dct:conformsTo rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
+    <rdfs:isDefinedBy rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/"/>
+    <voaf:reliesOn rdf:resource="http://www.w3.org/ns/adms#"/> 
+    <voaf:reliesOn rdf:resource="http://www.w3.org/2011/content#"/> 
+    <voaf:reliesOn rdf:resource="http://www.w3.org/ns/dcat#"/> 
+    <voaf:reliesOn rdf:resource="http://data.europa.eu/r5r/"/> 
+    <voaf:reliesOn rdf:resource="http://purl.org/dc/terms/"/> 
+    <voaf:reliesOn rdf:resource="http://xmlns.com/foaf/0.1/"/> 
+    <voaf:reliesOn rdf:resource="http://www.w3.org/ns/locn#"/> 
+    <voaf:reliesOn rdf:resource="http://www.w3.org/2002/07/owl#"/> 
+    <voaf:reliesOn rdf:resource="http://www.w3.org/ns/odrl/2/"/> 
+    <voaf:reliesOn rdf:resource="http://www.w3.org/ns/org#"/> 
+    <voaf:reliesOn rdf:resource="http://www.w3.org/ns/prov#"/> 
+    <voaf:reliesOn rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/> 
+    <voaf:reliesOn rdf:resource="http://www.w3.org/2004/02/skos/core#"/> 
+    <voaf:reliesOn rdf:resource="http://spdx.org/rdf/terms#"/> 
+    <voaf:reliesOn rdf:resource="http://www.w3.org/2006/time#"/>
+    <voaf:reliesOn rdf:resource="http://www.w3.org/2006/vcard/ns#"/>
+    <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+    <dct:rightsHolder rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/EURUN"/>
+    <dct:publisher rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/COM"/>
+    <bibo:editor>
+      <foaf:Person rdf:about="https://andrea-perego.name/foaf/#me">
+        <foaf:name>Andrea Perego</foaf:name>
+        <owl:sameAs rdf:resource="https://orcid.org/0000-0001-9300-2694"/>
+      </foaf:Person>
+    </bibo:editor>
+    <bibo:editor>
+      <foaf:Person>
+        <foaf:name>Bert van Nuffelen</foaf:name>
+      </foaf:Person>
+    </bibo:editor>
+    <dct:creator>
+      <foaf:Group>
+        <foaf:name>GeoDCAT-AP Working Group</foaf:name>
+        <foaf:page rdf:resource="https://github.com/semiceu/geodcat-ap/"/>
+      </foaf:Group>
+    </dct:creator>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-10-12</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-1-23</dct:modified>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://data.europa.eu/930/spatialResolutionInDegrees">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/> 
-    <rdfs:label xml:lang="en">spatial resolution as angular distance</rdfs:label>
-    <rdfs:comment xml:lang="en">Spatial resolution of a dataset expressed as angular distance, measured in decimal degrees.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+<!-- ========================================= -->
+<!-- Classes                                   -->
+<!-- ========================================= -->
+
+<!-- Mandatory classes -->
+
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class corresponds to the notion of "responsible party", as defined in ISO 19115 and INSPIRE, when the role is different from "point of contact".</skos:scopeNote>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://data.europa.eu/930/spatialResolutionAsVerticalDistanceInMeters">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/> 
-    <rdfs:label xml:lang="en">spatial resolution as equivalent scale</rdfs:label>
-    <rdfs:comment xml:lang="en">Spatial resolution of a dataset expressed as vertical distance, measured in metres.</rdfs:comment>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Catalog">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class, complemented with dcat:DataService, corresponds to the notion of "catalogue service", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
   </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class corresponds to the notions of "datasets" and "dataset series", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+<!-- Recommended classes -->
+
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class corresponds to the notion of "keyword from controlled vocabulary", as defined in ISO 19115 and INSPIRE, and for items from gazetteers and registers of reference systems.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class corresponds to the notions of "originating controlled vocabulary", as defined in ISO 19115 and INSPIRE, and for gazetteers and registers of reference systems.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Distribution">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used as in DCAT and in DCAT-AP.</skos:scopeNote>
+  </rdf:Description> 
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/LicenseDocument">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+<!-- Optional classes -->
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#Activity">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class MAY be used to specify a testing activity over a resource, against a given Standard, producing as output a conformance degree. As such, it is one of the classes used to represent the notion of "conformity and data quality".</skos:scopeNote>
+  </rdf:Description> 
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/locn#Address">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class MAY be used to specify a postal address of an Agent, with a role different from "contact point".</skos:scopeNote>
+  </rdf:Description> 
+
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Address">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class MAY be used to specify a postal address of an Agent, but only when having the role of "point of contact".</skos:scopeNote>
+  </rdf:Description> 
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#Attribution">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP to specify, via a qualified relationship, an agent role not supported in the reference vocabularies. In particular, in GeoDCAT-AP it provides a general mechanism to express all the responbile party roles defined in ISO 10115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description> 
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#CatalogRecord">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used to express all the information that, in ISO 19155 and INSPIRE, is specified on metadata records.</skos:scopeNote>
+  </rdf:Description> 
+
+  <rdf:Description rdf:about="http://spdx.org/rdf/terms#Checksum">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used as in DCAT-AP.</skos:scopeNote>
+  </rdf:Description> 
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#DataService">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used to express all the information that, in ISO 19155 and INSPIRE, is specified on spatial data services.</skos:scopeNote>
+  </rdf:Description> 
+
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Document">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used as in DCAT-AP.</skos:scopeNote>
+  </rdf:Description> 
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/adms#Identifier">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#Kind">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class corresponds to the notion of "responsible party", as defined in ISO 19115 and INSPIRE, but only when having the role of "point of contact".</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/Location">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/MediaType">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/PeriodOfTime">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/ProvenanceStatement">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used to express all the information that, in ISO 19155 and INSPIRE, is specified on "lineage".</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Relationship">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/RightsStatement">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/Standard">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP. In particular, in GeoDCAT-AP this class is used to express all the information that, in ISO 19155 and INSPIRE, is specified on "metadata standard", "reference system", "reference specification" (for conformity test results).</skos:scopeNote>
+  </rdf:Description>
+
+<!-- ========================================= -->
+<!-- Properties                                -->
+<!-- ========================================= -->
+
+<!-- Identifiers -->
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property corresponds to the notions of "resource identifier", "geographic identifier", and "metadata file identifier", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/adms#identifier">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#notation">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+<!-- Provenance -->
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/source">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP. Moreover, it MAY be used to link a testing activity over a resource with the corresponding result. As such, it is one of the properties used to represent the notion of "conformity and data quality".</skos:scopeNote>
+  </rdf:Description> 
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#generated">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property MAY be used to specify the result of a testing activity over a resource. As such, it is one of the properties used to represent the notion of "conformity and data quality".</skos:scopeNote>
+  </rdf:Description> 
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/provenance">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify a narrative description of "lineage", as defined in ISO 19155 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+<!-- Maintenance information -->
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/accrualPeriodicity">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property corresponds to the notion of "maintenance information", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+  
+<!-- Resource classification -->
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/type">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property it is used as in DCAT-AP. Moreover, it corresponds to the notions of "resource type", "service category", "service type", and "conformance degree", as defined in ISO 19115 and INSPIRE. Finally, it is used to specify the type of reference system (spatial or temporal) by using the relevant URIs from the glossary hosted on the INSPIRE Registry.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#theme">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property corresponds to the notion of "keyword from controlled vocabulary", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#keyword">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property corresponds to the notion of "free keyword", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/subject">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property SHOULD take as value one of the URIs of the "Topic categories in accordance with EN ISO 19115" code list operated by the INSPIRE Registry.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#themeTaxonomy">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to link an item to a controlled vocabulary, gazetteer, or register of reference systems.</skos:scopeNote>
+  </rdf:Description>
+
+<!-- Containment relationships -->
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/hasPart">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/isPartOf">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#dataset">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#service">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#catalog">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#record">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+<!-- Related resources -->
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#landingPage">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/homepage">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/page">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#accessURL">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#downloadURL">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#endpointURL">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#endpointDescription">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/primaryTopic">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#servesDataset">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#accessService">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#qualifiedAssociation">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#qualifiedRelation">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://purl.org/dc/terms/isVersionOf">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/hasVersion">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/isReferencedBy">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/relation">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/adms#sample">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+<!-- Status -->
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/adms#status">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+<!-- Use and access conditions -->
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/rights">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://purl.org/dc/terms/accessRights">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP. For INSPIRE metadata, this property SHOULD be used with the URIs of the "Limitations on public access" code list operated by the INSPIRE Registry.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/odrl/2/hasPolicy">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.europa.eu/r5r/availability">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+<!-- Representation, format, char encoding, language -->
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/format">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#mediaType">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/2011/content#characterEncoding">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the "character encoding", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/language">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP. Moreover, it corresponds to the notion of "resource language" and "metadata language", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#byteSize">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://spdx.org/rdf/terms#checksum">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://spdx.org/rdf/terms#algorithm">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://spdx.org/rdf/terms#checksumValue">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#compressFormat">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#packageFormat">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/adms#representationTechnique">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the "spatial representation type", as defined in ISO 19115 and INSPIRE, by using the URIs from the relevant register hosted by the INSPIRE Registry.</skos:scopeNote>
+  </rdf:Description>
+  
+<!-- Agents -->
+
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/mbox">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the email address of an Agent, when the role is different from "point of contact".</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT-AP to specify the name of an Agent, when the role is different from "point of contact".</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/phone">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the phone number of an Agent, when the role is different from "point of contact".</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/workplaceHomepage">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the work homepage of an Agent, when the role is different from "point of contact".</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/org#memberOf">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the affiliation of an Agent, when the role is different from "point of contact".</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/locn#address">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the postal address of an Agent, when the role is different from "point of contact".</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/locn#adminUnitL2">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the administrative area of a postal address of an Agent, when the role is different from "point of contact".</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/locn#postName">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the city of a postal address of an Agent, when the role is different from "point of contact".</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/locn#adminUnitL1">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the country of a postal address of an Agent, when the role is different from "point of contact".</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/locn#postCode">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the postal code of a postal address of an Agent, when the role is different from "point of contact".</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/locn#thoroughfare">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the street name and civic number of a postal address of an Agent, when the role is different from "point of contact".</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasEmail">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the email address of an Agent, but only when having the role of "point of contact".</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#fn">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT-AP to specify the name of an Agent, but only when having the role of "point of contact".</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasTelephone">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the phone number of an Agent, but only when having the role of "point of contact".</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasURL">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the work homepage of an Agent, but only when having the role of "point of contact".</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#organization-name">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the affiliation of an Agent, but only when having the role of "point of contact".</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#hasAddress">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the postal address of an Agent, but only when having the role of "point of contact".</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#region">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the administrative area of a postal address of an Agent, but only when having the role of "point of contact".</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#locality">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the city of a postal address of an Agent, but only when having the role of "point of contact".</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#country-name">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the country of a postal address of an Agent, but only when having the role of "point of contact".</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#postal-code">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the postal code of a postal address of an Agent, but only when having the role of "point of contact".</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#street-address">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the street name and civic number of a postal address of an Agent, but only when having the role of "point of contact".</skos:scopeNote>
+  </rdf:Description>
+
+<!-- Annotation properties -->
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property corresponds to the notion of "resource title", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property corresponds to the notion of "resource abstract", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property corresponds to the notion of "metadata standard version", as defined in ISO 19115 and INSPIRE. Moreover, it can also be used to specify the version of other types resources, as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/adms#versionNotes">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify a textual descriptions of "conditions for access and use and limitations on public access - use limitations and access / other constraints" (rights statements) and "lineage", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class property is used to specify the name of a Category, a geographic name, reference system, .</skos:scopeNote>
+  </rdf:Description>
+
+<!-- Conformity -->
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/conformsTo">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is generally used to specify conformity of a resource with a reference standard / specification / regulation / reference system. As such, it is one of the properties used to represent the notions of "conformity and data quality", "reference system", "metadata standard", as defined in ISO 19115 and INSPIRE. About the notion of "conformity and data quality", this property can only be used when the conformity degree is "conformant".</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasUsedBy">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property MAY be used to specify a testing activity over a resource. As such, it is one of the properties used to represent the notion of "conformity and data quality".</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#used">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property MAY be used to specify the resource over which a testing activity has been carried out. As such, it is one of the properties used to represent the notion of "conformity and data quality".</skos:scopeNote>
+  </rdf:Description> 
+
+<!-- Spatial aspects -->
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/spatial">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource, by using either a geographic identifier or a geometry. As such, it is one of the properties used to represent the notion of "geographic location / geographic bounding box", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/locn#geometry">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource, by using a geometry. As such, it is one of the properties used to represent the notion of "geographic location / geographic bounding box", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#centroid">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource, by using a centroid. As such, it is one of the properties used to represent the notion of "geographic location / geographic bounding box", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#bbox">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource, by using a bounding box. As such it is one of the properties used to represent the notion of "geographic location / geographic bounding box", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#spatialResolutionInMeters">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property corresponds to the notion of "spatial resolution", as defined in ISO 19115 and INSPIRE, whenever the spatial resolution is expressed as distance in metres.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify "spatial resolution", as defined in ISO 19115 and INSPIRE, as a textual description. In particular, it is used to express spatial resolution when it cannot be expressed with property dcat:spatialResolutionInMeters.</skos:scopeNote>
+  </rdf:Description>
+  
+<!-- Temporal aspects -->
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#startDate">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#endDate">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/2006/time#hasBeginning">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/2006/time#hasEnd">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/created">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property corresponds to the notion of "temporal reference - creation date", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property corresponds to the notion of "temporal reference - publication date", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property corresponds to the notion of "temporal reference - last revision", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/temporal">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property corresponds to the notion of "temporal reference - temporal extent" defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#temporalResolution">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP.</skos:scopeNote>
+  </rdf:Description>
+
+<!-- Agent roles -->
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#qualifiedAttribution">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP to specify an agent role not supported in the reference vocabularies.</skos:scopeNote>
+  </rdf:Description> 
+  
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#hadRole">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the responsible party role by using the URIs from the relevant register hosted by the INSPIRE Registry.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#agent">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the Agent associated with a role not supported in the reference vocabularies.</skos:scopeNote>
+  </rdf:Description> 
+  
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property corresponds to responsible party role "author" defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/publisher">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property corresponds to responsible party role "publisher" defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/dc/terms/rightsHolder">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property corresponds to responsible party role "owner" defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dcat#contactPoint">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property corresponds to responsible party role "point of contact" defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+  </rdf:Description>
+
+
+<!-- ========================================= -->
+<!-- Terms defined in the GeoDCAT-AP namespace -->
+<!-- ========================================= -->
+
 
 </rdf:RDF>
