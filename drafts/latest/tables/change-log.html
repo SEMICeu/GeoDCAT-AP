@@ -1,0 +1,2112 @@
+<table class="simple" id="table-change-log">
+<thead>
+<tr>
+<th>URI</th>
+<th>Type</th>
+<th>Action</th>
+<th>Description</th>
+<th>Issue</th>
+<th>Release</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<p>+<code>dcat:keyword</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Catalogue, Data Service)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>rdfs:Literal</code></p>
+<p>Tag / keyword.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/8">GeoDCAT-AP-8</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>+<code>dcat:theme</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Catalogue, Data Service)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>skos:Concept</code></p>
+<p>Theme / category.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/8">GeoDCAT-AP-8</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>+<code>dcat:spatialResolutionInMeters</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Data Service)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>xsd:decimal</code></p>
+<p>This property refers to the minimum spatial separation resolvable in a Data Service, measured in metres.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/3">GeoDCAT-AP-3</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:temporalResolution</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Data Service)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>xsd:duration</code></p>
+<p>This property refers to the minimum time period resolvable in a Data Service.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/3">GeoDCAT-AP-3</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>+<code>dctype:Service</code></p>
+</td>
+<td>
+<p>Optional class</p>
+</td>
+<td>
+<p>Deprecated</p>
+</td>
+<td>
+<p>A system that provides one or more functions.</p>
+</td>
+<td>
+<p><a href="https://github.com/semiceu/geodcat-ap/issues/10">GeoDCAT-AP-10</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>+<code>dct:hasPart</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Data Service)</p>
+</td>
+<td>
+<p>Deprecated</p>
+</td>
+<td>
+<p>Range: <code>dcat:Dataset</code></p>
+<p>Serves dataset.</p>
+</td>
+<td>
+<p><a href="https://github.com/semiceu/geodcat-ap/issues/10">GeoDCAT-AP-10</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>+<code>dc:subject</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Catalogue, Data Service)</p>
+</td>
+<td>
+<p>Deprecated</p>
+</td>
+<td>
+<p>Range: <code>rdfs:Literal</code></p>
+<p>Keyword / tag.</p>
+</td>
+<td>
+<p><a href="https://github.com/semiceu/geodcat-ap/issues/8">GeoDCAT-AP-8</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>+<code>foaf:homepage</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Data Service)</p>
+</td>
+<td>
+<p>Deprecated</p>
+</td>
+<td>
+<p>Range: <code>foaf:Document</code></p>
+<p>Endpoint URL.</p>
+</td>
+<td>
+<p><a href="https://github.com/semiceu/geodcat-ap/issues/10">GeoDCAT-AP-10</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>+<code>dct:subject</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Catalogue, Data Service)</p>
+</td>
+<td>
+<p>Deprecated</p>
+</td>
+<td>
+<p>Range: <code>skos:Concept</code></p>
+<p>Theme / category.</p>
+</td>
+<td>
+<p><a href="https://github.com/semiceu/geodcat-ap/issues/8">GeoDCAT-AP-8</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>+<code>dct:type</code></p>
+</td>
+<td>
+<p>Optional property</p>
+</td>
+<td>
+<p>Deprecated</p>
+</td>
+<td>
+<p>Range: <code>skos:Concept</code></p>
+<p>Agent role.</p>
+</td>
+<td>
+<p><a href="https://github.com/semiceu/geodcat-ap/issues/??">GeoDCAT-AP-??</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>+<code>rdfs:comment</code></p>
+</td>
+<td>
+<p>Optional property</p>
+</td>
+<td>
+<p>Deprecated</p>
+</td>
+<td>
+<p>Range: <code>rdfs:Literal</code></p>
+<p>Spatial resolution.</p>
+</td>
+<td>
+<p><a href="https://github.com/semiceu/geodcat-ap/issues/3">GeoDCAT-AP-3</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+<!--
+<tr>
+<td>
+<p><code>foaf:primaryTopic</code></p>
+</td>
+<td>
+<p>Mandatory property</p>
+<p>(Catalogue Record)</p>
+</td>
+<td>
+<p>Update</p>
+</td>
+<td>
+<p>Extended the range to cover the <code>dcat:Resource</code> subclasses <code>dcat:Catalog</code>, <code>dcat:Dataset</code> and <code>dcat:DataService</code></p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/92">DCAT-AP-92</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+-->
+<tr>
+<td>
+<p><code>dct:MediaTypeorExtent</code></p>
+</td>
+<td>
+<p>Optional class</p>
+</td>
+<td>
+<p>Deprecated</p>
+</td>
+<td>
+<p>A media type or extent, e.g. the format of a computer file</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/80">DCAT-AP-80</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:MediaType</code></p>
+</td>
+<td>
+<p>Optional class</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>A media type, e.g. the format of a computer file</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/80">DCAT-AP-80</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:language</code></p>
+</td>
+<td>
+<p>Property</p>
+</td>
+<td>
+<p>Update</p>
+</td>
+<td>
+<p>Align with [[VOCAB-DCAT-2]]: add to usage of controlled vocabulary for all usages</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/88">DCAT-AP-88</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:mediaType</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Distribution)</p>
+</td>
+<td>
+<p>Update</p>
+</td>
+<td>
+<p>Updates</p>
+<p>Range: <code>dct:MediaTypeOrExtent</code> &rarr; <code>dct:MediaType</code></p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/80">DCAT-AP-80</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<!--
+<tr>
+<td>
+<p><code>locn:geometry</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Location)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>rdfs:Literal</code></p>
+<p>This property associates any resource with the corresponding geometry</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/85">DCAT-AP-85</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+-->
+<tr>
+<td>
+<p><code>dcat:bbox</code></p>
+</td>
+<td>
+<p>Recommended property</p>
+<p>(Location)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>rdfs:Literal</code></p>
+<p>This property refers to the geographic bounding box of a resource.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/85">DCAT-AP-85</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:centroid</code></p>
+</td>
+<td>
+<p>Recommended property</p>
+<p>(Location)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>rdfs:Literal</code></p>
+<p>This property refers to the geographic centre (centroid) of a resource</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/85">DCAT-AP-85</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>time:hasEnd</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Period Of Time)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>time:Instant</code></p>
+<p>This property contains the end of a period or interval.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/84">DCAT-AP-84</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>time:hasBeginning</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Period Of Time)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>time:Instant</code></p>
+<p>This property contains the beggining of a period or interval.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/84">DCAT-AP-84</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:endDate</code></p>
+</td>
+<td>
+<p>Recommended property</p>
+<p>(Period Of Time)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+<p>This property contains the end of the period</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/83">DCAT-AP-83</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:startDate</code></p>
+</td>
+<td>
+<p>Recommended property</p>
+<p>(Period Of Time)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+<p>This property contains the start of the period</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/83">DCAT-AP-83</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>schema:endDate</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Period Of Time)</p>
+</td>
+<td>
+<p>Deprecated</p>
+</td>
+<td>
+<p>Range: <code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+<p>This property contains the end of the period/time</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/83">DCAT-AP-83</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>schema:startDate</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Period Of Time)</p>
+</td>
+<td>
+<p>Deprecated</p>
+</td>
+<td>
+<p>Range: <code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+<p>This property contains the start of the period/time</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/83">DCAT-AP-83</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:Role</code></p>
+</td>
+<td>
+<p>Optional class</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>A role is the function of a resource or agent with respect to another resource, in the context of resource attribution or resource relationships.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/82">DCAT-AP-82</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:relation</code></p>
+</td>
+<td>
+<p>Mandatory property</p>
+<p>(Relationship)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>rdfs:Resource</code></p>
+<p>This property refers to the resource related to the source resource.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/81">DCAT-AP-81</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:hadRole</code></p>
+</td>
+<td>
+<p>Mandatory property</p>
+<p>(Relationship)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dcat:Role</code></p>
+<p>This property refers to the function of an entity or agent with respect to another entity or resource.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/81">DCAT-AP-81</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:Relationship</code></p>
+</td>
+<td>
+<p>Optional class</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>An association class for attaching additional information to a relationship between DCAT Resources</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/81">DCAT-AP-81</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>odrl:hasPolicy</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Distribution)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>odrl:Policy</code></p>
+<p>This property refers to the policy expressing the rights associated with the distribution if using the ODRL vocabulary</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/77">DCAT-AP-77</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:accessService</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Distribution)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dcat:DataService</code></p>
+<p>This property refers to a data service that gives access to the distribution of the dataset</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/77">DCAT-AP-77</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:spatialResolutionInMeters</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Distribution)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>xsd:decimal</code></p>
+<p>This property refers to the minimum spatial separation resolvable in a dataset distribution, measured in meters.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/78">DCAT-AP-78</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:temporalResolution</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Distribution)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>xsd:duration</code></p>
+<p>This property refers to the minimum time period resolvable in the dataset distribution.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/78">DCAT-AP-78</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:compressFormat</code></p>
+</td>
+<td>
+<p>(Optional property</p>
+<p>(Distribution)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dct:MediaType</code></p>
+<p>This property refers to the format of the file in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/79">DCAT-AP-79</a></p>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/95">DCAT-AP-95</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:packageFormat</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Distribution)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dct:MediaType</code></p>
+<p>This property refers to the format of the file in which one or more data files are grouped together, e.g. to enable a set of related files to be downloaded together.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/79">DCAT-AP-79</a></p>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/95">DCAT-AP-95</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:isReferencedBy</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Dataset)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>rdfs:Resource</code></p>
+<p>This property is about a related resource, such as a publication, that references, cites, or otherwise points to the dataset.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/75">DCAT-AP-75</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:qualifiedRelation</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Dataset)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range <code>dcat:Relationship</code></p>
+<p>This property provides a link to a description of a relationship with another resource</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/75">DCAT-AP-75</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:creator</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Dataset)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p><code>Range:foaf:Agent</code></p>
+<p>This property refers to the entity primarily responsible for producing the dataset</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/75">DCAT-AP-75</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<!--
+<tr>
+<td>
+<p><code>prov:qualifiedAttribution</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Dataset)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>prov:Attribution</code></p>
+<p>This property refers to a link to an Agent having some form of responsibility for the resource</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/75">DCAT-AP-75</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+-->
+<tr>
+<td>
+<p><code>prov:wasGeneratedBy</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Dataset)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>prov:Activuty</code></p>
+<p>This property refers to an activity that generated, or provides the business context for, the creation of the dataset.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/75">DCAT-AP-75</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:spatialResolutionInMeters</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Dataset)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>xsd:decimal</code></p>
+<p>This property refers to the minimum spatial separation resolvable in a dataset, measured in meters.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/76">DCAT-AP-76</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:temporalResolution</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Dataset)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>xsd:duration</code></p>
+<p>This property refers to the minimum time period resolvable in the dataset.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/76">DCAT-AP-76</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:service</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Catalogue)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dcat:DataService</code></p>
+<p>This property refers to a site or end-point that is listed in the catalog.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/72">DCAT-AP-72</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:catalog</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Catalogue)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dcat:Catalog</code></p>
+<p>This property refers to a catalog whose contents are of interest in the context of this catalog</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/72">DCAT-AP-72</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<!--
+<tr>
+<td>
+<p><code>dct:creator</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Catalogue)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range <code>foaf:Agent</code></p>
+<p>his property refers to the entity primarily responsible for producing the catalogue</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/72">DCAT-AP-72</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:accessRights</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Data Service)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dct:RightsStatement</code></p>
+<p>This property MAY include information regarding access or restrictions based on privacy, security, or other policies.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/73">DCAT-AP-73</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:description</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Data Service)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>rdfs:Literal</code></p>
+<p>This property contains a free-text account of the Data Service. This property can be repeated for parallel language versions of the description.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/73">DCAT-AP-73</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:license</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Data Service)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dct:LicenseDocument</code></p>
+<p>This property contains the licence under which the service is made available.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/73">DCAT-AP-73</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+-->
+<tr>
+<td>
+<p><code>dcat:servesDataset</code></p>
+</td>
+<td>
+<p>Recommended property</p>
+<p>(Data Service)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dcat:Dataset</code></p>
+<p>This property refers to a collection of data that this data service can distribute.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/73">DCAT-AP-73</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:endpointDescription</code></p>
+</td>
+<td>
+<p>Recommended property</p>
+<p>(Data Service)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range:</p>
+<p>This property contains a description of the services available via the end-points, including their operations, parameters etc.The property gives specific details of the actual endpoint instances, while <code>dct:conformsTo</code> is used to indicate the general standard or specification that the endpoints implement.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/73">DCAT-AP-73</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:endpointURL</code></p>
+</td>
+<td>
+<p>Mandatory property</p>
+<p>(Data Service)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>rdfs:Resource</code></p>
+<p>The root location or primary endpoint of the service (an IRI).</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/73">DCAT-AP-73</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<!--
+<tr>
+<td>
+<p><code>dct:title</code></p>
+</td>
+<td>
+<p>Mandatory property</p>
+<p>(Data Service)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>rdfs:Literal</code></p>
+<p>This property contains a name given to the Data Service. This property can be repeated for parallel language versions of the name.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/73">DCAT-AP-73</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+-->
+<tr>
+<td>
+<p><code>dcat:DataService</code></p>
+</td>
+<td>
+<p>Optional class</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range:</p>
+<p>A collection of operations that provides access to one or more datasets or data processing functions.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/73">DCAT-AP-73</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcatap:availability</code></p>
+</td>
+<td>
+<p>Recommended property (Distribution)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range <code>skos:Concept</code></p>
+<p>This property indicates how long it is planned to keep the Distribution of the Dataset available. It MUST take one of the values: temporary, experimental, available, stable.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/40&amp;d=DwMGaQ&amp;c=8NwulVB6ucrjuSGiwL_ckQ&amp;r=PvFhKnyWO1KmUxI4FFYqtCoOKoBmwThNxhkQASy02Ag&amp;m=ltybSqfF0iCthNAoQSe3cO9Cvw8ZUPK-f9qzfJpxGvE&amp;s=j0t4yAqNa0VFosApvUmY6XnZtU-tRXmjpzx2W5pBmDE&amp;e=">DCAT-AP-40</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>adms:status</code></p>
+</td>
+<td>
+<p>Controlled vocabulary</p>
+<p>(Catalog Record)</p>
+</td>
+<td>
+<p>Removed</p>
+</td>
+<td>
+<p><em>Removed:</em></p>
+<p><em>The ADMS change type vocabulary http://purl.org/adms/changetype/</em></p>
+<p><em>(<code>:created</code>, <code>:updated</code>, <code>:deleted</code> |) does not exists and has been removed from the specification.</em></p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/45">DCAT-AP-45</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:spatial</code></p>
+</td>
+<td>
+<p>Recommended property</p>
+<p>(Catalog)</p>
+</td>
+<td>
+<p>Updated</p>
+</td>
+<td>
+<p><em>Updates</em></p>
+<p><em>Optional property</em> &rarr; Recommended property</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/3">DCAT-AP-3</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:spatial</code></p>
+</td>
+<td>
+<p>Recommended property</p>
+<p>(Dataset)</p>
+</td>
+<td>
+<p>Updated</p>
+</td>
+<td>
+<p><em>Updates</em></p>
+<p><em>Optional property</em> &rarr; Recommended property</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/9">DCAT-AP-9</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:temporal</code></p>
+</td>
+<td>
+<p>Recommended property</p>
+<p>(Dataset)</p>
+</td>
+<td>
+<p>Updated</p>
+</td>
+<td>
+<p><em>Updates</em></p>
+<p><em>Optional property</em> &rarr; Recommended property</p>
+</td>
+<td>
+<p><a href="hthttps://github.com/SEMICeu/DCAT-AP/issues/64">DCAT-AP-64</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20191120]]</p>
+</td>
+</tr>
+<!--
+<tr>
+<td>
+<p><code>schema:startDate</code></p>
+<p><code>schema:endDate</code></p>
+</td>
+<td>
+<p>UML schema</p>
+</td>
+<td>
+<p>Updated</p>
+</td>
+<td>
+<p><em>Updates:</em></p>
+<p><em>Reversed the order of the properties startDate and endDate from <code>dct:PeriodOfTime</code></em></p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/50">DCAT-AP-50</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20190528]]</p>
+</td>
+</tr>
+-->
+<!--
+<tr>
+<td>
+<p><code>dcat:theme</code></p>
+<p><code>dcat:themeTaxonomy</code></p>
+<p><code>dct:accrualPeriodicity</code></p>
+<p><code>dct:format</code></p>
+<p><code>dct:language</code></p>
+<p><code>dct:publisher</code></p>
+<p><code>dct:spatial</code></p>
+</td>
+<td>
+<p>Controlled Vocabularies</p>
+</td>
+<td>
+<p>Updated</p>
+</td>
+<td>
+<p><em>Updates</em></p>
+<p><a href="http://publications.europa.eu/mdr/authority/data-theme/">
+http://publications.europa.eu/mdr/authority/data-theme/</a> &rarr; <a href="http://publications.europa.eu/resource/authority/data-theme">
+http://publications.europa.eu/resource/authority/data-theme</a>, </p>
+<p><a href="http://publications.europa.eu/mdr/authority/data-theme/">
+http://publications.europa.eu/mdr/authority/data-theme/</a> &rarr; <a href="http://publications.europa.eu/resource/dataset/data-theme">
+http://publications.europa.eu/resource/dataset/data-theme</a>, </p>
+<p><a href="http://publications.europa.eu/mdr/authority/frequency">
+http://publications.europa.eu/mdr/authority/frequency</a> &rarr; <a href="http://publications.europa.eu/resource/authority/frequency">
+http://publications.europa.eu/resource/authority/frequency</a>, </p>
+<p><a href="http://publications.europa.eu/mdr/authority/file-type/">
+http://publications.europa.eu/mdr/authority/file-type/</a> &rarr; <a href="http://publications.europa.eu/resource/authority/file-type">
+http://publications.europa.eu/resource/authority/file-type</a>, </p>
+<p><a href="http://publications.europa.eu/mdr/authority/language/">
+http://publications.europa.eu/mdr/authority/language/</a> &rarr; <a href="http://publications.europa.eu/resource/authority/language">
+http://publications.europa.eu/resource/authority/language</a>, </p>
+<p><a href="http://publications.europa.eu/mdr/authority/corporate-body/">
+http://publications.europa.eu/mdr/authority/corporate-body/</a> &rarr; <a href="http://publications.europa.eu/resource/authority/corporate-body">
+http://publications.europa.eu/resource/authority/corporate-body</a>, </p>
+<p>http://publications.europa.eu/mdr/authority/continent/ &rarr; 
+http://publications.europa.eu/resource/authority/continent/, </p>
+<p><a href="http://publications.europa.eu/mdr/authority/country/">http://publications.europa.eu/mdr/authority/country/</a> &rarr;  
+http://publications.europa.eu/resource/authority/country,</p>
+<p><a href="http://publications.europa.eu/mdr/authority/place/">http://publications.europa.eu/mdr/authority/place/</a> &rarr; 
+http://publications.europa.eu/resource/authority/place/.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/54">DCAT-AP-54</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20190528]]</p>
+</td>
+</tr>
+-->
+<tr>
+<td>
+<p><code>dct:type</code></p>
+</td>
+<td>
+<p>Recommended property</p>
+<p>(Licence Document)</p>
+</td>
+<td>
+<p>Updated</p>
+</td>
+<td>
+<p><em>Updates</em></p>
+<p>Cardinality: 0..1 &rarr; 0..n</p>
+<p>This property can be repeated in the case that multiple licence types apply to a licence document.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/1">DCAT-AP-1</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20181108]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>adms:versionNotes</code></p>
+</td>
+<td>
+<p>Optional property (Dataset)</p>
+</td>
+<td>
+<p>Updated</p>
+</td>
+<td>
+<p><em>Updates</em></p>
+<p>Cardinality: 0..1 &rarr; 0..n</p>
+<p>This property can be repeated for parallel language versions of the version notes.</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/co4-replace-admsversion-owlversioninfo">CO4</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<!--
+<tr>
+<td>
+<p><code>dcat:contactPoint</code></p>
+</td>
+<td>
+<p>Recommended property</p>
+<p>(Dataset)</p>
+</td>
+<td>
+<p>Updated</p>
+</td>
+<td>
+<p><em>Updates</em></p>
+<p>URI: <code>adms:contactPoint</code> &rarr; <code>dcat:contactPoint</code></p>
+<p>Range: <code>VCard</code> &rarr; <code>vcard:Kind</code></p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/mo8-abandon-use-vcard-contact-point">MO8</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+-->
+<tr>
+<td>
+<p><code>dct:LicenseDocument</code></p>
+</td>
+<td>
+<p>Recommended</p>
+<p>class</p>
+</td>
+<td>
+<p>Updated</p>
+</td>
+<td>
+<p><em>Updates</em></p>
+<p>Optional class &rarr; recommended class</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/ob4-make-dctlicensedocument-recommended">OB4</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<!--
+<tr>
+<td>
+<p><code>dct:Location</code></p>
+</td>
+<td>
+<p>Optional class</p>
+</td>
+<td>
+<p>Updated</p>
+</td>
+<td>
+<p>Added reference to GeoDCAT-AP for expression of co-ordinates</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/node/138937">IM4</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+-->
+<tr>
+<td>
+<p><code>dct:source</code></p>
+</td>
+<td>
+<p>Optional property (CatalogRecord)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dcat:CatalogRecord</code></p>
+<p>This property links to the original metadata that was used in creating metadata for the Dataset</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/mo5-add-class-originalmetadatarecord-and-specify-property-refer">MO5</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>owl:versionInfo</code></p>
+</td>
+<td>
+<p>Optionalproperty (Dataset)</p>
+</td>
+<td>
+<p>Updated</p>
+</td>
+<td>
+<p><em>Updates</em></p>
+<p>URI: <code>adms:version</code> &rarr; <code>owl:versionInfo</code></p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/co4-replace-admsversion-owlversioninfo">CO4</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>spdx:algorithm</code></p>
+</td>
+<td>
+<p>Mandatory property (Checksum)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>spdx:checksumAlgorithm_sha1</code></p>
+<p>Cardinality: 1..1</p>
+<p>This property identifies the algorithm used to produce the subject Checksum. Currently, SHA-1 is the only supported algorithm. It is anticipated that other algorithms will be supported at a later time.</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr1-add-new-property-distribution-enable-verificationof-integri">PR1</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>spdx:Checksum</code></p>
+</td>
+<td>
+<p>Optional class</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>A value that allows the contents of a file to be authenticated. This class allows the results of a variety of checksum and cryptographic message digest algorithms to be represented.</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr1-add-new-property-distribution-enable-verificationof-integri">PR1</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>spdx:checksum</code></p>
+</td>
+<td>
+<p>Optional property (Dataset)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>spdx:Checksum</code></p>
+<p>Cardinality: 0..1</p>
+<p>This property provides a mechanism that can be used to verify that the contents of a Distribution have not changed</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr1-add-new-property-distribution-enable-verificationof-integri">PR1</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>spdx:checksumValue</code></p>
+</td>
+<td>
+<p>Mandatory property (Checksum)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>rdfs:Literal</code> typed as <code>xsd:hexBinary</code></p>
+<p>Cardinality: 1..1</p>
+<p>This property provides a lower case hexadecimal encoded digest value produced using a specific algorithm.</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr1-add-new-property-distribution-enable-verificationof-integri">PR1</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>vcard:Kind</code></p>
+</td>
+<td>
+<p>Optional class</p>
+</td>
+<td>
+<p>Updated</p>
+</td>
+<td>
+<p><em>Updates</em></p>
+<p>Class name: VCard &rarr; Kind</p>
+<p>URI: VCard &rarr; <code>vcard:Kind</code></p>
+<p>The class Kind is the parent class for the four explicit types of vCards (Individual, Organization, Location, Group).</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/mo4-add-new-class-extension-without-specific-semantics">MO4</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<!--
+<tr>
+<td>
+<p><code>dct:language</code></p>
+</td>
+<td>
+<p>Optional property (Catalogue Record)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>This property refers to a language used in the textual metadata describing titles, descriptions, etc. of the Datasets in the Catalogue. This property can be repeated if the metadata is provided in multiple languages.</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr28-indicate-language-original-metadata">PR28</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:provenance</code></p>
+</td>
+<td>
+<p>Optional property (Dataset)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dct:ProvenanceStatement</code></p>
+<p>This property contains a statement about the lineage of a Dataset.</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr6-add-new-property-dataset-refer-authority-responsible-making">PR6</a></p>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr13-add-new-property-dataset-refer-other-datasets-were-used-in">PR13</a></p>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr14-add-new-property-express-lineage">PR14</a></p>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/mo5-add-class-originalmetadatarecord-and-specify-property-refer">MO5</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+-->
+<tr>
+<td>
+<p><code>dct:source</code></p>
+</td>
+<td>
+<p>Optional property (Dataset)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dcat:Dataset</code></p>
+<p>This property refers to a related Dataset from which the described Dataset is derived.</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr6-add-new-property-dataset-refer-authority-responsible-making">PR6</a></p>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr13-add-new-property-dataset-refer-other-datasets-were-used-in">PR13</a></p>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr14-add-new-property-express-lineage">PR14</a></p>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/mo5-add-class-originalmetadatarecord-and-specify-property-refer">MO5</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:accessRights</code></p>
+</td>
+<td>
+<p>Optional property (Dataset)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dct:RightsStatement</code></p>
+<p>This property refers to information that indicates whether the Dataset is open data, has access restrictions or is not public.</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr2-add-new-property-dataset-indicate-whether-dataset-public-re">PR2</a></p>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr3-add-new-property-dataset-indicate-why-dataset-restricted-or">PR3</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:hasVersion</code></p>
+</td>
+<td>
+<p>Optional property (Dataset)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dcat:Dataset</code></p>
+<p>This property refers to a related Dataset that is a version, edition, or adaptation of the described Dataset.</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr5-add-new-property-relate-datasets-time-series">PR5</a></p>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr16-use-dctisversionof-link-versions-datasets-together">PR16</a></p>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/mo12-grouping-datasets">MO12</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:isVersionOf</code></p>
+</td>
+<td>
+<p>Optional property (Dataset)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dcat:Dataset</code></p>
+<p>This property refers to a related Dataset of which the described Dataset is a version, edition, or adaptation.</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr5-add-new-property-relate-datasets-time-series">PR5</a></p>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr16-use-dctisversionof-link-versions-datasets-together">PR16</a></p>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/mo12-grouping-datasets">MO12</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:relation</code></p>
+</td>
+<td>
+<p>Optional property (Dataset)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>rdfs:Resource</code></p>
+<p>This property refers to a related resource.</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr19-add-new-property-dataset-refer-related-resources">PR19</a></p>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/mo12-grouping-datasets">MO12</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>foaf:page</code></p>
+</td>
+<td>
+<p>Optional property (Dataset)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>foaf:Document</code></p>
+<p>This property refers to a page or document about this Dataset.</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr19-add-new-property-dataset-refer-related-resources">PR19</a></p>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr26-add-property-dctrelation-distribution-point-related-resour">PR26</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:mediaType</code></p>
+</td>
+<td>
+<p>Controlled vocabulary</p>
+</td>
+<td>
+<p>Updated</p>
+</td>
+<td>
+<p>Modifications:</p>
+<p>MDR list &rarr; IANA types</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr22-remove-dcatmediatype-and-only-use-dctformat">PR22</a></p>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/vo3-propose-uri-set-be-used-property-format">VO3</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:spatial</code></p>
+</td>
+<td>
+<p>Controlled vocabulary</p>
+</td>
+<td>
+<p>Updated</p>
+</td>
+<td>
+<p>Modifications:</p>
+<p>Added recommendation to use sws.geonames.org if the needed place is not listed in the MDR</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/vo9-add-necessary-place-mdr-places-nal-and/or-identify-and-reco">VO9</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:isPartOf</code></p>
+</td>
+<td>
+<p>Optional property (Catalogue)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dcat:Catalog</code></p>
+<p>This property refers to a related Catalogue in which the described Catalogue is physically or logically included.</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/nesting-part-relationships-catalog-and-dataset">Nesting</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>adms:sample</code></p>
+</td>
+<td>
+<p>Optional property (Dataset)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>This property is related to sample(s) of the dataset</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/pr21-add-new-property-distribution-refer-sample-data">PR21</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>foaf:page</code></p>
+</td>
+<td>
+<p>Optional property (Distribution)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>A page or document about this Distribution</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/mo2-integrate-parts-void-particular-voiddatasetdescription-and-">M02</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:hasPart</code></p>
+</td>
+<td>
+<p>Optional property (Catalogue)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dcat:Catalog</code></p>
+<p>This property refers to a related Catalogue that is part of the described Catalogue</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/nesting-part-relationships-catalog-and-dataset">Nesting</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:themeTaxonomy</code></p>
+</td>
+<td>
+<p>Controlled vocabulary</p>
+</td>
+<td>
+<p>Updated</p>
+</td>
+<td>
+<p>Modification</p>
+<p>Changed the recommendation to use new EU Data Theme vocabulary proposed by the Publications Office instead of EuroVoc. Added clarification that value is the URI of the concept scheme, not of the concepts</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/vo2-create-new-list-concepts-property-theme">VO2</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:theme</code></p>
+</td>
+<td>
+<p>Controlled vocabulary</p>
+</td>
+<td>
+<p>Updated</p>
+</td>
+<td>
+<p>Modifications:</p>
+<p>Changed the recommendation to use terms from the new EU Data Theme vocabulary proposed by the Publications Office instead of EuroVoc domains.</p>
+<p>URI: <code>dct:theme</code> &rarr; <code>dcat:theme</code></p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/vo2-create-new-list-concepts-property-theme">VO2</a></p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<!--
+<tr>
+<td>
+<p><code>dct:type</code></p>
+</td>
+<td>
+<p>Optional property (Dataset)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>This property refers to a type of the Dataset</p>
+</td>
+</td>
+<td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dct:conformsTo</code></p>
+</td>
+<td>
+<p>Recommended property (Catalogue Record)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>This property refers to an Application Profile that the Dataset&rsquo;s metadata conforms to</p>
+</td>
+</td>
+<td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+-->
+<tr>
+<td>
+<p><code>dct:accrualPeriodicity</code></p>
+</td>
+<td>
+<p>Controlled vocabulary</p>
+</td>
+<td>
+<p>Updated</p>
+</td>
+<td>
+<p>Modification</p>
+<p>Changed the recommendation to use terms from the Frequency Name Authority List maintained by the Publications Office instead of the Dublin Core Collection Description Frequency Vocabulary</p>
+</td>
+<td>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><code>dcat:landingPage</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Dataset)</p>
+</td>
+<td>
+<p>Updated</p>
+</td>
+<td>
+<p><em>Updates</em></p>
+<p>Cardinality: 0..1  &rarr;  0..n</p>
+</td>
+<td>
+<p><a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/issue/drop-maximum-cardinality-constraint-dcatlandingpage">Issue</a> link</p>
+</td>
+<td>
+<p>[[DCAT-AP-20170224]]</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Further textual changes (release 2.0.0)</p>
+<ul>
+<li>Document completely re-written starting from the [[DCAT-AP-20191120]] specification, with the purpose of using a consistent document structure across DCAT-AP specifications.</li>
+<!--
+<li>Throughout the document, links are made clickable</li>
+<li>Apply various typo fixes indicated in the public review</li>
+<li>Page 15, Table 4.4.3, Optional properties for Distribution, the usage note for <code>adms:status</code> property has been updated to include &ldquo;It MUST take one of the values Completed, Deprecated, Under Development, Withdrawn&rdquo;</li>
+<li>Page 8, the following namespaces has been added:
+<ul>
+<li>vann: http://purl.org/vocab/vann/</li>
+<li>dcatap: http://data.europa.eu/r5r/</li>
+<li>voaf: http://purl.org/vocommons/voaf/#</li>
+<li>odrl: http://www.w3.org/ns/odrl/2/</li>
+<li>locn: http://www.w3.org/ns/locn#</li>
+</ul>
+</li>
+<li>Section 4. Added explanatory paragraph on the relationship with W3C DCAT 2.0</li>
+<li>Page 29, updated text to reflect agent roles and their relations to dataset using new added properties.</li>
+<li>Section Acknowledgements, added list of contributors.</li>
+-->
+</ul>
+
+<p>Further textual changes (release 1.0.1 [[GeoDCAT-AP-20160802]]):</p>
+<ul>
+<li>Corrected a typo concerning the URIs of the code lists of the INSPIRE Registry. No other changes have been done on [[GeoDCAT-AP-20151223]].</li>
+<!--
+<li>Updated Figure 1 - DCAT Application Profile UML Class Diagram</li>
+<li>Updated references 21-27 and 41 to point from Metadata Registry (MDR) to EU Vocabularies</li>
+<li>In section 5.2 Controlled vocabularies to be used, updated the entries in table column “Vocabulary name” (MDR &rarr; EU Vocabularies)</li>
+<li>MDR has been replaced with EU Vocabularies within text.</li>
+<li>Updated Joinup references: 6, 13, 28, 35, 36, 46.</li>
+-->
+</ul>
+
+<!--
+<p>Further textual changes (release 1.2.1):</p>
+<ul>
+<li>Updated Figure 1 - DCAT Application Profile UML Class Diagram</li>
+<li>Updated references 21-27 and 41 to point from Metadata Registry (MDR) to EU Vocabularies</li>
+<li>In section 5.2 Controlled vocabularies to be used, updated the entries in table column “Vocabulary name” (MDR &rarr; EU Vocabularies)</li>
+<li>MDR has been replaced with EU Vocabularies within text.</li>
+<li>Updated Joinup references: 6, 13, 28, 35, 36, 46.</li>
+</ul>
+
+<p>Further textual changes (release 1.2):</p>
+<ul>
+<li>Updated the change management process in chapter 1 as now is based on Change and Release Management Policy for DCAT-AP. </li>
+<li>Updated Figure 1 - DCAT Application Profile UML Class Diagram</li>
+<li>Added column Release in the change log table</li>
+<li>Editorial fix in the quick reference in Annex I</li>
+</ul>
+-->

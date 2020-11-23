@@ -10,7 +10,7 @@ The current version of GeoDCAT-AP (v1.0.1) can be downloaded from:
 
 [https://joinup.ec.europa.eu/release/geodcat-ap/101](https://joinup.ec.europa.eu/release/geodcat-ap/101)
 
-Any problems encountered, or suggestions for new functionalities can be submitted as [issues on the GeoDCAT-AP repository on GitHub](https://github.com/SEMICeu/GeoDCAT-AP/issues). 
+Any problems encountered, or suggestions for new functionalities can be submitted as [issues on the GeoDCAT-AP repository on GitHub](https://github.com/SEMICeu/GeoDCAT-AP/issues). A short guideline for submitting issues can be found at [SEMICeu/DCAT-AP/wiki/Submission-guidelines](https://github.com/SEMICeu/DCAT-AP/wiki/Submission-guidelines). 
 
 *The GeoDCAT-AP specification does not replace the [INSPIRE Metadata Regulation](http://eur-lex.europa.eu/eli/reg/com/2008/1205) nor the [INSPIRE Metadata technical guidelines based on ISO 19115 and ISO 19119](https://inspire.ec.europa.eu/id/document/tg/metadata-iso19139). Its purpose is give owners of geospatial metadata the possibility to achieve more by providing an additional RDF syntax binding.*
 
@@ -19,14 +19,21 @@ Any problems encountered, or suggestions for new functionalities can be submitte
 - [Releases](./releases/): GeoDCAT-AP releases (1.0, etc.); each release might have different distributions.
 - [Working Drafts](./drafts/): Working drafts including revisions to the latest GeoDCAT-AP release.
 
+## Public review of current draft
+At this moment the latest version is in public review. The specification can be viewed at:
+
+https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/
+
+
 ## Implementations
 
 - [GeoDCAT-AP XSLT & API](https://github.com/SEMICeu/iso-19139-to-dcat-ap): Reference XSLT-based implementation and API
+- [CSW-4-Web](https://github.com/SEMICeu/csw-4-web): A proof-of-concept API to expose CSW endpoints in a Web-friendly way, making use of an extended and ad hoc version of the GeoDCAT-AP XSLT & API.
 - [EPSG to RDF XSLT](https://github.com/SEMICeu/epsg-to-rdf): Proof of concept for the RDF representation of the [OGC EPSG register of coordinate reference systems](http://www.opengis.net/def/crs/EPSG/0/), extending the RDF mappings for reference systems defined in GeoDCAT-AP.
 
 Additional GeoDCAT-AP implementations are documented in the [dedicated page on Joinup](https://joinup.ec.europa.eu/document/geodcat-ap-implementations).
 
 ## Licence
 
-GeoDCAT-AP releases and working drafts are distributed under the [ISA Open Metadata Licence v1.1](https://joinup.ec.europa.eu/licence/isa-open-metadata-licence-v11).
+GeoDCAT-AP releases and working drafts are distributed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 

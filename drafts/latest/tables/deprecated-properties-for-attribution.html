@@ -1,0 +1,39 @@
+<table class="simple">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Replaced by</p>
+</th>
+<th>
+<p>Deprecated in</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="property deprecated ap-ext" id="attribution-type">
+<td>
+<p>+had role</p>
+</td>
+<td>
+<p><code>dct:type</code></p>
+</td>
+<td>
+<p><a href="#attribution-had-role"><code>dcat:hadRole</code></a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<aside class="note">
+<p>Until GeoDCAT-AP version 1.0.1 [[GeoDCAT-AP-20160802]], property <code>dct:type</code> was used with class <code>prov:Attribution</code> to specify the role of an Agent, as a more specific property was missing in reference vocabularies.</p>
+<p>[[VOCAB-DCAT-2]] has defined a specific property for this purpose, namely, <code>dcat:hadRole</code>, which has been adopted in [[DCAT-AP-20191120]]. Therefore, <code>dcat:hadRole</code> replaces <code>dct:type</code> starting from this version of GeoDCAT-AP.</p>
+</aside>

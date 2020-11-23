@@ -1,0 +1,74 @@
+<table class="simple">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Replaced by</p>
+</th>
+<th>
+<p>Deprecated in</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="property deprecated ap-ext" id="catalogue-subject-as-tag">
+<td>
+<p>+keyword / tag</p>
+</td>
+<td>
+<p><code>dc:subject</code></p>
+</td>
+<td>
+<p><a href="#catalogue-keyword"><code>dcat:keyword</code></a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+<tr class="property deprecated" id="catalogue-has-service">
+<td>
+<p>service</p>
+</td>
+<td>
+<p><code>dct:hasPart</code></p>
+</td>
+<td>
+<p><a href="#catalogue-service"><code>dcat:service</code></a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+<tr class="property deprecated ap-ext" id="catalogue-subject">
+<td>
+<p>+theme / category</p>
+</td>
+<td>
+<p><code>dct:subject</code></p>
+</td>
+<td>
+<p><a href="#catalogue-category"><code>dcat:theme</code></a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<aside class="note">
+<p>Until GeoDCAT-AP version 1.0.1 [[GeoDCAT-AP-20160802]], property <code>dct:hasPart</code> was used with class <code>dcat:Catalog</code> to specify a service documented in a Catalogue, since no specific property was available in reference vocabularies.</p>
+<p>[[VOCAB-DCAT-2]] has defined a specific property <code>dcat:service</code> for this purpose. Therefore it replaces <code>dct:hasPart</code> starting from this version of GeoDCAT-AP.</p>
+<p>It is worth noting that <code>dcat:service</code> is a subproperty of <code>dct:hasPart</code>.</p>
+</aside>
+
+<aside class="note">
+<p>Until GeoDCAT-AP version 1.0.1 [[GeoDCAT-AP-20160802]], property <code>dct:subject</code> was used with class <code>dcat:Catalog</code> to specify a category of a Catalogue, since the use of property <code>dcat:theme</code> was restricted to <code>dcat:Dataset</code>'s in the version of the W3C Data Catalog Vocabulary available at that time [[VOCAB-DCAT-20140116]].</p>
+<p>[[VOCAB-DCAT-2]] has relaxed this domain restriction, so to allow the use of property <code>dcat:theme</code> for any resource in a Catalogue. Therefore it replaces <code>dct:subject</code> starting from this version of GeoDCAT-AP.</p>
+<p>It is worth noting that <code>dcat:theme</code> is a subproperty of <code>dct:subject</code>.</p>
+</aside>

@@ -1,0 +1,142 @@
+<table class="simple" id="table-recommended-properties-for-catalogue">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="property recommended" id="catalogue-homepage">
+<td>
+<p>homepage</p>
+</td>
+<td>
+<p><code>foaf:homepage</code></p>
+</td>
+<td>
+<p><code>foaf:Document</code></p>
+</td>
+<td>
+<p>This property refers to a web page that acts as the main page for the Catalogue.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property recommended" id="catalogue-language">
+<td>
+<p>language</p>
+</td>
+<td>
+<p><code>dct:language</code></p>
+</td>
+<td>
+<p><code>dct:LinguisticSystem</code></p>
+</td>
+<td>
+<p>This property refers to a language used in the textual metadata describing titles, descriptions, etc. of the Datasets in the Catalogue. This property can be repeated if the metadata is provided in multiple languages - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property recommended" id="catalogue-licence">
+<td>
+<p>licence</p>
+</td>
+<td>
+<p><code>dct:license</code></p>
+</td>
+<td>
+<p><code>dct:LicenseDocument</code></p>
+</td>
+<td>
+<p>This property refers to the licence under which the Catalogue can be used or reused.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property recommended" id="catalogue-dataset-release-date">
+<td>
+<p>release date</p>
+</td>
+<td>
+<p><code>dct:issued</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the date of formal issuance (e.g., publication) of the Catalogue.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+<tr class="property recommended" id="catalogue-spatial-coverage">
+<td>
+<p>spatial / geographic</p>
+</td>
+<td>
+<p><code>dct:spatial</code></p>
+</td>
+<td>
+<p><code>dct:Location</code></p>
+</td>
+<td>
+<p>This property refers to a geographic area covered by the Catalogue.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property recommended" id="catalogue-themes">
+<td>
+<p>themes</p>
+</td>
+<td>
+<p><code>dcat:themeTaxonomy</code></p>
+</td>
+<td>
+<p><code>skos:ConceptScheme</code></p>
+</td>
+<td>
+<p>This property refers to a knowledge organization system used to classify the Catalogue's Datasets.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+<tr class="property recommended" id="catalogue-modification-date">
+<td>
+<p>update / modification date</p>
+</td>
+<td>
+<p><code>dct:modified</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the most recent date on which the Catalogue was modified.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+</tbody>
+</table>
