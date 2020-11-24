@@ -80,7 +80,7 @@ var respecConfig = {
     thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
 //    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
 //    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
-//    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
+    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
     latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
 //    latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-latest/",
 /* SEMICEU specific - end   */	
@@ -106,7 +106,7 @@ var respecConfig = {
     editors: [
       {
         name:       "Andrea Perego",
-//        company:    "European Commission, Joint Research Centre",
+        company:    "External Consultant, European Commission, Joint Research Centre",
         orcid:      "0000-0001-9300-2694",
 //        companyURL: "https://ec.europa.eu/jrc/"
       },
@@ -640,7 +640,7 @@ var respecConfig = {
         "publisher":"European Commission"
        },
       "DCAT-AP-CRMP":{
-        "href":"https://joinup.ec.europa.eu/document/change-and-release-management-policy-dcat-ap",
+        "href":"https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap",
         "title":"Joinup. Change and Release Management Policy for DCAT-AP",
         "publisher":"European Commission"
        },
