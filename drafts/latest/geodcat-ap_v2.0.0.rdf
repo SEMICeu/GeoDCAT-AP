@@ -718,4 +718,38 @@
 <!-- Terms defined in the GeoDCAT-AP namespace -->
 <!-- ========================================= -->
 
+  <rdf:Description rdf:about="http://data.europa.eu/930/spatialResolutionAsScale">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/> 
+	<adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
+    <rdfs:label xml:lang="en">spatial resolution as equivalent scale</rdfs:label>
+    <rdfs:comment xml:lang="en">Spatial resolution of a dataset expressed as equivalent scale, measured by using a representative fraction (e.g., 1:1,000, 1:1,000,000).</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
+    <rdfs:isDefinedBy rdf:resource="https://www.iso.org/standard/26020.html"/>
+    <rdfs:isDefinedBy rdf:resource="https://www.iso.org/standard/53798.html"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.europa.eu/930/spatialResolutionInDegrees">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/> 
+	<adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
+    <rdfs:label xml:lang="en">spatial resolution as angular distance</rdfs:label>
+    <rdfs:comment xml:lang="en">Spatial resolution of a dataset expressed as angular distance, measured in decimal degrees.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
+    <rdfs:isDefinedBy rdf:resource="https://www.iso.org/standard/26020.html"/>
+    <rdfs:isDefinedBy rdf:resource="https://www.iso.org/standard/53798.html"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://data.europa.eu/930/spatialResolutionAsVerticalDistanceInMeters">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/> 
+	<adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
+    <rdfs:label xml:lang="en">spatial resolution as equivalent scale</rdfs:label>
+    <rdfs:comment xml:lang="en">Spatial resolution of a dataset expressed as vertical distance, measured in metres.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:isDefinedBy rdf:resource="https://www.iso.org/standard/53798.html"/>
+    <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
+  </rdf:Description>
+
 </rdf:RDF>
