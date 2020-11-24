@@ -122,11 +122,11 @@ The views expressed are purely those of the author and may not in any circumstan
 <section id="scope-of-the-revision">
 
 <h3>Scope of the revision</h3>
-
+<!--
 <aside class="ednote">
 <p>To be revised</p>
 </aside>
-
+-->
 <p>The objective of this work is to produce an updated release of GeoDCAT-AP based on requests for change coming from real-world implementations of the specification and an alignment with [[DCAT-AP-20200608]] and [[INSPIRE-MD-20170302]].</p> 
 <p>As [[DCAT-AP-20200608]], the Application Profile specified in this document is based on the specification of the <strong>Data Catalog Vocabulary</strong> (DCAT), originally  developed under the responsibility of the Government Linked Data Working Group [[GLD]] at W3C, and significantly revised in 2020 by the W3C Dataset Exchange Working Group [[DXWG]]. DCAT is an RDF [[RDF11-CONCEPTS]] vocabulary designed to facilitate interoperability between data catalogues published on the Web. Additional classes and properties from other well-known vocabularies are re-used where necessary.</p> 
 <p>The work does not cover implementation issues like mechanisms for exchange of data and expected behaviour of systems implementing the Application Profile other than what is defined in the Conformance Statement in <a class="no-sectionRef" href="#conformance"></a>.</p> 
@@ -137,11 +137,11 @@ The views expressed are purely those of the author and may not in any circumstan
 <section id="specification">
 
 <h3>A DCAT-AP extension</h3>
-
+<!--
 <aside class="ednote">
 <p>To be revised: adjust to official release of DCAT-AP. Plus propagate this through the text.</p>
 </aside>
-
+-->
 <!--
 <p>The DCAT-AP Application Profile defined in this document is based on the specification of the Data Catalog Vocabulary (DCAT) of 16 January 2014 [[VOCAB-DCAT-20140116]], and the Data Catalog Vocabulary (DCAT) - Version 2, W3C Candidate Recommendation 03 October 2019 [[VOCAB-DCAT-2-20191003]].</p>
 -->
@@ -159,15 +159,19 @@ The views expressed are purely those of the author and may not in any circumstan
 <p>This section has been copied from DCAT-AP. It covers 2 aspects, a) (a partial set of) definitions of the domain specific core concepts and b) an reading guide on specification terminology.</p>
 <p>The proposal is to remove the definitions of the domain specific terminology and leave that to the appropriate places below.</p>
 </aside>
-
+<!--
 <aside class="ednote">
-<p>It is missing a definition for "Data Service", as well as for "Resource" - the superclass of all resources documented in a catalogue.</p>
+<p>It is missing a definition for "Resource" - the superclass of all resources documented in a catalogue.</p>
 <p>A possible definition:</p>
 <blockquote>
 <p>A <strong>Resource</strong> is a dataset, data service, or any other kind of resource documented in a catalogue.</p>
 </blockquote>
+<p>Related issues:</p>
+<div class="issue" data-number="22"></div>
 </aside>
-
+-->
+<div class="issue" data-number="35"></div>  
+  
 <p>An <strong>Application Profile</strong> is a specification that re-uses terms from one or more base standards, adding more specificity by identifying mandatory, recommended and optional elements to be used for a particular application, as well as recommendations for controlled vocabularies to be used.</p>
 
 <p>A <strong>Dataset</strong> is a collection of data, published or curated by a single source, and available for access or download in one or more formats.</p>
@@ -181,6 +185,7 @@ The views expressed are purely those of the author and may not in any circumstan
 
 <aside class="ednote">
 <p>The definitions of recommended classes and properties are inconsistent.</p>
+<!--
 <p>Moreover, a definition for deprecated properties and classes is missing.</p>
 <p>A possible definition:</p>
 <blockquote>
@@ -189,6 +194,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <li><strong>Deprecated property</strong>: a receiver SHOULD be able to process information about instances of that property; a sender SHOULD NOT provide the information about instances of that propertry.</li>
 </ul>
 </blockquote>
+-->
 </aside>
 
 <p>In the following sections, classes and properties are grouped under headings ‘mandatory’, ‘recommended’ and ‘optional’. These terms have the following meaning.</p>
@@ -212,7 +218,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <p>The class ‘Distribution’ is classified as ‘Recommended’ in <a class="no-sectionRef" href="#recommended-classes"></a> to allow for cases that a particular Dataset does not have a downloadable Distribution, and in such cases the sender of data would not be able to provide this information. However, it can be expected that in the majority of cases Datasets do have downloadable Distributions, and in such cases the provision of information on the Distribution is mandatory.</p>
 
 <p>All other classes are classified as ‘Optional’ in <a class="no-sectionRef" href="#optional-classes"></a>. A further description of the optional classes is only included as a sub-section in <a class="no-sectionRef" href="#properties"></a> if the Application Profile specifies mandatory or recommended properties for them.</p>
-
+<!--
 <aside class="ednote">
 <p>It is missing a paragraph for deprecated classes.</p>
 <p>E.g.:</p>
@@ -220,7 +226,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <p>Classes no longer included in this version of the specification, or replaced with other ones, are classified as ‘Deprecated’ in <a class="no-sectionRef" href="#deprecated-classes"></a>.</p>
 </blockquote>
 </aside>
-
+-->
 <p>Classes no longer included in this version of the specification, or replaced with other ones, are classified as ‘Deprecated’ in <a class="no-sectionRef" href="#deprecated-classes"></a>.</p>
 
 <p>Finally, classes and properties added in this Application Profile and extending [[DCAT-AP]] are marked with a prepended &ldquo;plus&rdquo; sign (+), and summarised in the reference table in <a class="no-secRef" href="#geodcat-ap-classes-and-properties"></a>.</p>
@@ -253,8 +259,15 @@ The views expressed are purely those of the author and may not in any circumstan
 
 <p><a href="#fig-geodcat-ap-uml-class-diagram"></a> shows a UML diagram of all classes and properties included in the Application Profile.</p>
 
+<aside class="note">
+<p>For space constraints, the diagram does not include explicitly all the classes supported in GeoDCAT-AP.</p>
+</aside>
+
 <aside class="ednote">
+<!--
 <p>To be created, by extending the DCAT-AP one.</p>
+-->
+<p>To be decided if all classes should instead be included, or an alternative approach could be used - e.g., creating partial views of the diagram focussed on specific classes and their direct relationships.</p>
 </aside>
 
 <figure id="fig-geodcat-ap-uml-class-diagram">
@@ -277,6 +290,9 @@ The views expressed are purely those of the author and may not in any circumstan
 <p>It would make sense to fix this inconsistency - there's the same problem in the [[DCAT-AP-20200608]] specification, from which these tables have been taken.</p>
 </aside>
 -->
+
+<div class="issue" data-number="36"></div>  
+  
 <section id="mandatory-classes">
 
 <h3>Mandatory Classes</h3>
@@ -1620,7 +1636,12 @@ A property which is not mentioned but would be applicable for a class according 
 <p>To be revised</p>
 </aside>
 -->
-<p>GeoDCAT-AP supports the 11 agent roles defined in [[INSPIRE-MD-REG]] and [[ISO-19115]] by using two different but not mutually exclusive approaches. The first approach makes use of the relevant properties from [[DCAT-AP-20200608]] and [[DCTERMS]], which overall cover 4 of the relevant roles - namely, <code>dcat:contactPoint</code>, <code>dct:creator</code>, <code>dct:publisher</code>, and <code>dct:rightsHolder</code>. The second and more general approach is based on [[PROV-O]], where agent roles are specified via a &ldquo;qualified attribution&rdquo; (<code>prov:qualifiedAttribution</code>). More precisely, the relevant Agent is specified via property <code>prov:agent</code>, whereas the role is specified with property <code>dcat:hasRole</code>, which takes as value one of the responsible party roles defined in [[INSPIRE-MD-REG]] and [[ISO-19115]], and included in the relevant code list operated by the INSPIRE Registry [[INSPIRE-RPR]]. This pattern is illustrated in <a href="#ex-attribution"></a>.</p>
+  
+<div class="issue" data-number="30"></div>
+  
+<p>GeoDCAT-AP supports the 11 agent roles defined in [[INSPIRE-MD-REG]] and [[ISO-19115]] by using two different but not mutually exclusive approaches.</p>
+<p>The first approach makes use of the relevant properties from [[DCAT-AP-20200608]] and [[DCTERMS]], which overall cover 4 of the relevant roles - namely, <code>dcat:contactPoint</code>, <code>dct:creator</code>, <code>dct:publisher</code>, and <code>dct:rightsHolder</code>.</p>
+<p>The second and more general approach is based on [[PROV-O]], where agent roles are specified via a &ldquo;qualified attribution&rdquo; (<code>prov:qualifiedAttribution</code>). More precisely, the relevant Agent is specified via property <code>prov:agent</code>, whereas the role is specified with property <code>dcat:hadRole</code>, which takes as value one of the responsible party roles defined in [[INSPIRE-MD-REG]] and [[ISO-19115]], and included in the relevant code list operated by the INSPIRE Registry [[INSPIRE-RPR]]. This pattern is illustrated in <a href="#ex-attribution"></a>.</p>
 <p>It is important to note that, following [[INSPIRE-MD-REG]] and [[ISO-19115]], in GeoDCAT-AP all these agent roles can be specified on Catalogues, Catalogue Records, Datasets, and Data Services.</p>
 <p>More details on these solutions are available in <a class="no-sectionRef" href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"></a>.</p>
 <!--
@@ -1766,11 +1787,11 @@ A property which is not mentioned but would be applicable for a class according 
 <section id="inspire-and-iso-19115-mappings" class="appendix">
 
 <h2>INSPIRE and ISO 19115 Mappings</h2>
-
+<!--
 <aside class="ednote">
 <p>To be revised and updated</p>
 </aside>
-
+-->
 <div data-include-format="html" data-include-replace="true" data-include="./appendices/inspire-and-iso-19115-mappings.html"></div>
 
 </section>
@@ -1804,11 +1825,11 @@ A property which is not mentioned but would be applicable for a class according 
 <section id="change-log" class="appendix informative">
 
 <h2>Change Log</h2>
-
+<!--
 <aside class="ednote">
 <p>To be revised</p>
 </aside>
-
+-->
 <p>The table below summarises the changes applied to the current release of GeoDCAT-AP, including those inherited from [[DCAT-AP]].</p>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/change-log.html"></div>
