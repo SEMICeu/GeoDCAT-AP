@@ -30,28 +30,42 @@
 <!-- ========================================= -->
 
   <rdf:Description rdf:about="http://data.europa.eu/930/">
+<!-- Resource type -->
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/adms#Asset"/>
-	<dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
-	<dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/APROF"/>
-	<adms:status rdf:resource="http://publications.europa.eu/resource/dataset/dataset-status/DEVELOP"/>
+<!-- Asset type -->
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/asset-classification/c_89b4bdb7"/>
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"/>
+    <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/APROF"/>
+<!-- Version information -->
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-10-12</dct:issued>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-1-23</dct:modified>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/dataset-status/DEVELOP"/>
+    <adms:last rdf:resource="http://data.europa.eu/930/"/>
+    <adms:prev rdf:resource="http://data.europa.eu/930/1.0.1/"/>
+    <owl:versionInfo xml:lang="en">Version 2.0.0</owl:versionInfo>
+    <adms:versionNotes xml:lang="en">This version of GeoDCAT-AP is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP and was built starting from GeoDCAT-AP version 1.0.1, with the purpose of aligning it with DCAT-AP version 2.0.1 and with version 2.0.1 of the INSPIRE Metadata Technical Guidelines.</adms:versionNotes>
+<!-- Namespace and prefix -->
     <vann:preferredNamespacePrefix>geodcatap</vann:preferredNamespacePrefix>
     <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://data.europa.eu/930/</vann:preferredNamespaceUri>
+<!-- Description -->
     <rdfs:label xml:lang="en">GeoDCAT-AP</rdfs:label>
     <dct:title xml:lang="en">GeoDCAT-AP</dct:title>
-    <dct:alternative xml:lang="en">GeoDCAT-AP: A geospatial extension for the DCAT application profile for data portals in Europe</dct:alternative>
-    <skos:altLabel xml:lang="en">GeoDCAT-AP: A geospatial extension for the DCAT application profile for data portals in Europe</skos:altLabel>
-    <owl:versionInfo xml:lang="en">Version 2.0.0</owl:versionInfo>
+    <dct:alternative xml:lang="en">GeoDCAT-AP - Version 2.0.0: A geospatial extension for the DCAT application profile for data portals in Europe</dct:alternative>
+    <skos:altLabel xml:lang="en">GeoDCAT-AP - Version 2.0.0: A geospatial extension for the DCAT application profile for data portals in Europe</skos:altLabel>
     <rdfs:comment xml:lang="en">GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 and those defined in the framework of the INSPIRE Directive of the European Union.</rdfs:comment>
     <dct:abstract xml:lang="en">GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 and those defined in the framework of the INSPIRE Directive of the European Union.</dct:abstract>
-    <adms:versionNotes xml:lang="en">This version of GeoDCAT-AP is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP and was built starting from GeoDCAT-AP version 1.0.1, with the purpose of aligning it with DCAT-AP version 2.0.1 and with version 2.0.1 of the INSPIRE Metadata Technical Guidelines.</adms:versionNotes>
+    <dct:description xml:lang="en">GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 and those defined in the framework of the INSPIRE Directive of the European Union.</dct:description>
+<!-- Reference specification -->  
+    <rdfs:isDefinedBy rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/"/>
+<!-- Conformity -->  
     <dct:conformsTo rdf:resource="https://www.w3.org/TR/vocab-dcat-2/"/>
     <dct:conformsTo rdf:resource="http://data.europa.eu/r5r/"/>
     <dct:conformsTo rdf:resource="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements"/>
     <dct:conformsTo rdf:resource="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap"/>
     <dct:conformsTo rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
-    <rdfs:isDefinedBy rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/"/>
+<!-- Re-used vocabularies -->  
     <voaf:reliesOn rdf:resource="http://www.w3.org/ns/adms#"/> 
     <voaf:reliesOn rdf:resource="http://www.w3.org/2011/content#"/> 
     <voaf:reliesOn rdf:resource="http://www.w3.org/ns/dcat#"/> 
@@ -68,9 +82,7 @@
     <voaf:reliesOn rdf:resource="http://spdx.org/rdf/terms#"/> 
     <voaf:reliesOn rdf:resource="http://www.w3.org/2006/time#"/>
     <voaf:reliesOn rdf:resource="http://www.w3.org/2006/vcard/ns#"/>
-    <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-    <dct:rightsHolder rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/EURUN"/>
-    <dct:publisher rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/COM"/>
+<!-- Editor -->  
     <bibo:editor>
       <foaf:Person rdf:about="https://andrea-perego.name/foaf/#me">
         <foaf:name>Andrea Perego</foaf:name>
@@ -82,15 +94,56 @@
         <foaf:name>Bert van Nuffelen</foaf:name>
       </foaf:Person>
     </bibo:editor>
+<!-- Authot -->    
     <dct:creator>
       <foaf:Group>
         <foaf:name>GeoDCAT-AP Working Group</foaf:name>
         <foaf:page rdf:resource="https://github.com/semiceu/geodcat-ap/"/>
       </foaf:Group>
     </dct:creator>
-    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-10-12</dct:issued>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-1-23</dct:modified>
+<!-- Publisher -->    
+    <dct:publisher rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/COM"/>
+<!-- Licence and copyright -->  
+    <dct:rightsHolder rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/EURUN"/>
+    <dct:dateCopyrighted rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2020</dct:dateCopyrighted>
+    <dct:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+<!-- Asset distributions -->
+    <dcat:distribution>
+      <adms:AssetDistribution>
+        <dct:title xml:lang="en">HTML</dct:title>
+        <adms:representationTechnique rdf:resource="http://purl.org/adms/representationtechnique/HumanLanguage"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+        <dcat:mediaType rdf:datatype="http://purl.org/dc/terms/IMT">text/html</dcat:mediaType>
+        <dcat:downloadURL rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/index.html"/>
+      </adms:AssetDistribution>
+    </dcat:distribution>  
+    <dcat:distribution>
+      <adms:AssetDistribution>
+        <dct:title xml:lang="en">RDF/XML</dct:title>
+        <adms:representationTechnique rdf:resource="http://purl.org/adms/representationtechnique/OWL"/>
+        <adms:representationTechnique rdf:resource="http://purl.org/adms/representationtechnique/RDFSchema"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+        <dct:format rdf:resource="http://www.w3.org/ns/formats/data/RDF_XML"/>
+        <dcat:mediaType rdf:datatype="http://purl.org/dc/terms/IMT">application/rdf+xml</dcat:mediaType>
+        <dcat:downloadURL rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.rdf"/>
+      </adms:AssetDistribution>
+    </dcat:distribution>  
+    <dcat:distribution>
+      <adms:AssetDistribution>
+        <dct:title xml:lang="en">Turtle</dct:title>
+        <adms:representationTechnique rdf:resource="http://purl.org/adms/representationtechnique/OWL"/>
+        <adms:representationTechnique rdf:resource="http://purl.org/adms/representationtechnique/RDFSchema"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
+        <dct:format rdf:resource="http://www.w3.org/ns/formats/data/Turtle"/>
+        <dcat:mediaType rdf:datatype="http://purl.org/dc/terms/IMT">text/turtle</dcat:mediaType>    
+        <dcat:downloadURL rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.ttl"/>
+      </adms:AssetDistribution>
+    </dcat:distribution>  
   </rdf:Description>
+
+<!-- ========================================= -->
+<!-- Terms re-used from other vocabularies     -->
+<!-- ========================================= -->
 
 <!-- ========================================= -->
 <!-- Classes                                   -->
@@ -549,7 +602,7 @@
   </rdf:Description>
 
   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class property is used to specify the name of a Category, a geographic name, reference system, .</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class property is used to specify the name of a Category, Location (geographic name), and reference system.</skos:scopeNote>
   </rdf:Description>
 
 <!-- Conformity -->
@@ -664,6 +717,5 @@
 <!-- ========================================= -->
 <!-- Terms defined in the GeoDCAT-AP namespace -->
 <!-- ========================================= -->
-
 
 </rdf:RDF>
