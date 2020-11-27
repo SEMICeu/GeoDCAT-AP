@@ -342,14 +342,14 @@ The views expressed are purely those of the author and may not in any circumstan
 <section id="properties">
 
 <h2>Application Profile Properties per Class</h2>
-<!--
+
 <aside class="ednote">
 <p>To be revised.</p>
 <p>Classes have been listed as in [[DCAT-AP-20200608]], followed by those classes added by GeoDCAT-AP, so to preserve the section numbering.</p>
 <p>The current listing is not optimal, as the criteria behind the order in which classes are listed is unclear. Moreover, in each section there is no indication of whether a class is mandatory, recommended, or optional, and so readers need to go back to <a class="no-sectionRef" href="#classes"></a> to check this.</p>
 <p>An option would be to group classes into specific sections - mandatory classes, recommended classes, optional classes - and to list them in alphabetical order, as done in <a class="no-sectionRef" href="#classes"></a>.</p>
 </aside>
--->
+
 <p>A quick reference table of properties per class is included in <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a>. The list of included properties contains all the properties in [[DCAT-AP-20200608]], plus a selection of properties from [[VOCAB-DCAT-2]] and [[DCTERMS]], on which GeoDCAT-AP expresses additional constraints or on which GeoDCAT-AP wants to emphasise their usage.
 <!--
 A property which is not mentioned but would be applicable for a class according to [[VOCAB-DCAT-2]] is considered out of scope for GeoDCAT-AP.
@@ -357,61 +357,6 @@ A property which is not mentioned but would be applicable for a class according 
 </p>
 
 <p>Examples on the use of these properties, encoded in [[Turtle]], are included in the relevant sections. The examples are also available in [[Turtle]] and RDF/XML [[RDF-SYNTAX-GRAMMAR]] from a <a href="./examples/">separate folder</a>.</p>
-
-<!-- Agent -->
-
-<section id="properties-for-agent">
-
-<h3>Agent</h3>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-agent.html"></div>
-
-<section id="mandatory-properties-for-agent">
-
-<h4>Mandatory property for Agent</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-agent.html"></div>
-
-</section>
-
-<section id="recommended-properties-for-agent">
-
-<h4>Recommended property for Agent</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-agent.html"></div>
-
-</section>
-
-<section id="optional-properties-for-agent">
-
-<h4>Optional properties for Agent</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#agent-address">address</a></li>
-<li>+<a href="#agent-affiliation">affiliation</a></li>
-<li>+<a href="#agent-email">email</a></li>
-<li>+<a href="#agent-phone">phone</a></li>
-<li>+<a href="#agent-url">URL</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-agent.html"></div>
-
-</section>
-
-<section id="examples-for-agent">
-
-<h4>Examples for Agent</h4>
-
-<aside class="example" id="ex-agent" title="Agent">
-<pre data-include-format="text" data-include="./examples/agent.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
 
 <!-- Catalogue -->
 
@@ -536,113 +481,6 @@ A property which is not mentioned but would be applicable for a class according 
 <aside class="example" id="ex-catalogue-record" title="Catalogue Record">
 <pre data-include-format="text" data-include="./examples/catalogue-record.ttl"></pre>
 </aside>
-
-</section>
-
-</section>
-
-<!-- Category -->
-
-<section id="properties-for-category">
-
-<h3>Category</h3>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-category.html"></div>
-
-<section id="mandatory-properties-for-category">
-
-<h4>Mandatory property for Category</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-category.html"></div>
-
-</section>
-
-<section id="optional-properties-for-category">
-
-<h4>Optional property for Category</h4>
-
-<aside class="note">
-<p>The following property is not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#category-category-scheme">category scheme</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-category.html"></div>
-
-</section>
-
-<section id="examples-for-category">
-
-<h4>Examples for Category</h4>
-
-<aside class="example" id="ex-category" title="Category">
-<pre data-include-format="text" data-include="./examples/category.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
-
-<!-- Category Scheme -->
-
-<section id="properties-for-category-scheme">
-
-<h3>Category Scheme</h3>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-category-scheme.html"></div>
-
-<section id="mandatory-properties-for-category-scheme">
-
-<h4>Mandatory property for Category Scheme</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-category-scheme.html"></div>
-
-</section>
-
-<section id="optional-properties-for-category-scheme">
-
-<h4>Optional properties for Category Scheme</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#category-scheme-creation-date">creation date</a></li>
-<li>+<a href="#category-scheme-release-date">release date</a></li>
-<li>+<a href="#category-scheme-modification-date">update / modification date</a></li>
-<li>+<a href="#category-scheme-version">version</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-category-scheme.html"></div>
-
-</section>
-
-<section id="examples-for-category-scheme">
-
-<h4>Examples for Category Scheme</h4>
-
-<aside class="example" id="ex-category-scheme" title="Category Scheme">
-<pre data-include-format="text" data-include="./examples/category-scheme.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
-
-<!-- Checksum -->
-
-<section id="properties-for-checksum">
-
-<h3>Checksum</h3>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-checksum.html"></div>
-
-<section id="mandatory-properties-for-checksum">
-
-<h4>Mandatory properties for Checksum</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-checksum.html"></div>
 
 </section>
 
@@ -854,6 +692,168 @@ A property which is not mentioned but would be applicable for a class according 
 
 </section>
 
+<!-- Agent -->
+
+<section id="properties-for-agent">
+
+<h3>Agent</h3>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-agent.html"></div>
+
+<section id="mandatory-properties-for-agent">
+
+<h4>Mandatory property for Agent</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-agent.html"></div>
+
+</section>
+
+<section id="recommended-properties-for-agent">
+
+<h4>Recommended property for Agent</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-agent.html"></div>
+
+</section>
+
+<section id="optional-properties-for-agent">
+
+<h4>Optional properties for Agent</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#agent-address">address</a></li>
+<li>+<a href="#agent-affiliation">affiliation</a></li>
+<li>+<a href="#agent-email">email</a></li>
+<li>+<a href="#agent-phone">phone</a></li>
+<li>+<a href="#agent-url">URL</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-agent.html"></div>
+
+</section>
+
+<section id="examples-for-agent">
+
+<h4>Examples for Agent</h4>
+
+<aside class="example" id="ex-agent" title="Agent">
+<pre data-include-format="text" data-include="./examples/agent.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
+<!-- Category Scheme -->
+
+<section id="properties-for-category-scheme">
+
+<h3>Category Scheme</h3>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-category-scheme.html"></div>
+
+<section id="mandatory-properties-for-category-scheme">
+
+<h4>Mandatory property for Category Scheme</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-category-scheme.html"></div>
+
+</section>
+
+<section id="optional-properties-for-category-scheme">
+
+<h4>Optional properties for Category Scheme</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#category-scheme-creation-date">creation date</a></li>
+<li>+<a href="#category-scheme-release-date">release date</a></li>
+<li>+<a href="#category-scheme-modification-date">update / modification date</a></li>
+<li>+<a href="#category-scheme-version">version</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-category-scheme.html"></div>
+
+</section>
+
+<section id="examples-for-category-scheme">
+
+<h4>Examples for Category Scheme</h4>
+
+<aside class="example" id="ex-category-scheme" title="Category Scheme">
+<pre data-include-format="text" data-include="./examples/category-scheme.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
+<!-- Category -->
+
+<section id="properties-for-category">
+
+<h3>Category</h3>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-category.html"></div>
+
+<section id="mandatory-properties-for-category">
+
+<h4>Mandatory property for Category</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-category.html"></div>
+
+</section>
+
+<section id="optional-properties-for-category">
+
+<h4>Optional property for Category</h4>
+
+<aside class="note">
+<p>The following property is not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#category-category-scheme">category scheme</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-category.html"></div>
+
+</section>
+
+<section id="examples-for-category">
+
+<h4>Examples for Category</h4>
+
+<aside class="example" id="ex-category" title="Category">
+<pre data-include-format="text" data-include="./examples/category.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
+<!-- Checksum -->
+
+<section id="properties-for-checksum">
+
+<h3>Checksum</h3>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-checksum.html"></div>
+
+<section id="mandatory-properties-for-checksum">
+
+<h4>Mandatory properties for Checksum</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-checksum.html"></div>
+
+</section>
+
+</section>
+
 <!-- Identifier -->
 
 <section id="properties-for-identifier">
@@ -1038,7 +1038,7 @@ A property which is not mentioned but would be applicable for a class according 
 
 <section id="properties-for-activity">
 
-<h3>+Activity</h3>
+<h3>Activity</h3>
 
 <aside class="note">
 <p>This class is not included in [[DCAT-AP-20200608]].</p>
@@ -1082,7 +1082,7 @@ A property which is not mentioned but would be applicable for a class according 
 
 <section id="properties-for-address-agent">
 
-<h3>+Address (Agent)</h3>
+<h3>Address (Agent)</h3>
 
 <aside class="note">
 <p>This class is not included in [[DCAT-AP-20200608]].</p>
@@ -1126,7 +1126,7 @@ A property which is not mentioned but would be applicable for a class according 
 
 <section id="properties-for-address-kind">
 
-<h3>+Address (Kind)</h3>
+<h3>Address (Kind)</h3>
 
 <aside class="note">
 <p>This class is not included in [[DCAT-AP-20200608]].</p>
@@ -1170,7 +1170,7 @@ A property which is not mentioned but would be applicable for a class according 
 
 <section id="properties-for-attribution">
 
-<h3>+Attribution</h3>
+<h3>Attribution</h3>
 
 <aside class="note">
 <p>This class is not included in [[DCAT-AP-20200608]].</p>
@@ -1220,7 +1220,7 @@ A property which is not mentioned but would be applicable for a class according 
 
 <section id="properties-for-document">
 
-<h3>+Document</h3>
+<h3>Document</h3>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-document.html"></div>
 
@@ -1256,7 +1256,7 @@ A property which is not mentioned but would be applicable for a class according 
 
 <section id="properties-for-kind">
 
-<h3>+Kind</h3>
+<h3>Kind</h3>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-kind.html"></div>
 
@@ -1311,7 +1311,7 @@ A property which is not mentioned but would be applicable for a class according 
 
 <section id="properties-for-provenance-statement">
 
-<h3>+Provenance Statement</h3>
+<h3>Provenance Statement</h3>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-provenance-statement.html"></div>
 
@@ -1346,7 +1346,7 @@ A property which is not mentioned but would be applicable for a class according 
 
 <section id="properties-for-media-type">
 
-<h3>+Media Type</h3>
+<h3>Media Type</h3>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-media-type.html"></div>
 
@@ -1381,7 +1381,7 @@ A property which is not mentioned but would be applicable for a class according 
 
 <section id="properties-for-rights-statement">
 
-<h3>+Rights Statement</h3>
+<h3>Rights Statement</h3>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-rights-statement.html"></div>
 
@@ -1416,7 +1416,7 @@ A property which is not mentioned but would be applicable for a class according 
 
 <section id="properties-for-standard">
 
-<h3>+Standard</h3>
+<h3>Standard</h3>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-standard.html"></div>
 
