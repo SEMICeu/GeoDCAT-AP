@@ -743,6 +743,11 @@ var respecConfig = {
         "title":"CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
         "publisher":"Creative Commons"
       },
+      "CC-BY": {
+        "href":"https://creativecommons.org/licenses/by/4.0/",
+        "title":"CC-BY 4.0 Attribution 4.0 International",
+        "publisher":"Creative Commons"
+      },
       "PDDL": {
         "href":"http://opendatacommons.org/licenses/pddl/",
         "title":"Public Domain Dedication and License (PDDL)",
