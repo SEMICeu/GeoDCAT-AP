@@ -631,7 +631,7 @@ var respecConfig = {
       "Vickery":{
         "href":"http://ec.europa.eu/information_society/policy/psi/docs/pdfs/report/final_version_study_psi.docx",
         "title":"Review of recent studies on PSI reuse and related market developments",
-	"authors":["Graham Vickery"],
+        "authors":["Graham Vickery"],
         "nopublisher":"European Commission"
        },
       "EC-OD-COM":{
@@ -767,15 +767,17 @@ var respecConfig = {
         "href":"http://www.theodi.org/",
         "title":"ODI"
       },
-      "DataStrategy": {
-        "href":"https://ec.europa.eu/info/strategy/priorities-2019-2024/europe-fit-digital-age/european-data-strategy",
-        "title":"European Data Strategy",
-        "publisher":"European Commission"
-      },
       "PSI": {
-        "href":"https://ec.europa.eu/digital-single-market/en/european-legislation-reuse-public-sector-information",
-        "title":"European Legislation on the Reuse of Public Sector Information",
-        "publisher":"European Commission"
+        "href":"http://data.europa.eu/eli/dir/2019/1024/oj",
+        "title":"Directive (EU) 2019/1024 of the European Parliament and of the Council of 20 June 2019 on open data and the re-use of public sector information",
+        "publisher":"OJ L 172",
+        "date":"20 June 2019"
+      },
+      "DataStrategy": {
+        "href":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52020DC0066",
+        "title":"COMMUNICATION FROM THE COMMISSION TO THE EUROPEAN PARLIAMENT, THE COUNCIL, THE EUROPEAN ECONOMIC AND SOCIAL COMMITTEE AND THE COMMITTEE OF THE REGIONS A European strategy for data",
+        "publisher":"COM/2020/66 final",
+        "date":"19 February 2020"
       },
 // To be pushed to SpecRef
       "SPS": {
