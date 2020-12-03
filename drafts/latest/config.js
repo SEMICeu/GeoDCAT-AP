@@ -42,20 +42,20 @@ var respecConfig = {
 */
     {
       label: "RDF/XML",
-      uri: "./geodcat-ap_v2.0.0.rdf",
+      uri: "./geodcat-ap.rdf",
     },
     {
       label: "Turtle",
-      uri: "./geodcat-ap_v2.0.0.ttl",
+      uri: "./geodcat-ap.ttl",
     },
 /*
     {
       label: "JSON-LD (TBD)",
-      uri: "./geodcat-ap_v2.0.0.jsonld",
+      uri: "./geodcat-ap.jsonld",
     },
     {
       label: "SHACL (TBD)",
-      uri: "./geodcat-ap_v2.0.0_shacl_shapes.ttl",
+      uri: "./geodcat-ap_shacl_shapes.ttl",
     }
 */
     ],    
