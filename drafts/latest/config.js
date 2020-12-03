@@ -769,12 +769,12 @@ var respecConfig = {
       },
       "DataStrategy": {
         "href":"https://ec.europa.eu/info/strategy/priorities-2019-2024/europe-fit-digital-age/european-data-strategy",
-        "title":"European Data Strategy"
+        "title":"European Data Strategy",
         "publisher":"European Commission"
       },
       "PSI": {
         "href":"https://ec.europa.eu/digital-single-market/en/european-legislation-reuse-public-sector-information",
-        "title":"European Legislation on the Reuse of Public Sector Information"
+        "title":"European Legislation on the Reuse of Public Sector Information",
         "publisher":"European Commission"
       },
 // To be pushed to SpecRef
