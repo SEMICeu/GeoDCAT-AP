@@ -155,47 +155,19 @@ The views expressed are purely those of the author and may not in any circumstan
 <section id="terminology">
 
 <h2>Terminology used in the Application Profile</h2>
-<aside class="ednote">
-<p>This section has been copied from DCAT-AP. It covers 2 aspects, a) (a partial set of) definitions of the domain specific core concepts and b) an reading guide on specification terminology.</p>
-<p>The proposal is to remove the definitions of the domain specific terminology and leave that to the appropriate places below.</p>
-</aside>
-<!--
-<aside class="ednote">
-<p>It is missing a definition for "Resource" - the superclass of all resources documented in a catalogue.</p>
-<p>A possible definition:</p>
-<blockquote>
-<p>A <strong>Resource</strong> is a dataset, data service, or any other kind of resource documented in a catalogue.</p>
-</blockquote>
-<p>Related issues:</p>
-<div class="issue" data-number="22"></div>
-</aside>
--->
-<div class="issue" data-number="35"></div>  
   
-<p>An <strong>Application Profile</strong> is a specification that re-uses terms from one or more base standards, adding more specificity by identifying mandatory, recommended and optional elements to be used for a particular application, as well as recommendations for controlled vocabularies to be used.</p>
+<p>A <strong>Vocabulary</strong> is a specification that determines the semantics of terms (classes and properties) in a broad context of information exchange. The defined terms are higly reusable.</p>
+<p>A <strong>Controlled Vocabulary</strong> is an organized arrangement of words and phrases used to index content and/or to retrieve content through browsing or searching. It typically includes preferred and variant terms and has a defined scope or describes a specific domain. [[?GETTY]] Within this specification it is a synonym for a codelist. 
+<p>An <strong>Application Profile</strong> is a specification that re-uses terms from one or more base standards (vocabularies), adding more specificity by identifying mandatory, recommended and optional elements to be used for a particular application, as well as recommendations for controlled vocabularies to be used.</p>
 
+<!--
 <p>A <strong>Dataset</strong> is a collection of data, published or curated by a single source, and available for access or download in one or more formats.</p>
 
-<!--
 <p>A <strong>Data Service</strong> is a Web-based system that gives access to or supports operations on one or more datasets via an interface (<abbr title="Application Programming Interface">API</abbr>).</p>
--->
 <p>A <strong>Data Service</strong> is a collection of operations accessible through an interface (<abbr title="Application Programming Interface">API</abbr>) that provide access to one or more datasets or data processing functions. Examples include, but are not limited to, SPARQL endpoints [[SPARQL11-PROTOCOL]], [[OAI-PMH]] repositories, OGC spatial data services ([[CSW]], [[WCS]], [[WFS]], [[WMS]], etc.).</p>
 
 <p>A <strong>Data Portal</strong> is a Web-based system that contains a data catalogue with descriptions of datasets and provides services enabling discovery and re-use of the datasets.</p>
-
-<aside class="ednote">
-<p>The definitions of recommended classes and properties are inconsistent.</p>
-<!--
-<p>Moreover, a definition for deprecated properties and classes is missing.</p>
-<p>A possible definition:</p>
-<blockquote>
-<ul>
-<li><strong>Deprecated class</strong>: a receiver SHOULD be able to process information about instances of that class; a sender SHOULD NOT provide information about instances of that class.</li>
-<li><strong>Deprecated property</strong>: a receiver SHOULD be able to process information about instances of that property; a sender SHOULD NOT provide the information about instances of that propertry.</li>
-</ul>
-</blockquote>
 -->
-</aside>
 
 <p>In the following sections, classes and properties are grouped under headings ‘mandatory’, ‘recommended’ and ‘optional’. These terms have the following meaning.</p>
 <ul>
@@ -218,15 +190,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <p>The class ‘Distribution’ is classified as ‘Recommended’ in <a class="no-sectionRef" href="#recommended-classes"></a> to allow for cases that a particular Dataset does not have a downloadable Distribution, and in such cases the sender of data would not be able to provide this information. However, it can be expected that in the majority of cases Datasets do have downloadable Distributions, and in such cases the provision of information on the Distribution is mandatory.</p>
 
 <p>All other classes are classified as ‘Optional’ in <a class="no-sectionRef" href="#optional-classes"></a>. A further description of the optional classes is only included as a sub-section in <a class="no-sectionRef" href="#properties"></a> if the Application Profile specifies mandatory or recommended properties for them.</p>
-<!--
-<aside class="ednote">
-<p>It is missing a paragraph for deprecated classes.</p>
-<p>E.g.:</p>
-<blockquote>
-<p>Classes no longer included in this version of the specification, or replaced with other ones, are classified as ‘Deprecated’ in <a class="no-sectionRef" href="#deprecated-classes"></a>.</p>
-</blockquote>
-</aside>
--->
+
 <p>Classes no longer included in this version of the specification, or replaced with other ones, are classified as ‘Deprecated’ in <a class="no-sectionRef" href="#deprecated-classes"></a>.</p>
 
 <p>Finally, classes and properties added in this Application Profile and extending [[DCAT-AP]] are marked with a prepended &ldquo;plus&rdquo; sign (+), and summarised in the reference table in <a class="no-secRef" href="#geodcat-ap-classes-and-properties"></a>.</p>

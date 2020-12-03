@@ -762,6 +762,11 @@ var respecConfig = {
         "href":"http://www.theodi.org/",
         "title":"ODI"
       },
+      "GETTY": {
+        "href":"https://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/what.pdf",
+        "title":"Introduction Controlled Vocabularies",
+	"publisher": "The Getty Research Institute"
+      },
 // To be pushed to SpecRef
       "SPS": {
         "href":"http://www.ogc.org/standards/sps",
