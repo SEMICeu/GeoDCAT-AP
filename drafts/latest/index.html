@@ -108,14 +108,19 @@ The views expressed are purely those of the author and may not in any circumstan
 
 <h3>Context</h3>
 
-<aside class="ednote">
-<p>To be revised - especially the 2nd paragraph, which is citing references dating back to 2011, and nothing of what happened after that - one for all, the Open Data Directive.</p>
-</aside>
+<p>With a view to fostering Europe's digital transformation, the European Commission is investing in frameworks and agreements to provide governments and businesses with the appropriate resources to digitalise their services. There are, for instance, building blocks available for creating a single market for data, where data flows freely within the EU and across sectors for the benefit of businesses, researchers and public administrations.</p>
 
-<p>This document has been prepared in the context of Action 1.1 – Improving semantic interoperability in European eGovernment systems [[SEMIC]] of the European Commission’s Interoperability solutions for public administrations, businesses and citizens (ISA²) programme [[ISA2]].</p> 
-<p>Studies conducted on behalf of the European Commission [[Vickery]] show that businesses and citizens still face difficulties in finding and re-using public sector information. In its communication on Open Data [[EC-OD-COM]] of 12 December 2011, the European Commission states that the availability of the information in a machine-readable format as well as a thin layer of commonly agreed metadata could facilitate data cross-reference and interoperability and therefore considerably enhance its value for reuse.</p> 
-<p>Much of the public sector information that would benefit from interoperability is published as datasets in data portals. Therefore, an agreement on a common format for data exchange would support the sharing, discovery and re-use of this data.</p> 
-<p>This document is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP [[DCAT-AP-CRMP]] and was built starting from GeoDCAT-AP version 1.0.1 [[GeoDCAT-AP-20160802]], with the purpose of aligning it with DCAT-AP version 2.0.1 [[DCAT-AP-20200608]] and with version 2.0.1 of the <abbr title="Infrastructure for spatial information in Europe">INSPIRE</abbr> Metadata Technical Guidelines [[INSPIRE-MD-20170302]].</p> 
+<p>To this direction, the European Commission launched the European Data Strategy [[DataStrategy]], as part of the European Commission's priorities for 2019-2024 in order to make the EU a leader in a data-driven society.</p>
+
+<p>Studies previously conducted on behalf of the European Commission (e.g., [[Vickery]]) shed light on the importance of having data findable and available in machine readable format in order to stimulate its reuse. This vision led to several legislative actions to reduce barriers and promote data sharing, such as the PSI Directive [[PSI]], a European legislation on open data and the re-use of public sector information, which turned out to be a driving force towards a more transparent and fair access to public sector information.</p>
+
+<p>With this regard, the wide range of (open) data portals developed by European public administrations is the result of this mission. These Web-based interfaces allow access to data by providing users means to explore a catalogue of datasets. To facilitate the sharing, discovery and re-use of the data beyond the (open) data portal, common agreements for the exchange of catalogues of datasets are needed. These interoperability agreements enable to connect (open) data catalogues into a pan-european catalogue of datasets.</p>
+
+<p>The DCAT-AP application profile specifies the generic agreements for (open) data portals operated by public administrations in Europe. This specification extends DCAT-AP with additional requirements for geospatial data.</p>
+
+<p>The current document is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP [[DCAT-AP-CRMP]] and was built starting from GeoDCAT-AP version 1.0.1 [[GeoDCAT-AP-20160802]], with the purpose of aligning it with DCAT-AP version 2.0.1 [[DCAT-AP-20200608]] and with version 2.0.1 of the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20170302]].</p>
+
+<p>This worked has been carried out in the context of Action 1.1 – Improving semantic interoperability in European eGovernment systems [[SEMIC]] of the European Commission’s Interoperability solutions for public administrations, businesses and citizens (ISA²) Programme [[ISA2]], and it is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP [[DCAT-AP-CRMP]] and was built starting from GeoDCAT-AP version 1.0.1 [[GeoDCAT-AP-20160802]], with the purpose of aligning it with DCAT-AP version 2.0.1 [[DCAT-AP-20200608]] and with version 2.0.1 of the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20170302]].</p>
 
 </section>
 
@@ -1538,11 +1543,8 @@ A property which is not mentioned but would be applicable for a class according 
 
 <h3>Licence vocabularies</h3>
 
-<aside class="ednote">
-<p>To be revised taking into account the recent push to CC-BY etc., and by considering the removal of EUPL unless it is used for software.</p>
-</aside>
-
-<p>Concerning licence vocabularies, implementers are encouraged to use widely recognised licences such as Creative Commons licences [[?CC]], and in particular the CC Zero Public Domain Dedication [[?CC0]], the Open Data Commons Public Domain Dedication and License (PDDL) [[?PDDL]], the European Union Public Licence (EUPL) [[?EUPL]] or an open government licence such as the UK Open Government Licence [[?UKOGL]].</p>
+<p>Concerning licence vocabularies, implementers are encouraged to use widely recognised licences such as Creative Commons licences [[?CC]], and in particular the CC Zero Public Domain Dedication [[?CC0]] or CC-BY Attribution 4.0 International [[?CC-BY]], or  the Open Data Commons Public Domain Dedication and License (PDDL) [[?PDDL]]. 
+Often there is applicable legislation or a licency policy in place which determine the set of licences to be used. They may recommend the use of an open government licence such as the UK Open Government Licence [[?UKOGL]].</p>
 <p>Further activities in this area are undertaken by the Open Data Institute [[?ODI]] with the Open Data Rights Statement Vocabulary [[?ODRS]] and by the Open Digital Rights Language (ODRL) Initiative [[VOCAB-ODRL]].</p>
 
 </section>
@@ -1684,14 +1686,26 @@ A property which is not mentioned but would be applicable for a class according 
 <h2>Acknowledgements</h2>
 
 <aside class="ednote">
-<p>Representatives, editors and contributors to be added.</p>
+<p>Representatives, editors and contributors to be updated.</p>
 </aside>
 
+<!--
 <p>This work was elaborated by a Working Group under the ISA² programme. The ISA² Programme of the European Commission was represented by <strong>TBD</strong>. <strong>TBD</strong> were the editors of the specification. Contributors: TBD.</p>
 <p>The members of the Working Group:</p>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/geodcat-ap-wg-members.html"></div>
-
+-->
+<p>
+  This work was elaborated by the <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/geodcat-application-profile-data-portals-europe/members">GeoDCAT-AP Working Group</a> under the ISA² programme. 
+</p>
+<p>
+  The ISA² Programme of the European Commission was represented by <strong>Pavlina Fragkou</strong> and <strong>Seth van Hooland</strong>. 
+  <strong>Andrea Perego</strong> and <strong>Bert van Nuffelen</strong> were the editors of the specification. 
+</p>
+<p>
+  Contributors: Andreas Kuckartz, Antonio Rotundo, Danny Vandenbroucke, Fabian Kirstein, Franck Cotton, Hannes Reuter, Jakub Klímek, James Passmore, Matthias Palmér, Simon Cox.
+</p>
+  
 </section>
 
 <!-- Annexes -->
