@@ -37,13 +37,13 @@ dct:ProvenanceStatement skos:scopeNote "In GeoDCAT-AP, this class is used to exp
 
 dct:RightsStatement skos:scopeNote "In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP."@en .
 
-dct:Standard skos:scopeNote "In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP. In particular, in GeoDCAT-AP this class is used to express all the information that, in ISO 19155 and INSPIRE, is specified on \"metadata standard\", \"reference system\", \"reference specification\" (for conformity test results)."@en .
+dct:Standard skos:scopeNote "In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP, and to express all the information that, in ISO 19155 and INSPIRE, is specified on \"metadata standard\", \"reference system\", \"reference specification\" (for conformity test results)."@en .
 
 dct:accessRights skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP. For INSPIRE metadata, this property SHOULD be used with the URIs of the \"Limitations on public access\" code list operated by the INSPIRE Registry."@en .
 
 dct:accrualPeriodicity skos:scopeNote "In GeoDCAT-AP, this property corresponds to the notion of \"maintenance information\", as defined in ISO 19115 and INSPIRE."@en .
 
-dct:conformsTo skos:scopeNote "In GeoDCAT-AP, this property is generally used to specify conformity of a resource with a reference standard / specification / regulation / reference system. As such, it is one of the properties used to represent the notions of \"conformity and data quality\", \"reference system\", \"metadata standard\", as defined in ISO 19115 and INSPIRE. About the notion of \"conformity and data quality\", this property can only be used when the conformity degree is \"conformant\"."@en .
+dct:conformsTo skos:scopeNote "In GeoDCAT-AP, this property is generally used to specify conformity of a resource (as a Catalogue, Catalogue Record, Data Service, Dataset) with a reference standard / specification / regulation / reference system. As such, it is one of the properties used to represent the notions of \"conformity and data quality\", \"reference system\", \"metadata standard\", as defined in ISO 19115 and INSPIRE. About the notion of \"conformity and data quality\", this property can only be used when the conformity degree is \"conformant\"."@en .
 
 dct:created skos:scopeNote "In GeoDCAT-AP, this property corresponds to the notion of \"temporal reference - creation date\", as defined in ISO 19115 and INSPIRE."@en .
 
@@ -85,7 +85,7 @@ dct:rightsHolder skos:scopeNote "In GeoDCAT-AP, this property corresponds to res
 
 dct:source skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT."@en .
 
-dct:spatial skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource, by using either a geographic identifier or a geometry. As such, it is one of the properties used to represent the notion of \"geographic location / geographic bounding box\", as defined in ISO 19115 and INSPIRE."@en .
+dct:spatial skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource (as a Catalogue, Data Service, Dataset), by using either a geographic identifier or a geometry. As such, it is one of the properties used to represent the notion of \"geographic location / geographic bounding box\", as defined in ISO 19115 and INSPIRE."@en .
 
 dct:subject skos:scopeNote "In GeoDCAT-AP, this property SHOULD take as value one of the URIs of the \"Topic categories in accordance with EN ISO 19115\" code list operated by the INSPIRE Registry."@en .
 
@@ -105,9 +105,9 @@ spdx:checksumValue skos:scopeNote "In GeoDCAT-AP, this property is used as in DC
 
 rdfs:comment skos:scopeNote "In GeoDCAT-AP, this property is used to specify \"spatial resolution\", as defined in ISO 19115 and INSPIRE, as a textual description. In particular, it is used to express spatial resolution when it cannot be expressed with property dcat:spatialResolutionInMeters."@en .
 
-rdfs:label skos:scopeNote "In GeoDCAT-AP, this property is used to specify a textual descriptions of \"conditions for access and use and limitations on public access - use limitations and access / other constraints\" (rights statements) and \"lineage\", as defined in ISO 19115 and INSPIRE."@en .
+rdfs:label skos:scopeNote "In GeoDCAT-AP, this property is used to specify a textual descriptions of \"conditions for access and use and limitations on public access - use limitations and access / other constraints\" (rights statements), \"encoding / distribution format\", and \"lineage\", as defined in ISO 19115 and INSPIRE."@en .
 
-owl:versionInfo skos:scopeNote "In GeoDCAT-AP, this property corresponds to the notion of \"metadata standard version\", as defined in ISO 19115 and INSPIRE. Moreover, it can also be used to specify the version of other types resources, as in DCAT and DCAT-AP."@en .
+owl:versionInfo skos:scopeNote "In GeoDCAT-AP, this property corresponds to the notion of \"metadata standard version\", as defined in ISO 19115 and INSPIRE. Moreover, it can also be used to specify the version of other types resources (as Category Schemes and Datasets)."@en .
 
 skos:Concept skos:scopeNote "In GeoDCAT-AP, this class corresponds to the notion of \"keyword from controlled vocabulary\", as defined in ISO 19115 and INSPIRE, and for items from gazetteers and registers of reference systems."@en .
 
@@ -117,7 +117,7 @@ skos:inScheme skos:scopeNote "In GeoDCAT-AP, this property is used to link an it
 
 skos:notation skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT-AP."@en .
 
-skos:prefLabel skos:scopeNote "In GeoDCAT-AP, this class property is used to specify the name of a Category, Location (geographic name), and reference system."@en .
+skos:prefLabel skos:scopeNote "In GeoDCAT-AP, this property is used to specify the name of a Category, Location (geographic name), and reference system."@en .
 
 time:hasBeginning skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."@en .
 
@@ -179,13 +179,13 @@ dcat:accessService skos:scopeNote "In GeoDCAT-AP, this property is used as in DC
 
 dcat:accessURL skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."@en .
 
-dcat:bbox skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource, by using a bounding box. As such it is one of the properties used to represent the notion of \"geographic location / geographic bounding box\", as defined in ISO 19115 and INSPIRE."@en .
+dcat:bbox skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource (as a Catalogue, Data Service, Dataset), by using a bounding box. As such it is one of the properties used to represent the notion of \"geographic location / geographic bounding box\", as defined in ISO 19115 and INSPIRE."@en .
 
 dcat:byteSize skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."@en .
 
 dcat:catalog skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."@en .
 
-dcat:centroid skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource, by using a centroid. As such, it is one of the properties used to represent the notion of \"geographic location / geographic bounding box\", as defined in ISO 19115 and INSPIRE."@en .
+dcat:centroid skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource (as a Catalogue, Data Service, Dataset), by using a centroid. As such, it is one of the properties used to represent the notion of \"geographic location / geographic bounding box\", as defined in ISO 19115 and INSPIRE."@en .
 
 dcat:compressFormat skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."@en .
 
@@ -237,7 +237,7 @@ locn:adminUnitL1 skos:scopeNote "In GeoDCAT-AP, this property is used to specify
 
 locn:adminUnitL2 skos:scopeNote "In GeoDCAT-AP, this property is used to specify the administrative area of a postal address of an Agent, when the role is different from \"point of contact\"."@en .
 
-locn:geometry skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource, by using a geometry. As such, it is one of the properties used to represent the notion of \"geographic location / geographic bounding box\", as defined in ISO 19115 and INSPIRE."@en .
+locn:geometry skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource (as a Catalogue, Data Service, Dataset), by using a geometry. As such, it is one of the properties used to represent the notion of \"geographic location / geographic bounding box\", as defined in ISO 19115 and INSPIRE."@en .
 
 locn:postCode skos:scopeNote "In GeoDCAT-AP, this property is used to specify the postal code of a postal address of an Agent, when the role is different from \"point of contact\"."@en .
 
@@ -249,23 +249,23 @@ odrl:hasPolicy skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT-A
 
 org:memberOf skos:scopeNote "In GeoDCAT-AP, this property is used to specify the affiliation of an Agent, when the role is different from \"point of contact\"."@en .
 
-prov:Activity skos:scopeNote "In GeoDCAT-AP, this class MAY be used to specify a testing activity over a resource, against a given Standard, producing as output a conformance degree. As such, it is one of the classes used to represent the notion of \"conformity and data quality\"."@en .
+prov:Activity skos:scopeNote "In GeoDCAT-AP, this class MAY be used to specify a testing activity over a resource (as a Catalogue, Catalogue Record, Data Service, Dataset), against a given Standard, producing as output a conformance degree. As such, it is one of the classes used to represent the notion of \"conformity and data quality\" in ISO 19115 and INSPIRE."@en .
 
 prov:Attribution skos:scopeNote "In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP to specify, via a qualified relationship, an agent role not supported in the reference vocabularies. In particular, in GeoDCAT-AP it provides a general mechanism to express all the responbile party roles defined in ISO 10115 and INSPIRE."@en .
 
 prov:agent skos:scopeNote "In GeoDCAT-AP, this property is used to specify the Agent associated with a role not supported in the reference vocabularies."@en .
 
-prov:generated skos:scopeNote "In GeoDCAT-AP, this property MAY be used to specify the result of a testing activity over a resource. As such, it is one of the properties used to represent the notion of \"conformity and data quality\"."@en .
+prov:generated skos:scopeNote "In GeoDCAT-AP, this property MAY be used to specify the result of a testing activity over a resource (as Catalogue, Catalogue Record, Data Service, Dataset). As such, it is one of the properties used to represent the notion of \"conformity and data quality\"."@en .
 
 prov:qualifiedAssociation skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."@en .
 
 prov:qualifiedAttribution skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP to specify an agent role not supported in the reference vocabularies."@en .
 
-prov:used skos:scopeNote "In GeoDCAT-AP, this property MAY be used to specify the resource over which a testing activity has been carried out. As such, it is one of the properties used to represent the notion of \"conformity and data quality\"."@en .
+prov:used skos:scopeNote "In GeoDCAT-AP, this property MAY be used to specify the resource (as a Catalogue, Catalogue Record, Data Service, Dataset) over which a testing activity has been carried out. As such, it is one of the properties used to represent the notion of \"conformity and data quality\"."@en .
 
-prov:wasGeneratedBy skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP. Moreover, it MAY be used to link a testing activity over a resource with the corresponding result. As such, it is one of the properties used to represent the notion of \"conformity and data quality\"."@en .
+prov:wasGeneratedBy skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP. Moreover, it MAY be used to link a testing activity over a resource (as a Catalogue, Catalogue Record, Data Service, Dataset) with the corresponding result. As such, it is one of the properties used to represent the notion of \"conformity and data quality\"."@en .
 
-prov:wasUsedBy skos:scopeNote "In GeoDCAT-AP, this property MAY be used to specify a testing activity over a resource. As such, it is one of the properties used to represent the notion of \"conformity and data quality\"."@en .
+prov:wasUsedBy skos:scopeNote "In GeoDCAT-AP, this property MAY be used to specify a testing activity over a resource (as a Catalogue, Catalogue Record, Data Service, Dataset). As such, it is one of the properties used to represent the notion of \"conformity and data quality\"."@en .
 
 foaf:Agent skos:scopeNote "In GeoDCAT-AP, this class corresponds to the notion of \"responsible party\", as defined in ISO 19115 and INSPIRE, when the role is different from \"point of contact\"."@en .
 
@@ -303,7 +303,7 @@ geodcatap: a voaf:Vocabulary,
   dct:description "GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 and those defined in the framework of the INSPIRE Directive of the European Union."@en ;
   dct:issued "2020-10-12"^^xsd:date ;
   dct:license <https://creativecommons.org/licenses/by/4.0/> ;
-  dct:modified "2020-01-01"^^xsd:date ;
+  dct:modified "2020-12-03"^^xsd:date ;
   dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/COM> ;
   dct:rightsHolder <http://publications.europa.eu/resource/authority/corporate-body/EURUN> ;
   dct:title "GeoDCAT-AP"@en ;
