@@ -767,6 +767,13 @@ var respecConfig = {
         "href":"http://www.theodi.org/",
         "title":"ODI"
       },
+      "GETTY": {
+        "href":"https://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/",
+        "authors":["Patricia Harpring"],
+        "title":"Introduction to Controlled Vocabularies: Terminology for Art, Architecture, and Other Cultural Works",
+        "publisher": "The Getty Research Institute",
+        "date":"2010"
+      },
       "PSI": {
         "href":"http://data.europa.eu/eli/dir/2019/1024/oj",
         "title":"Directive (EU) 2019/1024 of the European Parliament and of the Council of 20 June 2019 on open data and the re-use of public sector information",
