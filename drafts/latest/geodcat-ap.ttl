@@ -348,19 +348,19 @@ geodcatap: a voaf:Vocabulary,
       dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.ttl> ;
       dcat:mediaType "text/turtle"^^dct:IMT ],
     [ a adms:AssetDistribution ;
-      dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
-      dct:title "HTML"@en ;
-      adms:representationTechnique <http://purl.org/adms/representationtechnique/HumanLanguage> ;
-      dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/index.html> ;
-      dcat:mediaType "text/html"^^dct:IMT ],
-    [ a adms:AssetDistribution ;
       dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML>,
         <http://www.w3.org/ns/formats/data/RDF_XML> ;
       dct:title "RDF/XML"@en ;
       adms:representationTechnique <http://purl.org/adms/representationtechnique/OWL>,
         <http://purl.org/adms/representationtechnique/RDFSchema> ;
       dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.rdf> ;
-      dcat:mediaType "application/rdf+xml"^^dct:IMT ] .
+      dcat:mediaType "application/rdf+xml"^^dct:IMT ],
+    [ a adms:AssetDistribution ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+      dct:title "HTML"@en ;
+      adms:representationTechnique <http://purl.org/adms/representationtechnique/HumanLanguage> ;
+      dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/index.html> ;
+      dcat:mediaType "text/html"^^dct:IMT ] .
 
 <https://andrea-perego.name/foaf/#me> a foaf:Person ;
   owl:sameAs <https://orcid.org/0000-0001-9300-2694> ;
