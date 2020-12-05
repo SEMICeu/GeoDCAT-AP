@@ -60,13 +60,13 @@ resource:eea_v_4326_250_k_wise-eionet-monitoring-sites_service a dcat:DataServic
     <http://www.eionet.europa.eu/gemet/concept/5352>,
     <http://www.eionet.europa.eu/gemet/concept/8229> ;
   prov:qualifiedAttribution [ a prov:Attribution ;
+      dcat:hadRole <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian> ;
+      prov:agent <http://publications.europa.eu/resource/authority/corporate-body/EEA> ],
+    [ a prov:Attribution ;
       dcat:hadRole <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor> ;
       prov:agent [ a foaf:Organization ;
           foaf:mbox <mailto:wisesoe.helpdesk@eionet.europa.eu> ;
-          foaf:name "Tracasa"@en ] ],
-    [ a prov:Attribution ;
-      dcat:hadRole <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian> ;
-      prov:agent <http://publications.europa.eu/resource/authority/corporate-body/EEA> ] ;
+          foaf:name "Tracasa"@en ] ] ;
   prov:wasUsedBy [ a prov:Activity ;
       prov:generated [ dct:description "See the referenced specification"@en ;
           dct:type <http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated> ] ;
