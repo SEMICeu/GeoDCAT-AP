@@ -60,7 +60,7 @@ var respecConfig = {
 */
     ],    
 //    implementationReportURI:"https://joinup.ec.europa.eu/document/geodcat-ap-implementations",
-//    errata:"https://github.com/SEMICeu/GeoDCAT-AP/issues?q=is%3Aissue+label%3AErrata+label%3A2.0.0",
+    errata:"https://github.com/SEMICeu/GeoDCAT-AP/issues?q=is%3Aissue+label%3Atype%3Aerratum+label%3Arelease%3A2.0.0",
 //    license: "cc-by",
 //    specStatus: "unofficial",
     specStatus: "ED",
