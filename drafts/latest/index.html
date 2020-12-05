@@ -358,6 +358,138 @@ A property which is not mentioned but would be applicable for a class according 
 
 <p>Examples on the use of these properties, encoded in [[Turtle]], are included in the relevant sections. The examples are also available in [[Turtle]] and RDF/XML [[RDF-SYNTAX-GRAMMAR]] from a <a href="./examples/">separate folder</a>.</p>
 
+<!-- Activity -->
+
+<section id="properties-for-activity">
+
+<h3>+Activity</h3>
+
+<aside class="note">
+<p>This class is not included in [[DCAT-AP-20200608]].</p>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-activity.html"></div>
+
+<p>The use of this class in GeoDCAT-AP is illustrated in <a class="no-sectionRef" href="#conformance-test-results"></a>.</p>
+
+<section id="mandatory-properties-for-activity">
+
+<h4>Mandatory properties for Activity</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#activity-generated">generated</a></li>
+<li>+<a href="#activity-qualified-association">qualified association</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-activity.html"></div>
+
+</section>
+
+<section id="examples-for-activity">
+
+<h4>Examples for Activity</h4>
+
+<p><a href="#ex-activity"></a> shows the use of class <code>prov:Activity</code> to specify the results of a testing activity assessing the conformance of a given resource against a given specification - as illustrated in <a class="no-sectionRef" href="#conformance-test-results"></a>.</p>
+
+<aside class="example" id="ex-activity" title="A testing activity">
+<pre data-include-format="text" data-include="./examples/activity.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
+<!-- Address (Agent)-->
+
+<section id="properties-for-address-agent">
+
+<h3>+Address (Agent)</h3>
+
+<aside class="note">
+<p>This class is not included in [[DCAT-AP-20200608]].</p>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-address-agent.html"></div>
+
+<section id="recommended-properties-for-address-agent">
+
+<h4>Recommended properties for Address (Agent)</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#address-agent-administrative-area">administrative area</a></li>
+<li>+<a href="#address-agent-city">city</a></li>
+<li>+<a href="#address-agent-country">country</a></li>
+<li>+<a href="#address-agent-postal-code">postal code</a></li>
+<li>+<a href="#address-agent-street-address">street address</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-address-agent.html"></div>
+
+</section>
+
+<section id="examples-for-address-agent">
+
+<h4>Examples for Address (Agent)</h4>
+
+<aside class="example" id="ex-address-agent" title="Address (Agent)">
+<p>The address in this example is the same of <a href="#ex-address-kind"></a>, but represented by using [[LOCN]].</p>
+<pre data-include-format="text" data-include="./examples/address-agent.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
+<!-- Address (Kind)-->
+
+<section id="properties-for-address-kind">
+
+<h3>+Address (Kind)</h3>
+
+<aside class="note">
+<p>This class is not included in [[DCAT-AP-20200608]].</p>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-address-kind.html"></div>
+
+<section id="recommended-properties-for-address-kind">
+
+<h4>Recommended properties for Address (Kind)</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#address-kind-administrative-area">administrative area</a></li>
+<li>+<a href="#address-kind-city">city</a></li>
+<li>+<a href="#address-kind-country">country</a></li>
+<li>+<a href="#address-kind-postal-code">postal code</a></li>
+<li>+<a href="#address-kind-street-address">street address</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-address-kind.html"></div>
+
+</section>
+
+<section id="examples-for-address-kind">
+
+<h4>Examples for Address (Kind)</h4>
+
+<aside class="example" id="ex-address-kind" title="Address (Kind)">
+<p>The address in this example is the same of <a href="#ex-address-agent"></a>, but represented by using [[VCARD-RDF]].</p>
+<pre data-include-format="text" data-include="./examples/address-kind.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
 <!-- Agent -->
 
 <section id="properties-for-agent">
@@ -407,6 +539,56 @@ A property which is not mentioned but would be applicable for a class according 
 
 <aside class="example" id="ex-agent" title="Agent">
 <pre data-include-format="text" data-include="./examples/agent.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
+<!-- Attribution -->
+
+<section id="properties-for-attribution">
+
+<h3>+Attribution</h3>
+
+<aside class="note">
+<p>This class is not included in [[DCAT-AP-20200608]].</p>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-attribution.html"></div>
+
+<p>The use of this class in GeoDCAT-AP is illustrated in <a class="no-sectionRef" href="#agent-roles"></a>.</p>
+
+<section id="mandatory-properties-for-attribution">
+
+<h4>Mandatory properties for Attribution</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#attribution-agent">agent</a></li>
+<li>+<a href="#attribution-had-role">had role</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-attribution.html"></div>
+
+</section>
+
+<section id="deprecated-properties-for-attribution">
+
+<h4>Deprecated properties for Attribution</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-attribution.html"></div>
+
+</section>
+
+<section id="examples-for-attribution">
+
+<h4>Examples for Attribution</h4>
+
+<aside class="example" id="ex-attribution" title="Attribution">
+<pre data-include-format="text" data-include="./examples/attribution.ttl"></pre>
 </aside>
 
 </section>
@@ -854,6 +1036,46 @@ A property which is not mentioned but would be applicable for a class according 
 
 </section>
 
+<!-- Document -->
+
+<section id="properties-for-document">
+
+<h3>Document</h3>
+
+<aside class="note">
+<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-document.html"></div>
+
+<section id="recommended-properties-for-document">
+
+<h4>Recommended properties for Document</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#document-description">description</a></li>
+<li>+<a href="#document-title">title</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-document.html"></div>
+
+</section>
+
+<section id="examples-for-document">
+
+<h4>Examples for Document</h4>
+
+<aside class="example" id="ex-document" title="Document">
+<pre data-include-format="text" data-include="./examples/document.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
 <!-- Identifier -->
 
 <section id="properties-for-identifier">
@@ -867,6 +1089,65 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Mandatory property for Identifier</h4>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-identifier.html"></div>
+
+</section>
+
+</section>
+
+<!-- Kind -->
+
+<section id="properties-for-kind">
+
+<h3>Kind</h3>
+
+<aside class="note">
+<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-kind.html"></div>
+
+<section id="recommended-properties-for-kind">
+
+<h4>Recommended properties for Kind</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#kind-email">email</a></li>
+<li>+<a href="#kind-name">name</a></li>
+<li>+<a href="#kind-url">URL</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-kind.html"></div>
+
+</section>
+
+<section id="optional-properties-for-kind">
+
+<h4>Optional properties for Kind</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#kind-address">address</a></li>
+<li>+<a href="#kind-affiliation">affiliation</a></li>
+<li>+<a href="#kind-name">name</a></li>
+<li>+<a href="#kind-phone">phone</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-kind.html"></div>
+
+</section>
+
+<section id="examples-for-kind">
+
+<h4>Examples for Kind</h4>
+
+<aside class="example" id="ex-kind" title="Kind">
+<pre data-include-format="text" data-include="./examples/kind.ttl"></pre>
+</aside>
 
 </section>
 
@@ -964,6 +1245,45 @@ A property which is not mentioned but would be applicable for a class according 
 
 </section>
 
+<!-- Media Type -->
+
+<section id="properties-for-media-type">
+
+<h3>Media Type</h3>
+
+<aside class="note">
+<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-media-type.html"></div>
+
+<section id="recommended-properties-for-media-type">
+
+<h4>Recommended property for Media Type</h4>
+
+<aside class="note">
+<p>The following property is not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#media-type-label">label</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-media-type.html"></div>
+
+</section>
+
+<section id="examples-for-media-type">
+
+<h4>Examples for Media Type</h4>
+
+<aside class="example" id="ex-media-type" title="Media Type">
+<pre data-include-format="text" data-include="./examples/media-type.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
 <!-- Period of Time -->
 
 <section id="properties-for-period-of-time">
@@ -1014,307 +1334,6 @@ A property which is not mentioned but would be applicable for a class according 
 
 </section>
 
-<!-- Relationship -->
-
-<section id="properties-for-relationship">
-
-<h3>Relationship</h3>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-relationship.html"></div>
-
-<section id="mandatory-properties-for-relationship">
-
-<h4>Mandatory properties for Relationship</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-relationship.html"></div>
-
-</section>
-
-</section>
-
-<!-- Classes not in DCAT-AP -->
-
-<!-- Activity -->
-
-<section id="properties-for-activity">
-
-<h3>+Activity</h3>
-
-<aside class="note">
-<p>This class is not included in [[DCAT-AP-20200608]].</p>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-activity.html"></div>
-
-<p>The use of this class in GeoDCAT-AP is illustrated in <a class="no-sectionRef" href="#conformance-test-results"></a>.</p>
-
-<section id="mandatory-properties-for-activity">
-
-<h4>Mandatory properties for Activity</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#activity-generated">generated</a></li>
-<li>+<a href="#activity-qualified-association">qualified association</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-activity.html"></div>
-
-</section>
-
-<section id="examples-for-activity">
-
-<h4>Examples for Activity</h4>
-
-<p><a href="#ex-activity"></a> shows the use of class <code>prov:Activity</code> to specify the results of a testing activity assessing the conformance of a given resource against a given specification - as illustrated in <a class="no-sectionRef" href="#conformance-test-results"></a>.</p>
-
-<aside class="example" id="ex-activity" title="A testing activity">
-<pre data-include-format="text" data-include="./examples/activity.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
-
-<!-- Address (Agent)-->
-
-<section id="properties-for-address-agent">
-
-<h3>+Address (Agent)</h3>
-
-<aside class="note">
-<p>This class is not included in [[DCAT-AP-20200608]].</p>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-address-agent.html"></div>
-
-<section id="recommended-properties-for-address-agent">
-
-<h4>Recommended properties for Address (Agent)</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#address-agent-administrative-area">administrative area</a></li>
-<li>+<a href="#address-agent-city">city</a></li>
-<li>+<a href="#address-agent-country">country</a></li>
-<li>+<a href="#address-agent-postal-code">postal code</a></li>
-<li>+<a href="#address-agent-street-address">street address</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-address-agent.html"></div>
-
-</section>
-
-<section id="examples-for-address-agent">
-
-<h4>Examples for Address (Agent)</h4>
-
-<aside class="example" id="ex-address-agent" title="Address (Agent)">
-<p>The address in this example is the same of <a href="#ex-address-kind"></a>, but represented by using [[LOCN]].</p>
-<pre data-include-format="text" data-include="./examples/address-agent.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
-
-<!-- Address (Kind)-->
-
-<section id="properties-for-address-kind">
-
-<h3>+Address (Kind)</h3>
-
-<aside class="note">
-<p>This class is not included in [[DCAT-AP-20200608]].</p>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-address-kind.html"></div>
-
-<section id="recommended-properties-for-address-kind">
-
-<h4>Recommended properties for Address (Kind)</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#address-kind-administrative-area">administrative area</a></li>
-<li>+<a href="#address-kind-city">city</a></li>
-<li>+<a href="#address-kind-country">country</a></li>
-<li>+<a href="#address-kind-postal-code">postal code</a></li>
-<li>+<a href="#address-kind-street-address">street address</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-address-kind.html"></div>
-
-</section>
-
-<section id="examples-for-address-kind">
-
-<h4>Examples for Address (Kind)</h4>
-
-<aside class="example" id="ex-address-kind" title="Address (Kind)">
-<p>The address in this example is the same of <a href="#ex-address-agent"></a>, but represented by using [[VCARD-RDF]].</p>
-<pre data-include-format="text" data-include="./examples/address-kind.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
-
-<!-- Attribution -->
-
-<section id="properties-for-attribution">
-
-<h3>+Attribution</h3>
-
-<aside class="note">
-<p>This class is not included in [[DCAT-AP-20200608]].</p>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-attribution.html"></div>
-
-<p>The use of this class in GeoDCAT-AP is illustrated in <a class="no-sectionRef" href="#agent-roles"></a>.</p>
-
-<section id="mandatory-properties-for-attribution">
-
-<h4>Mandatory properties for Attribution</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#attribution-agent">agent</a></li>
-<li>+<a href="#attribution-had-role">had role</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-attribution.html"></div>
-
-</section>
-
-<section id="deprecated-properties-for-attribution">
-
-<h4>Deprecated properties for Attribution</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-attribution.html"></div>
-
-</section>
-
-<section id="examples-for-attribution">
-
-<h4>Examples for Attribution</h4>
-
-<aside class="example" id="ex-attribution" title="Attribution">
-<pre data-include-format="text" data-include="./examples/attribution.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
-
-<!-- Document -->
-
-<section id="properties-for-document">
-
-<h3>Document</h3>
-
-<aside class="note">
-<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-document.html"></div>
-
-<section id="recommended-properties-for-document">
-
-<h4>Recommended properties for Document</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#document-description">description</a></li>
-<li>+<a href="#document-title">title</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-document.html"></div>
-
-</section>
-
-<section id="examples-for-document">
-
-<h4>Examples for Document</h4>
-
-<aside class="example" id="ex-document" title="Document">
-<pre data-include-format="text" data-include="./examples/document.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
-
-<!-- Kind -->
-
-<section id="properties-for-kind">
-
-<h3>Kind</h3>
-
-<aside class="note">
-<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-kind.html"></div>
-
-<section id="recommended-properties-for-kind">
-
-<h4>Recommended properties for Kind</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#kind-email">email</a></li>
-<li>+<a href="#kind-name">name</a></li>
-<li>+<a href="#kind-url">URL</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-kind.html"></div>
-
-</section>
-
-<section id="optional-properties-for-kind">
-
-<h4>Optional properties for Kind</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#kind-address">address</a></li>
-<li>+<a href="#kind-affiliation">affiliation</a></li>
-<li>+<a href="#kind-name">name</a></li>
-<li>+<a href="#kind-phone">phone</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-kind.html"></div>
-
-</section>
-
-<section id="examples-for-kind">
-
-<h4>Examples for Kind</h4>
-
-<aside class="example" id="ex-kind" title="Kind">
-<pre data-include-format="text" data-include="./examples/kind.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
-
 <!-- Provenance Statement -->
 
 <section id="properties-for-provenance-statement">
@@ -1354,44 +1373,25 @@ A property which is not mentioned but would be applicable for a class according 
 
 </section>
 
-<!-- Media Type -->
+<!-- Relationship -->
 
-<section id="properties-for-media-type">
+<section id="properties-for-relationship">
 
-<h3>Media Type</h3>
+<h3>Relationship</h3>
 
-<aside class="note">
-<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
-</aside>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-relationship.html"></div>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-media-type.html"></div>
+<section id="mandatory-properties-for-relationship">
 
-<section id="recommended-properties-for-media-type">
+<h4>Mandatory properties for Relationship</h4>
 
-<h4>Recommended property for Media Type</h4>
-
-<aside class="note">
-<p>The following property is not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#media-type-label">label</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-media-type.html"></div>
-
-</section>
-
-<section id="examples-for-media-type">
-
-<h4>Examples for Media Type</h4>
-
-<aside class="example" id="ex-media-type" title="Media Type">
-<pre data-include-format="text" data-include="./examples/media-type.ttl"></pre>
-</aside>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-relationship.html"></div>
 
 </section>
 
 </section>
+
+<!-- Classes not in DCAT-AP -->
 
 <!-- Rights Statement -->
 
