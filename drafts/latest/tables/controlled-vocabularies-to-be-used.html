@@ -1,8 +1,11 @@
 <aside class="ednote">
 <p>Codelist for property <code>dct:accessRights</code> added.</p>
+</aside>
+<!-- TO BE RESTORED
+<aside class="ednote">
 <p>Codelist for property <code>adms:status</code> for catalogue record has been removed from DCAT-AP. A decision has to be made if the row is maintained in this list.</p>
 </aside>
-
+-->
 <table class="simple" id="table-controlled-vocabularies-to-be-used">
 <thead>
 <tr>
@@ -24,6 +27,69 @@
 </tr>
 </thead>
 <tbody>
+
+<!-- Status -->
+
+<!-- TO BE RESTORED
+<tr>
+<td>
+<p><code>adms:status</code></p>
+</td>
+<td>
+<p><a href="#catalogue-record-change-type">Catalogue Record</a></p>
+</td>
+<td>
+<p>TBD</p>
+</td>
+<td>
+<p>TBD</p>
+</td>
+<td>
+<p>TBD</p>
+</td>
+</tr>
+-->
+
+<tr>
+<td>
+<p><code>adms:status</code></p>
+</td>
+<td>
+<p><a href="#distribution-status">Distribution</a></p>
+</td>
+<td>
+<p>ADMS status [[ADMS-SKOS]] vocabulary</p>
+</td>
+<td>
+<p><a href="http://purl.org/adms/status/">http://purl.org/adms/status/</a></p>
+</td>
+<td>
+<p>The list of terms in the ADMS status vocabulary is included in the [[ADMS]] specification</p>
+</td>
+</tr>
+
+<!-- Role -->
+
+<tr>
+<td>
+<p>+<code>dcat:hadRole</code></p>
+</td>
+<td>
+<p><a href="#attribution-had-role">Attribution</a></p>
+</td>
+<td>
+<p>INSPIRE Responsible Party Roles [[INSPIRE-RPR]]</p>
+</td>
+<td>
+<p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole">http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP extension.</p>
+</td>
+</tr>
+
+<!-- Media type -->
+
 <tr>
 <td>
 <p><code>dcat:mediaType</code></p>
@@ -39,6 +105,9 @@
 </td>
 <td>&nbsp;</td>
 </tr>
+
+<!-- Theme -->
+
 <tr>
 <td>
 <p><code>dcat:theme</code></p>
@@ -58,6 +127,7 @@
 <p>The values to be used for this property are the URIs of the concepts in the vocabulary.</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p>+<code>dcat:theme</code></p>
@@ -78,25 +148,9 @@
 <p>The use of this property for Catalogues and Data Services is a GeoDCAT-AP extension.</p>
 </td>
 </tr>
-<tr>
-<td>
-<p>+<code>dct:subject</code></p>
-</td>
-<td>
-<p><a href="#catalogue-topic-category">Catalogue</a></p>
-<p><a href="#data-service-topic-category">Data Service</a></p>
-<p><a href="#dataset-topic-category">Dataset</a></p>
-</td>
-<td>
-<p>INSPIRE Topic Categories [[INSPIRE-TC]]</p>
-</td>
-<td>
-<p><a href="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory">http://inspire.ec.europa.eu/metadata-codelist/TopicCategory</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP extension.</p>
-</td>
-</tr>
+
+<!-- Theme taxonomy -->
+
 <tr>
 <td>
 <p><code>dcat:themeTaxonomy</code></p>
@@ -114,243 +168,9 @@
 <p>The value to be used for this property is the URI of the vocabulary itself, i.e. the concept scheme, not the URIs of the concepts in the vocabulary.</p>
 </td>
 </tr>
-<tr>
-<td>
-<p><code>dct:accrualPeriodicity</code></p>
-</td>
-<td>
-<p><a href="#dataset-frequency">Dataset</a></p>
-</td>
-<td>
-<p>EU Vocabularies Frequency Named Authority List [[EUV-FREQ]]</p>
-</td>
-<td>
-<p><a href="http://publications.europa.eu/resource/authority/frequency">http://publications.europa.eu/resource/authority/frequency</a></p>
-</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>
-<p><code>dct:format</code></p>
-</td>
-<td>
-<p><a href="#distribution-format">Distribution</a></p>
-</td>
-<td>
-<p>EU Vocabularies File Type Named Authority List [[EUV-FT]]</p>
-</td>
-<td>
-<p><a href="http://publications.europa.eu/resource/authority/file-type">http://publications.europa.eu/resource/authority/file-type</a></p>
-</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>
-<p><code>dct:language</code></p>
-</td>
-<td>
-<p><a href="#catalogue-language">Catalogue</a></p>
-<p><a href="#dataset-language">Dataset</a></p>
-<p><a href="#catalogue-record-language">Catalogue Record</a></p>
-<p><a href="#distribution-language">Distribution</a></p>
-</td>
-<td>
-<p>EU Vocabularies Languages Named Authority List [[EUV-LANG]]</p>
-</td>
-<td>
-<p><a href="http://publications.europa.eu/resource/authority/language">http://publications.europa.eu/resource/authority/language</a></p>
-</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>
-<p><code>dct:publisher</code></p>
-</td>
-<td>
-<p><a href="#catalogue-publisher">Catalogue</a></p>
-<p><a href="#dataset-publisher">Dataset</a></p>
-</td>
-<td rowspan="2">
-<p>EU Vocabularies Corporate bodies Named Authority List [[EUV-CB]]</p>
-</td>
-<td rowspan="2">
-<p><a href="http://publications.europa.eu/resource/authority/corporate-body">http://publications.europa.eu/resource/authority/corporate-body</a></p>
-</td>
-<td>
-<p>The Corporate bodies NAL must be used for European institutions and a small set of international organisations. In case of other types of organisations, national, regional or local vocabularies should be used.</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>+<code>dct:publisher</code></p>
-</td>
-<td>
-<p><a href="#data-service-publisher">Data Service</a></p>
-</td>
-<td>
-<p>The use of this property for Data Services is a GeoDCAT-AP extension.</p>
-</td>
-</tr>
-<tr>
-<td>
-<p><code>dct:spatial</code></p>
-</td>
-<td>
-<p><a href="#catalogue-spatial-coverage">Catalogue</a></p>
-<p><a href="#dataset-spatial-coverage">Dataset</a></p>
-</td>
-<td rowspan="2">
-<p>EU Vocabularies Continents Named Authority List [[EUV-CONT]], EU Vocabularies Countries Named Authority List [[EUV-COUNTRIES]], EU Vocabularies Places Named Authority List [[EUV-PLACES]], [[GEONAMES]]</p>
-</td>
-<td rowspan="2">
-<p><a href="http://publications.europa.eu/resource/authority/continent">http://publications.europa.eu/resource/authority/continent</a></p> 
-<p><a href="http://publications.europa.eu/resource/authority/country">http://publications.europa.eu/resource/authority/country</a></p> 
-<p><a href="http://publications.europa.eu/resource/authority/place">http://publications.europa.eu/resource/authority/place</a></p> 
-<p><a href="http://sws.geonames.org/">http://sws.geonames.org/</a></p>
-</td>
-<td>
-<p>The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, [[GEONAMES]] URIs must be used.</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>+<code>dct:spatial</code></p>
-</td>
-<td>
-<p><a href="#data-service-spatial-coverage">Data Service</a></p>
-</td>
-<td>
-<p>The use of this property for Data Services is a GeoDCAT-AP extension.</p>
-</td>
-</tr>
-<tr>
-<td>
-<p><code>adms:status</code></p>
-</td>
-<td>
-<p><a href="#catalogue-record-change-type">Catalogue Record</a></p>
-</td>
-<td>
-<p>TBD</p>
-</td>
-<td>
-<p>TBD</p>
-</td>
-<td>
-<p>TBD</p>
-</td>
-</tr>
-<tr>
-<td>
-<p><code>adms:status</code></p>
-</td>
-<td>
-<p><a href="#distribution-status">Distribution</a></p>
-</td>
-<td>
-<p>ADMS status [[ADMS-SKOS]] vocabulary</p>
-</td>
-<td>
-<p><a href="http://purl.org/adms/status/">http://purl.org/adms/status/</a></p>
-</td>
-<td>
-<p>The list of terms in the ADMS status vocabulary is included in the [[ADMS]] specification</p>
-</td>
-</tr>
-<tr>
-<td>
-<p><code>dct:type</code></p>
-</td>
-<td>
-<p><a href="#agent-type">Agent</a></p>
-</td>
-<td>
-<p>ADMS publisher type [[ADMS-SKOS]] vocabulary</p>
-</td>
-<td>
-<p><a href="http://purl.org/adms/publishertype/">http://purl.org/adms/publishertype/</a></p>
-</td>
-<td>
-<p>The list of terms in the ADMS publisher type vocabulary is included in the [[ADMS]] specification</p>
-</td>
-</tr>
-<tr>
-<td>
-<p><code>dct:type</code></p>
-</td>
-<td>
-<p><a href="#dataset-type">Dataset</a></p>
-</td>
-<td rowspan="2">
-<p>INSPIRE Resource Types [[INSPIRE-RT]]</p>
-</td>
-<td rowspan="2">
-<p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType">http://inspire.ec.europa.eu/metadata-codelist/ResourceType</a></p>
-</td>
-<td rowspan="2">
-<p>GeoDCAT-AP extension.</p>
-<p>No code list defined in [[DCAT-AP-20200608]].</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>+<code>dct:type</code></p>
-</td>
-<td>
-<p><a href="#data-service-type">Data Service</a></p>
-</td>
-</tr>
-<tr>
-<td>
-<p>+<code>dct:type</code></p>
-</td>
-<td>
-<p><a href="#data-service-service-category">Data Service</a></p>
-</td>
-<td>
-<p>INSPIRE Spatial Data Service Categories [[INSPIRE-SDSC]]</p>
-</td>
-<td>
-<p><a href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory">http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP extension.</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>+<code>dct:type</code></p>
-</td>
-<td>
-<p><a href="#data-service-service-type">Data Service</a></p>
-</td>
-<td>
-<p>INSPIRE Spatial Data Service Types [[INSPIRE-SDST]]</p>
-</td>
-<td>
-<p><a href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType">http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP extension.</p>
-</td>
-</tr>
-<tr>
-<td>
-<p><code>dct:type</code></p>
-</td>
-<td>
-<p><a href="#licence-document-licence-type">Licence Document</a></p>
-</td>
-<td>
-<p>ADMS licence type [[ADMS-SKOS]] vocabulary</p>
-</td>
-<td>
-<p><a href="http://purl.org/adms/licencetype/">http://purl.org/adms/licencetype/</a></p>
-</td>
-<td>
-<p>The list of terms in the ADMS licence type vocabulary is included in the [[ADMS]] specification</p>
-</td>
-</tr>
+
+<!-- Availability -->
+
 <tr>
 <td>
 <p><code>dcatap:availability</code></p>
@@ -368,6 +188,90 @@
 <p>The list of terms for the avalability levels of a dataset distribution in the DCAT-AP specification.</p>
 </td>
 </tr>
+
+<!-- Access rights -->
+
+<tr>
+<td rowspan="2">
+<p><code>dct:accessRights</code></p>
+</td>
+<td rowspan="2">
+<p><a href="#data-service-access-rights">Data Service</a></p>
+<p><a href="#dataset-access-rights">Dataset</a></p>
+</td>
+<td>
+<p>EU Vocabularies Access rights [[?EUV-AR]]</p>
+</td>
+<td>
+<p><a href="http://publications.europa.eu/resource/authority/access-right">http://publications.europa.eu/resource/authority/access-right</a></p>
+</td>
+<td>
+<p></p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>INSPIRE Limitations on Public Access [[?INSPIRE-LPA]]</p>
+</td>
+<td>
+<p><a href="https://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess">http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP extension.</p>
+</td>
+</tr>
+
+<tr>
+<td rowspan="2">
+<p>+<code>dct:accessRights</code></p>
+</td>
+<td rowspan="2">
+<p><a href="#catalogue-access-rights">Catalogue</a></p>
+<p><a href="#distribution-access-rights">Distribution</a></p>
+</td>
+<td>
+<p>EU Vocabularies Access rights [[?EUV-AR]]</p>
+</td>
+<td>
+<p><a href="http://publications.europa.eu/resource/authority/access-right">http://publications.europa.eu/resource/authority/access-right</a></p>
+</td>
+<td>
+<p></p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>INSPIRE Limitations on Public Access [[?INSPIRE-LPA]]</p>
+</td>
+<td>
+<p><a href="https://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess">http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP extension.</p>
+</td>
+</tr>
+
+<!-- Update frequency -->
+
+<tr>
+<td>
+<p><code>dct:accrualPeriodicity</code></p>
+</td>
+<td>
+<p><a href="#dataset-frequency">Dataset</a></p>
+</td>
+<td>
+<p>EU Vocabularies Frequency Named Authority List [[EUV-FREQ]]</p>
+</td>
+<td>
+<p><a href="http://publications.europa.eu/resource/authority/frequency">http://publications.europa.eu/resource/authority/frequency</a></p>
+</td>
+<td>&nbsp;</td>
+</tr>
+
+<!-- Conforms to -->
 
 <tr>
 <td rowspan="2">
@@ -401,6 +305,240 @@
 </td>
 </tr>
 
+<!-- Format -->
+
+<tr>
+<td>
+<p><code>dct:format</code></p>
+</td>
+<td>
+<p><a href="#distribution-format">Distribution</a></p>
+</td>
+<td>
+<p>EU Vocabularies File Type Named Authority List [[EUV-FT]]</p>
+</td>
+<td>
+<p><a href="http://publications.europa.eu/resource/authority/file-type">http://publications.europa.eu/resource/authority/file-type</a></p>
+</td>
+<td>&nbsp;</td>
+</tr>
+
+<!-- Language -->
+
+<tr>
+<td>
+<p><code>dct:language</code></p>
+</td>
+<td>
+<p><a href="#catalogue-language">Catalogue</a></p>
+<p><a href="#catalogue-record-language">Catalogue Record</a></p>
+<p><a href="#dataset-language">Dataset</a></p>
+<p><a href="#distribution-language">Distribution</a></p>
+</td>
+<td>
+<p>EU Vocabularies Languages Named Authority List [[EUV-LANG]]</p>
+</td>
+<td>
+<p><a href="http://publications.europa.eu/resource/authority/language">http://publications.europa.eu/resource/authority/language</a></p>
+</td>
+<td>&nbsp;</td>
+</tr>
+
+<!-- Publisher -->
+
+<tr>
+<td>
+<p><code>dct:publisher</code></p>
+</td>
+<td>
+<p><a href="#catalogue-publisher">Catalogue</a></p>
+<p><a href="#dataset-publisher">Dataset</a></p>
+</td>
+<td rowspan="2">
+<p>EU Vocabularies Corporate bodies Named Authority List [[EUV-CB]]</p>
+</td>
+<td rowspan="2">
+<p><a href="http://publications.europa.eu/resource/authority/corporate-body">http://publications.europa.eu/resource/authority/corporate-body</a></p>
+</td>
+<td>
+<p>The Corporate bodies NAL must be used for European institutions and a small set of international organisations. In case of other types of organisations, national, regional or local vocabularies should be used.</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>+<code>dct:publisher</code></p>
+</td>
+<td>
+<p><a href="#data-service-publisher">Data Service</a></p>
+</td>
+<td>
+<p>The use of this property for Data Services is a GeoDCAT-AP extension.</p>
+</td>
+</tr>
+
+<!-- Spatial -->
+
+<tr>
+<td>
+<p><code>dct:spatial</code></p>
+</td>
+<td>
+<p><a href="#catalogue-spatial-coverage">Catalogue</a></p>
+<p><a href="#dataset-spatial-coverage">Dataset</a></p>
+</td>
+<td rowspan="2">
+<p>EU Vocabularies Continents Named Authority List [[EUV-CONT]], EU Vocabularies Countries Named Authority List [[EUV-COUNTRIES]], EU Vocabularies Places Named Authority List [[EUV-PLACES]], [[GEONAMES]]</p>
+</td>
+<td rowspan="2">
+<p><a href="http://publications.europa.eu/resource/authority/continent">http://publications.europa.eu/resource/authority/continent</a></p> 
+<p><a href="http://publications.europa.eu/resource/authority/country">http://publications.europa.eu/resource/authority/country</a></p> 
+<p><a href="http://publications.europa.eu/resource/authority/place">http://publications.europa.eu/resource/authority/place</a></p> 
+<p><a href="http://sws.geonames.org/">http://sws.geonames.org/</a></p>
+</td>
+<td>
+<p>The EU Vocabularies Name Authority Lists must be used for continents, countries and places that are in those lists; if a particular location is not in one of the mentioned Named Authority Lists, [[GEONAMES]] URIs must be used.</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>+<code>dct:spatial</code></p>
+</td>
+<td>
+<p><a href="#data-service-spatial-coverage">Data Service</a></p>
+</td>
+<td>
+<p>The use of this property for Data Services is a GeoDCAT-AP extension.</p>
+</td>
+</tr>
+
+<!-- Subject -->
+
+<tr>
+<td>
+<p>+<code>dct:subject</code></p>
+</td>
+<td>
+<p><a href="#catalogue-topic-category">Catalogue</a></p>
+<p><a href="#data-service-topic-category">Data Service</a></p>
+<p><a href="#dataset-topic-category">Dataset</a></p>
+</td>
+<td>
+<p>INSPIRE Topic Categories [[INSPIRE-TC]]</p>
+</td>
+<td>
+<p><a href="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory">http://inspire.ec.europa.eu/metadata-codelist/TopicCategory</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP extension.</p>
+</td>
+</tr>
+
+<!-- Type -->
+
+<tr>
+<td>
+<p><code>dct:type</code></p>
+</td>
+<td>
+<p><a href="#agent-type">Agent</a></p>
+</td>
+<td>
+<p>ADMS publisher type [[ADMS-SKOS]] vocabulary</p>
+</td>
+<td>
+<p><a href="http://purl.org/adms/publishertype/">http://purl.org/adms/publishertype/</a></p>
+</td>
+<td>
+<p>The list of terms in the ADMS publisher type vocabulary is included in the [[ADMS]] specification</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p><code>dct:type</code></p>
+</td>
+<td>
+<p><a href="#dataset-type">Dataset</a></p>
+</td>
+<td rowspan="2">
+<p>INSPIRE Resource Types [[INSPIRE-RT]]</p>
+</td>
+<td rowspan="2">
+<p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType">http://inspire.ec.europa.eu/metadata-codelist/ResourceType</a></p>
+</td>
+<td rowspan="2">
+<p>GeoDCAT-AP extension.</p>
+<p>No code list defined in [[DCAT-AP-20200608]].</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>+<code>dct:type</code></p>
+</td>
+<td>
+<p><a href="#data-service-type">Data Service</a></p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>+<code>dct:type</code></p>
+</td>
+<td>
+<p><a href="#data-service-service-category">Data Service</a></p>
+</td>
+<td>
+<p>INSPIRE Spatial Data Service Categories [[INSPIRE-SDSC]]</p>
+</td>
+<td>
+<p><a href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory">http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP extension.</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>+<code>dct:type</code></p>
+</td>
+<td>
+<p><a href="#data-service-service-type">Data Service</a></p>
+</td>
+<td>
+<p>INSPIRE Spatial Data Service Types [[INSPIRE-SDST]]</p>
+</td>
+<td>
+<p><a href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType">http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP extension.</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p><code>dct:type</code></p>
+</td>
+<td>
+<p><a href="#licence-document-licence-type">Licence Document</a></p>
+</td>
+<td>
+<p>ADMS licence type [[ADMS-SKOS]] vocabulary</p>
+</td>
+<td>
+<p><a href="http://purl.org/adms/licencetype/">http://purl.org/adms/licencetype/</a></p>
+</td>
+<td>
+<p>The list of terms in the ADMS licence type vocabulary is included in the [[ADMS]] specification</p>
+</td>
+</tr>
+
+<!-- Type -->
+
 <tr>
 <td>
 <p>+<code>dct:type</code></p>
@@ -420,12 +558,13 @@
 <p>When the Standard is a spatial or temporal reference system, the relevant URIs from the [[INSPIRE-GLOSSARY]] SHOULD be used.</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p>+<code>dct:type</code></p>
 </td>
 <td>
-<p>Test Result (linked from a <code>prov:Activity</code></p>
+<p>Test Result (linked from a <code>prov:Activity</code>).</p>
 </td>
 <td>
 <p>INSPIRE Degree of Conformity [[INSPIRE-DoC]]</p>
@@ -437,43 +576,6 @@
 <p>GeoDCAT-AP extension.</p>
 </td>
 </tr>
-<tr>
-<td>
-<p>+<code>dcat:hadRole</code></p>
-</td>
-<td>
-<p><a href="#attribution-had-role">Attribution</a></p>
-</td>
-<td>
-<p>INSPIRE Responsible Party Roles [[INSPIRE-RPR]]</p>
-</td>
-<td>
-<p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole">http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP extension.</p>
-</td>
-</tr>
 
-<tr>
-<td>
-<p>+<code>dct:accessRights</code></p>
-</td>
-<td>
-<p><a href="#catalogue-access-rights">Catalogue</a></p>
-<p><a href="#data-service-access-rights">Data Service</a></p>
-<p><a href="#distribution-access-rights">Distribution</a></p>
-<p><a href="#dataset-access-rights">Dataset</a></p>
-</td>
-<td>
-<p>EU Vocabularies Access rights [[?EUV-AR]]</p>
-</td>
-<td>
-<p><a href="http://publications.europa.eu/resource/authority/access-right">http://publications.europa.eu/resource/authority/access-right</a></p>
-</td>
-<td>
-<p></p>
-</td>
-</tr>
 </tbody>
 </table>

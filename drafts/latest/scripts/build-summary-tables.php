@@ -28,41 +28,41 @@
         if ($nodes[$ck]->getElementsByTagName('td')->item(0)->getElementsByTagName('a')->length > 0) {
           $chref = $nodes[$ck]->getElementsByTagName('td')->item(0)->getElementsByTagName('a')->item(0)->getAttribute('href');
         }	
-	$curi = trim($nodes[$ck]->getElementsByTagName('td')->item(2)->nodeValue);
+        $curi = trim($nodes[$ck]->getElementsByTagName('td')->item(2)->nodeValue);
 
-	$c[$cid]['id'] = $cid;
-	$c[$cid]['types'] = $ctypes;
-	$c[$cid]['name'] = $cname;
-	$c[$cid]['href'] = $chref;
-	$c[$cid]['uri'] = $curi;
-	$c[$cid]['prop'] = array();
+        $c[$cid]['id'] = $cid;
+        $c[$cid]['types'] = $ctypes;
+        $c[$cid]['name'] = $cname;
+        $c[$cid]['href'] = $chref;
+        $c[$cid]['uri'] = $curi;
+        $c[$cid]['prop'] = array();
 
-	if (in_array('ap-ext', $ctypes) && !in_array('deprecated', $ctypes)) {
+        if (in_array('ap-ext', $ctypes) && !in_array('deprecated', $ctypes)) {
           $cextnr++;
-	}
-	if (in_array('deprecated', $ctypes)) {
-	  $c[$cid]['replaced-by-uri'] = ltrim(trim($nodes[$ck]->getElementsByTagName('td')->item(3)->nodeValue),'+');
-	  $c[$cid]['replaced-by-href'] = '';
+        }
+        if (in_array('deprecated', $ctypes)) {
+          $c[$cid]['replaced-by-uri'] = ltrim(trim($nodes[$ck]->getElementsByTagName('td')->item(3)->nodeValue),'+');
+          $c[$cid]['replaced-by-href'] = '';
           if ($nodes[$ck]->getElementsByTagName('td')->item(3)->getElementsByTagName('a')->length > 0) {
             $c[$cid]['replaced-by-href'] = $nodes[$ck]->getElementsByTagName('td')->item(3)->getElementsByTagName('a')->item(0)->getAttribute('href');
           }	
-	  $c[$cid]['deprecated-in'] = trim($nodes[$ck]->getElementsByTagName('td')->item(4)->nodeValue);
+          $c[$cid]['deprecated-in'] = trim($nodes[$ck]->getElementsByTagName('td')->item(4)->nodeValue);
 
-	  $deprecated[$cid] = $c[$cid];
+          $deprecated[$cid] = $c[$cid];
 /*	  
-	  $deprecated[$cid]['domain-id'] = '';
-	  $deprecated[$cid]['domain-name'] = '';
-	  $deprecated[$cid]['domain-types'] = '';
-	  $deprecated[$cid]['domain-uri'] = '';
+          $deprecated[$cid]['domain-id'] = '';
+          $deprecated[$cid]['domain-name'] = '';
+          $deprecated[$cid]['domain-types'] = '';
+          $deprecated[$cid]['domain-uri'] = '';
 */
-	}
+        }
 
-	foreach ($props as $pk => $pv) {
+        foreach ($props as $pk => $pv) {
           if (file_exists($folder . $pv . $cid . '.html')) {
             $doc = new DOMDocument();
             $doc->loadHTMLFile($folder . $pv . $cid . '.html');
             $xpath = new DomXPath($doc);
-	    $pnodes = $xpath->query("//tbody/tr");
+            $pnodes = $xpath->query("//tbody/tr");
             foreach ($pnodes as $pk => $pv) {
               $pid = $pnodes[$pk]->getAttribute('id');
               $ptypes = explode(' ', $pnodes[$pk]->getAttribute('class'));
@@ -77,16 +77,16 @@
               $p[$pid]['types'] = $ptypes;
               $p[$pid]['name'] = $pname;
               $p[$pid]['href'] = $phref;
-	      $p[$pid]['uri'] = $puri;
+              $p[$pid]['uri'] = $puri;
 
-	      if (in_array('deprecated', $ptypes)) {
-	        $p[$pid]['replaced-by-uri'] = ltrim(trim($pnodes[$pk]->getElementsByTagName('td')->item(2)->nodeValue),'+');
-	        $p[$pid]['replaced-by-href'] = '';
+              if (in_array('deprecated', $ptypes)) {
+                $p[$pid]['replaced-by-uri'] = ltrim(trim($pnodes[$pk]->getElementsByTagName('td')->item(2)->nodeValue),'+');
+                $p[$pid]['replaced-by-href'] = '';
                 if ($pnodes[$pk]->getElementsByTagName('td')->item(2)->getElementsByTagName('a')->length > 0) {
                   $p[$pid]['replaced-by-href'] = $pnodes[$pk]->getElementsByTagName('td')->item(2)->getElementsByTagName('a')->item(0)->getAttribute('href');
                 }	
-	        $p[$pid]['deprecated-in'] = trim($pnodes[$pk]->getElementsByTagName('td')->item(3)->nodeValue);
-	      }
+                $p[$pid]['deprecated-in'] = trim($pnodes[$pk]->getElementsByTagName('td')->item(3)->nodeValue);
+              }
 
               $c[$cid]['prop'][] = $p[$pid];
               if (in_array('mandatory', $p[$pid]['types'])) {
@@ -103,18 +103,18 @@
               }
               if (in_array('deprecated', $p[$pid]['types'])) {
                 $c[$cid]['prop-deprecated'][] = $p[$pid];
-	        $deprecated[$pid] = $p[$pid];
-	        $deprecated[$pid]['domain-id'] = $cid;
-	        $deprecated[$pid]['domain-name'] = $c[$cid]['name'];
-	        $deprecated[$pid]['domain-types'] = $c[$cid]['types'];
-	        $deprecated[$pid]['domain-uri'] = $c[$cid]['uri'];
+                $deprecated[$pid] = $p[$pid];
+                $deprecated[$pid]['domain-id'] = $cid;
+                $deprecated[$pid]['domain-name'] = $c[$cid]['name'];
+                $deprecated[$pid]['domain-types'] = $c[$cid]['types'];
+                $deprecated[$pid]['domain-uri'] = $c[$cid]['uri'];
               }
               if (in_array('ap-ext', $p[$pid]['types']) && !in_array('deprecated', $p[$pid]['types'])) {
                 $pextnr++;
               }
-	    }
-	  }
-	}
+            }
+          }
+        }
 
       }
     }
@@ -240,7 +240,7 @@
                   $pprefix = '';
                   if (in_array('ap-ext',$pv['types'])) {
                     $pprefix = '+';
-	          }
+                  }
                   $html .= '<p>' . $pprefix . '<a title="' . $pv['name'] . '" href="#' . $pv['id'] . '"><code>' . $pv['uri'] . '</code></a></p>' . "\n";
                 }  
               }  

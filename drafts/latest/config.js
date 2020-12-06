@@ -42,25 +42,25 @@ var respecConfig = {
 */
     {
       label: "RDF/XML",
-      uri: "./geodcat-ap_v2.0.0.rdf",
+      uri: "./geodcat-ap.rdf",
     },
     {
       label: "Turtle",
-      uri: "./geodcat-ap_v2.0.0.ttl",
+      uri: "./geodcat-ap.ttl",
     },
 /*
     {
       label: "JSON-LD (TBD)",
-      uri: "./geodcat-ap_v2.0.0.jsonld",
+      uri: "./geodcat-ap.jsonld",
     },
     {
       label: "SHACL (TBD)",
-      uri: "./geodcat-ap_v2.0.0_shacl_shapes.ttl",
+      uri: "./geodcat-ap_shacl_shapes.ttl",
     }
 */
     ],    
 //    implementationReportURI:"https://joinup.ec.europa.eu/document/geodcat-ap-implementations",
-//    errata:"https://github.com/SEMICeu/GeoDCAT-AP/issues?q=is%3Aissue+label%3AErrata+label%3A2.0.0",
+    errata:"https://github.com/SEMICeu/GeoDCAT-AP/issues?q=is%3Aissue+label%3Atype%3Aerratum+label%3Arelease%3A2.0.0",
 //    license: "cc-by",
 //    specStatus: "unofficial",
     specStatus: "ED",
@@ -631,7 +631,7 @@ var respecConfig = {
       "Vickery":{
         "href":"http://ec.europa.eu/information_society/policy/psi/docs/pdfs/report/final_version_study_psi.docx",
         "title":"Review of recent studies on PSI reuse and related market developments",
-	"authors":["Graham Vickery"],
+        "authors":["Graham Vickery"],
         "nopublisher":"European Commission"
        },
       "EC-OD-COM":{
@@ -743,6 +743,11 @@ var respecConfig = {
         "title":"CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
         "publisher":"Creative Commons"
       },
+      "CC-BY": {
+        "href":"https://creativecommons.org/licenses/by/4.0/",
+        "title":"CC-BY 4.0 Attribution 4.0 International",
+        "publisher":"Creative Commons"
+      },
       "PDDL": {
         "href":"http://opendatacommons.org/licenses/pddl/",
         "title":"Public Domain Dedication and License (PDDL)",
@@ -761,6 +766,25 @@ var respecConfig = {
       "ODI": {
         "href":"http://www.theodi.org/",
         "title":"ODI"
+      },
+      "GETTY": {
+        "href":"https://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/",
+        "authors":["Patricia Harpring"],
+        "title":"Introduction to Controlled Vocabularies: Terminology for Art, Architecture, and Other Cultural Works",
+        "publisher": "The Getty Research Institute",
+        "date":"2010"
+      },
+      "OPENDATA-DIR": {
+        "href":"http://data.europa.eu/eli/dir/2019/1024/oj",
+        "title":"Directive (EU) 2019/1024 of the European Parliament and of the Council of 20 June 2019 on open data and the re-use of public sector information",
+        "publisher":"OJ L 172",
+        "date":"20 June 2019"
+      },
+      "DataStrategy": {
+        "href":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52020DC0066",
+        "title":"COMMUNICATION FROM THE COMMISSION TO THE EUROPEAN PARLIAMENT, THE COUNCIL, THE EUROPEAN ECONOMIC AND SOCIAL COMMITTEE AND THE COMMITTEE OF THE REGIONS A European strategy for data",
+        "publisher":"COM/2020/66 final",
+        "date":"19 February 2020"
       },
 // To be pushed to SpecRef
       "SPS": {
