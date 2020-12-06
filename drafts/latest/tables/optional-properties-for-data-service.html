@@ -31,6 +31,7 @@
 </td>
 <td>
 <p>This property MAY include information regarding access or restrictions based on privacy, security, or other policies.</p>
+<p>For INSPIRE metadata, this property SHOULD be used with the URIs of the "Limitations on public access" code list operated by the INSPIRE Registry [[INSPIRE-LPA]].</p>
 </td>
 <td>
 <p>0..1</p>
@@ -47,7 +48,7 @@
 <p><code>dct:Standard</code></p>
 </td>
 <td>
-<p>This property is used to indicate the general standard or specification that the endpoints implement.</p>
+<p>This property is used to indicate the general standard or specification that the Data Service endpoints implement.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -81,7 +82,7 @@
 <p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
 </td>
 <td>
-<p>This property contains the date on which the Catalogue Record has been first created.</p>
+<p>This property contains the date on which the Data Service has been first created.</p>
 </td>
 <td>
 <p>0..1</p>
@@ -98,7 +99,7 @@
 <p><code>foaf:Agent</code></p>
 </td>
 <td>
-<p>This property refers to the entity primarily responsible for producing the Data Service..</p>
+<p>This property refers to the Agent primarily responsible for producing the Data Service..</p>
 </td>
 <td>
 <p>0..1</p>
@@ -115,7 +116,7 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property contains a free-text account of the Data Service. This property can be repeated for parallel language versions of the description.</p>
+<p>This property contains a free-text account of the Data Service. This property can be repeated for parallel language versions of the description - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -183,7 +184,7 @@
 <p><code>dct:LicenseDocument</code></p>
 </td>
 <td>
-<p>This property contains the licence under which the Data service is made available.</p>
+<p>This property contains the licence under which the Data Service is made available.</p>
 </td>
 <td>
 <p>0..1</p>
@@ -200,7 +201,7 @@
 <p><code>foaf:Agent</code></p>
 </td>
 <td>
-<p>This property refers to an entity (organisation) responsible for making the Data Service available.</p>
+<p>This property refers to an Agent (organisation) responsible for making the Data Service available.</p>
 </td>
 <td>
 <p>0..1</p>
@@ -252,7 +253,7 @@
 <p><code>foaf:Agent</code></p>
 </td>
 <td>
-<p>This property refers to an entity (organisation) holding rights on the Data Service..</p>
+<p>This property refers to an Agent (organisation) holding rights on the Data Service..</p>
 </td>
 <td>
 <p>0..1</p>
@@ -303,7 +304,7 @@
 <p><code>skos:Concept</code></p>
 </td>
 <td>
-<p>This property refers to a category of the Data Service. A Data Service may be associated with multiple themes.</p>
+<p>This property refers to a Category of the Data Service. A Data Service may be associated with multiple Categories.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -337,7 +338,7 @@
 <p><code>xsd:decimal</code></p>
 </td>
 <td>
-<p>This property refers to the minimum spatial separation resolvable in a Data Service, measured in meters.</p>
+<p>This property refers to the minimum spatial separation resolvable in a Data Service, measured in metres.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -439,8 +440,8 @@
 <p><code>prov:Activity</code></p>
 </td>
 <td>
-<p>This property refers to an activity that used the Data Service.</p>
-<p>In GeoDCAT-AP, this property MAY be used to specify a testing activity over a Data Service, against a given Standard, producing as output a conformance degree.</p>
+<p>This property refers to an Activity that used the Data Service.</p>
+<p>In GeoDCAT-AP, this property MAY be used to specify a testing Activity over a Data Service, against a given Standard, producing as output a conformance degree.</p>
 </td>
 <td>
 <p>0..n</p>

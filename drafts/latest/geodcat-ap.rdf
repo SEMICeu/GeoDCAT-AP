@@ -6,6 +6,7 @@
   xmlns:dcat      = "http://www.w3.org/ns/dcat#" 
   xmlns:dcatap    = "http://data.europa.eu/r5r/" 
   xmlns:dct       = "http://purl.org/dc/terms/" 
+  xmlns:dqv       = "http://www.w3.org/ns/dqv#"
   xmlns:duv       = "http://www.w3.org/ns/duv#"
   xmlns:foaf      = "http://xmlns.com/foaf/0.1/" 
   xmlns:geodcatap = "http://data.europa.eu/930/" 
@@ -40,7 +41,7 @@
     <dct:type rdf:resource="http://publications.europa.eu/resource/authority/dataset-type/APROF"/>
 <!-- Version information -->
     <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-10-12</dct:issued>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-1-23</dct:modified>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-12-03</dct:modified>
     <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/dataset-status/DEVELOP"/>
     <adms:last rdf:resource="http://data.europa.eu/930/"/>
     <adms:prev rdf:resource="http://data.europa.eu/930/1.0.1/"/>
@@ -184,7 +185,7 @@
 <!-- Optional classes -->
 
   <rdf:Description rdf:about="http://www.w3.org/ns/prov#Activity">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class MAY be used to specify a testing activity over a resource, against a given Standard, producing as output a conformance degree. As such, it is one of the classes used to represent the notion of "conformity and data quality".</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class MAY be used to specify a testing activity over a resource (as a Catalogue, Catalogue Record, Data Service, Dataset), against a given Standard, producing as output a conformance degree. As such, it is one of the classes used to represent the notion of "conformity and data quality" in ISO 19115 and INSPIRE.</skos:scopeNote>
   </rdf:Description> 
 
   <rdf:Description rdf:about="http://www.w3.org/ns/locn#Address">
@@ -248,7 +249,7 @@
   </rdf:Description>
 
   <rdf:Description rdf:about="http://purl.org/dc/terms/Standard">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP. In particular, in GeoDCAT-AP this class is used to express all the information that, in ISO 19155 and INSPIRE, is specified on "metadata standard", "reference system", "reference specification" (for conformity test results).</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP, and to express all the information that, in ISO 19155 and INSPIRE, is specified on "metadata standard", "reference system", "reference specification" (for conformity test results).</skos:scopeNote>
   </rdf:Description>
 
 <!-- ========================================= -->
@@ -276,11 +277,11 @@
   </rdf:Description>
   
   <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasGeneratedBy">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP. Moreover, it MAY be used to link a testing activity over a resource with the corresponding result. As such, it is one of the properties used to represent the notion of "conformity and data quality".</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP. Moreover, it MAY be used to link a testing activity over a resource (as a Catalogue, Catalogue Record, Data Service, Dataset) with the corresponding result. As such, it is one of the properties used to represent the notion of "conformity and data quality".</skos:scopeNote>
   </rdf:Description> 
 
   <rdf:Description rdf:about="http://www.w3.org/ns/prov#generated">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property MAY be used to specify the result of a testing activity over a resource. As such, it is one of the properties used to represent the notion of "conformity and data quality".</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property MAY be used to specify the result of a testing activity over a resource (as Catalogue, Catalogue Record, Data Service, Dataset). As such, it is one of the properties used to represent the notion of "conformity and data quality".</skos:scopeNote>
   </rdf:Description> 
 
   <rdf:Description rdf:about="http://purl.org/dc/terms/provenance">
@@ -590,7 +591,7 @@
   </rdf:Description>
 
   <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property corresponds to the notion of "metadata standard version", as defined in ISO 19115 and INSPIRE. Moreover, it can also be used to specify the version of other types resources, as in DCAT and DCAT-AP.</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property corresponds to the notion of "metadata standard version", as defined in ISO 19115 and INSPIRE. Moreover, it can also be used to specify the version of other types resources (as Category Schemes and Datasets).</skos:scopeNote>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://www.w3.org/ns/adms#versionNotes">
@@ -598,43 +599,43 @@
   </rdf:Description>
   
   <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify a textual descriptions of "conditions for access and use and limitations on public access - use limitations and access / other constraints" (rights statements) and "lineage", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify a textual descriptions of "conditions for access and use and limitations on public access - use limitations and access / other constraints" (rights statements), "encoding / distribution format", and "lineage", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class property is used to specify the name of a Category, Location (geographic name), and reference system.</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the name of a Category, Location (geographic name), and reference system.</skos:scopeNote>
   </rdf:Description>
 
 <!-- Conformity -->
 
   <rdf:Description rdf:about="http://purl.org/dc/terms/conformsTo">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is generally used to specify conformity of a resource with a reference standard / specification / regulation / reference system. As such, it is one of the properties used to represent the notions of "conformity and data quality", "reference system", "metadata standard", as defined in ISO 19115 and INSPIRE. About the notion of "conformity and data quality", this property can only be used when the conformity degree is "conformant".</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is generally used to specify conformity of a resource (as a Catalogue, Catalogue Record, Data Service, Dataset) with a reference standard / specification / regulation / reference system. As such, it is one of the properties used to represent the notions of "conformity and data quality", "reference system", "metadata standard", as defined in ISO 19115 and INSPIRE. About the notion of "conformity and data quality", this property can only be used when the conformity degree is "conformant".</skos:scopeNote>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasUsedBy">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property MAY be used to specify a testing activity over a resource. As such, it is one of the properties used to represent the notion of "conformity and data quality".</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property MAY be used to specify a testing activity over a resource (as a Catalogue, Catalogue Record, Data Service, Dataset). As such, it is one of the properties used to represent the notion of "conformity and data quality".</skos:scopeNote>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://www.w3.org/ns/prov#used">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property MAY be used to specify the resource over which a testing activity has been carried out. As such, it is one of the properties used to represent the notion of "conformity and data quality".</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property MAY be used to specify the resource (as a Catalogue, Catalogue Record, Data Service, Dataset) over which a testing activity has been carried out. As such, it is one of the properties used to represent the notion of "conformity and data quality".</skos:scopeNote>
   </rdf:Description> 
 
 <!-- Spatial aspects -->
 
   <rdf:Description rdf:about="http://purl.org/dc/terms/spatial">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource, by using either a geographic identifier or a geometry. As such, it is one of the properties used to represent the notion of "geographic location / geographic bounding box", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource (as a Catalogue, Data Service, Dataset), by using either a geographic identifier or a geometry. As such, it is one of the properties used to represent the notion of "geographic location / geographic bounding box", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://www.w3.org/ns/locn#geometry">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource, by using a geometry. As such, it is one of the properties used to represent the notion of "geographic location / geographic bounding box", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource (as a Catalogue, Data Service, Dataset), by using a geometry. As such, it is one of the properties used to represent the notion of "geographic location / geographic bounding box", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://www.w3.org/ns/dcat#centroid">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource, by using a centroid. As such, it is one of the properties used to represent the notion of "geographic location / geographic bounding box", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource (as a Catalogue, Data Service, Dataset), by using a centroid. As such, it is one of the properties used to represent the notion of "geographic location / geographic bounding box", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://www.w3.org/ns/dcat#bbox">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource, by using a bounding box. As such it is one of the properties used to represent the notion of "geographic location / geographic bounding box", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource (as a Catalogue, Data Service, Dataset), by using a bounding box. As such it is one of the properties used to represent the notion of "geographic location / geographic bounding box", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://www.w3.org/ns/dcat#spatialResolutionInMeters">
