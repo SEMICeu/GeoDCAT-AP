@@ -724,9 +724,10 @@
   <rdf:Description rdf:about="http://data.europa.eu/930/custodian">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
     <rdfs:label xml:lang="en">Custodian</rdfs:label>
     <rdfs:comment xml:lang="en">Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource.</rdfs:comment>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
     <rdfs:isDefinedBy rdf:resource="https://www.iso.org/standard/26020.html"/>
@@ -737,9 +738,10 @@
   <rdf:Description rdf:about="http://data.europa.eu/930/distributor">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
     <rdfs:label xml:lang="en">Distributor</rdfs:label>
     <rdfs:comment xml:lang="en">Party who distributes the resource.</rdfs:comment>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
     <rdfs:isDefinedBy rdf:resource="https://www.iso.org/standard/26020.html"/>
@@ -751,9 +753,10 @@
   <rdf:Description rdf:about="http://data.europa.eu/930/originator">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
     <rdfs:label xml:lang="en">Originator</rdfs:label>
     <rdfs:comment xml:lang="en">Party who created the resource.</rdfs:comment>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
     <rdfs:isDefinedBy rdf:resource="https://www.iso.org/standard/26020.html"/>
@@ -764,9 +767,10 @@
   <rdf:Description rdf:about="http://data.europa.eu/930/principalInvestigator">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
     <rdfs:label xml:lang="en">Principal investigator</rdfs:label>
     <rdfs:comment xml:lang="en">Key party responsible for gathering information and conducting research.</rdfs:comment>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
     <rdfs:isDefinedBy rdf:resource="https://www.iso.org/standard/26020.html"/>
@@ -777,9 +781,10 @@
   <rdf:Description rdf:about="http://data.europa.eu/930/processor">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
     <rdfs:label xml:lang="en">Processor</rdfs:label>
     <rdfs:comment xml:lang="en">Party who has processed the data in a manner such that the resource has been modified.</rdfs:comment>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
     <rdfs:isDefinedBy rdf:resource="https://www.iso.org/standard/26020.html"/>
@@ -790,9 +795,10 @@
   <rdf:Description rdf:about="http://data.europa.eu/930/resourceProvider">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
     <rdfs:label xml:lang="en">Resource provider</rdfs:label>
     <rdfs:comment xml:lang="en">Party that supplies the resource.</rdfs:comment>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
     <rdfs:isDefinedBy rdf:resource="https://www.iso.org/standard/26020.html"/>
@@ -803,9 +809,10 @@
   <rdf:Description rdf:about="http://data.europa.eu/930/user">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-	<adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
     <rdfs:label xml:lang="en">User</rdfs:label>
     <rdfs:comment xml:lang="en">Party who uses the resource.</rdfs:comment>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
     <rdfs:isDefinedBy rdf:resource="https://www.iso.org/standard/26020.html"/>
@@ -813,5 +820,5 @@
     <rdfs:seeAlso rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user"/>
     <skos:closeMatch rdf:resource="http://purl.org/dc/terms/audience"/>
   </rdf:Description>
-  
+    
 </rdf:RDF>
