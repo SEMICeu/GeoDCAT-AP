@@ -17,6 +17,7 @@
   xmlns:prov      = "http://www.w3.org/ns/prov#" 
   xmlns:rdf       = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
   xmlns:rdfs      = "http://www.w3.org/2000/01/rdf-schema#" 
+  xmlns:sdmx-attribute = "http://purl.org/linked-data/sdmx/2009/attribute#" 
   xmlns:skos      = "http://www.w3.org/2004/02/skos/core#" 
   xmlns:spdx      = "http://spdx.org/rdf/terms#" 
   xmlns:time      = "http://www.w3.org/2006/time#"
@@ -733,7 +734,7 @@
 
 <!-- Spatial resolution -->
 
-  <rdf:Description rdf:about="http://data.europa.eu/930/SpatialResolutionAsScale">
+  <rdf:Description rdf:about="http://data.europa.eu/930/spatialResolutionAsScale">
     <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
     <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
     <rdfs:label xml:lang="en">Spatial resolution as equivalent scale</rdfs:label>
@@ -749,7 +750,7 @@
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
   </rdf:Description>
      
-  <rdf:Description rdf:about="http://data.europa.eu/930/SpatialResolutionAsDistance">
+  <rdf:Description rdf:about="http://data.europa.eu/930/spatialResolutionAsDistance">
     <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
     <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
     <rdfs:label xml:lang="en">Spatial resolution as distance</rdfs:label>
@@ -765,7 +766,7 @@
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://data.europa.eu/930/SpatialResolutionAsAngularDistance">
+  <rdf:Description rdf:about="http://data.europa.eu/930/spatialResolutionAsAngularDistance">
     <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
     <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
     <rdfs:label xml:lang="en">Spatial resolution as angular distance</rdfs:label>
@@ -779,7 +780,7 @@
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://data.europa.eu/930/SpatialResolutionAsVerticalDistance">
+  <rdf:Description rdf:about="http://data.europa.eu/930/spatialResolutionAsVerticalDistance">
     <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
     <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
     <rdfs:label xml:lang="en">Spatial resolution as vertical distance</rdfs:label>
