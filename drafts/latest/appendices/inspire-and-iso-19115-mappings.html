@@ -76,6 +76,7 @@ For example, this was the case of the work carried out by the <a href="https://w
 -->
 </p>
 <p>As it will be explained in <a href="#alignments-defined-in-geodcat-ap"></a>, no new terms have been defined in the current version of GeoDCAT-AP.</p>
+
 <!-- TO BE RESTORED
 <aside class="ednote">
 <p>To be considered the possibility of defining terms for specifying spatial resolution for cases not covered by <code>dcat:spatialResolutionInMeters</code>.</p>
@@ -3780,6 +3781,9 @@ prov:wasUsedBy [
 <p>In [[ISO-19115]], element “Spatial representation type” is meant mainly to describe the “method used to represent geographic information in the dataset”, by using a code list (see the table below).</p>
 <p>The <abbr title="Asset Description Metadata Schema">ADMS</abbr> vocabulary [[VOCAB-ADMS]] includes a property, namely, <code>adms:representationTechnique</code> that could be used for this purpose. It is worth noting that, in the ADMS specification, <code>adms:representationTechnique</code> decribes a distribution, and not the dataset. Moreover, the [[ISO-19115]] code list of spatial representation types might be in the future available as a URI register from the INSPIRE Registry.</p>
 
+<div class="issue" data-number="55"></div>
+
+<!-- TO BE RESTORED
 <aside class="ednote">
 <p>The relevant register has not been eventually created.</p>
 <p>A possible option is to use the corresponding URIs from <a href="https://github.com/ISO-TC211/GOM/blob/master/isotc211_GOM_harmonizedOntology/iso19115/2003/IdentificationInformation.rdf">the relevant ISO 19115 ontology</a>, although they are not dereferenceable (as the ones currently used in GeoDCAT-AP) - namely:</p>
@@ -3790,6 +3794,7 @@ prov:wasUsedBy [
 </ul>
 <p>There is however some work in ISO to set up a linked data registry, so it may eventually provide dereferenceable URIs, although the URIs may not necessarily correspond to the ones above.</p>
 </aside>
+-->
 
 <p>Based on this, GeoDCAT-AP models this information by using property <code>adms:representationTechnique</code>, with the spatial representation type URIs that will be operated by the INSPIRE Registry.</p>
 <p>This mapping is supported only in the extended mapping profile of GeoDCAT-AP.</p>
@@ -3861,9 +3866,13 @@ prov:wasUsedBy [
 -->
 <p>The [[ISO-19115]] code list of maintenance frequency codes might be in the future available as a URI register from the INSPIRE Registry.</p>
 
+<div class="issue" data-number="56"></div>
+
+<!-- TO BE RESTORED
 <aside class="ednote">
 <p>The relevant register has not been eventually created.</p>
 </aside>
+-->
 
 <p>Based on this, maintenance frequency is modelled in GeoDCAT-AP by using <code>dct:accrualPeriodicity</code> with the EU Vocabularies Frequency Named Authority List [[EUV-FREQ]].</p>
 <p>For the frequency codes not covered by the EU Vocabularies Frequency code list, the approach will be as follows:</p>
@@ -3872,6 +3881,7 @@ prov:wasUsedBy [
 <li><p>The extended mapping profile of GeoDCAT-AP will use the code list of ISO maintenance frequency codes operated by the INSPIRE Registry.</p></li>
 </ul>
 
+<!-- TO BE RESTORED
 <aside class="ednote">
 <p>A possible option to address this disalignment is to submit a request to have [[EUV-FREQ]] updated accordingly.</p>
 <p>Otherwise, the missing codes could be mapped to existing ones in [[EUV-FREQ]].</p>
@@ -3882,6 +3892,7 @@ prov:wasUsedBy [
 </ul>
 <p>There is however some work in ISO to set up a linked data registry, so it may eventually provide dereferenceable URIs, although the URIs may not necessarily correspond to the ones above.</p>
 </aside>
+-->
 
 <table class="simple">
 <thead>
