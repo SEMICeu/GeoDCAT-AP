@@ -232,12 +232,20 @@
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP.</skos:scopeNote>
   </rdf:Description>
 
+  <rdf:Description rdf:about="http://www.w3.org/ns/dqv#Metric">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used to define individuals corresponding to the different types of spatial resolution.</skos:scopeNote>
+  </rdf:Description>
+
   <rdf:Description rdf:about="http://purl.org/dc/terms/PeriodOfTime">
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP.</skos:scopeNote>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://purl.org/dc/terms/ProvenanceStatement">
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class is used to express all the information that, in ISO 19155 and INSPIRE, is specified on "lineage".</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dqv#QualityMeasurement">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this class corresponds to the notion of "spatial resolution", as defined in INSPIRE, ISO 19115:2003, and ISO 19115-1:2014.</skos:scopeNote>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://www.w3.org/ns/dcat#Relationship">
@@ -638,12 +646,16 @@
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource (as a Catalogue, Data Service, Dataset), by using a bounding box. As such it is one of the properties used to represent the notion of "geographic location / geographic bounding box", as defined in ISO 19115 and INSPIRE.</skos:scopeNote>
   </rdf:Description>
 
+  <rdf:Description rdf:about="http://www.w3.org/ns/dqv#hasQualityMeasurement">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify "spatial resolution", as defined in INSPIRE, ISO 19115:2003, and ISO 19115-1:2014.</skos:scopeNote>
+  </rdf:Description>
+
   <rdf:Description rdf:about="http://www.w3.org/ns/dcat#spatialResolutionInMeters">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property corresponds to the notion of "spatial resolution", as defined in ISO 19115 and INSPIRE, whenever the spatial resolution is expressed as distance in metres.</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify "spatial resolution", as defined in INSPIRE, ISO 19115:2003, and ISO 19115-1:2014, whenever the spatial resolution is expressed as horizontal ground distance in metres.</skos:scopeNote>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify "spatial resolution", as defined in ISO 19115 and INSPIRE, as a textual description. In particular, it is used to express spatial resolution when it cannot be expressed with property dcat:spatialResolutionInMeters.</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property MAY be used to specify spatial resolution as free-text, when it cannot be specified with properties dqv:hasQualityMeasurement and dcat:spatialResolutionInMeters.</skos:scopeNote>
   </rdf:Description>
   
 <!-- Temporal aspects -->
