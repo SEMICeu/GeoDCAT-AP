@@ -10,6 +10,275 @@
 </tr>
 </thead>
 <tbody>
+
+<tr>
+<td>
+<p>+<code>dqv:hasQualityMeasurement</code></p>
+</td>
+<td>
+<p>Optional property</p>
+<p>(Data Service, Dataset, Distribution)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dqv:QualityMeasurement</code></p>
+<p>Has quality measurement.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/15">GeoDCAT-AP-15</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>+<code>dqv:QualityMeasurement</code></p>
+</td>
+<td>
+<p>Optional class</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Represents the evaluation of a given resource (as a Data Service, Dataset, or Distribution) against a specific quality metric.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/15">GeoDCAT-AP-15</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>+<code>dqv:isMeasurementOf</code></p>
+</td>
+<td>
+<p>Recommended property</p>
+<p>(Quality Measurement)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dqv:Metric</code></p>
+<p>Is measurement of.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/15">GeoDCAT-AP-15</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>+<code>sdmx-attribute:unitMeasure</code></p>
+</td>
+<td>
+<p>Recommended property</p>
+<p>(Quality Measurement)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>skos:Concept</code></p>
+<p>Unit of measure.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/15">GeoDCAT-AP-15</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>+<code>dqv:value</code></p>
+</td>
+<td>
+<p>Recommended property</p>
+<p>(Quality Measurement)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>rdfs:Literal</code></p>
+<p>Value.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/15">GeoDCAT-AP-15</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>+<code>dqv:Metric</code></p>
+</td>
+<td>
+<p>Optional class</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Represents a standard to measure a quality dimension.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/15">GeoDCAT-AP-15</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>+<code>geodcatap:spatialResolutionAsAngularDistance</code></p>
+</td>
+<td>
+<p>Class instance</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Instance of: <code>dqv:Metric</code></p>
+<p>Spatial resolution as angular distance.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/15">GeoDCAT-AP-15</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>+<code>geodcatap:spatialResolutionAsDistance</code></p>
+</td>
+<td>
+<p>Class instance</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Instance of: <code>dqv:Metric</code></p>
+<p>Spatial resolution as distance.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/15">GeoDCAT-AP-15</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>+<code>geodcatap:spatialResolutionAsScale</code></p>
+</td>
+<td>
+<p>Class instance</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Instance of: <code>dqv:Metric</code></p>
+<p>Spatial resolution as equivalent scale.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/15">GeoDCAT-AP-15</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>+<code>geodcatap:spatialResolutionAsVerticalDistance</code></p>
+</td>
+<td>
+<p>Class instance</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Instance of: <code>dqv:Metric</code></p>
+<p>Spatial resolution as vertical distance.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/15">GeoDCAT-AP-15</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>+<code>dqv:inDimension</code></p>
+</td>
+<td>
+<p>Recommended property</p>
+<p>(Metric)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>dqv:Dimension</code></p>
+<p>Dimension.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/15">GeoDCAT-AP-15</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+
+<tr>
+<td>
+<p>+<code>dqv:expectedDataType</code></p>
+</td>
+<td>
+<p>Recommended property</p>
+<p>(Metric)</p>
+</td>
+<td>
+<p>New</p>
+</td>
+<td>
+<p>Range: <code>rdfs:Datatype</code></p>
+<p>Expected data type.</p>
+</td>
+<td>
+<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/15">GeoDCAT-AP-15</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 2.0.0</p>
+</td>
+</tr>
+
 <tr>
 <td>
 <p>+<code>dcat:keyword</code></p>
@@ -32,6 +301,7 @@
 <p>GeoDCAT-AP 2.0.0</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p>+<code>dcat:theme</code></p>
@@ -54,6 +324,7 @@
 <p>GeoDCAT-AP 2.0.0</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p>+<code>dcat:spatialResolutionInMeters</code></p>
@@ -76,6 +347,7 @@
 <p>GeoDCAT-AP 2.0.0</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:temporalResolution</code></p>
@@ -99,6 +371,7 @@
 </td>
 </tr>
 <tr>
+
 <td>
 <p>+<code>dctype:Service</code></p>
 </td>
@@ -118,6 +391,7 @@
 <p>GeoDCAT-AP 2.0.0</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p>+<code>dct:hasPart</code></p>
@@ -140,6 +414,7 @@
 <p>GeoDCAT-AP 2.0.0</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p>+<code>dc:subject</code></p>
@@ -162,6 +437,7 @@
 <p>GeoDCAT-AP 2.0.0</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p>+<code>foaf:homepage</code></p>
@@ -184,6 +460,7 @@
 <p>GeoDCAT-AP 2.0.0</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p>+<code>dct:subject</code></p>
@@ -206,6 +483,7 @@
 <p>GeoDCAT-AP 2.0.0</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p>+<code>dct:type</code></p>
@@ -227,6 +505,7 @@
 <p>GeoDCAT-AP 2.0.0</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p>+<code>rdfs:comment</code></p>
@@ -248,6 +527,7 @@
 <p>GeoDCAT-AP 2.0.0</p>
 </td>
 </tr>
+
 <!--
 <tr>
 <td>
@@ -271,6 +551,7 @@
 </td>
 </tr>
 -->
+
 <tr>
 <td>
 <p><code>dct:MediaTypeorExtent</code></p>
@@ -291,6 +572,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:MediaType</code></p>
@@ -311,6 +593,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:language</code></p>
@@ -331,6 +614,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:mediaType</code></p>
@@ -353,6 +637,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <!--
 <tr>
 <td>
@@ -377,6 +662,7 @@
 </td>
 </tr>
 -->
+
 <tr>
 <td>
 <p><code>dcat:bbox</code></p>
@@ -399,6 +685,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:centroid</code></p>
@@ -421,6 +708,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>time:hasEnd</code></p>
@@ -443,6 +731,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>time:hasBeginning</code></p>
@@ -465,6 +754,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:endDate</code></p>
@@ -487,6 +777,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:startDate</code></p>
@@ -509,6 +800,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>schema:endDate</code></p>
@@ -531,6 +823,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>schema:startDate</code></p>
@@ -553,6 +846,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:Role</code></p>
@@ -573,6 +867,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:relation</code></p>
@@ -595,6 +890,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:hadRole</code></p>
@@ -617,6 +913,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:Relationship</code></p>
@@ -637,6 +934,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>odrl:hasPolicy</code></p>
@@ -659,6 +957,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:accessService</code></p>
@@ -681,6 +980,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:spatialResolutionInMeters</code></p>
@@ -703,6 +1003,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:temporalResolution</code></p>
@@ -725,6 +1026,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:compressFormat</code></p>
@@ -748,6 +1050,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:packageFormat</code></p>
@@ -771,6 +1074,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:isReferencedBy</code></p>
@@ -793,6 +1097,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:qualifiedRelation</code></p>
@@ -815,6 +1120,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:creator</code></p>
@@ -837,6 +1143,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <!--
 <tr>
 <td>
@@ -861,6 +1168,7 @@
 </td>
 </tr>
 -->
+
 <tr>
 <td>
 <p><code>prov:wasGeneratedBy</code></p>
@@ -883,6 +1191,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:spatialResolutionInMeters</code></p>
@@ -905,6 +1214,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:temporalResolution</code></p>
@@ -927,6 +1237,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:service</code></p>
@@ -949,6 +1260,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:catalog</code></p>
@@ -971,6 +1283,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <!--
 <tr>
 <td>
@@ -994,6 +1307,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:accessRights</code></p>
@@ -1016,6 +1330,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:description</code></p>
@@ -1038,6 +1353,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:license</code></p>
@@ -1061,6 +1377,7 @@
 </td>
 </tr>
 -->
+
 <tr>
 <td>
 <p><code>dcat:servesDataset</code></p>
@@ -1083,6 +1400,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:endpointDescription</code></p>
@@ -1105,6 +1423,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:endpointURL</code></p>
@@ -1127,6 +1446,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <!--
 <tr>
 <td>
@@ -1151,6 +1471,7 @@
 </td>
 </tr>
 -->
+
 <tr>
 <td>
 <p><code>dcat:DataService</code></p>
@@ -1172,6 +1493,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcatap:availability</code></p>
@@ -1193,6 +1515,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>adms:status</code></p>
@@ -1216,6 +1539,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:spatial</code></p>
@@ -1238,6 +1562,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:spatial</code></p>
@@ -1260,6 +1585,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:temporal</code></p>
@@ -1282,6 +1608,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+
 <!--
 <tr>
 <td>
@@ -1306,6 +1633,7 @@
 </td>
 </tr>
 -->
+
 <!--
 <tr>
 <td>
@@ -1358,6 +1686,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 </td>
 </tr>
 -->
+
 <tr>
 <td>
 <p><code>dct:type</code></p>
@@ -1381,6 +1710,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20181108]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>adms:versionNotes</code></p>
@@ -1403,6 +1733,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <!--
 <tr>
 <td>
@@ -1428,6 +1759,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 </td>
 </tr>
 -->
+
 <tr>
 <td>
 <p><code>dct:LicenseDocument</code></p>
@@ -1450,6 +1782,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <!--
 <tr>
 <td>
@@ -1472,6 +1805,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 </td>
 </tr>
 -->
+
 <tr>
 <td>
 <p><code>dct:source</code></p>
@@ -1493,6 +1827,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>owl:versionInfo</code></p>
@@ -1514,6 +1849,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>spdx:algorithm</code></p>
@@ -1536,6 +1872,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>spdx:Checksum</code></p>
@@ -1556,6 +1893,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>spdx:checksum</code></p>
@@ -1578,6 +1916,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>spdx:checksumValue</code></p>
@@ -1600,6 +1939,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>vcard:Kind</code></p>
@@ -1623,6 +1963,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <!--
 <tr>
 <td>
@@ -1644,6 +1985,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:provenance</code></p>
@@ -1669,6 +2011,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 </td>
 </tr>
 -->
+
 <tr>
 <td>
 <p><code>dct:source</code></p>
@@ -1693,6 +2036,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:accessRights</code></p>
@@ -1715,6 +2059,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:hasVersion</code></p>
@@ -1738,6 +2083,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:isVersionOf</code></p>
@@ -1761,6 +2107,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:relation</code></p>
@@ -1783,6 +2130,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>foaf:page</code></p>
@@ -1805,6 +2153,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:mediaType</code></p>
@@ -1827,6 +2176,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:spatial</code></p>
@@ -1848,6 +2198,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:isPartOf</code></p>
@@ -1869,6 +2220,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>adms:sample</code></p>
@@ -1889,6 +2241,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>foaf:page</code></p>
@@ -1909,6 +2262,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:hasPart</code></p>
@@ -1930,6 +2284,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:themeTaxonomy</code></p>
@@ -1951,6 +2306,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:theme</code></p>
@@ -1973,6 +2329,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <!--
 <tr>
 <td>
@@ -1993,6 +2350,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dct:conformsTo</code></p>
@@ -2013,6 +2371,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 </td>
 </tr>
 -->
+
 <tr>
 <td>
 <p><code>dct:accrualPeriodicity</code></p>
@@ -2033,6 +2392,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 <tr>
 <td>
 <p><code>dcat:landingPage</code></p>
@@ -2055,6 +2415,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
+
 </tbody>
 </table>
 
