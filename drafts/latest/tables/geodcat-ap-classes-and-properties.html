@@ -1,4 +1,4 @@
-<p>This version of GeoDCAT-AP extends [[DCAT-AP-20200608]] with 4 additional classes and 102 additional properties, listed in the following table.</p>
+<p>This version of GeoDCAT-AP extends [[DCAT-AP-20200608]] with 4 additional classes and 110 additional properties, listed in the following table.</p>
 
 <table class="simple" id="table-geodcat-ap-classes-and-properties">
 <thead>
@@ -157,7 +157,7 @@
 </td>
 <td>
 <p>+<a title="contact point" href="#data-service-contact-point"><code>dcat:contactPoint</code></a></p>
-<p>+<a title="spatial resolution" href="#data-service-spatial-resolution"><code>dcat:spatialResolutionInMeters</code></a></p>
+<p>+<a title="spatial resolution in metres" href="#data-service-spatial-resolution-in-metres"><code>dcat:spatialResolutionInMeters</code></a></p>
 <p>+<a title="temporal resolution" href="#data-service-temporal-resolution"><code>dcat:temporalResolution</code></a></p>
 <p>+<a title="theme / category" href="#data-service-category"><code>dcat:theme</code></a></p>
 <p>+<a title="conforms to" href="#data-service-conforms-to"><code>dct:conformsTo</code></a></p>
@@ -174,9 +174,10 @@
 <p>+<a title="service category" href="#data-service-service-category"><code>dct:type</code></a></p>
 <p>+<a title="service type" href="#data-service-service-type"><code>dct:type</code></a></p>
 <p>+<a title="type" href="#data-service-type"><code>dct:type</code></a></p>
+<p>+<a title="spatial resolution" href="#data-service-spatial-resolution"><code>dqv:hasQualityMeasurement</code></a></p>
 <p>+<a title="qualified attribution" href="#data-service-qualified-attribution"><code>prov:qualifiedAttribution</code></a></p>
 <p>+<a title="was used by" href="#data-service-was-used-by"><code>prov:wasUsedBy</code></a></p>
-<p>+<a title="spatial resolution as equivalent scale, angular distance, vertical distance" href="#data-service-spatial-resolution-general"><code>rdfs:comment</code></a></p>
+<p>+<a title="spatial resolution as text" href="#data-service-spatial-resolution-general"><code>rdfs:comment</code></a></p>
 </td>
 </tr>
 <tr>
@@ -191,8 +192,9 @@
 <p>+<a title="creation date" href="#dataset-creation-date"><code>dct:created</code></a></p>
 <p>+<a title="rights holder" href="#dataset-rights-holder"><code>dct:rightsHolder</code></a></p>
 <p>+<a title="topic category" href="#dataset-topic-category"><code>dct:subject</code></a></p>
+<p>+<a title="spatial resolution" href="#dataset-spatial-resolution"><code>dqv:hasQualityMeasurement</code></a></p>
 <p>+<a title="was used by" href="#dataset-was-used-by"><code>prov:wasUsedBy</code></a></p>
-<p>+<a title="spatial resolution as equivalent scale, angular distance, vertical distance" href="#dataset-spatial-resolution-general"><code>rdfs:comment</code></a></p>
+<p>+<a title="spatial resolution as text" href="#dataset-spatial-resolution-general"><code>rdfs:comment</code></a></p>
 </td>
 </tr>
 <tr>
@@ -206,7 +208,8 @@
 <p>+<a title="representation technique" href="#distribution-representation-technique"><code>adms:representationTechnique</code></a></p>
 <p>+<a title="access rights" href="#distribution-access-rights"><code>dct:accessRights</code></a></p>
 <p>+<a title="reference system" href="#distribution-reference-system"><code>dct:conformsTo</code></a></p>
-<p>+<a title="spatial resolution as equivalent scale, angular distance, vertical distance" href="#distribution-spatial-resolution-general"><code>rdfs:comment</code></a></p>
+<p>+<a title="spatial resolution" href="#distribution-spatial-resolution"><code>dqv:hasQualityMeasurement</code></a></p>
+<p>+<a title="spatial resolution as text" href="#distribution-spatial-resolution-general"><code>rdfs:comment</code></a></p>
 </td>
 </tr>
 <tr>
@@ -273,12 +276,37 @@
 </td>
 </tr>
 <tr>
+<td><a href="#metric">Metric</a></td>
+<td><code>dqv:Metric</code></td>
+<td>
+</td>
+<td>
+<p>+<a title="expected data type" href="#metric-expected-data-type"><code>dqv:expectedDataType</code></a></p>
+<p>+<a title="dimension" href="#metric-dimension"><code>dqv:inDimension</code></a></p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
 <td><a href="#provenance-statement">Provenance Statement</a></td>
 <td><code>dct:ProvenanceStatement</code></td>
 <td>
 </td>
 <td>
 <p>+<a title="provenance statement text" href="#provenance-statement-provenance-statement-text"><code>rdfs:label</code></a></p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td><a href="#quality-measurement">Quality Measurement</a></td>
+<td><code>dqv:QualityMeasurement</code></td>
+<td>
+</td>
+<td>
+<p>+<a title="is measurement of" href="#quality-measurement-is-measurement-of"><code>dqv:isMeasurementOf</code></a></p>
+<p>+<a title="value" href="#quality-measurement-value"><code>dqv:value</code></a></p>
+<p>+<a title="unit of measure" href="#quality-measurement-unit-of-measure"><code>sdmx-attribute:unitMeasure</code></a></p>
 </td>
 <td>
 </td>

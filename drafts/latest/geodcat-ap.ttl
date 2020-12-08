@@ -15,14 +15,72 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix spdx: <http://spdx.org/rdf/terms#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+geodcatap:spatialResolutionAsAngularDistance a dqv:Metric ;
+  rdfs:label "Spatial resolution as angular distance"@en ;
+  rdfs:comment "Spatial resolution expressed as angular distance (ISO 19115-1:2014)."@en ;
+  rdfs:isDefinedBy geodcatap:,
+    <https://www.iso.org/standard/53798.html> ;
+  vs:term_status "unstable" ;
+  skos:definition "Spatial resolution expressed as angular distance (ISO 19115-1:2014)."@en ;
+  skos:prefLabel "Spatial resolution as angular distance"@en ;
+  skos:scopeNote "In GeoDCAT-AP, this property is typically used for Catalogues, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."@en ;
+  adms:status <http://publications.europa.eu/resource/dataset/concept-status/DRAFT> ;
+  dqv:expectedDataType xsd:decimal ;
+  dqv:inDimension dqv:precision .
+
+geodcatap:spatialResolutionAsDistance a dqv:Metric ;
+  rdfs:label "Spatial resolution as distance"@en ;
+  rdfs:comment "Spatial resolution expressed as distance. It corresponds to the notion of spatial resolution as \"ground distance\" of ISO 19115:2003 and \"horizontal ground distance\" of ISO 19115-1:2014."@en ;
+  rdfs:isDefinedBy geodcatap:,
+    <http://data.europa.eu/eli/reg/2008/1205/2008-12-24>,
+    <https://www.iso.org/standard/26020.html>,
+    <https://www.iso.org/standard/53798.html> ;
+  vs:term_status "unstable" ;
+  skos:definition "Spatial resolution expressed as distance. It corresponds to the notion of spatial resolution as \"ground distance\" of ISO 19115:2003 and \"horizontal ground distance\" of ISO 19115-1:2014."@en ;
+  skos:prefLabel "Spatial resolution as distance"@en ;
+  skos:scopeNote "In GeoDCAT-AP, this property is typically used for Catalogues, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."@en ;
+  adms:status <http://publications.europa.eu/resource/dataset/concept-status/DRAFT> ;
+  dqv:expectedDataType xsd:decimal ;
+  dqv:inDimension dqv:precision .
+
+geodcatap:spatialResolutionAsScale a dqv:Metric ;
+  rdfs:label "Spatial resolution as equivalent scale"@en ;
+  rdfs:comment "Spatial resolution expressed as equivalent scale (ISO 19115:2003, ISO 19115-1:2014), by using a representative fraction (e.g., 1:1,000, 1:1,000,000)."@en ;
+  rdfs:isDefinedBy geodcatap:,
+    <http://data.europa.eu/eli/reg/2008/1205/2008-12-24>,
+    <https://www.iso.org/standard/26020.html>,
+    <https://www.iso.org/standard/53798.html> ;
+  vs:term_status "unstable" ;
+  skos:definition "Spatial resolution expressed as equivalent scale (ISO 19115:2003, ISO 19115-1:2014), by using a representative fraction (e.g., 1:1,000, 1:1,000,000)."@en ;
+  skos:prefLabel "Spatial resolution as equivalent scale"@en ;
+  skos:scopeNote "In GeoDCAT-AP, this property is typically used for Catalogues, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."@en ;
+  adms:status <http://publications.europa.eu/resource/dataset/concept-status/DRAFT> ;
+  dqv:expectedDataType xsd:decimal ;
+  dqv:inDimension <dqv:precision> .
+
+geodcatap:spatialResolutionAsVerticalDistance a dqv:Metric ;
+  rdfs:label "Spatial resolution as vertical distance"@en ;
+  rdfs:comment "Spatial resolution expressed as vertical distance."@en ;
+  rdfs:isDefinedBy geodcatap:,
+    <https://www.iso.org/standard/53798.html> ;
+  vs:term_status "unstable" ;
+  skos:definition "Spatial resolution expressed as vertical distance (ISO 19115-1:2014)."@en ;
+  skos:prefLabel "Spatial resolution as vertical distance"@en ;
+  skos:scopeNote "In GeoDCAT-AP, this property is typically used for Catalogues, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."@en ;
+  adms:status <http://publications.europa.eu/resource/dataset/concept-status/DRAFT> ;
+  dqv:expectedDataType xsd:decimal ;
+  dqv:inDimension dqv:precision .
 
 dcatap:availability skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT-AP."@en .
 
@@ -96,6 +154,8 @@ dct:title skos:scopeNote "In GeoDCAT-AP, this property corresponds to the notion
 
 dct:type skos:scopeNote "In GeoDCAT-AP, this property it is used as in DCAT-AP. Moreover, it corresponds to the notions of \"resource type\", \"service category\", \"service type\", and \"conformance degree\", as defined in ISO 19115 and INSPIRE. Finally, it is used to specify the type of reference system (spatial or temporal) by using the relevant URIs from the glossary hosted on the INSPIRE Registry."@en .
 
+sdmx-attribute:unitMeasure skos:scopeNote "In GeoDCAT-AP, this property is used to specify, when relevant, the unit of measure of the spatial resolution being described, by taking as object the relevant term from the Ontology of Units of Measure (OM)."@en .
+
 spdx:Checksum skos:scopeNote "In GeoDCAT-AP, this class is used as in DCAT-AP."@en .
 
 spdx:algorithm skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."@en .
@@ -104,7 +164,7 @@ spdx:checksum skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT an
 
 spdx:checksumValue skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."@en .
 
-rdfs:comment skos:scopeNote "In GeoDCAT-AP, this property is used to specify \"spatial resolution\", as defined in ISO 19115 and INSPIRE, as a textual description. In particular, it is used to express spatial resolution when it cannot be expressed with property dcat:spatialResolutionInMeters."@en .
+rdfs:comment skos:scopeNote "In GeoDCAT-AP, this property MAY be used to specify spatial resolution as free-text, when it cannot be specified with properties dqv:hasQualityMeasurement and dcat:spatialResolutionInMeters."@en .
 
 rdfs:label skos:scopeNote "In GeoDCAT-AP, this property is used to specify a textual descriptions of \"conditions for access and use and limitations on public access - use limitations and access / other constraints\" (rights statements), \"encoding / distribution format\", and \"lineage\", as defined in ISO 19115 and INSPIRE."@en .
 
@@ -220,7 +280,7 @@ dcat:servesDataset skos:scopeNote "In GeoDCAT-AP, this property is used as in DC
 
 dcat:service skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."@en .
 
-dcat:spatialResolutionInMeters skos:scopeNote "In GeoDCAT-AP, this property corresponds to the notion of \"spatial resolution\", as defined in ISO 19115 and INSPIRE, whenever the spatial resolution is expressed as distance in metres."@en .
+dcat:spatialResolutionInMeters skos:scopeNote "In GeoDCAT-AP, this property is used to specify \"spatial resolution\", as defined in INSPIRE, ISO 19115:2003, and ISO 19115-1:2014, whenever the spatial resolution is expressed as horizontal ground distance in metres."@en .
 
 dcat:startDate skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."@en .
 
@@ -229,6 +289,18 @@ dcat:temporalResolution skos:scopeNote "In GeoDCAT-AP, this property is used as 
 dcat:theme skos:scopeNote "In GeoDCAT-AP, this property corresponds to the notion of \"keyword from controlled vocabulary\", as defined in ISO 19115 and INSPIRE."@en .
 
 dcat:themeTaxonomy skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."@en .
+
+dqv:QualityMeasurement skos:scopeNote "In GeoDCAT-AP, this class corresponds to the notion of \"spatial resolution\", as defined in INSPIRE, ISO 19115:2003, and ISO 19115-1:2014."@en .
+
+dqv:expectedDataType skos:scopeNote "In GeoDCAT-AP, this property is used in the definition of the instances of dqv:Metric corresponding to the different type of spatial resolution."@en .
+
+dqv:hasQualityMeasurement skos:scopeNote "In GeoDCAT-AP, this property is used to specify \"spatial resolution\", as defined in INSPIRE, ISO 19115:2003, and ISO 19115-1:2014."@en .
+
+dqv:inDimension skos:scopeNote "In GeoDCAT-AP, this property is used in the definition of the instances of dqv:Metric corresponding to the different type of spatial resolution. It MUST always take as value dqv:precision."@en .
+
+dqv:isMeasurementOf skos:scopeNote "In GeoDCAT-AP, this property is used to specify the type of spatial resolution being described, by taking as object one of the following instances of dqv:Metric: geodcatap:spatialResolutionAsScale, geodcatap:spatialResolutionAsDistance, geodcatap:spatialResolutionAsAngularDistance, geodcatap:spatialResolutionAsVerticalDistance."@en .
+
+dqv:value skos:scopeNote "In GeoDCAT-AP, this property is used to specify the value of the spatial resolution being described via a typed literal. The datatype MUST correspond to the one specified via property dqv:expectedDataType in the definition of the corresponding instance of dqv:Metric."@en .
 
 locn:Address skos:scopeNote "In GeoDCAT-AP, this class MAY be used to specify a postal address of an Agent, with a role different from \"contact point\"."@en .
 
@@ -286,6 +358,12 @@ foaf:primaryTopic skos:scopeNote "In GeoDCAT-AP, this property is used as in DCA
 
 foaf:workplaceHomepage skos:scopeNote "In GeoDCAT-AP, this property is used to specify the work homepage of an Agent, when the role is different from \"point of contact\"."@en .
 
+<https://andrea-perego.name/foaf/#me> a foaf:Person ;
+  owl:sameAs <https://orcid.org/0000-0001-9300-2694> ;
+  foaf:name "Andrea Perego" .
+
+dqv:Metric skos:scopeNote "In GeoDCAT-AP, this class is used to define individuals corresponding to the different types of spatial resolution."@en .
+
 geodcatap: a voaf:Vocabulary,
     owl:Ontology,
     adms:Asset ;
@@ -297,6 +375,7 @@ geodcatap: a voaf:Vocabulary,
     <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements>,
     <https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap>,
     <https://www.w3.org/TR/vocab-dcat-2/> ;
+  dct:created "2020-10-12"^^xsd:date ;
   dct:creator [ a foaf:Group ;
       foaf:name "GeoDCAT-AP Working Group" ;
       foaf:page <https://github.com/semiceu/geodcat-ap/> ] ;
@@ -304,7 +383,7 @@ geodcatap: a voaf:Vocabulary,
   dct:description "GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 and those defined in the framework of the INSPIRE Directive of the European Union."@en ;
   dct:issued "2020-10-12"^^xsd:date ;
   dct:license <https://creativecommons.org/licenses/by/4.0/> ;
-  dct:modified "2020-12-03"^^xsd:date ;
+  dct:modified "2020-12-08"^^xsd:date ;
   dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/COM> ;
   dct:rightsHolder <http://publications.europa.eu/resource/authority/corporate-body/EURUN> ;
   dct:title "GeoDCAT-AP"@en ;
@@ -318,6 +397,7 @@ geodcatap: a voaf:Vocabulary,
   vann:preferredNamespaceUri "http://data.europa.eu/930/"^^xsd:anyURI ;
   voaf:reliesOn dcatap:,
     dct:,
+    sdmx-attribute:,
     spdx:,
     rdfs:,
     owl:,
@@ -327,6 +407,7 @@ geodcatap: a voaf:Vocabulary,
     cnt:,
     adms:,
     dcat:,
+    dqv:,
     locn:,
     odrl:,
     org:,
@@ -334,6 +415,10 @@ geodcatap: a voaf:Vocabulary,
     foaf: ;
   rdfs:comment "GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 and those defined in the framework of the INSPIRE Directive of the European Union."@en ;
   rdfs:isDefinedBy <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/> ;
+  owl:backwardCompatibleWith <http://data.europa.eu/930/1.0.0/>,
+    <http://data.europa.eu/930/1.0.1/> ;
+  owl:priorVersion <http://data.europa.eu/930/1.0.1/> ;
+  owl:versionIRI <http://data.europa.eu/930/2.0.0/> ;
   owl:versionInfo "Version 2.0.0"@en ;
   skos:altLabel "GeoDCAT-AP - Version 2.0.0: A geospatial extension for the DCAT application profile for data portals in Europe"@en ;
   adms:last geodcatap: ;
@@ -341,13 +426,11 @@ geodcatap: a voaf:Vocabulary,
   adms:status <http://publications.europa.eu/resource/dataset/dataset-status/DEVELOP> ;
   adms:versionNotes "This version of GeoDCAT-AP is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP and was built starting from GeoDCAT-AP version 1.0.1, with the purpose of aligning it with DCAT-AP version 2.0.1 and with version 2.0.1 of the INSPIRE Metadata Technical Guidelines."@en ;
   dcat:distribution [ a adms:AssetDistribution ;
-      dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>,
-        <http://www.w3.org/ns/formats/data/Turtle> ;
-      dct:title "Turtle"@en ;
-      adms:representationTechnique <http://purl.org/adms/representationtechnique/OWL>,
-        <http://purl.org/adms/representationtechnique/RDFSchema> ;
-      dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.ttl> ;
-      dcat:mediaType "text/turtle"^^dct:IMT ],
+      dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+      dct:title "HTML"@en ;
+      adms:representationTechnique <http://purl.org/adms/representationtechnique/HumanLanguage> ;
+      dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/index.html> ;
+      dcat:mediaType "text/html"^^dct:IMT ],
     [ a adms:AssetDistribution ;
       dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML>,
         <http://www.w3.org/ns/formats/data/RDF_XML> ;
@@ -357,13 +440,12 @@ geodcatap: a voaf:Vocabulary,
       dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.rdf> ;
       dcat:mediaType "application/rdf+xml"^^dct:IMT ],
     [ a adms:AssetDistribution ;
-      dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
-      dct:title "HTML"@en ;
-      adms:representationTechnique <http://purl.org/adms/representationtechnique/HumanLanguage> ;
-      dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/index.html> ;
-      dcat:mediaType "text/html"^^dct:IMT ] .
-
-<https://andrea-perego.name/foaf/#me> a foaf:Person ;
-  owl:sameAs <https://orcid.org/0000-0001-9300-2694> ;
-  foaf:name "Andrea Perego" .
+      dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>,
+        <http://www.w3.org/ns/formats/data/Turtle> ;
+      dct:title "Turtle"@en ;
+      adms:representationTechnique <http://purl.org/adms/representationtechnique/OWL>,
+        <http://purl.org/adms/representationtechnique/RDFSchema> ;
+      dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.ttl> ;
+      dcat:mediaType "text/turtle"^^dct:IMT ] ;
+  foaf:depiction <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap_v2.0.0.svg> .
 
