@@ -46,6 +46,10 @@
     <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/dataset-status/DEVELOP"/>
     <adms:last rdf:resource="http://data.europa.eu/930/"/>
     <adms:prev rdf:resource="http://data.europa.eu/930/1.0.1/"/>
+    <owl:versionIRI rdf:resource="http://data.europa.eu/930/2.0.0/"/>
+    <owl:priorVersion rdf:resource="http://data.europa.eu/930/1.0.1/"/>
+    <owl:backwardCompatibleWith rdf:resource="http://data.europa.eu/930/1.0.1/"/>
+    <owl:backwardCompatibleWith rdf:resource="http://data.europa.eu/930/1.0.0/"/>
     <owl:versionInfo xml:lang="en">Version 2.0.0</owl:versionInfo>
     <adms:versionNotes xml:lang="en">This version of GeoDCAT-AP is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP and was built starting from GeoDCAT-AP version 1.0.1, with the purpose of aligning it with DCAT-AP version 2.0.1 and with version 2.0.1 of the INSPIRE Metadata Technical Guidelines.</adms:versionNotes>
 <!-- Namespace and prefix -->
@@ -59,6 +63,8 @@
     <rdfs:comment xml:lang="en">GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 and those defined in the framework of the INSPIRE Directive of the European Union.</rdfs:comment>
     <dct:abstract xml:lang="en">GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 and those defined in the framework of the INSPIRE Directive of the European Union.</dct:abstract>
     <dct:description xml:lang="en">GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 and those defined in the framework of the INSPIRE Directive of the European Union.</dct:description>
+<!-- Graphical representation-->  
+    <foaf:depiction rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap_v2.0.0.svg"/>
 <!-- Reference specification -->  
     <rdfs:isDefinedBy rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/"/>
 <!-- Conformity -->  
@@ -73,6 +79,7 @@
     <voaf:reliesOn rdf:resource="http://www.w3.org/ns/dcat#"/> 
     <voaf:reliesOn rdf:resource="http://data.europa.eu/r5r/"/> 
     <voaf:reliesOn rdf:resource="http://purl.org/dc/terms/"/> 
+    <voaf:reliesOn rdf:resource="http://www.w3.org/ns/dqv#"/> 
     <voaf:reliesOn rdf:resource="http://xmlns.com/foaf/0.1/"/> 
     <voaf:reliesOn rdf:resource="http://www.w3.org/ns/locn#"/> 
     <voaf:reliesOn rdf:resource="http://www.w3.org/2002/07/owl#"/> 
@@ -81,6 +88,7 @@
     <voaf:reliesOn rdf:resource="http://www.w3.org/ns/prov#"/> 
     <voaf:reliesOn rdf:resource="http://www.w3.org/2000/01/rdf-schema#"/> 
     <voaf:reliesOn rdf:resource="http://www.w3.org/2004/02/skos/core#"/> 
+    <voaf:reliesOn rdf:resource="http://purl.org/linked-data/sdmx/2009/attribute#"/> 
     <voaf:reliesOn rdf:resource="http://spdx.org/rdf/terms#"/> 
     <voaf:reliesOn rdf:resource="http://www.w3.org/2006/time#"/>
     <voaf:reliesOn rdf:resource="http://www.w3.org/2006/vcard/ns#"/>
@@ -649,6 +657,26 @@
 
   <rdf:Description rdf:about="http://www.w3.org/ns/dqv#hasQualityMeasurement">
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify "spatial resolution", as defined in INSPIRE, ISO 19115:2003, and ISO 19115-1:2014.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dqv#inDimension">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used in the definition of the instances of dqv:Metric corresponding to the different type of spatial resolution. It MUST always take as value dqv:precision.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dqv#expectedDataType">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used in the definition of the instances of dqv:Metric corresponding to the different type of spatial resolution.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dqv#isMeasurementOf">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the type of spatial resolution being described, by taking as object one of the following instances of dqv:Metric: geodcatap:spatialResolutionAsScale, geodcatap:spatialResolutionAsDistance, geodcatap:spatialResolutionAsAngularDistance, geodcatap:spatialResolutionAsVerticalDistance.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/dqv#value">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the value of the spatial resolution being described via a typed literal. The datatype MUST correspond to the one specified via property dqv:expectedDataType in the definition of the corresponding instance of dqv:Metric.</skos:scopeNote>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure">
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify, when relevant, the unit of measure of the spatial resolution being described, by taking as object the relevant term from the Ontology of Units of Measure (OM).</skos:scopeNote>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://www.w3.org/ns/dcat#spatialResolutionInMeters">
