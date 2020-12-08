@@ -1,0 +1,81 @@
+<table class="simple" id="table-recommended-properties-for-quality-measurement">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="property recommended ap-ext" id="quality-measurement-is-measurement-of">
+<td>
+<p>+is measurement of</p>
+</td>
+<td>
+<p><code>dqv:isMeasurementOf</code></p>
+</td>
+<td>
+<p><code>dqv:Metric</code></p>
+</td>
+<td>
+<p>This property indicates the Metric being observed.</p>
+<p>In GeoDCAT-AP, this property is used to specify the type of spatial resolution being described, by taking as object one of the following instances of <code>dqv:Metric</code>: <code>geodcatap:spatialResolutionAsScale</code>, <code>geodcatap:spatialResolutionAsDistance</code>, <code>geodcatap:spatialResolutionAsAngularDistance</code>, <code>geodcatap:spatialResolutionAsVerticalDistance</code>.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+<tr class="property recommended ap-ext" id="quality-measurement-unit-of-measure">
+<td>
+<p>+unit of measure</p>
+</td>
+<td>
+<p><code>sdmx-attribute:unitMeasure</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property indicates the unit in which the data values are measured.</p>
+<p>In GeoDCAT-AP, this property is used to specify, when relevant, the unit of measure of the spatial resolution being described, by taking as object the relevant term from the Ontology of Units of Measure [[OM]].</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+<tr class="property recommended ap-ext" id="quality-measurement-value">
+<td>
+<p>+value</p>
+</td>
+<td>
+<p><code>dqv:value</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property refers to values computed by the relevant Metric.</p>
+<p>In GeoDCAT-AP, this property is used to specify the value of the spatial resolution being described via a typed literal. The datatype MUST correspond to the one specified via property <code>dqv:expectedDataType</code> in the definition of the corresponding instance of <code>dqv:Metric</code>.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+</tbody>
+</table>
