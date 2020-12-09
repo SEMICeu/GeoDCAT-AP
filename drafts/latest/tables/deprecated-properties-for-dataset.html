@@ -36,7 +36,7 @@
 
 <aside class="note">
 <p>Until GeoDCAT-AP version 1.0.1 [[GeoDCAT-AP-20160802]], property <code>rdfs:comment</code> was used with class <code>dcat:Dataset</code> to specify the spatial resolution of a Dataset, since a more specific property was not available in reference vocabularies.</p>
-<p>[[VOCAB-DCAT-2]] and [[?SDW-BP]] recommend the use of [[VOCAB-DQV]] for the specification of different types of spatial resolution, via property <code>dcat:hasQualityMeasurement</code>. Moreover, [[VOCAB-DCAT-2]] has defined a specific property to specify spatial resolution as distance in metres, namely, <code>dcat:spatialResolutionInMeters</code>.</p>
+<p>[[VOCAB-DCAT-2]] and [[?SDW-BP]] recommend the use of [[VOCAB-DQV]] for the specification of different types of spatial resolution, via property <code>dqv:hasQualityMeasurement</code>. Moreover, [[VOCAB-DCAT-2]] has defined a specific property to specify spatial resolution as distance in metres, namely, <code>dcat:spatialResolutionInMeters</code>.</p>
 <p>Therefore, starting from this version of GeoDCAT-AP, property <code>dcat:spatialResolutionInMeters</code> replaces <code>rdfs:comment</code> when spatial resolution is expressed as distance in metres, whereas property <code>dqv:hasQualityMeasurement</code> replaces <code>rdfs:comment</code> in the other cases.</p>
 <p>Property <code>rdfs:comment</code> MAY still be used when spatial resolution is specified as free-text.</p>
 </aside>
