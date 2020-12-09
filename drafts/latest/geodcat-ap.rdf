@@ -774,7 +774,7 @@
     <skos:definition xml:lang="en">Spatial resolution expressed as equivalent scale (ISO 19115:2003, ISO 19115-1:2014), by using a representative fraction (e.g., 1:1,000, 1:1,000,000).</skos:definition>
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
     <dqv:expectedDataType rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <dqv:inDimension rdf:resource="dqv:precision"/>
+    <dqv:inDimension rdf:resource="http://www.w3.org/ns/dqv#precision"/>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
     <rdfs:isDefinedBy rdf:resource="https://www.iso.org/standard/26020.html"/>
     <rdfs:isDefinedBy rdf:resource="https://www.iso.org/standard/53798.html"/>
