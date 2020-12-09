@@ -936,7 +936,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 </tr>
 
 <tr>
-<td rowspan="2">
+<td rowspan="3">
 <p>Spatial resolution (C)</p>
 <p>*Spatial resolution of the dataset (O)</p>
 </td>
@@ -948,17 +948,24 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>(<code>dcat:DataService</code> (O))</p>
 </td>
 <td><code>xsd:decimal</code></td>
-<td rowspan="2">See <a href="#spatial-resolution-spatial-resolution-of-the-dataset"></a>. Spatial resolution is encoded in a human-readable form only (using <code>rdfs:comment</code>) when expressed as equivalent scale, angular distance, vertical distance.</td>
+<td rowspan="3">See <a href="#spatial-resolution-spatial-resolution-of-the-dataset"></a>. Property <code>dcat:spatialResolutionInMeters</code> can only be used when spatial resolution is expressed as distance in metres. Property <code>dqv:hasQualityMeasurement</code> can be used to specify any type of spatial resolution. Property <code>rdfs:comment</code> is used only in case spatial resolution is specified as free-text.</td>
+</tr>
+
+<tr>
+<td>
+<p><code>dqv:hasQualityMeasurement</code></p>
+</td>
+<td rowspan="2">
+<p>-</p>
+<p>(<code>dcat:Dataset</code> (M))</p>
+<p>(<code>dcat:DataService</code> (O))</p>
+</td>
+<td><code>dqv:QualityMeasurement</code></td>
 </tr>
 
 <tr>
 <td>
 <p><code>rdfs:comment</code></p>
-</td>
-<td>
-<p>-</p>
-<p>(<code>dcat:Dataset</code> (M))</p>
-<p>(<code>dcat:DataService</code> (O))</p>
 </td>
 <td><code>rdfs:Literal</code></td>
 </tr>
