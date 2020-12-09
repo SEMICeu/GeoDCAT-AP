@@ -12,7 +12,7 @@
     <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
     <skos:prefLabel xml:lang="en">Spatial resolution as equivalent scale</skos:prefLabel>
     <dqv:expectedDataType rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    <dqv:inDimension rdf:resource="dqv:precision"/>
+    <dqv:inDimension rdf:resource="http://www.w3.org/ns/dqv#precision"/>
   </rdf:Description>
      
   <rdf:Description rdf:about="http://data.europa.eu/930/spatialResolutionAsDistance">
