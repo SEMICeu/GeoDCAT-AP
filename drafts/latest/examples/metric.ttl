@@ -19,7 +19,7 @@ geodcatap:spatialResolutionAsDistance a dqv:Metric ;
 geodcatap:spatialResolutionAsScale a dqv:Metric ;
   skos:prefLabel "Spatial resolution as equivalent scale"@en ;
   dqv:expectedDataType xsd:decimal ;
-  dqv:inDimension <dqv:precision> .
+  dqv:inDimension dqv:precision .
 
 geodcatap:spatialResolutionAsVerticalDistance a dqv:Metric ;
   skos:prefLabel "Spatial resolution as vertical distance"@en ;
