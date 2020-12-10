@@ -146,15 +146,15 @@ For example, this was the case of the work carried out by the <a href="https://w
 <p>The majority of the alignments defined in GeoDCAT-AP provide a complete representation of the corresponding geospatial metadata elements, but some metadata elements have open issues:</p>
 <ul>
 <li><p>Partial mappings: For some metadata elements, only a partial mapping is available. This concerns data quality and maintenance information, for which only the mandatory components have been mapped (for more details, see <a href="#conformity-and-data-quality---not-in-iso19115-core"></a> and <a href="#maintenance-information---not-in-iso19115-core"></a>, respectively). This decision was taken because existing vocabularies did not offer the ability to represent all the components of these metadata elements.</p></li>
+<!--
 <li><p>Provisional mappings: For some metadata elements, no suitable candidate has been found to model them also partially. This concerns the following element:</p>
 <ul>
 <li><p>spatial resolution (see <a href="#spatial-resolution-spatial-resolution-of-the-dataset"></a>);</p></li>
-<!--
 <li><p>data quality and conformity (<a href="#conformity-and-data-quality---not-in-iso19115-core"></a>);</p></li>
 <li><p>(coordinate and temporal) reference systems (<a href="#coordinate-reference-systems-and-temporal-reference-systems-reference-system"></a>).</p></li>
--->
 </ul>
 <p>The alignments for this element defined in the current version of GeoDCAT-AP must then be considered as unstable, and are meant to be replaced by appropriate terms defined in standard vocabularies (whether and when available).
+-->
 <!--
 Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Spatial Data on the Web Working Group planned to standardise the representation of data granularity (which includes spatial resolution), data quality and conformity, and reference systems.
 -->
@@ -517,7 +517,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>(<code>dcat:Dataset</code> (M))</p>
 </td>
 <td><code>xsd:decimal</code></td>
-<td>See <a href="#spatial-resolution-spatial-resolution-of-the-dataset"></a>.</td>
+<td>See <a href="#spatial-resolution-spatial-resolution-of-the-dataset"></a>. Property <code>dcat:spatialResolutionInMeters</code> can only be used when spatial resolution is expressed as distance in metres.</td>
 </tr>
 
 <tr>
@@ -936,7 +936,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 </tr>
 
 <tr>
-<td rowspan="2">
+<td rowspan="3">
 <p>Spatial resolution (C)</p>
 <p>*Spatial resolution of the dataset (O)</p>
 </td>
@@ -948,17 +948,24 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>(<code>dcat:DataService</code> (O))</p>
 </td>
 <td><code>xsd:decimal</code></td>
-<td rowspan="2">See <a href="#spatial-resolution-spatial-resolution-of-the-dataset"></a>. Spatial resolution is encoded in a human-readable form only (using <code>rdfs:comment</code>) when expressed as equivalent scale, angular distance, vertical distance.</td>
+<td rowspan="3">See <a href="#spatial-resolution-spatial-resolution-of-the-dataset"></a>. Property <code>dcat:spatialResolutionInMeters</code> can only be used when spatial resolution is expressed as distance in metres. Property <code>dqv:hasQualityMeasurement</code> can be used to specify any type of spatial resolution. Property <code>rdfs:comment</code> is used only in case spatial resolution is specified as free-text.</td>
+</tr>
+
+<tr>
+<td>
+<p><code>dqv:hasQualityMeasurement</code></p>
+</td>
+<td rowspan="2">
+<p>-</p>
+<p>(<code>dcat:Dataset</code> (M))</p>
+<p>(<code>dcat:DataService</code> (O))</p>
+</td>
+<td><code>dqv:QualityMeasurement</code></td>
 </tr>
 
 <tr>
 <td>
 <p><code>rdfs:comment</code></p>
-</td>
-<td>
-<p>-</p>
-<p>(<code>dcat:Dataset</code> (M))</p>
-<p>(<code>dcat:DataService</code> (O))</p>
 </td>
 <td><code>rdfs:Literal</code></td>
 </tr>
@@ -2725,16 +2732,19 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>This mapping has been revised in this version of the GeoDCAT-AP specification.</p>
 <p>In particular:</p>
 <ul>
-<li>Following [[VOCAB-DCAT-2]] and [[DCAT-AP-20200608]], property <code>rdfs:comment</code> has been <a href="#dataset-comment">deprecated</a>, and replaced by property <code>dcat:spatialResolutionInMeters</code> to specify spatial resolution as distance in metres.</li>
-<li>Property <code>rdfs:comment</code> is however kept to specify spatial resolution as equivalent scale, angular distance, and vertical distance.</li>
+<li>Following [[VOCAB-DCAT-2]] and [[DCAT-AP-20200608]], property <code>rdfs:comment</code> has been <a href="#dataset-comment">deprecated</a>, and replaced by property <code>dcat:spatialResolutionInMeters</code> to specify spatial resolution as distance in metres, and by property <code>dqv:hasQualityMeasurement</code> for all types of spatial resolution.</li>
+<li>Property <code>rdfs:comment</code> is only used when spatial resolution is specified as free-text.</li>
 </ul>
 </aside>
 
+<!--
 <div class="issue" data-number="15">
 </div>
+-->
 
-<p>[[VOCAB-DCAT-2]] and [[DCAT-AP-20200608]] provide property <code>dcat:spatialResolutionInMeters</code>, to specify spatial resolution as distance in metres. However, no reference vocabulary currently provides properties or classes to specify spatial resolution as equivalent scale, angular distance, and vertical distance.</p>
-<p>Based on this, GeoDCAT-AP makes use of <code>dcat:spatialResolutionInMeters</code> for spatial resolution as distance in metres, and for the other cases defines a provisional mapping, representing spatial resolution in a human-readable form only, using property <code>rdfs:comment</code>.</p>
+<p>[[VOCAB-DCAT-2]] and [[DCAT-AP-20200608]] provide property <code>dcat:spatialResolutionInMeters</code>, to specify spatial resolution as distance in metres. Morever, [[VOCAB-DCAT-2]] and [[?SDW-BP]] recommend the use of [[VOCAB-DQV]] to specify other types of spatial resolution, via property <code>dqv:hasQualityMeasurement</code>.</p>
+<p>Based on this, GeoDCAT-AP makes use of <code>dqv:hasQualityMeasurement</code> for all types of spatial resolution, and of <code>dcat:spatialResolutionInMeters</code> for spatial resolution as distance in metres. Finally, when spatial resolution is specified as free-text, property <code>rdfs:comment</code> is used.</p>
+<p>The core mapping profile of GeoDCAT-AP, following [[DCAT-AP-20200608]] supports only the use property <code>dcat:spatialResolutionInMeters</code>, and, therefore, the other types of spatial resolution are left unmapped.</p>
 <!--
 <p>In [[DCAT-AP-20200608]], no equivalent term is provided.</p>
 <p>There are currently no candidates in existing vocabularies to represent such metadata elements.</p>
@@ -2752,12 +2762,15 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 -->
 <aside class="example" id="ex-mapping-spatial-resolution" title="Spatial resolution">
 <p>Resource metadata in GeoDCAT-AP:</p>
-<pre># Spatial resolution as equivalent scale
+<pre># Spatial resolution as distance in metres
 [] a dcat:Dataset ;
-  rdfs:comment &quot;Spatial resolution (equivalent scale): 1:10000&quot;@en .
-# Spatial resolution as distance
+  dcat:spatialResolutionInMeters &quot;5000&quot;^^xsd:decimal .
+# Spatial resolution as equivalent scale
 [] a dcat:Dataset ;
-  dcat:spatialResolutionInMeters &quot;5000&quot;^^xsd:decimal .</pre>
+  dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+    dqv:isMeasurementOf geodcatap:spatialResolutionAsScale ;
+    dqv:value "0.0001"^^xsd:decimal 
+  ] .</pre> 
 <p>Resource metadata in ISO 19139</p>
 <pre>&lt;gmd:MD_Resolution&gt;
   &lt;gmd:equivalentScale&gt;

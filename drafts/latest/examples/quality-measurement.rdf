@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF 
+  xmlns:dqv       = "http://www.w3.org/ns/dqv#" 
+  xmlns:geodcatap = "http://data.europa.eu/930/" 
+  xmlns:rdf       = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:rdfs      = "http://www.w3.org/2000/01/rdf-schema#" 
+  xmlns:resource  = "https://some.catalogue/resource/"
+  xmlns:sdmx-attribute = "http://purl.org/linked-data/sdmx/2009/attribute#" 
+>
+
+  <rdf:Description rdf:about="https://some.catalogue/resource/a12345">
+    <dqv:hasQualityMeasurement>
+      <dqv:QualityMeasurement>
+        <dqv:isMeasurementOf rdf:resource="http://data.europa.eu/930/spatialResolutionAsScale"/>
+        <dqv:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.000001</dqv:value>
+      </dqv:QualityMeasurement>
+    </dqv:hasQualityMeasurement>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://some.catalogue/resource/b23456">
+    <dqv:hasQualityMeasurement>
+      <dqv:QualityMeasurement>
+        <dqv:isMeasurementOf rdf:resource="http://data.europa.eu/930/spatialResolutionAsDistance"/>
+        <sdmx-attribute:unitMeasure rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/metre"/>
+        <dqv:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100</dqv:value>
+      </dqv:QualityMeasurement>
+    </dqv:hasQualityMeasurement>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://some.catalogue/resource/c34567">
+    <dqv:hasQualityMeasurement>
+      <dqv:QualityMeasurement>
+        <dqv:isMeasurementOf rdf:resource="http://data.europa.eu/930/spatialResolutionAsAngularDistance"/>
+        <sdmx-attribute:unitMeasure rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/degree"/>
+        <dqv:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</dqv:value>
+      </dqv:QualityMeasurement>
+    </dqv:hasQualityMeasurement>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://some.catalogue/resource/d45678">
+    <dqv:hasQualityMeasurement>
+      <dqv:QualityMeasurement>
+        <dqv:isMeasurementOf rdf:resource="http://data.europa.eu/930/spatialResolutionAsVerticalDistance"/>
+        <sdmx-attribute:unitMeasure rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/metre"/>
+        <dqv:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</dqv:value>
+      </dqv:QualityMeasurement>
+    </dqv:hasQualityMeasurement>
+  </rdf:Description>
+
+</rdf:RDF>

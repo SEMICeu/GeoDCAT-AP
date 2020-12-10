@@ -29,6 +29,7 @@
 </tr>
 </thead>
 <tbody>
+
 <tr class="property optional" id="dataset-access-rights">
 <td>
 <p>access rights</p>
@@ -47,6 +48,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="dataset-creation-date">
 <td>
 <p>+creation date</p>
@@ -64,6 +66,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-creator">
 <td>
 <p>creator</p>
@@ -81,6 +84,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-conforms-to">
 <td>
 <p>conforms to</p>
@@ -98,6 +102,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-documentation">
 <td>
 <p>documentation</p>
@@ -115,6 +120,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-frequency">
 <td>
 <p>frequency</p>
@@ -132,6 +138,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-has-version">
 <td>
 <p>has version</p>
@@ -149,6 +156,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-identifier">
 <td>
 <p>identifier</p>
@@ -166,6 +174,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-is-referenced-by">
 <td>
 <p>is referenced by</p>
@@ -183,6 +192,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-is-version-of">
 <td>
 <p>is version of</p>
@@ -200,6 +210,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-landing-page">
 <td>
 <p>landing page</p>
@@ -217,6 +228,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-language">
 <td>
 <p>language</p>
@@ -234,6 +246,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-other-identifier">
 <td>
 <p>other identifier</p>
@@ -251,6 +264,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-provenance">
 <td>
 <p>provenance</p>
@@ -268,6 +282,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-qualified-attribution">
 <td>
 <p>qualified attribution</p>
@@ -285,6 +300,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-qualified-relation">
 <td>
 <p>qualified relation</p>
@@ -302,6 +318,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-related-resource">
 <td>
 <p>related resource</p>
@@ -319,6 +336,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-release-date">
 <td>
 <p>release date</p>
@@ -336,6 +354,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="dataset-reference-system">
 <td>
 <p>+reference system</p>
@@ -354,6 +373,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="dataset-rights-holder">
 <td>
 <p>+rights holder</p>
@@ -371,6 +391,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-sample">
 <td>
 <p>sample</p>
@@ -388,6 +409,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-source">
 <td>
 <p>source</p>
@@ -405,9 +427,29 @@
 <p>0..n</p>
 </td>
 </tr>
-<tr class="property optional" id="dataset-spatial-resolution">
+
+<tr class="property optional ap-ext" id="dataset-spatial-resolution">
 <td>
-<p>spatial resolution</p>
+<p>+spatial resolution</p>
+</td>
+<td>
+<p><code>dqv:hasQualityMeasurement</code></p>
+</td>
+<td>
+<p><code>dqv:QualityMeasurement</code></p>
+</td>
+<td>
+<p>Refers to the performed quality measurements.</p>
+<p>In GeoDCAT-AP, this property is used to specify "spatial resolution", as defined in [[INSPIRE-MD-REG]], [[ISO-19115]], and [[ISO-19115-1]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-spatial-resolution-in-metres">
+<td>
+<p>spatial resolution in metres</p>
 </td>
 <td>
 <p><code>dcat:spatialResolutionInMeters</code></p>
@@ -422,9 +464,10 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="dataset-spatial-resolution-general">
 <td>
-<p>+spatial resolution as equivalent scale, angular distance, vertical distance</p>
+<p>+spatial resolution as text</p>
 </td>
 <td>
 <p><code>rdfs:comment</code></p>
@@ -433,12 +476,13 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property MAY be used to express spatial resolution types that cannot be specified via <code>dcat:spatialResolutionInMeters</code> - i.e., spatial resolution as equivalent scale, angular distance, vertical distance.</p>
+<p>This property MAY be used to express spatial resolution as free-text, when it cannot be specified via <code>dqv:hasQualityMeasurement</code> and <code>dcat:spatialResolutionInMeters</code>.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-temporal-resolution">
 <td>
 <p>temporal resolution</p>
@@ -456,6 +500,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="dataset-topic-category">
 <td>
 <p>+topic category</p>
@@ -473,6 +518,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-type">
 <td>
 <p>type</p>
@@ -491,6 +537,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-modification-date">
 <td>
 <p>update / modification date</p>
@@ -508,6 +555,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-version">
 <td>
 <p>version</p>
@@ -525,6 +573,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-version-notes">
 <td>
 <p>version notes</p>
@@ -542,6 +591,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="dataset-was-generated-by">
 <td>
 <p>was generated by</p>
@@ -559,6 +609,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="dataset-was-used-by">
 <td>
 <p>+was used by</p>
@@ -577,5 +628,6 @@
 <p>0..n</p>
 </td>
 </tr>
+
 </tbody>
 </table>

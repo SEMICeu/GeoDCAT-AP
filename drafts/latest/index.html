@@ -79,7 +79,7 @@ The views expressed are purely those of the author and may not in any circumstan
 -->
 </section>
 
-<section id="changes" class="introductory">
+<section id="document-history" class="introductory">
 
 <h2>Document History</h2>
 
@@ -844,7 +844,8 @@ A property which is not mentioned but would be applicable for a class according 
 <li>+<a href="#data-service-service-type">service type</a></li>
 <li>+<a href="#data-service-spatial-coverage">spatial / geographic coverage</a></li>
 <li>+<a href="#data-service-spatial-resolution">spatial resolution</a></li>
-<li>+<a href="#data-service-spatial-resolution-general">spatial resolution as equivalent scale, angular distance, vertical distance</a></li>
+<li>+<a href="#data-service-spatial-resolution-in-metres">spatial resolution in metres</a></li>
+<li>+<a href="#data-service-spatial-resolution-general">spatial resolution as text</a></li>
 <li>+<a href="#data-service-temporal-coverage">temporal coverage</a></li>
 <li>+<a href="#data-service-temporal-resolution">temporal resolution</a></li>
 <li>+<a href="#data-service-category">theme / category</a></li>
@@ -912,7 +913,7 @@ A property which is not mentioned but would be applicable for a class according 
 <li>+<a href="#dataset-creation-date">creation date</a></li>
 <li>+<a href="#dataset-reference-system">reference system</a></li>
 <li>+<a href="#dataset-rights-holder">rights holder</a></li>
-<li>+<a href="#dataset-spatial-resolution-general">spatial resolution as equivalent scale, angular distance, vertical distance</a></li>
+<li>+<a href="#dataset-spatial-resolution-general">spatial resolution as text</a></li>
 <li>+<a href="#dataset-topic-category">topic category</a></li>
 <li>+<a href="#dataset-was-used-by">was used by</a></li>
 </ul>
@@ -976,7 +977,7 @@ A property which is not mentioned but would be applicable for a class according 
 <li>+<a href="#distribution-access-rights">access rights</a></li>
 <li>+<a href="#distribution-reference-system">reference system</a></li>
 <li>+<a href="#distribution-representation-technique">representation technique</a></li>
-<li>+<a href="#distribution-spatial-resolution-general">spatial resolution as equivalent scale, angular distance, vertical distance</a></li>
+<li>+<a href="#distribution-spatial-resolution-general">spatial resolution as text</a></li>
 </ul>
 </aside>
 
@@ -1252,6 +1253,64 @@ A property which is not mentioned but would be applicable for a class according 
 
 </section>
 
+<!-- Metric -->
+
+<section id="properties-for-metric">
+
+<h3>+Metric</h3>
+
+<aside class="note">
+<p>This class is not included in [[DCAT-AP-20200608]].</p>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-metric.html"></div>
+
+<section id="instances-of-metric">
+
+<h4>Instances of Metric</h4>
+
+<aside class="note">
+<p>The following instances are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#metric-spatial-resolution-as-angular-distance">Spatial resolution as angular distance</a></li>
+<li>+<a href="#metric-spatial-resolution-as-distance">Spatial resolution as distance</a></li>
+<li>+<a href="#metric-spatial-resolution-as-scale">Spatial resolution as scale</a></li>
+<li>+<a href="#metric-spatial-resolution-as-vertical-distance">Spatial resolution as vertical distance</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/instances-of-metric.html"></div>
+
+</section>
+
+<section id="recommended-properties-for-metric">
+
+<h4>Recommended property for Metric</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#metric-dimension">dimension</a></li>
+<li>+<a href="#metric-expected-data-type">expected data type</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-metric.html"></div>
+
+</section>
+
+<section id="examples-for-metric">
+
+<h4>Examples for Metric</h4>
+
+<aside class="example" id="ex-metric" title="Metric">
+<pre data-include-format="text" data-include="./examples/metric.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
 <!-- Period of Time -->
 
 <section id="properties-for-period-of-time">
@@ -1335,6 +1394,47 @@ A property which is not mentioned but would be applicable for a class according 
 
 <aside class="example" id="ex-provenance-statement" title="Provenance Statement">
 <pre data-include-format="text" data-include="./examples/provenance-statement.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
+<!-- Quality Measurement -->
+
+<section id="properties-for-quality-measurement">
+
+<h3>+Quality Measurement</h3>
+
+<aside class="note">
+<p>This class is not included in [[DCAT-AP-20200608]].</p>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-quality-measurement.html"></div>
+
+<section id="recommended-properties-for-quality-measurement">
+
+<h4>Recommended property for Quality Measurement</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#quality-measurement-is-measurement-of">is measurement of</a></li>
+<li>+<a href="#quality-measurement-unit-of-measure">unit of measure</a></li>
+<li>+<a href="#quality-measurement-value">value</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-quality-measurement.html"></div>
+
+</section>
+
+<section id="examples-for-quality-measurement">
+
+<h4>Examples for Quality Measurement</h4>
+
+<aside class="example" id="ex-quality-measurement" title="Quality Measurement">
+<pre data-include-format="text" data-include="./examples/quality-measurement.ttl"></pre>
 </aside>
 
 </section>
@@ -1705,7 +1805,7 @@ Often there is applicable legislation or a licency policy in place which determi
 
 </section>
 
-<section id="ack" class="informative">
+<section id="ack">
 
 <!-- Acknowledgements --> 
 
@@ -1729,14 +1829,14 @@ Often there is applicable legislation or a licency policy in place which determi
   <strong>Andrea Perego</strong> and <strong>Bert van Nuffelen</strong> were the editors of the specification. 
 </p>
 <p>
-  Contributors: Andreas Kuckartz, Antonio Rotundo, Danny Vandenbroucke, Fabian Kirstein, Franck Cotton, Hannes Reuter, Jakub Klímek, James Passmore, Matthias Palmér, Simon Cox.
+  Contributors: Andreas Kuckartz, Antonio Rotundo, Danny Vandenbroucke, Fabian Kirstein, Franck Cotton, Hannes Reuter, Jakub Klímek, James Passmore, Matthias Palmér, Riccardo Albertoni, Simon Cox.
 </p>
   
 </section>
 
 <!-- Annexes -->
 
-<section id="quick-reference-of-classes-and-properties" class="appendix informative">
+<section id="quick-reference-of-classes-and-properties" class="appendix">
 
 <!-- Quick Reference of Classes and Properties --> 
 
@@ -1802,7 +1902,7 @@ Often there is applicable legislation or a licency policy in place which determi
 
 <!-- Controlled Vocabularies Mappings --> 
 <!--
-<section id="controlled-vocabularies-mappings" class="appendix informative">
+<section id="controlled-vocabularies-mappings" class="appendix">
 
 <h2>Controlled Vocabularies Mappings</h2>
 
@@ -1814,7 +1914,7 @@ Often there is applicable legislation or a licency policy in place which determi
 -->
 <!-- Conformance with INSPIRE and ISO 19115 --> 
 <!--
-<section id="conformance-with-inspire-and-iso-19115" class="appendix informative">
+<section id="conformance-with-inspire-and-iso-19115" class="appendix">
 
 <h2>Conformance with INSPIRE and ISO 19115</h2>
 
@@ -1826,7 +1926,7 @@ Often there is applicable legislation or a licency policy in place which determi
 -->
 <!-- Change Log --> 
 
-<section id="change-log" class="appendix informative">
+<section id="changes" class="appendix">
 
 <h2>Change Log</h2>
 <!--
@@ -1834,9 +1934,74 @@ Often there is applicable legislation or a licency policy in place which determi
 <p>To be revised</p>
 </aside>
 -->
+
+<p>A full change-log is available on <a href="https://github.com/semiceu/GeoDCAT-AP/commits/gh-pages/drafts/latest/">GitHub</a></p>
+
+<section id="changes-since-20201012">
+
+<h2>Changes since working draft of 12 October 2020</h2>
+
+<ul>
+<li>Defined terms in the GeoDCAT-AP namespace for the specification of the different types of spatial resolution.</li>
+<li>Editorial revision of the specification.</li>
+</ul>
+
+</section>
+
+<section id="changes-since-20160802">
+
+<h2>Changes since GeoDCAT-AP 1.0.1 (2 August 2016)</h2>
+
+<!--
+<p>Further textual changes (release 2.0.0)</p>
+-->
+
+<ul>
+<li>Document completely re-written starting from the [[DCAT-AP-20200608]] specification, with the purpose of using a consistent document structure across DCAT-AP specifications.</li>
+<li>Use of classes and properties aligned with [[DCAT-AP-20200608]].</li>
+<!--
+<li>Throughout the document, links are made clickable</li>
+<li>Apply various typo fixes indicated in the public review</li>
+<li>Page 15, Table 4.4.3, Optional properties for Distribution, the usage note for <code>adms:status</code> property has been updated to include &ldquo;It MUST take one of the values Completed, Deprecated, Under Development, Withdrawn&rdquo;</li>
+<li>Page 8, the following namespaces has been added:
+<ul>
+<li>vann: http://purl.org/vocab/vann/</li>
+<li>dcatap: http://data.europa.eu/r5r/</li>
+<li>voaf: http://purl.org/vocommons/voaf/#</li>
+<li>odrl: http://www.w3.org/ns/odrl/2/</li>
+<li>locn: http://www.w3.org/ns/locn#</li>
+</ul>
+</li>
+<li>Section 4. Added explanatory paragraph on the relationship with W3C DCAT 2.0</li>
+<li>Page 29, updated text to reflect agent roles and their relations to dataset using new added properties.</li>
+<li>Section Acknowledgements, added list of contributors.</li>
+-->
+</ul>
+
+</section>
+
+<section id="changes-since-20151223">
+
+<h2>Changes since GeoDCAT-AP 1.0.0 (23 December 2015)</h2>
+
+<!--
+<p>Further textual changes (release 1.0.1 [[GeoDCAT-AP-20160802]]):</p>
+-->
+<ul>
+<li>Corrected a typo concerning the URIs of the code lists of the INSPIRE Registry. No other changes have been done on [[GeoDCAT-AP-20151223]].</li>
+</ul>
+
+</section>
+
+<section id="changes-summary">
+
+<h2>Summary of changes to Application Profile classes and properties</h2>
+
 <p>The table below summarises the changes applied to the current release of GeoDCAT-AP, including those inherited from [[DCAT-AP]].</p>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/change-log.html"></div>
+
+</section>
 
 </section>
 
