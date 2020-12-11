@@ -1755,38 +1755,56 @@ Often there is applicable legislation or a licency policy in place which determi
 <section id="agent-roles" class="informative">
 
 <h2>Agent Roles</h2>
+
 <!--
 <aside class="ednote">
 <p>To be revised</p>
 </aside>
 -->
+
 <!--  
 <div class="issue" data-number="30"></div>
 -->  
-<p>GeoDCAT-AP supports the 11 agent roles defined in [[INSPIRE-MD-REG]] and [[ISO-19115]] by using two different but not mutually exclusive approaches.</p>
-<p>The first approach makes use of the relevant properties from [[DCAT-AP-20200608]] and [[DCTERMS]], which overall cover 4 of the relevant roles - namely, <code>dcat:contactPoint</code>, <code>dct:creator</code>, <code>dct:publisher</code>, and <code>dct:rightsHolder</code>.</p>
-<p>The second and more general approach is based on [[PROV-O]], where agent roles are specified via a &ldquo;qualified attribution&rdquo; (<code>prov:qualifiedAttribution</code>). More precisely, the relevant Agent is specified via property <code>prov:agent</code>, whereas the role is specified with property <code>dcat:hadRole</code>, which takes as value one of the responsible party roles defined in [[INSPIRE-MD-REG]] and [[ISO-19115]], and included in the relevant code list operated by the INSPIRE Registry [[INSPIRE-RPR]]. This pattern is illustrated in <a href="#ex-attribution"></a>.</p>
+
+<!--  
+<p>GeoDCAT-AP supports the 11 agent roles defined in [[INSPIRE-MD-REG]] and [[ISO-19115]] by using the relevant properties from [[DCAT-AP-20200608]] and [[DCTERMS]] - namely, <code>dcat:contactPoint</code>, <code>dct:creator</code>, <code>dct:publisher</code>, and <code>dct:rightsHolder</code> (not supported in [[DCAT-AP-20200608]]) - and by defining new properties for the roles not covered by those vocabularies - namely, <code>geodcatap:custodian</code>, <code>geodcatap:distributor</code>, <code>geodcatap:originator</code>, <code>geodcatap:principalInvestigator</code>, <code>geodcatap:processor</code>, <code>geodcatap:resourceProvider</code>, and <code>geodcatap:user</code>.</p>
+
 <p>It is important to note that, following [[INSPIRE-MD-REG]] and [[ISO-19115]], in GeoDCAT-AP all these agent roles can be specified on Catalogues, Catalogue Records, Datasets, and Data Services.</p>
+
+<p>GeoDCAT-AP, as [[DCAT-AP-20200608]], supports also the approach based on [[PROV-O]], where agent roles are specified via a &ldquo;qualified attribution&rdquo; (<code>prov:qualifiedAttribution</code>). More precisely, the relevant Agent is specified via property <code>prov:agent</code>, whereas the role is specified with property <code>dcat:hadRole</code>, which takes as value a <code>skos:Concept</code> describing that role - e.g., the responsible party role code list operated by the INSPIRE Registry [[INSPIRE-RPR]]. This pattern is illustrated in <a href="#ex-attribution"></a>.</p>
+
+<p>The approach based on [[PROV-O]] is meant to give data providers for a general mechanism to specify, in a harmonised way, any type of agent role all the roles defined in INSPIRE, thus ensuring interoperability as well as compliance with [[INSPIRE-MD-REG]].</p>
+
+<p>However, differently from the approach based on [[DCAT-AP-20200608]] and [[DCTERMS]], its use is not mandatory. Depending on their requirements, data providers may decide to use only the approach based on [[DCAT-AP-20200608]] and [[DCTERMS]], or complement it with the one based on [[PROV-O]] for the roles not covered by the former, or use both approaches concurrently.</p>
+
 <p>More details on these solutions are available in <a class="no-sectionRef" href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"></a>.</p>
-<!--
-<p>The DCAT Application Profile specified in this document has a single property to relate an Agent (typically, an organisation) to a Dataset. The only such ‘agent role’ that can be expressed in the current version of the profile is through the property <a href="http://purl.org/dc/terms/publisher"><code>dct:publisher</code></a>, defined as “An entity responsible for making the dataset available”. A second property is available in the DCAT recommendation, <a data-cite="VOCAB-DCAT-20140116#Property:dataset_contactPoint"><code>dcat:contactPoint</code></a>, defined as “Link a dataset to relevant contact information which is provided using VCard”, but this is not an agent role as the value of this property is contact data, rather than a representation of the organisation as such.</p>
-<p>In specific cases, for example in exchanging data among domain-specific portals, it may be useful to express other, more specific agent roles. In such cases, extensions to the base profile may be defined using additional properties with more specific meanings.</p>
-<p>Two possible approaches have been discussed, particular in the context of the development of the domain-specific GeoDCAT Application Profile [[GeoDCAT-AP]], an extension of the base DCAT Application Profile. </p>
-<p>The first possible approach is based on the use of a predicate vocabulary that provides a set of properties that represent additional types of relationships between Datasets and Agents. For example, properties could be defined, such as <code>foo:owner</code>, <code>foo:curator</code> or <code>foo:responsibleParty</code>, in addition to the use of existing well-known properties, such as <code>dct:creator</code> and <code>dct:rightsHolder</code>. A possible source for such additional properties is the Roles Named Authority List [[EUV-ROLES]] maintained by the Publications Office of the EU. Other domain-specific sources for additional properties are the INSPIRE Responsible Party roles [[INSPIRE-RPR]], the Library of Congress’ MARC relators [[MARC-REL]] and DataCite’s contributor types [[DataCite-Types]]. To enable the use of such properties, they must be defined as RDF properties with URIs in a well-managed namespace.</p>
-<p>A second approach is based on the use of W3C’s PROV ontology [[PROV-O]] which provides a powerful mechanism to express a set of classes, properties, and restrictions that can be used to represent and interchange provenance information generated in different systems and under different contexts. In the context of work on GeoDCAT-AP, a PROV-conformant solution for expressing agent roles was agreed [[GeoDCAT-AP-RPR]]. This solution uses <code>prov:qualifiedAttribution</code> in combination with a <code>dct:type</code> assertion pointing to the code list for Responsible Party Role in the INSPIRE registry. To enable the use of such types, they must be defined with URIs in a well-managed namespace. </p>
-<p>Based on the experience gained with the use of domain-specific extensions for additional ‘agent roles’ in the exchange of information about Datasets and on the requests of implementors and stakeholders, the  DCAT Application Profile release 2.0.0 is  extended with additional roles as proposed by DCAT Version 2, W3C Working Draft 28 May 2019 [[VOCAB-DCAT-2-20190528]] that have proven to be useful across domains. Precisely, properties <code>dct:creator</code>, <code>prov:qualifiedAttribution</code> and <code>prov:qualifiedRelation</code> have been added to <code>dcat:Dataset</code> class to further facilitate relationships between datasets and agents [[VOCAB-DCAT-QA]].</p>
-<p>It should be noted that, even if a more expressive approach is used in a particular implementation, the provision of information using <code>dct:publisher</code> for the Catalogue is still mandatory under the rules laid down in the Conformance Statement in <a class="no-sectionRef" href="#conformance"></a>, while the provision of information using <code>dct:publisher</code> is strongly recommended for Dataset. The provision of such information using <code>dct:publisher</code> will ensure interoperability with implementations that use the basic approach of DCAT-AP.</p>
--->
-  
+-->  
+
+<p>GeoDCAT-AP supports the 11 agent roles defined in [[INSPIRE-MD-REG]] and [[ISO-19115]] by using two different but not mutually exclusive approaches.</p>
+
+<p>In the first approach, roles are mapped to specific properties. In particular, GeoDCAT-AP makes use of the relevant properties from [[DCAT-AP-20200608]] and [[DCTERMS]], which overall cover 4 of the relevant roles - namely, <code>dcat:contactPoint</code>, <code>dct:creator</code>, <code>dct:publisher</code>, and <code>dct:rightsHolder</code> (not supported in [[DCAT-AP-20200608]]). The remaining 7 are covered by the corresponding properties defined in the GeoDCAT-AP namespace - namely, <code>geodcatap:custodian</code>, <code>geodcatap:distributor</code>, <code>geodcatap:originator</code>, <code>geodcatap:principalInvestigator</code>, <code>geodcatap:processor</code>, <code>geodcatap:resourceProvider</code>, and <code>geodcatap:user</code>.</p>
+
+<p>It is important to note that, following [[INSPIRE-MD-REG]] and [[ISO-19115]], in GeoDCAT-AP all these agent roles can be specified on Catalogues, Catalogue Records, Datasets, and Data Services.</p>
+
+<p>The second and more general approach is based on [[PROV-O]], where agent roles are specified via a &ldquo;qualified attribution&rdquo; (<code>prov:qualifiedAttribution</code>). More precisely, the relevant Agent is specified via property <code>prov:agent</code>, whereas the role is specified with property <code>dcat:hadRole</code>, which takes as value a <code>skos:Concept</code> describing that role - as those included in the relevant code list operated by the INSPIRE Registry [[INSPIRE-RPR]]. This pattern is illustrated in <a href="#ex-attribution"></a>.</p>
+
+<p>The [[PROV-O]]-based approach is meant to give data providers an extension mechanism to specify, in a harmonised way, any kind of role, and, possibly, to attach additional information to the role and the associated Agent. As such, it MAY be used in combination with or to complement the property-based approach, but it MUST NOT replace it. For instance, it can be used to specify roles not covered by the agent role properties used in GeoDCAT-AP, and/or to specify additional information that cannot be expressed via a property (as the period during which an Agent covered a given role).</p>
+
+<p>More details on these solutions are available in <a class="no-sectionRef" href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"></a>.</p>
+
+<!--  
 <aside class="note">
 <p>The approach based on [[PROV-O]] is meant to give data providers for a mechanism to specify, in a harmonised way, all the roles defined in INSPIRE, thus ensuring interoperability as well as compliance with [[INSPIRE-MD-REG]].</p>
 <p>However, differently from the approach based on [[DCAT-AP-20200608]] and [[DCTERMS]], its use is not mandatory. Depending on their requirements, data providers may decide to use only the approach based on [[DCAT-AP-20200608]] and [[DCTERMS]], or complement it with the one based on [[PROV-O]] for the roles not covered by the former, or use both approaches concurrently.</p>
 </aside>  
-  
+-->
+
+<!--  
 <div class="issue" data-number="32"></div>  
   
-<div class="issue" data-number="39"></div>  
-  
+<div class="issue" data-number="39"></div>
+-->
+
 </section>
 
 <!-- Conformance Test Results -->
