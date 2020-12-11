@@ -800,5 +800,11 @@ var respecConfig = {
         "publisher":"OGC",
         "date":"16 August 2018"
       },
+      "OM": {
+        "href":"http://www.wurvoc.org/vocabularies/om-1.8/",
+        "title":"Ontology of units of Measure (OM)",
+        "publisher":"Wageningen UR",
+        "date":"4 June 2018"
+      },
     }
   };

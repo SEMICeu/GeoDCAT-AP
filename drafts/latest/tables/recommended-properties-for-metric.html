@@ -1,0 +1,62 @@
+<table class="simple" id="table-recommended-properties-for-metric">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="property recommended ap-ext" id="metric-dimension">
+<td>
+<p>+dimension</p>
+</td>
+<td>
+<p><code>dqv:inDimension</code></p>
+</td>
+<td>
+<p><code>dqv:Dimension</code></p>
+</td>
+<td>
+<p>This property represents the dimensions a quality metric, certificate and annotation allow a measurement of.</p>
+<p>In GeoDCAT-AP, this property is used in the definition of the instances of <code>dqv:Metric</code> corresponding to the different type of spatial resolution. When used for this purpose, it MUST always take as value <code>dqv:precision</code>.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+<tr class="property recommended ap-ext" id="metric-expected-data-type">
+<td>
+<p>+expected data type</p>
+</td>
+<td>
+<p><code>dqv:expectedDataType</code></p>
+</td>
+<td>
+<p><code>rdfs:DataType</code></p>
+</td>
+<td>
+<p>This property represents the expected data type for the Metric's observed value (e.g., <code>xsd:boolean</code>, <code>xsd:double</code>, etc.).</p>
+<p>In GeoDCAT-AP, this property is used in the definition of the instances of <code>dqv:Metric</code> corresponding to the different type of spatial resolution.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+</tbody>
+</table>
