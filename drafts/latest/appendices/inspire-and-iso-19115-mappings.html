@@ -3037,6 +3037,7 @@ prov:wasUsedBy [
 <p>This mapping has been revised in this version of the GeoDCAT-AP specification.</p>
 <p>In particular:</p>
 <ul>
+<li>This version of GeoDCAT-AP has defined additional properties to complement those from [[DCAT-AP-20200608]] and [[DCTERMS]], to support mappings for all the responsible party roles defined in [[INSPIRE-MD-REG]] and [[ISO-19115]]. The [[PROV-O]] based approach that was used for this purpose until [[GeoDCAT-AP-20160802]] is still supported in this version of GeoDCAT-AP for backward compatibility, and to address possible requirements from the data providers' side.</li>
 <li>Following [[VOCAB-DCAT-2]] and [[DCAT-AP-20200608]], property <code>dct:type</code> has been <a href="#attribution-type">deprecated</a>, and replaced by property <code>dcat:hadRole</code> to specify the role of an agent.</li>
 <li>A typo has been fixed concerning the vocabulary used to describe an agent via property <code>prov:agent</code> - [[GeoDCAT-AP-20160802]] indicated [[VCARD-RDF]] whereas the correct one is [[FOAF]].</li>
 </ul>
@@ -3045,16 +3046,101 @@ prov:wasUsedBy [
 <div class="issue" data-number="16">
 </div>
 -->
+
 <p>[[DCAT-AP-20200608]] supports properties to denote the publisher, the creator, and the contact point for a dataset.</p>
-<p>By contrast, [[ISO-19115]] and [[INSPIRE-MD-REG]] supports 11 possible relationships between a resource (a dataset, a dataset series, a service) and an agent (organisation), plus one for metadata. For some of them, suitable candidates exist from widely used vocabularies (in particular, DCMI Metadata Terms [[DCTERMS]]). However, for some of them no suitable candidate is available in the existing vocabularies (in particular, for roles “user” and “processor”).</p>
-<p>In the extended mapping profile of GeoDCAT-AP, the W3C PROV ontology [[PROV-O]] is used to specify the relationship between the resource and the responsible organisation. The FOAF Vocabulary [[FOAF]] will then be used to specify the contact information concerning the responsible party. Finally, the responsible party role will be specified by using <code>dcat:hadRole</code>, and using the relevant code list values from the INSPIRE Registry – reference register [[INSPIRE-RPR]]:</p>
-<p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole">http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole</a></p>
+
+<p>By contrast, [[ISO-19115]] and [[INSPIRE-MD-REG]] support 11 possible relationships between a resource (a dataset, a dataset series, a service) and an agent (organisation), plus one for metadata. However, for only some of them suitable candidates exist from widely used vocabularies (in particular, DCMI Metadata Terms [[DCTERMS]]).</p>
+
+<p>In order to fill this gap, specific properties have been defined in the GeoDCAT-AP namespace to complement those available in [[DCAT-AP-20200608]] and [[DCTERMS]].</p>
+
+<p>The following table lists the mappings between responsible party roles and the corresponding properties used in GeoDCAT-AP.</p>
+
+<table id="table-responsible-party-roles" class="simple">
 <!--
-<p>[[DCAT-AP-20200608]] supports properties to denote the publisher and the contact point for a dataset.</p>
-<p>By contrast, [[ISO-19115]] and the INSPIRE Metadata Regulation supports 11 possible relationships between a resource (a dataset, a dataset series, a service) and an agent (organisation), plus one for metadata. For some of them, suitable candidates exist from widely used vocabularies (in particular, DCMI Metadata Terms [[DCTERMS]]). However, for some of them no suitable candidate is available in the existing vocabularies (in particular, for roles “user” and “processor”).</p>
-<p>In the extended mapping profile of GeoDCAT-AP, the W3C PROV ontology [[PROV-O]] is used to specify the relationship between the resource and the responsible organisation. The W3C vCard ontology [[VCARD-RDF]] will then be used to specify the contact information concerning the responsible party. Finally, the responsible party role will be specified by using <code>dct:type</code>, and using the relevant code list values from the INSPIRE Registry – reference register:</p>
-<p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole">http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole</a></p>
+<caption>Table 9: Responsible party roles</caption>
 -->
+<thead>
+<tr>
+<th>[[ISO-19115]]</th>
+<th>[[INSPIRE-MD-REG]]</th>
+<th>Description</th>
+<th>Proposed RDF mapping</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Resource provider</td>
+<td>Part B, §6.1</td>
+<td>Party that supplies the resource.</td>
+<td><code>geodcatap:resourceProvider</code></td>
+</tr>
+<tr>
+<td>Custodian</td>
+<td>Part B, §6.2</td>
+<td>Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource.</td>
+<td><code>geodcatap:custodian</code></td>
+</tr>
+<tr>
+<td>Owner</td>
+<td>Part B, §6.3</td>
+<td>Party that owns the resource.</td>
+<td><code>dct:rightsHolder</code></td>
+</tr>
+<tr>
+<td>User</td>
+<td>Part B, §6.4</td>
+<td>Party who uses the resource.</td>
+<td><code>geodcatap:user</code></td>
+</tr>
+<tr>
+<td>Distributor</td>
+<td>Part B, §6.5</td>
+<td>Party who distributes the resource</td>
+<td><code>geodcatap:distributor</code></td>
+</tr>
+<tr>
+<td>Originator</td>
+<td>Part B, §6.6</td>
+<td>Party who created the resource.</td>
+<td><code>geodcatap:originator</code></td>
+</tr>
+<tr>
+<td>Point of contact</td>
+<td>Part B, §6.7</td>
+<td>Party who can be contacted for acquiring knowledge about or acquisition of the resource.</td>
+<td><code>dcat:contactPoint</code></td>
+</tr>
+<tr>
+<td>Principal investigator</td>
+<td>Part B, §6.8</td>
+<td>Key party responsible for gathering information and conducting research</td>
+<td><code>geodcatap:principalInvestigator</code></td>
+</tr>
+<tr>
+<td>Processor</td>
+<td>Part B, §6.9</td>
+<td>Party who has processed the data in a manner such that the resource has been modified.</td>
+<td><code>geodcatap:processor</code></td>
+</tr>
+<tr>
+<td>Publisher</td>
+<td>Part B, §6.10</td>
+<td>Party who published the resource</td>
+<td><code>dct:publisher</code></td>
+</tr>
+<tr>
+<td>Author</td>
+<td>Part B, §6.11</td>
+<td>Party who authored the resource.</td>
+<td><code>dct:creator</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>The extended mapping profile of GeoDCAT-AP also supports the use of the W3C PROV ontology [[PROV-O]] and [[VOCAB-DCAT-2]] to specify the relationship between the resource and the responsible organisation. The FOAF Vocabulary [[FOAF]] is used to specify the contact information concerning the responsible party. Finally, the responsible party role will be specified by using <code>dcat:hadRole</code>, and using the relevant code list values from the INSPIRE Registry – reference register [[INSPIRE-RPR]]:</p>
+
+<p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole">http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole</a></p>
+
 <p>These mappings are illustrated in the following table.</p>
 
 <table id="table-mapping-responsible-party" class="simple">
@@ -3086,139 +3172,31 @@ prov:wasUsedBy [
 </tr>
 </tbody>
 </table>
-<!--
-</table>
-<table id="table-8" class="simple">
-<caption>Table 8: Mappings for metadata element ‘responsible party’</caption>
-<thead>
-<tr>
-<th colspan="3">Metadata element</th>
-<th colspan="3">Proposed mapping</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td rowspan="3"><strong>Responsible party</strong></td>
-<td rowspan="2">Responsible party</td>
-<td>Organisation name</td>
-<td rowspan="3"><code>prov:Attribution</code></td>
-<td rowspan="2"><code>vcard:Kind</code></td>
-<td><code>vcard:organization-name</code></td>
-</tr>
-<tr>
-<td>Contact email address</td>
-<td><code>vcard:hasEmail</code></td>
-</tr>
-<tr>
-<td colspan="2">Responsible party role</td>
-<td colspan="2"><code>dct:type</code></td>
-</tr>
-</tbody>
-</table>
--->
 
-<p>This option has the advantage of preserving the semantics in the original metadata, and of preventing information loss.</p>
-<!--
-<p>This option has the advantage of preserving the semantics in the original metadata, and of preventing information loss. However, it does not rely on RDF properties used in [[DCAT-AP-20200608]].</p>
--->
+<p>It is important to note that the [[PROV-O]]-based mappings are semantically equivalent to the property-based ones illustrated earlier in this section. Their use is therefore only accessory, and functional to possible requirements from the data provider side.</p>
+
 <p>For these reasons, the GeoDCAT-AP overall approach is as follows:</p>
+
 <ul>
-<li><p>If suitable candidates exist from widely used vocabularies, use them to represent the corresponding responsible parties and their roles, based on an agreed definition of 1-to-1 mappings. Otherwise:</p></li>
-<li><p>Represent responsible organisations by using [[PROV-O]].</p></li>
+<li>Responsible parties and their roles MUST be represented by the corresponding properties, based on an agreed definition of 1-to-1 mappings.</li>
+<li>The property-based representation MAY be complemented with the [[PROV-O]]-based approach.</li>
 </ul>
+
 <p>As mentioned earlier, the latter option is supported only in the extended mapping profile of GeoDCAT-AP.</p>
-<p>The following table lists the GeoDCAT-AP mappings for responsible party roles, taking into account only widely used vocabularies.</p>
 
-<table id="table-responsible-party-roles" class="simple">
 <!--
-<caption>Table 9: Responsible party roles</caption>
--->
-<thead>
-<tr>
-<th>[[ISO-19115]]</th>
-<th>[[INSPIRE-MD-REG]]</th>
-<th>Description</th>
-<th><p>Proposed RDF mapping</p>
-<p>(where not available <code>prov:qualifiedAttribution</code> can be used)</p></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Resource provider</td>
-<td>Part B, §6.1</td>
-<td>Party that supplies the resource.</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>Custodian</td>
-<td>Part B, §6.2</td>
-<td>Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource.</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>Owner</td>
-<td>Part B, §6.3</td>
-<td>Party that owns the resource.</td>
-<td><code>dct:rightsHolder</code></td>
-</tr>
-<tr>
-<td>User</td>
-<td>Part B, §6.4</td>
-<td>Party who uses the resource.</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>Distributor</td>
-<td>Part B, §6.5</td>
-<td>Party who distributes the resource</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>Originator</td>
-<td>Part B, §6.6</td>
-<td>Party who created the resource.</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>Point of contact</td>
-<td>Part B, §6.7</td>
-<td>Party who can be contacted for acquiring knowledge about or acquisition of the resource.</td>
-<td><code>dcat:contactPoint</code></td>
-</tr>
-<tr>
-<td>Principal investigator</td>
-<td>Part B, §6.8</td>
-<td>Key party responsible for gathering information and conducting research</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>Processor</td>
-<td>Part B, §6.9</td>
-<td>Party who has processed the data in a manner such that the resource has been modified.</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>Publisher</td>
-<td>Part B, §6.10</td>
-<td>Party who published the resource</td>
-<td><code>dct:publisher</code></td>
-</tr>
-<tr>
-<td>Author</td>
-<td>Part B, §6.11</td>
-<td>Party who authored the resource.</td>
-<td><code>dct:creator</code></td>
-</tr>
-</tbody>
-</table>
-
 <p>In <a href="#ex-mapping-responsible-party"></a>, the same organisation is both the data custodian and the metadata point of contact.</p>
+-->
 
 <aside class="example" id="ex-mapping-responsible-party" title="Responsible party">
+<p>In this example, the same organisation is both the data custodian and the metadata point of contact.</p>
 <p>Resource metadata in GeoDCAT-AP:</p>
 <pre>[] dcat:contactPoint [ a vcard:Organization ;
   vcard:hasEmail &lt;mailto:bag@kadaster.nl&gt; ;
   vcard:organization-name &quot;Kadaster&quot;@nl ] ;
+  geodcatap:custodian [ a prov:Agent , foaf:Organization ;
+    foaf:mbox &lt;mailto:bag@kadaster.nl&gt; ;
+    foaf:name &quot;Kadaster&quot;@nl ] ;
   prov:qualifiedAttribution
     [ a prov:Attribution ;
       dcat:hadRole &lt;http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian&gt; ;
