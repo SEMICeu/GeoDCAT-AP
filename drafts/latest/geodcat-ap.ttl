@@ -26,6 +26,85 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+geodcatap:custodian a rdf:Property,
+    owl:ObjectProperty ;
+  rdfs:label "Custodian"@en ;
+  rdfs:comment "Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource."@en ;
+  rdfs:isDefinedBy geodcatap:,
+    <http://data.europa.eu/eli/reg/2008/1205/2008-12-24>,
+    <https://www.iso.org/standard/26020.html>,
+    <https://www.iso.org/standard/53798.html> ;
+  rdfs:seeAlso <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian> ;
+  vs:term_status "unstable" ;
+  skos:scopeNote "In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."@en ;
+  adms:status <http://publications.europa.eu/resource/dataset/concept-status/DRAFT> .
+
+geodcatap:distributor a rdf:Property,
+    owl:ObjectProperty ;
+  rdfs:label "Distributor"@en ;
+  rdfs:comment "Party who distributes the resource."@en ;
+  rdfs:isDefinedBy geodcatap:,
+    <http://data.europa.eu/eli/reg/2008/1205/2008-12-24>,
+    <https://www.iso.org/standard/26020.html>,
+    <https://www.iso.org/standard/53798.html> ;
+  rdfs:seeAlso <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor> ;
+  vs:term_status "unstable" ;
+  skos:exactMatch duv:hasDistributor ;
+  skos:scopeNote "In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."@en ;
+  adms:status <http://publications.europa.eu/resource/dataset/concept-status/DRAFT> .
+
+geodcatap:originator a rdf:Property,
+    owl:ObjectProperty ;
+  rdfs:label "Originator"@en ;
+  rdfs:comment "Party who created the resource."@en ;
+  rdfs:isDefinedBy geodcatap:,
+    <http://data.europa.eu/eli/reg/2008/1205/2008-12-24>,
+    <https://www.iso.org/standard/26020.html>,
+    <https://www.iso.org/standard/53798.html> ;
+  rdfs:seeAlso <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator> ;
+  vs:term_status "unstable" ;
+  skos:scopeNote "In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."@en ;
+  adms:status <http://publications.europa.eu/resource/dataset/concept-status/DRAFT> .
+
+geodcatap:principalInvestigator a rdf:Property,
+    owl:ObjectProperty ;
+  rdfs:label "Principal investigator"@en ;
+  rdfs:comment "Key party responsible for gathering information and conducting research."@en ;
+  rdfs:isDefinedBy geodcatap:,
+    <http://data.europa.eu/eli/reg/2008/1205/2008-12-24>,
+    <https://www.iso.org/standard/26020.html>,
+    <https://www.iso.org/standard/53798.html> ;
+  rdfs:seeAlso <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator> ;
+  vs:term_status "unstable" ;
+  skos:scopeNote "In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."@en ;
+  adms:status <http://publications.europa.eu/resource/dataset/concept-status/DRAFT> .
+
+geodcatap:processor a rdf:Property,
+    owl:ObjectProperty ;
+  rdfs:label "Processor"@en ;
+  rdfs:comment "Party who has processed the data in a manner such that the resource has been modified."@en ;
+  rdfs:isDefinedBy geodcatap:,
+    <http://data.europa.eu/eli/reg/2008/1205/2008-12-24>,
+    <https://www.iso.org/standard/26020.html>,
+    <https://www.iso.org/standard/53798.html> ;
+  rdfs:seeAlso <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor> ;
+  vs:term_status "unstable" ;
+  skos:scopeNote "In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."@en ;
+  adms:status <http://publications.europa.eu/resource/dataset/concept-status/DRAFT> .
+
+geodcatap:resourceProvider a rdf:Property,
+    owl:ObjectProperty ;
+  rdfs:label "Resource provider"@en ;
+  rdfs:comment "Party that supplies the resource."@en ;
+  rdfs:isDefinedBy geodcatap:,
+    <http://data.europa.eu/eli/reg/2008/1205/2008-12-24>,
+    <https://www.iso.org/standard/26020.html>,
+    <https://www.iso.org/standard/53798.html> ;
+  rdfs:seeAlso <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider> ;
+  vs:term_status "unstable" ;
+  skos:scopeNote "In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."@en ;
+  adms:status <http://publications.europa.eu/resource/dataset/concept-status/DRAFT> .
+
 geodcatap:spatialResolutionAsAngularDistance a dqv:Metric ;
   rdfs:label "Spatial resolution as angular distance"@en ;
   rdfs:comment "Spatial resolution expressed as angular distance (ISO 19115-1:2014)."@en ;
@@ -81,6 +160,20 @@ geodcatap:spatialResolutionAsVerticalDistance a dqv:Metric ;
   adms:status <http://publications.europa.eu/resource/dataset/concept-status/DRAFT> ;
   dqv:expectedDataType xsd:decimal ;
   dqv:inDimension dqv:precision .
+
+geodcatap:user a rdf:Property,
+    owl:ObjectProperty ;
+  rdfs:label "User"@en ;
+  rdfs:comment "Party who uses the resource."@en ;
+  rdfs:isDefinedBy geodcatap:,
+    <http://data.europa.eu/eli/reg/2008/1205/2008-12-24>,
+    <https://www.iso.org/standard/26020.html>,
+    <https://www.iso.org/standard/53798.html> ;
+  rdfs:seeAlso <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user> ;
+  vs:term_status "unstable" ;
+  skos:closeMatch dct:audience ;
+  skos:scopeNote "In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."@en ;
+  adms:status <http://publications.europa.eu/resource/dataset/concept-status/DRAFT> .
 
 dcatap:availability skos:scopeNote "In GeoDCAT-AP, this property is used as in DCAT-AP."@en .
 
@@ -383,7 +476,7 @@ geodcatap: a voaf:Vocabulary,
   dct:description "GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 and those defined in the framework of the INSPIRE Directive of the European Union."@en ;
   dct:issued "2020-10-12"^^xsd:date ;
   dct:license <https://creativecommons.org/licenses/by/4.0/> ;
-  dct:modified "2020-12-09"^^xsd:date ;
+  dct:modified "2020-12-11"^^xsd:date ;
   dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/COM> ;
   dct:rightsHolder <http://publications.europa.eu/resource/authority/corporate-body/EURUN> ;
   dct:title "GeoDCAT-AP"@en ;
@@ -434,18 +527,18 @@ geodcatap: a voaf:Vocabulary,
       dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.rdf> ;
       dcat:mediaType "application/rdf+xml"^^dct:IMT ],
     [ a adms:AssetDistribution ;
-      dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
-      dct:title "HTML"@en ;
-      adms:representationTechnique <http://purl.org/adms/representationtechnique/HumanLanguage> ;
-      dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/index.html> ;
-      dcat:mediaType "text/html"^^dct:IMT ],
-    [ a adms:AssetDistribution ;
       dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>,
         <http://www.w3.org/ns/formats/data/Turtle> ;
       dct:title "Turtle"@en ;
       adms:representationTechnique <http://purl.org/adms/representationtechnique/OWL>,
         <http://purl.org/adms/representationtechnique/RDFSchema> ;
       dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.ttl> ;
-      dcat:mediaType "text/turtle"^^dct:IMT ] ;
+      dcat:mediaType "text/turtle"^^dct:IMT ],
+    [ a adms:AssetDistribution ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+      dct:title "HTML"@en ;
+      adms:representationTechnique <http://purl.org/adms/representationtechnique/HumanLanguage> ;
+      dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/index.html> ;
+      dcat:mediaType "text/html"^^dct:IMT ] ;
   foaf:depiction <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap_v2.0.0.svg> .
 

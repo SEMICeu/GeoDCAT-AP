@@ -44,7 +44,7 @@
 <!-- Version information -->
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-10-12</dct:created>
     <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-10-12</dct:issued>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-12-09</dct:modified>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-12-11</dct:modified>
     <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/dataset-status/DEVELOP"/>
     <adms:last rdf:resource="http://data.europa.eu/930/"/>
     <adms:prev rdf:resource="http://data.europa.eu/930/1.0.1/"/>
