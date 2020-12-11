@@ -30,16 +30,5 @@ record:af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb a dcat:CatalogRecord ;
           vcard:region "K" ;
           vcard:street-address "Kongens Nytorv 6" ] ;
       vcard:hasEmail <mailto:sdi@eea.europa.eu> ] ;
-  prov:qualifiedAttribution [ a prov:Attribution ;
-      dcat:hadRole <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact> ;
-      prov:agent [ a foaf:Organization ;
-          locn:address [ a locn:Address ;
-              locn:adminUnitL1 "Denmark" ;
-              locn:adminUnitL2 "K" ;
-              locn:postCode "1050" ;
-              locn:postName "Copenhagen" ;
-              locn:thoroughfare "Kongens Nytorv 6" ] ;
-          foaf:mbox <mailto:sdi@eea.europa.eu> ;
-          foaf:name "European Environment Agency"@en ] ] ;
   foaf:primaryTopic resource:eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00 .
 

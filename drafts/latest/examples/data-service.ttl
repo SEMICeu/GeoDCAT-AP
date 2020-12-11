@@ -1,6 +1,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geodcatap: <http://data.europa.eu/930/> .
 @prefix gsp: <http://www.opengis.net/ont/geosparql#> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -13,6 +14,10 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 resource:eea_v_4326_250_k_wise-eionet-monitoring-sites_service a dcat:DataService ;
+  geodcatap:custodian <http://publications.europa.eu/resource/authority/corporate-body/EEA> ;
+  geodcatap:processor [ a foaf:Organization ;
+      foaf:mbox <mailto:wisesoe.helpdesk@eionet.europa.eu> ;
+      foaf:name "Tracasa"@en ] ;
   dct:accessRights <http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations> ;
   dct:conformsTo <http://www.opengeospatial.org/standards/wms>,
     <http://www.opengis.net/def/crs/EPSG/0/102100>,
@@ -59,14 +64,6 @@ resource:eea_v_4326_250_k_wise-eionet-monitoring-sites_service a dcat:DataServic
     <http://www.eionet.europa.eu/gemet/concept/3780>,
     <http://www.eionet.europa.eu/gemet/concept/5352>,
     <http://www.eionet.europa.eu/gemet/concept/8229> ;
-  prov:qualifiedAttribution [ a prov:Attribution ;
-      dcat:hadRole <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor> ;
-      prov:agent [ a foaf:Organization ;
-          foaf:mbox <mailto:wisesoe.helpdesk@eionet.europa.eu> ;
-          foaf:name "Tracasa"@en ] ],
-    [ a prov:Attribution ;
-      dcat:hadRole <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian> ;
-      prov:agent <http://publications.europa.eu/resource/authority/corporate-body/EEA> ] ;
   prov:wasUsedBy [ a prov:Activity ;
       prov:generated [ dct:description "See the referenced specification"@en ;
           dct:type <http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated> ] ;
