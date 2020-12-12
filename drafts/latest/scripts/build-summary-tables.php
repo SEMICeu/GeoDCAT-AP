@@ -13,6 +13,7 @@
 
   $cextnr = 0;
   $pextnr = 0;
+  $pext = array();
 
   foreach ($classes as $k => $v) {
     if (file_exists($folder . $v)) {
@@ -111,6 +112,7 @@
               }
               if (in_array('ap-ext', $p[$pid]['types']) && !in_array('deprecated', $p[$pid]['types'])) {
                 $pextnr++;
+                $pext[] = $puri;
               }
             }
           }
@@ -175,7 +177,7 @@
 
   $html  = '';
   if ($tv['type'] == 'ap-ext') {
-    $html .= '<p>This version of GeoDCAT-AP extends [[DCAT-AP-20200608]] with ' . $cextnr . ' additional classes and ' . $pextnr . ' additional properties, listed in the following table.</p>' . "\n\n";
+    $html .= '<p>This version of GeoDCAT-AP extends [[DCAT-AP-20200608]] with ' . $cextnr . ' additional classes and ' . count(array_unique($pext)) . ' additional properties (some of which re-used across classes). They are listed in the following table.</p>' . "\n\n";
   }
   $html .= '<table class="simple" id="table-' . $tv['id'] . '">' . "\n";
   $html .= '<thead>' . "\n";
