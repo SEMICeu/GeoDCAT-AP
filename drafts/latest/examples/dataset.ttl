@@ -2,7 +2,8 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix geodcatap: <http://www.opengis.net/ont/geosparql#> .
+@prefix geodcatap: <http://data.europa.eu/930/> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -14,6 +15,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
+  geodcatap:custodian <http://publications.europa.eu/resource/authority/corporate-body/EEA> ;
   dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
   dct:conformsTo <http://www.opengis.net/def/crs/EPSG/0/3035> ;
   dct:created "2019-10-31"^^xsd:date ;
@@ -29,8 +31,8 @@ resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
   dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
   dct:provenance [ a dct:ProvenanceStatement ;
       rdfs:label "The raster data sets have been created out of the Noise Spatial Database, which in turn contains all versions delivered by the relevant countries (EU and EFTA) to Reportnet (CDR). The data from Reportnet is automatically incorporated into the database, with the exception of those data sets which require a manual review (due to problems with naming conventions or Coordinate Reference System). The data set covers any submission by the countries until 01/01/2019."@en ] ;
-  dct:spatial [ dcat:bbox "<gml:Envelope srsName=\"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"><gml:lowerCorner>-31.285 27.642</gml:lowerCorner><gml:upperCorner>34.099 70.075</gml:upperCorner></gml:Envelope>"^^geodcatap:gmlLiteral,
-        "POLYGON((-31.285 70.075,34.099 70.075,34.099 27.642,-31.285 27.642,-31.285 70.075))"^^geodcatap:wktLiteral ] ;
+  dct:spatial [ dcat:bbox "<gml:Envelope srsName=\"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"><gml:lowerCorner>-31.285 27.642</gml:lowerCorner><gml:upperCorner>34.099 70.075</gml:upperCorner></gml:Envelope>"^^gsp:gmlLiteral,
+        "POLYGON((-31.285 70.075,34.099 70.075,34.099 27.642,-31.285 27.642,-31.285 70.075))"^^gsp:wktLiteral ] ;
   dct:subject <http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment>,
     <http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health>,
     <http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation> ;
@@ -39,7 +41,6 @@ resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
       dcat:startDate "2016-01-01"^^xsd:date ] ;
   dct:title "Noise contours data reported under Environmental Noise Directive (END) 2017 (raster 10m) - version 2019, Oct. 2019"@en ;
   dct:type <http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset> ;
-  geodcatap:custodian <http://publications.europa.eu/resource/authority/corporate-body/EEA> ;
   dcat:contactPoint [ a vcard:Organization ;
       vcard:fn "European Environment Agency"@en ;
       vcard:hasAddress [ a vcard:Address ;
