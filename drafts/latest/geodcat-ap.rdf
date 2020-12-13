@@ -662,11 +662,11 @@
   </rdf:Description>
 
   <rdf:Description rdf:about="http://www.w3.org/ns/dqv#inDimension">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used in the definition of the instances of dqv:Metric corresponding to the different type of spatial resolution. It MUST always take as value dqv:precision.</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used in the definition of the instances of dqv:Metric corresponding to the different types of spatial resolution. It MUST always take as value dqv:precision.</skos:scopeNote>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://www.w3.org/ns/dqv#expectedDataType">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used in the definition of the instances of dqv:Metric corresponding to the different type of spatial resolution.</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used in the definition of the instances of dqv:Metric corresponding to the different types of spatial resolution.</skos:scopeNote>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://www.w3.org/ns/dqv#isMeasurementOf">
