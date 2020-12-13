@@ -292,11 +292,11 @@ dcat:themeTaxonomy skos:scopeNote "In GeoDCAT-AP, this property is used as in DC
 
 dqv:QualityMeasurement skos:scopeNote "In GeoDCAT-AP, this class corresponds to the notion of \"spatial resolution\", as defined in INSPIRE, ISO 19115:2003, and ISO 19115-1:2014."@en .
 
-dqv:expectedDataType skos:scopeNote "In GeoDCAT-AP, this property is used in the definition of the instances of dqv:Metric corresponding to the different type of spatial resolution."@en .
+dqv:expectedDataType skos:scopeNote "In GeoDCAT-AP, this property is used in the definition of the instances of dqv:Metric corresponding to the different types of spatial resolution."@en .
 
 dqv:hasQualityMeasurement skos:scopeNote "In GeoDCAT-AP, this property is used to specify \"spatial resolution\", as defined in INSPIRE, ISO 19115:2003, and ISO 19115-1:2014."@en .
 
-dqv:inDimension skos:scopeNote "In GeoDCAT-AP, this property is used in the definition of the instances of dqv:Metric corresponding to the different type of spatial resolution. It MUST always take as value dqv:precision."@en .
+dqv:inDimension skos:scopeNote "In GeoDCAT-AP, this property is used in the definition of the instances of dqv:Metric corresponding to the different types of spatial resolution. It MUST always take as value dqv:precision."@en .
 
 dqv:isMeasurementOf skos:scopeNote "In GeoDCAT-AP, this property is used to specify the type of spatial resolution being described, by taking as object one of the following instances of dqv:Metric: geodcatap:spatialResolutionAsScale, geodcatap:spatialResolutionAsDistance, geodcatap:spatialResolutionAsAngularDistance, geodcatap:spatialResolutionAsVerticalDistance."@en .
 
@@ -426,6 +426,14 @@ geodcatap: a voaf:Vocabulary,
   adms:status <http://publications.europa.eu/resource/dataset/dataset-status/DEVELOP> ;
   adms:versionNotes "This version of GeoDCAT-AP is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP and was built starting from GeoDCAT-AP version 1.0.1, with the purpose of aligning it with DCAT-AP version 2.0.1 and with version 2.0.1 of the INSPIRE Metadata Technical Guidelines."@en ;
   dcat:distribution [ a adms:AssetDistribution ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>,
+        <http://www.w3.org/ns/formats/data/Turtle> ;
+      dct:title "Turtle"@en ;
+      adms:representationTechnique <http://purl.org/adms/representationtechnique/OWL>,
+        <http://purl.org/adms/representationtechnique/RDFSchema> ;
+      dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.ttl> ;
+      dcat:mediaType "text/turtle"^^dct:IMT ],
+    [ a adms:AssetDistribution ;
       dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML>,
         <http://www.w3.org/ns/formats/data/RDF_XML> ;
       dct:title "RDF/XML"@en ;
@@ -438,14 +446,6 @@ geodcatap: a voaf:Vocabulary,
       dct:title "HTML"@en ;
       adms:representationTechnique <http://purl.org/adms/representationtechnique/HumanLanguage> ;
       dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/index.html> ;
-      dcat:mediaType "text/html"^^dct:IMT ],
-    [ a adms:AssetDistribution ;
-      dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>,
-        <http://www.w3.org/ns/formats/data/Turtle> ;
-      dct:title "Turtle"@en ;
-      adms:representationTechnique <http://purl.org/adms/representationtechnique/OWL>,
-        <http://purl.org/adms/representationtechnique/RDFSchema> ;
-      dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.ttl> ;
-      dcat:mediaType "text/turtle"^^dct:IMT ] ;
+      dcat:mediaType "text/html"^^dct:IMT ] ;
   foaf:depiction <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap_v2.0.0.svg> .
 
