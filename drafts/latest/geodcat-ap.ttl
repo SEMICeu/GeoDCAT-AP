@@ -385,11 +385,11 @@ dcat:themeTaxonomy skos:scopeNote "In GeoDCAT-AP, this property is used as in DC
 
 dqv:QualityMeasurement skos:scopeNote "In GeoDCAT-AP, this class corresponds to the notion of \"spatial resolution\", as defined in INSPIRE, ISO 19115:2003, and ISO 19115-1:2014."@en .
 
-dqv:expectedDataType skos:scopeNote "In GeoDCAT-AP, this property is used in the definition of the instances of dqv:Metric corresponding to the different type of spatial resolution."@en .
+dqv:expectedDataType skos:scopeNote "In GeoDCAT-AP, this property is used in the definition of the instances of dqv:Metric corresponding to the different types of spatial resolution."@en .
 
 dqv:hasQualityMeasurement skos:scopeNote "In GeoDCAT-AP, this property is used to specify \"spatial resolution\", as defined in INSPIRE, ISO 19115:2003, and ISO 19115-1:2014."@en .
 
-dqv:inDimension skos:scopeNote "In GeoDCAT-AP, this property is used in the definition of the instances of dqv:Metric corresponding to the different type of spatial resolution. It MUST always take as value dqv:precision."@en .
+dqv:inDimension skos:scopeNote "In GeoDCAT-AP, this property is used in the definition of the instances of dqv:Metric corresponding to the different types of spatial resolution. It MUST always take as value dqv:precision."@en .
 
 dqv:isMeasurementOf skos:scopeNote "In GeoDCAT-AP, this property is used to specify the type of spatial resolution being described, by taking as object one of the following instances of dqv:Metric: geodcatap:spatialResolutionAsScale, geodcatap:spatialResolutionAsDistance, geodcatap:spatialResolutionAsAngularDistance, geodcatap:spatialResolutionAsVerticalDistance."@en .
 
