@@ -866,7 +866,6 @@
     <rdfs:isDefinedBy rdf:resource="https://www.iso.org/standard/26020.html"/>
     <rdfs:isDefinedBy rdf:resource="https://www.iso.org/standard/53798.html"/>
     <rdfs:seeAlso rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor"/>
-    <skos:exactMatch rdf:resource="http://www.w3.org/ns/duv#hasDistributor"/>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://data.europa.eu/930/originator">
@@ -942,7 +941,6 @@
     <rdfs:isDefinedBy rdf:resource="https://www.iso.org/standard/26020.html"/>
     <rdfs:isDefinedBy rdf:resource="https://www.iso.org/standard/53798.html"/>
     <rdfs:seeAlso rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user"/>
-    <skos:closeMatch rdf:resource="http://purl.org/dc/terms/audience"/>
   </rdf:Description> 
   
 </rdf:RDF>
