@@ -844,7 +844,7 @@
     <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
     <vs:term_status>unstable</vs:term_status>
     <rdfs:label xml:lang="en">Custodian</rdfs:label>
-    <rdfs:comment xml:lang="en">Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource (ISO 19115:2003).</rdfs:comment>
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
@@ -859,7 +859,7 @@
     <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
     <vs:term_status>unstable</vs:term_status>
     <rdfs:label xml:lang="en">Distributor</rdfs:label>
-    <rdfs:comment xml:lang="en">Party who distributes the resource.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Party who distributes the resource (ISO 19115:2003).</rdfs:comment>
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
@@ -875,7 +875,7 @@
     <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
     <vs:term_status>unstable</vs:term_status>
     <rdfs:label xml:lang="en">Originator</rdfs:label>
-    <rdfs:comment xml:lang="en">Party who created the resource.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Party who created the resource (ISO 19115:2003).</rdfs:comment>
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
@@ -890,7 +890,7 @@
     <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
     <vs:term_status>unstable</vs:term_status>
     <rdfs:label xml:lang="en">Principal investigator</rdfs:label>
-    <rdfs:comment xml:lang="en">Key party responsible for gathering information and conducting research.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Key party responsible for gathering information and conducting research (ISO 19115:2003).</rdfs:comment>
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
@@ -905,7 +905,7 @@
     <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
     <vs:term_status>unstable</vs:term_status>
     <rdfs:label xml:lang="en">Processor</rdfs:label>
-    <rdfs:comment xml:lang="en">Party who has processed the data in a manner such that the resource has been modified.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Party who has processed the data in a manner such that the resource has been modified (ISO 19115:2003).</rdfs:comment>
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
@@ -920,7 +920,7 @@
     <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
     <vs:term_status>unstable</vs:term_status>
     <rdfs:label xml:lang="en">Resource provider</rdfs:label>
-    <rdfs:comment xml:lang="en">Party that supplies the resource.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Party that supplies the resource (ISO 19115:2003).</rdfs:comment>
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
@@ -935,7 +935,7 @@
     <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
     <vs:term_status>unstable</vs:term_status>
     <rdfs:label xml:lang="en">User</rdfs:label>
-    <rdfs:comment xml:lang="en">Party who uses the resource.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Party who uses the resource (ISO 19115:2003).</rdfs:comment>
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/930/"/>
     <rdfs:isDefinedBy rdf:resource="http://data.europa.eu/eli/reg/2008/1205/2008-12-24"/>
