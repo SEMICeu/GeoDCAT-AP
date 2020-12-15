@@ -5,7 +5,6 @@
 @prefix dcatap: <http://data.europa.eu/r5r/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dqv: <http://www.w3.org/ns/dqv#> .
-@prefix duv: <http://www.w3.org/ns/duv#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geodcatap: <http://data.europa.eu/930/> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
@@ -29,7 +28,7 @@
 geodcatap:custodian a rdf:Property,
     owl:ObjectProperty ;
   rdfs:label "Custodian"@en ;
-  rdfs:comment "Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource."@en ;
+  rdfs:comment "Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource (ISO 19115:2003)."@en ;
   rdfs:isDefinedBy geodcatap:,
     <http://data.europa.eu/eli/reg/2008/1205/2008-12-24>,
     <https://www.iso.org/standard/26020.html>,
@@ -42,21 +41,20 @@ geodcatap:custodian a rdf:Property,
 geodcatap:distributor a rdf:Property,
     owl:ObjectProperty ;
   rdfs:label "Distributor"@en ;
-  rdfs:comment "Party who distributes the resource."@en ;
+  rdfs:comment "Party who distributes the resource (ISO 19115:2003)."@en ;
   rdfs:isDefinedBy geodcatap:,
     <http://data.europa.eu/eli/reg/2008/1205/2008-12-24>,
     <https://www.iso.org/standard/26020.html>,
     <https://www.iso.org/standard/53798.html> ;
   rdfs:seeAlso <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor> ;
   vs:term_status "unstable" ;
-  skos:exactMatch duv:hasDistributor ;
   skos:scopeNote "In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."@en ;
   adms:status <http://publications.europa.eu/resource/dataset/concept-status/DRAFT> .
 
 geodcatap:originator a rdf:Property,
     owl:ObjectProperty ;
   rdfs:label "Originator"@en ;
-  rdfs:comment "Party who created the resource."@en ;
+  rdfs:comment "Party who created the resource (ISO 19115:2003)."@en ;
   rdfs:isDefinedBy geodcatap:,
     <http://data.europa.eu/eli/reg/2008/1205/2008-12-24>,
     <https://www.iso.org/standard/26020.html>,
@@ -69,7 +67,7 @@ geodcatap:originator a rdf:Property,
 geodcatap:principalInvestigator a rdf:Property,
     owl:ObjectProperty ;
   rdfs:label "Principal investigator"@en ;
-  rdfs:comment "Key party responsible for gathering information and conducting research."@en ;
+  rdfs:comment "Key party responsible for gathering information and conducting research (ISO 19115:2003)."@en ;
   rdfs:isDefinedBy geodcatap:,
     <http://data.europa.eu/eli/reg/2008/1205/2008-12-24>,
     <https://www.iso.org/standard/26020.html>,
@@ -82,7 +80,7 @@ geodcatap:principalInvestigator a rdf:Property,
 geodcatap:processor a rdf:Property,
     owl:ObjectProperty ;
   rdfs:label "Processor"@en ;
-  rdfs:comment "Party who has processed the data in a manner such that the resource has been modified."@en ;
+  rdfs:comment "Party who has processed the data in a manner such that the resource has been modified (ISO 19115:2003)."@en ;
   rdfs:isDefinedBy geodcatap:,
     <http://data.europa.eu/eli/reg/2008/1205/2008-12-24>,
     <https://www.iso.org/standard/26020.html>,
@@ -95,7 +93,7 @@ geodcatap:processor a rdf:Property,
 geodcatap:resourceProvider a rdf:Property,
     owl:ObjectProperty ;
   rdfs:label "Resource provider"@en ;
-  rdfs:comment "Party that supplies the resource."@en ;
+  rdfs:comment "Party that supplies the resource (ISO 19115:2003)."@en ;
   rdfs:isDefinedBy geodcatap:,
     <http://data.europa.eu/eli/reg/2008/1205/2008-12-24>,
     <https://www.iso.org/standard/26020.html>,
@@ -107,13 +105,12 @@ geodcatap:resourceProvider a rdf:Property,
 
 geodcatap:spatialResolutionAsAngularDistance a dqv:Metric ;
   rdfs:label "Spatial resolution as angular distance"@en ;
-  rdfs:comment "Spatial resolution expressed as angular distance (ISO 19115-1:2014)."@en ;
+  rdfs:comment "Spatial resolution expressed as angular distance (ISO 19115-1:2014), by using decimal degrees."@en ;
   rdfs:isDefinedBy geodcatap:,
     <https://www.iso.org/standard/53798.html> ;
   vs:term_status "unstable" ;
-  skos:definition "Spatial resolution expressed as angular distance (ISO 19115-1:2014)."@en ;
+  skos:definition "Spatial resolution expressed as angular distance (ISO 19115-1:2014), by using decimal degrees."@en ;
   skos:prefLabel "Spatial resolution as angular distance"@en ;
-  skos:scopeNote "In GeoDCAT-AP, this property is typically used for Catalogues, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."@en ;
   adms:status <http://publications.europa.eu/resource/dataset/concept-status/DRAFT> ;
   dqv:expectedDataType xsd:decimal ;
   dqv:inDimension dqv:precision .
@@ -128,7 +125,6 @@ geodcatap:spatialResolutionAsDistance a dqv:Metric ;
   vs:term_status "unstable" ;
   skos:definition "Spatial resolution expressed as distance. It corresponds to the notion of spatial resolution as \"ground distance\" of ISO 19115:2003 and \"horizontal ground distance\" of ISO 19115-1:2014."@en ;
   skos:prefLabel "Spatial resolution as distance"@en ;
-  skos:scopeNote "In GeoDCAT-AP, this property is typically used for Catalogues, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."@en ;
   adms:status <http://publications.europa.eu/resource/dataset/concept-status/DRAFT> ;
   dqv:expectedDataType xsd:decimal ;
   dqv:inDimension dqv:precision .
@@ -143,7 +139,6 @@ geodcatap:spatialResolutionAsScale a dqv:Metric ;
   vs:term_status "unstable" ;
   skos:definition "Spatial resolution expressed as equivalent scale (ISO 19115:2003, ISO 19115-1:2014), by using a representative fraction (e.g., 1:1,000, 1:1,000,000)."@en ;
   skos:prefLabel "Spatial resolution as equivalent scale"@en ;
-  skos:scopeNote "In GeoDCAT-AP, this property is typically used for Catalogues, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."@en ;
   adms:status <http://publications.europa.eu/resource/dataset/concept-status/DRAFT> ;
   dqv:expectedDataType xsd:decimal ;
   dqv:inDimension dqv:precision .
@@ -156,7 +151,6 @@ geodcatap:spatialResolutionAsVerticalDistance a dqv:Metric ;
   vs:term_status "unstable" ;
   skos:definition "Spatial resolution expressed as vertical distance (ISO 19115-1:2014)."@en ;
   skos:prefLabel "Spatial resolution as vertical distance"@en ;
-  skos:scopeNote "In GeoDCAT-AP, this property is typically used for Catalogues, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."@en ;
   adms:status <http://publications.europa.eu/resource/dataset/concept-status/DRAFT> ;
   dqv:expectedDataType xsd:decimal ;
   dqv:inDimension dqv:precision .
@@ -164,14 +158,13 @@ geodcatap:spatialResolutionAsVerticalDistance a dqv:Metric ;
 geodcatap:user a rdf:Property,
     owl:ObjectProperty ;
   rdfs:label "User"@en ;
-  rdfs:comment "Party who uses the resource."@en ;
+  rdfs:comment "Party who uses the resource (ISO 19115:2003)."@en ;
   rdfs:isDefinedBy geodcatap:,
     <http://data.europa.eu/eli/reg/2008/1205/2008-12-24>,
     <https://www.iso.org/standard/26020.html>,
     <https://www.iso.org/standard/53798.html> ;
   rdfs:seeAlso <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user> ;
   vs:term_status "unstable" ;
-  skos:closeMatch dct:audience ;
   skos:scopeNote "In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."@en ;
   adms:status <http://publications.europa.eu/resource/dataset/concept-status/DRAFT> .
 
@@ -476,7 +469,7 @@ geodcatap: a voaf:Vocabulary,
   dct:description "GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 and those defined in the framework of the INSPIRE Directive of the European Union."@en ;
   dct:issued "2020-10-12"^^xsd:date ;
   dct:license <https://creativecommons.org/licenses/by/4.0/> ;
-  dct:modified "2020-12-11"^^xsd:date ;
+  dct:modified "2020-12-15"^^xsd:date ;
   dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/COM> ;
   dct:rightsHolder <http://publications.europa.eu/resource/authority/corporate-body/EURUN> ;
   dct:title "GeoDCAT-AP"@en ;
