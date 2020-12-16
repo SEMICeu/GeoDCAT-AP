@@ -48,11 +48,11 @@ var respecConfig = {
       label: "Turtle",
       uri: "./geodcat-ap.ttl",
     },
-/*
     {
-      label: "JSON-LD (TBD)",
+      label: "JSON-LD",
       uri: "./geodcat-ap.jsonld",
     },
+/*
     {
       label: "SHACL (TBD)",
       uri: "./geodcat-ap_shacl_shapes.ttl",
