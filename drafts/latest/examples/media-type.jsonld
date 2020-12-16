@@ -1,0 +1,29 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "_:N0d659402ad894af587505ff85877fb39",
+    "@type": [
+      "http://purl.org/dc/terms/MediaType"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+      "@value": "Geopackage"
+      }
+    ]
+    },
+    {
+    "@id": "_:N18e074339bad4f2d9ec6e454ccd9dc41",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Distribution"
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+      "@id": "_:N0d659402ad894af587505ff85877fb39"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/media-type.rdf"
+  }
+]

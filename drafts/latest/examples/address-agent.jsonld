@@ -1,0 +1,38 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "_:N33240ca655d54bdc960402297aabd5a4",
+    "@type": [
+      "http://www.w3.org/ns/locn#Address"
+    ],
+    "http://www.w3.org/ns/locn#adminUnitL1": [
+      {
+      "@value": "Denmark"
+      }
+    ],
+    "http://www.w3.org/ns/locn#adminUnitL2": [
+      {
+      "@value": "K"
+      }
+    ],
+    "http://www.w3.org/ns/locn#postCode": [
+      {
+      "@value": "1050"
+      }
+    ],
+    "http://www.w3.org/ns/locn#postName": [
+      {
+      "@value": "Copenhagen"
+      }
+    ],
+    "http://www.w3.org/ns/locn#thoroughfare": [
+      {
+      "@value": "Kongens Nytorv 6"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/address-agent.rdf"
+  }
+]

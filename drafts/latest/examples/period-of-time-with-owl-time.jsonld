@@ -1,0 +1,41 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "_:N63a35c4482fe4777be4473208908a64b",
+    "http://www.w3.org/2006/time#inXSDDate": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#date",
+      "@value": "2016-01-01"
+      }
+    ]
+    },
+    {
+    "@id": "_:N2ca196713ccc4dcdb11a7e7f1d92d8f0",
+    "@type": [
+      "http://purl.org/dc/terms/PeriodOfTime"
+    ],
+    "http://www.w3.org/2006/time#hasBeginning": [
+      {
+      "@id": "_:N63a35c4482fe4777be4473208908a64b"
+      }
+    ],
+    "http://www.w3.org/2006/time#hasEnd": [
+      {
+      "@id": "_:Neacc60f1e19b4f219cf648f07bcbb6fb"
+      }
+    ]
+    },
+    {
+    "@id": "_:Neacc60f1e19b4f219cf648f07bcbb6fb",
+    "http://www.w3.org/2006/time#inXSDDate": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#date",
+      "@value": "2016-12-31"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/period-of-time-with-owl-time.rdf"
+  }
+]

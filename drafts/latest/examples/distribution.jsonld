@@ -1,0 +1,79 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "_:Nf113b714c3f84cb491dacf1fbc405f07",
+    "@type": [
+      "http://purl.org/dc/terms/LicenseDocument"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+      "@language": "en",
+      "@value": "The full noise contour maps data set is in principle only available for EEA internal use. A public version of the data set may in the future be available, excluding those data sets for which there is any limitation or restriction in their use (beyond acknowledgement)."
+      }
+    ]
+    },
+    {
+    "@id": "_:Ncccb262cd5ad42a59e4b76ff7549844e",
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+      "@id": "http://www.opengeospatial.org/standards/wms"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#endpointDescription": [
+      {
+      "@id": "https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&service=WMS"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#endpointURL": [
+      {
+      "@id": "https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer"
+      }
+    ]
+    },
+    {
+    "@id": "_:N27a2ea538fc649729303f2ce23e18d58",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Distribution"
+    ],
+    "http://purl.org/dc/terms/accessRights": [
+      {
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+      "@language": "en",
+      "@value": "NoiseContours_air_lnight"
+      }
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+      "@id": "http://publications.europa.eu/resource/authority/file-type/TIFF"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+      "@id": "_:Nf113b714c3f84cb491dacf1fbc405f07"
+      }
+    ],
+    "http://www.w3.org/ns/adms#representationTechnique": [
+      {
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode/grid"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#accessService": [
+      {
+      "@id": "_:Ncccb262cd5ad42a59e4b76ff7549844e"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#accessURL": [
+      {
+      "@id": "https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&service=WMS"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/distribution.rdf"
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "_:N35780ef29a924eafa61213811e499bbb",
+    "@type": [
+      "http://www.w3.org/ns/dqv#QualityMeasurement"
+    ],
+    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
+      {
+      "@id": "http://www.wurvoc.org/vocabularies/om-1.8/degree"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#isMeasurementOf": [
+      {
+      "@id": "http://data.europa.eu/930/spatialResolutionAsAngularDistance"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#value": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@value": "20"
+      }
+    ]
+    },
+    {
+    "@id": "_:N29b944d30c914cdcafa20544177de086",
+    "@type": [
+      "http://www.w3.org/ns/dqv#QualityMeasurement"
+    ],
+    "http://www.w3.org/ns/dqv#isMeasurementOf": [
+      {
+      "@id": "http://data.europa.eu/930/spatialResolutionAsScale"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#value": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@value": "0.000001"
+      }
+    ]
+    },
+    {
+    "@id": "_:N3da2ca143cd044269e2400e2ea52068e",
+    "@type": [
+      "http://www.w3.org/ns/dqv#QualityMeasurement"
+    ],
+    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
+      {
+      "@id": "http://www.wurvoc.org/vocabularies/om-1.8/metre"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#isMeasurementOf": [
+      {
+      "@id": "http://data.europa.eu/930/spatialResolutionAsVerticalDistance"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#value": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@value": "10"
+      }
+    ]
+    },
+    {
+    "@id": "https://some.catalogue/resource/c34567",
+    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
+      {
+      "@id": "_:N35780ef29a924eafa61213811e499bbb"
+      }
+    ]
+    },
+    {
+    "@id": "https://some.catalogue/resource/d45678",
+    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
+      {
+      "@id": "_:N3da2ca143cd044269e2400e2ea52068e"
+      }
+    ]
+    },
+    {
+    "@id": "_:N0db1da938c4c44b899f9fb6be093de56",
+    "@type": [
+      "http://www.w3.org/ns/dqv#QualityMeasurement"
+    ],
+    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
+      {
+      "@id": "http://www.wurvoc.org/vocabularies/om-1.8/metre"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#isMeasurementOf": [
+      {
+      "@id": "http://data.europa.eu/930/spatialResolutionAsDistance"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#value": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@value": "100"
+      }
+    ]
+    },
+    {
+    "@id": "https://some.catalogue/resource/b23456",
+    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
+      {
+      "@id": "_:N0db1da938c4c44b899f9fb6be093de56"
+      }
+    ]
+    },
+    {
+    "@id": "https://some.catalogue/resource/a12345",
+    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
+      {
+      "@id": "_:N29b944d30c914cdcafa20544177de086"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/quality-measurement.rdf"
+  }
+]

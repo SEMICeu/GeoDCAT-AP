@@ -1,0 +1,85 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00",
+    "http://www.w3.org/ns/prov#qualifiedAttribution": [
+      {
+      "@id": "_:N1e9e88b391c149cd87dd6a930a8879a2"
+      }
+    ]
+    },
+    {
+    "@id": "_:N1e9e88b391c149cd87dd6a930a8879a2",
+    "@type": [
+      "http://www.w3.org/ns/prov#Attribution"
+    ],
+    "http://www.w3.org/ns/dcat#hadRole": [
+      {
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact"
+      }
+    ],
+    "http://www.w3.org/ns/prov#agent": [
+      {
+      "@id": "http://publications.europa.eu/resource/authority/corporate-body/EEA"
+      }
+    ]
+    },
+    {
+    "@id": "_:N326d8a7bbdc3494c854f2327073d9a34",
+    "@type": [
+      "http://www.w3.org/ns/locn#Address"
+    ],
+    "http://www.w3.org/ns/locn#adminUnitL1": [
+      {
+      "@value": "Denmark"
+      }
+    ],
+    "http://www.w3.org/ns/locn#adminUnitL2": [
+      {
+      "@value": "K"
+      }
+    ],
+    "http://www.w3.org/ns/locn#postCode": [
+      {
+      "@value": "1050"
+      }
+    ],
+    "http://www.w3.org/ns/locn#postName": [
+      {
+      "@value": "Copenhagen"
+      }
+    ],
+    "http://www.w3.org/ns/locn#thoroughfare": [
+      {
+      "@value": "Kongens Nytorv 6"
+      }
+    ]
+    },
+    {
+    "@id": "http://publications.europa.eu/resource/authority/corporate-body/EEA",
+    "@type": [
+      "http://www.w3.org/ns/prov#Organization",
+      "http://xmlns.com/foaf/0.1/Organization"
+    ],
+    "http://www.w3.org/ns/locn#address": [
+      {
+      "@id": "_:N326d8a7bbdc3494c854f2327073d9a34"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/mbox": [
+      {
+      "@id": "mailto:sdi@eea.europa.eu"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+      "@language": "en",
+      "@value": "European Environment Agency"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/attribution.rdf"
+  }
+]

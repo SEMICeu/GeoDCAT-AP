@@ -1,0 +1,19 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "_:Ndf0e550df782402ab01af4d1ef9cd9a8",
+    "@type": [
+      "http://purl.org/dc/terms/ProvenanceStatement"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+      "@language": "en",
+      "@value": "\n    The raster data sets have been created out of the Noise Spatial Database, \n    which in turn contains all versions delivered by the relevant countries \n    (EU and EFTA) to Reportnet (CDR). The data from Reportnet is automatically \n    incorporated into the database, with the exception of those data sets which \n    require a manual review (due to problems with naming conventions or \n    Coordinate Reference System). The data set covers any submission by the \n    countries until 01/01/2019.\n  "
+      }
+    ]
+    }
+  ],
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/provenance-statement.rdf"
+  }
+]

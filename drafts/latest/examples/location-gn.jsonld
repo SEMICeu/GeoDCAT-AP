@@ -1,0 +1,48 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "_:N05190bf8f0634e9f83a5a18da8c201b5",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://purl.org/dc/terms/Location"
+    ],
+    "http://purl.org/dc/terms/identifier": [
+      {
+      "@value": "202"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+      "@id": "_:N4db98e9e75174567910637fa92a69138"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+      "@language": "en",
+      "@value": "Sub-Saharan Africa"
+      }
+    ]
+    },
+    {
+    "@id": "_:N4db98e9e75174567910637fa92a69138",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "@value": "2018-11-16T00:01:27+01:00"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+      "@language": "en",
+      "@value": "UNSD - Methodology - Standard country or area codes for statistical use (M49)"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/location-gn.rdf"
+  }
+]
