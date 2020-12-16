@@ -2,15 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00",
-    "http://www.w3.org/ns/prov#qualifiedAttribution": [
-      {
-      "@id": "_:N1e9e88b391c149cd87dd6a930a8879a2"
-      }
-    ]
-    },
-    {
-    "@id": "_:N1e9e88b391c149cd87dd6a930a8879a2",
+    "@id": "_:N2285d7c9cf0b48feb17b195c3ffe8f3d",
     "@type": [
       "http://www.w3.org/ns/prov#Attribution"
     ],
@@ -26,7 +18,38 @@
     ]
     },
     {
-    "@id": "_:N326d8a7bbdc3494c854f2327073d9a34",
+    "@id": "https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00",
+    "http://www.w3.org/ns/prov#qualifiedAttribution": [
+      {
+      "@id": "_:N2285d7c9cf0b48feb17b195c3ffe8f3d"
+      }
+    ]
+    },
+    {
+    "@id": "http://publications.europa.eu/resource/authority/corporate-body/EEA",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Organization",
+      "http://www.w3.org/ns/prov#Organization"
+    ],
+    "http://www.w3.org/ns/locn#address": [
+      {
+      "@id": "_:Ne650eac9d304446c945bf7587eb0ffd9"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/mbox": [
+      {
+      "@id": "mailto:sdi@eea.europa.eu"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+      "@language": "en",
+      "@value": "European Environment Agency"
+      }
+    ]
+    },
+    {
+    "@id": "_:Ne650eac9d304446c945bf7587eb0ffd9",
     "@type": [
       "http://www.w3.org/ns/locn#Address"
     ],
@@ -53,29 +76,6 @@
     "http://www.w3.org/ns/locn#thoroughfare": [
       {
       "@value": "Kongens Nytorv 6"
-      }
-    ]
-    },
-    {
-    "@id": "http://publications.europa.eu/resource/authority/corporate-body/EEA",
-    "@type": [
-      "http://www.w3.org/ns/prov#Organization",
-      "http://xmlns.com/foaf/0.1/Organization"
-    ],
-    "http://www.w3.org/ns/locn#address": [
-      {
-      "@id": "_:N326d8a7bbdc3494c854f2327073d9a34"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/mbox": [
-      {
-      "@id": "mailto:sdi@eea.europa.eu"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-      "@language": "en",
-      "@value": "European Environment Agency"
       }
     ]
     }

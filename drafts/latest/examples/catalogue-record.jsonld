@@ -29,12 +29,12 @@
     ],
     "http://purl.org/dc/terms/source": [
       {
-      "@id": "_:Ne8fa3e2794c842c386518c369c434220"
+      "@id": "_:Ne3bd3770b33145a1bdb228ca10c01dfe"
       }
     ],
     "http://www.w3.org/ns/dcat#contactPoint": [
       {
-      "@id": "_:N87272a772fb846e4ae3689824be04de2"
+      "@id": "_:Ncaa45f5735b44b84969e6f2a1c93e438"
       }
     ],
     "http://xmlns.com/foaf/0.1/primaryTopic": [
@@ -44,7 +44,29 @@
     ]
     },
     {
-    "@id": "_:N874f33a2c21540ecb7b11a2a92558df1",
+    "@id": "_:Ncaa45f5735b44b84969e6f2a1c93e438",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Organization"
+    ],
+    "http://www.w3.org/2006/vcard/ns#fn": [
+      {
+      "@language": "en",
+      "@value": "European Environment Agency"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasAddress": [
+      {
+      "@id": "_:Nbd347c124b2f4e1183164098c92a4a9c"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasEmail": [
+      {
+      "@id": "mailto:sdi@eea.europa.eu"
+      }
+    ]
+    },
+    {
+    "@id": "_:Ncb8ad9e0974a42d8a3f57dcbdd1bf14b",
     "http://purl.org/dc/terms/title": [
       {
       "@language": "en",
@@ -59,29 +81,20 @@
     ]
     },
     {
-    "@id": "_:N87272a772fb846e4ae3689824be04de2",
-    "@type": [
-      "http://www.w3.org/2006/vcard/ns#Organization"
-    ],
-    "http://www.w3.org/2006/vcard/ns#fn": [
+    "@id": "_:Ne3bd3770b33145a1bdb228ca10c01dfe",
+    "http://purl.org/dc/terms/conformsTo": [
       {
-      "@language": "en",
-      "@value": "European Environment Agency"
+      "@id": "_:Ncb8ad9e0974a42d8a3f57dcbdd1bf14b"
       }
     ],
-    "http://www.w3.org/2006/vcard/ns#hasAddress": [
+    "http://www.w3.org/2011/content#characterEncoding": [
       {
-      "@id": "_:N1f620eb606a34ab2b5097b5fee62cc2b"
-      }
-    ],
-    "http://www.w3.org/2006/vcard/ns#hasEmail": [
-      {
-      "@id": "mailto:sdi@eea.europa.eu"
+      "@value": "UTF-8"
       }
     ]
     },
     {
-    "@id": "_:N1f620eb606a34ab2b5097b5fee62cc2b",
+    "@id": "_:Nbd347c124b2f4e1183164098c92a4a9c",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Address"
     ],
@@ -108,19 +121,6 @@
     "http://www.w3.org/2006/vcard/ns#street-address": [
       {
       "@value": "Kongens Nytorv 6"
-      }
-    ]
-    },
-    {
-    "@id": "_:Ne8fa3e2794c842c386518c369c434220",
-    "http://purl.org/dc/terms/conformsTo": [
-      {
-      "@id": "_:N874f33a2c21540ecb7b11a2a92558df1"
-      }
-    ],
-    "http://www.w3.org/2011/content#characterEncoding": [
-      {
-      "@value": "UTF-8"
       }
     ]
     }

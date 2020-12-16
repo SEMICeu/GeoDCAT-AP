@@ -2,36 +2,36 @@
   {
   "@graph": [
     {
-    "@id": "_:N63a35c4482fe4777be4473208908a64b",
-    "http://www.w3.org/2006/time#inXSDDate": [
-      {
-      "@type": "http://www.w3.org/2001/XMLSchema#date",
-      "@value": "2016-01-01"
-      }
-    ]
-    },
-    {
-    "@id": "_:N2ca196713ccc4dcdb11a7e7f1d92d8f0",
+    "@id": "_:N1f48a509cc7e4a75a0b5389bae14a887",
     "@type": [
       "http://purl.org/dc/terms/PeriodOfTime"
     ],
     "http://www.w3.org/2006/time#hasBeginning": [
       {
-      "@id": "_:N63a35c4482fe4777be4473208908a64b"
+      "@id": "_:Ne0986686b21a4c3c80883dfcbdaa00f3"
       }
     ],
     "http://www.w3.org/2006/time#hasEnd": [
       {
-      "@id": "_:Neacc60f1e19b4f219cf648f07bcbb6fb"
+      "@id": "_:Nf3b2dbc0f8484b8b8492698a97fec7f0"
       }
     ]
     },
     {
-    "@id": "_:Neacc60f1e19b4f219cf648f07bcbb6fb",
+    "@id": "_:Nf3b2dbc0f8484b8b8492698a97fec7f0",
     "http://www.w3.org/2006/time#inXSDDate": [
       {
       "@type": "http://www.w3.org/2001/XMLSchema#date",
       "@value": "2016-12-31"
+      }
+    ]
+    },
+    {
+    "@id": "_:Ne0986686b21a4c3c80883dfcbdaa00f3",
+    "http://www.w3.org/2006/time#inXSDDate": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#date",
+      "@value": "2016-01-01"
       }
     ]
     }

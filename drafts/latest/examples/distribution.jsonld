@@ -2,19 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:Nf113b714c3f84cb491dacf1fbc405f07",
-    "@type": [
-      "http://purl.org/dc/terms/LicenseDocument"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-      "@language": "en",
-      "@value": "The full noise contour maps data set is in principle only available for EEA internal use. A public version of the data set may in the future be available, excluding those data sets for which there is any limitation or restriction in their use (beyond acknowledgement)."
-      }
-    ]
-    },
-    {
-    "@id": "_:Ncccb262cd5ad42a59e4b76ff7549844e",
+    "@id": "_:N6589dfcf8ba14555b76ebb193af5ecad",
     "http://purl.org/dc/terms/conformsTo": [
       {
       "@id": "http://www.opengeospatial.org/standards/wms"
@@ -32,7 +20,7 @@
     ]
     },
     {
-    "@id": "_:N27a2ea538fc649729303f2ce23e18d58",
+    "@id": "_:Nf1833e34feee44cbaeeb61b8b21696f3",
     "@type": [
       "http://www.w3.org/ns/dcat#Distribution"
     ],
@@ -54,7 +42,7 @@
     ],
     "http://purl.org/dc/terms/license": [
       {
-      "@id": "_:Nf113b714c3f84cb491dacf1fbc405f07"
+      "@id": "_:N9e60398de34045aebee7832fa1ed8aa1"
       }
     ],
     "http://www.w3.org/ns/adms#representationTechnique": [
@@ -64,12 +52,24 @@
     ],
     "http://www.w3.org/ns/dcat#accessService": [
       {
-      "@id": "_:Ncccb262cd5ad42a59e4b76ff7549844e"
+      "@id": "_:N6589dfcf8ba14555b76ebb193af5ecad"
       }
     ],
     "http://www.w3.org/ns/dcat#accessURL": [
       {
       "@id": "https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&service=WMS"
+      }
+    ]
+    },
+    {
+    "@id": "_:N9e60398de34045aebee7832fa1ed8aa1",
+    "@type": [
+      "http://purl.org/dc/terms/LicenseDocument"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+      "@language": "en",
+      "@value": "The full noise contour maps data set is in principle only available for EEA internal use. A public version of the data set may in the future be available, excluding those data sets for which there is any limitation or restriction in their use (beyond acknowledgement)."
       }
     ]
     }
