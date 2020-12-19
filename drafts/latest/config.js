@@ -17,6 +17,7 @@ var respecConfig = {
 //    ],
 //    includePermalinks: true,
     addSectionLinks: true,
+    maxTocLevel: 3,
     doJsonLd: true,
     noRecTrack: false,    
     subtitle: "A geospatial extension for the DCAT application profile for data portals in Europe",
@@ -805,6 +806,14 @@ var respecConfig = {
         "title":"Ontology of units of Measure (OM)",
         "publisher":"Wageningen UR",
         "date":"4 June 2018"
+      },
+      "GeoSPARQL11": {
+        "href": "https://github.com/opengeospatial/ogc-geosparql/1.1",
+        "title": "OGC GeoSPARQL 1.1",
+//        "authors": [],
+        "publisher":"OGC",
+        "status":"Draft",
+        "date": "16 December 2020"
       },
     }
   };
