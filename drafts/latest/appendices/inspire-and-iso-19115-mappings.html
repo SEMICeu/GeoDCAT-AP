@@ -77,12 +77,6 @@ For example, this was the case of the work carried out by the <a href="https://w
 </p>
 <p>As it will be explained in <a href="#alignments-defined-in-geodcat-ap"></a>, no new terms have been defined in the current version of GeoDCAT-AP.</p>
 
-<!-- TO BE RESTORED
-<aside class="ednote">
-<p>To be considered the possibility of defining terms for specifying spatial resolution for cases not covered by <code>dcat:spatialResolutionInMeters</code>.</p>
-</aside>
--->
-
 </section>
 
 <section id="metadata-elements-to-be-covered-by-geodcat-ap">
@@ -131,55 +125,19 @@ For example, this was the case of the work carried out by the <a href="https://w
 <p>Finally, the GeoDCAT-AP WG has worked in close coordination with the DCAT-AP WG, in order to ensure mutual compliance of the proposed solutions.</p>
 -->
 <p>The results of this work, reflected in the current version of GeoDCAT-AP, can be summarised as follows:</p>
+
 <ul>
 <li><p>Backward compatibility with [[GeoDCAT-AP-20160802]] is ensured: The revised mappings have been deprecated, but maintained in the mapping rules implemented in [[GeoDCAT-XSLT]] along with the new one, in the extended mapping profile of GeoDCAT-AP, and their support has been included in <a class="no-sectionRef" href="#conformance"></a>.</p></li>
 <li><p>Compliance with [[DCAT-AP-20200608]] is ensured: The geospatial metadata elements covered by the defined mappings include all those that in [[DCAT-AP-20200608]] are mandatory, plus a subset of those that are recommended and optional.</p></li>
 <li><p>GeoDCAT-AP offers alignments for all the metadata elements illustrated in <a href="#metadata-elements-to-be-covered-by-geodcat-ap"></a>, by using existing vocabularies, and without defining new terms.</p></li>
 </ul>
 
-<!-- TO BE RESTORED
-<aside class="ednote">
-<p>To be considered the possibility of defining terms for specifying spatial resolution for cases not covered by <code>dcat:spatialResolutionInMeters</code>.</p>
-</aside>
--->
-
 <p>The majority of the alignments defined in GeoDCAT-AP provide a complete representation of the corresponding geospatial metadata elements, but some metadata elements have open issues:</p>
+
 <ul>
 <li><p>Partial mappings: For some metadata elements, only a partial mapping is available. This concerns data quality and maintenance information, for which only the mandatory components have been mapped (for more details, see <a href="#conformity-and-data-quality---not-in-iso19115-core"></a> and <a href="#maintenance-information---not-in-iso19115-core"></a>, respectively). This decision was taken because existing vocabularies did not offer the ability to represent all the components of these metadata elements.</p></li>
-<!--
-<li><p>Provisional mappings: For some metadata elements, no suitable candidate has been found to model them also partially. This concerns the following element:</p>
-<ul>
-<li><p>spatial resolution (see <a href="#spatial-resolution-spatial-resolution-of-the-dataset"></a>);</p></li>
-<li><p>data quality and conformity (<a href="#conformity-and-data-quality---not-in-iso19115-core"></a>);</p></li>
-<li><p>(coordinate and temporal) reference systems (<a href="#coordinate-reference-systems-and-temporal-reference-systems-reference-system"></a>).</p></li>
-</ul>
-<p>The alignments for this element defined in the current version of GeoDCAT-AP must then be considered as unstable, and are meant to be replaced by appropriate terms defined in standard vocabularies (whether and when available).
--->
-<!--
-Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Spatial Data on the Web Working Group planned to standardise the representation of data granularity (which includes spatial resolution), data quality and conformity, and reference systems.
--->
-</p></li>
 </ul>
 
-<!-- TO BE RESTORED
-<aside class="ednote">
-<p>To be considered the possibility of defining terms for specifying spatial resolution for cases not covered by <code>dcat:spatialResolutionInMeters</code>.</p>
-</aside>
--->
-
-<!--
-<aside class="ednote">
-<p>For possible revisions to the provisional mappings describe above, see the following issues:</p>
--->
-<!--
-<div class="issue" data-number="3"></div>
-<div class="issue" data-number="16"></div>
-<div class="issue" data-number="7"></div>
-<div class="issue" data-number="2"></div>
--->
-<!--
-</aside>
--->
 <p>The details of the alignments defined in GeoDCAT-AP are illustrated in the following section.</p>
 
 </section>
@@ -2460,7 +2418,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 
 <p>In the core profile of [[ISO-19115]], spatial coverage can be specified either with a bounding box (a geometry) or a geographic identifier. INSPIRE is more restrictive, in that it requires to use a bounding box</p>
 
-<p>Based on that, GeoDCAT-AP specified spatial coverage as follows:</p>
+<p>Based on that, GeoDCAT-AP specified spatial coverage as illustrated in the following sections.</p>
 
 <!--
 <dl>
@@ -2491,20 +2449,35 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <li><p>For GML and WKT, the CRS MUST be specified as defined in GeoSPARQL [[GeoSPARQL]].</p></li>
 </ul>
 
-<aside class="note">
-<p>As geometries may be provided in multiple encodings, the corresponding datatype SHOULD be always specified.</p>
+<p>As geometries may be provided in multiple encodings, the corresponding datatype SHOULD be always specified to ensure that the geometry literal is correctly interpreted.</p>
 <p>For GML and WKT, the [[GeoSPARQL]] datatypes <code>gsp:gmlLiteral</code> and <code>gsp:wktLiteral</code>, respectively, MUST be used.</p>
 <p>For GeoJSON [[?RFC7946]], datatype <code>gsp:geoJSONLiteral</code>, defined in the current draft of the new version of GeoSPARQL [[?GeoSPARQL11]], SHOULD be used.</p>
+<p>For the other geometry encodings, no datatype is currently available. Therefore, their interoperability is not ensured.</p>
+
+<aside class="note">
+
+<p>Until [[GeoDCAT-AP-20160802]], the recommended (but provisional) solution to specify the datatype for GeoJSON literals was to use the following URI from the IANA Media Types registry [[IANA-MEDIA-TYPES]]:</p>
+
+<p><code>https://www.iana.org/assignments/media-types/application/vnd.geo+json</code></p>
+
+<p>This solution, intentionally meant to be provisional (see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/4">Issue #4</a>), is deprecated starting from this version of GeoDCAT-AP in favour of <code>gsp:geoJSONLiteral</code>. It will still be supported for backward compatibility with legacy metadata and applications, but it may be phased out in future versions of GeoDCAT-AP.</p>
+
 </aside>
 
+<!--
 <p><a href="#ex-mapping-geo-bbox"></a> shows how to specify the spatial coverage as a bounding box.</p>
+-->
 
 <aside class="example" id="ex-mapping-geo-bbox" title="Spatial coverage as a bounding box">
+
 <p>Resource metadata in GeoDCAT-AP using a geographic bounding box. This example uses multiple encodings, namely, the recommended ones (GML and WKT), plus GeoJSON.</p>
+
 <!--
 <div class="issue" data-number="4"></div>
 -->
+
 <div class="issue" data-number="6"></div>
+
 <pre>[] dct:spatial [ a dct:Location ;
   dcat:bbox &quot;&quot;&quot;
       POLYGON((-10.58 70.09,34.59 70.09,34.59 34.56,-10.58 34.56,-10.58 70.09))
@@ -2515,15 +2488,15 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
         &lt;gml:upperCorner&gt;70.09 34.59&lt;/gml:upperCorner&gt;
       &lt;/gml:Envelope&gt;
     &quot;&quot;&quot;^^gsp:gmlLiteral ; 
-  dcat:bbox """
+  dcat:bbox &quot;&quot;&quot;
       {
-        \"type\":\"Polygon\",
-        \"coordinates\":[[
+        \&quot;type\&quot;:\&quot;Polygon\&quot;,
+        \&quot;coordinates\&quot;:[[
           [-10.58,70.09],[34.59,70.09],[34.59,34.56],
           [-10.58,34.56],[-10.58,70.09]
         ]]
       }
-    """^^&lt;gsp:geoJSONLiteral&gt; ] ;
+    &quot;&quot;&quot;^^&lt;gsp:geoJSONLiteral&gt; ] ;
 .</pre>
 <p>Resource metadata in ISO 19139 using a geographic bounding box:</p>
 <pre>&lt;gmd:MD_Metadata&gt;
@@ -2566,20 +2539,29 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <dt>Geographic identifier</dt>
 <dd>
 -->
+
 <section>
+
 <h2>Geographic identifier</h2>
+
 <p>[[ISO-19115]] core also allows specifying the geographic location using a geographic identifier. Following [[DCAT-AP-20200608]], for this, it is RECOMMENDED to use an HTTP URI from one of the following registers / gazetteers:</p>
+
 <ul>
 <li><p>The Named Authority Lists operated by the Metadata Registry of the EU Publications office concerning continents [[EUV-CONT]], countries [[EUV-COUNTRIES]], and places [[EUV-PLACES]].</p></li>
 </ul>
 <p>If none of the above provides the relevant geographic identifiers, Geonames [[?GEONAMES]] SHOULD be used.</p>
 <p>If an HTTP URI is not available, the geographic identifier MUST be expressed with <code>skos:prefLabel</code>, and the reference to the originating controlled vocabulary (if any) MUST be specified with <code>skos:inScheme</code>. The controlled vocabulary will be described by a name (<code>dct:title</code>) and a last modified data (<code>dct:modified</code>).</p>
+
 <!--
 </dd>
 </dl>
 -->
+
 <p>As far as geographic identifiers are concerned, following [[DCAT-AP-20200608]], GeoDCAT-AP does not prevent the use other vocabularies in addition to the recommended ones. The vocabularies identified by the GeoDCAT-AP WG are listed in <a href="#controlled-vocabularies-to-be-used"></a>.</p>
+
+<!--
 <p><a href="#ex-mapping-geo-id"></a> shows how to specify the spatial coverage as a geographic identifier.</p>
+-->
 
 <aside class="example" id="ex-mapping-geo-id" title="Spatial coverage as a geographic identifier">
 <p>Resource metadata in GeoDCAT-AP using a geographic identifier</p>
