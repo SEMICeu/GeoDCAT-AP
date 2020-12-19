@@ -2454,40 +2454,34 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>In particular:</p>
 <ul>
 <li>Following [[VOCAB-DCAT-2]] and [[DCAT-AP-20200608]], property <code>locn:geometry</code> has been complemented by two additional properties, namely, <code>dcat:bbox</code> and <code>dcat:centroid</code> to be used when the spatial coverage is specified as a bounding box or a centroid, respectively.</li>
+<li>For GeoJSON [[?RFC7946]] literals, <a href="https://www.iana.org/assignments/media-types/application/vnd.geo+json">the GeoJSON IANA media type URI</a> used until [[GeoDCAT-AP-20160802]] is replaced by datatype <code>gsp:geoJSONLiteral</code>, defined in the current draft of the new version of GeoSPARQL [[?GeoSPARQL11]].</li>
 </ul>
 </aside>
 
 <p>In the core profile of [[ISO-19115]], spatial coverage can be specified either with a bounding box (a geometry) or a geographic identifier. INSPIRE is more restrictive, in that it requires to use a bounding box</p>
+
 <p>Based on that, GeoDCAT-AP specified spatial coverage as follows:</p>
+
+<!--
 <dl>
 <dt>Bounding box</dt>
 <dd>
+-->
+
+<section>
+
+<h2>Bounding box</h2>
+
 <p>As a general rule, when the area corresponding to the spatial coverage is denoted by a geometry, as in INSPIRE, [[DCAT-AP-20200608]] recommends the use of the Core Location Vocabulary [[LOCN]], where this is done by using property <a href="https://www.w3.org/ns/locn#locn:geometry"><code>locn:geometry</code></a>, having as range a geometry specified as</p>
+
 <ul>
 <li><p>a URI - e.g., by using the geo URI scheme (IET RFC-5870) [[?RFC5870]], or a geohash URI [[?GEOHASH]], [[?GEOHASH-36]];</p></li>
-<li><p>a syntax encoding scheme - e.g., geohashes [[?GEOHASH]], [[?GEOHASH-36]], WKT [[?ISO-19125-1]], GML [[?GML]], KML [[?KML]], GeoJSON [[?GEOJSON]]; or</p></li>
+<li><p>a syntax encoding scheme - e.g., geohashes [[?GEOHASH]], [[?GEOHASH-36]], WKT [[?ISO-19125-1]], GML [[?GML]], KML [[?KML]], GeoJSON [[?RFC7946]]; or</p></li>
 <li><p>a semantic representation - using vocabularies like W3C Lat/long [[?W3C-BASIC-GEO]] or schema.org [[?SCHEMA-ORG]].</p></li>
 </ul>
+
 <p>However, in case the geometry is a bounding box or a centroid, properties <code>dcat:bbox</code> and <code>dcat:centroid</code>, respectively, SHOULD be used instead of <code>locn:geometry</code>.</p>
 
-<!--
-<aside class="note">
-<p>Please note that the Core Location Vocabulary does not restrict <a href="https://www.w3.org/ns/locn#locn:geometry"><code>locn:geometry</code></a> to bounding box geometries only.</p>
-</aside>
--->
-<!--
-<aside class="ednote">
-<p>For a possible revision to how bounding boxes should be specified, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/1">Issue #1</a>:</p>
--->
-<!--	
-<div class="issue" data-number="1"></div>
--->
-<!--
-</aside>
--->
-<!--
-<aside class="note">
--->
 <p>It is worth noting that currently there is no agreement on a preferred format to be used in RDF for the representation of geometries. In GeoDCAT-AP, geometries can be provided in any, and possibly multiple, encodings, but at least one of the following must be made available: WKT or GML. An additional requirement concerns the coordinate reference system (CRS) used, which may vary on a country or territory basis. The CRS must be specified in the GML or WKT encoding as required by GeoSPARQL [[GeoSPARQL]]. Geometries shall be interpreted using the axis order defined in the spatial reference system used. For example, for <abbr title="WGS 84 longitude-latitude">CRS84</abbr> the axis order is longitude / latitude, whereas for <abbr title="World Geodetic System 1984">WGS84</abbr> the axis order is latitude / longitude. Summarising:</p>
 <!--
 </aside>
@@ -2496,38 +2490,21 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <li><p>Geometries MAY be provided in multiple encodings, but at least one of the following MUST be made available: GML and WKT.</p></li>
 <li><p>For GML and WKT, the CRS MUST be specified as defined in GeoSPARQL [[GeoSPARQL]].</p></li>
 </ul>
-</dd>
-<dt>Geographic identifier</dt>
-<dd>
-<p>[[ISO-19115]] core also allows specifying the geographic location using a geographic identifier. Following [[DCAT-AP-20200608]], for this, it is RECOMMENDED to use an HTTP URI from one of the following registers / gazetteers:</p>
-<ul>
-<li><p>The Named Authority Lists operated by the Metadata Registry of the EU Publications office concerning continents [[EUV-CONT]], countries [[EUV-COUNTRIES]], and places [[EUV-PLACES]].</p></li>
-</ul>
-<p>If none of the above provides the relevant geographic identifiers, Geonames [[?GEONAMES]] SHOULD be used.</p>
-<p>If an HTTP URI is not available, the geographic identifier MUST be expressed with <code>skos:prefLabel</code>, and the reference to the originating controlled vocabulary (if any) MUST be specified with <code>skos:inScheme</code>. The controlled vocabulary will be described by a name (<code>dct:title</code>) and a last modified data (<code>dct:modified</code>).</p>
-</dd>
-</dl>
-<p>As far as geographic identifiers are concerned, following [[DCAT-AP-20200608]], GeoDCAT-AP does not prevent the use other vocabularies in addition to the recommended ones. The vocabularies identified by the GeoDCAT-AP WG are listed in <a href="#controlled-vocabularies-to-be-used"></a>.</p>
-<p><a href="#ex-mapping-geo-bbox"></a> shows how to specify the spatial coverage.</p>
+
+<aside class="note">
+<p>As geometries may be provided in multiple encodings, the corresponding datatype SHOULD be always specified.</p>
+<p>For GML and WKT, the [[GeoSPARQL]] datatypes <code>gsp:gmlLiteral</code> and <code>gsp:wktLiteral</code>, respectively, MUST be used.</p>
+<p>For GeoJSON [[?RFC7946]], datatype <code>gsp:geoJSONLiteral</code>, defined in the current draft of the new version of GeoSPARQL [[?GeoSPARQL11]], SHOULD be used.</p>
+</aside>
+
+<p><a href="#ex-mapping-geo-bbox"></a> shows how to specify the spatial coverage as a bounding box.</p>
 
 <aside class="example" id="ex-mapping-geo-bbox" title="Spatial coverage as a bounding box">
-<p>Resource metadata in GeoDCAT-AP using a geographic bounding box. This example uses multiple encodings, namely, the recommended ones (WKT and GML), plus GeoJSON. To denote the datatype of the GeoJSON literal, <a href="https://www.iana.org/assignments/media-types/application/vnd.geo+json">the URL of the corresponding IANA media type</a>.</p>
+<p>Resource metadata in GeoDCAT-AP using a geographic bounding box. This example uses multiple encodings, namely, the recommended ones (GML and WKT), plus GeoJSON.</p>
 <!--
-<aside class="ednote">
-<p>For a possible revision to how the GeoJSON datatype should be specified, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/4">Issue #4</a>:</p>
--->
 <div class="issue" data-number="4"></div>
-<!--
-</aside>
--->
-<!--
-<aside class="ednote">
-<p>For a possible revision to the use of GeoJSON in GeoDCAT-AP, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/6">Issue #6</a>:</p>
 -->
 <div class="issue" data-number="6"></div>
-<!--
-</aside>
--->
 <pre>[] dct:spatial [ a dct:Location ;
   dcat:bbox &quot;&quot;&quot;
       POLYGON((-10.58 70.09,34.59 70.09,34.59 34.56,-10.58 34.56,-10.58 70.09))
@@ -2537,29 +2514,17 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
         &lt;gml:lowerCorner&gt;34.56 -10.58&lt;/gml:lowerCorner&gt;
         &lt;gml:upperCorner&gt;70.09 34.59&lt;/gml:upperCorner&gt;
       &lt;/gml:Envelope&gt;
-    &quot;&quot;&quot;^^gsp:gmlLiteral 
-  ] ;
-<!--
-  dcat:bbox &quot;{\&quot;type\&quot;:\&quot;Polygon\&quot;,\&quot;crs\&quot;:{\&quot;type\&quot;:\&quot;name\&quot;,\&quot;properties\&quot;:{\&quot;name\&quot;:\&quot;urn:ogc:def:crs:OGC:1.3:CRS84\&quot;}},
-      \&quot;coordinates\&quot;:[[[-10.58,70.09],[34.59,70.09],[34.59,34.56],[-10.58,34.56],[-10.58,70.09]]]
-    }&quot;^^&lt;https://www.iana.org/assignments/media-types/application/vnd.geo+json&gt; ] ;
--->    
+    &quot;&quot;&quot;^^gsp:gmlLiteral ; 
+  dcat:bbox """
+      {
+        \"type\":\"Polygon\",
+        \"coordinates\":[[
+          [-10.58,70.09],[34.59,70.09],[34.59,34.56],
+          [-10.58,34.56],[-10.58,70.09]
+        ]]
+      }
+    """^^&lt;gsp:geoJSONLiteral&gt; ] ;
 .</pre>
-<p>Resource metadata in GeoDCAT-AP using a geographic identifier</p>
-<pre># If a URI is used for the geographic identifier (recommended)
-[]
-  dct:spatial &lt;http://publications.europa.eu/resource/authority/country/NLD&gt; .
-
-# If no URI is used for the geographic identifier
-[]
-  dct:spatial [
-    skos:preflabel &quot;Netherlands&quot;@en;
-    skos:prefLabel &quot;Nederland&quot;@nl;
-    skos:inScheme [
-      dct:title &quot;Countries Authority Table&quot;@en;
-      dct:modified &quot;2009-01-01&quot;^^xsd:date
-    ]
-  ] .</pre>
 <p>Resource metadata in ISO 19139 using a geographic bounding box:</p>
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
@@ -2593,6 +2558,49 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
 </aside>
+
+</section>
+
+<!--
+</dd>
+<dt>Geographic identifier</dt>
+<dd>
+-->
+<section>
+<h2>Geographic identifier</h2>
+<p>[[ISO-19115]] core also allows specifying the geographic location using a geographic identifier. Following [[DCAT-AP-20200608]], for this, it is RECOMMENDED to use an HTTP URI from one of the following registers / gazetteers:</p>
+<ul>
+<li><p>The Named Authority Lists operated by the Metadata Registry of the EU Publications office concerning continents [[EUV-CONT]], countries [[EUV-COUNTRIES]], and places [[EUV-PLACES]].</p></li>
+</ul>
+<p>If none of the above provides the relevant geographic identifiers, Geonames [[?GEONAMES]] SHOULD be used.</p>
+<p>If an HTTP URI is not available, the geographic identifier MUST be expressed with <code>skos:prefLabel</code>, and the reference to the originating controlled vocabulary (if any) MUST be specified with <code>skos:inScheme</code>. The controlled vocabulary will be described by a name (<code>dct:title</code>) and a last modified data (<code>dct:modified</code>).</p>
+<!--
+</dd>
+</dl>
+-->
+<p>As far as geographic identifiers are concerned, following [[DCAT-AP-20200608]], GeoDCAT-AP does not prevent the use other vocabularies in addition to the recommended ones. The vocabularies identified by the GeoDCAT-AP WG are listed in <a href="#controlled-vocabularies-to-be-used"></a>.</p>
+<p><a href="#ex-mapping-geo-id"></a> shows how to specify the spatial coverage as a geographic identifier.</p>
+
+<aside class="example" id="ex-mapping-geo-id" title="Spatial coverage as a geographic identifier">
+<p>Resource metadata in GeoDCAT-AP using a geographic identifier</p>
+<pre># If a URI is used for the geographic identifier (recommended)
+[]
+  dct:spatial &lt;http://publications.europa.eu/resource/authority/country/NLD&gt; .
+
+# If no URI is used for the geographic identifier
+[]
+  dct:spatial [
+    skos:preflabel &quot;Netherlands&quot;@en;
+    skos:prefLabel &quot;Nederland&quot;@nl;
+    skos:inScheme [
+      dct:title &quot;Countries Authority Table&quot;@en;
+      dct:modified &quot;2009-01-01&quot;^^xsd:date
+    ]
+  ] .</pre>
+</aside>
+
+</section>
+
 </section>
 
 <section id="temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp">
