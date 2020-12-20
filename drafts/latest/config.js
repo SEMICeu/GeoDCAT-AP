@@ -138,7 +138,7 @@ var respecConfig = {
       key: "Document version",
       data: [
       {
-        value: "0.1"
+        value: "0.2"
       }
       ]
     },
