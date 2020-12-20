@@ -36,44 +36,34 @@ table code, table pre {
 </style>
 </head>
 <body>
-<!--
-<article>
--->
-<!--
-<header>
-</header>
--->
-<!--
-<aside id="disclaimer" class="disclaimer">
-The views expressed are purely those of the author and may not in any circumstances be regarded as stating an official position of the European Commission.
-</aside>
--->
-<!--
-<p class="copyright"><a href="https://europa.eu/european-union/abouteuropa/legal_notices_en#copyright_notice">Copyright</a> © 2015-2020 <a href="https://europa.eu/">European Union</a>. This document is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" class="subfoot">Creative Commons Attribution 4.0 License</a>.</p>
--->
 
 <section id="abstract" class="introductory">
+
 <h2>Abstract</h2>
+
 <p>GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 and those defined in the framework of the <abbr title="Infrastructure for spatial information in Europe">INSPIRE</abbr> Directive of the European Union.</p>
+
 <p>This document is the result of the major change release process described in the Change and Release Management Policy for DCAT-AP and was built starting from GeoDCAT-AP version 1.0.1.</p>
+
 <p>Comments and queries should be sent via <a href="https://github.com/semiceu/geodcat-ap/issues/">the issue tracker of the dedicated GitHub repository</a>.</p>
+
 </section>
 
 <section id="disclaimer" class="introductory">
+
 <h2>Disclaimer</h2>
-<!--
-<p>The views expressed are purely those of the author and may not in any circumstances be regarded as stating an official position of the European Commission.</p>
--->
-<p>The views expressed in this report are purely those of the Author(s) and may not, in any circumstances, be interpreted as stating an official position of the European Commission.</p>
+
+<p>The views expressed in this document are purely those of the Author(s) and may not, in any circumstances, be interpreted as stating an official position of the European Commission.</p>
+
 <p>The European Commission does not guarantee the accuracy of the information included in this study, nor does it accept any responsibility for any use thereof.</p>
+
 <p>Reference herein to any specific products, specifications, process, or service by trade name, trademark, manufacturer, or otherwise, does not necessarily constitute or imply its endorsement, recommendation, or favouring by the European Commission.</p>
+
 <p>All care has been taken by the author to ensure that s/he has obtained, where necessary, permission to use any parts of manuscripts including illustrations, maps, and graphs, on which intellectual property rights already exist from the titular holder(s) of such rights or from her/his or their legal representative.</p>
+
 </section>
 
 <section id="sotd" class="introductory">
-<!--
-<h2>Status of this document</h2>
--->
 </section>
 
 <section id="document-history" class="introductory">
@@ -93,12 +83,11 @@ The views expressed are purely those of the author and may not in any circumstan
 <section id="introduction" class="informative">
 
 <h2>Introduction</h2>
-<!--
-<div class="issue" data-number="123"></div>
--->
 
 <p>This document contains version 2.0.0 of the specification for GeoDCAT-AP, an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]] for describing geospatial datasets, dataset series, and services.</p>
+
 <p>Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 [[ISO-19115]] and those defined in the framework of the INSPIRE Directive [[INSPIRE-DIR]].</p>
+
 <p><strong>The GeoDCAT-AP specification does not replace the INSPIRE Metadata Regulation</strong> [[?INSPIRE-MD-REG]] <strong>nor the INSPIRE Metadata technical guidelines</strong> [[INSPIRE-MD]] <strong>based on ISO 19115 and ISO 19119.</strong> Its purpose is to give owners of geospatial metadata the possibility to achieve more by providing the means of an <em>additional</em> implementation through harmonised RDF syntax bindings. Conversion rules to RDF syntax would allow Member States to maintain their collections of INSPIRE-relevant datasets following the INSPIRE Metadata technical guidelines based on [[ISO-19115]] and [[ISO-19119]], while at the same time publishing these collections on [[DCAT-AP]]-conformant data portals. A conversion to an RDF representation allows additional metadata elements to be displayed on general-purposed data portals, provided that such data portals are capable of displaying additional metadata elements. Additionally, data portals may be capable of providing machine-to-machine interfaces where additional metadata could be provided.</p>
 
 <section id="context">
@@ -124,14 +113,13 @@ The views expressed are purely those of the author and may not in any circumstan
 <section id="scope-of-the-revision">
 
 <h3>Scope of the revision</h3>
-<!--
-<aside class="ednote">
-<p>To be revised</p>
-</aside>
--->
+
 <p>The objective of this work is to produce an updated release of GeoDCAT-AP based on requests for change coming from real-world implementations of the specification and an alignment with [[DCAT-AP-20200608]] and [[INSPIRE-MD-20170302]].</p> 
+
 <p>As [[DCAT-AP-20200608]], the Application Profile specified in this document is based on the specification of the <strong>Data Catalog Vocabulary</strong> (DCAT), originally  developed under the responsibility of the Government Linked Data Working Group [[GLD]] at W3C, and significantly revised in 2020 by the W3C Dataset Exchange Working Group [[DXWG]]. DCAT is an RDF [[RDF11-CONCEPTS]] vocabulary designed to facilitate interoperability between data catalogues published on the Web. Additional classes and properties from other well-known vocabularies are re-used where necessary.</p> 
+
 <p>The work does not cover implementation issues like mechanisms for exchange of data and expected behaviour of systems implementing the Application Profile other than what is defined in the Conformance Statement in <a class="no-sectionRef" href="#conformance"></a>.</p> 
+
 <p>The Application Profile is intended to facilitate data exchange and therefore the classes and properties defined in this document are only relevant for the data to be exchanged; there are no requirements for communicating systems to implement specific technical environments. The only requirement is that the systems can export and import data in RDF in conformance with this Application Profile.</p> 
 
 </section>
@@ -139,15 +127,13 @@ The views expressed are purely those of the author and may not in any circumstan
 <section id="specification">
 
 <h3>A DCAT-AP extension</h3>
-<!--
-<aside class="ednote">
-<p>To be revised: adjust to official release of DCAT-AP. Plus propagate this through the text.</p>
-</aside>
--->
+
 <!--
 <p>The DCAT-AP Application Profile defined in this document is based on the specification of the Data Catalog Vocabulary (DCAT) of 16 January 2014 [[VOCAB-DCAT-20140116]], and the Data Catalog Vocabulary (DCAT) - Version 2, W3C Candidate Recommendation 03 October 2019 [[VOCAB-DCAT-2-20191003]].</p>
 -->
+
 <p>The GeoDCAT-AP specification is designed as an extension of DCAT-AP in conformance with the guidelines for the creation of DCAT-AP extensions [[DCAT-AP-EG]]. The DCAT-AP Application Profile on which this document is based is the DCAT-AP specification of 8 June 2020 [[DCAT-AP-20200608]].  According to the same principles DCAT-AP is in itself an extension of DCAT.</p>
+
 <p>This dependency must be taken into account while reading and using this specification. When implementing GeoDCAT-AP, these specifications should be consulted first, to fill in any missing gaps in this document.</p> 
 
 </section>
@@ -157,11 +143,11 @@ The views expressed are purely those of the author and may not in any circumstan
 <section id="terminology">
 
 <h2>Terminology used in the Application Profile</h2>
-<!--
-<div class="issue" data-number="35"></div> 
--->
+
 <p>A <strong>Vocabulary</strong> is a specification that determines the semantics of terms (classes and properties) in a broad context of information exchange. The defined terms are higly reusable.</p>
+
 <p>A <strong>Controlled Vocabulary</strong> is an organised arrangement of words and phrases used to index content and/or to retrieve content through browsing or searching. It typically includes preferred and variant terms and has a defined scope or describes a specific domain [[?GETTY]]. Within this specification, it is also used as a synonym for a codelist. 
+
 <p>An <strong>Application Profile</strong> is a specification that re-uses terms from one or more base standards (vocabularies), adding more specificity by identifying mandatory, recommended and optional elements to be used for a particular application, as well as recommendations for controlled vocabularies to be used.</p>
 
 <!--
@@ -173,11 +159,8 @@ The views expressed are purely those of the author and may not in any circumstan
 <p>A <strong>Data Portal</strong> is a Web-based system that contains a data catalogue with descriptions of datasets and provides services enabling discovery and re-use of the datasets.</p>
 -->
 
-<!--
-<div class="issue" data-number="48"></div> 
--->
-
 <p>In the following sections, classes and properties are grouped under headings ‘mandatory’, ‘recommended’ and ‘optional’. These terms have the following meaning:</p>
+
 <ul>
 <li><strong>Mandatory class</strong>: a receiver MUST be able to process information about instances of the class; a sender MUST provide information about instances of the class.</li>
 <li><strong>Recommended class</strong>: a receiver MUST be able to process information about instances of the class; a sender SHOULD provide information about instances of the class; a sender of data MUST provide information about instances of the class, if such information is available.</li>
@@ -208,6 +191,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h3>Namespaces</h3>
 
 <p>The namespace for GeoDCAT-AP is: <code>http://data.europa.eu/930/</code></p>
+
 <p>The suggested namespace prefix is: <code>geodcatap</code></p>
 
 <p>The Application Profile reuses terms from various existing specifications, following <a data-cite="?DWBP#dataVocabularies">established best practices</a> [[?DWBP]]. The following table indicates the full list of corresponding namespaces used in this document.</p>
@@ -254,15 +238,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <section id="classes">
 
 <h2>Application Profile Classes</h2>
-<!--
-<aside class="ednote">
-<p>Column "Reference" in the tables of the following sections cites different versions of [[VOCAB-DCAT]] and [[DCTERMS]].</p>
-<p>It would make sense to fix this inconsistency - there's the same problem in the [[DCAT-AP-20200608]] specification, from which these tables have been taken.</p>
-</aside>
--->
-<!--
-<div class="issue" data-number="36"></div>  
--->  
+
 <section id="mandatory-classes">
 
 <h3>Mandatory Classes</h3>
@@ -312,14 +288,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <section id="properties">
 
 <h2>Application Profile Properties per Class</h2>
-<!--
-<aside class="ednote">
-<p>To be revised.</p>
-<p>Classes have been listed as in [[DCAT-AP-20200608]], followed by those classes added by GeoDCAT-AP, so to preserve the section numbering.</p>
-<p>The current listing is not optimal, as the criteria behind the order in which classes are listed is unclear. Moreover, in each section there is no indication of whether a class is mandatory, recommended, or optional, and so readers need to go back to <a class="no-sectionRef" href="#classes"></a> to check this.</p>
-<p>An option would be to group classes into specific sections - mandatory classes, recommended classes, optional classes - and to list them in alphabetical order, as done in <a class="no-sectionRef" href="#classes"></a>.</p>
-</aside>
--->
+
 <p>A quick reference table of properties per class is included in <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a>. The list of included properties contains all the properties in [[DCAT-AP-20200608]], plus a selection of properties from [[VOCAB-DCAT-2]] and [[DCTERMS]], on which GeoDCAT-AP expresses additional constraints or on which GeoDCAT-AP wants to emphasise their usage.
 <!--
 A property which is not mentioned but would be applicable for a class according to [[VOCAB-DCAT-2]] is considered out of scope for GeoDCAT-AP.
@@ -631,6 +600,7 @@ A property which is not mentioned but would be applicable for a class according 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-catalogue.html"></div>
 
 </section>
+
 <!--
 <section id="examples-for-catalogue">
 
@@ -642,6 +612,7 @@ A property which is not mentioned but would be applicable for a class according 
 
 </section>
 -->
+
 </section>
 
 <!-- Catalogue Record -->
@@ -1622,7 +1593,9 @@ A property which is not mentioned but would be applicable for a class according 
 <h3>Requirements for controlled vocabularies</h3>
 
 <p>The following is a list of requirements that were identified for the controlled vocabularies to be recommended in this Application Profile.</p>
+
 <p>Controlled vocabularies SHOULD:</p>
+
 <ul>
 <li>Be published under an open licence.</li>
 <li>Be operated and/or maintained by an institution of the European Union, by a recognised standards organisation or another trusted organisation.</li>
@@ -1632,6 +1605,7 @@ A property which is not mentioned but would be applicable for a class according 
 <li>Have terms that are identified by URIs with each URI resolving to documentation about the term.</li>
 <li>Have associated persistence and versioning policies.</li>
 </ul>
+
 <p>These criteria do not intend to define a set of requirements for controlled vocabularies in general; they are only intended to be used for the selection of the controlled vocabularies that are proposed for this Application Profile.</p>
 
 </section>
@@ -1639,14 +1613,11 @@ A property which is not mentioned but would be applicable for a class according 
 <section id="controlled-vocabularies-to-be-used">
 
 <h3>Controlled vocabularies to be used</h3>
-<!--
-<aside class="ednote">
-<p>To be revised to include those used by GeoDCAT-AP</p>
-</aside>
--->
+
 <p>In the table below, a number of properties are listed with controlled vocabularies that MUST be used for the listed properties. The declaration of the following controlled vocabularies as mandatory ensures a minimum level of interoperability.</p>
 
 <p>Compared with [[DCAT-AP-20200608]], GeoDCAT-AP makes use of additional controlled vocabularies mandated by [[INSPIRE-MD-REG]], and operated by the INSPIRE Registry - with the only exceptions of the coordinate reference systems register maintained by OGC [[OGC-EPSG]].</p>
+
 <p>For two of these controlled vocabularies, namely the INSPIRE spatial data themes [[INSPIRE-THEMES]] and the ISO topic categories [[INSPIRE-TC]], the GeoDCAT-AP Working Group has defined a set of harmonised mappings to the EU Vocabularies Data Themes [[EUV-THEMES]], in order to facilitate the identification of the relevant theme in [[EUV-THEMES]] for geospatial metadata. The status of this work, along with links to a machine readable representation of the mappings, is documented on a dedicated page in Joinup [[?GeoDCAT-ACV]].</p>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/controlled-vocabularies-to-be-used.html"></div>
@@ -1660,12 +1631,6 @@ A property which is not mentioned but would be applicable for a class according 
 <p>In addition to the proposed common vocabularies in <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>, which are mandatory to ensure minimal interoperability, implementers are encouraged to publish and to use further region or domain-specific vocabularies that are available online. While those may not be recognised by general implementations of the Application Profile, they may serve to increase interoperability across applications in the same region or domain. Examples are the full set of concepts in EuroVoc [[?EUV-EUROVOC]], the CERIF standard vocabularies [[?CERIF-VOCS]], the Dewey Decimal Classification [[?DDC]] and numerous other schemes.</p>
 
 <p>For geospatial metadata, the working group has identified the following additional vocabularies:</p>
-<!--
-<aside class="ednote">
-<p>This is the list of recommended vocabularies in [[GeoDCAT-AP-20160802]].</p>
-<p>To be decided if any revision is needed.</p>
-</aside>
--->
   
 <div class="issue" data-number="49"></div>
 
@@ -1709,6 +1674,7 @@ A property which is not mentioned but would be applicable for a class according 
 
 <p>Concerning licence vocabularies, implementers are encouraged to use widely recognised licences such as Creative Commons licences [[?CC]], and in particular the CC Zero Public Domain Dedication [[?CC0]] or CC-BY Attribution 4.0 International [[?CC-BY]], or  the Open Data Commons Public Domain Dedication and License (PDDL) [[?PDDL]]. 
 Often there is applicable legislation or a licency policy in place which determine the set of licences to be used. They may recommend the use of an open government licence such as the UK Open Government Licence [[?UKOGL]].</p>
+
 <p>Further activities in this area are undertaken by the Open Data Institute [[?ODI]] with the Open Data Rights Statement Vocabulary [[?ODRS]] and by the Open Digital Rights Language (ODRL) Initiative [[VOCAB-ODRL]].</p>
 
 </section>
@@ -1716,14 +1682,13 @@ Often there is applicable legislation or a licency policy in place which determi
 </section>
 
 <section id="conformance">
-<!--
-<h2>Conformance Statement</h2>
--->
+
 <section id="provider-requirements">
 
 <h2>Provider requirements</h2>
 
 <p>In order to conform to this Application Profile, an application that provides metadata MUST:</p>
+
 <ul>
 <li>Provide a description of the Catalogue, including at least the mandatory properties specified in <a class="no-sectionRef" href="#mandatory-properties-for-catalogue"></a>.</li>
 <li>Provide information for the mandatory properties specified in <a class="no-sectionRef" href="#mandatory-properties-for-catalogue-record"></a>, if descriptions of Catalogue Records are provided – please note that the provision of descriptions of Catalogue Records is optional.</li>
@@ -1734,8 +1699,11 @@ Often there is applicable legislation or a licency policy in place which determi
 <li>Provide descriptions of all category schemes that contain the categories that are asserted in any of the descriptions of Datasets in the Catalogue, including at least the mandatory properties specified in <a class="no-sectionRef" href="#mandatory-properties-for-category-scheme"></a>.</li>
 <li>Provide descriptions of all categories involved in the descriptions of Datasets in the Catalogue, including at least the mandatory properties specified in <a class="no-sectionRef" href="#mandatory-properties-for-category"></a>.</li>
 </ul>
+
 <p>For the properties listed in the table in <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>, the associated controlled vocabularies MUST be used. Additional controlled vocabularies MAY be used.</p>
+
 <p>In addition to the mandatory properties, any of the recommended and optional properties defined in <a class="no-sectionRef" href="#properties"></a> MAY be provided.</p>
+
 <p>Recommended and optional classes may have mandatory properties, but those only apply if and when an instance of such a class is present in a description.</p>
 
 </section>
@@ -1745,11 +1713,13 @@ Often there is applicable legislation or a licency policy in place which determi
 <h2>Receiver requirements</h2>
 
 <p>In order to conform to this Application Profile, an application that receives metadata MUST be able to:</p>
+
 <ul>
 <li>Process information for all classes specified in <a class="no-sectionRef" href="#classes"></a>.</li>
 <li>Process information for all properties specified in <a class="no-sectionRef" href="#properties"></a>.</li>
 <li>Process information for all controlled vocabularies specified in <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>.</li>
 </ul>
+
 <p>As stated in <a class="no-sectionRef" href="#terminology"></a>, "processing" means that receivers must accept incoming data and transparently provide these data to applications and services. It does neither imply nor prescribe what applications and services finally do with the data (parse, convert, store, make searchable, display to users, etc.).</p>
 
 </section>
@@ -1761,16 +1731,6 @@ Often there is applicable legislation or a licency policy in place which determi
 <section id="agent-roles" class="informative">
 
 <h2>Agent Roles</h2>
-
-<!--
-<aside class="ednote">
-<p>To be revised</p>
-</aside>
--->
-
-<!--  
-<div class="issue" data-number="30"></div>
--->  
 
 <!--  
 <p>GeoDCAT-AP supports the 11 agent roles defined in [[INSPIRE-MD-REG]] and [[ISO-19115]] by using the relevant properties from [[DCAT-AP-20200608]] and [[DCTERMS]] - namely, <code>dcat:contactPoint</code>, <code>dct:creator</code>, <code>dct:publisher</code>, and <code>dct:rightsHolder</code> (not supported in [[DCAT-AP-20200608]]) - and by defining new properties for the roles not covered by those vocabularies - namely, <code>geodcatap:custodian</code>, <code>geodcatap:distributor</code>, <code>geodcatap:originator</code>, <code>geodcatap:principalInvestigator</code>, <code>geodcatap:processor</code>, <code>geodcatap:resourceProvider</code>, and <code>geodcatap:user</code>.</p>
@@ -1805,11 +1765,9 @@ Often there is applicable legislation or a licency policy in place which determi
 </aside>  
 -->
 
-<!--  
-<div class="issue" data-number="32"></div>  
--->
-  
 <div class="issue" data-number="39"></div>
+
+<div class="issue" data-number="57"></div>
 
 </section>
 
@@ -1818,14 +1776,13 @@ Often there is applicable legislation or a licency policy in place which determi
 <section id="conformance-test-results" class="informative">
 
 <h2>Conformance Test Results</h2>
-<!--
-<aside class="ednote">
-<p>TBD</p>
-</aside>
--->
+
 <p>Following [[INSPIRE-MD-REG]] and [[ISO-19115]], GeoDCAT-AP supports the specification of test results to assess the degree of conformity of a resource (i.e., a Catalogue, a Dataset, a Data Service) with a given specification (e.g., a standard, a set of implementing rules, a set of data quality or interoperability criteria).</p>
+
 <p>For this purpose, GeoDCAT-AP makes use of two different but not mutually exclusive approaches. More precisely, property <code>dct:conformsTo</code> is used when the test result states that a resource is conformant with a given specification. The more general approach is based on [[PROV-O]], and it specifies conformance test results as a testing activity (<code>prov:Activity</code>) that generates a result (specified with property <code>prov:generated</code>), corresponding to one of the degrees of conformity defined in [[INSPIRE-MD-REG]], and available from the INSPIRE Registry [[INSPIRE-DoC]]. The specification against which the testing activity is carried out is specified via a &ldquo;qualified association&rdquo; (<code>prov:qualifiedAssociation</code>), linked to a &ldquo;plan&rdquo; (<code>prov:hadPlan</code>) derived from (<code>prov:wasDerivedFrom</code>) the specification itself.</p> 
+
 <p>This pattern is illustrated in <a href="#ex-activity"></a>.</p>
+
 <p>More details on these solutions are available in <a class="no-sectionRef" href="#conformity-and-data-quality---not-in-iso19115-core"></a>.</p>
 
 </section>
@@ -1837,17 +1794,26 @@ Often there is applicable legislation or a licency policy in place which determi
 <h2>Accessibility and Multilingual Aspects</h2>
 
 <p><strong>Accessibility</strong> in the context of this Application Profile is limited to information about the technical format of distributions of datasets. The properties <code>dcat:mediaType</code> and <code>dct:format</code> provide information that can be used to determine what software can be deployed to process the data. The accessibility of the data within the datasets needs to be taken care of by the software that processes the data and is outside of the scope of this Application Profile.</p>
+
 <p><strong>Multilingual aspects</strong> related to this Application Profile concern all properties whose contents are expressed as strings (i.e. <code>rdfs:Literal</code>) with human-readable text. Wherever such properties are used, the string values are of one of two types:</p>
+
 <ul>
 <li>The string is free text. Examples are descriptions and labels. Such text may be translated into several languages.</li>
 <li>The string is an appellation of a ‘named entity’. Examples are names of organisations or persons. These names may have parallel versions in other languages but those versions don’t need to be literal translations.</li>
 </ul>
+
 <p>Wherever values of properties are expressed with either type of string, the property can be repeated with translations in the case of free text and with parallel versions in case of named entities. For free text, e.g. in the cases of titles, descriptions and keywords, the <strong>language tag</strong> is mandatory. </p>
+
 <p>Language tags to be used with <code>rdfs:Literal</code> are defined by [[BCP47]], which allows the use of the "t" extension for text transformations defined in [[RFC6497]] with the field "t0" [[CLDR]] indicating a machine translation.</p>
+
 <p>A language tag will look like: "en-t-es-t0-abcd", which conveys the information that the string is in English, translated from Spanish by machine translation using a tool named "abcd".</p>
+
 <p>For named entities, the language tag is optional and should only be provided if the parallel version of the name is strictly associated with a particular language. For example, the name ‘European Union’ has parallel versions in all official languages of the union, while a name like ‘W3C’ is not associated with a particular language and has no parallel versions.</p>
+
 <p>For linking to different language versions of associated web pages (e.g. landing pages) or documentation, a content negotiation [[CONNEG]] mechanism may be used whereby different content is served based on the Accept-Languages indicated by the browser. Using such a mechanism, the link to the page or document can resolve to different language versions of the page or document.</p>
+
 <p>All the occurrences of the property <code>dct:language</code>, which can be repeated if the metadata is provided in multiple languages, must have a URI as their object, not a literal string from the [[ISO-639]] code list.</p>
+
 <p>How multilingual information is handled in systems, for example in indexing and user interfaces, is outside of the scope of this Application Profile.</p>
 
 </section>
@@ -1857,6 +1823,7 @@ Often there is applicable legislation or a licency policy in place which determi
 <h2>Privacy and security considerations </h2>
 
 <p>The GeoDCAT-AP vocabulary supports the attribution of data and metadata to various participants such as resource creators, publishers and other parties or agents, and as such defines terms that may be related to personal information. In addition, it also supports the association of rights and licenses with cataloged Resources and Distributions. These rights and licenses could potentially include or reference sensitive information such as user and asset identifiers as <a data-cite="VOCAB-ODRL#privacy-consideration">described</a> in [[VOCAB-ODRL]].</p>
+
 <p>Implementations that produce, maintain, publish or consume such vocabulary terms must take steps to ensure security and privacy considerations are addressed at the application level.</p>
 
 </section>
@@ -1916,26 +1883,6 @@ Often there is applicable legislation or a licency policy in place which determi
 
 <h2>Deprecated classes and properties</h2>
 
-<!--
-<aside class="ednote">
-<p>TBD</p>
-</aside>
-
-<table class="simple" id="table-deprecated-classes-and-properties">
-<thead>
-<tr>
-<th>Class / Property</th>
-<th>URI</th>
-<th>Domain</th>
-<th>Replaced by</th>
-<th>Deprecated in</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
--->
-
 <div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-classes-and-properties.html"></div>
 
 </section>
@@ -1947,11 +1894,7 @@ Often there is applicable legislation or a licency policy in place which determi
 <section id="inspire-and-iso-19115-mappings" class="appendix">
 
 <h2>INSPIRE and ISO 19115 Mappings</h2>
-<!--
-<aside class="ednote">
-<p>To be revised and updated</p>
-</aside>
--->
+
 <div data-include-format="html" data-include-replace="true" data-include="./appendices/inspire-and-iso-19115-mappings.html"></div>
 
 </section>
@@ -1985,11 +1928,6 @@ Often there is applicable legislation or a licency policy in place which determi
 <section id="changes" class="appendix">
 
 <h2>Change Log</h2>
-<!--
-<aside class="ednote">
-<p>To be revised</p>
-</aside>
--->
 
 <p>A full change-log is available on <a href="https://github.com/semiceu/GeoDCAT-AP/commits/gh-pages/drafts/latest/">GitHub</a></p>
 
@@ -2010,30 +1948,9 @@ Often there is applicable legislation or a licency policy in place which determi
 
 <h2>Changes since GeoDCAT-AP 1.0.1 (2 August 2016)</h2>
 
-<!--
-<p>Further textual changes (release 2.0.0)</p>
--->
-
 <ul>
 <li>Document completely re-written starting from the [[DCAT-AP-20200608]] specification, with the purpose of using a consistent document structure across DCAT-AP specifications.</li>
 <li>Use of classes and properties aligned with [[DCAT-AP-20200608]] (see issues <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/1">#1</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/2">#2</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/5">#5</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/7">#7</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/8">#8</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/10">#10</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/16">#16</a>). Classes and properties no longer used or replaced by new ones have been deprecated (see <a class="no-secRef" href="#deprecated-classes-and-properties"></a>).</li>
-<!--
-<li>Throughout the document, links are made clickable</li>
-<li>Apply various typo fixes indicated in the public review</li>
-<li>Page 15, Table 4.4.3, Optional properties for Distribution, the usage note for <code>adms:status</code> property has been updated to include &ldquo;It MUST take one of the values Completed, Deprecated, Under Development, Withdrawn&rdquo;</li>
-<li>Page 8, the following namespaces has been added:
-<ul>
-<li>vann: http://purl.org/vocab/vann/</li>
-<li>dcatap: http://data.europa.eu/r5r/</li>
-<li>voaf: http://purl.org/vocommons/voaf/#</li>
-<li>odrl: http://www.w3.org/ns/odrl/2/</li>
-<li>locn: http://www.w3.org/ns/locn#</li>
-</ul>
-</li>
-<li>Section 4. Added explanatory paragraph on the relationship with W3C DCAT 2.0</li>
-<li>Page 29, updated text to reflect agent roles and their relations to dataset using new added properties.</li>
-<li>Section Acknowledgements, added list of contributors.</li>
--->
 </ul>
 
 </section>
@@ -2042,9 +1959,6 @@ Often there is applicable legislation or a licency policy in place which determi
 
 <h2>Changes since GeoDCAT-AP 1.0.0 (23 December 2015)</h2>
 
-<!--
-<p>Further textual changes (release 1.0.1 [[GeoDCAT-AP-20160802]]):</p>
--->
 <ul>
 <li>Corrected a typo concerning the URIs of the code lists of the INSPIRE Registry. No other changes have been done on [[GeoDCAT-AP-20151223]].</li>
 </ul>
@@ -2063,13 +1977,6 @@ Often there is applicable legislation or a licency policy in place which determi
 
 </section>
 
-<!--
-</article>
--->
-
-<!--
-<script src="./js/script.js"></script>
--->
-
 </body>
+
 </html>
