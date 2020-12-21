@@ -2,7 +2,18 @@
   {
   "@graph": [
     {
-    "@id": "_:N54b69afcb1654d6a933c51d97532d54e",
+    "@id": "_:Nfe9cff76bcfe4644b6ebda8a0b06c7f8",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Distribution"
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+      "@id": "_:N49784a5fca0943fbb3870cbd760eaf1c"
+      }
+    ]
+    },
+    {
+    "@id": "_:N49784a5fca0943fbb3870cbd760eaf1c",
     "@type": [
       "http://purl.org/dc/terms/MediaType"
     ],
@@ -11,19 +22,8 @@
       "@value": "Geopackage"
       }
     ]
-    },
-    {
-    "@id": "_:N2a6e2fef6bed4441bfcfbb6dcab41596",
-    "@type": [
-      "http://www.w3.org/ns/dcat#Distribution"
-    ],
-    "http://purl.org/dc/terms/format": [
-      {
-      "@id": "_:N54b69afcb1654d6a933c51d97532d54e"
-      }
-    ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/media-type.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP/drafts/latest/examples/media-type.rdf"
   }
 ]

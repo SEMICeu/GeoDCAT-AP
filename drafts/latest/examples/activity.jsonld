@@ -2,7 +2,28 @@
   {
   "@graph": [
     {
-    "@id": "_:Nc95889facf5144e8ae824b78556c9c65",
+    "@id": "_:N85c8c7962c4248029830cd97beb30ffc",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/ns/prov#generated": [
+      {
+      "@id": "_:N7b1e7d0ab4284e76b755706c4ff60e03"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedAssociation": [
+      {
+      "@id": "_:N89b8f9cbc02f47928d48948dc42ab707"
+      }
+    ],
+    "http://www.w3.org/ns/prov#used": [
+      {
+      "@id": "https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00"
+      }
+    ]
+    },
+    {
+    "@id": "_:N7b1e7d0ab4284e76b755706c4ff60e03",
     "@type": [
       "http://www.w3.org/ns/prov#Entity"
     ],
@@ -19,24 +40,24 @@
     ]
     },
     {
-    "@id": "_:Ncec5e43782384183b6625b2772b9c039",
+    "@id": "_:N89b8f9cbc02f47928d48948dc42ab707",
+    "@type": [
+      "http://www.w3.org/ns/prov#Association"
+    ],
+    "http://www.w3.org/ns/prov#hadPlan": [
+      {
+      "@id": "_:N43c38fc27d0a481f903cab845f7767e5"
+      }
+    ]
+    },
+    {
+    "@id": "_:N43c38fc27d0a481f903cab845f7767e5",
     "@type": [
       "http://www.w3.org/ns/prov#Plan"
     ],
     "http://www.w3.org/ns/prov#wasDerivedFrom": [
       {
       "@id": "http://data.europa.eu/eli/reg/2010/1089"
-      }
-    ]
-    },
-    {
-    "@id": "_:N83ff94c51ca348cbaf01796c6f026292",
-    "@type": [
-      "http://www.w3.org/ns/prov#Association"
-    ],
-    "http://www.w3.org/ns/prov#hadPlan": [
-      {
-      "@id": "_:Ncec5e43782384183b6625b2772b9c039"
       }
     ]
     },
@@ -58,29 +79,8 @@
       "@value": "\n    Commission Regulation (EU) No 1089/2010 of 23 November 2010 \n    implementing Directive 2007/2/EC of the European Parliament \n    and of the Council as regards interoperability of spatial \n    data sets and services\n  "
       }
     ]
-    },
-    {
-    "@id": "_:Nc37b0acfe94c401db4c49219ef88a07a",
-    "@type": [
-      "http://www.w3.org/ns/prov#Activity"
-    ],
-    "http://www.w3.org/ns/prov#generated": [
-      {
-      "@id": "_:Nc95889facf5144e8ae824b78556c9c65"
-      }
-    ],
-    "http://www.w3.org/ns/prov#qualifiedAssociation": [
-      {
-      "@id": "_:N83ff94c51ca348cbaf01796c6f026292"
-      }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-      {
-      "@id": "https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00"
-      }
-    ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/activity.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP/drafts/latest/examples/activity.rdf"
   }
 ]

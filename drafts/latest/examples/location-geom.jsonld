@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:N79fd815699254d0494cefd479ee9ad6d",
+    "@id": "_:N3f2870f7cf5a4f35bf0c57c8a8dc2c68",
     "@type": [
       "http://purl.org/dc/terms/Location"
     ],
@@ -18,6 +18,6 @@
     ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/location-geom.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP/drafts/latest/examples/location-geom.rdf"
   }
 ]

@@ -2,7 +2,15 @@
   {
   "@graph": [
     {
-    "@id": "_:N6e90081c9dd9426e8e9466d4b20d9df0",
+    "@id": "https://some.catalogue/resource/d45678",
+    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
+      {
+      "@id": "_:Nb63a037144004600b13a1f67b5bc2b52"
+      }
+    ]
+    },
+    {
+    "@id": "_:N29d096c9dc014e92b466d8b190b62e50",
     "@type": [
       "http://www.w3.org/ns/dqv#QualityMeasurement"
     ],
@@ -19,7 +27,7 @@
     ]
     },
     {
-    "@id": "_:N4bffd90b075e45e688fb757f4107dfab",
+    "@id": "_:N525ef2213e524767ade808e4253cd623",
     "@type": [
       "http://www.w3.org/ns/dqv#QualityMeasurement"
     ],
@@ -41,45 +49,7 @@
     ]
     },
     {
-    "@id": "https://some.catalogue/resource/d45678",
-    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
-      {
-      "@id": "_:Nbca71f01064c48268f9c09842e0ead31"
-      }
-    ]
-    },
-    {
-    "@id": "_:Nf1c03d0444164b4a8ec6a04fe1fbdcb6",
-    "@type": [
-      "http://www.w3.org/ns/dqv#QualityMeasurement"
-    ],
-    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
-      {
-      "@id": "http://www.wurvoc.org/vocabularies/om-1.8/degree"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#isMeasurementOf": [
-      {
-      "@id": "http://data.europa.eu/930/spatialResolutionAsAngularDistance"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#value": [
-      {
-      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-      "@value": "20"
-      }
-    ]
-    },
-    {
-    "@id": "https://some.catalogue/resource/c34567",
-    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
-      {
-      "@id": "_:Nf1c03d0444164b4a8ec6a04fe1fbdcb6"
-      }
-    ]
-    },
-    {
-    "@id": "_:Nbca71f01064c48268f9c09842e0ead31",
+    "@id": "_:Nb63a037144004600b13a1f67b5bc2b52",
     "@type": [
       "http://www.w3.org/ns/dqv#QualityMeasurement"
     ],
@@ -101,10 +71,40 @@
     ]
     },
     {
+    "@id": "https://some.catalogue/resource/c34567",
+    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
+      {
+      "@id": "_:N0e310e6842ee41d0a663a7da02f4dfe1"
+      }
+    ]
+    },
+    {
+    "@id": "_:N0e310e6842ee41d0a663a7da02f4dfe1",
+    "@type": [
+      "http://www.w3.org/ns/dqv#QualityMeasurement"
+    ],
+    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
+      {
+      "@id": "http://www.wurvoc.org/vocabularies/om-1.8/degree"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#isMeasurementOf": [
+      {
+      "@id": "http://data.europa.eu/930/spatialResolutionAsAngularDistance"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#value": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@value": "20"
+      }
+    ]
+    },
+    {
     "@id": "https://some.catalogue/resource/b23456",
     "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
       {
-      "@id": "_:N4bffd90b075e45e688fb757f4107dfab"
+      "@id": "_:N525ef2213e524767ade808e4253cd623"
       }
     ]
     },
@@ -112,11 +112,11 @@
     "@id": "https://some.catalogue/resource/a12345",
     "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
       {
-      "@id": "_:N6e90081c9dd9426e8e9466d4b20d9df0"
+      "@id": "_:N29d096c9dc014e92b466d8b190b62e50"
       }
     ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/quality-measurement.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP/drafts/latest/examples/quality-measurement.rdf"
   }
 ]

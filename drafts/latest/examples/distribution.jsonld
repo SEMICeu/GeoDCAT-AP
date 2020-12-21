@@ -2,25 +2,19 @@
   {
   "@graph": [
     {
-    "@id": "_:N6589dfcf8ba14555b76ebb193af5ecad",
-    "http://purl.org/dc/terms/conformsTo": [
-      {
-      "@id": "http://www.opengeospatial.org/standards/wms"
-      }
+    "@id": "_:N4a75d1cdfacd4b7fbbb8cf4673307397",
+    "@type": [
+      "http://purl.org/dc/terms/LicenseDocument"
     ],
-    "http://www.w3.org/ns/dcat#endpointDescription": [
+    "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-      "@id": "https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&service=WMS"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#endpointURL": [
-      {
-      "@id": "https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer"
+      "@language": "en",
+      "@value": "The full noise contour maps data set is in principle only available for EEA internal use. A public version of the data set may in the future be available, excluding those data sets for which there is any limitation or restriction in their use (beyond acknowledgement)."
       }
     ]
     },
     {
-    "@id": "_:Nf1833e34feee44cbaeeb61b8b21696f3",
+    "@id": "_:N3222c362cbae448f9d567f9743db8ec3",
     "@type": [
       "http://www.w3.org/ns/dcat#Distribution"
     ],
@@ -42,7 +36,7 @@
     ],
     "http://purl.org/dc/terms/license": [
       {
-      "@id": "_:N9e60398de34045aebee7832fa1ed8aa1"
+      "@id": "_:N4a75d1cdfacd4b7fbbb8cf4673307397"
       }
     ],
     "http://www.w3.org/ns/adms#representationTechnique": [
@@ -52,7 +46,7 @@
     ],
     "http://www.w3.org/ns/dcat#accessService": [
       {
-      "@id": "_:N6589dfcf8ba14555b76ebb193af5ecad"
+      "@id": "_:Nf500eeea43e74967827ffd3dbcd6eb6f"
       }
     ],
     "http://www.w3.org/ns/dcat#accessURL": [
@@ -62,18 +56,24 @@
     ]
     },
     {
-    "@id": "_:N9e60398de34045aebee7832fa1ed8aa1",
-    "@type": [
-      "http://purl.org/dc/terms/LicenseDocument"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
+    "@id": "_:Nf500eeea43e74967827ffd3dbcd6eb6f",
+    "http://purl.org/dc/terms/conformsTo": [
       {
-      "@language": "en",
-      "@value": "The full noise contour maps data set is in principle only available for EEA internal use. A public version of the data set may in the future be available, excluding those data sets for which there is any limitation or restriction in their use (beyond acknowledgement)."
+      "@id": "http://www.opengeospatial.org/standards/wms"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#endpointDescription": [
+      {
+      "@id": "https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&service=WMS"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#endpointURL": [
+      {
+      "@id": "https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer"
       }
     ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/distribution.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP/drafts/latest/examples/distribution.rdf"
   }
 ]

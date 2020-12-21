@@ -24,7 +24,7 @@ var respecConfig = {
 //    copyrightHolder: "European Union",
 //    copyrightURL: "https://europa.eu/",
     copyrightStart: 2020,
-//    publishDate: "2019-11-20",
+    publishDate: "2020-12-23",
 
     alternateFormats: [
 /*
@@ -63,27 +63,31 @@ var respecConfig = {
 //    implementationReportURI:"https://joinup.ec.europa.eu/document/geodcat-ap-implementations",
     errata:"https://github.com/SEMICeu/GeoDCAT-AP/issues?q=is%3Aissue+label%3Atype%3Aerratum+label%3Arelease%3A2.0.0",
 //    specStatus: "unofficial",
-    specStatus: "ED",
+//    specStatus: "ED",
 //    specStatus: "FPWD",
 //    specStatus: "WD",
 //    specStatus: "LC",
 //    specStatus: "PR",
-//    specStatus: "REC",
+    specStatus: "REC",
+    crEnd:"2020-12-23",
+    prEnd:"2021-01-23",
     shortName: "geodcat-ap",
     canonicalURI: "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
 //    canonicalURI: "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
+//    canonicalURI: "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
+//    canonicalURI: "https://semiceu.github.io/GeoDCAT-AP/releases/",
     prevRecURI:           "https://joinup.ec.europa.eu/release/geodcat-ap/101",
 //    previousPublishDate:  "2016-08-02",
 //    previousMaturity:     "final",
 //    previousURI:          "https://joinup.ec.europa.eu/release/geodcat-ap/101",
 /* SEMICEU specific - start */	
-    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
+//    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
 //    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
-//    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
+    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
 //    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
     prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
-    latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
-//    latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/releases/",
+//    latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
+    latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/releases/",
 /* SEMICEU specific - end   */	
     edDraftURI:           "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
     issueBase:            "https://github.com/semiceu/geodcat-ap/issues/",
@@ -92,16 +96,16 @@ var respecConfig = {
       name:       "Andrea Perego",
       company:    "European Commission, Joint Research Centre",
       orcid:      "0000-0001-9300-2694",
-      companyURL: "https://ec.europa.eu/jrc/"
+//      companyURL: "https://ec.europa.eu/jrc/"
     },{
       name: "Stijn Goedertier",
       company: "PwC EU Services",
-      companyURL: "https://www.pwc.com/gx/en/services/european-union.html"
+//      companyURL: "https://www.pwc.com/gx/en/services/european-union.html"
     },{
       name: "Antonio Rotundo",
       company: "Agenzia per l'Italia Digitale",
       url: "",
-      companyURL: "http://www.agid.gov.it/"
+//      companyURL: "http://www.agid.gov.it/"
     }],
     editors: [
       {
@@ -129,7 +133,8 @@ var respecConfig = {
       key: "Document status",
       data: [
       {
-        value: "Under development"
+//        value: "Under development"
+        value: "Completed"
       }
       ]
     },
@@ -137,17 +142,22 @@ var respecConfig = {
       key: "Document version",
       data: [
       {
-        value: "0.2"
+//        value: "0.2"
+        value: "1.0"
       }
       ]
     },
-/*	    
+	    
     {
       key: "Reviewed by",
       data: [
       {
         value: "Pavlina Fragkou (European Commission)",
-        href: "https://ec.europa.eu/"
+//        href: "https://ec.europa.eu/"
+      },
+      {
+        value: "Seth van Hooland (European Commission)",
+//        href: "https://ec.europa.eu/"
       },
       ]
     },
@@ -155,12 +165,16 @@ var respecConfig = {
       key: "Approved by",
       data: [
       {
+        value: "Pavlina Fragkou (European Commission)",
+//        href: "https://ec.europa.eu/"
+      },
+      {
         value: "Seth van Hooland (European Commission)",
-        href: "https://ec.europa.eu/"
+//        href: "https://ec.europa.eu/"
       },
       ]
     }
-*/      
+      
     ],
     wg: "GeoDCAT-AP Working Group",
     wgURI: "https://github.com/semiceu/geodcat-ap/",

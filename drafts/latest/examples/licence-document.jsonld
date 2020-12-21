@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:N0633e19ea155439caad4b50d178677d0",
+    "@id": "_:N957f12c2e6504973b1f5ed31ac4a7cd4",
     "@type": [
       "http://purl.org/dc/terms/LicenseDocument"
     ],
@@ -14,6 +14,6 @@
     ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/licence-document.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP/drafts/latest/examples/licence-document.rdf"
   }
 ]

@@ -2,40 +2,40 @@
   {
   "@graph": [
     {
-    "@id": "_:N1f48a509cc7e4a75a0b5389bae14a887",
-    "@type": [
-      "http://purl.org/dc/terms/PeriodOfTime"
-    ],
-    "http://www.w3.org/2006/time#hasBeginning": [
-      {
-      "@id": "_:Ne0986686b21a4c3c80883dfcbdaa00f3"
-      }
-    ],
-    "http://www.w3.org/2006/time#hasEnd": [
-      {
-      "@id": "_:Nf3b2dbc0f8484b8b8492698a97fec7f0"
-      }
-    ]
-    },
-    {
-    "@id": "_:Nf3b2dbc0f8484b8b8492698a97fec7f0",
-    "http://www.w3.org/2006/time#inXSDDate": [
-      {
-      "@type": "http://www.w3.org/2001/XMLSchema#date",
-      "@value": "2016-12-31"
-      }
-    ]
-    },
-    {
-    "@id": "_:Ne0986686b21a4c3c80883dfcbdaa00f3",
+    "@id": "_:Naf94a6596a3f408b89288f27f82ff996",
     "http://www.w3.org/2006/time#inXSDDate": [
       {
       "@type": "http://www.w3.org/2001/XMLSchema#date",
       "@value": "2016-01-01"
       }
     ]
+    },
+    {
+    "@id": "_:Nab0f002e04fa43809757699eaa0a3a5e",
+    "@type": [
+      "http://purl.org/dc/terms/PeriodOfTime"
+    ],
+    "http://www.w3.org/2006/time#hasBeginning": [
+      {
+      "@id": "_:Naf94a6596a3f408b89288f27f82ff996"
+      }
+    ],
+    "http://www.w3.org/2006/time#hasEnd": [
+      {
+      "@id": "_:N2b8ce7d4e02c47ffba411f753bfec582"
+      }
+    ]
+    },
+    {
+    "@id": "_:N2b8ce7d4e02c47ffba411f753bfec582",
+    "http://www.w3.org/2006/time#inXSDDate": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#date",
+      "@value": "2016-12-31"
+      }
+    ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/period-of-time-with-owl-time.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP/drafts/latest/examples/period-of-time-with-owl-time.rdf"
   }
 ]

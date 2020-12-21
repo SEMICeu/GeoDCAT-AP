@@ -43,8 +43,8 @@
 <!-- Version information -->
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-10-12</dct:created>
     <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-10-12</dct:issued>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-12-15</dct:modified>
-    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/dataset-status/DEVELOP"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-12-21</dct:modified>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED"/>
     <adms:last rdf:resource="http://data.europa.eu/930/"/>
     <adms:prev rdf:resource="http://data.europa.eu/930/1.0.1/"/>
     <owl:versionIRI rdf:resource="http://data.europa.eu/930/2.0.0/"/>
@@ -769,8 +769,8 @@
 
   <rdf:Description rdf:about="http://data.europa.eu/930/spatialResolutionAsScale">
     <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
-    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
-    <vs:term_status>unstable</vs:term_status>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+    <vs:term_status>stable</vs:term_status>
     <rdfs:label xml:lang="en">Spatial resolution as equivalent scale</rdfs:label>
     <rdfs:comment xml:lang="en">Spatial resolution expressed as equivalent scale (ISO 19115:2003, ISO 19115-1:2014), by using a representative fraction (e.g., 1:1,000, 1:1,000,000).</rdfs:comment>
     <skos:prefLabel xml:lang="en">Spatial resolution as equivalent scale</skos:prefLabel>
@@ -785,8 +785,8 @@
      
   <rdf:Description rdf:about="http://data.europa.eu/930/spatialResolutionAsDistance">
     <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
-    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
-    <vs:term_status>unstable</vs:term_status>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+    <vs:term_status>stable</vs:term_status>
     <rdfs:label xml:lang="en">Spatial resolution as distance</rdfs:label>
     <rdfs:comment xml:lang="en">Spatial resolution expressed as distance. It corresponds to the notion of spatial resolution as "ground distance" of ISO 19115:2003 and "horizontal ground distance" of ISO 19115-1:2014.</rdfs:comment>
     <skos:prefLabel xml:lang="en">Spatial resolution as distance</skos:prefLabel>
@@ -801,8 +801,8 @@
 
   <rdf:Description rdf:about="http://data.europa.eu/930/spatialResolutionAsAngularDistance">
     <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
-    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
-    <vs:term_status>unstable</vs:term_status>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+    <vs:term_status>stable</vs:term_status>
     <rdfs:label xml:lang="en">Spatial resolution as angular distance</rdfs:label>
     <rdfs:comment xml:lang="en">Spatial resolution expressed as angular distance (ISO 19115-1:2014), by using decimal degrees.</rdfs:comment>
     <skos:prefLabel xml:lang="en">Spatial resolution as angular distance</skos:prefLabel>
@@ -815,8 +815,8 @@
 
   <rdf:Description rdf:about="http://data.europa.eu/930/spatialResolutionAsVerticalDistance">
     <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Metric"/>
-    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
-    <vs:term_status>unstable</vs:term_status>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+    <vs:term_status>stable</vs:term_status>
     <rdfs:label xml:lang="en">Spatial resolution as vertical distance</rdfs:label>
     <rdfs:comment xml:lang="en">Spatial resolution expressed as vertical distance.</rdfs:comment>
     <skos:prefLabel xml:lang="en">Spatial resolution as vertical distance</skos:prefLabel>
@@ -836,8 +836,8 @@
   <rdf:Description rdf:about="http://data.europa.eu/930/custodian">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
-    <vs:term_status>unstable</vs:term_status>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+    <vs:term_status>stable</vs:term_status>
     <rdfs:label xml:lang="en">Custodian</rdfs:label>
     <rdfs:comment xml:lang="en">Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource (ISO 19115:2003).</rdfs:comment>
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
@@ -851,8 +851,8 @@
   <rdf:Description rdf:about="http://data.europa.eu/930/distributor">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
-    <vs:term_status>unstable</vs:term_status>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+    <vs:term_status>stable</vs:term_status>
     <rdfs:label xml:lang="en">Distributor</rdfs:label>
     <rdfs:comment xml:lang="en">Party who distributes the resource (ISO 19115:2003).</rdfs:comment>
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
@@ -866,8 +866,8 @@
   <rdf:Description rdf:about="http://data.europa.eu/930/originator">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
-    <vs:term_status>unstable</vs:term_status>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+    <vs:term_status>stable</vs:term_status>
     <rdfs:label xml:lang="en">Originator</rdfs:label>
     <rdfs:comment xml:lang="en">Party who created the resource (ISO 19115:2003).</rdfs:comment>
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
@@ -881,8 +881,8 @@
   <rdf:Description rdf:about="http://data.europa.eu/930/principalInvestigator">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
-    <vs:term_status>unstable</vs:term_status>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+    <vs:term_status>stable</vs:term_status>
     <rdfs:label xml:lang="en">Principal investigator</rdfs:label>
     <rdfs:comment xml:lang="en">Key party responsible for gathering information and conducting research (ISO 19115:2003).</rdfs:comment>
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
@@ -896,8 +896,8 @@
   <rdf:Description rdf:about="http://data.europa.eu/930/processor">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
-    <vs:term_status>unstable</vs:term_status>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+    <vs:term_status>stable</vs:term_status>
     <rdfs:label xml:lang="en">Processor</rdfs:label>
     <rdfs:comment xml:lang="en">Party who has processed the data in a manner such that the resource has been modified (ISO 19115:2003).</rdfs:comment>
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
@@ -911,8 +911,8 @@
   <rdf:Description rdf:about="http://data.europa.eu/930/resourceProvider">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
-    <vs:term_status>unstable</vs:term_status>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+    <vs:term_status>stable</vs:term_status>
     <rdfs:label xml:lang="en">Resource provider</rdfs:label>
     <rdfs:comment xml:lang="en">Party that supplies the resource (ISO 19115:2003).</rdfs:comment>
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
@@ -926,8 +926,8 @@
   <rdf:Description rdf:about="http://data.europa.eu/930/user">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/DRAFT"/>
-    <vs:term_status>unstable</vs:term_status>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
+    <vs:term_status>stable</vs:term_status>
     <rdfs:label xml:lang="en">User</rdfs:label>
     <rdfs:comment xml:lang="en">Party who uses the resource (ISO 19115:2003).</rdfs:comment>
     <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</skos:scopeNote>
