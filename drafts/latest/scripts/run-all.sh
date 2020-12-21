@@ -1,22 +1,22 @@
 #!/bin/bash
 
-echo "== Build class tables =="
+echo "== Build all =="
 
-php build-class-tables.php
+echo ""
 
-echo "== Build summary tables =="
+bash build-all.sh
 
-php build-summary-tables.php
+echo ""
 
-echo "== Build example index =="
+echo "Done."
 
-php build-example-index.php
+echo ""
 
-echo "== Serialise RDF vocabulary =="
+echo "== Serialise all =="
 
-bash serialise-vocabulary.sh
+bash serialise-all.sh
 
-echo "== Serialise RDF examples =="
+echo ""
 
-bash serialise-examples.sh
+echo "Done."
 
