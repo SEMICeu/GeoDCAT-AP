@@ -3,6 +3,7 @@
 <h2>Objectives</h2>
 
 <p>The objective of this work is to define an <em>RDF syntax</em> that can be used for the exchange of descriptions of <em>spatial</em> datasets, dataset series, and services among data portals. The RDF syntax should extend the DCAT Application Profile for data portals in Europe [[DCAT-AP]].</p>
+
 <ul>
 <li><p>To provide an RDF syntax binding for the <em>union</em> of the elements in the INSPIRE metadata schema [[INSPIRE-MD-REG]], [[INSPIRE-MD]] and the core profile of ISO 19115:2003 [[ISO-19115]]. The guiding design principle is to make the resulting RDF syntax as simple as possible; thereby maximally using existing RDF vocabularies – such as the Dublin Core [[DCTERMS]] and [[DCAT-AP]] –, and as much as possible avoiding minting new terms. The defined syntax binding must enable the conversion of metadata records <em>from</em> ISO 19115 / INSPIRE <em>to</em> a harmonised RDF representation. The ability to convert metadata records from RDF to ISO 19115 / INSPIRE is not a requirement.</p></li>
 <!--
@@ -10,8 +11,6 @@
 -->
 <li><p>To update the reference XSLT implementation [[GeoDCAT-XSLT]] of the mappings defined in the GeoDCAT-AP specification.</p></li>
 <li><p>To take into account and refer to alignment of relevant controlled vocabularies (e.g., the alignments between GEMET, INSPIRE themes, EuroVoc carried out by the Publications Office of the EU [[EUV-EUROVOC]]).</p></li>
-<!--<a href="http://publications.europa.eu/mdr/eurovoc/">http://publications.europa.eu/mdr/eurovoc/</a>).</p></li>-->
-<!--<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a>)</p></li>-->
 </ul>
 <p>Additionally, the following outcomes may be achieved, outside the context of this specification:</p>
 <ul>
@@ -29,6 +28,7 @@
 <h1>Motivation and use cases</h1>
 
 <p>The basic use case that GeoDCAT-AP intends to enable is a cross-domain data portal search for datasets, as documented in the DCAT-AP specification, version 2.0.1 [[DCAT-AP-20200608]]. GeoDCAT-AP will make it easier to share descriptions of spatial datasets between spatial data portals and general data portals, and thus help increase public and cross-sector access to such high value datasets. The datasets could include:</p>
+
 <dl>
 <dt>Datasets on the INSPIRE Geoportal</dt>
 <dd><p>The <a href="http://inspire-geoportal.ec.europa.eu/">INSPIRE Geoportal</a> aggregates metadata for over 100k datasets across Europe. It provides the means to search for spatial data sets and spatial data services, and subject to access restrictions, to view spatial data sets from the EU Member States within the framework of the INSPIRE Directive. The metadata stored on this portal is structured according to the INSPIRE Metadata Technical Guidelines, version 2.0.1 [[INSPIRE-MD-20170302]]. In order to maximise visibility and re-use, spatial datasets could also be listed on general-purpose Open Data Portals, such as the <a href="http://data.europa.eu/euodp/">European Union Open Data Portal</a> (EU ODP) and the <a href="http://data.europa.eu/europeandataportal/">European Data Portal</a> (EDP).</p></dd>
@@ -37,8 +37,10 @@
 <dt>General geospatial datasets</dt>
 <dd><p>The geospatial community shares a common background and makes consistent use of consolidated standards and technologies. In particular, as far as metadata are concerned, it is widespread to use standards like [[ISO-19115]] / [[ISO-19139]], for the representation and encoding of metadata, and OGC’s [[?CSW]] (Catalog Service for the Web) for accessing and querying metadata records. These standards are also those currently recommended in INSPIRE.</p></dd>
 </dl>
+
 <p>An additional RDF syntax for INSPIRE and ISO 19115 metadata elements is beneficial, especially when other data portals support the [[DCAT-AP]] metadata elements only.</p>
 <p>Conversion rules to RDF syntax would allow Member States to maintain their collections of INSPIRE-relevant datasets following the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD]], while at the same time publishing these collections on [[DCAT-AP]]-conformant data portals. A conversion to RDF syntax – using for example the GeoDCAT-AP XSLT script [[GeoDCAT-XSLT]] - allows additional metadata elements to be displayed on general-purposed data portals, provided that such data portals are capable of displaying additional metadata elements. Furthermore, data portals frequently are complemented by a triple store, making that the full set of GeoDCAT-AP metadata can be queried through a SPARQL endpoint.</p>
+
 </section>
 
 <section id="methodology-and-summary-of-results" class="informative">
@@ -58,30 +60,27 @@
 <h2>Alignment criteria and requirements</h2>
 
 <p>The overall objective of GeoDCAT-AP is twofold:</p>
+
 <ol>
 <li><p>Provide a [[DCAT-AP]]-conformant representation of geospatial metadata.</p></li>
 <li><p>Provide an as much as possible comprehensive RDF-based representation of geospatial metadata, based on widely used vocabularies, trying, at the same time, to avoid semantic loss and to promote cross-domain re-use.</p></li>
 <li><p>Ensure backward compatibiliy with previous versions of GeoDCAT-AP.</p></li>
 </ol>
+
 <p>The first two goals, having a different scope and applying to different use cases (see <a href="#motivation-and-use-cases"></a>), are reflected in the two mapping profiles of GeoDCAT-AP, core and extended, described in <a href="#rdf-syntax-bindings-for-inspire-and-iso19115-metadata-elements"></a>.</p>
+
 <p>Note that point (1) implies that:</p>
+
 <ul>
 <li><p>GeoDCAT-AP must include, at least, all the mandatory [[DCAT-AP]] elements.</p></li>
 <li><p>Vocabularies different from [[DCAT-AP]] can be used only for those geospatial metadata elements not supported in [[DCAT-AP]].</p></li>
 </ul>
-<p>Another key criterion was to base as much as possible the defined alignments on existing practices, in particular those contributed by the GeoDCAT-AP WG. The objective was to build upon experiences having already addressed issues in scope of GeoDCAT-AP, and to avoid a negative impact on existing implementations.</p>
-<p>Finally, as already mentioned in <a href="#objectives"></a>, whenever no suitable candidates were available in existing vocabularies to represent geospatial metadata elements, the possibility of defining new terms was not excluded. However, this option needed to be carefully assessed, and discarded whenever it might have led to a specification that was conflicting with standards under preparation.
-<!--
-For example, this was the case of the work carried out by the <a href="https://www.w3.org/2013/dwbp/">W3C Data on the Web Best Practices Working Group</a> and the <a href="https://www.w3.org/2015/spatial/">joint W3C/OGC Spatial Data on the Web Working Group</a>.
--->
-</p>
-<p>As it will be explained in <a href="#alignments-defined-in-geodcat-ap"></a>, no new terms have been defined in the current version of GeoDCAT-AP.</p>
 
-<!-- TO BE RESTORED
-<aside class="ednote">
-<p>To be considered the possibility of defining terms for specifying spatial resolution for cases not covered by <code>dcat:spatialResolutionInMeters</code>.</p>
-</aside>
--->
+<p>Another key criterion was to base as much as possible the defined alignments on existing practices, in particular those contributed by the GeoDCAT-AP WG. The objective was to build upon experiences having already addressed issues in scope of GeoDCAT-AP, and to avoid a negative impact on existing implementations.</p>
+
+<p>Finally, as already mentioned in <a href="#objectives"></a>, whenever no suitable candidates were available in existing vocabularies to represent geospatial metadata elements, the possibility of defining new terms was not excluded. However, this option needed to be carefully assessed, and discarded whenever it might have led to a specification that was conflicting with standards under preparation.</p>
+
+<p>As it will be explained in <a href="#alignments-defined-in-geodcat-ap"></a>, no new terms have been defined in the current version of GeoDCAT-AP.</p>
 
 </section>
 
@@ -91,6 +90,7 @@ For example, this was the case of the work carried out by the <a href="https://w
 
 <p>The general criterion used for this task was that GeoDCAT-AP would ideally cover <em>all</em> the metadata elements of the core profile of [[ISO-19115]] and those defined in INSPIRE, with the requirement that only <em>optional</em> elements MAY be excluded.</p>
 <p>Based on this, the current version of GeoDCAT-AP covers the following set of metadata elements:</p>
+
 <ul>
 <li><p>All the metadata elements in the core profile of [[ISO-19115]].</p></li>
 <li><p>All the metadata elements defined in INSPIRE, with the exclusion of those not common to all the INSPIRE spatial data themes.</p></li>
@@ -105,9 +105,13 @@ For example, this was the case of the work carried out by the <a href="https://w
 <li><p>Conceptual and domain consistency (Data quality – Logical consistency).</p></li>
 </ul></li>
 </ul>
+
 <p>The full list of metadata elements covered by the current version of GeoDCAT-AP is available in <a href="#overview-of-metadata-elements-covered-by-geodcat-ap"></a> to this document.</p>
+
 <p>The metadata elements not supported in the current version of GeoDCAT-AP are those recommended only for <em>specific</em> INSPIRE spatial data themes in the INSPIRE Data Specifications Technical Guidelines, and listed in Appendix C.7 to the INSPIRE Metadata Technical Guidelines (version 2.0.1) [[INSPIRE-MD-20170302]].</p>
+
 <p>These elements have been excluded in the current version of GeoDCAT-AP for the following reasons:</p>
+
 <ul>
 <li><p>The priority was to support all those elements relevant to any dataset.</p></li>
 <li><p>These elements are all optional.</p></li>
@@ -124,62 +128,31 @@ For example, this was the case of the work carried out by the <a href="https://w
 
 <p>The work started with the review of [[DCAT-AP-20200608]], [[VOCAB-DCAT-2]], and [[INSPIRE-MD-20170302]], with the purpose of identifying possible disalignments of the mappings defined in [[GeoDCAT-AP]], as well as possible gaps in [[DCAT-AP-20200608]] and [[VOCAB-DCAT-2]], which may require the use of different vocabularies or the definition of new classes and/or properties in the GeoDCAT-AP namespace. In all these cases, backward compatibility with [[GeoDCAT-AP-20160802]] has been taken into account when implementing revisions.</p>
 <p>Finally, the GeoDCAT-AP WG has worked in close coordination with the DCAT-AP WG, in order to ensure mutual compliance of the proposed solutions.</p>
+
 <!---
 <p>The alignments defined in the current version of GeoDCAT-AP are the result of an iterative revision process, following the criteria illustrated in the previous sections and the review of the GeoDCAT-AP WG.</p>
+
 <p>The work started with the review of the suite of specifications concerning the INSPIRE profile of [[DCAT-AP]] (INSPIRE+DCAT-AP) [[INSPIRE-DCAT]], and of the preliminary proposals concerning the metadata elements not covered by INSPIRE+DCAT-AP.</p>
+
 <p>In two specific cases, feedback has been asked to relevant standardisation bodies, in order to validate the proposal made in GeoDCAT-AP. In particular, this concerned feedback provided by the W3C Provenance Working Group on the use of the W3C PROV ontology [[PROV-O]] to model responsible party roles and conformance results (data quality).</p>
+
 <p>Finally, the GeoDCAT-AP WG has worked in close coordination with the DCAT-AP WG, in order to ensure mutual compliance of the proposed solutions.</p>
 -->
+
 <p>The results of this work, reflected in the current version of GeoDCAT-AP, can be summarised as follows:</p>
+
 <ul>
 <li><p>Backward compatibility with [[GeoDCAT-AP-20160802]] is ensured: The revised mappings have been deprecated, but maintained in the mapping rules implemented in [[GeoDCAT-XSLT]] along with the new one, in the extended mapping profile of GeoDCAT-AP, and their support has been included in <a class="no-sectionRef" href="#conformance"></a>.</p></li>
 <li><p>Compliance with [[DCAT-AP-20200608]] is ensured: The geospatial metadata elements covered by the defined mappings include all those that in [[DCAT-AP-20200608]] are mandatory, plus a subset of those that are recommended and optional.</p></li>
 <li><p>GeoDCAT-AP offers alignments for all the metadata elements illustrated in <a href="#metadata-elements-to-be-covered-by-geodcat-ap"></a>, by using existing vocabularies, and without defining new terms.</p></li>
 </ul>
 
-<!-- TO BE RESTORED
-<aside class="ednote">
-<p>To be considered the possibility of defining terms for specifying spatial resolution for cases not covered by <code>dcat:spatialResolutionInMeters</code>.</p>
-</aside>
--->
-
 <p>The majority of the alignments defined in GeoDCAT-AP provide a complete representation of the corresponding geospatial metadata elements, but some metadata elements have open issues:</p>
+
 <ul>
 <li><p>Partial mappings: For some metadata elements, only a partial mapping is available. This concerns data quality and maintenance information, for which only the mandatory components have been mapped (for more details, see <a href="#conformity-and-data-quality---not-in-iso19115-core"></a> and <a href="#maintenance-information---not-in-iso19115-core"></a>, respectively). This decision was taken because existing vocabularies did not offer the ability to represent all the components of these metadata elements.</p></li>
-<!--
-<li><p>Provisional mappings: For some metadata elements, no suitable candidate has been found to model them also partially. This concerns the following element:</p>
-<ul>
-<li><p>spatial resolution (see <a href="#spatial-resolution-spatial-resolution-of-the-dataset"></a>);</p></li>
-<li><p>data quality and conformity (<a href="#conformity-and-data-quality---not-in-iso19115-core"></a>);</p></li>
-<li><p>(coordinate and temporal) reference systems (<a href="#coordinate-reference-systems-and-temporal-reference-systems-reference-system"></a>).</p></li>
-</ul>
-<p>The alignments for this element defined in the current version of GeoDCAT-AP must then be considered as unstable, and are meant to be replaced by appropriate terms defined in standard vocabularies (whether and when available).
--->
-<!--
-Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Spatial Data on the Web Working Group planned to standardise the representation of data granularity (which includes spatial resolution), data quality and conformity, and reference systems.
--->
-</p></li>
 </ul>
 
-<!-- TO BE RESTORED
-<aside class="ednote">
-<p>To be considered the possibility of defining terms for specifying spatial resolution for cases not covered by <code>dcat:spatialResolutionInMeters</code>.</p>
-</aside>
--->
-
-<!--
-<aside class="ednote">
-<p>For possible revisions to the provisional mappings describe above, see the following issues:</p>
--->
-<!--
-<div class="issue" data-number="3"></div>
-<div class="issue" data-number="16"></div>
-<div class="issue" data-number="7"></div>
-<div class="issue" data-number="2"></div>
--->
-<!--
-</aside>
--->
 <p>The details of the alignments defined in GeoDCAT-AP are illustrated in the following section.</p>
 
 </section>
@@ -191,6 +164,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <h1>RDF syntax bindings for INSPIRE and ISO 19115 metadata elements </h1>
 
 <p>The following sections provide the list of the bindings defined in GeoDCAT-AP for the RDF representation of INSPIRE metadata and the core profile of [[ISO-19115]].</p>
+
 <p>For detailed usage notes and examples of each of the metadata elements covered by GeoDCAT-AP, we refer the reader to <a href="#detailed-usage-notes-and-examples"></a> (the relevant section is specified in the “comments” column of the mapping table).</p>
 
 <section id="overview-of-bindings-for-geodcat-ap-core">
@@ -200,9 +174,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>This section provides an overview of <strong>GeoDCAT-AP Core</strong>. This includes bindings for metadata elements of the INSPIRE metadata and metadata elements in the core profile of [[ISO-19115]] core <em>for which DCAT-AP provides an RDF syntax binding</em>. Those metadata elements for which [[DCAT-AP-20200608]] does not provide a binding are part of the GeoDCAT-AP Extended mapping profile described in <a href="#overview-of-bindings-for-geodcat-ap-extended"></a>.</p>
 
 <p>GeoDCAT-AP Core is meant to enable the harvesting and re-use of spatial metadata records through [[DCAT-AP-20200608]]-conformant applications and services, including data portals and APIs. The alignments for INSPIRE and [[ISO-19115]] metadata elements that are not included in GeoDCAT-AP Core are defined in GeoDCAT-AP Extended, see <a href="#overview-of-bindings-for-geodcat-ap-extended"></a>.</p>
-<!--
-<p>In addition to this, GeoDCAT-AP Core does not provide alignments from metadata records concerning services, with the only exception of catalogue or discovery services, which are the only ones supported in [[DCAT-AP-20200608]].</p>
--->
+
 <p>In the following table, the starred elements (*) are used to indicate the corresponding metadata element in the core profile of [[ISO-19115]]. For each element, it is indicated whether the element is mandatory (<abbr title="mandatory">M</abbr>), optional (<abbr title="optional">O</abbr>), conditional (<abbr title="conditional">C</abbr>), or recommended (<abbr title="recommended">R</abbr>) in either specification.</p>
 
 <table id="table-overview-of-bindings-for-geodcat-ap-core" class="simple">
@@ -416,6 +388,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <td><code>dct:LinguisticSystem</code></td>
 <td>See <a href="#resource-language-and-metadata-language---dataset-language-and-metadata-language"></a>.</td>
 </tr>
+
 <!--
 <tr>
 <td><p>Spatial data service type (M)</p>
@@ -428,6 +401,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <td>See <a href="#resource-type---not-in-iso19115-core"></a>.</td>
 </tr>
 -->
+
 <tr>
 <td>
 <p>Keyword value (M)</p>
@@ -724,16 +698,16 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <h2>Overview of bindings for GeoDCAT-AP Extended</h2>
 
 <p>This section provides an overview of the RDF syntax bindings in GeoDCAT-AP Extended. This GeoDCAT-AP mapping profile covers elements defined in INSPIRE and the core profile of [[ISO-19115]], for which [[DCAT-AP-20200608]] does not provide a syntax binding. GeoDCAT-AP Extended is a <em>superset</em> of GeoDCAT-AP Core.</p>
+
 <p>The following table contains the defined RDF syntax binding for INSPIRE metadata. In the table below, the starred elements (*) are used to indicate the corresponding metadata element in the core profile of [[ISO-19115]]. For each metadata element, it is indicated whether the element is mandatory (M), optional (O), conditional (C), or recommended (R) in either specification.</p>
+
 <p>Please note that some metadata elements have an RDF syntax binding in both the GeoDCAT-AP Core and Extended mapping profile. These elements fall in one of these categories:</p>
+
 <ol>
 <li><p><strong>Partial coverage by a [[DCAT-AP-20200608]] binding</strong>: This concerns conformity (only degree of conformity equal to &ldquo;conformant&rdquo; is supported) and responsible organisation (only responsible party roles creator, publisher, and point of contact are supported).</p></li>
-<li><p><strong>Subsumption by a GeoDCAT-AP RDF binding</strong>: ISO metadata elements available in GeoDCAT-AP Core, but for which only a many-to-one mapping is supported in [[DCAT-AP-20200608]]. This concerns resource types, since the [[VOCAB-DCAT-2]] notion of dataset models both the ISO/INSPIRE notions of data set and data series.
-<!--
-; the [[VOCAB-DCAT-2]] notion of data catalogue models only one of the types of spatial data services.
--->
-</p></li>
+<li><p><strong>Subsumption by a GeoDCAT-AP RDF binding</strong>: ISO metadata elements available in GeoDCAT-AP Core, but for which only a many-to-one mapping is supported in [[DCAT-AP-20200608]]. This concerns resource types, since the [[VOCAB-DCAT-2]] notion of dataset models both the ISO/INSPIRE notions of data set and data series.</p></li>
 </ol>
+
 <p>In order to preserve the original semantics, the extended mapping profile of GeoDCAT-AP defines additional alignments to those included in GeoDCAT-AP Core. The two sets of alignments are not mutually exclusive, and can coexist without creating conflicts.</p>
 
 <table id="table-overview-of-bindings-for-geodcat-ap-extended" class="simple">
@@ -1549,12 +1523,17 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <h2>Resource title - *Dataset title </h2>
 
 <p>The content of the element ‘resource title’ can be represented in RDF as a plain literal, and by using property <code>dct:title</code>.</p>
+
 <p>This binding may also include the specification of the language by using attribute <code>@xml:lang</code> [[XML]]. The language to be specified is the one indicated by element metadata language, mapped to the language identifiers defined by IETF BCP 47 [[BCP47]].</p>
 
 <aside class="example" id="ex-mapping-resource-title" title="Resource title">
+
 <p>Resource metadata in GeoDCAT-AP:</p>
+
 <pre>[] dct:title &quot;Forest / Non-Forest Map 2006&quot;@en.</pre>
+
 <p>Resource metadata in ISO 19139:</p>
+
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:identificationInfo&gt;
@@ -1577,19 +1556,26 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 </section>
 
 <section id="resource-abstract---abstract-describing-the-dataset">
+
 <h2>Resource abstract - *Abstract describing the dataset</h2>
+
 <p>The content of the elements ‘resource abstract’ can be represented in RDF as a plain literal, and by using property <code>dct:description</code>.</p>
+
 <p>This binding may also include the specification of the language by using attribute <code>@xml:lang</code> [[XML]]. The language to be specified is the one indicated by element metadata language, mapped to the language identifiers defined by IETF BCP 47 [[BCP47]].</p>
 
 <aside class="example" id="ex-mapping-resource-abstract" title="Resource abstract">
+
 <p>Resource metadata in GeoDCAT-AP:</p>
+
 <pre>[] dct:description &quot;Pan-European Forest / Non Forest Map with target year 2006,
   Data Source: Landsat ETM+ and Corine Land Cover 2006, Classes: for-est, non-forest,
   clouds/snow, no data; Method: automatic classification performed with an in-house
   algorithm; spatial resolution: 25m. In addition, the forest map 2006 is extended to
   FTYPE2006 to include forest types (broadleaf, coniferous forest) that are mapped
   using MODIS composites.&quot;@en .</pre>
+
 <p>Resource metadata in ISO 19139:</p>
+
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:identificationInfo&gt;
@@ -1626,28 +1612,25 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 </aside>
 
 <p>In [[VOCAB-DCAT-2]], the notion of dataset is quite broad, and may include both the INSPIRE notions of <strong>dataset</strong> and <strong>dataset series</strong>. Moreover, currently no existing vocabulary provides suitable candidates for the INSPIRE notions of dataset series – the existing ones are very generic (e.g., <code>dctype:Collection</code> is defined as <q>An aggregation of resources</q> [[DCTERMS]]).</p>
+
 <p>Based on this, in GeoDCAT-AP both INSPIRE datasets and dataset series are specified as instances of <code>dcat:Dataset</code>.</p>
+
 <p>Moreover, in order to maintain the INSPIRE distinction between datasets and dataset series, following the work on aligning INSPIRE Metadata and Dublin Core [[?INSPIRE-DC]], in the extended mapping profile of GeoDCAT-AP they will be denoted by using the resource type code list operated by the INSPIRE Registry [[INSPIRE-RT]], and by using <code>dct:type</code>. More precisely, the following URIs SHOULD be used to denote, respectively, dataset and series:</p>
+
 <ul>
 <li><p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset">http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset</a></p></li>
 <li><p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType/series">http://inspire.ec.europa.eu/metadata-codelist/ResourceType/series</a></p></li>
 </ul>
+
 <p>As far as the INSPIRE notion of <strong>service</strong> is concerned, [[VOCAB-DCAT-2]] and [[DCAT-AP-20200608]] provide a specific class, namely, <code>dcat:DataService</code>, whereas class <code>dcat:Catalog</code> can be used to complement <code>dcat:DataService</code> for ‘discovery services’ in INSPIRE. Additionally, the spatial data service type can be specified by using <code>dct:type</code> with the corresponding code lists operated by the INSPIRE Registry [[INSPIRE-SDST]]. More precisely, the following URI SHOULD be used to denote services:</p>
-<!--
-<p>As far as the INSPIRE notion of <strong>service</strong> is concerned, [[VOCAB-DCAT-2]] and [[DCAT-AP-20200608]] provide a single class, namely, <code>dcat:Catalog</code>, which only matches the notion of ‘discovery service’ in INSPIRE. Other services will be of type <code>dctype:Service</code>. Additionally, the spatial data service type can be specified by using <code>dct:type</code> with the corresponding code lists operated by the INSPIRE Registry. More precisely, the following URI SHOULD be used to denote services:</p>
--->
 <ul>
 <li><p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service">http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service</a></p></li>
 </ul>
-<!--
-<p>For the reason explained above, the core mapping profile of GeoDCAT-AP includes only the mappings for catalogue services (i.e., <code>dcat:Catalog</code>), whereas the mappings of other types of services are supported only in the extended mapping profile of GeoDCAT-AP.</p>
--->
-<!--	
-<div class="issue" data-number="10">
-</div>
--->
+
 <aside class="example" id="ex-mapping-resource-type" title="Resource type">
+
 <p>Resource metadata in GeoDCAT-AP:</p>
+
 <pre>## Resource type for datasets
 [] a dcat:Dataset;
   dct:type &lt;http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset&gt; .
@@ -1660,7 +1643,9 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 [] a dcat:DataService;
   dct:type &lt;http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service&gt; ,
     &lt;http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view&gt; .</pre>
+
 <p>Resource metadata in ISO 19139:</p>
+
 <pre>&lt;!-- MD_ScopeCode for a dataset in ISO 19139 --&gt;
 &lt;gmd:MD_Metadata&gt;
   ...
@@ -1708,9 +1693,11 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
 </aside>
+
 </section>
 
 <section id="resource-locator---on-line-resource">
+
 <h2>Resource locator - *On-line resource</h2>
 
 <aside class="note">
@@ -1725,9 +1712,11 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 </aside>
 
 <p>In INSPIRE, this element, quoting, <q>defines the link(s) to the resource and/or the link to additional information about the resource</q>. [[VOCAB-DCAT-2]] has a property, namely, <code>dcat:landingPage</code>, having exactly the same purpose.</p>
+
 <!--
 <p>For datasets, [[VOCAB-DCAT-2]] has a property, namely, <code>dcat:landingPage</code>, having exactly the same purpose. By contrast, the only property available in [[VOCAB-DCAT-2]] for linking a service to an online resource is <code>foaf:homepage</code>.</p>
 -->
+
 <p>[[ISO-19115]] offers however the ability to specify the “type” of resource locator by using a specific code list (<code>CI_OnlineFunctionCode</code>), described in the following table:</p>
 
 <table class="simple" id="table-online-function-code">
@@ -1738,38 +1727,37 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 </tr>
 </thead>
 <tbody>
+
 <tr>
 <td>download</td>
 <td>online instructions for transferring data from one storage device or system to another</td>
 </tr>
+
 <tr>
 <td>information</td>
 <td>online information about the resource</td>
 </tr>
+
 <tr>
 <td>offlineAccess</td>
 <td>online instructions for requesting the resource from the provider</td>
 </tr>
+
 <tr>
 <td>order</td>
 <td>online order process for obtaining the resource</td>
 </tr>
+
 <tr>
 <td>search</td>
 <td>online search interface for seeking out information about the resource</td>
 </tr>
+
 </tbody>
 </table>
 
 <p>Based on this, the mappings of element “resource locator” for data sets and data set series will vary depending on the function code (when available), based on the following table.</p></li>
 </ul>
-<!--
-<p>Based on this, the mappings of element “resource locator” are the following:</p>
-<ul>
-<li><p><code>foaf:homepage</code> for services;</p></li>
-<li><p>for data sets and data set series, the mapping will vary depending on the function code (when available), based on the following table.</p></li>
-</ul>
--->
 
 <table class="simple">
 <thead>
@@ -1781,48 +1769,58 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 </tr>
 </thead>
 <tbody>
+
 <tr>
 <td>(not provided)</td>
 <td><code>dcat:landingPage</code></td>
 <td><code>dcat:Dataset</code></td>
 <td><code>foaf:Document</code></td>
 </tr>
+
 <tr>
 <td>download</td>
 <td><code>dcat:accessURL</code></td>
 <td><code>dcat:Distribution</code></td>
 <td><code>rdfs:Resource</code></td>
 </tr>
+
 <tr>
 <td>Information</td>
 <td><code>foaf:page</code></td>
 <td><code>dcat:Dataset</code></td>
 <td><code>foaf:Document</code></td>
 </tr>
+
 <tr>
 <td>offlineAccess</td>
 <td><code>dcat:accessURL</code></td>
 <td><code>dcat:Distribution</code></td>
 <td><code>rdfs:Resource</code></td>
 </tr>
+
 <tr>
 <td>order</td>
 <td><code>dcat:accessURL</code></td>
 <td><code>dcat:Distribution</code></td>
 <td><code>rdfs:Resource</code></td>
 </tr>
+
 <tr>
 <td>search</td>
 <td><code>foaf:page</code></td>
 <td><code>dcat:Dataset</code></td>
 <td><code>foaf:Document</code></td>
 </tr>
+
 </tbody>
 </table>
 
 <p>However, whenever the URL points to a service endpoint, the resource locator SHOULD be always mapped to property <code>dcat:accessURL</code>, and complemented by additional two properties, namely, <code>dcat:endpointURL</code> and <code>dcat:endpointDescription</code>.</p>
+
 <p>More precisely, if the URL is recognised as pointing to a capabilities document, the URL is mapped to property <code>dcat:endpointDescription</code>, whereas property <code>dcat:endpointURL</code> will take as value the URL without it query string component.</p>
+
 <p>Properties <code>dcat:endpointURL</code> and <code>dcat:endpointDescription</code> will have as domain class <code>dcat:DataService</code>, linked to the dataset distribution via property <code>dcat:accessService</code>.</p>
+
 <p>Finally, whenever it is possible to recognise the service protocol, this information will be specified by property <code>dct:conformsTo</code>, taking as value the URI of the relevant specification from the INSPIRE Registry's code list for protocol values [[INSPIRE-PV]].</p>
 
 <!--
@@ -1874,11 +1872,12 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 
 <p>As far as services are concerned, the resource locator SHOULD be mapped to properties <code>dcat:endpointURL</code>, <code>dcat:endpointDescription</code>, and <code>dct:conformsTo</code>, as described above.</p> 
 
-<div class="issue" data-number="9">
-</div>
+<div class="issue" data-number="9"></div>
 
 <aside class="example" id="ex-mapping-resource-locator" title="Resource locator">
+
 <p>Resource metadata in GeoDCAT-AP:</p>
+
 <pre>## Resource locator for datasets and series
 [] a dcat:Dataset;
   foaf:page &lt;http://forest.jrc.ec.europa.eu/forestmap-download&gt; .
@@ -1890,7 +1889,9 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
   dcat:accessURL &lt;http://geohub.jrc.ec.europa.eu/efas_cc&gt; ; 
   dct:conformsTo &lt;http://www.opengeospatial.org/standards/wms&gt; ; 
 .</pre>
+
 <p>Resource metadata in ISO 19139 for datasets:</p>
+
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:transferOptions&gt;
@@ -1918,7 +1919,9 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
   &lt;/gmd:transferOptions&gt;
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
+
 <p>Resource locator in ISO 19139 for services:</p>
+
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:distributionInfo&gt;
@@ -1950,7 +1953,9 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
   &lt;/gmd:distributionInfo&gt;
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
+
 </aside>
+
 </section>
 
 <section id="unique-resource-identifier---not-in-iso19115-core">
@@ -1958,12 +1963,17 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <h2>Unique resource identifier - *not in ISO 19115 core</h2>
 
 <p>In INSPIRE, this element is meant to uniquely identify a resource (dataset, series or service), and it is mandatory for datasets and series. It is specified by (a) a <em>mandatory</em> character string code and by (b) an <em>optional</em> character string namespace.</p>
+
 <p>Based on [[DCAT-AP-20200608]], unique resource identifiers are mapped to <code>dct:identifier</code> (see <a href="#ex-mapping-resource-identifier-as-string"></a>). The actual value is obtained by the concatenation of the values of the namespace (if specified) and of the code in the original metadata record.</p>
 
 <aside class="example" id="ex-mapping-resource-identifier-as-string" title="Resource identifier as string">
+
 <p>Resource metadata in GeoDCAT-AP:</p>
+
 <pre>[] dct:identifier &quot;1234567890&quot;^^xsd:string .</pre>
+
 <p>Resource metadata in ISO 19139</p>
+
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:identificationInfo&gt;
@@ -1980,15 +1990,20 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
   &lt;/gmd:identificationInfo&gt;
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
+
 </aside>
 
 <p>If the unique resource identifier is specified with or can be encoded as an HTTP URI, it can be used as the URI of the resource (see <a href="#ex-mapping-resource-identifier-as-uri"></a>).</p>
 
 <aside class="example" id="ex-mapping-resource-identifier-as-uri" title="Resource identifier as URI">
+
 <p>Resource metadata in GeoDCAT-AP</p>
+
 <pre>&lt;https://some.catalogue/resource/1234567890&gt;
   dct:identifier &quot;https://some.catalogue/resource/1234567890&quot;^^xsd:anyURI .</pre>
+
 <p>Resource metadata in ISO 19139</p>
+
 <pre>&lt;!-- Unique resource identifier specified only with code --&gt;
 &lt;gmd:MD_Metadata&gt;
   ...
@@ -2033,6 +2048,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
   &lt;/gmd:identificationInfo&gt;
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
+
 </aside>
 
 </section>
@@ -2051,26 +2067,28 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 </aside>
 
 <p>This element is used to link a service to the target datasets or dataset series.</p>
+
 <p>Following [[VOCAB-DCAT-2]] and [DCAT-AP-20200608], this relationship is specified by using property <code>dcat:servesDataset</code>.</p>
-<!--
-<p>This relationship is modelled by using <code>dct:hasPart</code>. This mapping is supported only in the extended mapping profile of GeoDCAT-AP.</p>
--->
 
 <aside class="note">
-	<p>The notion of “coupled resource” does not apply to catalogue / discovery services. As per the [[DCAT-AP-20200608]], in GeoDCAT-AP (core and extended mapping profiles) the relationship between the catalogue and the available resources is specified by using <code>dcat:dataset</code> (for Datasets) and <code>dcat:service</code> (for Data Services).</p>
+<p>The notion of “coupled resource” does not apply to catalogue / discovery services. As per the [[DCAT-AP-20200608]], in GeoDCAT-AP (core and extended mapping profiles) the relationship between the catalogue and the available resources is specified by using <code>dcat:dataset</code> (for Datasets) and <code>dcat:service</code> (for Data Services).</p>
 </aside>
 
 <p>The target dataset or series SHOULD be preferably referred to by using its unique resource identifier, as in <a href="#ex-mapping-coupled-resource"></a>.</p>
 
 <aside class="example" id="ex-mapping-coupled-resource" title="Coupled resource">
+
 <p>Resource metadata in GeoDCAT-AP</p>
+
 <pre>[] a dcat:DataService ;
   dct:type &lt;http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service&gt; ,
     &lt;http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view&gt; ;
   dcat:servesDataset [
     dct:identifier &quot;1234567890&quot;^^xsd:string
   ] .</pre>
+
 <p>Resource metadata in ISO 19139</p>
+
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:identificationInfo&gt;
@@ -2112,11 +2130,15 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <h2>Resource language and metadata language - *Dataset language and Metadata language</h2>
 
 <p>In INSPIRE metadata, metadata and resource languages (which may be different) are specified by using the three-letter language codes defined in [[?ISO-639-2]].</p>
+
 <p>Based on [[DCAT-AP-20200608]], both elements are specified with property <code>dct:language</code>, with the URI of the relevant language available from the relevant register operated by the EU Publications Office [[EUV-LANG]].</p>
+
 <p><a href="#ex-mapping-resource-language"></a> assumes that the metadata language is Dutch, and the resource language is German.</p>
 
 <aside class="example" id="ex-mapping-resource-language" title="Resource language">
+
 <p>Resource metadata in GeoDCAT-AP</p>
+
 <pre># Resource metadata
 [] dct:language
   &lt;http://publications.europa.eu/resource/authority/language/DEU&gt; ;
@@ -2124,7 +2146,9 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 # Metadata on metadata
     [ dct:language
       &lt;http://publications.europa.eu/resource/authority/language/NLD&gt; ] .</pre>
+
 <p>Resource metadata in ISO 19139</p>
+
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
 &lt;!-- Metadata on metadata: metadata language --&gt;
@@ -2148,9 +2172,11 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
   &lt;/gmd:identificationInfo&gt;
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
+
 </aside>
 
 <p>The metadata language can be also used to specify the language of textual elements of resource metadata by using the <code>@xml:lang</code> attribute [[XML]].</p>
+
 <p>Since <code>@xml:lang</code> takes as value language identifiers defined by IETF BCP 47 [[BCP47]], a mapping from the actual value of the metadata language is needed.</p>
 
 </section>
@@ -2160,15 +2186,19 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <h2>Topic category, originating controlled vocabulary, and keyword value - *Dataset topic category</h2>
 
 <p>In INSPIRE, these two elements have specific purposes. Quoting from the INSPIRE Metadata Regulation [[?INSPIRE-MD-REG]] (§2.1 and §3.1, respectively):</p>
+
 <ul>
 <li><p>The topic category is a high-level classification scheme to assist in the grouping and topic-based search of available spatial data resources.</p></li>
 <li><p>The keyword value is a commonly used word, formalised word or phrase used to describe the subject. While the topic category is too coarse for detailed queries, keywords help narrowing a full text search and they allow for structured keyword search.</p></li>
 </ul>
+
 <p>Moreover, two types of keywords are allowed:</p>
+
 <ul>
 <li><p>free keywords;</p></li>
 <li><p>keywords taken from a controlled vocabulary.</p></li>
 </ul>
+
 <p>Finally, topic categories apply only to datasets and dataset series.</p>
 
 <section id="topic-category-and-keyword-in-datasets-and-dataset-series">
@@ -2176,6 +2206,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <h3>Topic category and keyword in datasets and dataset series</h3>
 
 <p>As far as dataset metadata are concerned, in both [[VOCAB-DCAT-2]] and [[DCAT-AP-20200608]], a distinction is made only between free keywords and keywords from controlled vocabularies, associated with a URI. For the former, <code>dcat:keyword</code> is used, whereas for the latter <code>dcat:theme</code> (which is a sub-property of <code>dct:subject</code>). Since the INSPIRE Registry operates URI registers for topic categories and INSPIRE spatial data themes, and in order to keep the distinction existing in INSPIRE between topic categories and keywords, the mapping is as follows:</p>
+
 <ul>
 <li><p>Topic category is mapped to <code>dct:subject</code>, and expressed by the corresponding URIs minted for the ISO code list in the INSPIRE Registry – reference register:</p>
 <p><a href="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory">http://inspire.ec.europa.eu/metadata-codelist/TopicCategory</a></p></li>
@@ -2184,8 +2215,11 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p><a href="http://inspire.ec.europa.eu/theme">http://inspire.ec.europa.eu/theme</a></p></li>
 <li><p>Keywords associated with other controlled vocabularies are mapped to <code>dcat:theme</code>.</p></li>
 </ul>
+
 <p>Following [[DCAT-AP-20200608]] recommendations, keywords from controlled vocabularies SHOULD be preferably specified with dereferenceable HTTP URIs. In such a case, the information concerning the originating controlled vocabulary can be omitted.</p>
+
 <p>When keywords cannot be specified with HTTP URIs, they SHOULD be modelled as a <code>skos:Concept</code> associated with a <code>skos:ConceptScheme</code> (modelling the originating controlled vocabulary), and annotated with the textual content and reference date(s) in the relevant INSPIRE metadata elements.</p>
+
 <p>The representation of the information concerning the controlled vocabulary is illustrated in the following table.</p>
 
 <table id="table-mapping-orginated-controlled-vocabulary" class="simple">
@@ -2199,29 +2233,35 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 </tr>
 </thead>
 <tbody>
+
 <tr>
 <td rowspan="4"><strong>Originating controlled vocabulary</strong></td>
 <td colspan="2">Title</td>
 <td rowspan="4"><code>skos:ConceptScheme</code></td>
 <td><code>dct:title</code></td>
 </tr>
+
 <tr>
 <td rowspan="3">Reference date</td>
 <td>creation</td>
 <td><code>dct:created</code></td>
 </tr>
+
 <tr>
 <td>last revision</td>
 <td><code>dct:modified</code></td>
 </tr>
+
 <tr>
 <td>publication</td>
 <td><code>dct:issued</code></td>
 </tr>
+
 </tbody>
 </table>
 
 <p>For conformance with [[DCAT-AP-20200608]], GeoDCAT-AP records MUST also include keywords from the EU Vocabularies Data Theme Named Authority List [[EUV-THEMES]].</p>
+
 <p>In order to ensure consistency, the relevant EU Vocabularies Data Theme keywords SHOULD be selected based on mappings with the controlled vocabularies used in INSPIRE / ISO 19115 metadata.</p>
 
 <aside class="note">
@@ -2244,12 +2284,11 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 </aside>
 
 <p>As far as service metadata are concerned, keywords can classify either a service or the datasets / series operated by the service itself. For the latter, INSPIRE Metadata Regulation requires using at least one of the keywords from the ISO 19119 code list of spatial data service categories.</p>
+
 <p>Both [[VOCAB-DCAT-2]] and [[DCAT-AP-20200608]] do not have any specific property for keywords classifying either a service or the datasets / series operated by a service. Moreover, <code>dcat:theme</code> and <code>dcat:keyword</code> cannot be used for services, since their domain is restricted to <code>dcat:Dataset</code>.</p>
-<!--
-<div class="issue" data-number="8">
-</div>
--->
+
 <p>In order to keep the distinction between these two types of keywords, the adopted solution is as follows:</p>
+
 <ul>
 <li><p>Keywords from the ISO 19119 codelists of spatial data service type and categories are mapped to <code>dct:type</code>, and expressed by the corresponding URI in the INSPIRE Registry – reference registers:</p>
 <ul>
@@ -2260,20 +2299,15 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <li><p>INSPIRE spatial data themes are mapped to <code>dcat:theme</code>, and expressed by the corresponding URI in the INSPIRE Registry – reference register:</p>
 <ul>
 <li><p><a href="http://inspire.ec.europa.eu/theme">http://inspire.ec.europa.eu/theme</a></p></li>
-</ul></li>
+</ul>
+</li>
 <li><p>Keywords associated with other controlled vocabularies are mapped to <code>dcat:theme</code>. If not denoted by an HTTP URI, they SHOULD be expressed as a <code>skos:Concept</code> associated with a <code>skos:ConceptScheme</code>, and annotated with the textual content and reference date(s) in the relevant INSPIRE metadata elements.</p></li>
-<!--
-<li><p>Keywords not associated with a controlled vocabulary will be mapped to <code>dc:subject</code>, and represented as un-typed literals;</p></li>
-<li><p>INSPIRE spatial data themes are mapped to <code>dct:subject</code>, and expressed by the corresponding URI in the INSPIRE Registry – reference register:</p>
-<ul>
-<li><p><a href="http://inspire.ec.europa.eu/theme">http://inspire.ec.europa.eu/theme</a></p></li>
-</ul></li>
-<li><p>Keywords associated with other controlled vocabularies are mapped to <code>dct:subject</code>. If not denoted by an HTTP URI, they SHOULD be expressed as a <code>skos:Concept</code> associated with a <code>skos:ConceptScheme</code>, and annotated with the textual content and reference date(s) in the relevant INSPIRE metadata elements.</p></li>
--->
 </ul>
 
 <aside class="example" id="ex-topic-category-and-keyword" title="Topic categories and keywords">
+
 <p>Resource metadata in GeoDCAT-AP:</p>
+
 <pre>## Datasets and series
 [] a dcat:Dataset ;
 ### Free keywords
@@ -2306,7 +2340,9 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
     skos:inScheme [ a skos:ConceptScheme ;
     rdfs:label &quot;GEOSS - Societal Benefit Areas, version 1.0&quot;@en ;
     dct:issued &quot;2010-08-25&quot;^^xsd:date ] ] .</pre>
+
 <p>Resource metadata in ISO 19139:</p>
+
 <pre>&lt;!-- Datasets and series --&gt;
 &lt;gmd:MD_Metadata&gt;
   ...
@@ -2431,6 +2467,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
   ...
   &lt;/gmd:identificationInfo&gt;
 &lt;/gmd:MD_Metadata&gt;</pre>
+
 </aside>
 
 </section>
@@ -2454,113 +2491,96 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <p>In particular:</p>
 <ul>
 <li>Following [[VOCAB-DCAT-2]] and [[DCAT-AP-20200608]], property <code>locn:geometry</code> has been complemented by two additional properties, namely, <code>dcat:bbox</code> and <code>dcat:centroid</code> to be used when the spatial coverage is specified as a bounding box or a centroid, respectively.</li>
+<li>For GeoJSON [[?RFC7946]] literals, <a href="https://www.iana.org/assignments/media-types/application/vnd.geo+json">the GeoJSON IANA media type URI</a> used until [[GeoDCAT-AP-20160802]] is replaced by datatype <code>gsp:geoJSONLiteral</code>, defined in the current draft of the new version of GeoSPARQL [[?GeoSPARQL11]].</li>
 </ul>
 </aside>
 
-<p>In the core profile of [[ISO-19115]], spatial coverage can be specified either with a bounding box (a geometry) or a geographic identifier. INSPIRE is more restrictive, in that it requires to use a bounding box</p>
-<p>Based on that, GeoDCAT-AP specified spatial coverage as follows:</p>
+<p>In the core profile of [[ISO-19115]], spatial coverage can be specified either with a bounding box (a geometry) or a geographic identifier. INSPIRE is more restrictive, in that it requires using a bounding box</p>
+
+<p>Based on that, GeoDCAT-AP specified spatial coverage as illustrated in the following sections.</p>
+
+<!--
 <dl>
 <dt>Bounding box</dt>
 <dd>
+-->
+
+<section id="bounding-box">
+
+<h2>Bounding box</h2>
+
 <p>As a general rule, when the area corresponding to the spatial coverage is denoted by a geometry, as in INSPIRE, [[DCAT-AP-20200608]] recommends the use of the Core Location Vocabulary [[LOCN]], where this is done by using property <a href="https://www.w3.org/ns/locn#locn:geometry"><code>locn:geometry</code></a>, having as range a geometry specified as</p>
+
 <ul>
 <li><p>a URI - e.g., by using the geo URI scheme (IET RFC-5870) [[?RFC5870]], or a geohash URI [[?GEOHASH]], [[?GEOHASH-36]];</p></li>
-<li><p>a syntax encoding scheme - e.g., geohashes [[?GEOHASH]], [[?GEOHASH-36]], WKT [[?ISO-19125-1]], GML [[?GML]], KML [[?KML]], GeoJSON [[?GEOJSON]]; or</p></li>
+<li><p>a syntax encoding scheme - e.g., geohashes [[?GEOHASH]], [[?GEOHASH-36]], WKT [[?ISO-19125-1]], GML [[?GML]], KML [[?KML]], GeoJSON [[?RFC7946]]; or</p></li>
 <li><p>a semantic representation - using vocabularies like W3C Lat/long [[?W3C-BASIC-GEO]] or schema.org [[?SCHEMA-ORG]].</p></li>
 </ul>
+
 <p>However, in case the geometry is a bounding box or a centroid, properties <code>dcat:bbox</code> and <code>dcat:centroid</code>, respectively, SHOULD be used instead of <code>locn:geometry</code>.</p>
 
-<!--
-<aside class="note">
-<p>Please note that the Core Location Vocabulary does not restrict <a href="https://www.w3.org/ns/locn#locn:geometry"><code>locn:geometry</code></a> to bounding box geometries only.</p>
-</aside>
--->
-<!--
-<aside class="ednote">
-<p>For a possible revision to how bounding boxes should be specified, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/1">Issue #1</a>:</p>
--->
-<!--	
-<div class="issue" data-number="1"></div>
--->
-<!--
-</aside>
--->
-<!--
-<aside class="note">
--->
 <p>It is worth noting that currently there is no agreement on a preferred format to be used in RDF for the representation of geometries. In GeoDCAT-AP, geometries can be provided in any, and possibly multiple, encodings, but at least one of the following must be made available: WKT or GML. An additional requirement concerns the coordinate reference system (CRS) used, which may vary on a country or territory basis. The CRS must be specified in the GML or WKT encoding as required by GeoSPARQL [[GeoSPARQL]]. Geometries shall be interpreted using the axis order defined in the spatial reference system used. For example, for <abbr title="WGS 84 longitude-latitude">CRS84</abbr> the axis order is longitude / latitude, whereas for <abbr title="World Geodetic System 1984">WGS84</abbr> the axis order is latitude / longitude. Summarising:</p>
-<!--
-</aside>
--->
+
 <ul>
 <li><p>Geometries MAY be provided in multiple encodings, but at least one of the following MUST be made available: GML and WKT.</p></li>
 <li><p>For GML and WKT, the CRS MUST be specified as defined in GeoSPARQL [[GeoSPARQL]].</p></li>
 </ul>
-</dd>
-<dt>Geographic identifier</dt>
-<dd>
-<p>[[ISO-19115]] core also allows specifying the geographic location using a geographic identifier. Following [[DCAT-AP-20200608]], for this, it is RECOMMENDED to use an HTTP URI from one of the following registers / gazetteers:</p>
-<ul>
-<li><p>The Named Authority Lists operated by the Metadata Registry of the EU Publications office concerning continents [[EUV-CONT]], countries [[EUV-COUNTRIES]], and places [[EUV-PLACES]].</p></li>
-</ul>
-<p>If none of the above provides the relevant geographic identifiers, Geonames [[?GEONAMES]] SHOULD be used.</p>
-<p>If an HTTP URI is not available, the geographic identifier MUST be expressed with <code>skos:prefLabel</code>, and the reference to the originating controlled vocabulary (if any) MUST be specified with <code>skos:inScheme</code>. The controlled vocabulary will be described by a name (<code>dct:title</code>) and a last modified data (<code>dct:modified</code>).</p>
-</dd>
-</dl>
-<p>As far as geographic identifiers are concerned, following [[DCAT-AP-20200608]], GeoDCAT-AP does not prevent the use other vocabularies in addition to the recommended ones. The vocabularies identified by the GeoDCAT-AP WG are listed in <a href="#controlled-vocabularies-to-be-used"></a>.</p>
-<p><a href="#ex-mapping-geo-bbox"></a> shows how to specify the spatial coverage.</p>
+
+<p>As geometries may be provided in multiple encodings, the corresponding datatype SHOULD be always specified to ensure that the geometry literal is correctly interpreted.</p>
+
+<p>For GML and WKT, the [[GeoSPARQL]] datatypes <code>gsp:gmlLiteral</code> and <code>gsp:wktLiteral</code>, respectively, MUST be used.</p>
+
+<p>For GeoJSON [[?RFC7946]], datatype <code>gsp:geoJSONLiteral</code>, defined in the current draft of the new version of GeoSPARQL [[?GeoSPARQL11]], SHOULD be used.</p>
+
+<p>For the other geometry encodings, no datatype is currently available. Therefore, their interoperability is not ensured when metadata records are shared or harvested across catalogues.</p>
+
+<aside class="note">
+
+<p>Until [[GeoDCAT-AP-20160802]], the recommended solution to specify the datatype for GeoJSON literals was to use the following URI from the IANA Media Types registry [[IANA-MEDIA-TYPES]]:</p>
+
+<p><code>https://www.iana.org/assignments/media-types/application/vnd.geo+json</code></p>
+
+<p>This solution, intentionally meant to be provisional (see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/4">Issue #4</a>), is deprecated starting from this version of GeoDCAT-AP in favour of <code>gsp:geoJSONLiteral</code>. It will still be supported for backward compatibility with legacy metadata and applications, but it may be phased out in future versions of GeoDCAT-AP.</p>
+
+</aside>
+
+<!--
+<p><a href="#ex-mapping-geo-bbox"></a> shows how to specify the spatial coverage as a bounding box.</p>
+-->
 
 <aside class="example" id="ex-mapping-geo-bbox" title="Spatial coverage as a bounding box">
-<p>Resource metadata in GeoDCAT-AP using a geographic bounding box. This example uses multiple encodings, namely, the recommended ones (WKT and GML), plus GeoJSON. To denote the datatype of the GeoJSON literal, <a href="https://www.iana.org/assignments/media-types/application/vnd.geo+json">the URL of the corresponding IANA media type</a>.</p>
+
+<p>Resource metadata in GeoDCAT-AP using a geographic bounding box. This example uses multiple encodings, namely, the recommended ones (GML and WKT), plus GeoJSON.</p>
+
 <!--
-<aside class="ednote">
-<p>For a possible revision to how the GeoJSON datatype should be specified, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/4">Issue #4</a>:</p>
--->
 <div class="issue" data-number="4"></div>
-<!--
-</aside>
 -->
-<!--
-<aside class="ednote">
-<p>For a possible revision to the use of GeoJSON in GeoDCAT-AP, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/6">Issue #6</a>:</p>
--->
+
 <div class="issue" data-number="6"></div>
-<!--
-</aside>
--->
+
 <pre>[] dct:spatial [ a dct:Location ;
   dcat:bbox &quot;&quot;&quot;
       POLYGON((-10.58 70.09,34.59 70.09,34.59 34.56,-10.58 34.56,-10.58 70.09))
     &quot;&quot;&quot;^^gsp:wktLiteral ;
   dcat:bbox &quot;&quot;&quot;
-      &lt;gml:Envelope srsName=\&quot;http://www.opengis.net/def/crs/OGC/1.3/CRS84\&quot;&gt;
+      &lt;gml:Envelope srsName=&quot;http://www.opengis.net/def/crs/OGC/1.3/CRS84&quot;&gt;
         &lt;gml:lowerCorner&gt;34.56 -10.58&lt;/gml:lowerCorner&gt;
         &lt;gml:upperCorner&gt;70.09 34.59&lt;/gml:upperCorner&gt;
       &lt;/gml:Envelope&gt;
-    &quot;&quot;&quot;^^gsp:gmlLiteral 
-  ] ;
-<!--
-  dcat:bbox &quot;{\&quot;type\&quot;:\&quot;Polygon\&quot;,\&quot;crs\&quot;:{\&quot;type\&quot;:\&quot;name\&quot;,\&quot;properties\&quot;:{\&quot;name\&quot;:\&quot;urn:ogc:def:crs:OGC:1.3:CRS84\&quot;}},
-      \&quot;coordinates\&quot;:[[[-10.58,70.09],[34.59,70.09],[34.59,34.56],[-10.58,34.56],[-10.58,70.09]]]
-    }&quot;^^&lt;https://www.iana.org/assignments/media-types/application/vnd.geo+json&gt; ] ;
--->    
+    &quot;&quot;&quot;^^gsp:gmlLiteral ; 
+  dcat:bbox &quot;&quot;&quot;
+      {
+        &quot;type&quot;:&quot;Polygon&quot;,
+        &quot;coordinates&quot;:[[
+          [-10.58,70.09],[34.59,70.09],[34.59,34.56],
+          [-10.58,34.56],[-10.58,70.09]
+        ]]
+      }
+    &quot;&quot;&quot;^^&lt;gsp:geoJSONLiteral&gt; ] ;
 .</pre>
-<p>Resource metadata in GeoDCAT-AP using a geographic identifier</p>
-<pre># If a URI is used for the geographic identifier (recommended)
-[]
-  dct:spatial &lt;http://publications.europa.eu/resource/authority/country/NLD&gt; .
 
-# If no URI is used for the geographic identifier
-[]
-  dct:spatial [
-    skos:preflabel &quot;Netherlands&quot;@en;
-    skos:prefLabel &quot;Nederland&quot;@nl;
-    skos:inScheme [
-      dct:title &quot;Countries Authority Table&quot;@en;
-      dct:modified &quot;2009-01-01&quot;^^xsd:date
-    ]
-  ] .</pre>
 <p>Resource metadata in ISO 19139 using a geographic bounding box:</p>
+
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:identificationInfo&gt;
@@ -2593,6 +2613,61 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
 </aside>
+
+</section>
+
+<!--
+</dd>
+<dt>Geographic identifier</dt>
+<dd>
+-->
+
+<section>
+
+<h2>Geographic identifier</h2>
+
+<p>[[ISO-19115]] core also allows specifying the geographic location using a geographic identifier. Following [[DCAT-AP-20200608]], for this, it is RECOMMENDED to use an HTTP URI from one of the following registers / gazetteers:</p>
+
+<ul>
+<li><p>The Named Authority Lists operated by the Metadata Registry of the EU Publications office concerning continents [[EUV-CONT]], countries [[EUV-COUNTRIES]], and places [[EUV-PLACES]].</p></li>
+</ul>
+<p>If none of the above provides the relevant geographic identifiers, Geonames [[?GEONAMES]] SHOULD be used.</p>
+<p>If an HTTP URI is not available, the geographic identifier MUST be expressed with <code>skos:prefLabel</code>, and the reference to the originating controlled vocabulary (if any) MUST be specified with <code>skos:inScheme</code>. The controlled vocabulary will be described by a name (<code>dct:title</code>) and a last modified data (<code>dct:modified</code>).</p>
+
+<!--
+</dd>
+</dl>
+-->
+
+<p>As far as geographic identifiers are concerned, following [[DCAT-AP-20200608]], GeoDCAT-AP does not prevent the use other vocabularies in addition to the recommended ones. The vocabularies identified by the GeoDCAT-AP WG are listed in <a href="#controlled-vocabularies-to-be-used"></a>.</p>
+
+<!--
+<p><a href="#ex-mapping-geo-id"></a> shows how to specify the spatial coverage as a geographic identifier.</p>
+-->
+
+<aside class="example" id="ex-mapping-geo-id" title="Spatial coverage as a geographic identifier">
+
+<p>Resource metadata in GeoDCAT-AP using a geographic identifier</p>
+
+<pre># If a URI is used for the geographic identifier (recommended)
+[]
+  dct:spatial &lt;http://publications.europa.eu/resource/authority/country/NLD&gt; .
+
+# If no URI is used for the geographic identifier
+[]
+  dct:spatial [
+    skos:preflabel &quot;Netherlands&quot;@en;
+    skos:prefLabel &quot;Nederland&quot;@nl;
+    skos:inScheme [
+      dct:title &quot;Countries Authority Table&quot;@en;
+      dct:modified &quot;2009-01-01&quot;^^xsd:date
+    ]
+  ] .</pre>
+
+</aside>
+
+</section>
+
 </section>
 
 <section id="temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp">
@@ -2609,29 +2684,27 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 </aside>
 
 <p>Temporal reference is a composite element consisting of the following possible child elements:</p>
+
 <ul>
 <li><p>temporal extent (temporal coverage);</p></li>
 <li><p>date of publication, last revision, and/or creation.</p></li>
 </ul>
 <p>Based on [[DCAT-AP-20200608]], temporal extent is mapped to <code>dct:temporal</code>, having as range <code>dct:PeriodOfTime</code>. The time instant or interval is specified by using properties <code>dcat:startDate</code> and <code>dcat:endDate</code>, respectively.</p>
-<!--<aside class="ednote">
-<p>For a possible revision to how start / end date(time) should be specified, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/5">Issue #5</a>:</p>
--->
-<!--
-<div class="issue" data-number="5"></div>
--->
-<!--
-</aside>
--->
+
 <p>By contrast, date of publication, last revision, and creation are mapped, respectively, to <code>dct:issued</code>, <code>dct:modified</code> (both core and extended GeoDCAT-AP mapping profiles), and <code>dct:created</code> (only for the extended mapping profile of GeoDCAT-AP).</p>
+
 <p>[[DCAT-AP-20200608]] does not have a property equivalent to the INSPIRE metadata element metadata date. In INSPIRE, this element is defined as follows (see [[INSPIRE-MD-REG]], Part B, §10.2):</p>
+
 <blockquote>
 <p>The date which specifies when the metadata record was created or updated.</p>
 </blockquote>
+
 <p>Due to this ambiguity, the defined mapping for this element is <code>dct:modified</code>.</p>
 
 <aside class="example" id="ex-mapping-temporal-reference" title="Temporal extent">
+
 <p>Resource metadata in GeoDCAT-AP</p>
+
 <pre>## Creation, publication and last revision dates
 [] dct:created &quot;2010-03-01&quot;^^xsd:date ;
   dct:issued &quot;2010-10-05&quot;^^xsd:date ;
@@ -2644,7 +2717,9 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 # Metadata on metadata
 ## Metadata date
     [ dct:modified &quot;2012-08-13&quot;^^xsd:date ] .</pre>
+
 <p>Resource metadata in ISO 19139:</p>
+
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
   &lt;!-- metadata date --&gt;
@@ -2696,7 +2771,9 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
   ...
   &lt;/gmd:identificationInfo&gt;
 &lt;/gmd:MD_Metadata&gt;</pre>
+
 </aside>
+
 </section>
 
 <section id="lineage---lineage">
@@ -2704,16 +2781,21 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <h2>Lineage - *Lineage</h2>
 
 <p>Following [[DCAT-AP-20200608]], this element is mapped to property <code>dct:provenance</code>.</p>
+
 <p>Since the range of <code>dct:provenance</code> is not a literal, but class <code>dct:ProvenanceStatement</code>, the free-text content of element “lineage” can be expressed by using <code>rdfs:label</code>, as illustrated in [[?DC-UG-PM]].</p>
 
 <aside class="example" id="ex-mapping-lineage" title="Lineage">
+
 <p>Resource metadata in GeoDCAT-AP:</p>
+
 <pre>[] a dcat:Dataset ;
   dct:provenance [ a dct:ProvenanceStatement ;
     rdfs:label &quot;Forest Map 2006 is derived from the IMAGE2006 (SPOT/LISS scenes)
       and CORINE2006 landcover dataset. In addition, MODIS composites are used for
       the Forest type classification.&quot;@en ] .</pre>
+
 <p>Resource metadata in ISO 19139:</p>
+
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:dataQualityInfo&gt;
@@ -2733,6 +2815,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
   &lt;/gmd:dataQualityInfo&gt;
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
+
 </aside>
 
 </section>
@@ -2756,25 +2839,21 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 -->
 
 <p>[[VOCAB-DCAT-2]] and [[DCAT-AP-20200608]] provide property <code>dcat:spatialResolutionInMeters</code>, to specify spatial resolution as distance in metres. Morever, [[VOCAB-DCAT-2]] and [[?SDW-BP]] recommend the use of [[VOCAB-DQV]] to specify other types of spatial resolution, via property <code>dqv:hasQualityMeasurement</code>.</p>
-<p>Based on this, GeoDCAT-AP makes use of <code>dqv:hasQualityMeasurement</code> for all types of spatial resolution, and of <code>dcat:spatialResolutionInMeters</code> for spatial resolution as distance in metres. Finally, when spatial resolution is specified as free-text, property <code>rdfs:comment</code> is used.</p>
+
+<p>Based on this, GeoDCAT-AP specifies spatial resolution as follows:</p>
+
+<ul>
+<li>Property <code>dcat:spatialResolutionInMeters</code> is used for spatial resolution when it is expressed as distance in metres.</li>
+<li>Property <code>dqv:hasQualityMeasurement</code> is used for all types of spatial resolution. In such a case, the type of spatial resolution is specified by using property <code>dqv:isMeasurementOf</code>, which takes as value the relevant instance of class <code>dqv:Metric</code> defined in GeoDCAT-AP for this purpose (see <a class="no-secRef" href="#instances-of-metric"></a>).</li>
+<li>Property <code>rdfs:comment</code> is used when spatial resolution is specified as free-text.</li>
+</ul>
+
 <p>The core mapping profile of GeoDCAT-AP, following [[DCAT-AP-20200608]] supports only the use property <code>dcat:spatialResolutionInMeters</code>, and, therefore, the other types of spatial resolution are left unmapped.</p>
-<!--
-<p>In [[DCAT-AP-20200608]], no equivalent term is provided.</p>
-<p>There are currently no candidates in existing vocabularies to represent such metadata elements.</p>
-<p>Based on this, GeoDCAT-AP defines a provisional mapping, representing spatial resolution in a human-readable form only, using property <code>rdfs:comment</code>.</p>
--->
-<!--
-<aside class="ednote">
-<p>For a possible revision to how spatial / temporal resolution should be specified, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/3">Issue #3</a>:</p>
--->
-<!--	
-<div class="issue" data-number="3"></div>
--->
-<!--
-</aside>
--->
+
 <aside class="example" id="ex-mapping-spatial-resolution" title="Spatial resolution">
+
 <p>Resource metadata in GeoDCAT-AP:</p>
+
 <pre># Spatial resolution as distance in metres
 [] a dcat:Dataset ;
   dcat:spatialResolutionInMeters &quot;5000&quot;^^xsd:decimal .
@@ -2784,7 +2863,9 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
     dqv:isMeasurementOf geodcatap:spatialResolutionAsScale ;
     dqv:value "0.0001"^^xsd:decimal 
   ] .</pre> 
+
 <p>Resource metadata in ISO 19139</p>
+
 <pre>&lt;gmd:MD_Resolution&gt;
   &lt;gmd:equivalentScale&gt;
     &lt;gmd:MD_RepresentativeFraction&gt;
@@ -2794,6 +2875,7 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
     &lt;/gmd:MD_RepresentativeFraction&gt;
   &lt;/gmd:equivalentScale&gt;
 &lt;/gmd:MD_Resolution&gt;</pre>
+
 </aside>
 
 </section>
@@ -2803,16 +2885,22 @@ Notably, both the W3C Data on the Web Best Practices WG and the joint W3C/OGC Sp
 <h2>Conformity and data quality - *not in ISO 19115 core</h2>
 
 <p>In [[ISO-19115]], conformance and quality information is encoded as a quality report containing the result of a test (an evaluation) of a given quality measure, according to an evaluation method, with either a quantitative result (a metric) or a conformance result (pass or fail) as most important outcome.</p>
-<p>The current version of GeoDCAT-AP only defines a syntax binding for conformity and not for data quality in general, making use of property <code>dct:conformsTo</code> and the W3C Provenance Ontology (PROV-O) [[PROV-O]] as explained in the following paragraphs. 
+
+<p>The current version of GeoDCAT-AP only defines a syntax binding for conformity and not for data quality in general, making use of property <code>dct:conformsTo</code> and the W3C Provenance Ontology (PROV-O) [[PROV-O]], as explained in the following paragraphs. 
+
 <!--
 <p>For encoding conformance, GeoDCAT-AP uses <code>dct:conformsTo</code> and the W3C Provenance Ontology (PROV-O) [[PROV-O]] as explained in the following paragraphs. 
 For encoding other aspects of data quality, GeoDCAT-AP does not provide a syntax binding as there is a risk that the (future) work of other standards bodies on data quality may make the defined syntax binding for GeoDCAT-AP outdated.
 For example, the <a href="https://www.w3.org/2013/dwbp/">W3C Data on the Web Best Practices WG</a> is working on a Data Quality Vocabulary (DQV) [[?VOCAB-DQV]].
 To limit the impact, it was decided to only provide a partial mapping for Data Quality / Conformance.</p>
 -->
+
 <p>[[DCAT-AP-20200608]] provides a single candidate, <code>dct:conformsTo</code>, which however can be used to map only a conformity of degree ‘conformant’. This is suitable for the core mapping profile of GeoDCAT-AP.</p>
+
 <p>Considering how conformity must be expressed in extended mapping profile of GeoDCAT-AP (see [[INSPIRE-MD-REG]], Part B, §7), possible candidates are the W3C Evaluation and Report Language (EARL) [[?EARL10]] and the W3C Provenance Ontology (PROV-O) [[PROV-O]]. The latter candidate was chosen by the GeoDCAT-AP Working Group, since it would enable wider re-use with respect to the EARL vocabulary, which is more specific, and its use is limited.</p>
+
 <p>[[PROV-O]] allows encoding conformity as a test activity (<code>prov:Activity</code>) that generated a result specified with property <code>prov:generated</code>, corresponding to the degree of conformity, for which the INSPIRE Registry maintains a URI set [[INSPIRE-DoC]]. The specification against which the conformance is asserted is specified via a qualified association (<code>prov:qualifiedAssociation</code>) with a test plan (a <code>prov:Plan</code>) in turn derived from a standard (<code>dct:Standard</code>, also <code>prov:Entity</code>). These associations are made via a property chain: <code>prov:qualifiedAssociation</code>, <code>prov:hadPlan</code>, and <code>prov:wasDerivedFrom</code>.</p>
+
 <p>This pattern is illustrated in the following table.</p>
 
 <table id="table-mapping-conformity" class="simple">
@@ -2826,6 +2914,7 @@ To limit the impact, it was decided to only provide a partial mapping for Data Q
 </tr>
 </thead>
 <tbody>
+
 <tr>
 <td rowspan="6"><strong>Conformity</strong></td>
 <td rowspan="4">Specification (M)</td>
@@ -2834,11 +2923,13 @@ To limit the impact, it was decided to only provide a partial mapping for Data Q
 <td rowspan="4"><code>prov:qualifiedAssociation</code> (range <code>prov:Assocation</code>) &gt; <code>prov:hadPlan</code> (range <code>prov:Plan</code>) &gt; <code>prov:wasDerivedFrom</code> (range: <code>prov:Entity</code>, <code>dct:Standard</code>)</td>
 <td><code>dct:title</code></td>
 </tr>
+
 <tr>
 <td rowspan="3">Reference date</td>
 <td>creation</td>
 <td><code>dct:created</code></td>
 </tr>
+
 <tr>
 <td>last revision</td>
 <td><code>dct:modified</code></td>
@@ -2847,21 +2938,26 @@ To limit the impact, it was decided to only provide a partial mapping for Data Q
 <td>publication</td>
 <td><code>dct:issued</code></td>
 </tr>
+
 <tr>
 <td rowspan="2" colspan="3">Degree (M)</td>
 <td rowspan="2"><code>prov:generated</code> (range <code>prov:Entity</code>)</td>
 <td><code>dct:type</code> (range [[INSPIRE-DoC]])</td>
 </tr>
+
 <tr>
 <td><code>dct:description</code></td>
 </tr>
+
 </tbody>
 </table>
 
 <p>In order to grant interoperability with [[DCAT-AP-20200608]], when conformity is of degree “conformant”, the proposal is to use both [[PROV-O]] and <code>dct:conformsTo</code> for GeoDCAT-AP Extended.</p>
 
 <aside class="example" id="ex-mapping-conformity" title="Conformity">
+
 <p>Resource metadata in GeoDCAT-AP:</p>
+
 <pre>
 prov:wasUsedBy [
   a prov:Activity;
@@ -2884,7 +2980,9 @@ prov:wasUsedBy [
   ];
 ] .
 </pre>
+
 <p>Resource metadata in ISO 19139:</p>
+
 <pre>&lt;gmd:result&gt;
   &lt;gmd:DQ_ConformanceResult&gt;
     &lt;gmd:specification&gt;
@@ -2915,19 +3013,13 @@ prov:wasUsedBy [
   &lt;/gmd:DQ_ConformanceResult&gt;
 &lt;/gmd:result&gt;
 </pre>
+
 </aside>
 
 <!--
 <p>The PROV-O-based approach might be revised in the future – but still supported for backward interoperability –, if future standard vocabularies will be able to address GeoDCAT-AP requirement.</p>
-<aside class="ednote">
-<p>For possible revisions to how conformity is specified, see the following issue:</p>
 -->
-<!--
-<div class="issue" data-number="7"></div>
--->
-<!--
-</aside>
--->
+
 </section>
 
 <section id="conditions-for-access-and-use-and-limitations-on-public-access-use-limitation-and-access-other-constraints">
@@ -2940,6 +3032,7 @@ prov:wasUsedBy [
 </aside>
 
 <p>In [[DCAT-AP-20200608]], licensing information is specified on (a) data catalogues (services) and on (b) the distribution(s) of a dataset, and not on the dataset itself. The principle is that different dataset distributions may be associated with different licensing terms. Moreover, [[DCAT-AP-20200608]] recommends the use of <code>dct:accessRights</code> for specifying access conditions.</p>
+
 <p>Based on this, GeoDCAT-AP specifies use and access limitations by using, respectively, <code>dct:license</code> and <code>dct:accessRights</code>. These properties take as value the URI of the use / access limitations, when available. Otherwise, since the range of these properties is not a literal, but, respectively, classes <code>dct:LicenseDocument</code> and <code>dct:RightsStatement</code>, the free-text content of the corresponding ISO 19115 / INSPIRE metadata elements can be expressed by using <code>rdfs:label</code>, as illustrated in [[?DC-UG-PM]].</p>
 
 <aside class="note">
@@ -2951,7 +3044,9 @@ prov:wasUsedBy [
 </aside>
 
 <aside class="example" id="ex-mapping-conditions-for-access-and-use" title="Conditions for access and use">
+
 <p>Resource metadata in GeoDCAT-AP:</p>
+
 <pre>[] dcat:distribution [ a dcat:Distribution ;
   dct:license [ a dct:LicenseDocument ;
     rdfs:label &quot;&quot;&quot;
@@ -2967,12 +3062,16 @@ prov:wasUsedBy [
         public access limited according to Article 13(1)(b) 
 	of the INSPIRE Directive
       &quot;&quot;&quot;@en ] ] .</pre>
+
 <p>Resource metadata in GeoDCAT-AP (using URIs for use and access limitations):</p>
+
 <pre>[] dcat:distribution [ a dcat:Distribution ;
   dct:license &lt;https://creativecommons.org/licenses/by/4.0/&gt; ;
   dct:accessRights &lt;https://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations&gt; ;
 ] .</pre>
+
 <p>Resource metadata in ISO 19139:</p>
+
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:MD_LegalConstraints&gt;
@@ -3008,7 +3107,9 @@ prov:wasUsedBy [
   &lt;/gmd:MD_LegalConstraints&gt;
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
+
 <p>Resource metadata in ISO 19139 (using URIs for use and access limitations):</p>
+
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:MD_LegalConstraints&gt;
@@ -3038,6 +3139,7 @@ prov:wasUsedBy [
   &lt;/gmd:MD_LegalConstraints&gt;
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
+
 </aside>
 
 </section>
@@ -3055,10 +3157,6 @@ prov:wasUsedBy [
 <li>A typo has been fixed concerning the vocabulary used to describe an agent via property <code>prov:agent</code> - [[GeoDCAT-AP-20160802]] indicated [[VCARD-RDF]] whereas the correct one is [[FOAF]].</li>
 </ul>
 </aside>
-<!--
-<div class="issue" data-number="16">
-</div>
--->
 
 <p>[[DCAT-AP-20200608]] supports properties to denote the publisher, the creator, and the contact point for a dataset.</p>
 
@@ -3081,72 +3179,84 @@ prov:wasUsedBy [
 </tr>
 </thead>
 <tbody>
+
 <tr>
 <td>Resource provider</td>
 <td>Part B, §6.1</td>
 <td>Party that supplies the resource.</td>
 <td><code>geodcatap:resourceProvider</code></td>
 </tr>
+
 <tr>
 <td>Custodian</td>
 <td>Part B, §6.2</td>
 <td>Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource.</td>
 <td><code>geodcatap:custodian</code></td>
 </tr>
+
 <tr>
 <td>Owner</td>
 <td>Part B, §6.3</td>
 <td>Party that owns the resource.</td>
 <td><code>dct:rightsHolder</code></td>
 </tr>
+
 <tr>
 <td>User</td>
 <td>Part B, §6.4</td>
 <td>Party who uses the resource.</td>
 <td><code>geodcatap:user</code></td>
 </tr>
+
 <tr>
 <td>Distributor</td>
 <td>Part B, §6.5</td>
 <td>Party who distributes the resource</td>
 <td><code>geodcatap:distributor</code></td>
 </tr>
+
 <tr>
 <td>Originator</td>
 <td>Part B, §6.6</td>
 <td>Party who created the resource.</td>
 <td><code>geodcatap:originator</code></td>
 </tr>
+
 <tr>
 <td>Point of contact</td>
 <td>Part B, §6.7</td>
 <td>Party who can be contacted for acquiring knowledge about or acquisition of the resource.</td>
 <td><code>dcat:contactPoint</code></td>
 </tr>
+
 <tr>
 <td>Principal investigator</td>
 <td>Part B, §6.8</td>
 <td>Key party responsible for gathering information and conducting research</td>
 <td><code>geodcatap:principalInvestigator</code></td>
 </tr>
+
 <tr>
 <td>Processor</td>
 <td>Part B, §6.9</td>
 <td>Party who has processed the data in a manner such that the resource has been modified.</td>
 <td><code>geodcatap:processor</code></td>
 </tr>
+
 <tr>
 <td>Publisher</td>
 <td>Part B, §6.10</td>
 <td>Party who published the resource</td>
 <td><code>dct:publisher</code></td>
 </tr>
+
 <tr>
 <td>Author</td>
 <td>Part B, §6.11</td>
 <td>Party who authored the resource.</td>
 <td><code>dct:creator</code></td>
 </tr>
+
 </tbody>
 </table>
 
@@ -3167,6 +3277,7 @@ prov:wasUsedBy [
 </tr>
 </thead>
 <tbody>
+
 <tr>
 <td rowspan="3"><strong>Responsible party</strong></td>
 <td rowspan="2">Responsible party</td>
@@ -3175,14 +3286,17 @@ prov:wasUsedBy [
 <td rowspan="2"><code>prov:agent</code> (range <code>prov:Agent</code>, <code>foaf:Agent</code>)</td>
 <td><code>foaf:name</code></td>
 </tr>
+
 <tr>
 <td>Contact email address</td>
 <td><code>foaf:mbox</code></td>
 </tr>
+
 <tr>
 <td colspan="2">Responsible party role</td>
 <td colspan="2"><code>dcat:hadRole</code> (range <code>dcat:Role</code>)</td>
 </tr>
+
 </tbody>
 </table>
 
@@ -3227,7 +3341,9 @@ prov:wasUsedBy [
           foaf:mbox &lt;mailto:bag@kadaster.nl&gt; ;
           foaf:workplaceHomepage &lt;http://www.kadaster.nl/bag&gt; ;
           foaf:name &quot;Kadaster&quot;@nl ] ] ] .</pre>
+
 <p>Resource metadata in ISO 19139:
+
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:pointOfContact&gt;
@@ -3283,6 +3399,7 @@ prov:wasUsedBy [
   &lt;/gmd:contact&gt;
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
+
 </aside>
 
 </section>
@@ -3292,12 +3409,16 @@ prov:wasUsedBy [
 <h2>*Metadata file identifier</h2>
 
 <p>This element identifies a metadata record.</p>
+
 <p>Metadata file identifiers are mapped to <code>dct:identifier</code>.</p>
 
 <aside class="example" id="ex-mapping-metadata-file-identifier-as-string" title="Metadata file identifier as string">
+
 <p>Metadata on metadata in GeoDCAT-AP:</p>
+
 <pre>[] a dcat:CatalogRecord ;
   dct:identifier &quot;947e5a55-e548-11e1-9105-0017085a97ab&quot;^^xsd:string .</pre><p>Resource metadata in ISO 19139:</p>
+
 <pre>&lt;gmd:MD_Metadata&gt;
 &lt;!-- Metadata on metadata --&gt;
   ...
@@ -3307,16 +3428,21 @@ prov:wasUsedBy [
     &lt;/gco:CharacterString&gt;
   &lt;/gmd:fileIdentifier&gt;
   ...
-&lt;/gmd:MD_Metadata&gt;</pre></aside>
+&lt;/gmd:MD_Metadata&gt;</pre>
+
+</aside>
 
 <p>If the metadata file identifier is or can be encoded as an HTTP URI, it can also be used as the URI of the catalogue record (see <a href="#ex-mapping-metadata-file-identifier-as-uri"></a>).</p>
 
 <aside class="example" id="ex-mapping-metadata-file-identifier-as-uri" title="Metadata file identifier as URI">
+
 <p>Metadata on metadata in GeoDCAT-AP:</p>
+
 <pre>&lt;https://some.catalogue/record/947e5a55-e548-11e1-9105-0017085a97ab&gt;
   a dcat:CatalogRecord ;
   dct:identifier
     &quot;https://some.catalogue/record/947e5a55-e548-11e1-9105-0017085a97ab&quot;^^xsd:anyURI .</pre>
+
 </aside>
 
 </section>
@@ -3326,6 +3452,7 @@ prov:wasUsedBy [
 <h2>*Metadata standard name, *Metadata standard version</h2>
 
 <p>Following [[DCAT-AP-20200608]], GeoDCAT-AP uses <code>dct:conformsTo</code> to specify the metadata standard, and properties <code>dct:title</code> and <code>owl:versionInfo</code> are used to specify the standard name and version, respectively.</p>
+
 <p>This pattern is illustrated in the following table.</p>
 
 <table id="table-mapping-metadata-standard" class="simple">
@@ -3339,23 +3466,28 @@ prov:wasUsedBy [
 </tr>
 </thead>
 <tbody>
+
 <tr>
 <td rowspan="2"><strong>Metadata standard</strong></td>
 <td>Metadata standard name</td>
 <td rowspan="2"><code>dct:conformsTo</code> (range <code>dct:Standard</code>)</td>
 <td><code>dct:title</code></td>
 </tr>
+
 <tr>
 <td>Metadata standard version</td>
 <td><code>owl:versionInfo</code></td>
 </tr>
+
 </tbody>
 </table>
 
 <p><a href="#ex-mapping-metadata-standard"></a> shows a GeoDCAT-AP metadata record obtained from one conformant with [[ISO-19115]].</p>
 
 <aside class="example" id="ex-mapping-metadata-standard" title="Metadata standard">
+
 <p>Metadata on metadata in GeoDCAT-AP:</p>
+
 <pre>[] a dcat:CatalogRecord ;
   dct:conformsTo &lt;https://joinup.ec.europa.eu/release/geodcat-ap/10&gt; ;
 .
@@ -3365,7 +3497,9 @@ prov:wasUsedBy [
   dct:title &quot;GeoDCAT-AP&quot;@en ;
   owl:versionInfo &quot;1.0&quot; ;
 .</pre>
+
 <p>Resource metadata in ISO 19139 for datasets:</p>
+
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:metadataStandardName&gt;
@@ -3375,12 +3509,15 @@ prov:wasUsedBy [
     &lt;gco:CharacterString&gt;Nederlands metadata profiel op ISO 19115 voor geografie 1.3&lt;/gco:CharacterString&gt;
   &lt;/gmd:metadataStandardVersion&gt;
 &lt;/gmd:MD_Metadata&gt;</pre>
+
 </aside>
 
 <p>To represent the standard name and version of the source ISO record, the GeoDCAT-AP metadata record must be extended as in <a href="#ex-mapping-metadata-standard-with-source-record"></a>.</p>
 
 <aside class="example" id="ex-mapping-metadata-standard-with-source-record" title="Metadata standard of source record">
+
 <p>Metadata on metadata in GeoDCAT-AP:</p>
+
 <pre>[] a dcat:CatalogRecord ;
   dct:conformsTo &lt;https://joinup.ec.europa.eu/release/geodcat-ap/10&gt; ;
   dct:source [
@@ -3397,7 +3534,9 @@ prov:wasUsedBy [
   dct:title &quot;GeoDCAT-AP&quot;@en ;
   owl:versionInfo &quot;1.0&quot; ;
 .</pre>
+
 <p>Resource metadata in ISO 19139 for datasets:</p>
+
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:metadataStandardName&gt;
@@ -3407,6 +3546,7 @@ prov:wasUsedBy [
     &lt;gco:CharacterString&gt;Nederlands metadata profiel op ISO 19115 voor geografie 1.3&lt;/gco:CharacterString&gt;
   &lt;/gmd:metadataStandardVersion&gt;
 &lt;/gmd:MD_Metadata&gt;</pre>
+
 </aside>
 
 </section>
@@ -3446,21 +3586,26 @@ prov:wasUsedBy [
 <section id="coordinate-reference-systems-and-temporal-reference-systems-reference-system">
 
 <h2>Coordinate reference systems and Temporal reference systems – *Reference System</h2>
-<!--
-<p>In [[DCAT-AP-20200608]], no equivalent term is provided. This is also the case for the NeoGeo [[?NEOGEO]], GeoSPARQL [[?GeoSPARQL]], and the Core Location Vocabulary [[?LOCN]].</p>
-<p>Based on this, these elements are provisionally mapped to property <code>dct:conformsTo</code>. Moreover, in order to indicate that the object of <code>dct:conformsTo</code> denotes a reference system, an additional statement with predicate <code>dct:type</code> is added, with a code list value defining the notion of (spatial / temporal) reference system, taken from the glossary operated by the INSPIRE Registry.</p>
--->
+
 <p>In GeoDCAT-AP, these elements are mapped to property <code>dct:conformsTo</code>. Moreover, in order to indicate that the object of <code>dct:conformsTo</code> denotes a reference system, an additional statement with predicate <code>dct:type</code> is added, with a code list value defining the notion of (spatial / temporal) reference system, taken from the glossary operated by the INSPIRE Registry.</p>
+
 <p>More precisely, the following URIs SHOULD be used to denote, respectively, spatial and temporal reference systems:</p>
+
 <ul>
 <li><p><a href="http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem">http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem</a></p></li>
 <li><p><a href="http://inspire.ec.europa.eu/glossary/TemporalReferenceSystem">http://inspire.ec.europa.eu/glossary/TemporalReferenceSystem</a></p></li>
 </ul>
+
 <p>The reference system identifier SHOULD be preferably represented with an HTTP URI. In particular, spatial reference systems should be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by the Open Geospatial Consortium [[OGC-EPSG]].</p>
+
 <p>In this register, the URI prefix for coordinate reference systems is the following one:</p>
+
 <p><a href="http://www.opengis.net/def/crs/EPSG/0/">http://www.opengis.net/def/crs/EPSG/0/</a></p>
+
 <p>followed by the number identifying the coordinate reference system in the EPSG register. For instance, the following URI</p>
+
 <p><a href="http://www.opengis.net/def/crs/EPSG/0/4258">http://www.opengis.net/def/crs/EPSG/0/4258</a></p>
+
 <p>identifies coordinate reference system EPSG 4258, corresponding to ETRS89 (European Terrestrial Reference System 1989).</p>
 
 <aside class="note">
@@ -3472,25 +3617,19 @@ prov:wasUsedBy [
 <aside class="note">
 <p>The GeoDCAT-AP approach for the specification of reference systems is also documented in [[SDW-BP]] (<a data-cite="?SDW-BP#bp-crs">Best Practice 8</a>, Example 22) and in [[VOCAB-DCAT-2]] (<a data-cite="VOCAB-DCAT-2#ex-dataset-crs">Example 34</a>).</p>
 </aside>
-<!--
-<aside class="ednote">
-<p>For a possible revision to how spatial / temporal reference systems should be specified, see <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/2">Issue #2</a>:</p>
--->
-<!--
-<div class="issue" data-number="2"></div>
--->
-<!--
-</aside>
--->
 
 <aside class="example" id="ex-mapping-reference-system-as-uri" title="Reference system as URI">
+
 <p>Resource metadata in GeoDCAT-AP:</p>
+
 <pre>[] a dcat:Dataset ;
   dct:conformsTo &lt;http://www.opengis.net/def/crs/EPSG/0/4258&gt; .
 
 &lt;http://www.opengis.net/def/crs/EPSG/0/4258&gt;
   dct:type &lt;http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem&gt; .</pre>
+
 <p>Resource metadata in ISO 19139:</p>
+
 <pre>&lt;gmd:referenceSystemInfo&gt;
   &lt;gmd:MD_ReferenceSystem&gt;
     &lt;gmd:referenceSystemIdentifier&gt;
@@ -3505,17 +3644,23 @@ prov:wasUsedBy [
     &lt;/gmd:referenceSystemIdentifier&gt;
   &lt;/gmd:MD_ReferenceSystem&gt;
 &lt;/gmd:referenceSystemInfo&gt;</pre>
+
 </aside>
 
 <p>If not represented with an HTTP URI, the reference system identifier MUST be mapped to <code>dct:identifier</code>, as in <a href="#ex-mapping-reference-system-as-string"></a>.</p>
 
 <aside class="example" id="ex-mapping-reference-system-as-string" title="Reference system as string">
+
 <p>Resource metadata in GeoDCAT-AP:</p>
+
 <pre>[] a dcat:Dataset ;
   dct:conformsTo [
     dct:identifer &quot;EPSG:4258&quot;^^xsd:string ;
     dct:type &lt;http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem&gt; .
-  ] .</pre><p>Resource metadata in ISO 19139:</p>
+  ] .</pre>
+
+<p>Resource metadata in ISO 19139:</p>
+
 <pre>&lt;gmd:referenceSystemInfo&gt;
   &lt;gmd:MD_ReferenceSystem&gt;
     &lt;gmd:referenceSystemIdentifier&gt;
@@ -3527,7 +3672,10 @@ prov:wasUsedBy [
       &lt;/gmd:RS_Identifier&gt;
     &lt;/gmd:referenceSystemIdentifier&gt;
   &lt;/gmd:MD_ReferenceSystem&gt;
-&lt;/gmd:referenceSystemInfo&gt;</pre></aside>
+&lt;/gmd:referenceSystemInfo&gt;</pre>
+
+</aside>
+
 </section>
 
 <section id="character-encoding---dataset-character-set-and-metadata-character-set">
@@ -3535,13 +3683,12 @@ prov:wasUsedBy [
 <h2>Character encoding - *Dataset character set and *Metadata character set</h2>
 
 <p>In [[VOCAB-DCAT-2]] and [[DCAT-AP-20200608]], the specification of the character encoding of a dataset and the character encoding of a metadata record is not explicitly supported.</p>
+
 <p>According to [[?RFC4288]], the character set can be part of the media type specification, but only for type “text”. By contrast, in INSPIRE the character set can be specified also for other media types.</p>
+
 <p>The W3C Content vocabulary [[Content-in-RDF10]] provides a possibly suitable candidate, namely, property <code>cnt:characterEncoding</code>, taking as value the character set names in the IANA register [[IANA-CHARSETS]]. GeoDCAT-AP uses this property.</p>
-<p>Character encoding in [[ISO-19115]] metadata is specified with a code list that can be mapped to the corresponding codes in [[IANA-CHARSETS]]
-<!--
-<a href="#fn8" class="footnoteRef" id="fnref8"><sup>8</sup></a>
--->
-, as shown in the following table (entries with 1-to-many mappings are in italic).</p>
+
+<p>Character encoding in [[ISO-19115]] metadata is specified with a code list that can be mapped to the corresponding codes in [[IANA-CHARSETS]], as shown in the following table (entries with 1-to-many mappings are in italic).</p>
 
 <table class="simple">
 <thead>
@@ -3552,151 +3699,182 @@ prov:wasUsedBy [
 </tr>
 </thead>
 <tbody>
+
 <tr>
 <td>ucs2</td>
 <td>16-bit fixed size Universal Character Set, based on ISO/<abbr title="International Electrotechnical Commission">IEC</abbr> 10646</td>
 <td>ISO-10646-UCS-2</td>
 </tr>
+
 <tr>
 <td>ucs4</td>
 <td>32-bit fixed size Universal Character Set, based on ISO/IEC 10646</td>
 <td>ISO-10646-UCS-4</td>
 </tr>
+
 <tr>
 <td>utf7</td>
 <td>7-bit variable size <abbr title="Universal Character Set">UCS</abbr> Transfer Format, based on ISO/IEC 10646</td>
 <td><abbr title="UCS Transfer Format">UTF</abbr>-7</td>
 </tr>
+
 <tr>
 <td>utf8</td>
 <td>8-bit variable size UCS Transfer Format, based on ISO/IEC 10646</td>
 <td>UTF-8</td>
 </tr>
+
 <tr>
 <td>utf16</td>
 <td>16-bit variable size UCS Transfer Format, based on ISO/IEC 10646</td>
 <td>UTF-16</td>
 </tr>
+
 <tr>
 <td>8859part1</td>
 <td>ISO/IEC 8859-1, Information technology - 8-bit single byte coded graphic character sets - Part 1 : Latin alphabet No.1</td>
 <td>ISO-8859-1</td>
 </tr>
+
 <tr>
 <td>8859part2</td>
 <td>ISO/IEC 8859-2, Information technology - 8-bit single byte coded graphic character sets - Part 2 : Latin alphabet No.2</td>
 <td>ISO-8859-2</td>
 </tr>
+
 <tr>
 <td>8859part3</td>
 <td>ISO/IEC 8859-3, Information technology - 8-bit single byte coded graphic character sets - Part 3 : Latin alphabet No.3</td>
 <td>ISO-8859-3</td>
 </tr>
+
 <tr>
 <td>8859part4</td>
 <td>ISO/IEC 8859-4, Information technology - 8-bit single byte coded graphic character sets - Part 4 : Latin alphabet No.4</td>
 <td>ISO-8859-4</td>
 </tr>
+
 <tr>
 <td>8859part5</td>
 <td>ISO/IEC 8859-5, Information technology - 8-bit single byte coded graphic character sets - Part 5 : Latin/Cyrillic alphabet</td>
 <td>ISO-8859-5</td>
 </tr>
+
 <tr>
 <td>8859part6</td>
 <td>ISO/IEC 8859-6, Information technology - 8-bit single byte coded graphic character sets - Part 6 : Latin/Arabic alphabet</td>
 <td>ISO-8859-6</td>
 </tr>
+
 <tr>
 <td>8859part7</td>
 <td>ISO/IEC 8859-7, Information technology - 8-bit single byte coded graphic character sets - Part 7 : Latin/Greek alphabet</td>
 <td>ISO-8859-7</td>
 </tr>
+
 <tr>
 <td>8859part8</td>
 <td>ISO/IEC 8859-8, Information technology - 8-bit single byte coded graphic character sets - Part 8 : Latin/Hebrew alphabet</td>
 <td>ISO-8859-8</td>
 </tr>
+
 <tr>
 <td>8859part9</td>
 <td>ISO/IEC 8859-9, Information technology - 8-bit single byte coded graphic character sets - Part 9 : Latin alphabet No.5</td>
 <td>ISO-8859-9</td>
 </tr>
+
 <tr>
 <td>8859part10</td>
 <td>ISO/IEC 8859-10, Information technology - 8-bit single byte coded graphic character sets - Part 10 : Latin alphabet No.6</td>
 <td>ISO-8859-10</td>
 </tr>
+
 <tr>
 <td>8859part11</td>
 <td>ISO/IEC 8859-11, Information technology - 8-bit single byte coded graphic character sets - Part 11 : Latin/Thai alphabet</td>
 <td>ISO-8859-11</td>
 </tr>
+
 <tr>
 <td>8859part13</td>
 <td>ISO/IEC 8859-13, Information technology - 8-bit single byte coded graphic character sets - Part 13 : Latin alphabet No.7</td>
 <td>ISO-8859-13</td>
 </tr>
+
 <tr>
 <td>8859part14</td>
 <td>ISO/IEC 8859-14, Information technology - 8-bit single byte coded graphic character sets - Part 14 : Latin alphabet No.8 (Celtic)</td>
 <td>ISO-8859-14</td>
 </tr>
+
 <tr>
 <td>8859part15</td>
 <td>ISO/IEC 8859-15, Information technology - 8-bit single byte coded graphic character sets - Part 15 : Latin alphabet No.9</td>
 <td>ISO-8859-15</td>
 </tr>
+
 <tr>
 <td>8859part16</td>
 <td>ISO/IEC 8859-16, Information technology - 8-bit single byte coded graphic character sets - Part 16 : Latin alphabet No.10</td>
 <td>ISO-8859-16</td>
 </tr>
+
 <tr>
 <td><em>jis</em></td>
 <td><em>japanese code set used for electronic transmission</em></td>
 <td><em>JIS_Encoding</em></td>
 </tr>
+
 <tr>
 <td>shiftJIS</td>
 <td>japanese code set used on MS-DOS machines</td>
 <td>Shift_JIS</td>
 </tr>
+
 <tr>
 <td>eucJP</td>
 <td>japanese code set used on UNIX based machines</td>
 <td>EUC-JP</td>
 </tr>
+
 <tr>
 <td>usAscii</td>
 <td>United States ASCII code set (ISO 646 US)</td>
 <td>US-ASCII</td>
 </tr>
+
 <tr>
 <td><em>ebcdic</em></td>
 <td><em>IBM mainframe code set</em></td>
 <td><em>IBM037</em></td>
 </tr>
+
 <tr>
 <td>eucKR</td>
 <td>Korean code set</td>
 <td>EUC-KR</td>
 </tr>
+
 <tr>
 <td>big5</td>
 <td>traditional Chinese code set used in Taiwan, Hong Kong of China and other areas</td>
 <td>Big5</td>
 </tr>
+
 <tr>
 <td>GB2312</td>
 <td>simplified Chinese code set</td>
 <td>GB2312</td>
 </tr>
+
 </tbody>
 </table>
 
 <aside class="example" id="ex-mapping-charset" title="Charset">
+
 <p>Resource metadata in GeoDCAT-AP:</p>
+
 <pre>[] a dcat:Dataset ;
   dcat:distribution [ a dcat:Distribution ;
     cnt:characterEncoding &quot;UTF-8&quot;^^xsd:string ] .
@@ -3704,7 +3882,9 @@ prov:wasUsedBy [
 # Metadata on metadata in GeoDCAT-AP
 [] a dcat:CatalogRecord ;
   cnt:characterEncoding &quot;UTF-8&quot;^^xsd:string .</pre>
+
 <p>Resource metadata in ISO 19139:</p>
+
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
 &lt;!-- Metadata on metadata: metadata character set --&gt;
@@ -3729,6 +3909,7 @@ prov:wasUsedBy [
   &lt;/gmd:identificationInfo&gt;
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
+
 </aside>
 
 </section>
@@ -3738,22 +3919,31 @@ prov:wasUsedBy [
 <h2>Encoding - *Distribution format</h2>
 
 <p>In both [[VOCAB-DCAT-2]] and [[DCAT-AP-20200608]], this information is specified for the distribution(s) of a dataset, and not for the dataset itself.</p>
+
 <p>Two properties are available:</p>
+
 <ul>
 <li><p><code>dcat:mediaType</code>: to be used when the format corresponds to one of the media types registered by IANA [[IANA-MEDIA-TYPES]].</p></li>
 <li><p><code>dct:format</code>: to be used in all the other cases, to be used with file type register operated by the Publications Office of the EU [[EUV-FT]].</p></li>
 </ul>
+
 <p>The same approach is used in GeoDCAT-AP for ISO 19115 / INSPIRE metadata.</p>
+
 <!--
 <p>In both cases, [[DCAT-AP-20200608]] recommends the use of the URI file type register [[EUV-FT]], operated by the Metadata Registry of the Publications Office of the EU, to specify formats/media types. However, this register does not include many of the formats/media types typically used for INSPIRE data – as, e.g., GML, shapefiles and raster files – which are available through the INSPIRE media type register [[INSPIRE-MT]].</p>
 <p>The proposal is then to use the file type register of the Publications Office, if it includes the relevant format/media type, and the INSPIRE Media Types register otherwise.</p>
 -->
+
 <aside class="example" id="ex-mapping-encoding" title="Encoding">
+
 <p>Resource metadata in GeoDCAT-AP:</p>
+
 <pre>[] a dcat:Dataset ;
   dcat:distribution [ a dcat:Distribution ;
     dcat:mediaType &lt;http://publications.europa.eu/resource/authority/file-type/TIFF&gt; ] .</pre>
+
 <p>Resource metadata in ISO 19139:</p>
+
 <pre>&lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:distributionInfo&gt;
@@ -3773,6 +3963,7 @@ prov:wasUsedBy [
   &lt;/gmd:distributionInfo&gt;
   ...
 &lt;/gmd:MD_Metadata&gt;</pre>
+
 </aside>
 
 </section>
@@ -3782,7 +3973,9 @@ prov:wasUsedBy [
 <h2>Spatial representation type – *Spatial representation type</h2>
 
 <p>In [[DCAT-AP-20200608]], no equivalent term is provided.</p>
+
 <p>In [[ISO-19115]], element “Spatial representation type” is meant mainly to describe the “method used to represent geographic information in the dataset”, by using a code list (see the table below).</p>
+
 <p>The <abbr title="Asset Description Metadata Schema">ADMS</abbr> vocabulary [[VOCAB-ADMS]] includes a property, namely, <code>adms:representationTechnique</code> that could be used for this purpose. It is worth noting that, in the ADMS specification, <code>adms:representationTechnique</code> decribes a distribution, and not the dataset. Moreover, the [[ISO-19115]] code list of spatial representation types might be in the future available as a URI register from the INSPIRE Registry.</p>
 
 <div class="issue" data-number="55"></div>
@@ -3801,7 +3994,9 @@ prov:wasUsedBy [
 -->
 
 <p>Based on this, GeoDCAT-AP models this information by using property <code>adms:representationTechnique</code>, with the spatial representation type URIs that will be operated by the INSPIRE Registry.</p>
+
 <p>This mapping is supported only in the extended mapping profile of GeoDCAT-AP.</p>
+
 <p>The spatial representation types defined in [[ISO-19115]] are listed in the following table. It is important to note that, as stated in the INSPIRE Data Specifications, the only spatial representation types in scope of INSPIRE are the following ones: “vector”, “grid”, and “tin”.</p>
 
 <table class="simple">
@@ -3813,50 +4008,65 @@ prov:wasUsedBy [
 </tr>
 </thead>
 <tbody>
+
 <tr>
 <td>vector</td>
 <td>vector data is used to represent geographic data</td>
 <td>Yes</td>
 </tr>
+
 <tr>
 <td>grid</td>
 <td>grid data is used to represent geographic data</td>
 <td>Yes</td>
 </tr>
+
 <tr>
 <td>textTable</td>
 <td>textual or tabular data is used to represent geographic data</td>
 <td>No</td>
 </tr>
+
 <tr>
 <td>tin</td>
 <td>triangulated irregular network</td>
 <td>Yes</td>
 </tr>
+
 <tr>
 <td>stereoModel</td>
 <td>three-dimensional view formed by the intersecting homologous rays of an overlapping pair of images</td>
 <td>No</td>
 </tr>
+
 <tr>
 <td>video</td>
 <td>scene from a video recording</td>
 <td>No</td>
 </tr>
+
 </tbody>
 </table>
 
 <aside class="example" id="ex-mapping-spatial-representation-type" title="Spatial representation type">
+
 <p>Resource metadata in GeoDCAT-AP:</p>
+
 <pre>[] a dcat:Dataset ;
   dcat:distribution [ a dcat:Distribution
     adms:representionTechnique &lt;http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode/vector&gt;
-] .</pre><p>Resource metadata in ISO 19139:</p>
+] .</pre>
+
+<p>Resource metadata in ISO 19139:</p>
+
 <pre>&lt;gmd:spatialRepresentationType&gt;
   &lt;gmd:MD_SpatialRepresentationTypeCode
     codeListValue=&quot;vector&quot;
     codeList=&quot;http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_SpatialRepresentationTypeCode&quot;&gt;vector&lt;/gmd:MD_SpatialRepresentationTypeCode&gt;
-&lt;/gmd:spatialRepresentationType&gt;</pre></aside>
+&lt;/gmd:spatialRepresentationType&gt;</pre>
+
+</aside>
+
 </section>
 
 <section id="maintenance-information---not-in-iso19115-core">
@@ -3864,10 +4074,152 @@ prov:wasUsedBy [
 <h2>Maintenance information - *not in ISO 19115 core</h2>
 
 <p>In [[ISO-19115]], element “Maintenance information” is meant mainly to describe how frequently a resource is updated.</p>
+
 <p>In [[DCAT-AP-20200608]], the update frequency is expressed through <code>dct:accrualPeriodicity</code>, with the frequency codes defined in the the EU Vocabularies Frequency Named Authority List [[EUV-FREQ]], which can be partially mapped to the ones used in [[ISO-19115]], as shown in the following table.</p>
+
+<table class="simple">
+<thead>
+<tr>
+<th>ISO 19115 - MD_MaintenanceFrequencyCode</th>
+<th>Dublin Core Collection Description Frequency Vocabulary [[?CLD-FREQ]]</th>
+<th>EU Vocabularies Frequency Named Authority List [[EUV-FREQ]]</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>continual</td>
+<td>continuous</td>
+<td>UPDATE_CONT / CONT</td>
+</tr>
+
+<tr>
+<td>daily</td>
+<td>daily</td>
+<td>DAILY</td>
+</tr>
+
+<tr>
+<td>weekly</td>
+<td>weekly</td>
+<td>WEEKLY</td>
+</tr>
+
+<tr>
+<td>fortnightly</td>
+<td>biweekly</td>
+<td>BIWEEKLY</td>
+</tr>
+
+<tr>
+<td>monthly</td>
+<td>monthly</td>
+<td>MONTHLY</td>
+</tr>
+
+<tr>
+<td>quarterly</td>
+<td>quarterly</td>
+<td>QUARTERLY</td>
+</tr>
+
+<tr>
+<td>biannually</td>
+<td>semiannual</td>
+<td>ANNUAL_2</td>
+</tr>
+
+<tr>
+<td>annually</td>
+<td>annual</td>
+<td>ANNUAL</td>
+</tr>
+
+<tr>
+<td>asNeeded</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>Irregular</td>
+<td>irregular</td>
+<td>IRREG</td>
+</tr>
+
+<tr>
+<td>notPlanned</td>
+<td>-</td>
+<td>-</td>
+</tr>
+
+<tr>
+<td>unknown</td>
+<td>-</td>
+<td>UNKNOWN</td>
+</tr>
+
+<tr>
+<td>-</td>
+<td>triennial</td>
+<td>TRIENNIAL</td>
+</tr>
+
+<tr>
+<td>-</td>
+<td>biennial</td>
+<td>BIENNIAL</td>
+</tr>
+
+<tr>
+<td>-</td>
+<td>threeTimesAYear</td>
+<td>ANNUAL_3</td>
+</tr>
+
+<tr>
+<td>-</td>
+<td>bimonthly</td>
+<td>BIMONTHLY</td>
+</tr>
+
+<tr>
+<td>-</td>
+<td>semimonthly</td>
+<td>MONTHLY_2</td>
+</tr>
+
+<tr>
+<td>-</td>
+<td>threeTimesAMonth</td>
+<td>MONTHLY_3</td>
+</tr>
+
+<tr>
+<td>-</td>
+<td>semiweekly</td>
+<td>WEEKLY_2</td>
+</tr>
+
+<tr>
+<td>-</td>
+<td>threeTimesAWeek</td>
+<td>WEEKLY_3</td>
+</tr>
+
+<tr>
+<td>-</td>
+<td>-</td>
+<td>OTHER</td>
+</tr>
+
+</tbody>
+</table>
+
 <!--
 <p>[[VOCAB-DCAT-2]] and [[DCAT-AP-20200608]], the update frequency is expressed through <code>dct:accrualPeriodicity</code>, with the frequency codes defined in the Dublin Core Collection Description Frequency Vocabulary [[?CLD-FREQ]], which can be partially mapped to the ones used in [[ISO-19115]], as shown in the following table (the missing alignments are in bold). A similar mapping was added for the EU Vocabularies Frequency Named Authority List [[EUV-FREQ]].</p>
 -->
+
 <p>The [[ISO-19115]] code list of maintenance frequency codes might be in the future available as a URI register from the INSPIRE Registry.</p>
 
 <div class="issue" data-number="56"></div>
@@ -3879,7 +4231,9 @@ prov:wasUsedBy [
 -->
 
 <p>Based on this, maintenance frequency is modelled in GeoDCAT-AP by using <code>dct:accrualPeriodicity</code> with the EU Vocabularies Frequency Named Authority List [[EUV-FREQ]].</p>
+
 <p>For the frequency codes not covered by the EU Vocabularies Frequency code list, the approach will be as follows:</p>
+
 <ul>
 <li><p>In the core mapping profile of GeoDCAT-AP these codes will be ignored.</p></li>
 <li><p>The extended mapping profile of GeoDCAT-AP will use the code list of ISO maintenance frequency codes operated by the INSPIRE Registry.</p></li>
@@ -3897,123 +4251,6 @@ prov:wasUsedBy [
 <p>There is however some work in ISO to set up a linked data registry, so it may eventually provide dereferenceable URIs, although the URIs may not necessarily correspond to the ones above.</p>
 </aside>
 -->
-
-<table class="simple">
-<thead>
-<tr>
-<th>ISO 19115 - MD_MaintenanceFrequencyCode</th>
-<th>Dublin Core Collection Description Frequency Vocabulary [[?CLD-FREQ]]</th>
-<th>EU Vocabularies Frequency Named Authority List [[EUV-FREQ]]</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>continual</td>
-<td>continuous</td>
-<td>UPDATE_CONT / CONT</td>
-</tr>
-<tr>
-<td>daily</td>
-<td>daily</td>
-<td>DAILY</td>
-</tr>
-<tr>
-<td>weekly</td>
-<td>weekly</td>
-<td>WEEKLY</td>
-</tr>
-<tr>
-<td>fortnightly</td>
-<td>biweekly</td>
-<td>BIWEEKLY</td>
-</tr>
-<tr>
-<td>monthly</td>
-<td>monthly</td>
-<td>MONTHLY</td>
-</tr>
-<tr>
-<td>quarterly</td>
-<td>quarterly</td>
-<td>QUARTERLY</td>
-</tr>
-<tr>
-<td>biannually</td>
-<td>semiannual</td>
-<td>ANNUAL_2</td>
-</tr>
-<tr>
-<td>annually</td>
-<td>annual</td>
-<td>ANNUAL</td>
-</tr>
-<tr>
-<td>asNeeded</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>Irregular</td>
-<td>irregular</td>
-<td>IRREG</td>
-</tr>
-<tr>
-<td>notPlanned</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>unknown</td>
-<td>-</td>
-<td>UNKNOWN</td>
-</tr>
-<tr>
-<td>-</td>
-<td>triennial</td>
-<td>TRIENNIAL</td>
-</tr>
-<tr>
-<td>-</td>
-<td>biennial</td>
-<td>BIENNIAL</td>
-</tr>
-<tr>
-<td>-</td>
-<td>threeTimesAYear</td>
-<td>ANNUAL_3</td>
-</tr>
-<tr>
-<td>-</td>
-<td>bimonthly</td>
-<td>BIMONTHLY</td>
-</tr>
-<tr>
-<td>-</td>
-<td>semimonthly</td>
-<td>MONTHLY_2</td>
-</tr>
-<tr>
-<td>-</td>
-<td>threeTimesAMonth</td>
-<td>MONTHLY_3</td>
-</tr>
-<tr>
-<td>-</td>
-<td>semiweekly</td>
-<td>WEEKLY_2</td>
-</tr>
-<tr>
-<td>-</td>
-<td>threeTimesAWeek</td>
-<td>WEEKLY_3</td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td>OTHER</td>
-</tr>
-</tbody>
-</table>
 
 <aside class="example" id="ex-mapping-maintenance-information" title="Maintenance information">
 <p>Resource metadata in GeoDCAT-AP:</p>
@@ -4038,6 +4275,7 @@ prov:wasUsedBy [
 <h1>Comparison between INSPIRE and ISO 19115-1:2014</h1>
 
 <p>In [[?ISO-19115-1]] the concept of ‘Core metadata’ was removed; it was translated into a normative annex (Annex F) “Discovery metadata for geographic resources”. In the Annex F metadata elements for the discovery are listed in 2 tables:</p>
+
 <ul>
 <li><p>the metadata elements to be used for discovery of geographic datasets and series are identified in F.1;</p></li>
 <li><p>the metadata elements to be used for discovery of service resources are identified in F.2.</p></li>
@@ -4046,6 +4284,7 @@ prov:wasUsedBy [
 <section id="spatial-dataset-and-spatial-dataset-series">
 
 <h2>Spatial dataset and spatial dataset series</h2>
+
 <p>The table below compares the core requirements of ISO 19115:2003 (see Table 3 in 6.5 of [[?ISO-19115]]), the requirements of INSPIRE for spatial dataset and spatial dataset series as defined in the Implementing Rules for metadata and the discovery metadata for geographic datasets and series (see Table F.1 in annex F of [[?ISO-19115-1]]). For those last metadata elements in the last field of the table the path is indicated. For each element, in brackets the obligation/max occurrence (3rd field).</p>
 
 <table id="table-comparison-datasets-and-series" class="simple">
@@ -4061,174 +4300,203 @@ prov:wasUsedBy [
 </tr>
 </thead>
 <tbody>
+
 <tr>
 <td>Dataset title (M)</td>
 <td>Part B 1.1 Resource Title</td>
 <td>Resource title (M/1)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification.citation</code> &gt; <code>CI_Citation.title</code></td>
 </tr>
+
 <tr>
 <td>Dataset reference date (M)</td>
 <td>Part B 5 Temporal Reference</td>
 <td>Resource reference date (O/N)</td>
 <td><code>MD_Metadata.idenitificationInfo</code> &gt; <code>MD_DataIdentification.citation</code> &gt; <code>CI_Citation.date</code></td>
 </tr>
+
 <tr>
 <td>Dataset responsible party (O)</td>
 <td>Part B 9 Responsible organisation</td>
 <td>Resource point of contact (O/N)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification.pointOf-Contact</code> &gt; <code>CI_Responsibility</code></td>
 </tr>
+
 <tr>
 <td>Geographic location of the dataset (C)</td>
 <td>Part B 4.1 Geographic Bounding Box</td>
 <td>Geographic location (C/N)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification.extent</code> &gt; <code>EX_Extent.geographicElement</code> &gt; <code>EX_GeographicExtent</code> &gt; <code>EX_GeographicBoundingBox</code> -or- <code>EX_GeographicDescription</code>)</td>
 </tr>
+
 <tr>
 <td>Dataset language (M)</td>
 <td>Part B 1.7 Resource Language</td>
 <td>Resource language (C/N)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification.defaultLocale</code> &gt; <code>PT_Locale</code></td>
 </tr>
+
 <tr>
 <td>Dataset character set (C)</td>
 <td>-</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Dataset topic category (M)</td>
 <td>Part B 2.1 Topic Category</td>
 <td>Resource topic category (C/N)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification.topicCategory</code> &gt; <code>MD_TopicCategoryCode</code></td>
 </tr>
+
 <tr>
 <td>Spatial resolution of the dataset (O)</td>
 <td>Part B 6.2 Spatial Resolution</td>
 <td>Spatial resolution (O/N)</td>
 <td><p><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_Identification.spatialResolution</code> &gt; <code>MD_Resolution.equivalentScale</code> <code>MD_Resolution.distance</code>, <code>MD_Resolution.vertical</code>, or <code>MD_Resolution.angularDistance</code>, or <code>MD_Resolution.levelOfDetail</code></p></td>
 </tr>
+
 <tr>
 <td>Abstract describing the dataset (M)</td>
 <td>Part B 1.2 Resource abstract</td>
 <td>Resource abstract (M/1)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification.abstract</code></td>
 </tr>
+
 <tr>
 <td>Distribution format (O)</td>
 <td>-</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Additional extent information for the dataset (vertical and temporal) (O)</td>
 <td>Part B 5.1 Temporal extent</td>
 <td>Extent information for the dataset (additional) (O/N)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_Identification.extent</code>  &gt;  <code>EX_Extent</code> &gt; <code>EX_TemporalExtent</code> or <code>EX_VerticalExtent</code></td>
 </tr>
+
 <tr>
 <td>Spatial representation type (O)</td>
 <td>-</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Reference system (O)</td>
 <td>-</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Lineage (O)</td>
 <td>Part B 6.1 Lineage</td>
 <td>Resource lineage (O/N)</td>
 <td><code>MD_Metadata</code> &gt; <code>resourceLineage</code> &gt; <code>LI_Lineage.statement</code></td>
 </tr>
+
 <tr>
 <td>On-line resource (O)</td>
 <td>Part B 1.4 Resource Locator</td>
 <td>Resource on-line Link (O/N)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification.citation</code> &gt; <code>CI_Citation.onlineResource</code> &gt; <code>CI_OnlineResource</code></td>
 </tr>
+
 <tr>
 <td>Metadata file identifier (O)</td>
 <td>-</td>
 <td>Metadata reference information (O/1)</td>
 <td><code>MD_Metadata.metadataIdentifier</code></td>
 </tr>
+
 <tr>
 <td>Metadata standard name (O)</td>
 <td>-</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Metadata standard version (O)</td>
 <td>-</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Metadata language (C)</td>
 <td>Part B 10.3 Metadata Language</td>
 <td>-</td>
 <td><code>MD_Metadata.defaultLocale</code> &gt; <code>PT_Locale.language</code></td>
 </tr>
+
 <tr>
 <td>Metadata character set (C)</td>
 <td>-</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Metadata point of contact (M)</td>
 <td>Part B 10.1 Metadata point of contact</td>
 <td>Metadata point of contact (M/N)</td>
 <td><code>MD_Metadata.contact</code> &gt; <code>CI_Responsibility</code></td>
 </tr>
+
 <tr>
 <td>Metadata date stamp (M)</td>
 <td>Part B 10.2 Metadata Date</td>
 <td>Metadata date stamp (M/N)</td>
 <td><code>MD_Metadata.dateInfo</code></td>
 </tr>
+
 <tr>
 <td>-</td>
 <td>Part B 1.3 Resource Type</td>
 <td>Resource type (C/1)</td>
 <td><code>MD_Metadata.metadataScope</code> &gt; <code>MD_Scope.resourceScope</code></td>
 </tr>
+
 <tr>
 <td></td>
 <td>Part B 1.5 Unique Resource Identifier</td>
 <td>Resource identifier (O/N)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification.citation</code> &gt; <code>CI_Citation.identifier</code> &gt; <code>MD_Identifier</code></td>
 </tr>
+
 <tr>
 <td></td>
 <td>Part B 3 Keyword</td>
 <td>Keywords (O/N)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification</code> &gt; <code>descriptiveKeywords</code> &gt; <code>MD_Keywords</code></td>
 </tr>
+
 <tr>
 <td>-</td>
 <td>Part B 7 Conformity</td>
 <td>-</td>
 <td><code>MD_Metadata.dataQualityInfo</code> &gt; <code>DQ_DataQuality.report</code> &gt; <code>DQ_UsabilityElement.result</code> &gt; <code>DQ_ConformanceResult</code></td>
 </tr>
+
 <tr>
 <td>-</td>
 <td>Part B 8.1 Conditions for access and use</td>
 <td>Constraints on resource access and use (O/N)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification</code> &gt; <code>MD_Constraints.useLimitations</code></td>
 </tr>
+
 <tr>
 <td>-</td>
 <td>Part B 8.2 Limitations on public access</td>
 <td>Constraints on resource access and use (O/N)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification</code> &gt;  <code>MD_LegalConstraints.accessConstraint</code> and/or <code>MD_LegalConstraints.otherConstraint</code> and/or <code>MD_SecurityConstraints.classification</code></td>
 </tr>
+
 </tbody>
 </table>
 
@@ -4253,199 +4521,234 @@ prov:wasUsedBy [
 </tr>
 </thead>
 <tbody>
+
 <tr>
 <td>Dataset title (M)</td>
 <td>Part B 1.1 Resource Title</td>
 <td>Service title (M/1)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>SV_ServiceIdentification.citation</code> &gt; <code>CI_Citation.title</code></td>
 </tr>
+
 <tr>
 <td>Dataset reference date (M)</td>
 <td>Part B 5 Temporal Reference</td>
 <td>Reference date (O/1)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>SV_ServiceIdentification.citation</code> &gt; <code>CI_Citation.date</code></td>
 </tr>
+
 <tr>
 <td>Dataset responsible party (O)</td>
 <td>Part B 9 Responsible organisation</td>
 <td>Responsible party (O/N)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>SV_ServiceIdentification.pointOfContact</code> &gt; <code>CI_Responsibility</code></td>
 </tr>
+
 <tr>
 <td>Geographic location of the dataset (C)</td>
 <td><strong>-</strong></td>
 <td>Geographic location (M/1)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>SV_ServiceIdentification.extent</code> &gt; <code>EX_Extent.geographicElement</code>  &gt; <code>EX_GeographicExtent</code> &gt; <code>EX_GeographicBoundingBox</code> -or- <code>EX_GeographicDescription</code></td>
 </tr>
+
 <tr>
 <td>-</td>
 <td>Part B 4.1 Geographic Bounding Box</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Dataset language (M)</td>
 <td>-</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Dataset character set (C)</td>
 <td>-</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Dataset topic category (M)</td>
 <td>-</td>
 <td>Service topic category (O/N)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>SV_ServiceIdentification.topicCategory</code> &gt; <code>MD_TopicCategoryCode</code></td>
 </tr>
+
 <tr>
 <td>Spatial resolution of the dataset (O)</td>
 <td>Part B 6.2 Spatial Resolution</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Abstract describing the dataset (M)</td>
 <td>Part B 1.2 Resource abstract</td>
 <td>Resource abstract (M/1)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>SV_ServiceIdentification.abstract</code></td>
 </tr>
+
 <tr>
 <td>Distribution format (O)</td>
 <td>-</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Additional extent information for the dataset (O)</td>
 <td>-</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Spatial representation type (O)</td>
 <td>-</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Reference system (O)</td>
 <td>-</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Lineage (O)</td>
 <td>-</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td>On-line resource (O)</td>
 <td>Part B 1.4 Resource Locator</td>
 <td>On-line Link (O/N)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>SV_ServiceIdentification.citation</code> &gt; <code>CI_Citation.onlineResource</code> &gt; <code>CI_OnlineResource</code></td>
 </tr>
+
 <tr>
 <td>Metadata file identifier (O)</td>
 <td>-</td>
 <td>Metadata reference information (O/1)</td>
 <td><code>MD_Metadata.metadataIdentifier</code></td>
 </tr>
+
 <tr>
 <td>Metadata standard name (O)</td>
 <td>-</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Metadata standard version (O)</td>
 <td>-</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Metadata language (C)</td>
 <td>Part B 10.3 Metadata Language</td>
 <td>-</td>
 <td><code>MD_Metadata.defaultLocale</code> &gt; <code>PT_Locale.language</code></td>
 </tr>
+
 <tr>
 <td>Metadata character set (C)</td>
 <td>-</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td>Metadata point of contact (M)</td>
 <td>Part B 10.1 Metadata point of contact</td>
 <td>Metadata point of contact (M/N)</td>
 <td><code>MD_Metadata.contact</code> &gt; <code>CI_Responsibility</code></td>
 </tr>
+
 <tr>
 <td>Metadata date stamp (M)</td>
 <td>Part B 10.2 Metadata Date</td>
 <td>Metadata date stamp (M/N)</td>
 <td><code>MD_Metadata.dateInfo</code></td>
 </tr>
+
 <tr>
 <td>-</td>
 <td>Part B 1.3 Resource Type</td>
 <td>Resource type (M/1)</td>
 <td><code>MD_Metadata.metadataScope</code> &gt; <code>MD_Scope.resourceScope</code></td>
 </tr>
+
 <tr>
 <td>-</td>
 <td>Part B 1.6 Coupled Resource</td>
 <td>Coupled Resource (C/N)</td>
 <td><code>MD_Metadata</code> &gt; <code>SV_ServiceIdentification.coupledResource</code> &gt; <code>SV_CoupledResource</code></td>
 </tr>
+
 <tr>
 <td>-</td>
 <td>Part B 2.2 Spatial Data Service Type</td>
 <td>-</td>
 <td></td>
 </tr>
+
 <tr>
 <td></td>
 <td>Part B 3 Keyword</td>
 <td>Keywords (O/N)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>SV_ServiceIdentification</code> &gt; <code>MD_Keywords</code></td>
 </tr>
+
 <tr>
 <td>-</td>
 <td>Part B 7 Conformity</td>
 <td>-</td>
 <td><code>MD_Metadata.dataQualityInfo</code> &gt; <code>DQ_DataQuality.report</code> &gt; <code>DQ_UsabilityElement.result</code> &gt; <code>DQ_ConformanceResult</code></td>
 </tr>
+
 <tr>
 <td>-</td>
 <td>Part B 8.1 Conditions for access and use</td>
 <td>Constraints on access and use (O/N)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification</code> &gt; <code>MD_Constraints.useLimitations</code></td>
 </tr>
+
 <tr>
 <td>-</td>
 <td>Part B 8.2 Limitations on public access</td>
 <td>Constraints on access and use (O/N)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification</code> &gt;  <code>MD_LegalConstraints.accessConstraint</code> and/or <code>MD_LegalConstraints.otherConstraint</code> and/or <code>MD_SecurityConstraints.classification</code></td>
 </tr>
+
 <tr>
 <td>-</td>
 <td>-</td>
 <td>Coupled resource type (C/1)</td>
 <td><code>MD_Metadata</code> &gt; <code>SV_ServiceIdentification.couplingType</code> &gt; <code>SV_CouplingType</code></td>
 </tr>
+
 <tr>
 <td>-</td>
 <td>-</td>
 <td>Resource identifier (O/N)</td>
 <td><code>MD_Metadata.identificationInfo</code> &gt; <code>SV_ServiceIdentification.citation</code> &gt; <code>CI_Citation.identifier</code> &gt; <code>MD_Identifier</code></td>
 </tr>
+
 </tbody>
 </table>
+
 </section>
+
 </section>

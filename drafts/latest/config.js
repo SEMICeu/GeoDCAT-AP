@@ -17,6 +17,7 @@ var respecConfig = {
 //    ],
 //    includePermalinks: true,
     addSectionLinks: true,
+    maxTocLevel: 3,
     doJsonLd: true,
     noRecTrack: false,    
     subtitle: "A geospatial extension for the DCAT application profile for data portals in Europe",
@@ -61,7 +62,6 @@ var respecConfig = {
     ],    
 //    implementationReportURI:"https://joinup.ec.europa.eu/document/geodcat-ap-implementations",
     errata:"https://github.com/SEMICeu/GeoDCAT-AP/issues?q=is%3Aissue+label%3Atype%3Aerratum+label%3Arelease%3A2.0.0",
-//    license: "cc-by",
 //    specStatus: "unofficial",
     specStatus: "ED",
 //    specStatus: "FPWD",
@@ -79,15 +79,15 @@ var respecConfig = {
 /* SEMICEU specific - start */	
     thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
 //    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
+//    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
 //    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
     prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
     latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
-//    latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-latest/",
+//    latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/releases/",
 /* SEMICEU specific - end   */	
     edDraftURI:           "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
     issueBase:            "https://github.com/semiceu/geodcat-ap/issues/",
     github:               "https://github.com/semiceu/geodcat-ap/",
-//    overrideCopyright: '<p class="copyright"><a href="https://europa.eu/european-union/abouteuropa/legal_notices_en#copyright_notice">Copyright</a> © 2014-2019 <a href="https://europa.eu/">European Union</a>. This document is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" class="subfoot">Creative Commons Attribution 4.0 License</a>.</p>',
     formerEditors: [{
       name:       "Andrea Perego",
       company:    "European Commission, Joint Research Centre",
@@ -105,9 +105,9 @@ var respecConfig = {
     }],
     editors: [
       {
-        name:       "Andrea Perego",
-        company:    "External Consultant, European Commission, Joint Research Centre",
-        orcid:      "0000-0001-9300-2694",
+        name:    "Andrea Perego",
+        company: "External Consultant, European Commission, Joint Research Centre",
+        orcid:   "0000-0001-9300-2694",
 //        companyURL: "https://ec.europa.eu/jrc/"
       },
       {
@@ -137,7 +137,7 @@ var respecConfig = {
       key: "Document version",
       data: [
       {
-        value: "0.1"
+        value: "0.2"
       }
       ]
     },
@@ -146,7 +146,7 @@ var respecConfig = {
       key: "Reviewed by",
       data: [
       {
-        value: "?? ?? (European Commission)",
+        value: "Pavlina Fragkou (European Commission)",
         href: "https://ec.europa.eu/"
       },
       ]
@@ -155,7 +155,7 @@ var respecConfig = {
       key: "Approved by",
       data: [
       {
-        value: "?? ?? (European Commission)",
+        value: "Seth van Hooland (European Commission)",
         href: "https://ec.europa.eu/"
       },
       ]
@@ -805,6 +805,14 @@ var respecConfig = {
         "title":"Ontology of units of Measure (OM)",
         "publisher":"Wageningen UR",
         "date":"4 June 2018"
+      },
+      "GeoSPARQL11": {
+        "href": "https://github.com/opengeospatial/ogc-geosparql/1.1",
+        "title": "OGC GeoSPARQL 1.1",
+//        "authors": [],
+        "publisher":"OGC",
+        "status":"Draft",
+        "date": "16 December 2020"
       },
     }
   };

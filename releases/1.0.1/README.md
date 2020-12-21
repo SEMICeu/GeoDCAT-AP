@@ -1,13 +1,13 @@
-# GeoDCAT-AP v1.0.1
+# GeoDCAT-AP v1.0.1 - 2 August 2016
 
 Release page:
 
-[http://data.europa.eu/w21/81fd7288-6929-4b42-8707-2da604490d30](http://data.europa.eu/w21/81fd7288-6929-4b42-8707-2da604490d30)
+[https://joinup.ec.europa.eu/release/geodcat-ap/101](https://joinup.ec.europa.eu/release/geodcat-ap/101)
 
 ## Distributions
 
-- [PDF version](./geodcat-ap_1.0.1.pdf)
-- [DOCX version](./geodcat-ap_1.0.1.docx)
+- [PDF version](https://semiceu.github.io/GeoDCAT-AP/releases/1.0.1/geodcat-ap_1.0.1.pdf)
+- [DOCX version](https://semiceu.github.io/GeoDCAT-AP/releases/1.0.1/geodcat-ap_1.0.1.docx)
 
 ## Licence
 
