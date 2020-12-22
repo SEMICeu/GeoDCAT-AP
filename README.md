@@ -6,9 +6,9 @@ GeoDCAT-AP is an extension of [DCAT-AP](https://joinup.ec.europa.eu/solution/dca
 
 GeoDCAT-AP is a joint initiative of the [European Commission's Joint Research Centre (JRC)](https://ec.europa.eu/jrc/), the [Publications Office of the European Union (PO)](https://publications.europa.eu/), the [EU ISA Programme](https://ec.europa.eu/isa2/) and [DG CONNECT](https://ec.europa.eu/info/departments/communications-networks-content-and-technology). More than 52 people from 12 EU Member States contributed to the specification in the Working Group or during the public review period.
 
-The current version of GeoDCAT-AP (v1.0.1) can be downloaded from:
+The current version of GeoDCAT-AP (v2.0.0) can be downloaded from:
 
-[https://joinup.ec.europa.eu/release/geodcat-ap/101](https://joinup.ec.europa.eu/release/geodcat-ap/101)
+[https://joinup.ec.europa.eu/release/geodcat-ap/200](https://joinup.ec.europa.eu/release/geodcat-ap/200)
 
 Any problems encountered, or suggestions for new functionalities can be submitted as [issues on the GeoDCAT-AP repository on GitHub](https://github.com/SEMICeu/GeoDCAT-AP/issues). A short guideline for submitting issues can be found at [SEMICeu/DCAT-AP/wiki/Submission-guidelines](https://github.com/SEMICeu/DCAT-AP/wiki/Submission-guidelines). 
 
