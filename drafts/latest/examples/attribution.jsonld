@@ -2,31 +2,15 @@
   {
   "@graph": [
     {
-    "@id": "_:N3c7293a1b5f14d2cb7690b1908b7ae7b",
-    "@type": [
-      "http://www.w3.org/ns/prov#Attribution"
-    ],
-    "http://www.w3.org/ns/dcat#hadRole": [
-      {
-      "@id": "http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact"
-      }
-    ],
-    "http://www.w3.org/ns/prov#agent": [
-      {
-      "@id": "http://publications.europa.eu/resource/authority/corporate-body/EEA"
-      }
-    ]
-    },
-    {
     "@id": "https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00",
     "http://www.w3.org/ns/prov#qualifiedAttribution": [
       {
-      "@id": "_:N3c7293a1b5f14d2cb7690b1908b7ae7b"
+      "@id": "_:Nc95343d0589840aaa0f9d0290fa8462f"
       }
     ]
     },
     {
-    "@id": "_:Ncd31c3a7985642ca95a2eaa0e283bacc",
+    "@id": "_:N45e68c63786247cc83572dd0050c8b1f",
     "@type": [
       "http://www.w3.org/ns/locn#Address"
     ],
@@ -57,6 +41,22 @@
     ]
     },
     {
+    "@id": "_:Nc95343d0589840aaa0f9d0290fa8462f",
+    "@type": [
+      "http://www.w3.org/ns/prov#Attribution"
+    ],
+    "http://www.w3.org/ns/dcat#hadRole": [
+      {
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact"
+      }
+    ],
+    "http://www.w3.org/ns/prov#agent": [
+      {
+      "@id": "http://publications.europa.eu/resource/authority/corporate-body/EEA"
+      }
+    ]
+    },
+    {
     "@id": "http://publications.europa.eu/resource/authority/corporate-body/EEA",
     "@type": [
       "http://www.w3.org/ns/prov#Organization",
@@ -64,7 +64,7 @@
     ],
     "http://www.w3.org/ns/locn#address": [
       {
-      "@id": "_:Ncd31c3a7985642ca95a2eaa0e283bacc"
+      "@id": "_:N45e68c63786247cc83572dd0050c8b1f"
       }
     ],
     "http://xmlns.com/foaf/0.1/mbox": [
@@ -80,6 +80,6 @@
     ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP/drafts/latest/examples/attribution.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.develop/drafts/latest/examples/attribution.rdf"
   }
 ]

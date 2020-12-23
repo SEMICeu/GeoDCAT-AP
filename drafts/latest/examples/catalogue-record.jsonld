@@ -29,12 +29,12 @@
     ],
     "http://purl.org/dc/terms/source": [
       {
-      "@id": "_:Na330835fda344a978f6652036237f717"
+      "@id": "_:N019e0dbbf9c04d83a3530244d0423321"
       }
     ],
     "http://www.w3.org/ns/dcat#contactPoint": [
       {
-      "@id": "_:N2954c4df112a40f99565e641b88057e8"
+      "@id": "_:Na46d0310355244be871707a5b3ca17d3"
       }
     ],
     "http://xmlns.com/foaf/0.1/primaryTopic": [
@@ -44,7 +44,20 @@
     ]
     },
     {
-    "@id": "_:N2954c4df112a40f99565e641b88057e8",
+    "@id": "_:N019e0dbbf9c04d83a3530244d0423321",
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+      "@id": "_:Ne7084cc30a0d4c2286101cb624808875"
+      }
+    ],
+    "http://www.w3.org/2011/content#characterEncoding": [
+      {
+      "@value": "UTF-8"
+      }
+    ]
+    },
+    {
+    "@id": "_:Na46d0310355244be871707a5b3ca17d3",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Organization"
     ],
@@ -56,7 +69,7 @@
     ],
     "http://www.w3.org/2006/vcard/ns#hasAddress": [
       {
-      "@id": "_:N360290e9ca954253b24f5b83e0a8fbdd"
+      "@id": "_:N94681ace67b44427929219a8521eca62"
       }
     ],
     "http://www.w3.org/2006/vcard/ns#hasEmail": [
@@ -66,7 +79,7 @@
     ]
     },
     {
-    "@id": "_:Nc3291ee60fc64b6daf7a6b701dde7e23",
+    "@id": "_:Ne7084cc30a0d4c2286101cb624808875",
     "http://purl.org/dc/terms/title": [
       {
       "@language": "en",
@@ -81,7 +94,7 @@
     ]
     },
     {
-    "@id": "_:N360290e9ca954253b24f5b83e0a8fbdd",
+    "@id": "_:N94681ace67b44427929219a8521eca62",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Address"
     ],
@@ -110,21 +123,8 @@
       "@value": "Kongens Nytorv 6"
       }
     ]
-    },
-    {
-    "@id": "_:Na330835fda344a978f6652036237f717",
-    "http://purl.org/dc/terms/conformsTo": [
-      {
-      "@id": "_:Nc3291ee60fc64b6daf7a6b701dde7e23"
-      }
-    ],
-    "http://www.w3.org/2011/content#characterEncoding": [
-      {
-      "@value": "UTF-8"
-      }
-    ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP/drafts/latest/examples/catalogue-record.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.develop/drafts/latest/examples/catalogue-record.rdf"
   }
 ]

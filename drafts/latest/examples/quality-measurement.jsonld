@@ -2,15 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "https://some.catalogue/resource/d45678",
-    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
-      {
-      "@id": "_:Nb63a037144004600b13a1f67b5bc2b52"
-      }
-    ]
-    },
-    {
-    "@id": "_:N29d096c9dc014e92b466d8b190b62e50",
+    "@id": "_:N4194cd03555d4859891c00382b211f4e",
     "@type": [
       "http://www.w3.org/ns/dqv#QualityMeasurement"
     ],
@@ -27,29 +19,15 @@
     ]
     },
     {
-    "@id": "_:N525ef2213e524767ade808e4253cd623",
-    "@type": [
-      "http://www.w3.org/ns/dqv#QualityMeasurement"
-    ],
-    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
+    "@id": "https://some.catalogue/resource/d45678",
+    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
       {
-      "@id": "http://www.wurvoc.org/vocabularies/om-1.8/metre"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#isMeasurementOf": [
-      {
-      "@id": "http://data.europa.eu/930/spatialResolutionAsDistance"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#value": [
-      {
-      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-      "@value": "100"
+      "@id": "_:N345ac53ee41a4bc5b2720c2029e49bb9"
       }
     ]
     },
     {
-    "@id": "_:Nb63a037144004600b13a1f67b5bc2b52",
+    "@id": "_:N345ac53ee41a4bc5b2720c2029e49bb9",
     "@type": [
       "http://www.w3.org/ns/dqv#QualityMeasurement"
     ],
@@ -74,12 +52,34 @@
     "@id": "https://some.catalogue/resource/c34567",
     "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
       {
-      "@id": "_:N0e310e6842ee41d0a663a7da02f4dfe1"
+      "@id": "_:N6bfd0199e18a45ac9035f866bd6b0943"
       }
     ]
     },
     {
-    "@id": "_:N0e310e6842ee41d0a663a7da02f4dfe1",
+    "@id": "_:N6e3a7627fbf44180a3b5b969c847dda1",
+    "@type": [
+      "http://www.w3.org/ns/dqv#QualityMeasurement"
+    ],
+    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
+      {
+      "@id": "http://www.wurvoc.org/vocabularies/om-1.8/metre"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#isMeasurementOf": [
+      {
+      "@id": "http://data.europa.eu/930/spatialResolutionAsDistance"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#value": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@value": "100"
+      }
+    ]
+    },
+    {
+    "@id": "_:N6bfd0199e18a45ac9035f866bd6b0943",
     "@type": [
       "http://www.w3.org/ns/dqv#QualityMeasurement"
     ],
@@ -101,22 +101,22 @@
     ]
     },
     {
-    "@id": "https://some.catalogue/resource/b23456",
+    "@id": "https://some.catalogue/resource/a12345",
     "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
       {
-      "@id": "_:N525ef2213e524767ade808e4253cd623"
+      "@id": "_:N4194cd03555d4859891c00382b211f4e"
       }
     ]
     },
     {
-    "@id": "https://some.catalogue/resource/a12345",
+    "@id": "https://some.catalogue/resource/b23456",
     "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
       {
-      "@id": "_:N29d096c9dc014e92b466d8b190b62e50"
+      "@id": "_:N6e3a7627fbf44180a3b5b969c847dda1"
       }
     ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP/drafts/latest/examples/quality-measurement.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.develop/drafts/latest/examples/quality-measurement.rdf"
   }
 ]

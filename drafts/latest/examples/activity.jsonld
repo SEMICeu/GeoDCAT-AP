@@ -2,28 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:N85c8c7962c4248029830cd97beb30ffc",
-    "@type": [
-      "http://www.w3.org/ns/prov#Activity"
-    ],
-    "http://www.w3.org/ns/prov#generated": [
-      {
-      "@id": "_:N7b1e7d0ab4284e76b755706c4ff60e03"
-      }
-    ],
-    "http://www.w3.org/ns/prov#qualifiedAssociation": [
-      {
-      "@id": "_:N89b8f9cbc02f47928d48948dc42ab707"
-      }
-    ],
-    "http://www.w3.org/ns/prov#used": [
-      {
-      "@id": "https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00"
-      }
-    ]
-    },
-    {
-    "@id": "_:N7b1e7d0ab4284e76b755706c4ff60e03",
+    "@id": "_:N4ded27d97576489f91a7e71f6769cb7f",
     "@type": [
       "http://www.w3.org/ns/prov#Entity"
     ],
@@ -40,18 +19,28 @@
     ]
     },
     {
-    "@id": "_:N89b8f9cbc02f47928d48948dc42ab707",
+    "@id": "_:N1b4737b4bc714a3a8b0193e159aa865f",
     "@type": [
-      "http://www.w3.org/ns/prov#Association"
+      "http://www.w3.org/ns/prov#Activity"
     ],
-    "http://www.w3.org/ns/prov#hadPlan": [
+    "http://www.w3.org/ns/prov#generated": [
       {
-      "@id": "_:N43c38fc27d0a481f903cab845f7767e5"
+      "@id": "_:N4ded27d97576489f91a7e71f6769cb7f"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedAssociation": [
+      {
+      "@id": "_:N84f59183346045de8955a3e756630742"
+      }
+    ],
+    "http://www.w3.org/ns/prov#used": [
+      {
+      "@id": "https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00"
       }
     ]
     },
     {
-    "@id": "_:N43c38fc27d0a481f903cab845f7767e5",
+    "@id": "_:Ndbcee6572aa74e0c85074e9c5d958bba",
     "@type": [
       "http://www.w3.org/ns/prov#Plan"
     ],
@@ -79,8 +68,19 @@
       "@value": "\n    Commission Regulation (EU) No 1089/2010 of 23 November 2010 \n    implementing Directive 2007/2/EC of the European Parliament \n    and of the Council as regards interoperability of spatial \n    data sets and services\n  "
       }
     ]
+    },
+    {
+    "@id": "_:N84f59183346045de8955a3e756630742",
+    "@type": [
+      "http://www.w3.org/ns/prov#Association"
+    ],
+    "http://www.w3.org/ns/prov#hadPlan": [
+      {
+      "@id": "_:Ndbcee6572aa74e0c85074e9c5d958bba"
+      }
+    ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP/drafts/latest/examples/activity.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.develop/drafts/latest/examples/activity.rdf"
   }
 ]

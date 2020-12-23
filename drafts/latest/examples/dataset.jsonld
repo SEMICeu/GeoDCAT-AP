@@ -2,28 +2,20 @@
   {
   "@graph": [
     {
-    "@id": "_:N0a2ef1f3aabf4579a19aa87329920030",
-    "http://purl.org/dc/terms/description": [
-      {
-      "@language": "en",
-      "@value": "See the referenced specification"
-      }
-    ],
-    "http://purl.org/dc/terms/type": [
-      {
-      "@id": "http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated"
-      }
-    ]
-    },
-    {
-    "@id": "_:N0fc1aecd91444c449152a863aa36b3d9",
+    "@id": "_:Nf79cb21bb97a4c09b1e45d6c7345b9a9",
     "@type": [
-      "http://purl.org/dc/terms/ProvenanceStatement"
+      "http://purl.org/dc/terms/PeriodOfTime"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
+    "http://www.w3.org/ns/dcat#endDate": [
       {
-      "@language": "en",
-      "@value": "The raster data sets have been created out of the Noise Spatial Database, which in turn contains all versions delivered by the relevant countries (EU and EFTA) to Reportnet (CDR). The data from Reportnet is automatically incorporated into the database, with the exception of those data sets which require a manual review (due to problems with naming conventions or Coordinate Reference System). The data set covers any submission by the countries until 01/01/2019."
+      "@type": "http://www.w3.org/2001/XMLSchema#date",
+      "@value": "2016-12-31"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#startDate": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#date",
+      "@value": "2016-01-01"
       }
     ]
     },
@@ -71,12 +63,12 @@
     ],
     "http://purl.org/dc/terms/provenance": [
       {
-      "@id": "_:N0fc1aecd91444c449152a863aa36b3d9"
+      "@id": "_:N3c7c1cc79d854af6bb5444b9195cc0f5"
       }
     ],
     "http://purl.org/dc/terms/spatial": [
       {
-      "@id": "_:N5c2d3ea7038e4010bd0064456966f5dc"
+      "@id": "_:Nce70837a4a6440deb7922caecea47f9b"
       }
     ],
     "http://purl.org/dc/terms/subject": [
@@ -92,7 +84,7 @@
     ],
     "http://purl.org/dc/terms/temporal": [
       {
-      "@id": "_:N275f80fd710c4edea63a3de9ce4e300d"
+      "@id": "_:Nf79cb21bb97a4c09b1e45d6c7345b9a9"
       }
     ],
     "http://purl.org/dc/terms/title": [
@@ -108,22 +100,22 @@
     ],
     "http://www.w3.org/ns/dcat#contactPoint": [
       {
-      "@id": "_:N6160a47780a84402aa43ab0a6f2fb325"
+      "@id": "_:N57fdc0748c674cffb8f8f7c4d3abcadd"
       }
     ],
     "http://www.w3.org/ns/dcat#distribution": [
       {
-      "@id": "_:Na43e17f2f8134a08b1c0b72a8ab2d7ee"
+      "@id": "_:Nb8cde633004540739eaa2f562e436d59"
       }
     ],
     "http://www.w3.org/ns/dcat#keyword": [
       {
       "@language": "en",
-      "@value": "Noise map"
+      "@value": "noise contour"
       },
       {
       "@language": "en",
-      "@value": "agglomerations"
+      "@value": "Noise map"
       },
       {
       "@language": "en",
@@ -131,7 +123,7 @@
       },
       {
       "@language": "en",
-      "@value": "noise contour"
+      "@value": "agglomerations"
       },
       {
       "@language": "en",
@@ -146,18 +138,18 @@
     ],
     "http://www.w3.org/ns/dcat#theme": [
       {
-      "@id": "http://publications.europa.eu/resource/authority/data-theme/HEAL"
+      "@id": "http://www.eionet.europa.eu/gemet/concept/2884"
       },
       {
       "@id": "http://inspire.ec.europa.eu/theme/hh"
       },
       {
-      "@id": "http://www.eionet.europa.eu/gemet/concept/2884"
+      "@id": "http://publications.europa.eu/resource/authority/data-theme/HEAL"
       }
     ],
     "http://www.w3.org/ns/prov#wasUsedBy": [
       {
-      "@id": "_:Ndce9fba2fe194d39938c6c7c356d33e4"
+      "@id": "_:N4ee59a5670fa4f10b4e324396691f83f"
       }
     ],
     "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": [
@@ -172,7 +164,15 @@
     ]
     },
     {
-    "@id": "_:Nd4b4e4e0184448fe89d1ab058170aa3d",
+    "@id": "_:N0fc5e4533dc144d681f166370f6c0957",
+    "http://www.w3.org/ns/prov#hadPlan": [
+      {
+      "@id": "_:N9f634f4507624a6086877aa886959262"
+      }
+    ]
+    },
+    {
+    "@id": "_:N9f634f4507624a6086877aa886959262",
     "http://www.w3.org/ns/prov#wasDerivedFrom": [
       {
       "@id": "http://data.europa.eu/eli/reg/2010/1089"
@@ -180,7 +180,58 @@
     ]
     },
     {
-    "@id": "_:N6160a47780a84402aa43ab0a6f2fb325",
+    "@id": "_:Na7a0c87402fa4fcea73921e1d6208204",
+    "http://purl.org/dc/terms/description": [
+      {
+      "@language": "en",
+      "@value": "See the referenced specification"
+      }
+    ],
+    "http://purl.org/dc/terms/type": [
+      {
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated"
+      }
+    ]
+    },
+    {
+    "@id": "_:Ne61974aa97fc4256a5d67efca62311cd",
+    "@type": [
+      "http://purl.org/dc/terms/LicenseDocument"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+      "@language": "en",
+      "@value": "The full noise contour maps data set is in principle only available for EEA internal use. A public version of the data set may in the future be available, excluding those data sets for which there is any limitation or restriction in their use (beyond acknowledgement)."
+      }
+    ]
+    },
+    {
+    "@id": "_:N3c7c1cc79d854af6bb5444b9195cc0f5",
+    "@type": [
+      "http://purl.org/dc/terms/ProvenanceStatement"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+      "@language": "en",
+      "@value": "The raster data sets have been created out of the Noise Spatial Database, which in turn contains all versions delivered by the relevant countries (EU and EFTA) to Reportnet (CDR). The data from Reportnet is automatically incorporated into the database, with the exception of those data sets which require a manual review (due to problems with naming conventions or Coordinate Reference System). The data set covers any submission by the countries until 01/01/2019."
+      }
+    ]
+    },
+    {
+    "@id": "_:Nce70837a4a6440deb7922caecea47f9b",
+    "http://www.w3.org/ns/dcat#bbox": [
+      {
+      "@type": "http://www.opengis.net/ont/geosparql#gmlLiteral",
+      "@value": "<gml:Envelope srsName=\"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"><gml:lowerCorner>-31.285 27.642</gml:lowerCorner><gml:upperCorner>34.099 70.075</gml:upperCorner></gml:Envelope>"
+      },
+      {
+      "@type": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "@value": "POLYGON((-31.285 70.075,34.099 70.075,34.099 27.642,-31.285 27.642,-31.285 70.075))"
+      }
+    ]
+    },
+    {
+    "@id": "_:N57fdc0748c674cffb8f8f7c4d3abcadd",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Organization"
     ],
@@ -192,7 +243,7 @@
     ],
     "http://www.w3.org/2006/vcard/ns#hasAddress": [
       {
-      "@id": "_:N763a6fa9eb4f4f498c63e5fc5fa34b8e"
+      "@id": "_:Na290e86e75b046f6b328f988bb15eb14"
       }
     ],
     "http://www.w3.org/2006/vcard/ns#hasEmail": [
@@ -207,7 +258,23 @@
     ]
     },
     {
-    "@id": "_:Nc3f02d3eb7b84e3f92c459fbf4b54466",
+    "@id": "_:N4ee59a5670fa4f10b4e324396691f83f",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/ns/prov#generated": [
+      {
+      "@id": "_:Na7a0c87402fa4fcea73921e1d6208204"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedAssociation": [
+      {
+      "@id": "_:N0fc5e4533dc144d681f166370f6c0957"
+      }
+    ]
+    },
+    {
+    "@id": "_:N1a891c140bff41cd817f853fdf82ec19",
     "http://purl.org/dc/terms/conformsTo": [
       {
       "@id": "http://www.opengeospatial.org/standards/wms"
@@ -225,116 +292,7 @@
     ]
     },
     {
-    "@id": "_:Ne72f8041af944772be757cfd2f276b25",
-    "@type": [
-      "http://purl.org/dc/terms/LicenseDocument"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-      "@language": "en",
-      "@value": "The full noise contour maps data set is in principle only available for EEA internal use. A public version of the data set may in the future be available, excluding those data sets for which there is any limitation or restriction in their use (beyond acknowledgement)."
-      }
-    ]
-    },
-    {
-    "@id": "_:N275f80fd710c4edea63a3de9ce4e300d",
-    "@type": [
-      "http://purl.org/dc/terms/PeriodOfTime"
-    ],
-    "http://www.w3.org/ns/dcat#endDate": [
-      {
-      "@type": "http://www.w3.org/2001/XMLSchema#date",
-      "@value": "2016-12-31"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#startDate": [
-      {
-      "@type": "http://www.w3.org/2001/XMLSchema#date",
-      "@value": "2016-01-01"
-      }
-    ]
-    },
-    {
-    "@id": "_:Na43e17f2f8134a08b1c0b72a8ab2d7ee",
-    "@type": [
-      "http://www.w3.org/ns/dcat#Distribution"
-    ],
-    "http://purl.org/dc/terms/accessRights": [
-      {
-      "@id": "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e"
-      }
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-      "@language": "en",
-      "@value": "NoiseContours_air_lnight"
-      }
-    ],
-    "http://purl.org/dc/terms/format": [
-      {
-      "@id": "http://publications.europa.eu/resource/authority/file-type/TIFF"
-      }
-    ],
-    "http://purl.org/dc/terms/license": [
-      {
-      "@id": "_:Ne72f8041af944772be757cfd2f276b25"
-      }
-    ],
-    "http://www.w3.org/ns/adms#representationTechnique": [
-      {
-      "@id": "http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode/grid"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#accessService": [
-      {
-      "@id": "_:Nc3f02d3eb7b84e3f92c459fbf4b54466"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#accessURL": [
-      {
-      "@id": "https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&service=WMS"
-      }
-    ]
-    },
-    {
-    "@id": "_:Nf472969f3c2b43a3816d78dd796dda35",
-    "http://www.w3.org/ns/prov#hadPlan": [
-      {
-      "@id": "_:Nd4b4e4e0184448fe89d1ab058170aa3d"
-      }
-    ]
-    },
-    {
-    "@id": "_:Ndce9fba2fe194d39938c6c7c356d33e4",
-    "@type": [
-      "http://www.w3.org/ns/prov#Activity"
-    ],
-    "http://www.w3.org/ns/prov#generated": [
-      {
-      "@id": "_:N0a2ef1f3aabf4579a19aa87329920030"
-      }
-    ],
-    "http://www.w3.org/ns/prov#qualifiedAssociation": [
-      {
-      "@id": "_:Nf472969f3c2b43a3816d78dd796dda35"
-      }
-    ]
-    },
-    {
-    "@id": "_:N5c2d3ea7038e4010bd0064456966f5dc",
-    "http://www.w3.org/ns/dcat#bbox": [
-      {
-      "@type": "http://www.opengis.net/ont/geosparql#gmlLiteral",
-      "@value": "<gml:Envelope srsName=\"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"><gml:lowerCorner>-31.285 27.642</gml:lowerCorner><gml:upperCorner>34.099 70.075</gml:upperCorner></gml:Envelope>"
-      },
-      {
-      "@type": "http://www.opengis.net/ont/geosparql#wktLiteral",
-      "@value": "POLYGON((-31.285 70.075,34.099 70.075,34.099 27.642,-31.285 27.642,-31.285 70.075))"
-      }
-    ]
-    },
-    {
-    "@id": "_:N763a6fa9eb4f4f498c63e5fc5fa34b8e",
+    "@id": "_:Na290e86e75b046f6b328f988bb15eb14",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Address"
     ],
@@ -363,8 +321,50 @@
       "@value": "Kongens Nytorv 6"
       }
     ]
+    },
+    {
+    "@id": "_:Nb8cde633004540739eaa2f562e436d59",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Distribution"
+    ],
+    "http://purl.org/dc/terms/accessRights": [
+      {
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+      "@language": "en",
+      "@value": "NoiseContours_air_lnight"
+      }
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+      "@id": "http://publications.europa.eu/resource/authority/file-type/TIFF"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+      "@id": "_:Ne61974aa97fc4256a5d67efca62311cd"
+      }
+    ],
+    "http://www.w3.org/ns/adms#representationTechnique": [
+      {
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode/grid"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#accessService": [
+      {
+      "@id": "_:N1a891c140bff41cd817f853fdf82ec19"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#accessURL": [
+      {
+      "@id": "https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&service=WMS"
+      }
+    ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP/drafts/latest/examples/dataset.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.develop/drafts/latest/examples/dataset.rdf"
   }
 ]
