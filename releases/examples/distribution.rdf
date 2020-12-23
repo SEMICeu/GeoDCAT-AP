@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF 
+  xmlns:adms      = "http://www.w3.org/ns/adms#" 
+  xmlns:dcat      = "http://www.w3.org/ns/dcat#" 
+  xmlns:dct       = "http://purl.org/dc/terms/" 
+  xmlns:rdf       = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:rdfs      = "http://www.w3.org/2000/01/rdf-schema#" 
+  xmlns:xsd       = "http://www.w3.org/2001/XMLSchema#"
+>
+
+  <dcat:Distribution>
+    <dct:description xml:lang="en">NoiseContours_air_lnight</dct:description>
+    <dcat:accessService rdf:parseType="Resource">
+      <dcat:endpointURL rdf:resource="https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer"/>
+      <dcat:endpointDescription rdf:resource="https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&amp;service=WMS"/>
+      <dct:conformsTo rdf:resource="http://www.opengeospatial.org/standards/wms"/>
+    </dcat:accessService>
+    <dcat:accessURL rdf:resource="https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&amp;service=WMS"/>
+    <dct:accessRights rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e"/>
+    <dct:license>
+      <dct:LicenseDocument>
+        <rdfs:label xml:lang="en">The full noise contour maps data set is in principle only available for EEA internal use. A public version of the data set may in the future be available, excluding those data sets for which there is any limitation or restriction in their use (beyond acknowledgement).</rdfs:label>
+      </dct:LicenseDocument>
+    </dct:license>
+    <adms:representationTechnique rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode/grid"/>
+    <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/TIFF"/>
+  </dcat:Distribution>
+
+</rdf:RDF>

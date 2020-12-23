@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF 
+  xmlns:dct      = "http://purl.org/dc/terms/" 
+  xmlns:prov     = "http://www.w3.org/ns/prov#" 
+  xmlns:rdf      = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:xsd      = "http://www.w3.org/2001/XMLSchema#"
+  xmlns:resource = "https://some.catalogue/resource/"
+>
+
+  <prov:Activity>
+    <prov:used rdf:resource="https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00"/>
+    <prov:qualifiedAssociation>
+      <prov:Association>
+        <prov:hadPlan>
+          <prov:Plan>
+            <prov:wasDerivedFrom rdf:resource="http://data.europa.eu/eli/reg/2010/1089"/>
+          </prov:Plan>
+        </prov:hadPlan>
+      </prov:Association>
+    </prov:qualifiedAssociation>
+    <prov:generated>
+      <prov:Entity>
+        <dct:type rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated"/>
+        <dct:description xml:lang="en">See the referenced specification</dct:description>
+      </prov:Entity>
+    </prov:generated>
+  </prov:Activity>
+
+  <rdf:Description rdf:about="http://data.europa.eu/eli/reg/2010/1089">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/Standard"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+    <dct:title xml:lang="en">
+      Commission Regulation (EU) No 1089/2010 of 23 November 2010 
+      implementing Directive 2007/2/EC of the European Parliament 
+      and of the Council as regards interoperability of spatial 
+      data sets and services
+    </dct:title>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-12-08</dct:issued>
+  </rdf:Description>
+
+</rdf:RDF>

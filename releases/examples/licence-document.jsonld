@@ -1,0 +1,19 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "_:Na4f2519ec21c42419a4b91efc587f364",
+    "@type": [
+      "http://purl.org/dc/terms/LicenseDocument"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+      "@language": "en",
+      "@value": "No limitations in the use of this web service."
+      }
+    ]
+    }
+  ],
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.develop/drafts/latest/examples/licence-document.rdf"
+  }
+]
