@@ -2,7 +2,7 @@
 
 Release page:
 
-[TBD]()
+[https://joinup.ec.europa.eu/release/geodcat-ap/200](https://joinup.ec.europa.eu/release/geodcat-ap/200)
 
 ## Distributions
 

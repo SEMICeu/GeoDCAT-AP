@@ -6,8 +6,8 @@ Release page:
 
 ## Distributions
 
-- [PDF version](https://semiceu.github.io/GeoDCAT-AP/releases/1.0/geodcat-ap_1.0.pdf)
-- [DOCX version](https://semiceu.github.io/GeoDCAT-AP/releases/1.0/geodcat-ap_1.0.docx)
+- [PDF version](https://semiceu.github.io/GeoDCAT-AP/releases/1.0.0/geodcat-ap_1.0.pdf)
+- [DOCX version](https://semiceu.github.io/GeoDCAT-AP/releases/1.0.0/geodcat-ap_1.0.docx)
 
 ## Licence
 

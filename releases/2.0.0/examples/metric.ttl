@@ -1,0 +1,28 @@
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix geodcatap: <http://data.europa.eu/930/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+geodcatap:spatialResolutionAsAngularDistance a dqv:Metric ;
+  skos:prefLabel "Spatial resolution as angular distance"@en ;
+  dqv:expectedDataType xsd:decimal ;
+  dqv:inDimension dqv:precision .
+
+geodcatap:spatialResolutionAsDistance a dqv:Metric ;
+  skos:prefLabel "Spatial resolution as distance"@en ;
+  dqv:expectedDataType xsd:decimal ;
+  dqv:inDimension dqv:precision .
+
+geodcatap:spatialResolutionAsScale a dqv:Metric ;
+  skos:prefLabel "Spatial resolution as equivalent scale"@en ;
+  dqv:expectedDataType xsd:decimal ;
+  dqv:inDimension dqv:precision .
+
+geodcatap:spatialResolutionAsVerticalDistance a dqv:Metric ;
+  skos:prefLabel "Spatial resolution as vertical distance"@en ;
+  dqv:expectedDataType xsd:decimal ;
+  dqv:inDimension dqv:precision .
+
