@@ -2,7 +2,7 @@
 
 Release page:
 
-[https://joinup.ec.europa.eu/release/geodcat-ap/200](https://joinup.ec.europa.eu/release/geodcat-ap/200)
+[https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/)
 
 ## Distributions
 
