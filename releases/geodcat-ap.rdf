@@ -818,7 +818,7 @@
     <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/concept-status/CURRENT"/>
     <vs:term_status>stable</vs:term_status>
     <rdfs:label xml:lang="en">Spatial resolution as vertical distance</rdfs:label>
-    <rdfs:comment xml:lang="en">Spatial resolution expressed as vertical distance.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Spatial resolution expressed as vertical distance (ISO 19115-1:2014).</rdfs:comment>
     <skos:prefLabel xml:lang="en">Spatial resolution as vertical distance</skos:prefLabel>
     <skos:definition xml:lang="en">Spatial resolution expressed as vertical distance (ISO 19115-1:2014).</skos:definition>
     <dqv:expectedDataType rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>

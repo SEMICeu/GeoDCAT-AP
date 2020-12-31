@@ -145,7 +145,7 @@ geodcatap:spatialResolutionAsScale a dqv:Metric ;
 
 geodcatap:spatialResolutionAsVerticalDistance a dqv:Metric ;
   rdfs:label "Spatial resolution as vertical distance"@en ;
-  rdfs:comment "Spatial resolution expressed as vertical distance."@en ;
+  rdfs:comment "Spatial resolution expressed as vertical distance (ISO 19115-1:2014)."@en ;
   rdfs:isDefinedBy geodcatap:,
     <https://www.iso.org/standard/53798.html> ;
   vs:term_status "stable" ;
@@ -512,14 +512,6 @@ geodcatap: a voaf:Vocabulary,
   adms:status <http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED> ;
   adms:versionNotes "This version of GeoDCAT-AP is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP and was built starting from GeoDCAT-AP version 1.0.1, with the purpose of aligning it with DCAT-AP version 2.0.1 and with version 2.0.1 of the INSPIRE Metadata Technical Guidelines."@en ;
   dcat:distribution [ a adms:AssetDistribution ;
-      dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>,
-        <http://www.w3.org/ns/formats/data/Turtle> ;
-      dct:title "Turtle"@en ;
-      adms:representationTechnique <http://purl.org/adms/representationtechnique/OWL>,
-        <http://purl.org/adms/representationtechnique/RDFSchema> ;
-      dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.ttl> ;
-      dcat:mediaType "text/turtle"^^dct:IMT ],
-    [ a adms:AssetDistribution ;
       dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML>,
         <http://www.w3.org/ns/formats/data/RDF_XML> ;
       dct:title "RDF/XML"@en ;
@@ -527,6 +519,14 @@ geodcatap: a voaf:Vocabulary,
         <http://purl.org/adms/representationtechnique/RDFSchema> ;
       dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.rdf> ;
       dcat:mediaType "application/rdf+xml"^^dct:IMT ],
+    [ a adms:AssetDistribution ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>,
+        <http://www.w3.org/ns/formats/data/Turtle> ;
+      dct:title "Turtle"@en ;
+      adms:representationTechnique <http://purl.org/adms/representationtechnique/OWL>,
+        <http://purl.org/adms/representationtechnique/RDFSchema> ;
+      dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.ttl> ;
+      dcat:mediaType "text/turtle"^^dct:IMT ],
     [ a adms:AssetDistribution ;
       dct:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
       dct:title "HTML"@en ;
