@@ -10,6 +10,7 @@ Release page:
 - [Turtle version](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.ttl)
 - [RDF/XML version](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.rdf)
 - [JSON-LD version](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.jsonld)
+- [SHACL version](https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.shacl.ttl)
 
 ## Licence
 
