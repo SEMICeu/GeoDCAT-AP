@@ -53,12 +53,10 @@ var respecConfig = {
       label: "JSON-LD",
       uri: "./geodcat-ap.jsonld",
     },
-/*
     {
-      label: "SHACL (TBD)",
-      uri: "./geodcat-ap_shacl_shapes.ttl",
+      label: "SHACL (Turtle)",
+      uri: "./geodcat-ap.shacl.ttl",
     }
-*/
     ],    
 //    implementationReportURI:"https://joinup.ec.europa.eu/document/geodcat-ap-implementations",
     errata:"https://github.com/SEMICeu/GeoDCAT-AP/issues?q=is%3Aissue+label%3Atype%3Aerratum+label%3Arelease%3A2.0.0",

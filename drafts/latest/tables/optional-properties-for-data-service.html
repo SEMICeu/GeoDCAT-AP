@@ -256,6 +256,24 @@
 </td>
 </tr>
 
+<tr class="property optional ap-ext" id="data-service-release-date">
+<td>
+<p>+release date</p>
+</td>
+<td>
+<p><code>dct:issued</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the date of formal issuance (e.g., publication) of the Data Service.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
 <tr class="property optional ap-ext" id="data-service-rights-holder">
 <td>
 <p>+rights holder</p>
@@ -467,6 +485,24 @@
 </td>
 <td>
 <p>In GeoDCAT-AP, this property SHOULD take as value one of the URIs of the "Resource types" code list operated by the INSPIRE Registry [[INSPIRE-RT]] - namely the one corresponding to "Spatial data service".</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="data-service-modification-date">
+<td>
+<p>+update / modification date</p>
+</td>
+<td>
+<p><code>dct:modified</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the most recent date on which the Data Service was changed or modified.</p>
 </td>
 <td>
 <p>0..1</p>

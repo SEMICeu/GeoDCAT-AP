@@ -23,7 +23,7 @@
     a owl:Ontology , adms:Asset ;
     owl:imports <https://raw.githubusercontent.com/SEMICeu/DCAT-AP/master/releases/2.0.1/dcat-ap_2.0.1_shacl_shapes.ttl> ;
     owl:versionIRI <http://data.europa.eu/930/2.0.0/shacl_shapes> ;
-    adms:status <http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED> ;
+    adms:status <http://publications.europa.eu/resource/dataset/dataset-status/DEVELOP> ;
     dcatap:availability dcatap:stable ;
     dct:conformsTo <https://www.w3.org/TR/shacl> ;
     rdfs:isDefinedBy <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/> ;

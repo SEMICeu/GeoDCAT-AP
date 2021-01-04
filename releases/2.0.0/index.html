@@ -139,7 +139,7 @@ table code, table pre {
 </style>
 
 <meta name="description" content="GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 and those defined in the framework of the INSPIRE Directive of the European Union.">
-<link rel="canonical" href="https://semiceu.github.io/GeoDCAT-AP/drafts/latest/">
+<link rel="canonical" href="https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/">
 <script type="application/ld+json">{
   "@context": [
     "http://schema.org",
@@ -162,7 +162,7 @@ table code, table pre {
       }
     }
   ],
-  "id": "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
+  "id": "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
   "type": [
     "TechArticle",
     "w3p:REC"
@@ -1840,12 +1840,16 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     {
       "label": "JSON-LD",
       "uri": "./geodcat-ap.jsonld"
+    },
+    {
+      "label": "SHACL (Turtle)",
+      "uri": "./geodcat-ap.shacl.ttl"
     }
   ],
   "errata": "https://github.com/SEMICeu/GeoDCAT-AP/issues?q=is%3Aissue+label%3Atype%3Aerratum+label%3Arelease%3A2.0.0",
   "specStatus": "REC",
   "shortName": "geodcat-ap",
-  "canonicalURI": "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
+  "canonicalURI": "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
   "prevRecURI": "https://semiceu.github.io/GeoDCAT-AP/releases/1.0.1/",
   "thisVersionURI": "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
   "prevVersionURI": "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
@@ -2771,7 +2775,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
     <p>
           This document is also available in these non-normative formats:
-          <a rel="alternate" href="./geodcat-ap.rdf">RDF/XML</a>, <a rel="alternate" href="./geodcat-ap.ttl">Turtle</a>, and <a rel="alternate" href="./geodcat-ap.jsonld">JSON-LD</a>
+          <a rel="alternate" href="./geodcat-ap.rdf">RDF/XML</a>, <a rel="alternate" href="./geodcat-ap.ttl">Turtle</a>, <a rel="alternate" href="./geodcat-ap.jsonld">JSON-LD</a>, and <a rel="alternate" href="./geodcat-ap.shacl.ttl">SHACL (Turtle)</a>
         </p>
     <p class="copyright">
     <a href="https://europa.eu/european-union/abouteuropa/legal_notices_en#copyright_notice">Copyright</a>
@@ -2873,8 +2877,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 
 </section>
-
-
 
 <nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#context"><bdi class="secno">1.1 </bdi>Context</a></li><li class="tocline"><a class="tocxref" href="#scope-of-the-revision"><bdi class="secno">1.2 </bdi>Scope of the revision</a></li><li class="tocline"><a class="tocxref" href="#specification"><bdi class="secno">1.3 </bdi>A DCAT-AP extension</a></li></ol></li><li class="tocline"><a class="tocxref" href="#terminology"><bdi class="secno">2. </bdi>Terminology used in the Application Profile</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#namespaces"><bdi class="secno">2.1 </bdi>Namespaces</a></li><li class="tocline"><a class="tocxref" href="#overview"><bdi class="secno">2.2 </bdi>Application Profile Overview</a></li></ol></li><li class="tocline"><a class="tocxref" href="#classes"><bdi class="secno">3. </bdi>Application Profile Classes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mandatory-classes"><bdi class="secno">3.1 </bdi>Mandatory Classes</a></li><li class="tocline"><a class="tocxref" href="#recommended-classes"><bdi class="secno">3.2 </bdi>Recommended Classes</a></li><li class="tocline"><a class="tocxref" href="#optional-classes"><bdi class="secno">3.3 </bdi>Optional Classes</a></li><li class="tocline"><a class="tocxref" href="#deprecated-classes"><bdi class="secno">3.4 </bdi>Deprecated Classes</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties"><bdi class="secno">4. </bdi>Application Profile Properties per Class</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#properties-for-activity"><bdi class="secno">4.1 </bdi>+Activity</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mandatory-properties-for-activity"><bdi class="secno">4.1.1 </bdi>Mandatory properties for Activity</a></li><li class="tocline"><a class="tocxref" href="#examples-for-activity"><bdi class="secno">4.1.2 </bdi>Examples for Activity</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-address-agent"><bdi class="secno">4.2 </bdi>+Address (Agent)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recommended-properties-for-address-agent"><bdi class="secno">4.2.1 </bdi>Recommended properties for Address (Agent)</a></li><li class="tocline"><a class="tocxref" href="#examples-for-address-agent"><bdi class="secno">4.2.2 </bdi>Examples for Address (Agent)</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-address-kind"><bdi class="secno">4.3 </bdi>+Address (Kind)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recommended-properties-for-address-kind"><bdi class="secno">4.3.1 </bdi>Recommended properties for Address (Kind)</a></li><li class="tocline"><a class="tocxref" href="#examples-for-address-kind"><bdi class="secno">4.3.2 </bdi>Examples for Address (Kind)</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-agent"><bdi class="secno">4.4 </bdi>Agent</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mandatory-properties-for-agent"><bdi class="secno">4.4.1 </bdi>Mandatory property for Agent</a></li><li class="tocline"><a class="tocxref" href="#recommended-properties-for-agent"><bdi class="secno">4.4.2 </bdi>Recommended property for Agent</a></li><li class="tocline"><a class="tocxref" href="#optional-properties-for-agent"><bdi class="secno">4.4.3 </bdi>Optional properties for Agent</a></li><li class="tocline"><a class="tocxref" href="#examples-for-agent"><bdi class="secno">4.4.4 </bdi>Examples for Agent</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-attribution"><bdi class="secno">4.5 </bdi>+Attribution</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mandatory-properties-for-attribution"><bdi class="secno">4.5.1 </bdi>Mandatory properties for Attribution</a></li><li class="tocline"><a class="tocxref" href="#deprecated-properties-for-attribution"><bdi class="secno">4.5.2 </bdi>Deprecated properties for Attribution</a></li><li class="tocline"><a class="tocxref" href="#examples-for-attribution"><bdi class="secno">4.5.3 </bdi>Examples for Attribution</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-catalogue"><bdi class="secno">4.6 </bdi>Catalogue</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mandatory-properties-for-catalogue"><bdi class="secno">4.6.1 </bdi>Mandatory properties for Catalogue</a></li><li class="tocline"><a class="tocxref" href="#recommended-properties-for-catalogue"><bdi class="secno">4.6.2 </bdi>Recommended properties for Catalogue</a></li><li class="tocline"><a class="tocxref" href="#optional-properties-for-catalogue"><bdi class="secno">4.6.3 </bdi>Optional properties for Catalogue</a></li><li class="tocline"><a class="tocxref" href="#deprecated-properties-for-catalogue"><bdi class="secno">4.6.4 </bdi>Deprecated properties for Catalogue</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-catalogue-record"><bdi class="secno">4.7 </bdi>Catalogue Record</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mandatory-properties-for-catalogue-record"><bdi class="secno">4.7.1 </bdi>Mandatory properties for Catalogue Record</a></li><li class="tocline"><a class="tocxref" href="#recommended-properties-for-catalogue-record"><bdi class="secno">4.7.2 </bdi>Recommended properties for Catalogue Record</a></li><li class="tocline"><a class="tocxref" href="#optional-properties-for-catalogue-record"><bdi class="secno">4.7.3 </bdi>Optional properties for Catalogue Record</a></li><li class="tocline"><a class="tocxref" href="#examples-for-catalogue-record"><bdi class="secno">4.7.4 </bdi>Examples for Catalogue Record</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-category"><bdi class="secno">4.8 </bdi>Category</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mandatory-properties-for-category"><bdi class="secno">4.8.1 </bdi>Mandatory property for Category</a></li><li class="tocline"><a class="tocxref" href="#optional-properties-for-category"><bdi class="secno">4.8.2 </bdi>Optional property for Category</a></li><li class="tocline"><a class="tocxref" href="#examples-for-category"><bdi class="secno">4.8.3 </bdi>Examples for Category</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-category-scheme"><bdi class="secno">4.9 </bdi>Category Scheme</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mandatory-properties-for-category-scheme"><bdi class="secno">4.9.1 </bdi>Mandatory property for Category Scheme</a></li><li class="tocline"><a class="tocxref" href="#optional-properties-for-category-scheme"><bdi class="secno">4.9.2 </bdi>Optional properties for Category Scheme</a></li><li class="tocline"><a class="tocxref" href="#examples-for-category-scheme"><bdi class="secno">4.9.3 </bdi>Examples for Category Scheme</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-checksum"><bdi class="secno">4.10 </bdi>Checksum</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mandatory-properties-for-checksum"><bdi class="secno">4.10.1 </bdi>Mandatory properties for Checksum</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-data-service"><bdi class="secno">4.11 </bdi>Data Service</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mandatory-properties-for-data-service"><bdi class="secno">4.11.1 </bdi>Mandatory properties for Data Service</a></li><li class="tocline"><a class="tocxref" href="#recommended-properties-for-data-service"><bdi class="secno">4.11.2 </bdi>Recommended properties for Data Service</a></li><li class="tocline"><a class="tocxref" href="#optional-properties-for-data-service"><bdi class="secno">4.11.3 </bdi>Optional properties for Data Service</a></li><li class="tocline"><a class="tocxref" href="#deprecated-properties-for-data-service"><bdi class="secno">4.11.4 </bdi>Deprecated properties for Data Service</a></li><li class="tocline"><a class="tocxref" href="#examples-for-data-service"><bdi class="secno">4.11.5 </bdi>Examples for Data Service</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-dataset"><bdi class="secno">4.12 </bdi>Dataset</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mandatory-properties-for-dataset"><bdi class="secno">4.12.1 </bdi>Mandatory properties for Dataset</a></li><li class="tocline"><a class="tocxref" href="#recommended-properties-for-dataset"><bdi class="secno">4.12.2 </bdi>Recommended properties for Dataset</a></li><li class="tocline"><a class="tocxref" href="#optional-properties-for-dataset"><bdi class="secno">4.12.3 </bdi>Optional properties for Dataset</a></li><li class="tocline"><a class="tocxref" href="#deprecated-properties-for-dataset"><bdi class="secno">4.12.4 </bdi>Deprecated properties for Dataset</a></li><li class="tocline"><a class="tocxref" href="#examples-for-dataset"><bdi class="secno">4.12.5 </bdi>Examples for Dataset</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-distribution"><bdi class="secno">4.13 </bdi>Distribution</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mandatory-properties-for-distribution"><bdi class="secno">4.13.1 </bdi>Mandatory properties for Distribution</a></li><li class="tocline"><a class="tocxref" href="#recommended-properties-for-distribution"><bdi class="secno">4.13.2 </bdi>Recommended properties for Distribution</a></li><li class="tocline"><a class="tocxref" href="#optional-properties-for-distribution"><bdi class="secno">4.13.3 </bdi>Optional properties for Distribution</a></li><li class="tocline"><a class="tocxref" href="#deprecated-properties-for-distribution"><bdi class="secno">4.13.4 </bdi>Deprecated properties for Distribution</a></li><li class="tocline"><a class="tocxref" href="#examples-for-distribution"><bdi class="secno">4.13.5 </bdi>Examples for Distribution</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-document"><bdi class="secno">4.14 </bdi>Document</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recommended-properties-for-document"><bdi class="secno">4.14.1 </bdi>Recommended properties for Document</a></li><li class="tocline"><a class="tocxref" href="#examples-for-document"><bdi class="secno">4.14.2 </bdi>Examples for Document</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-identifier"><bdi class="secno">4.15 </bdi>Identifier</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mandatory-properties-for-identifier"><bdi class="secno">4.15.1 </bdi>Mandatory property for Identifier</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-kind"><bdi class="secno">4.16 </bdi>Kind</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recommended-properties-for-kind"><bdi class="secno">4.16.1 </bdi>Recommended properties for Kind</a></li><li class="tocline"><a class="tocxref" href="#optional-properties-for-kind"><bdi class="secno">4.16.2 </bdi>Optional properties for Kind</a></li><li class="tocline"><a class="tocxref" href="#examples-for-kind"><bdi class="secno">4.16.3 </bdi>Examples for Kind</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-licence-document"><bdi class="secno">4.17 </bdi>Licence Document</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recommended-properties-for-licence-document"><bdi class="secno">4.17.1 </bdi>Recommended property for Licence Document</a></li><li class="tocline"><a class="tocxref" href="#optional-properties-for-licence-document"><bdi class="secno">4.17.2 </bdi>Optional property for Licence Document</a></li><li class="tocline"><a class="tocxref" href="#examples-for-licence-document"><bdi class="secno">4.17.3 </bdi>Examples for Licence Document</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-location"><bdi class="secno">4.18 </bdi>Location</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recommended-properties-for-location"><bdi class="secno">4.18.1 </bdi>Recommended properties for Location</a></li><li class="tocline"><a class="tocxref" href="#optional-properties-for-location"><bdi class="secno">4.18.2 </bdi>Optional properties for Location</a></li><li class="tocline"><a class="tocxref" href="#examples-for-location"><bdi class="secno">4.18.3 </bdi>Examples for Location</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-media-type"><bdi class="secno">4.19 </bdi>Media Type</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recommended-properties-for-media-type"><bdi class="secno">4.19.1 </bdi>Recommended property for Media Type</a></li><li class="tocline"><a class="tocxref" href="#examples-for-media-type"><bdi class="secno">4.19.2 </bdi>Examples for Media Type</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-metric"><bdi class="secno">4.20 </bdi>+Metric</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#instances-of-metric"><bdi class="secno">4.20.1 </bdi>Instances of Metric</a></li><li class="tocline"><a class="tocxref" href="#recommended-properties-for-metric"><bdi class="secno">4.20.2 </bdi>Recommended properties for Metric</a></li><li class="tocline"><a class="tocxref" href="#examples-for-metric"><bdi class="secno">4.20.3 </bdi>Examples for Metric</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-period-of-time"><bdi class="secno">4.21 </bdi>Period of Time</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recommended-properties-for-period-of-time"><bdi class="secno">4.21.1 </bdi>Recommended properties for Period of Time</a></li><li class="tocline"><a class="tocxref" href="#optional-properties-for-period-of-time"><bdi class="secno">4.21.2 </bdi>Optional properties for Period of Time</a></li><li class="tocline"><a class="tocxref" href="#deprecated-properties-for-period-of-time"><bdi class="secno">4.21.3 </bdi>Deprecated properties for Period of Time</a></li><li class="tocline"><a class="tocxref" href="#examples-for-period-of-time"><bdi class="secno">4.21.4 </bdi>Examples for Period of Time</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-provenance-statement"><bdi class="secno">4.22 </bdi>Provenance Statement</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recommended-properties-for-provenance-statement"><bdi class="secno">4.22.1 </bdi>Recommended property for Provenance Statement</a></li><li class="tocline"><a class="tocxref" href="#examples-for-provenance-statement"><bdi class="secno">4.22.2 </bdi>Examples for Provenance Statement</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-quality-measurement"><bdi class="secno">4.23 </bdi>+Quality Measurement</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recommended-properties-for-quality-measurement"><bdi class="secno">4.23.1 </bdi>Recommended properties for Quality Measurement</a></li><li class="tocline"><a class="tocxref" href="#examples-for-quality-measurement"><bdi class="secno">4.23.2 </bdi>Examples for Quality Measurement</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-relationship"><bdi class="secno">4.24 </bdi>Relationship</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#mandatory-properties-for-relationship"><bdi class="secno">4.24.1 </bdi>Mandatory properties for Relationship</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-rights-statement"><bdi class="secno">4.25 </bdi>Rights Statement</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recommended-properties-for-rights-statement"><bdi class="secno">4.25.1 </bdi>Recommended property for Rights Statement</a></li></ol></li><li class="tocline"><a class="tocxref" href="#properties-for-standard"><bdi class="secno">4.26 </bdi>Standard</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recommended-properties-for-standard"><bdi class="secno">4.26.1 </bdi>Recommended properties for Standard</a></li><li class="tocline"><a class="tocxref" href="#optional-properties-for-standard"><bdi class="secno">4.26.2 </bdi>Optional properties for Standard</a></li><li class="tocline"><a class="tocxref" href="#examples-for-standard"><bdi class="secno">4.26.3 </bdi>Examples for Standard</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#controlled-vocabularies"><bdi class="secno">5. </bdi>Controlled Vocabularies</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#requirements-for-controlled-vocabularies"><bdi class="secno">5.1 </bdi>Requirements for controlled vocabularies</a></li><li class="tocline"><a class="tocxref" href="#controlled-vocabularies-to-be-used"><bdi class="secno">5.2 </bdi>Controlled vocabularies to be used</a></li><li class="tocline"><a class="tocxref" href="#other-controlled-vocabularies"><bdi class="secno">5.3 </bdi>Other controlled vocabularies</a></li><li class="tocline"><a class="tocxref" href="#licence-vocabularies"><bdi class="secno">5.4 </bdi>Licence vocabularies</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">6. </bdi>Conformance</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#provider-requirements"><bdi class="secno">6.1 </bdi>Provider requirements</a></li><li class="tocline"><a class="tocxref" href="#receiver-requirements"><bdi class="secno">6.2 </bdi>Receiver requirements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#agent-roles"><bdi class="secno">7. </bdi>Agent Roles</a></li><li class="tocline"><a class="tocxref" href="#conformance-test-results"><bdi class="secno">8. </bdi>Conformance Test Results</a></li><li class="tocline"><a class="tocxref" href="#accessibility-and-multilingual-aspects"><bdi class="secno">9. </bdi>Accessibility and Multilingual Aspects</a></li><li class="tocline"><a class="tocxref" href="#privsec"><bdi class="secno">10. </bdi>Privacy and security considerations </a></li><li class="tocline"><a class="tocxref" href="#ack"><bdi class="secno">11. </bdi>Acknowledgements</a></li><li class="tocline"><a class="tocxref" href="#quick-reference-of-classes-and-properties"><bdi class="secno">A. </bdi>Quick Reference of Classes and Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#geodcat-ap-classes-and-properties"><bdi class="secno">A.1 </bdi>Classes and properties added by GeoDCAT-AP</a></li><li class="tocline"><a class="tocxref" href="#deprecated-classes-and-properties"><bdi class="secno">A.2 </bdi>Deprecated classes and properties</a></li></ol></li><li class="tocline"><a class="tocxref" href="#inspire-and-iso-19115-mappings"><bdi class="secno">B. </bdi><abbr title="Infrastructure for spatial information in Europe">INSPIRE</abbr> and ISO 19115 Mappings</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#objectives"><bdi class="secno">B.1 </bdi>Objectives</a></li><li class="tocline"><a class="tocxref" href="#motivation-and-use-cases"><bdi class="secno">B.2 </bdi>Motivation and use cases</a></li><li class="tocline"><a class="tocxref" href="#methodology-and-summary-of-results"><bdi class="secno">B.3 </bdi>Methodology and summary of results</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#alignment-criteria-and-requirements"><bdi class="secno">B.3.1 </bdi>Alignment criteria and requirements</a></li><li class="tocline"><a class="tocxref" href="#metadata-elements-to-be-covered-by-geodcat-ap"><bdi class="secno">B.3.2 </bdi>Metadata elements to be covered by GeoDCAT-AP</a></li><li class="tocline"><a class="tocxref" href="#alignments-defined-in-geodcat-ap"><bdi class="secno">B.3.3 </bdi>Alignments defined in GeoDCAT-AP</a></li></ol></li><li class="tocline"><a class="tocxref" href="#rdf-syntax-bindings-for-inspire-and-iso19115-metadata-elements"><bdi class="secno">B.4 </bdi>RDF syntax bindings for <abbr title="Infrastructure for spatial information in Europe">INSPIRE</abbr> and ISO&nbsp;19115 metadata elements </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#overview-of-bindings-for-geodcat-ap-core"><bdi class="secno">B.4.1 </bdi>Overview of bindings for GeoDCAT-AP Core</a></li><li class="tocline"><a class="tocxref" href="#overview-of-bindings-for-geodcat-ap-extended"><bdi class="secno">B.4.2 </bdi>Overview of bindings for GeoDCAT-AP Extended</a></li></ol></li><li class="tocline"><a class="tocxref" href="#overview-of-metadata-elements-covered-by-geodcat-ap"><bdi class="secno">B.5 </bdi>Overview of metadata elements covered by GeoDCAT-AP</a></li><li class="tocline"><a class="tocxref" href="#detailed-usage-notes-and-examples"><bdi class="secno">B.6 </bdi>Detailed usage notes and examples</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#resource-title---dataset-title"><bdi class="secno">B.6.1 </bdi>Resource title - *Dataset title </a></li><li class="tocline"><a class="tocxref" href="#resource-abstract---abstract-describing-the-dataset"><bdi class="secno">B.6.2 </bdi>Resource abstract - *Abstract describing the dataset</a></li><li class="tocline"><a class="tocxref" href="#resource-type---not-in-iso19115-core"><bdi class="secno">B.6.3 </bdi>Resource type - *not in ISO&nbsp;19115 core</a></li><li class="tocline"><a class="tocxref" href="#resource-locator---on-line-resource"><bdi class="secno">B.6.4 </bdi>Resource locator - *On-line resource</a></li><li class="tocline"><a class="tocxref" href="#unique-resource-identifier---not-in-iso19115-core"><bdi class="secno">B.6.5 </bdi>Unique resource identifier - *not in ISO&nbsp;19115 core</a></li><li class="tocline"><a class="tocxref" href="#coupled-resource---not-in-iso19115-core"><bdi class="secno">B.6.6 </bdi>Coupled resource - *not in ISO&nbsp;19115 core</a></li><li class="tocline"><a class="tocxref" href="#resource-language-and-metadata-language---dataset-language-and-metadata-language"><bdi class="secno">B.6.7 </bdi>Resource language and metadata language - *Dataset language and Metadata language</a></li><li class="tocline"><a class="tocxref" href="#topic-category-originating-controlled-vocabulary-and-keyword-value---dataset-topic-category"><bdi class="secno">B.6.8 </bdi>Topic category, originating controlled vocabulary, and keyword value - *Dataset topic category</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#spatial-data-service-type---not-in-iso19115-core"><bdi class="secno">B.6.9 </bdi>Spatial data service type - *not in ISO&nbsp;19115 core</a></li><li class="tocline"><a class="tocxref" href="#geographic-bounding-box---geographic-location-of-the-dataset-by-4-coordinates-or-by-geographic-identifier"><bdi class="secno">B.6.10 </bdi>Geographic bounding box - *Geographic location of the dataset (by 4 coordinates or by geographic identifier)</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp"><bdi class="secno">B.6.11 </bdi>Temporal reference and metadata date –*Additional extent information for the dataset (vertical and temporal) and *Metadata date stamp</a></li><li class="tocline"><a class="tocxref" href="#lineage---lineage"><bdi class="secno">B.6.12 </bdi>Lineage - *Lineage</a></li><li class="tocline"><a class="tocxref" href="#spatial-resolution-spatial-resolution-of-the-dataset"><bdi class="secno">B.6.13 </bdi>Spatial resolution – Spatial resolution of the dataset</a></li><li class="tocline"><a class="tocxref" href="#conformity-and-data-quality---not-in-iso19115-core"><bdi class="secno">B.6.14 </bdi>Conformity and data quality - *not in ISO&nbsp;19115 core</a></li><li class="tocline"><a class="tocxref" href="#conditions-for-access-and-use-and-limitations-on-public-access-use-limitation-and-access-other-constraints"><bdi class="secno">B.6.15 </bdi>Conditions for access and use and limitations on public access – Use limitation and access / other constraints</a></li><li class="tocline"><a class="tocxref" href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"><bdi class="secno">B.6.16 </bdi>Responsible party and metadata point of contact - *Dataset responsible party and *Metadata point of contact</a></li><li class="tocline"><a class="tocxref" href="#metadata-file-identifier"><bdi class="secno">B.6.17 </bdi>*Metadata file identifier</a></li><li class="tocline"><a class="tocxref" href="#metadata-standard-name-metadata-standard-version"><bdi class="secno">B.6.18 </bdi>*Metadata standard name, *Metadata standard version</a></li><li class="tocline"><a class="tocxref" href="#metadata-characterset"><bdi class="secno">B.6.19 </bdi>*Metadata characterset</a></li><li class="tocline"><a class="tocxref" href="#metadata-point-of-contact---metadata-point-of-contact"><bdi class="secno">B.6.20 </bdi>Metadata point of contact - *Metadata point of contact</a></li><li class="tocline"><a class="tocxref" href="#metadata-date---metadata-date-stamp"><bdi class="secno">B.6.21 </bdi>Metadata date - *Metadata date stamp</a></li><li class="tocline"><a class="tocxref" href="#metadata-language---metadata-language"><bdi class="secno">B.6.22 </bdi>Metadata language - *Metadata language</a></li><li class="tocline"><a class="tocxref" href="#coordinate-reference-systems-and-temporal-reference-systems-reference-system"><bdi class="secno">B.6.23 </bdi>Coordinate reference systems and Temporal reference systems – *Reference System</a></li><li class="tocline"><a class="tocxref" href="#character-encoding---dataset-character-set-and-metadata-character-set"><bdi class="secno">B.6.24 </bdi>Character encoding - *Dataset character set and *Metadata character set</a></li><li class="tocline"><a class="tocxref" href="#encoding---distribution-format"><bdi class="secno">B.6.25 </bdi>Encoding - *Distribution format</a></li><li class="tocline"><a class="tocxref" href="#spatial-representation-type-spatial-representation-type"><bdi class="secno">B.6.26 </bdi>Spatial representation type – *Spatial representation type</a></li><li class="tocline"><a class="tocxref" href="#maintenance-information---not-in-iso19115-core"><bdi class="secno">B.6.27 </bdi>Maintenance information - *not in ISO&nbsp;19115 core</a></li></ol></li><li class="tocline"><a class="tocxref" href="#comparison-between-inspire-and-iso19115-12014"><bdi class="secno">B.7 </bdi>Comparison between <abbr title="Infrastructure for spatial information in Europe">INSPIRE</abbr> and ISO&nbsp;19115-1:2014</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#spatial-dataset-and-spatial-dataset-series"><bdi class="secno">B.7.1 </bdi>Spatial dataset and spatial dataset series</a></li><li class="tocline"><a class="tocxref" href="#services"><bdi class="secno">B.7.2 </bdi>Services</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#changes"><bdi class="secno">C. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#changes-since-20201012"><bdi class="secno">C.1 </bdi>Changes since first public working draft of 12 October 2020</a></li><li class="tocline"><a class="tocxref" href="#changes-since-20160802"><bdi class="secno">C.2 </bdi>Changes since GeoDCAT-AP 1.0.1 (2 August 2016)</a></li><li class="tocline"><a class="tocxref" href="#changes-since-20151223"><bdi class="secno">C.3 </bdi>Changes since GeoDCAT-AP 1.0.0 (23 December 2015)</a></li><li class="tocline"><a class="tocxref" href="#changes-summary"><bdi class="secno">C.4 </bdi>Summary of changes to Application Profile classes and properties</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">D. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">D.1 </bdi>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">D.2 </bdi>Informative references</a></li></ol></li></ol></nav>
 
@@ -6722,6 +6724,7 @@ record:af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb a dcat:CatalogRecord ;
 </tr>
 </thead>
 <tbody>
+
 <tr class="property optional ap-ext" id="category-scheme-creation-date">
 <td>
 <p>+creation date</p>
@@ -6739,6 +6742,7 @@ record:af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb a dcat:CatalogRecord ;
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="category-scheme-release-date">
 <td>
 <p>+release date</p>
@@ -6756,6 +6760,7 @@ record:af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb a dcat:CatalogRecord ;
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="category-scheme-modification-date">
 <td>
 <p>+update / modification date</p>
@@ -6773,6 +6778,7 @@ record:af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb a dcat:CatalogRecord ;
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="category-scheme-version">
 <td>
 <p>+version</p>
@@ -6790,6 +6796,7 @@ record:af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb a dcat:CatalogRecord ;
 <p>0..1</p>
 </td>
 </tr>
+
 </tbody>
 </table>
 
@@ -7103,6 +7110,7 @@ record:af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb a dcat:CatalogRecord ;
 <li>+<a href="#data-service-publisher">publisher</a></li>
 <li>+<a href="#data-service-qualified-attribution">qualified attribution</a></li>
 <li>+<a href="#data-service-reference-system">reference system</a></li>
+<li>+<a href="#data-service-release-date">release date</a></li>
 <li>+<a href="#data-service-rights-holder">rights holder</a></li>
 <li>+<a href="#data-service-service-category">service category</a></li>
 <li>+<a href="#data-service-service-type">service type</a></li>
@@ -7115,6 +7123,7 @@ record:af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb a dcat:CatalogRecord ;
 <li>+<a href="#data-service-category">theme / category</a></li>
 <li>+<a href="#data-service-topic-category">topic category</a></li>
 <li>+<a href="#data-service-type">type</a></li>
+<li>+<a href="#data-service-modification-date">update / modification date</a></li>
 <li>+<a href="#data-service-was-used-by">was used by</a></li>
 
 <li>+<a href="#data-service-custodian">custodian</a></li>
@@ -7385,6 +7394,24 @@ record:af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb a dcat:CatalogRecord ;
 </td>
 </tr>
 
+<tr class="property optional ap-ext" id="data-service-release-date">
+<td>
+<p>+release date</p>
+</td>
+<td>
+<p><code>dct:issued</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the date of formal issuance (e.g., publication) of the Data Service.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
 <tr class="property optional ap-ext" id="data-service-rights-holder">
 <td>
 <p>+rights holder</p>
@@ -7596,6 +7623,24 @@ record:af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb a dcat:CatalogRecord ;
 </td>
 <td>
 <p>In GeoDCAT-AP, this property <em class="rfc2119">SHOULD</em> take as value one of the URIs of the "Resource types" code list operated by the <abbr title="Infrastructure for spatial information in Europe">INSPIRE</abbr> Registry [<cite><a class="bibref" data-link-type="biblio" href="#bib-inspire-rt" title="INSPIRE Registry: Resource types">INSPIRE-RT</a></cite>] - namely the one corresponding to "Spatial data service".</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="data-service-modification-date">
+<td>
+<p>+update / modification date</p>
+</td>
+<td>
+<p><code>dct:modified</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the most recent date on which the Data Service was changed or modified.</p>
 </td>
 <td>
 <p>0..1</p>
@@ -12866,8 +12911,6 @@ resource:d45678 dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
 
 <p>For geospatial metadata, the working group has identified the following additional vocabularies:</p>
 
-
-
 <ul>
 <li><p><strong>Geographic identifiers</strong>:</p>
 <ul>
@@ -12985,8 +13028,6 @@ Often there is applicable legislation or a licency policy in place which determi
 <p>The [<cite><a class="bibref" data-link-type="biblio" href="#bib-prov-o" title="PROV-O: The PROV Ontology">PROV-O</a></cite>]-based approach is meant to give data providers an extension mechanism to specify, in a harmonised way, any kind of role, and, possibly, to attach additional information to the role and the associated Agent. As such, it <em class="rfc2119">MAY</em> be used in combination with or to complement the property-based approach, but it <em class="rfc2119">MUST NOT</em> replace it. For instance, it can be used to specify roles not covered by the agent role properties used in GeoDCAT-AP, and/or to specify additional information that cannot be expressed via a property (as the period during which an Agent covered a given role).</p>
 
 <p>More details on these solutions are available in <a class="no-sectionRef sec-ref" href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact">§&nbsp;<bdi class="secno">B.6.16 </bdi>Responsible party and metadata point of contact - *Dataset responsible party and *Metadata point of contact</a>.</p>
-
-
 
 
 
@@ -13307,8 +13348,10 @@ Often there is applicable legislation or a licency policy in place which determi
 <p>+<a title="creator" href="#data-service-creator"><code>dct:creator</code></a></p>
 <p><a title="description" href="#data-service-description"><code>dct:description</code></a></p>
 <p>+<a title="identifier" href="#data-service-identifier"><code>dct:identifier</code></a></p>
+<p>+<a title="release date" href="#data-service-release-date"><code>dct:issued</code></a></p>
 <p>+<a title="language" href="#data-service-language"><code>dct:language</code></a></p>
 <p><a title="licence" href="#data-service-licence"><code>dct:license</code></a></p>
+<p>+<a title="update / modification date" href="#data-service-modification-date"><code>dct:modified</code></a></p>
 <p>+<a title="publisher" href="#data-service-publisher"><code>dct:publisher</code></a></p>
 <p>+<a title="rights holder" href="#data-service-rights-holder"><code>dct:rightsHolder</code></a></p>
 <p>+<a title="spatial / geographic coverage" href="#data-service-spatial-coverage"><code>dct:spatial</code></a></p>
@@ -13858,7 +13901,9 @@ Often there is applicable legislation or a licency policy in place which determi
 <p>+<a title="creation date" href="#data-service-creation-date"><code>dct:created</code></a></p>
 <p>+<a title="creator" href="#data-service-creator"><code>dct:creator</code></a></p>
 <p>+<a title="identifier" href="#data-service-identifier"><code>dct:identifier</code></a></p>
+<p>+<a title="release date" href="#data-service-release-date"><code>dct:issued</code></a></p>
 <p>+<a title="language" href="#data-service-language"><code>dct:language</code></a></p>
+<p>+<a title="update / modification date" href="#data-service-modification-date"><code>dct:modified</code></a></p>
 <p>+<a title="publisher" href="#data-service-publisher"><code>dct:publisher</code></a></p>
 <p>+<a title="rights holder" href="#data-service-rights-holder"><code>dct:rightsHolder</code></a></p>
 <p>+<a title="spatial / geographic coverage" href="#data-service-spatial-coverage"><code>dct:spatial</code></a></p>
@@ -15997,8 +16042,6 @@ dqv:hasQualityMeasurement</code></a></td>
 
 <p>As far as services are concerned, the resource locator <em class="rfc2119">SHOULD</em> be mapped to properties <code>dcat:endpointURL</code>, <code>dcat:endpointDescription</code>, and <code>dct:conformsTo</code>, as described above.</p> 
 
-
-
 <aside class="example" id="ex-mapping-resource-locator"><div class="marker">
     <a class="self-link" href="#ex-mapping-resource-locator">Example<bdi> 29</bdi></a><span class="example-title">: Resource locator</span>
   </div>
@@ -16682,8 +16725,6 @@ dqv:hasQualityMeasurement</code></a></td>
   </div>
 
 <p>Resource metadata in GeoDCAT-AP using a geographic bounding box. This example uses multiple encodings, namely, the recommended ones (GML and WKT), plus GeoJSON.</p>
-
-
 
 <pre aria-busy="false"><code class="hljs xml">[] dct:spatial [ a dct:Location ;
   dcat:bbox """
@@ -18098,8 +18139,6 @@ dqv:hasQualityMeasurement</code></a></td>
 
 
 
-
-
 <p>Based on this, GeoDCAT-AP models this information by using property <code>adms:representationTechnique</code>, with the spatial representation type URIs that will be operated by the <abbr title="Infrastructure for spatial information in Europe">INSPIRE</abbr> Registry.</p>
 
 <p>This mapping is supported only in the extended mapping profile of GeoDCAT-AP.</p>
@@ -18328,8 +18367,6 @@ dqv:hasQualityMeasurement</code></a></td>
 
 
 <p>The [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-19115" title="Geographic information -- Metadata">ISO-19115</a></cite>] code list of maintenance frequency codes might be in the future available as a URI register from the <abbr title="Infrastructure for spatial information in Europe">INSPIRE</abbr> Registry.</p>
-
-
 
 
 
