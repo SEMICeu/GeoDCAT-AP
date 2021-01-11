@@ -37,27 +37,6 @@
         </vcard:hasAddress>
       </rdf:Description>
     </dcat:contactPoint>
-    <prov:qualifiedAttribution>
-      <prov:Attribution>
-        <prov:agent>
-          <rdf:Description>
-            <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-            <foaf:name xml:lang="en">European Environment Agency</foaf:name>
-            <foaf:mbox rdf:resource="mailto:sdi@eea.europa.eu"/>
-            <locn:address>
-              <locn:Address>
-                <locn:thoroughfare>Kongens Nytorv 6</locn:thoroughfare>
-                <locn:postName>Copenhagen</locn:postName>
-                <locn:adminUnitL2>K</locn:adminUnitL2>
-                <locn:postCode>1050</locn:postCode>
-                <locn:adminUnitL1>Denmark</locn:adminUnitL1>
-              </locn:Address>
-            </locn:address>
-          </rdf:Description>
-        </prov:agent>
-        <dcat:hadRole rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact"/>
-      </prov:Attribution>
-    </prov:qualifiedAttribution>
     <dct:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb</dct:identifier>
     <dct:source rdf:parseType="Resource">
       <cnt:characterEncoding rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UTF-8</cnt:characterEncoding>

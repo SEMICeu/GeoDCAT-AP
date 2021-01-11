@@ -1,0 +1,25 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "http://data.europa.eu/eli/reg/2010/1089",
+    "@type": [
+      "http://purl.org/dc/terms/Standard"
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#date",
+      "@value": "2010-12-08"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+      "@language": "en",
+      "@value": "\n    Commission Regulation (EU) No 1089/2010 of 23 November 2010 implementing \n    Directive 2007/2/EC of the European Parliament and of the Council as \n    regards interoperability of spatial data sets and services\n  "
+      }
+    ]
+    }
+  ],
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.develop/drafts/latest/examples/standard-ir.rdf"
+  }
+]

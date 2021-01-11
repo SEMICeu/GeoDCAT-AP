@@ -1,0 +1,270 @@
+@prefix : <http://data.europa.eu/r5r#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geodcatap: <http://data.europa.eu/930/> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<http://data.europa.eu/930/shacl_shapes>
+    a owl:Ontology , adms:Asset ;
+    owl:imports <https://raw.githubusercontent.com/SEMICeu/DCAT-AP/master/releases/2.0.1/dcat-ap_2.0.1_shacl_shapes.ttl> ;
+    owl:versionIRI <http://data.europa.eu/930/2.0.0/shacl_shapes> ;
+    adms:status <http://publications.europa.eu/resource/dataset/dataset-status/DEVELOP> ;
+    dcatap:availability dcatap:stable ;
+    dct:conformsTo <https://www.w3.org/TR/shacl> ;
+    rdfs:isDefinedBy <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/> ;
+    dct:license <https://creativecommons.org/licenses/by/4.0> ;
+    dct:created "2021-01-04"^^xsd:date ;
+    dct:issued "2021-01-04"^^xsd:date ;
+    dct:dateCopyrighted "2020"^^xsd:gYear ;
+    dct:modified "2021-01-04"^^xsd:date ;
+    dct:title "The constraints of GeoDCAT Application Profile for Data Portals in Europe"@en ;
+    owl:versionInfo "2.0.0" ;
+    dct:description "This document specifies the constraints on properties and classes expressed by GeoDCAT-AP in SHACL."@en ;
+    bibo:editor [
+        a foaf:Person ;
+        owl:sameAs <https://andrea-perego.name/foaf/#me> ;
+        owl:sameAs <https://orcid.org/0000-0001-9300-2694> ;
+        foaf:name "Andrea Perego"
+    ] ;
+    dct:creator [
+        a foaf:Group ;
+        foaf:name "GeoDCAT-AP Working Group" ;
+        foaf:page <https://github.com/SEMICeu/GeoDCAT-AP>
+    ] ;
+    dct:publisher <http://publications.europa.eu/resource/authority/corporate-body/COM> ;
+    dct:rightsHolder <http://publications.europa.eu/resource/authority/corporate-body/EURUN> ;
+    dcat:distribution [ a adms:AssetDistribution ;
+        dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE>,
+          <http://www.w3.org/ns/formats/data/Turtle> ;
+        dct:title "Turtle"@en ;
+        dcat:downloadURL <https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.shacl.ttl> ;
+        dcat:mediaType "text/turtle"^^dct:IMT 
+    ] ;
+    .
+
+
+
+#-------------------------------------------------------------------------
+# The shapes in this file cover all classes in GeoDCAT-AP 2.0.0.
+#
+# 
+#-------------------------------------------------------------------------
+
+geodcatap:Activity_Shape
+    a sh:NodeShape ;
+    sh:name "Activity"@en ;
+    sh:property [
+        sh:class prov:Entity ;
+        sh:minCount 1 ;
+        sh:path prov:generated ;
+        sh:severity sh:Violation
+    ], [
+        sh:class prov:Association ;
+        sh:minCount 1 ;
+        sh:path prov:qualifiedAssociation ;
+        sh:severity sh:Violation
+    ] ;
+    sh:targetClass prov:Activity .
+
+geodcatap:Address_Agent_Shape
+    a sh:NodeShape ;
+    sh:name "Address (Agent)"@en ;
+    sh:property [
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path locn:adminUnitL2 ;
+        sh:severity sh:Violation
+    ], [
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path locn:postName ;
+        sh:severity sh:Violation
+    ], [
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path locn:adminUnitL1 ;
+        sh:severity sh:Violation
+    ], [
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path locn:postCode ;
+        sh:severity sh:Violation
+    ], [
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path locn:thoroughfare ;
+        sh:severity sh:Violation
+    ] ;
+    sh:targetClass locn:Address .
+
+geodcatap:Address_Kind_Shape
+    a sh:NodeShape ;
+    sh:name "Address (Kind)"@en ;
+    sh:property [
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path vcard:region ;
+        sh:severity sh:Violation
+    ], [
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path vcard:locality ;
+        sh:severity sh:Violation
+    ], [
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path vcard:country-name ;
+        sh:severity sh:Violation
+    ], [
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path vcard:postal-code ;
+        sh:severity sh:Violation
+    ], [
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path vcard:street-address ;
+        sh:severity sh:Violation
+    ] ;
+    sh:targetClass vcard:Address .
+
+geodcatap:Attribution_Shape
+    a sh:NodeShape ;
+    sh:name "Attribution"@en ;
+    sh:property [
+        sh:class prov:Agent ;
+        sh:minCount 1 ;
+        sh:path prov:agent ;
+        sh:severity sh:Violation
+    ], [
+        sh:class dcat:Role ;
+        sh:minCount 1 ;
+        sh:path dcat:hadRole ;
+        sh:severity sh:Violation
+    ] ;
+    sh:targetClass prov:Attribution .
+
+:Catalog_Shape
+    a sh:NodeShape ;
+    sh:name "Catalog"@en ;
+    sh:property [
+        sh:maxCount 1 ;
+        sh:node :DateOrDateTimeDataType_Shape ;
+        sh:path dct:created ;
+        sh:severity sh:Violation
+    ] ;
+    sh:targetClass dcat:Catalog .
+
+:CatalogRecord_Shape
+    a sh:NodeShape ;
+    sh:name "Catalog"@en ;
+    sh:property [
+        sh:maxCount 1 ;
+        sh:node :DateOrDateTimeDataType_Shape ;
+        sh:path dct:created ;
+        sh:severity sh:Violation
+    ] ;
+    sh:targetClass dcat:CatalogRecord .
+
+:CategoryScheme_Shape
+    a sh:NodeShape ;
+    sh:name "Category Scheme"@en ;
+    sh:property [
+        sh:maxCount 1 ;
+        sh:node :DateOrDateTimeDataType_Shape ;
+        sh:path dct:created ;
+        sh:severity sh:Violation
+    ], [
+        sh:maxCount 1 ;
+        sh:node :DateOrDateTimeDataType_Shape ;
+        sh:path dct:issued ;
+        sh:severity sh:Violation
+    ], [
+        sh:maxCount 1 ;
+        sh:node :DateOrDateTimeDataType_Shape ;
+        sh:path dct:modified ;
+        sh:severity sh:Violation
+    ] ;
+    sh:targetClass skos:ConceptScheme .
+
+:DataService_Shape
+    a sh:NodeShape ;
+    sh:name "Data Service"@en ;
+    sh:property [
+        sh:maxCount 1 ;
+        sh:node :DateOrDateTimeDataType_Shape ;
+        sh:path dct:created ;
+        sh:severity sh:Violation
+    ], [
+        sh:maxCount 1 ;
+        sh:node :DateOrDateTimeDataType_Shape ;
+        sh:path dct:issued ;
+        sh:severity sh:Violation
+    ], [
+        sh:maxCount 1 ;
+        sh:node :DateOrDateTimeDataType_Shape ;
+        sh:path dct:modified ;
+        sh:severity sh:Violation
+    ] ;
+    sh:targetClass dcat:DataService .
+
+:Dataset_Shape
+    a sh:NodeShape ;
+    sh:name "Dataset"@en ;
+    sh:property [
+        sh:maxCount 1 ;
+        sh:node :DateOrDateTimeDataType_Shape ;
+        sh:path dct:created ;
+        sh:severity sh:Violation
+    ] ;
+    sh:targetClass dcat:Dataset .
+
+geodcatap:QualityMeasurement_Shape
+    a sh:NodeShape ;
+    sh:name "Quality Measurement"@en ;
+    sh:property [
+        sh:class dqv:Metric ;
+        sh:maxCount 1 ;
+        sh:path dqv:isMeasurementOf ;
+        sh:severity sh:Violation
+    ], [
+        sh:class skos:Concept ;
+        sh:maxCount 1 ;
+        sh:path sdmx-attribute:unitMeasure ;
+        sh:severity sh:Violation
+    ], [
+        sh:maxCount 1 ;
+        sh:nodeKind sh:Literal ;
+        sh:path dqv:value ;
+        sh:severity sh:Violation
+    ] ;
+    sh:targetClass dqv:QualityMeasurement .
+
+geodcatap:Standard_Shape
+    a sh:NodeShape ;
+    sh:name "Standard"@en ;
+    sh:property [
+        sh:maxCount 1 ;
+        sh:node :DateOrDateTimeDataType_Shape ;
+        sh:path dct:issued ;
+        sh:severity sh:Violation
+    ] ;
+    sh:targetClass dct:Standard .
+
+#-- GeoDCAT-AP ends here
+

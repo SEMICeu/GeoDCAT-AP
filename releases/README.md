@@ -1,8 +1,15 @@
 # GeoDCAT-AP Releases
 
-- [GeoDCAT-AP v2.0.0](./2.0.0/) (Working Draft) - Major release.
+- Latest release:
+  - [HTML version](https://semiceu.github.io/GeoDCAT-AP/releases/)
+  - [Turtle version](https://semiceu.github.io/GeoDCAT-AP/releases/geodcat-ap.ttl)
+  - [RDF/XML version](https://semiceu.github.io/GeoDCAT-AP/releases/geodcat-ap.rdf)
+  - [JSON-LD version](https://semiceu.github.io/GeoDCAT-AP/releases/geodcat-ap.jsonld)
+  - [SHACL version](https://semiceu.github.io/GeoDCAT-AP/releases/geodcat-ap.shacl.ttl)
+
+- [GeoDCAT-AP v2.0.0](./2.0.0/) (23 December 2020) - Major release.
 - [GeoDCAT-AP v1.0.1](./1.0.1/) (2 August 2016) - Editorial revision to GeoDCAT-AP v1.0.
-- [GeoDCAT-AP v1.0](./1.0/) (23 December 2015).
+- [GeoDCAT-AP v1.0](./1.0.0/) (23 December 2015).
 
 ## Licence
 

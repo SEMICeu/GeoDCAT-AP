@@ -17,13 +17,14 @@ var respecConfig = {
 //    ],
 //    includePermalinks: true,
     addSectionLinks: true,
+    maxTocLevel: 3,
     doJsonLd: true,
     noRecTrack: false,    
     subtitle: "A geospatial extension for the DCAT application profile for data portals in Europe",
 //    copyrightHolder: "European Union",
 //    copyrightURL: "https://europa.eu/",
     copyrightStart: 2020,
-//    publishDate: "2019-11-20",
+    publishDate: "2020-12-23",
 
     alternateFormats: [
 /*
@@ -48,20 +49,17 @@ var respecConfig = {
       label: "Turtle",
       uri: "./geodcat-ap.ttl",
     },
-/*
     {
-      label: "JSON-LD (TBD)",
+      label: "JSON-LD",
       uri: "./geodcat-ap.jsonld",
     },
     {
-      label: "SHACL (TBD)",
-      uri: "./geodcat-ap_shacl_shapes.ttl",
+      label: "SHACL (Turtle)",
+      uri: "./geodcat-ap.shacl.ttl",
     }
-*/
     ],    
 //    implementationReportURI:"https://joinup.ec.europa.eu/document/geodcat-ap-implementations",
-//    errata:"https://github.com/SEMICeu/GeoDCAT-AP/issues?q=is%3Aissue+label%3AErrata+label%3A2.0.0",
-//    license: "cc-by",
+    errata:"https://github.com/SEMICeu/GeoDCAT-AP/issues?q=is%3Aissue+label%3Atype%3Aerratum+label%3Arelease%3A2.0.0",
 //    specStatus: "unofficial",
     specStatus: "ED",
 //    specStatus: "FPWD",
@@ -69,45 +67,51 @@ var respecConfig = {
 //    specStatus: "LC",
 //    specStatus: "PR",
 //    specStatus: "REC",
+//    crEnd:"2020-10-12",
+//    prEnd:"2020-12-23",
     shortName: "geodcat-ap",
     canonicalURI: "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
 //    canonicalURI: "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
-    prevRecURI:           "https://joinup.ec.europa.eu/release/geodcat-ap/101",
+//    canonicalURI: "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
+//    canonicalURI: "https://semiceu.github.io/GeoDCAT-AP/releases/",
+//    prevRecURI: "https://joinup.ec.europa.eu/release/geodcat-ap/101",
+//    prevRecURI: "https://semiceu.github.io/GeoDCAT-AP/releases/1.0.1/",
+    prevRecURI: "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
 //    previousPublishDate:  "2016-08-02",
 //    previousMaturity:     "final",
 //    previousURI:          "https://joinup.ec.europa.eu/release/geodcat-ap/101",
 /* SEMICEU specific - start */	
-    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
+//    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
 //    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
+    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
 //    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
     prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
-    latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
-//    latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-latest/",
+//    latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
+    latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/releases/",
 /* SEMICEU specific - end   */	
     edDraftURI:           "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
     issueBase:            "https://github.com/semiceu/geodcat-ap/issues/",
     github:               "https://github.com/semiceu/geodcat-ap/",
-//    overrideCopyright: '<p class="copyright"><a href="https://europa.eu/european-union/abouteuropa/legal_notices_en#copyright_notice">Copyright</a> © 2014-2019 <a href="https://europa.eu/">European Union</a>. This document is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" class="subfoot">Creative Commons Attribution 4.0 License</a>.</p>',
     formerEditors: [{
       name:       "Andrea Perego",
       company:    "European Commission, Joint Research Centre",
       orcid:      "0000-0001-9300-2694",
-      companyURL: "https://ec.europa.eu/jrc/"
+//      companyURL: "https://ec.europa.eu/jrc/"
     },{
       name: "Stijn Goedertier",
       company: "PwC EU Services",
-      companyURL: "https://www.pwc.com/gx/en/services/european-union.html"
+//      companyURL: "https://www.pwc.com/gx/en/services/european-union.html"
     },{
       name: "Antonio Rotundo",
       company: "Agenzia per l'Italia Digitale",
       url: "",
-      companyURL: "http://www.agid.gov.it/"
+//      companyURL: "http://www.agid.gov.it/"
     }],
     editors: [
       {
-        name:       "Andrea Perego",
-        company:    "External Consultant, European Commission, Joint Research Centre",
-        orcid:      "0000-0001-9300-2694",
+        name:    "Andrea Perego",
+        company: "External Consultant, European Commission, Joint Research Centre",
+        orcid:   "0000-0001-9300-2694",
 //        companyURL: "https://ec.europa.eu/jrc/"
       },
       {
@@ -129,7 +133,8 @@ var respecConfig = {
       key: "Document status",
       data: [
       {
-        value: "Under development"
+//        value: "Under development"
+        value: "Completed"
       }
       ]
     },
@@ -137,17 +142,22 @@ var respecConfig = {
       key: "Document version",
       data: [
       {
-        value: "0.1"
+//        value: "0.2"
+        value: "1.0"
       }
       ]
     },
-/*	    
+	    
     {
       key: "Reviewed by",
       data: [
       {
-        value: "?? ?? (European Commission)",
-        href: "https://ec.europa.eu/"
+        value: "Pavlina Fragkou (European Commission)",
+//        href: "https://ec.europa.eu/"
+      },
+      {
+        value: "Seth van Hooland (European Commission)",
+//        href: "https://ec.europa.eu/"
       },
       ]
     },
@@ -155,12 +165,16 @@ var respecConfig = {
       key: "Approved by",
       data: [
       {
-        value: "?? ?? (European Commission)",
-        href: "https://ec.europa.eu/"
+        value: "Pavlina Fragkou (European Commission)",
+//        href: "https://ec.europa.eu/"
+      },
+      {
+        value: "Seth van Hooland (European Commission)",
+//        href: "https://ec.europa.eu/"
       },
       ]
     }
-*/      
+      
     ],
     wg: "GeoDCAT-AP Working Group",
     wgURI: "https://github.com/semiceu/geodcat-ap/",
@@ -767,7 +781,14 @@ var respecConfig = {
         "href":"http://www.theodi.org/",
         "title":"ODI"
       },
-      "PSI": {
+      "GETTY": {
+        "href":"https://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/",
+        "authors":["Patricia Harpring"],
+        "title":"Introduction to Controlled Vocabularies: Terminology for Art, Architecture, and Other Cultural Works",
+        "publisher": "The Getty Research Institute",
+        "date":"2010"
+      },
+      "OPENDATA-DIR": {
         "href":"http://data.europa.eu/eli/dir/2019/1024/oj",
         "title":"Directive (EU) 2019/1024 of the European Parliament and of the Council of 20 June 2019 on open data and the re-use of public sector information",
         "publisher":"OJ L 172",
@@ -792,6 +813,20 @@ var respecConfig = {
         "title":"OGC Web Coverage Service (WCS) 2.1 Interface Standard - Core",
         "publisher":"OGC",
         "date":"16 August 2018"
+      },
+      "OM": {
+        "href":"http://www.wurvoc.org/vocabularies/om-1.8/",
+        "title":"Ontology of units of Measure (OM)",
+        "publisher":"Wageningen UR",
+        "date":"4 June 2018"
+      },
+      "GeoSPARQL11": {
+        "href": "https://github.com/opengeospatial/ogc-geosparql/1.1",
+        "title": "OGC GeoSPARQL 1.1",
+//        "authors": [],
+        "publisher":"OGC",
+        "status":"Draft",
+        "date": "16 December 2020"
       },
     }
   };

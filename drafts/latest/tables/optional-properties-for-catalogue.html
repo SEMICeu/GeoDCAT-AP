@@ -19,6 +19,7 @@
 </tr>
 </thead>
 <tbody>
+
 <tr class="property optional ap-ext" id="catalogue-access-rights">
 <td>
 <p>+access rights</p>
@@ -37,6 +38,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="catalogue-conforms-to">
 <td>
 <p>+conforms to</p>
@@ -54,6 +56,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="catalogue-contact-point">
 <td>
 <p>+contact point</p>
@@ -71,6 +74,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="catalogue-catalogue">
 <td>
 <p>catalogue</p>
@@ -82,12 +86,13 @@
 <p><code>dcat:Catalog</code></p>
 </td>
 <td>
-<p>This property refers to a catalog whose contents are of interest in the context of this catalog</p>
+<p>This property refers to a Catalogue whose contents are of interest in the context of this Catalogue.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="catalogue-creation-date">
 <td>
 <p>+creation date</p>
@@ -105,6 +110,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional" id="catalogue-creator">
 <td>
 <p>creator</p>
@@ -116,12 +122,13 @@
 <p><code>foaf:Agent</code></p>
 </td>
 <td>
-<p>This property refers to the entity primarily responsible for producing the catalogue</p>
+<p>This property refers to the Agent primarily responsible for producing the Catalogue.</p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional" id="catalogue-has-part">
 <td>
 <p>has part</p>
@@ -133,12 +140,13 @@
 <p><code>dcat:Catalog</code></p>
 </td>
 <td>
-<p>This property refers to a related Catalogue that is part of the described Catalogue</p>
+<p>This property refers to a related Catalogue that is part of the described Catalogue.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="catalogue-identifier">
 <td>
 <p>+identifier</p>
@@ -156,6 +164,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="catalogue-is-part-of">
 <td>
 <p>is part of</p>
@@ -173,6 +182,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property recommended ap-ext" id="catalogue-keyword">
 <td>
 <p>+keyword / tag</p>
@@ -190,6 +200,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="catalogue-qualified-attribution">
 <td>
 <p>+qualified attribution</p>
@@ -207,6 +218,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="catalogue-catalogue-record">
 <td>
 <p>record</p>
@@ -218,12 +230,13 @@
 <p><code>dcat:CatalogRecord</code></p>
 </td>
 <td>
-<p>This property refers to a Catalogue Record that is part of the Catalogue</p>
+<p>This property refers to a Catalogue Record that is part of the Catalogue.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="catalogue-rights">
 <td>
 <p>rights</p>
@@ -241,6 +254,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="catalogue-reference-system">
 <td>
 <p>+reference system</p>
@@ -259,6 +273,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="catalogue-rights-holder">
 <td>
 <p>+rights holder</p>
@@ -270,12 +285,13 @@
 <p><code>foaf:Agent</code></p>
 </td>
 <td>
-<p>This property refers to an entity (organisation) holding rights on the Catalogue.</p>
+<p>This property refers to an Agent (organisation) holding rights on the Catalogue.</p>
 </td>
 <td>
-<p>0..1</p>
+<p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="catalogue-temporal-coverage">
 <td>
 <p>+temporal coverage</p>
@@ -293,6 +309,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="catalogue-service">
 <td>
 <p>service</p>
@@ -304,12 +321,13 @@
 <p><code>dcat:DataService</code></p>
 </td>
 <td>
-<p>This property refers to a site or end-point that is listed in the catalog.</p>
+<p>This property refers to a Data Service that is listed in the Catalogue.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="catalogue-category">
 <td>
 <p>+theme / category</p>
@@ -321,12 +339,13 @@
 <p><code>skos:Concept</code></p>
 </td>
 <td>
-<p>This property refers to a category of the Catalogue. A Catalogue may be associated with multiple themes.</p>
+<p>This property refers to a Category of the Catalogue. A Catalogue may be associated with multiple Categories.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="catalogue-topic-category">
 <td>
 <p>+topic category</p>
@@ -344,6 +363,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="catalogue-was-used-by">
 <td>
 <p>+was used by</p>
@@ -355,12 +375,141 @@
 <p><code>prov:Activity</code></p>
 </td>
 <td>
-<p>This property refers to an activity that used the Catalogue.</p>
-<p>In GeoDCAT-AP, this property MAY be used to specify a testing activity over a Catalogue, against a given Standard, producing as output a conformance degree.</p>
+<p>This property refers to an Activity that used the Catalogue.</p>
+<p>In GeoDCAT-AP, this property MAY be used to specify a testing Activity over a Catalogue, against a given Standard, producing as output a conformance degree.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
+
+<!-- NEW -->
+
+<tr class="property optional ap-ext" id="catalogue-custodian">
+<td>
+<p>+custodian</p>
+</td>
+<td>
+<p><code>geodcatap:custodian</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="catalogue-distributor">
+<td>
+<p>+distributor</p>
+</td>
+<td>
+<p><code>geodcatap:distributor</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Party who distributes the resource [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="catalogue-originator">
+<td>
+<p>+originator</p>
+</td>
+<td>
+<p><code>geodcatap:originator</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Party who created the resource [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="catalogue-principal-investigator">
+<td>
+<p>+principal investigator</p>
+</td>
+<td>
+<p><code>geodcatap:principalInvestigator</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Key party responsible for gathering information and conducting research [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="catalogue-processor">
+<td>
+<p>+processor</p>
+</td>
+<td>
+<p><code>geodcatap:processor</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="catalogue-resource-provider">
+<td>
+<p>+resource provider</p>
+</td>
+<td>
+<p><code>geodcatap:resourceProvider</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Party that supplies the resource [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="catalogue-user">
+<td>
+<p>+user</p>
+</td>
+<td>
+<p><code>geodcatap:user</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Party who uses the resource [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
 </tbody>
 </table>

@@ -19,6 +19,7 @@
 </tr>
 </thead>
 <tbody>
+
 <tr class="property optional" id="data-service-access-rights">
 <td>
 <p>access rights</p>
@@ -31,11 +32,13 @@
 </td>
 <td>
 <p>This property MAY include information regarding access or restrictions based on privacy, security, or other policies.</p>
+<p>For INSPIRE metadata, this property SHOULD be used with the URIs of the "Limitations on public access" code list operated by the INSPIRE Registry [[INSPIRE-LPA]].</p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="data-service-conforms-to">
 <td>
 <p>+conforms to</p>
@@ -47,12 +50,13 @@
 <p><code>dct:Standard</code></p>
 </td>
 <td>
-<p>This property is used to indicate the general standard or specification that the endpoints implement.</p>
+<p>This property is used to indicate the general standard or specification that the Data Service endpoints implement.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="data-service-contact-point">
 <td>
 <p>+contact point</p>
@@ -70,6 +74,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="data-service-creation-date">
 <td>
 <p>+creation date</p>
@@ -81,12 +86,13 @@
 <p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
 </td>
 <td>
-<p>This property contains the date on which the Catalogue Record has been first created.</p>
+<p>This property contains the date on which the Data Service has been first created.</p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="data-service-creator">
 <td>
 <p>+creator</p>
@@ -98,12 +104,13 @@
 <p><code>foaf:Agent</code></p>
 </td>
 <td>
-<p>This property refers to the entity primarily responsible for producing the Data Service..</p>
+<p>This property refers to the Agent primarily responsible for producing the Data Service..</p>
 </td>
 <td>
-<p>0..1</p>
+<p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="data-service-description">
 <td>
 <p>description</p>
@@ -115,12 +122,13 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property contains a free-text account of the Data Service. This property can be repeated for parallel language versions of the description.</p>
+<p>This property contains a free-text account of the Data Service. This property can be repeated for parallel language versions of the description - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="data-service-identifier">
 <td>
 <p>+identifier</p>
@@ -138,6 +146,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property recommended ap-ext" id="data-service-keyword">
 <td>
 <p>+keyword / tag</p>
@@ -155,6 +164,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="data-service-language">
 <td>
 <p>+language</p>
@@ -172,6 +182,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="data-service-licence">
 <td>
 <p>licence</p>
@@ -183,12 +194,13 @@
 <p><code>dct:LicenseDocument</code></p>
 </td>
 <td>
-<p>This property contains the licence under which the Data service is made available.</p>
+<p>This property contains the licence under which the Data Service is made available.</p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="data-service-publisher">
 <td>
 <p>+publisher</p>
@@ -200,12 +212,13 @@
 <p><code>foaf:Agent</code></p>
 </td>
 <td>
-<p>This property refers to an entity (organisation) responsible for making the Data Service available.</p>
+<p>This property refers to an Agent (organisation) responsible for making the Data Service available.</p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="data-service-qualified-attribution">
 <td>
 <p>+qualified attribution</p>
@@ -223,6 +236,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="data-service-reference-system">
 <td>
 <p>+reference system</p>
@@ -241,6 +255,25 @@
 <p>0..n</p>
 </td>
 </tr>
+
+<tr class="property optional ap-ext" id="data-service-release-date">
+<td>
+<p>+release date</p>
+</td>
+<td>
+<p><code>dct:issued</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the date of formal issuance (e.g., publication) of the Data Service.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
 <tr class="property optional ap-ext" id="data-service-rights-holder">
 <td>
 <p>+rights holder</p>
@@ -252,12 +285,13 @@
 <p><code>foaf:Agent</code></p>
 </td>
 <td>
-<p>This property refers to an entity (organisation) holding rights on the Data Service..</p>
+<p>This property refers to an Agent (organisation) holding rights on the Data Service..</p>
 </td>
 <td>
-<p>0..1</p>
+<p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="data-service-service-category">
 <td>
 <p>+service category</p>
@@ -275,6 +309,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="data-service-service-type">
 <td>
 <p>+service type</p>
@@ -292,6 +327,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="data-service-category">
 <td>
 <p>+theme / category</p>
@@ -303,12 +339,13 @@
 <p><code>skos:Concept</code></p>
 </td>
 <td>
-<p>This property refers to a category of the Data Service. A Data Service may be associated with multiple themes.</p>
+<p>This property refers to a Category of the Data Service. A Data Service may be associated with multiple Categories.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="data-service-spatial-coverage">
 <td>
 <p>+spatial / geographic coverage</p>
@@ -326,9 +363,29 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="data-service-spatial-resolution">
 <td>
 <p>+spatial resolution</p>
+</td>
+<td>
+<p><code>dqv:hasQualityMeasurement</code></p>
+</td>
+<td>
+<p><code>dqv:QualityMeasurement</code></p>
+</td>
+<td>
+<p>Refers to the performed quality measurements.</p>
+<p>In GeoDCAT-AP, this property is used to specify "spatial resolution", as defined in [[INSPIRE-MD-REG]], [[ISO-19115]], and [[ISO-19115-1]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="data-service-spatial-resolution-in-metres">
+<td>
+<p>+spatial resolution in metres</p>
 </td>
 <td>
 <p><code>dcat:spatialResolutionInMeters</code></p>
@@ -337,15 +394,16 @@
 <p><code>xsd:decimal</code></p>
 </td>
 <td>
-<p>This property refers to the minimum spatial separation resolvable in a Data Service, measured in meters.</p>
+<p>This property refers to the minimum spatial separation resolvable in a Data Service, measured in metres.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="data-service-spatial-resolution-general">
 <td>
-<p>+spatial resolution as equivalent scale, angular distance, vertical distance</p>
+<p>+spatial resolution as text</p>
 </td>
 <td>
 <p><code>rdfs:comment</code></p>
@@ -354,12 +412,13 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property MAY be used to express spatial resolution types that cannot be specified via <code>dcat:spatialResolutionInMeters</code> - i.e., spatial resolution as equivalent scale, angular distance, vertical distance.</p>
+<p>This property MAY be used to express spatial resolution as free-text, when it cannot be specified via <code>dqv:hasQualityMeasurement</code> and <code>dcat:spatialResolutionInMeters</code>.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="data-service-temporal-coverage">
 <td>
 <p>+temporal coverage</p>
@@ -377,6 +436,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="data-service-temporal-resolution">
 <td>
 <p>+temporal resolution</p>
@@ -394,6 +454,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="data-service-topic-category">
 <td>
 <p>+topic category</p>
@@ -411,6 +472,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="data-service-type">
 <td>
 <p>+type</p>
@@ -428,6 +490,25 @@
 <p>0..1</p>
 </td>
 </tr>
+
+<tr class="property optional ap-ext" id="data-service-modification-date">
+<td>
+<p>+update / modification date</p>
+</td>
+<td>
+<p><code>dct:modified</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the most recent date on which the Data Service was changed or modified.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
 <tr class="property optional ap-ext" id="data-service-was-used-by">
 <td>
 <p>+was used by</p>
@@ -439,12 +520,141 @@
 <p><code>prov:Activity</code></p>
 </td>
 <td>
-<p>This property refers to an activity that used the Data Service.</p>
-<p>In GeoDCAT-AP, this property MAY be used to specify a testing activity over a Data Service, against a given Standard, producing as output a conformance degree.</p>
+<p>This property refers to an Activity that used the Data Service.</p>
+<p>In GeoDCAT-AP, this property MAY be used to specify a testing Activity over a Data Service, against a given Standard, producing as output a conformance degree.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
+
+<!-- NEW -->
+
+<tr class="property optional ap-ext" id="data-service-custodian">
+<td>
+<p>+custodian</p>
+</td>
+<td>
+<p><code>geodcatap:custodian</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="data-service-distributor">
+<td>
+<p>+distributor</p>
+</td>
+<td>
+<p><code>geodcatap:distributor</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Party who distributes the resource [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="data-service-originator">
+<td>
+<p>+originator</p>
+</td>
+<td>
+<p><code>geodcatap:originator</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Party who created the resource [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="data-service-principal-investigator">
+<td>
+<p>+principal investigator</p>
+</td>
+<td>
+<p><code>geodcatap:principalInvestigator</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Key party responsible for gathering information and conducting research [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="data-service-processor">
+<td>
+<p>+processor</p>
+</td>
+<td>
+<p><code>geodcatap:processor</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="data-service-resource-provider">
+<td>
+<p>+resource provider</p>
+</td>
+<td>
+<p><code>geodcatap:resourceProvider</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Party that supplies the resource [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="data-service-user">
+<td>
+<p>+user</p>
+</td>
+<td>
+<p><code>geodcatap:user</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Party who uses the resource [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
 </tbody>
 </table>

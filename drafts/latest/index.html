@@ -5,9 +5,6 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<!--
-<script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c-common"></script>
--->
 <script class="remove" src="https://semiceu.github.io/respec/builds/respec-semiceu.js"></script>
 <script class="remove" src="./config.js"></script>
 <style>
@@ -39,47 +36,37 @@ table code, table pre {
 </style>
 </head>
 <body>
-<!--
-<article>
--->
-<!--
-<header>
-</header>
--->
-<!--
-<aside id="disclaimer" class="disclaimer">
-The views expressed are purely those of the author and may not in any circumstances be regarded as stating an official position of the European Commission.
-</aside>
--->
-<!--
-<p class="copyright"><a href="https://europa.eu/european-union/abouteuropa/legal_notices_en#copyright_notice">Copyright</a> © 2015-2020 <a href="https://europa.eu/">European Union</a>. This document is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" class="subfoot">Creative Commons Attribution 4.0 License</a>.</p>
--->
 
 <section id="abstract" class="introductory">
+
 <h2>Abstract</h2>
+
 <p>GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 and those defined in the framework of the <abbr title="Infrastructure for spatial information in Europe">INSPIRE</abbr> Directive of the European Union.</p>
+
 <p>This document is the result of the major change release process described in the Change and Release Management Policy for DCAT-AP and was built starting from GeoDCAT-AP version 1.0.1.</p>
+
 <p>Comments and queries should be sent via <a href="https://github.com/semiceu/geodcat-ap/issues/">the issue tracker of the dedicated GitHub repository</a>.</p>
+
 </section>
 
 <section id="disclaimer" class="introductory">
+
 <h2>Disclaimer</h2>
-<!--
-<p>The views expressed are purely those of the author and may not in any circumstances be regarded as stating an official position of the European Commission.</p>
--->
-<p>The views expressed in this report are purely those of the Author(s) and may not, in any circumstances, be interpreted as stating an official position of the European Commission.</p>
+
+<p>The views expressed in this document are purely those of the Author(s) and may not, in any circumstances, be interpreted as stating an official position of the European Commission.</p>
+
 <p>The European Commission does not guarantee the accuracy of the information included in this study, nor does it accept any responsibility for any use thereof.</p>
+
 <p>Reference herein to any specific products, specifications, process, or service by trade name, trademark, manufacturer, or otherwise, does not necessarily constitute or imply its endorsement, recommendation, or favouring by the European Commission.</p>
+
 <p>All care has been taken by the author to ensure that s/he has obtained, where necessary, permission to use any parts of manuscripts including illustrations, maps, and graphs, on which intellectual property rights already exist from the titular holder(s) of such rights or from her/his or their legal representative.</p>
+
 </section>
 
 <section id="sotd" class="introductory">
-<!--
-<h2>Status of this document</h2>
--->
 </section>
 
-<section id="changes" class="introductory">
+<section id="document-history" class="introductory">
 
 <h2>Document History</h2>
 
@@ -96,12 +83,11 @@ The views expressed are purely those of the author and may not in any circumstan
 <section id="introduction" class="informative">
 
 <h2>Introduction</h2>
-<!--
-<div class="issue" data-number="123"></div>
--->
 
 <p>This document contains version 2.0.0 of the specification for GeoDCAT-AP, an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]] for describing geospatial datasets, dataset series, and services.</p>
+
 <p>Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 [[ISO-19115]] and those defined in the framework of the INSPIRE Directive [[INSPIRE-DIR]].</p>
+
 <p><strong>The GeoDCAT-AP specification does not replace the INSPIRE Metadata Regulation</strong> [[?INSPIRE-MD-REG]] <strong>nor the INSPIRE Metadata technical guidelines</strong> [[INSPIRE-MD]] <strong>based on ISO 19115 and ISO 19119.</strong> Its purpose is to give owners of geospatial metadata the possibility to achieve more by providing the means of an <em>additional</em> implementation through harmonised RDF syntax bindings. Conversion rules to RDF syntax would allow Member States to maintain their collections of INSPIRE-relevant datasets following the INSPIRE Metadata technical guidelines based on [[ISO-19115]] and [[ISO-19119]], while at the same time publishing these collections on [[DCAT-AP]]-conformant data portals. A conversion to an RDF representation allows additional metadata elements to be displayed on general-purposed data portals, provided that such data portals are capable of displaying additional metadata elements. Additionally, data portals may be capable of providing machine-to-machine interfaces where additional metadata could be provided.</p>
 
 <section id="context">
@@ -112,7 +98,7 @@ The views expressed are purely those of the author and may not in any circumstan
 
 <p>To this direction, the European Commission launched the European Data Strategy [[DataStrategy]], as part of the European Commission's priorities for 2019-2024 in order to make the EU a leader in a data-driven society.</p>
 
-<p>Studies previously conducted on behalf of the European Commission (e.g., [[Vickery]]) shed light on the importance of having data findable and available in machine readable format in order to stimulate its reuse. This vision led to several legislative actions to reduce barriers and promote data sharing, such as the PSI Directive [[PSI]], a European legislation on open data and the re-use of public sector information, which turned out to be a driving force towards a more transparent and fair access to public sector information.</p>
+<p>Studies previously conducted on behalf of the European Commission (e.g., [[Vickery]]) shed light on the importance of having data findable and available in machine readable format in order to stimulate its reuse. This vision led to several legislative actions to reduce barriers and promote data sharing, such as the Open Data Directive [[OPENDATA-DIR]], which turned out to be a driving force towards a more transparent and fair access to government data.</p>
 
 <p>With this regard, the wide range of (open) data portals developed by European public administrations is the result of this mission. These Web-based interfaces allow access to data by providing users means to explore a catalogue of datasets. To facilitate the sharing, discovery and re-use of the data beyond the (open) data portal, common agreements for the exchange of catalogues of datasets are needed. These interoperability agreements enable to connect (open) data catalogues into a pan-european catalogue of datasets.</p>
 
@@ -120,21 +106,20 @@ The views expressed are purely those of the author and may not in any circumstan
 
 <p>The current document is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP [[DCAT-AP-CRMP]] and was built starting from GeoDCAT-AP version 1.0.1 [[GeoDCAT-AP-20160802]], with the purpose of aligning it with DCAT-AP version 2.0.1 [[DCAT-AP-20200608]] and with version 2.0.1 of the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20170302]].</p>
 
-<p>This worked has been carried out in the context of Action 1.1 – Improving semantic interoperability in European eGovernment systems [[SEMIC]] of the European Commission’s Interoperability solutions for public administrations, businesses and citizens (ISA²) Programme [[ISA2]], and it is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP [[DCAT-AP-CRMP]] and was built starting from GeoDCAT-AP version 1.0.1 [[GeoDCAT-AP-20160802]], with the purpose of aligning it with DCAT-AP version 2.0.1 [[DCAT-AP-20200608]] and with version 2.0.1 of the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20170302]].</p>
+<p>This work has been carried out in the context of Action 1.1 – Improving semantic interoperability in European eGovernment systems [[SEMIC]] of the European Commission’s Interoperability solutions for public administrations, businesses and citizens (ISA²) Programme [[ISA2]], and it is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP [[DCAT-AP-CRMP]] and was built starting from GeoDCAT-AP version 1.0.1 [[GeoDCAT-AP-20160802]], with the purpose of aligning it with DCAT-AP version 2.0.1 [[DCAT-AP-20200608]] and with version 2.0.1 of the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20170302]].</p>
 
 </section>
 
 <section id="scope-of-the-revision">
 
 <h3>Scope of the revision</h3>
-<!--
-<aside class="ednote">
-<p>To be revised</p>
-</aside>
--->
+
 <p>The objective of this work is to produce an updated release of GeoDCAT-AP based on requests for change coming from real-world implementations of the specification and an alignment with [[DCAT-AP-20200608]] and [[INSPIRE-MD-20170302]].</p> 
+
 <p>As [[DCAT-AP-20200608]], the Application Profile specified in this document is based on the specification of the <strong>Data Catalog Vocabulary</strong> (DCAT), originally  developed under the responsibility of the Government Linked Data Working Group [[GLD]] at W3C, and significantly revised in 2020 by the W3C Dataset Exchange Working Group [[DXWG]]. DCAT is an RDF [[RDF11-CONCEPTS]] vocabulary designed to facilitate interoperability between data catalogues published on the Web. Additional classes and properties from other well-known vocabularies are re-used where necessary.</p> 
+
 <p>The work does not cover implementation issues like mechanisms for exchange of data and expected behaviour of systems implementing the Application Profile other than what is defined in the Conformance Statement in <a class="no-sectionRef" href="#conformance"></a>.</p> 
+
 <p>The Application Profile is intended to facilitate data exchange and therefore the classes and properties defined in this document are only relevant for the data to be exchanged; there are no requirements for communicating systems to implement specific technical environments. The only requirement is that the systems can export and import data in RDF in conformance with this Application Profile.</p> 
 
 </section>
@@ -142,15 +127,13 @@ The views expressed are purely those of the author and may not in any circumstan
 <section id="specification">
 
 <h3>A DCAT-AP extension</h3>
-<!--
-<aside class="ednote">
-<p>To be revised: adjust to official release of DCAT-AP. Plus propagate this through the text.</p>
-</aside>
--->
+
 <!--
 <p>The DCAT-AP Application Profile defined in this document is based on the specification of the Data Catalog Vocabulary (DCAT) of 16 January 2014 [[VOCAB-DCAT-20140116]], and the Data Catalog Vocabulary (DCAT) - Version 2, W3C Candidate Recommendation 03 October 2019 [[VOCAB-DCAT-2-20191003]].</p>
 -->
+
 <p>The GeoDCAT-AP specification is designed as an extension of DCAT-AP in conformance with the guidelines for the creation of DCAT-AP extensions [[DCAT-AP-EG]]. The DCAT-AP Application Profile on which this document is based is the DCAT-AP specification of 8 June 2020 [[DCAT-AP-20200608]].  According to the same principles DCAT-AP is in itself an extension of DCAT.</p>
+
 <p>This dependency must be taken into account while reading and using this specification. When implementing GeoDCAT-AP, these specifications should be consulted first, to fill in any missing gaps in this document.</p> 
 
 </section>
@@ -160,55 +143,30 @@ The views expressed are purely those of the author and may not in any circumstan
 <section id="terminology">
 
 <h2>Terminology used in the Application Profile</h2>
-<aside class="ednote">
-<p>This section has been copied from DCAT-AP. It covers 2 aspects, a) (a partial set of) definitions of the domain specific core concepts and b) an reading guide on specification terminology.</p>
-<p>The proposal is to remove the definitions of the domain specific terminology and leave that to the appropriate places below.</p>
-</aside>
-<!--
-<aside class="ednote">
-<p>It is missing a definition for "Resource" - the superclass of all resources documented in a catalogue.</p>
-<p>A possible definition:</p>
-<blockquote>
-<p>A <strong>Resource</strong> is a dataset, data service, or any other kind of resource documented in a catalogue.</p>
-</blockquote>
-<p>Related issues:</p>
-<div class="issue" data-number="22"></div>
-</aside>
--->
-<div class="issue" data-number="35"></div>  
-  
-<p>An <strong>Application Profile</strong> is a specification that re-uses terms from one or more base standards, adding more specificity by identifying mandatory, recommended and optional elements to be used for a particular application, as well as recommendations for controlled vocabularies to be used.</p>
 
+<p>A <strong>Vocabulary</strong> is a specification that determines the semantics of terms (classes and properties) in a broad context of information exchange. The defined terms are higly reusable.</p>
+
+<p>A <strong>Controlled Vocabulary</strong> is an organised arrangement of words and phrases used to index content and/or to retrieve content through browsing or searching. It typically includes preferred and variant terms and has a defined scope or describes a specific domain [[?GETTY]]. Within this specification, it is also used as a synonym for a codelist. 
+
+<p>An <strong>Application Profile</strong> is a specification that re-uses terms from one or more base standards (vocabularies), adding more specificity by identifying mandatory, recommended and optional elements to be used for a particular application, as well as recommendations for controlled vocabularies to be used.</p>
+
+<!--
 <p>A <strong>Dataset</strong> is a collection of data, published or curated by a single source, and available for access or download in one or more formats.</p>
 
-<!--
 <p>A <strong>Data Service</strong> is a Web-based system that gives access to or supports operations on one or more datasets via an interface (<abbr title="Application Programming Interface">API</abbr>).</p>
--->
 <p>A <strong>Data Service</strong> is a collection of operations accessible through an interface (<abbr title="Application Programming Interface">API</abbr>) that provide access to one or more datasets or data processing functions. Examples include, but are not limited to, SPARQL endpoints [[SPARQL11-PROTOCOL]], [[OAI-PMH]] repositories, OGC spatial data services ([[CSW]], [[WCS]], [[WFS]], [[WMS]], etc.).</p>
 
 <p>A <strong>Data Portal</strong> is a Web-based system that contains a data catalogue with descriptions of datasets and provides services enabling discovery and re-use of the datasets.</p>
-
-<aside class="ednote">
-<p>The definitions of recommended classes and properties are inconsistent.</p>
-<!--
-<p>Moreover, a definition for deprecated properties and classes is missing.</p>
-<p>A possible definition:</p>
-<blockquote>
-<ul>
-<li><strong>Deprecated class</strong>: a receiver SHOULD be able to process information about instances of that class; a sender SHOULD NOT provide information about instances of that class.</li>
-<li><strong>Deprecated property</strong>: a receiver SHOULD be able to process information about instances of that property; a sender SHOULD NOT provide the information about instances of that propertry.</li>
-</ul>
-</blockquote>
 -->
-</aside>
 
-<p>In the following sections, classes and properties are grouped under headings ‘mandatory’, ‘recommended’ and ‘optional’. These terms have the following meaning.</p>
+<p>In the following sections, classes and properties are grouped under headings ‘mandatory’, ‘recommended’ and ‘optional’. These terms have the following meaning:</p>
+
 <ul>
-<li><strong>Mandatory class</strong>: a receiver of data MUST be able to process information about instances of the class; a sender of data MUST provide information about instances of the class.</li>
-<li><strong>Recommended class</strong>: a sender of data SHOULD provide information about instances of the class; a sender of data MUST provide information about instances of the class, if such information is available; a receiver of data MUST be able to process information about instances of the class.</li>
+<li><strong>Mandatory class</strong>: a receiver MUST be able to process information about instances of the class; a sender MUST provide information about instances of the class.</li>
+<li><strong>Recommended class</strong>: a receiver MUST be able to process information about instances of the class; a sender SHOULD provide information about instances of the class; a sender of data MUST provide information about instances of the class, if such information is available.</li>
 <li><strong>Optional class</strong>: a receiver MUST be able to process information about instances of the class; a sender MAY provide the information but is not obliged to do so.</li>
 <li><strong>Mandatory property</strong>: a receiver MUST be able to process the information for that property; a sender MUST provide the information for that property.</li>
-<li><strong>Recommended property</strong>: a receiver MUST be able to process the information for that property; a sender SHOULD provide the information for that property if it is available.</li>
+<li><strong>Recommended property</strong>: a receiver MUST be able to process the information for that property; a sender SHOULD provide information for that property; a sender MUST provide information for that property, if such information is available.</li>
 <li><strong>Optional property</strong>: a receiver MUST be able to process the information for that property; a sender MAY provide the information for that property but is not obliged to do so.</li>
 <li><strong>Deprecated class</strong>: a receiver SHOULD be able to process information about instances of that class; a sender SHOULD NOT provide information about instances of that class.</li>
 <li><strong>Deprecated property</strong>: a receiver SHOULD be able to process information about instances of that property; a sender SHOULD NOT provide the information about instances of that propertry.</li>
@@ -223,15 +181,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <p>The class ‘Distribution’ is classified as ‘Recommended’ in <a class="no-sectionRef" href="#recommended-classes"></a> to allow for cases that a particular Dataset does not have a downloadable Distribution, and in such cases the sender of data would not be able to provide this information. However, it can be expected that in the majority of cases Datasets do have downloadable Distributions, and in such cases the provision of information on the Distribution is mandatory.</p>
 
 <p>All other classes are classified as ‘Optional’ in <a class="no-sectionRef" href="#optional-classes"></a>. A further description of the optional classes is only included as a sub-section in <a class="no-sectionRef" href="#properties"></a> if the Application Profile specifies mandatory or recommended properties for them.</p>
-<!--
-<aside class="ednote">
-<p>It is missing a paragraph for deprecated classes.</p>
-<p>E.g.:</p>
-<blockquote>
-<p>Classes no longer included in this version of the specification, or replaced with other ones, are classified as ‘Deprecated’ in <a class="no-sectionRef" href="#deprecated-classes"></a>.</p>
-</blockquote>
-</aside>
--->
+
 <p>Classes no longer included in this version of the specification, or replaced with other ones, are classified as ‘Deprecated’ in <a class="no-sectionRef" href="#deprecated-classes"></a>.</p>
 
 <p>Finally, classes and properties added in this Application Profile and extending [[DCAT-AP]] are marked with a prepended &ldquo;plus&rdquo; sign (+), and summarised in the reference table in <a class="no-secRef" href="#geodcat-ap-classes-and-properties"></a>.</p>
@@ -240,7 +190,11 @@ The views expressed are purely those of the author and may not in any circumstan
 
 <h3>Namespaces</h3>
 
-<p>The Application Profile reuses terms from various existing specifications. Classes and properties specified in the next sections have been taken from the following namespaces:</p>
+<p>The namespace for GeoDCAT-AP is: <code>http://data.europa.eu/930/</code></p>
+
+<p>The suggested namespace prefix is: <code>geodcatap</code></p>
+
+<p>The Application Profile reuses terms from various existing specifications, following <a data-cite="?DWBP#dataVocabularies">established best practices</a> [[?DWBP]]. The following table indicates the full list of corresponding namespaces used in this document.</p>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/namespaces.html"></div>
 
@@ -251,6 +205,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <h3>Application Profile Overview</h3>
 
 <p>This Application Profile extends [[DCAT-AP-20200608]] by including</p>
+
 <ul>
 <li>additional classes and properties (marked with a prepended &ldquo;plus&rdquo; sign (+) in this document, and summarised in <a class="no-sectionRef" href="#geodcat-ap-classes-and-properties"></a>);</li>
 <li>additional recommendations on the use of classes and properties (documented in <a class="no-sectionRef" href="#classes"></a> and <a class="no-sectionRef" href="#properties"></a>);</li>
@@ -259,20 +214,14 @@ The views expressed are purely those of the author and may not in any circumstan
 
 <p>These extensions are meant to provide a DCAT-AP-conformant representation of geospatial metadata, identified by defining RDF syntax mappings covering the union of the elements in the INSPIRE metadata schema [[INSPIRE-MD-REG]] [[INSPIRE-MD]] and the core profile of [[ISO-19115]], following the criteria illustrated in <a class="no-sectionRef" href="#inspire-and-iso-19115-mappings"></a>.</p>
 
-<p>The current specification does not change the set of geospatial metadata elements already covered in its previous version [[GeoDCAT-AP-20160802]], but rather it updates some of the corresponding mappings based on the new classes and properties included in [[DCAT-AP-20200608]], following the release of version 2 of the W3C Data Catalog (DCAT) Vocabulary [[VOCAB-DCAT-2]], and aligns them with version 2.0.1 of the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20170302]]. As a result, some of the classes and properties defined in [[GeoDCAT-AP-20160802]] have been deprecated and replaced by the equivalent ones in [[DCAT-AP-20200608]].</p>
+<p>The current specification does not change the set of geospatial metadata elements already covered in its previous version [[GeoDCAT-AP-20160802]], but rather it updates some of the corresponding mappings based on the new classes and properties included in [[DCAT-AP-20200608]], following the release of version 2 of the W3C Data Catalog (DCAT) Vocabulary [[VOCAB-DCAT-2]], and aligns them with version 2.0.1 of the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20170302]]. With the same objective, new terms have been defined in the GeoDCAT-AP namespace for the specification of agent roles (see <a class="no-secRef" href="#agent-roles"></a>) and spatial resolution (see <a class="no-secRef" href="#instances-of-metric"></a>). As a result, some of the classes and properties defined in [[GeoDCAT-AP-20160802]] have been deprecated and replaced by the equivalent ones in [[DCAT-AP-20200608]] and by the newly defined terms.</p>
+
 <p>The list of deprecated classes and properties is summarised in <a class="no-sectionRef" href="#deprecated-classes-and-properties"></a>.</p>
 
-<p><a href="#fig-geodcat-ap-uml-class-diagram"></a> shows a UML diagram of all classes and properties included in the Application Profile.</p>
-
-<aside class="note">
-<p>For space constraints, the diagram does not include explicitly all the classes supported in GeoDCAT-AP.</p>
-</aside>
-
-<aside class="ednote">
-<!--
-<p>To be created, by extending the DCAT-AP one.</p>
--->
-<p>To be decided if all classes should instead be included, or an alternative approach could be used - e.g., creating partial views of the diagram focussed on specific classes and their direct relationships.</p>
+<p><a href="#fig-geodcat-ap-uml-class-diagram"></a> shows a UML diagram of the classes and properties included in the Application Profile.</p>
+  
+<aside class="note">	
+<p>For legibility, the diagram does not visualise all the classes as boxes. Supportive classes, as <code>skos:Concept</code>, are directly mentioned as the range of properties. The figure, therefore, might not highlight all the constraints and recommendations for these supportive classes. These can be found in the following sections.</p>
 </aside>
 
 <figure id="fig-geodcat-ap-uml-class-diagram">
@@ -289,15 +238,7 @@ The views expressed are purely those of the author and may not in any circumstan
 <section id="classes">
 
 <h2>Application Profile Classes</h2>
-<!--
-<aside class="ednote">
-<p>Column "Reference" in the tables of the following sections cites different versions of [[VOCAB-DCAT]] and [[DCTERMS]].</p>
-<p>It would make sense to fix this inconsistency - there's the same problem in the [[DCAT-AP-20200608]] specification, from which these tables have been taken.</p>
-</aside>
--->
 
-<div class="issue" data-number="36"></div>  
-  
 <section id="mandatory-classes">
 
 <h3>Mandatory Classes</h3>
@@ -348,349 +289,141 @@ The views expressed are purely those of the author and may not in any circumstan
 
 <h2>Application Profile Properties per Class</h2>
 
-<aside class="ednote">
-<p>To be revised.</p>
-<p>Classes have been listed as in [[DCAT-AP-20200608]], followed by those classes added by GeoDCAT-AP, so to preserve the section numbering.</p>
-<p>The current listing is not optimal, as the criteria behind the order in which classes are listed is unclear. Moreover, in each section there is no indication of whether a class is mandatory, recommended, or optional, and so readers need to go back to <a class="no-sectionRef" href="#classes"></a> to check this.</p>
-<p>An option would be to group classes into specific sections - mandatory classes, recommended classes, optional classes - and to list them in alphabetical order, as done in <a class="no-sectionRef" href="#classes"></a>.</p>
-</aside>
-
 <p>A quick reference table of properties per class is included in <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a>. The list of included properties contains all the properties in [[DCAT-AP-20200608]], plus a selection of properties from [[VOCAB-DCAT-2]] and [[DCTERMS]], on which GeoDCAT-AP expresses additional constraints or on which GeoDCAT-AP wants to emphasise their usage.
 <!--
 A property which is not mentioned but would be applicable for a class according to [[VOCAB-DCAT-2]] is considered out of scope for GeoDCAT-AP.
 -->
 </p>
 
-<p>Examples on the use of these properties, encoded in [[Turtle]], are included in the relevant sections. The examples are also available in [[Turtle]] and RDF/XML [[RDF-SYNTAX-GRAMMAR]] from a <a href="./examples/">separate folder</a>.</p>
+<p>Examples on the use of these properties, encoded in [[Turtle]], are included in the relevant sections. The examples are also available in [[Turtle]], RDF/XML [[RDF-SYNTAX-GRAMMAR]], and JSON-LD [[JSON-LD11]] from a <a href="./examples/">separate folder</a>.</p>
 
-<!-- Catalogue -->
+<!-- Activity -->
 
-<section id="properties-for-catalogue">
+<section id="properties-for-activity">
 
-<h3>Catalogue</h3>
+<h3>+Activity</h3>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-catalogue.html"></div>
+<aside class="note">
+<p>This class is not included in [[DCAT-AP-20200608]].</p>
+</aside>
 
-<section id="mandatory-properties-for-catalogue">
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-activity.html"></div>
 
-<h4>Mandatory properties for Catalogue</h4>
+<p>The use of this class in GeoDCAT-AP is illustrated in <a class="no-sectionRef" href="#conformance-test-results"></a>.</p>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-catalogue.html"></div>
+<section id="mandatory-properties-for-activity">
 
-</section>
-
-<section id="recommended-properties-for-catalogue">
-
-<h4>Recommended properties for Catalogue</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-catalogue.html"></div>
-
-</section>
-
-<section id="optional-properties-for-catalogue">
-
-<h4>Optional properties for Catalogue</h4>
+<h4>Mandatory properties for Activity</h4>
 
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
 <ul>
-<li>+<a href="#catalogue-access-rights">access rights</a></li>
-<li>+<a href="#catalogue-conforms-to">conforms to</a></li>
-<li>+<a href="#catalogue-contact-point">contact point</a></li>
-<li>+<a href="#catalogue-creation-date">creation date</a></li>
-<li>+<a href="#catalogue-identifier">identifier</a></li>
-<li>+<a href="#catalogue-keyword">keyword / tag</a></li>
-<li>+<a href="#catalogue-qualified-attribution">qualified attribution</a></li>
-<li>+<a href="#catalogue-reference-system">reference system</a></li>
-<li>+<a href="#catalogue-rights-holder">rights holder</a></li>
-<li>+<a href="#catalogue-category">theme / category</a></li>
-<li>+<a href="#catalogue-topic-category">topic category</a></li>
-<li>+<a href="#catalogue-was-used-by">was used by</a></li>
+<li>+<a href="#activity-generated">generated</a></li>
+<li>+<a href="#activity-qualified-association">qualified association</a></li>
+<li>+<a href="#activity-used">used</a></li>
 </ul>
 </aside>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-catalogue.html"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-activity.html"></div>
 
 </section>
 
-<section id="deprecated-properties-for-catalogue">
+<section id="examples-for-activity">
 
-<h4>Deprecated properties for Catalogue</h4>
+<h4>Examples for Activity</h4>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-catalogue.html"></div>
+<p><a href="#ex-activity"></a> shows the use of class <code>prov:Activity</code> to specify the results of a testing activity assessing the conformance of a given resource against a given specification - as illustrated in <a class="no-sectionRef" href="#conformance-test-results"></a>.</p>
 
-</section>
-<!--
-<section id="examples-for-catalogue">
-
-<h4>Examples for Catalogue</h4>
-
-<aside class="example" id="ex-catalogue" title="Catalogue">
-<pre data-include-format="text" data-include="./examples/catalogue.ttl"></pre>
+<aside class="example" id="ex-activity" title="A testing activity">
+<pre data-include-format="text" data-include="./examples/activity.ttl"></pre>
 </aside>
 
 </section>
--->
-</section>
-
-<!-- Catalogue Record -->
-
-<section id="properties-for-catalogue-record">
-
-<h3>Catalogue Record</h3>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-catalogue-record.html"></div>
-
-<section id="mandatory-properties-for-catalogue-record">
-
-<h4>Mandatory properties for Catalogue Record</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-catalogue-record.html"></div>
 
 </section>
 
-<section id="recommended-properties-for-catalogue-record">
+<!-- Address (Agent)-->
 
-<h4>Recommended properties for Catalogue Record</h4>
+<section id="properties-for-address-agent">
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-catalogue-record.html"></div>
+<h3>+Address (Agent)</h3>
 
-</section>
+<aside class="note">
+<p>This class is not included in [[DCAT-AP-20200608]].</p>
+</aside>
 
-<section id="optional-properties-for-catalogue-record">
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-address-agent.html"></div>
 
-<h4>Optional properties for Catalogue Record</h4>
+<section id="recommended-properties-for-address-agent">
+
+<h4>Recommended properties for Address (Agent)</h4>
 
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
 <ul>
-<li>+<a href="#catalogue-record-character-encoding">character encoding</a></li>
-<li>+<a href="#catalogue-record-contact-point">contact point</a></li>
-<li>+<a href="#catalogue-record-creation-date">creation date</a></li>
-<li>+<a href="#catalogue-record-creator">creator</a></li>
-<li>+<a href="#catalogue-record-identifier">identifier</a></li>
-<li>+<a href="#catalogue-record-publisher">publisher</a></li>
-<li>+<a href="#catalogue-record-qualified-attribution">qualified attribution</a></li>
-<li>+<a href="#catalogue-record-rights-holder">rights holder</a></li>
+<li>+<a href="#address-agent-administrative-area">administrative area</a></li>
+<li>+<a href="#address-agent-city">city</a></li>
+<li>+<a href="#address-agent-country">country</a></li>
+<li>+<a href="#address-agent-postal-code">postal code</a></li>
+<li>+<a href="#address-agent-street-address">street address</a></li>
 </ul>
 </aside>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-catalogue-record.html"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-address-agent.html"></div>
 
 </section>
 
-<section id="examples-for-catalogue-record">
+<section id="examples-for-address-agent">
 
-<h4>Examples for Catalogue Record</h4>
+<h4>Examples for Address (Agent)</h4>
 
-<aside class="example" id="ex-catalogue-record" title="Catalogue Record">
-<pre data-include-format="text" data-include="./examples/catalogue-record.ttl"></pre>
+<aside class="example" id="ex-address-agent" title="Address (Agent)">
+<p>The address in this example is the same of <a href="#ex-address-kind"></a>, but represented by using [[LOCN]].</p>
+<pre data-include-format="text" data-include="./examples/address-agent.ttl"></pre>
 </aside>
 
 </section>
 
 </section>
 
-<!-- Data Service -->
+<!-- Address (Kind)-->
 
-<section id="properties-for-data-service">
+<section id="properties-for-address-kind">
 
-<h3>Data Service</h3>
+<h3>+Address (Kind)</h3>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-data-service.html"></div>
+<aside class="note">
+<p>This class is not included in [[DCAT-AP-20200608]].</p>
+</aside>
 
-<section id="mandatory-properties-for-data-service">
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-address-kind.html"></div>
 
-<h4>Mandatory properties for Data Service</h4>
+<section id="recommended-properties-for-address-kind">
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-data-service.html"></div>
-
-</section>
-
-<section id="recommended-properties-for-data-service">
-
-<h4>Recommended properties for Data Service</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-data-service.html"></div>
-
-</section>
-
-<section id="optional-properties-for-data-service">
-
-<h4>Optional properties for Data Service</h4>
+<h4>Recommended properties for Address (Kind)</h4>
 
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
 <ul>
-<li>+<a href="#data-service-conforms-to">conforms to</a></li>
-<li>+<a href="#data-service-contact-point">contact point</a></li>
-<li>+<a href="#data-service-creation-date">creation date</a></li>
-<li>+<a href="#data-service-creator">creator</a></li>
-<li>+<a href="#data-service-identifier">identifier</a></li>
-<li>+<a href="#data-service-keyword">keyword / tag</a></li>
-<li>+<a href="#data-service-language">language</a></li>
-<li>+<a href="#data-service-publisher">publisher</a></li>
-<li>+<a href="#data-service-qualified-attribution">qualified attribution</a></li>
-<li>+<a href="#data-service-reference-system">reference system</a></li>
-<li>+<a href="#data-service-rights-holder">rights holder</a></li>
-<li>+<a href="#data-service-service-category">service category</a></li>
-<li>+<a href="#data-service-service-type">service type</a></li>
-<li>+<a href="#data-service-spatial-coverage">spatial / geographic coverage</a></li>
-<li>+<a href="#data-service-spatial-resolution">spatial resolution</a></li>
-<li>+<a href="#data-service-spatial-resolution-general">spatial resolution as equivalent scale, angular distance, vertical distance</a></li>
-<li>+<a href="#data-service-temporal-coverage">temporal coverage</a></li>
-<li>+<a href="#data-service-temporal-resolution">temporal resolution</a></li>
-<li>+<a href="#data-service-category">theme / category</a></li>
-<li>+<a href="#data-service-topic-category">topic category</a></li>
-<li>+<a href="#data-service-type">type</a></li>
-<li>+<a href="#data-service-was-used-by">was used by</a></li>
+<li>+<a href="#address-kind-administrative-area">administrative area</a></li>
+<li>+<a href="#address-kind-city">city</a></li>
+<li>+<a href="#address-kind-country">country</a></li>
+<li>+<a href="#address-kind-postal-code">postal code</a></li>
+<li>+<a href="#address-kind-street-address">street address</a></li>
 </ul>
 </aside>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-data-service.html"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-address-kind.html"></div>
 
 </section>
 
-<section id="deprecated-properties-for-data-service">
+<section id="examples-for-address-kind">
 
-<h4>Deprecated properties for Data Service</h4>
+<h4>Examples for Address (Kind)</h4>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-data-service.html"></div>
-
-</section>
-
-<section id="examples-for-data-service">
-
-<h4>Examples for Data Service</h4>
-
-<aside class="example" id="ex-data-service" title="Data Service">
-<pre data-include-format="text" data-include="./examples/data-service.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
-
-<!-- Dataset -->
-
-<section id="properties-for-dataset">
-
-<h3>Dataset</h3>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-dataset.html"></div>
-
-<section id="mandatory-properties-for-dataset">
-
-<h4>Mandatory properties for Dataset</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-dataset.html"></div>
-
-</section>
-
-<section id="recommended-properties-for-dataset">
-
-<h4>Recommended properties for Dataset</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-dataset.html"></div>
-
-</section>
-
-<section id="optional-properties-for-dataset">
-
-<h4>Optional properties for Dataset</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#dataset-creation-date">creation date</a></li>
-<li>+<a href="#dataset-reference-system">reference system</a></li>
-<li>+<a href="#dataset-rights-holder">rights holder</a></li>
-<li>+<a href="#dataset-spatial-resolution-general">spatial resolution as equivalent scale, angular distance, vertical distance</a></li>
-<li>+<a href="#dataset-topic-category">topic category</a></li>
-<li>+<a href="#dataset-was-used-by">was used by</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-dataset.html"></div>
-
-</section>
-
-<section id="deprecated-properties-for-dataset">
-
-<h4>Deprecated properties for Dataset</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-dataset.html"></div>
-
-</section>
-
-<section id="examples-for-dataset">
-
-<h4>Examples for Dataset</h4>
-
-<aside class="example" id="ex-dataset" title="Dataset">
-<pre data-include-format="text" data-include="./examples/dataset.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
-
-<!-- Distribution -->
-
-<section id="properties-for-distribution">
-
-<h3>Distribution</h3>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-distribution.html"></div>
-
-<section id="mandatory-properties-for-distribution">
-
-<h4>Mandatory properties for Distribution</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-distribution.html"></div>
-
-</section>
-
-<section id="recommended-properties-for-distribution">
-
-<h4>Recommended properties for Distribution</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-distribution.html"></div>
-
-</section>
-
-<section id="optional-properties-for-distribution">
-
-<h4>Optional properties for Distribution</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#distribution-access-rights">access rights</a></li>
-<li>+<a href="#distribution-reference-system">reference system</a></li>
-<li>+<a href="#distribution-representation-technique">representation technique</a></li>
-<li>+<a href="#distribution-spatial-resolution-general">spatial resolution as equivalent scale, angular distance, vertical distance</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-distribution.html"></div>
-
-</section>
-
-<section id="deprecated-properties-for-distribution">
-
-<h4>Deprecated properties for Distribution</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-distribution.html"></div>
-
-</section>
-
-<section id="examples-for-distribution">
-
-<h4>Examples for Distribution</h4>
-
-<aside class="example" id="ex-distribution" title="Distribution">
-<pre data-include-format="text" data-include="./examples/distribution.ttl"></pre>
+<aside class="example" id="ex-address-kind" title="Address (Kind)">
+<p>The address in this example is the same of <a href="#ex-address-agent"></a>, but represented by using [[VCARD-RDF]].</p>
+<pre data-include-format="text" data-include="./examples/address-kind.ttl"></pre>
 </aside>
 
 </section>
@@ -752,46 +485,196 @@ A property which is not mentioned but would be applicable for a class according 
 
 </section>
 
-<!-- Category Scheme -->
+<!-- Attribution -->
 
-<section id="properties-for-category-scheme">
+<section id="properties-for-attribution">
 
-<h3>Category Scheme</h3>
+<h3>+Attribution</h3>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-category-scheme.html"></div>
+<aside class="note">
+<p>This class is not included in [[DCAT-AP-20200608]].</p>
+</aside>
 
-<section id="mandatory-properties-for-category-scheme">
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-attribution.html"></div>
 
-<h4>Mandatory property for Category Scheme</h4>
+<p>The use of this class in GeoDCAT-AP is illustrated in <a class="no-sectionRef" href="#agent-roles"></a>.</p>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-category-scheme.html"></div>
+<section id="mandatory-properties-for-attribution">
 
-</section>
-
-<section id="optional-properties-for-category-scheme">
-
-<h4>Optional properties for Category Scheme</h4>
+<h4>Mandatory properties for Attribution</h4>
 
 <aside class="note">
 <p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
 <ul>
-<li>+<a href="#category-scheme-creation-date">creation date</a></li>
-<li>+<a href="#category-scheme-release-date">release date</a></li>
-<li>+<a href="#category-scheme-modification-date">update / modification date</a></li>
-<li>+<a href="#category-scheme-version">version</a></li>
+<li>+<a href="#attribution-agent">agent</a></li>
+<li>+<a href="#attribution-had-role">had role</a></li>
 </ul>
 </aside>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-category-scheme.html"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-attribution.html"></div>
 
 </section>
 
-<section id="examples-for-category-scheme">
+<section id="deprecated-properties-for-attribution">
 
-<h4>Examples for Category Scheme</h4>
+<h4>Deprecated properties for Attribution</h4>
 
-<aside class="example" id="ex-category-scheme" title="Category Scheme">
-<pre data-include-format="text" data-include="./examples/category-scheme.ttl"></pre>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-attribution.html"></div>
+
+</section>
+
+<section id="examples-for-attribution">
+
+<h4>Examples for Attribution</h4>
+
+<aside class="example" id="ex-attribution" title="Attribution">
+<pre data-include-format="text" data-include="./examples/attribution.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
+<!-- Catalogue -->
+
+<section id="properties-for-catalogue">
+
+<h3>Catalogue</h3>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-catalogue.html"></div>
+
+<section id="mandatory-properties-for-catalogue">
+
+<h4>Mandatory properties for Catalogue</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-catalogue.html"></div>
+
+</section>
+
+<section id="recommended-properties-for-catalogue">
+
+<h4>Recommended properties for Catalogue</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-catalogue.html"></div>
+
+</section>
+
+<section id="optional-properties-for-catalogue">
+
+<h4>Optional properties for Catalogue</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#catalogue-access-rights">access rights</a></li>
+<li>+<a href="#catalogue-conforms-to">conforms to</a></li>
+<li>+<a href="#catalogue-contact-point">contact point</a></li>
+<li>+<a href="#catalogue-creation-date">creation date</a></li>
+<li>+<a href="#catalogue-identifier">identifier</a></li>
+<li>+<a href="#catalogue-keyword">keyword / tag</a></li>
+<li>+<a href="#catalogue-qualified-attribution">qualified attribution</a></li>
+<li>+<a href="#catalogue-reference-system">reference system</a></li>
+<li>+<a href="#catalogue-rights-holder">rights holder</a></li>
+<li>+<a href="#catalogue-category">theme / category</a></li>
+<li>+<a href="#catalogue-topic-category">topic category</a></li>
+<li>+<a href="#catalogue-was-used-by">was used by</a></li>
+
+<li>+<a href="#catalogue-custodian">custodian</a></li>
+<li>+<a href="#catalogue-distributor">distributor</a></li>
+<li>+<a href="#catalogue-originator">originator</a></li>
+<li>+<a href="#catalogue-principal-investigator">principal investigator</a></li>
+<li>+<a href="#catalogue-processor">processor</a></li>
+<li>+<a href="#catalogue-resource-provider">resource provider</a></li>
+<li>+<a href="#catalogue-user">user</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-catalogue.html"></div>
+
+</section>
+
+<section id="deprecated-properties-for-catalogue">
+
+<h4>Deprecated properties for Catalogue</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-catalogue.html"></div>
+
+</section>
+
+<!--
+<section id="examples-for-catalogue">
+
+<h4>Examples for Catalogue</h4>
+
+<aside class="example" id="ex-catalogue" title="Catalogue">
+<pre data-include-format="text" data-include="./examples/catalogue.ttl"></pre>
+</aside>
+
+</section>
+-->
+
+</section>
+
+<!-- Catalogue Record -->
+
+<section id="properties-for-catalogue-record">
+
+<h3>Catalogue Record</h3>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-catalogue-record.html"></div>
+
+<section id="mandatory-properties-for-catalogue-record">
+
+<h4>Mandatory properties for Catalogue Record</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-catalogue-record.html"></div>
+
+</section>
+
+<section id="recommended-properties-for-catalogue-record">
+
+<h4>Recommended properties for Catalogue Record</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-catalogue-record.html"></div>
+
+</section>
+
+<section id="optional-properties-for-catalogue-record">
+
+<h4>Optional properties for Catalogue Record</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#catalogue-record-character-encoding">character encoding</a></li>
+<li>+<a href="#catalogue-record-contact-point">contact point</a></li>
+<li>+<a href="#catalogue-record-creation-date">creation date</a></li>
+<li>+<a href="#catalogue-record-creator">creator</a></li>
+<li>+<a href="#catalogue-record-identifier">identifier</a></li>
+<li>+<a href="#catalogue-record-publisher">publisher</a></li>
+<li>+<a href="#catalogue-record-qualified-attribution">qualified attribution</a></li>
+<li>+<a href="#catalogue-record-rights-holder">rights holder</a></li>
+
+<li>+<a href="#catalogue-record-custodian">custodian</a></li>
+<li>+<a href="#catalogue-record-distributor">distributor</a></li>
+<li>+<a href="#catalogue-record-originator">originator</a></li>
+<li>+<a href="#catalogue-record-principal-investigator">principal investigator</a></li>
+<li>+<a href="#catalogue-record-processor">processor</a></li>
+<li>+<a href="#catalogue-record-resource-provider">resource provider</a></li>
+<li>+<a href="#catalogue-record-user">user</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-catalogue-record.html"></div>
+
+</section>
+
+<section id="examples-for-catalogue-record">
+
+<h4>Examples for Catalogue Record</h4>
+
+<aside class="example" id="ex-catalogue-record" title="Catalogue Record">
+<pre data-include-format="text" data-include="./examples/catalogue-record.ttl"></pre>
 </aside>
 
 </section>
@@ -841,6 +724,52 @@ A property which is not mentioned but would be applicable for a class according 
 
 </section>
 
+<!-- Category Scheme -->
+
+<section id="properties-for-category-scheme">
+
+<h3>Category Scheme</h3>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-category-scheme.html"></div>
+
+<section id="mandatory-properties-for-category-scheme">
+
+<h4>Mandatory property for Category Scheme</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-category-scheme.html"></div>
+
+</section>
+
+<section id="optional-properties-for-category-scheme">
+
+<h4>Optional properties for Category Scheme</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#category-scheme-creation-date">creation date</a></li>
+<li>+<a href="#category-scheme-release-date">release date</a></li>
+<li>+<a href="#category-scheme-modification-date">update / modification date</a></li>
+<li>+<a href="#category-scheme-version">version</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-category-scheme.html"></div>
+
+</section>
+
+<section id="examples-for-category-scheme">
+
+<h4>Examples for Category Scheme</h4>
+
+<aside class="example" id="ex-category-scheme" title="Category Scheme">
+<pre data-include-format="text" data-include="./examples/category-scheme.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
 <!-- Checksum -->
 
 <section id="properties-for-checksum">
@@ -859,6 +788,271 @@ A property which is not mentioned but would be applicable for a class according 
 
 </section>
 
+<!-- Data Service -->
+
+<section id="properties-for-data-service">
+
+<h3>Data Service</h3>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-data-service.html"></div>
+
+<section id="mandatory-properties-for-data-service">
+
+<h4>Mandatory properties for Data Service</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-data-service.html"></div>
+
+</section>
+
+<section id="recommended-properties-for-data-service">
+
+<h4>Recommended properties for Data Service</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-data-service.html"></div>
+
+</section>
+
+<section id="optional-properties-for-data-service">
+
+<h4>Optional properties for Data Service</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#data-service-conforms-to">conforms to</a></li>
+<li>+<a href="#data-service-contact-point">contact point</a></li>
+<li>+<a href="#data-service-creation-date">creation date</a></li>
+<li>+<a href="#data-service-creator">creator</a></li>
+<li>+<a href="#data-service-identifier">identifier</a></li>
+<li>+<a href="#data-service-keyword">keyword / tag</a></li>
+<li>+<a href="#data-service-language">language</a></li>
+<li>+<a href="#data-service-publisher">publisher</a></li>
+<li>+<a href="#data-service-qualified-attribution">qualified attribution</a></li>
+<li>+<a href="#data-service-reference-system">reference system</a></li>
+<li>+<a href="#data-service-release-date">release date</a></li>
+<li>+<a href="#data-service-rights-holder">rights holder</a></li>
+<li>+<a href="#data-service-service-category">service category</a></li>
+<li>+<a href="#data-service-service-type">service type</a></li>
+<li>+<a href="#data-service-spatial-coverage">spatial / geographic coverage</a></li>
+<li>+<a href="#data-service-spatial-resolution">spatial resolution</a></li>
+<li>+<a href="#data-service-spatial-resolution-in-metres">spatial resolution in metres</a></li>
+<li>+<a href="#data-service-spatial-resolution-general">spatial resolution as text</a></li>
+<li>+<a href="#data-service-temporal-coverage">temporal coverage</a></li>
+<li>+<a href="#data-service-temporal-resolution">temporal resolution</a></li>
+<li>+<a href="#data-service-category">theme / category</a></li>
+<li>+<a href="#data-service-topic-category">topic category</a></li>
+<li>+<a href="#data-service-type">type</a></li>
+<li>+<a href="#data-service-modification-date">update / modification date</a></li>
+<li>+<a href="#data-service-was-used-by">was used by</a></li>
+
+<li>+<a href="#data-service-custodian">custodian</a></li>
+<li>+<a href="#data-service-distributor">distributor</a></li>
+<li>+<a href="#data-service-originator">originator</a></li>
+<li>+<a href="#data-service-principal-investigator">principal investigator</a></li>
+<li>+<a href="#data-service-processor">processor</a></li>
+<li>+<a href="#data-service-resource-provider">resource provider</a></li>
+<li>+<a href="#data-service-user">user</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-data-service.html"></div>
+
+</section>
+
+<section id="deprecated-properties-for-data-service">
+
+<h4>Deprecated properties for Data Service</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-data-service.html"></div>
+
+</section>
+
+<section id="examples-for-data-service">
+
+<h4>Examples for Data Service</h4>
+
+<aside class="example" id="ex-data-service" title="Data Service">
+<pre data-include-format="text" data-include="./examples/data-service.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
+<!-- Dataset -->
+
+<section id="properties-for-dataset">
+
+<h3>Dataset</h3>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-dataset.html"></div>
+
+<section id="mandatory-properties-for-dataset">
+
+<h4>Mandatory properties for Dataset</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-dataset.html"></div>
+
+</section>
+
+<section id="recommended-properties-for-dataset">
+
+<h4>Recommended properties for Dataset</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-dataset.html"></div>
+
+</section>
+
+<section id="optional-properties-for-dataset">
+
+<h4>Optional properties for Dataset</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#dataset-creation-date">creation date</a></li>
+<li>+<a href="#dataset-reference-system">reference system</a></li>
+<li>+<a href="#dataset-rights-holder">rights holder</a></li>
+<li>+<a href="#dataset-spatial-resolution-general">spatial resolution as text</a></li>
+<li>+<a href="#dataset-topic-category">topic category</a></li>
+<li>+<a href="#dataset-was-used-by">was used by</a></li>
+
+<li>+<a href="#dataset-custodian">custodian</a></li>
+<li>+<a href="#dataset-distributor">distributor</a></li>
+<li>+<a href="#dataset-originator">originator</a></li>
+<li>+<a href="#dataset-principal-investigator">principal investigator</a></li>
+<li>+<a href="#dataset-processor">processor</a></li>
+<li>+<a href="#dataset-resource-provider">resource provider</a></li>
+<li>+<a href="#dataset-user">user</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-dataset.html"></div>
+
+</section>
+
+<section id="deprecated-properties-for-dataset">
+
+<h4>Deprecated properties for Dataset</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-dataset.html"></div>
+
+</section>
+
+<section id="examples-for-dataset">
+
+<h4>Examples for Dataset</h4>
+
+<aside class="example" id="ex-dataset" title="Dataset">
+<pre data-include-format="text" data-include="./examples/dataset.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
+<!-- Distribution -->
+
+<section id="properties-for-distribution">
+
+<h3>Distribution</h3>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-distribution.html"></div>
+
+<section id="mandatory-properties-for-distribution">
+
+<h4>Mandatory properties for Distribution</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-distribution.html"></div>
+
+</section>
+
+<section id="recommended-properties-for-distribution">
+
+<h4>Recommended properties for Distribution</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-distribution.html"></div>
+
+</section>
+
+<section id="optional-properties-for-distribution">
+
+<h4>Optional properties for Distribution</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#distribution-access-rights">access rights</a></li>
+<li>+<a href="#distribution-reference-system">reference system</a></li>
+<li>+<a href="#distribution-representation-technique">representation technique</a></li>
+<li>+<a href="#distribution-spatial-resolution-general">spatial resolution as text</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-distribution.html"></div>
+
+</section>
+
+<section id="deprecated-properties-for-distribution">
+
+<h4>Deprecated properties for Distribution</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-distribution.html"></div>
+
+</section>
+
+<section id="examples-for-distribution">
+
+<h4>Examples for Distribution</h4>
+
+<aside class="example" id="ex-distribution" title="Distribution">
+<pre data-include-format="text" data-include="./examples/distribution.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
+<!-- Document -->
+
+<section id="properties-for-document">
+
+<h3>Document</h3>
+
+<aside class="note">
+<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-document.html"></div>
+
+<section id="recommended-properties-for-document">
+
+<h4>Recommended properties for Document</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#document-description">description</a></li>
+<li>+<a href="#document-title">title</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-document.html"></div>
+
+</section>
+
+<section id="examples-for-document">
+
+<h4>Examples for Document</h4>
+
+<aside class="example" id="ex-document" title="Document">
+<pre data-include-format="text" data-include="./examples/document.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
 <!-- Identifier -->
 
 <section id="properties-for-identifier">
@@ -872,6 +1066,65 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Mandatory property for Identifier</h4>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-identifier.html"></div>
+
+</section>
+
+</section>
+
+<!-- Kind -->
+
+<section id="properties-for-kind">
+
+<h3>Kind</h3>
+
+<aside class="note">
+<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-kind.html"></div>
+
+<section id="recommended-properties-for-kind">
+
+<h4>Recommended properties for Kind</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#kind-email">email</a></li>
+<li>+<a href="#kind-name">name</a></li>
+<li>+<a href="#kind-url">URL</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-kind.html"></div>
+
+</section>
+
+<section id="optional-properties-for-kind">
+
+<h4>Optional properties for Kind</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#kind-address">address</a></li>
+<li>+<a href="#kind-affiliation">affiliation</a></li>
+<li>+<a href="#kind-name">name</a></li>
+<li>+<a href="#kind-phone">phone</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-kind.html"></div>
+
+</section>
+
+<section id="examples-for-kind">
+
+<h4>Examples for Kind</h4>
+
+<aside class="example" id="ex-kind" title="Kind">
+<pre data-include-format="text" data-include="./examples/kind.ttl"></pre>
+</aside>
 
 </section>
 
@@ -969,6 +1222,106 @@ A property which is not mentioned but would be applicable for a class according 
 
 </section>
 
+<!-- Media Type -->
+
+<section id="properties-for-media-type">
+
+<h3>Media Type</h3>
+
+<aside class="note">
+<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-media-type.html"></div>
+
+<section id="recommended-properties-for-media-type">
+
+<h4>Recommended property for Media Type</h4>
+
+<aside class="note">
+<p>The following property is not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#media-type-label">label</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-media-type.html"></div>
+
+</section>
+
+<section id="examples-for-media-type">
+
+<h4>Examples for Media Type</h4>
+
+<aside class="example" id="ex-media-type" title="Media Type">
+<pre data-include-format="text" data-include="./examples/media-type.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
+<!-- Metric -->
+
+<section id="properties-for-metric">
+
+<h3>+Metric</h3>
+
+<aside class="note">
+<p>This class is not included in [[DCAT-AP-20200608]].</p>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-metric.html"></div>
+
+<section id="instances-of-metric">
+
+<h4>Instances of Metric</h4>
+
+<aside class="note">
+<p>The following instances are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#metric-spatial-resolution-as-angular-distance">Spatial resolution as angular distance</a></li>
+<li>+<a href="#metric-spatial-resolution-as-distance">Spatial resolution as distance</a></li>
+<li>+<a href="#metric-spatial-resolution-as-scale">Spatial resolution as scale</a></li>
+<li>+<a href="#metric-spatial-resolution-as-vertical-distance">Spatial resolution as vertical distance</a></li>
+</ul>
+</aside>
+
+<p>An abridged version of the definition of these instances is shown in <a href="#ex-metric"></a>.</p>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/instances-of-metric.html"></div>
+
+</section>
+
+<section id="recommended-properties-for-metric">
+
+<h4>Recommended properties for Metric</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#metric-dimension">dimension</a></li>
+<li>+<a href="#metric-expected-data-type">expected data type</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-metric.html"></div>
+
+</section>
+
+<section id="examples-for-metric">
+
+<h4>Examples for Metric</h4>
+
+<aside class="example" id="ex-metric" title="Metric">
+<p>This example shows an abridged description of the instances of <code>dqv:Metric</code> defined in the GeoDCAT-AP namespace (see <a class="no-secRef" href="#instances-of-metric"></a>).</p>
+<pre data-include-format="text" data-include="./examples/metric.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
 <!-- Period of Time -->
 
 <section id="properties-for-period-of-time">
@@ -1019,304 +1372,15 @@ A property which is not mentioned but would be applicable for a class according 
 
 </section>
 
-<!-- Relationship -->
-
-<section id="properties-for-relationship">
-
-<h3>Relationship</h3>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-relationship.html"></div>
-
-<section id="mandatory-properties-for-relationship">
-
-<h4>Mandatory properties for Relationship</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-relationship.html"></div>
-
-</section>
-
-</section>
-
-<!-- Classes not in DCAT-AP -->
-
-<!-- Activity -->
-
-<section id="properties-for-activity">
-
-<h3>Activity</h3>
-
-<aside class="note">
-<p>This class is not included in [[DCAT-AP-20200608]].</p>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-activity.html"></div>
-
-<p>The use of this class in GeoDCAT-AP is illustrated in <a class="no-sectionRef" href="#conformance-test-results"></a>.</p>
-
-<section id="mandatory-properties-for-activity">
-
-<h4>Mandatory properties for Activity</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#activity-generated">generated</a></li>
-<li>+<a href="#activity-qualified-association">qualified association</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-activity.html"></div>
-
-</section>
-
-<section id="examples-for-activity">
-
-<h4>Examples for Activity</h4>
-
-<p><a href="#ex-activity"></a> shows the use of class <code>prov:Activity</code> to specify the results of a testing activity assessing the conformance of a given resource against a given specification - as illustrated in <a class="no-sectionRef" href="#conformance-test-results"></a>.</p>
-
-<aside class="example" id="ex-activity" title="A testing activity">
-<pre data-include-format="text" data-include="./examples/activity.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
-
-<!-- Address (Agent)-->
-
-<section id="properties-for-address-agent">
-
-<h3>Address (Agent)</h3>
-
-<aside class="note">
-<p>This class is not included in [[DCAT-AP-20200608]].</p>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-address-agent.html"></div>
-
-<section id="recommended-properties-for-address-agent">
-
-<h4>Recommended properties for Address (Agent)</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#address-agent-administrative-area">administrative area</a></li>
-<li>+<a href="#address-agent-city">city</a></li>
-<li>+<a href="#address-agent-country">country</a></li>
-<li>+<a href="#address-agent-postal-code">postal code</a></li>
-<li>+<a href="#address-agent-street-address">street address</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-address-agent.html"></div>
-
-</section>
-
-<section id="examples-for-address-agent">
-
-<h4>Examples for Address (Agent)</h4>
-
-<aside class="example" id="ex-address-agent" title="Address (Agent)">
-<p>The address in this example is the same of <a href="#ex-address-kind"></a>, but represented by using [[LOCN]].</p>
-<pre data-include-format="text" data-include="./examples/address-agent.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
-
-<!-- Address (Kind)-->
-
-<section id="properties-for-address-kind">
-
-<h3>Address (Kind)</h3>
-
-<aside class="note">
-<p>This class is not included in [[DCAT-AP-20200608]].</p>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-address-kind.html"></div>
-
-<section id="recommended-properties-for-address-kind">
-
-<h4>Recommended properties for Address (Kind)</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#address-kind-administrative-area">administrative area</a></li>
-<li>+<a href="#address-kind-city">city</a></li>
-<li>+<a href="#address-kind-country">country</a></li>
-<li>+<a href="#address-kind-postal-code">postal code</a></li>
-<li>+<a href="#address-kind-street-address">street address</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-address-kind.html"></div>
-
-</section>
-
-<section id="examples-for-address-kind">
-
-<h4>Examples for Address (Kind)</h4>
-
-<aside class="example" id="ex-address-kind" title="Address (Kind)">
-<p>The address in this example is the same of <a href="#ex-address-agent"></a>, but represented by using [[VCARD-RDF]].</p>
-<pre data-include-format="text" data-include="./examples/address-kind.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
-
-<!-- Attribution -->
-
-<section id="properties-for-attribution">
-
-<h3>Attribution</h3>
-
-<aside class="note">
-<p>This class is not included in [[DCAT-AP-20200608]].</p>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-attribution.html"></div>
-
-<p>The use of this class in GeoDCAT-AP is illustrated in <a class="no-sectionRef" href="#agent-roles"></a>.</p>
-
-<section id="mandatory-properties-for-attribution">
-
-<h4>Mandatory properties for Attribution</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#attribution-agent">agent</a></li>
-<li>+<a href="#attribution-had-role">had role</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-attribution.html"></div>
-
-</section>
-
-<section id="deprecated-properties-for-attribution">
-
-<h4>Deprecated properties for Attribution</h4>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-attribution.html"></div>
-
-</section>
-
-<section id="examples-for-attribution">
-
-<h4>Examples for Attribution</h4>
-
-<aside class="example" id="ex-attribution" title="Attribution">
-<pre data-include-format="text" data-include="./examples/attribution.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
-
-<!-- Document -->
-
-<section id="properties-for-document">
-
-<h3>Document</h3>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-document.html"></div>
-
-<section id="recommended-properties-for-document">
-
-<h4>Recommended properties for Document</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#document-description">description</a></li>
-<li>+<a href="#document-title">title</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-document.html"></div>
-
-</section>
-
-<section id="examples-for-document">
-
-<h4>Examples for Document</h4>
-
-<aside class="example" id="ex-document" title="Document">
-<pre data-include-format="text" data-include="./examples/document.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
-
-<!-- Kind -->
-
-<section id="properties-for-kind">
-
-<h3>Kind</h3>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-kind.html"></div>
-
-<section id="recommended-properties-for-kind">
-
-<h4>Recommended properties for Kind</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#kind-email">email</a></li>
-<li>+<a href="#kind-name">name</a></li>
-<li>+<a href="#kind-url">URL</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-kind.html"></div>
-
-</section>
-
-<section id="optional-properties-for-kind">
-
-<h4>Optional properties for Kind</h4>
-
-<aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
-<ul>
-<li>+<a href="#kind-address">address</a></li>
-<li>+<a href="#kind-affiliation">affiliation</a></li>
-<li>+<a href="#kind-name">name</a></li>
-<li>+<a href="#kind-phone">phone</a></li>
-</ul>
-</aside>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-kind.html"></div>
-
-</section>
-
-<section id="examples-for-kind">
-
-<h4>Examples for Kind</h4>
-
-<aside class="example" id="ex-kind" title="Kind">
-<pre data-include-format="text" data-include="./examples/kind.ttl"></pre>
-</aside>
-
-</section>
-
-</section>
-
 <!-- Provenance Statement -->
 
 <section id="properties-for-provenance-statement">
 
 <h3>Provenance Statement</h3>
+
+<aside class="note">
+<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
+</aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-provenance-statement.html"></div>
 
@@ -1347,46 +1411,76 @@ A property which is not mentioned but would be applicable for a class according 
 
 </section>
 
-<!-- Media Type -->
+<!-- Quality Measurement -->
 
-<section id="properties-for-media-type">
+<section id="properties-for-quality-measurement">
 
-<h3>Media Type</h3>
-
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-media-type.html"></div>
-
-<section id="recommended-properties-for-media-type">
-
-<h4>Recommended property for Media Type</h4>
+<h3>+Quality Measurement</h3>
 
 <aside class="note">
-<p>The following property is not included in [[DCAT-AP-20200608]]:</p>
+<p>This class is not included in [[DCAT-AP-20200608]].</p>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-quality-measurement.html"></div>
+
+<section id="recommended-properties-for-quality-measurement">
+
+<h4>Recommended properties for Quality Measurement</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
 <ul>
-<li>+<a href="#media-type-label">label</a></li>
+<li>+<a href="#quality-measurement-is-measurement-of">is measurement of</a></li>
+<li>+<a href="#quality-measurement-unit-of-measure">unit of measure</a></li>
+<li>+<a href="#quality-measurement-value">value</a></li>
 </ul>
 </aside>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-media-type.html"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-quality-measurement.html"></div>
 
 </section>
 
-<section id="examples-for-media-type">
+<section id="examples-for-quality-measurement">
 
-<h4>Examples for Media Type</h4>
+<h4>Examples for Quality Measurement</h4>
 
-<aside class="example" id="ex-media-type" title="Media Type">
-<pre data-include-format="text" data-include="./examples/media-type.ttl"></pre>
+<aside class="example" id="ex-quality-measurement" title="Quality Measurement">
+<pre data-include-format="text" data-include="./examples/quality-measurement.ttl"></pre>
 </aside>
 
 </section>
 
 </section>
+
+<!-- Relationship -->
+
+<section id="properties-for-relationship">
+
+<h3>Relationship</h3>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-relationship.html"></div>
+
+<section id="mandatory-properties-for-relationship">
+
+<h4>Mandatory properties for Relationship</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-relationship.html"></div>
+
+</section>
+
+</section>
+
+<!-- Classes not in DCAT-AP -->
 
 <!-- Rights Statement -->
 
 <section id="properties-for-rights-statement">
 
 <h3>Rights Statement</h3>
+
+<aside class="note">
+<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
+</aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-rights-statement.html"></div>
 
@@ -1422,6 +1516,10 @@ A property which is not mentioned but would be applicable for a class according 
 <section id="properties-for-standard">
 
 <h3>Standard</h3>
+
+<aside class="note">
+<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
+</aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-standard.html"></div>
 
@@ -1497,7 +1595,9 @@ A property which is not mentioned but would be applicable for a class according 
 <h3>Requirements for controlled vocabularies</h3>
 
 <p>The following is a list of requirements that were identified for the controlled vocabularies to be recommended in this Application Profile.</p>
+
 <p>Controlled vocabularies SHOULD:</p>
+
 <ul>
 <li>Be published under an open licence.</li>
 <li>Be operated and/or maintained by an institution of the European Union, by a recognised standards organisation or another trusted organisation.</li>
@@ -1507,6 +1607,7 @@ A property which is not mentioned but would be applicable for a class according 
 <li>Have terms that are identified by URIs with each URI resolving to documentation about the term.</li>
 <li>Have associated persistence and versioning policies.</li>
 </ul>
+
 <p>These criteria do not intend to define a set of requirements for controlled vocabularies in general; they are only intended to be used for the selection of the controlled vocabularies that are proposed for this Application Profile.</p>
 
 </section>
@@ -1514,14 +1615,11 @@ A property which is not mentioned but would be applicable for a class according 
 <section id="controlled-vocabularies-to-be-used">
 
 <h3>Controlled vocabularies to be used</h3>
-<!--
-<aside class="ednote">
-<p>To be revised to include those used by GeoDCAT-AP</p>
-</aside>
--->
+
 <p>In the table below, a number of properties are listed with controlled vocabularies that MUST be used for the listed properties. The declaration of the following controlled vocabularies as mandatory ensures a minimum level of interoperability.</p>
 
 <p>Compared with [[DCAT-AP-20200608]], GeoDCAT-AP makes use of additional controlled vocabularies mandated by [[INSPIRE-MD-REG]], and operated by the INSPIRE Registry - with the only exceptions of the coordinate reference systems register maintained by OGC [[OGC-EPSG]].</p>
+
 <p>For two of these controlled vocabularies, namely the INSPIRE spatial data themes [[INSPIRE-THEMES]] and the ISO topic categories [[INSPIRE-TC]], the GeoDCAT-AP Working Group has defined a set of harmonised mappings to the EU Vocabularies Data Themes [[EUV-THEMES]], in order to facilitate the identification of the relevant theme in [[EUV-THEMES]] for geospatial metadata. The status of this work, along with links to a machine readable representation of the mappings, is documented on a dedicated page in Joinup [[?GeoDCAT-ACV]].</p>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/controlled-vocabularies-to-be-used.html"></div>
@@ -1536,10 +1634,7 @@ A property which is not mentioned but would be applicable for a class according 
 
 <p>For geospatial metadata, the working group has identified the following additional vocabularies:</p>
 
-<aside class="ednote">
-<p>This is the list of recommended vocabularies in [[GeoDCAT-AP-20160802]].</p>
-<p>To be decided if any revision is needed.</p>
-</aside>
+<div class="issue" data-number="49"></div>
 
 <ul>
 <li><p><strong>Geographic identifiers</strong>:</p>
@@ -1581,6 +1676,7 @@ A property which is not mentioned but would be applicable for a class according 
 
 <p>Concerning licence vocabularies, implementers are encouraged to use widely recognised licences such as Creative Commons licences [[?CC]], and in particular the CC Zero Public Domain Dedication [[?CC0]] or CC-BY Attribution 4.0 International [[?CC-BY]], or  the Open Data Commons Public Domain Dedication and License (PDDL) [[?PDDL]]. 
 Often there is applicable legislation or a licency policy in place which determine the set of licences to be used. They may recommend the use of an open government licence such as the UK Open Government Licence [[?UKOGL]].</p>
+
 <p>Further activities in this area are undertaken by the Open Data Institute [[?ODI]] with the Open Data Rights Statement Vocabulary [[?ODRS]] and by the Open Digital Rights Language (ODRL) Initiative [[VOCAB-ODRL]].</p>
 
 </section>
@@ -1588,14 +1684,13 @@ Often there is applicable legislation or a licency policy in place which determi
 </section>
 
 <section id="conformance">
-<!--
-<h2>Conformance Statement</h2>
--->
+
 <section id="provider-requirements">
 
 <h2>Provider requirements</h2>
 
 <p>In order to conform to this Application Profile, an application that provides metadata MUST:</p>
+
 <ul>
 <li>Provide a description of the Catalogue, including at least the mandatory properties specified in <a class="no-sectionRef" href="#mandatory-properties-for-catalogue"></a>.</li>
 <li>Provide information for the mandatory properties specified in <a class="no-sectionRef" href="#mandatory-properties-for-catalogue-record"></a>, if descriptions of Catalogue Records are provided – please note that the provision of descriptions of Catalogue Records is optional.</li>
@@ -1606,8 +1701,11 @@ Often there is applicable legislation or a licency policy in place which determi
 <li>Provide descriptions of all category schemes that contain the categories that are asserted in any of the descriptions of Datasets in the Catalogue, including at least the mandatory properties specified in <a class="no-sectionRef" href="#mandatory-properties-for-category-scheme"></a>.</li>
 <li>Provide descriptions of all categories involved in the descriptions of Datasets in the Catalogue, including at least the mandatory properties specified in <a class="no-sectionRef" href="#mandatory-properties-for-category"></a>.</li>
 </ul>
+
 <p>For the properties listed in the table in <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>, the associated controlled vocabularies MUST be used. Additional controlled vocabularies MAY be used.</p>
+
 <p>In addition to the mandatory properties, any of the recommended and optional properties defined in <a class="no-sectionRef" href="#properties"></a> MAY be provided.</p>
+
 <p>Recommended and optional classes may have mandatory properties, but those only apply if and when an instance of such a class is present in a description.</p>
 
 </section>
@@ -1617,11 +1715,13 @@ Often there is applicable legislation or a licency policy in place which determi
 <h2>Receiver requirements</h2>
 
 <p>In order to conform to this Application Profile, an application that receives metadata MUST be able to:</p>
+
 <ul>
 <li>Process information for all classes specified in <a class="no-sectionRef" href="#classes"></a>.</li>
 <li>Process information for all properties specified in <a class="no-sectionRef" href="#properties"></a>.</li>
 <li>Process information for all controlled vocabularies specified in <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>.</li>
 </ul>
+
 <p>As stated in <a class="no-sectionRef" href="#terminology"></a>, "processing" means that receivers must accept incoming data and transparently provide these data to applications and services. It does neither imply nor prescribe what applications and services finally do with the data (parse, convert, store, make searchable, display to users, etc.).</p>
 
 </section>
@@ -1633,38 +1733,44 @@ Often there is applicable legislation or a licency policy in place which determi
 <section id="agent-roles" class="informative">
 
 <h2>Agent Roles</h2>
-<!--
-<aside class="ednote">
-<p>To be revised</p>
-</aside>
--->
+
 <!--  
-<div class="issue" data-number="30"></div>
--->  
-<p>GeoDCAT-AP supports the 11 agent roles defined in [[INSPIRE-MD-REG]] and [[ISO-19115]] by using two different but not mutually exclusive approaches.</p>
-<p>The first approach makes use of the relevant properties from [[DCAT-AP-20200608]] and [[DCTERMS]], which overall cover 4 of the relevant roles - namely, <code>dcat:contactPoint</code>, <code>dct:creator</code>, <code>dct:publisher</code>, and <code>dct:rightsHolder</code>.</p>
-<p>The second and more general approach is based on [[PROV-O]], where agent roles are specified via a &ldquo;qualified attribution&rdquo; (<code>prov:qualifiedAttribution</code>). More precisely, the relevant Agent is specified via property <code>prov:agent</code>, whereas the role is specified with property <code>dcat:hadRole</code>, which takes as value one of the responsible party roles defined in [[INSPIRE-MD-REG]] and [[ISO-19115]], and included in the relevant code list operated by the INSPIRE Registry [[INSPIRE-RPR]]. This pattern is illustrated in <a href="#ex-attribution"></a>.</p>
+<p>GeoDCAT-AP supports the 11 agent roles defined in [[INSPIRE-MD-REG]] and [[ISO-19115]] by using the relevant properties from [[DCAT-AP-20200608]] and [[DCTERMS]] - namely, <code>dcat:contactPoint</code>, <code>dct:creator</code>, <code>dct:publisher</code>, and <code>dct:rightsHolder</code> (not supported in [[DCAT-AP-20200608]]) - and by defining new properties for the roles not covered by those vocabularies - namely, <code>geodcatap:custodian</code>, <code>geodcatap:distributor</code>, <code>geodcatap:originator</code>, <code>geodcatap:principalInvestigator</code>, <code>geodcatap:processor</code>, <code>geodcatap:resourceProvider</code>, and <code>geodcatap:user</code>.</p>
+
 <p>It is important to note that, following [[INSPIRE-MD-REG]] and [[ISO-19115]], in GeoDCAT-AP all these agent roles can be specified on Catalogues, Catalogue Records, Datasets, and Data Services.</p>
+
+<p>GeoDCAT-AP, as [[DCAT-AP-20200608]], supports also the approach based on [[PROV-O]], where agent roles are specified via a &ldquo;qualified attribution&rdquo; (<code>prov:qualifiedAttribution</code>). More precisely, the relevant Agent is specified via property <code>prov:agent</code>, whereas the role is specified with property <code>dcat:hadRole</code>, which takes as value a <code>skos:Concept</code> describing that role - e.g., the responsible party role code list operated by the INSPIRE Registry [[INSPIRE-RPR]]. This pattern is illustrated in <a href="#ex-attribution"></a>.</p>
+
+<p>The approach based on [[PROV-O]] is meant to give data providers for a general mechanism to specify, in a harmonised way, any type of agent role all the roles defined in INSPIRE, thus ensuring interoperability as well as compliance with [[INSPIRE-MD-REG]].</p>
+
+<p>However, differently from the approach based on [[DCAT-AP-20200608]] and [[DCTERMS]], its use is not mandatory. Depending on their requirements, data providers may decide to use only the approach based on [[DCAT-AP-20200608]] and [[DCTERMS]], or complement it with the one based on [[PROV-O]] for the roles not covered by the former, or use both approaches concurrently.</p>
+
 <p>More details on these solutions are available in <a class="no-sectionRef" href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"></a>.</p>
-<!--
-<p>The DCAT Application Profile specified in this document has a single property to relate an Agent (typically, an organisation) to a Dataset. The only such ‘agent role’ that can be expressed in the current version of the profile is through the property <a href="http://purl.org/dc/terms/publisher"><code>dct:publisher</code></a>, defined as “An entity responsible for making the dataset available”. A second property is available in the DCAT recommendation, <a data-cite="VOCAB-DCAT-20140116#Property:dataset_contactPoint"><code>dcat:contactPoint</code></a>, defined as “Link a dataset to relevant contact information which is provided using VCard”, but this is not an agent role as the value of this property is contact data, rather than a representation of the organisation as such.</p>
-<p>In specific cases, for example in exchanging data among domain-specific portals, it may be useful to express other, more specific agent roles. In such cases, extensions to the base profile may be defined using additional properties with more specific meanings.</p>
-<p>Two possible approaches have been discussed, particular in the context of the development of the domain-specific GeoDCAT Application Profile [[GeoDCAT-AP]], an extension of the base DCAT Application Profile. </p>
-<p>The first possible approach is based on the use of a predicate vocabulary that provides a set of properties that represent additional types of relationships between Datasets and Agents. For example, properties could be defined, such as <code>foo:owner</code>, <code>foo:curator</code> or <code>foo:responsibleParty</code>, in addition to the use of existing well-known properties, such as <code>dct:creator</code> and <code>dct:rightsHolder</code>. A possible source for such additional properties is the Roles Named Authority List [[EUV-ROLES]] maintained by the Publications Office of the EU. Other domain-specific sources for additional properties are the INSPIRE Responsible Party roles [[INSPIRE-RPR]], the Library of Congress’ MARC relators [[MARC-REL]] and DataCite’s contributor types [[DataCite-Types]]. To enable the use of such properties, they must be defined as RDF properties with URIs in a well-managed namespace.</p>
-<p>A second approach is based on the use of W3C’s PROV ontology [[PROV-O]] which provides a powerful mechanism to express a set of classes, properties, and restrictions that can be used to represent and interchange provenance information generated in different systems and under different contexts. In the context of work on GeoDCAT-AP, a PROV-conformant solution for expressing agent roles was agreed [[GeoDCAT-AP-RPR]]. This solution uses <code>prov:qualifiedAttribution</code> in combination with a <code>dct:type</code> assertion pointing to the code list for Responsible Party Role in the INSPIRE registry. To enable the use of such types, they must be defined with URIs in a well-managed namespace. </p>
-<p>Based on the experience gained with the use of domain-specific extensions for additional ‘agent roles’ in the exchange of information about Datasets and on the requests of implementors and stakeholders, the  DCAT Application Profile release 2.0.0 is  extended with additional roles as proposed by DCAT Version 2, W3C Working Draft 28 May 2019 [[VOCAB-DCAT-2-20190528]] that have proven to be useful across domains. Precisely, properties <code>dct:creator</code>, <code>prov:qualifiedAttribution</code> and <code>prov:qualifiedRelation</code> have been added to <code>dcat:Dataset</code> class to further facilitate relationships between datasets and agents [[VOCAB-DCAT-QA]].</p>
-<p>It should be noted that, even if a more expressive approach is used in a particular implementation, the provision of information using <code>dct:publisher</code> for the Catalogue is still mandatory under the rules laid down in the Conformance Statement in <a class="no-sectionRef" href="#conformance"></a>, while the provision of information using <code>dct:publisher</code> is strongly recommended for Dataset. The provision of such information using <code>dct:publisher</code> will ensure interoperability with implementations that use the basic approach of DCAT-AP.</p>
--->
-  
+-->  
+
+<p>GeoDCAT-AP supports the 11 agent roles defined in [[INSPIRE-MD-REG]] and [[ISO-19115]] by using two different but not mutually exclusive approaches.</p>
+
+<p>In the first approach, roles are mapped to specific properties. In particular, GeoDCAT-AP makes use of the relevant properties from [[DCAT-AP-20200608]] and [[DCTERMS]], which overall cover 4 of the relevant roles - namely, <code>dcat:contactPoint</code>, <code>dct:creator</code>, <code>dct:publisher</code>, and <code>dct:rightsHolder</code> (not supported in [[DCAT-AP-20200608]]). The remaining 7 are covered by the corresponding properties defined in the GeoDCAT-AP namespace - namely, <code>geodcatap:custodian</code>, <code>geodcatap:distributor</code>, <code>geodcatap:originator</code>, <code>geodcatap:principalInvestigator</code>, <code>geodcatap:processor</code>, <code>geodcatap:resourceProvider</code>, and <code>geodcatap:user</code>.</p>
+
+<p>It is important to note that, following [[INSPIRE-MD-REG]] and [[ISO-19115]], in GeoDCAT-AP all these agent roles can be specified on Catalogues, Catalogue Records, Datasets, and Data Services.</p>
+
+<p>The second and more general approach is based on [[PROV-O]], where agent roles are specified via a &ldquo;qualified attribution&rdquo; (<code>prov:qualifiedAttribution</code>). More precisely, the relevant Agent is specified via property <code>prov:agent</code>, whereas the role is specified with property <code>dcat:hadRole</code>, which takes as value a <code>skos:Concept</code> describing that role - as those included in the relevant code list operated by the INSPIRE Registry [[INSPIRE-RPR]]. This pattern is illustrated in <a href="#ex-attribution"></a>.</p>
+
+<p>The [[PROV-O]]-based approach is meant to give data providers an extension mechanism to specify, in a harmonised way, any kind of role, and, possibly, to attach additional information to the role and the associated Agent. As such, it MAY be used in combination with or to complement the property-based approach, but it MUST NOT replace it. For instance, it can be used to specify roles not covered by the agent role properties used in GeoDCAT-AP, and/or to specify additional information that cannot be expressed via a property (as the period during which an Agent covered a given role).</p>
+
+<p>More details on these solutions are available in <a class="no-sectionRef" href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"></a>.</p>
+
+<!--  
 <aside class="note">
 <p>The approach based on [[PROV-O]] is meant to give data providers for a mechanism to specify, in a harmonised way, all the roles defined in INSPIRE, thus ensuring interoperability as well as compliance with [[INSPIRE-MD-REG]].</p>
 <p>However, differently from the approach based on [[DCAT-AP-20200608]] and [[DCTERMS]], its use is not mandatory. Depending on their requirements, data providers may decide to use only the approach based on [[DCAT-AP-20200608]] and [[DCTERMS]], or complement it with the one based on [[PROV-O]] for the roles not covered by the former, or use both approaches concurrently.</p>
 </aside>  
-  
-<div class="issue" data-number="32"></div>  
-  
-<div class="issue" data-number="39"></div>  
-  
+-->
+
+<div class="issue" data-number="39"></div>
+
+<div class="issue" data-number="57"></div>
+
 </section>
 
 <!-- Conformance Test Results -->
@@ -1672,14 +1778,13 @@ Often there is applicable legislation or a licency policy in place which determi
 <section id="conformance-test-results" class="informative">
 
 <h2>Conformance Test Results</h2>
-<!--
-<aside class="ednote">
-<p>TBD</p>
-</aside>
--->
+
 <p>Following [[INSPIRE-MD-REG]] and [[ISO-19115]], GeoDCAT-AP supports the specification of test results to assess the degree of conformity of a resource (i.e., a Catalogue, a Dataset, a Data Service) with a given specification (e.g., a standard, a set of implementing rules, a set of data quality or interoperability criteria).</p>
+
 <p>For this purpose, GeoDCAT-AP makes use of two different but not mutually exclusive approaches. More precisely, property <code>dct:conformsTo</code> is used when the test result states that a resource is conformant with a given specification. The more general approach is based on [[PROV-O]], and it specifies conformance test results as a testing activity (<code>prov:Activity</code>) that generates a result (specified with property <code>prov:generated</code>), corresponding to one of the degrees of conformity defined in [[INSPIRE-MD-REG]], and available from the INSPIRE Registry [[INSPIRE-DoC]]. The specification against which the testing activity is carried out is specified via a &ldquo;qualified association&rdquo; (<code>prov:qualifiedAssociation</code>), linked to a &ldquo;plan&rdquo; (<code>prov:hadPlan</code>) derived from (<code>prov:wasDerivedFrom</code>) the specification itself.</p> 
+
 <p>This pattern is illustrated in <a href="#ex-activity"></a>.</p>
+
 <p>More details on these solutions are available in <a class="no-sectionRef" href="#conformity-and-data-quality---not-in-iso19115-core"></a>.</p>
 
 </section>
@@ -1691,17 +1796,26 @@ Often there is applicable legislation or a licency policy in place which determi
 <h2>Accessibility and Multilingual Aspects</h2>
 
 <p><strong>Accessibility</strong> in the context of this Application Profile is limited to information about the technical format of distributions of datasets. The properties <code>dcat:mediaType</code> and <code>dct:format</code> provide information that can be used to determine what software can be deployed to process the data. The accessibility of the data within the datasets needs to be taken care of by the software that processes the data and is outside of the scope of this Application Profile.</p>
+
 <p><strong>Multilingual aspects</strong> related to this Application Profile concern all properties whose contents are expressed as strings (i.e. <code>rdfs:Literal</code>) with human-readable text. Wherever such properties are used, the string values are of one of two types:</p>
+
 <ul>
 <li>The string is free text. Examples are descriptions and labels. Such text may be translated into several languages.</li>
 <li>The string is an appellation of a ‘named entity’. Examples are names of organisations or persons. These names may have parallel versions in other languages but those versions don’t need to be literal translations.</li>
 </ul>
+
 <p>Wherever values of properties are expressed with either type of string, the property can be repeated with translations in the case of free text and with parallel versions in case of named entities. For free text, e.g. in the cases of titles, descriptions and keywords, the <strong>language tag</strong> is mandatory. </p>
+
 <p>Language tags to be used with <code>rdfs:Literal</code> are defined by [[BCP47]], which allows the use of the "t" extension for text transformations defined in [[RFC6497]] with the field "t0" [[CLDR]] indicating a machine translation.</p>
+
 <p>A language tag will look like: "en-t-es-t0-abcd", which conveys the information that the string is in English, translated from Spanish by machine translation using a tool named "abcd".</p>
+
 <p>For named entities, the language tag is optional and should only be provided if the parallel version of the name is strictly associated with a particular language. For example, the name ‘European Union’ has parallel versions in all official languages of the union, while a name like ‘W3C’ is not associated with a particular language and has no parallel versions.</p>
+
 <p>For linking to different language versions of associated web pages (e.g. landing pages) or documentation, a content negotiation [[CONNEG]] mechanism may be used whereby different content is served based on the Accept-Languages indicated by the browser. Using such a mechanism, the link to the page or document can resolve to different language versions of the page or document.</p>
+
 <p>All the occurrences of the property <code>dct:language</code>, which can be repeated if the metadata is provided in multiple languages, must have a URI as their object, not a literal string from the [[ISO-639]] code list.</p>
+
 <p>How multilingual information is handled in systems, for example in indexing and user interfaces, is outside of the scope of this Application Profile.</p>
 
 </section>
@@ -1710,20 +1824,23 @@ Often there is applicable legislation or a licency policy in place which determi
 
 <h2>Privacy and security considerations </h2>
 
-<p>The GeoDCAT-AP vocabulary supports the attribution of data and metadata to various participants such as resource creators, publishers and other parties or agents, and as such defines terms that may be related to personal information. In addition, it also supports the association of rights and licenses with cataloged Resources and Distributions. These rights and licenses could potentially include or reference sensitive information such as user and asset identifiers as <a data-cite="VOCAB-ODRL#privacy-consideration">described</a> in [[VOCAB-ODRL]].</p>
+<p>The GeoDCAT-AP vocabulary supports the attribution of data and metadata to various participants such as resource creators, publishers and other parties or agents, and as such defines terms that may be related to personal information. In addition, it also supports the association of rights and licenses with catalogued Resources and Distributions. These rights and licenses could potentially include or reference sensitive information such as user and asset identifiers as <a data-cite="VOCAB-ODRL#privacy-consideration">described</a> in [[VOCAB-ODRL]].</p>
+
 <p>Implementations that produce, maintain, publish or consume such vocabulary terms must take steps to ensure security and privacy considerations are addressed at the application level.</p>
 
 </section>
 
-<section id="ack" class="informative">
+<section id="ack">
 
 <!-- Acknowledgements --> 
 
 <h2>Acknowledgements</h2>
 
+<!-- TO BE RESTORED
 <aside class="ednote">
 <p>Representatives, editors and contributors to be updated.</p>
 </aside>
+-->
 
 <!--
 <p>This work was elaborated by a Working Group under the ISA² programme. The ISA² Programme of the European Commission was represented by <strong>TBD</strong>. <strong>TBD</strong> were the editors of the specification. Contributors: TBD.</p>
@@ -1739,14 +1856,14 @@ Often there is applicable legislation or a licency policy in place which determi
   <strong>Andrea Perego</strong> and <strong>Bert van Nuffelen</strong> were the editors of the specification. 
 </p>
 <p>
-  Contributors: Andreas Kuckartz, Antonio Rotundo, Danny Vandenbroucke, Fabian Kirstein, Franck Cotton, Hannes Reuter, Jakub Klímek, James Passmore, Matthias Palmér, Simon Cox.
+  Contributors: Andreas Kuckartz, Antonio Rotundo, Danny Vandenbroucke, Fabian Kirstein, Franck Cotton, Hannes Reuter, Jakub Klímek, James Passmore, Matthias Palmér, Riccardo Albertoni, Simon Cox.
 </p>
   
 </section>
 
 <!-- Annexes -->
 
-<section id="quick-reference-of-classes-and-properties" class="appendix informative">
+<section id="quick-reference-of-classes-and-properties" class="appendix">
 
 <!-- Quick Reference of Classes and Properties --> 
 
@@ -1756,7 +1873,7 @@ Often there is applicable legislation or a licency policy in place which determi
 
 <!-- Classes and Properties added by GeoDCAT-AP --> 
 
-<section id="geodcat-ap-classes-and-properties" class="appendix informative">
+<section id="geodcat-ap-classes-and-properties">
 
 <h2>Classes and properties added by GeoDCAT-AP</h2>
 
@@ -1766,29 +1883,9 @@ Often there is applicable legislation or a licency policy in place which determi
 
 <!-- Deprecated classes and properties --> 
 
-<section id="deprecated-classes-and-properties" class="appendix informative">
+<section id="deprecated-classes-and-properties">
 
 <h2>Deprecated classes and properties</h2>
-
-<!--
-<aside class="ednote">
-<p>TBD</p>
-</aside>
-
-<table class="simple" id="table-deprecated-classes-and-properties">
-<thead>
-<tr>
-<th>Class / Property</th>
-<th>URI</th>
-<th>Domain</th>
-<th>Replaced by</th>
-<th>Deprecated in</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
--->
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-classes-and-properties.html"></div>
 
@@ -1801,18 +1898,14 @@ Often there is applicable legislation or a licency policy in place which determi
 <section id="inspire-and-iso-19115-mappings" class="appendix">
 
 <h2>INSPIRE and ISO 19115 Mappings</h2>
-<!--
-<aside class="ednote">
-<p>To be revised and updated</p>
-</aside>
--->
+
 <div data-include-format="html" data-include-replace="true" data-include="./appendices/inspire-and-iso-19115-mappings.html"></div>
 
 </section>
 
 <!-- Controlled Vocabularies Mappings --> 
 <!--
-<section id="controlled-vocabularies-mappings" class="appendix informative">
+<section id="controlled-vocabularies-mappings" class="appendix">
 
 <h2>Controlled Vocabularies Mappings</h2>
 
@@ -1824,7 +1917,7 @@ Often there is applicable legislation or a licency policy in place which determi
 -->
 <!-- Conformance with INSPIRE and ISO 19115 --> 
 <!--
-<section id="conformance-with-inspire-and-iso-19115" class="appendix informative">
+<section id="conformance-with-inspire-and-iso-19115" class="appendix">
 
 <h2>Conformance with INSPIRE and ISO 19115</h2>
 
@@ -1836,27 +1929,58 @@ Often there is applicable legislation or a licency policy in place which determi
 -->
 <!-- Change Log --> 
 
-<section id="change-log" class="appendix informative">
+<section id="changes" class="appendix">
 
 <h2>Change Log</h2>
-<!--
-<aside class="ednote">
-<p>To be revised</p>
-</aside>
--->
+
+<p>A full change-log is available on <a href="https://github.com/semiceu/GeoDCAT-AP/commits/gh-pages/drafts/latest/">GitHub</a></p>
+
+<section id="changes-since-20201012">
+
+<h2>Changes since first public working draft of 12 October 2020</h2>
+
+<ul>
+<li>Defined terms in the GeoDCAT-AP namespace (<a class="no-secRef" href="#instances-of-metric"></a>) for the specification of the different types of spatial resolution (see issue <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/15">#15</a>).</li>
+<li>Defined properties in the GeoDCAT-AP namespace (<a class="no-secRef" href="#agent-roles"></a>) for the specification of INSPIRE / ISO 19115:2003 responsible party roles not supported in [[VOCAB-DCAT-2]] and [[DCTERMS]] (see issue <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/32">#32</a>).</li>
+<li>Adopted datatype <code>gsp:geoJSONLiteral</code>, defined in the current draft of GeoSPARQL [[?GeoSPARQL11]], for GeoJSON literals, and deprecated the solution used in the previous versions of GeoDCAT-AP (see issue <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/4">#4</a>).</li>
+<li>Editorial revision of the specification.</li>
+</ul>
+
+</section>
+
+<section id="changes-since-20160802">
+
+<h2>Changes since GeoDCAT-AP 1.0.1 (2 August 2016)</h2>
+
+<ul>
+<li>Document completely re-written starting from the [[DCAT-AP-20200608]] specification, with the purpose of using a consistent document structure across DCAT-AP specifications.</li>
+<li>Use of classes and properties aligned with [[DCAT-AP-20200608]] (see issues <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/1">#1</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/2">#2</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/5">#5</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/7">#7</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/8">#8</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/10">#10</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/16">#16</a>). Classes and properties no longer used or replaced by new ones have been deprecated (see <a class="no-secRef" href="#deprecated-classes-and-properties"></a>).</li>
+</ul>
+
+</section>
+
+<section id="changes-since-20151223">
+
+<h2>Changes since GeoDCAT-AP 1.0.0 (23 December 2015)</h2>
+
+<ul>
+<li>Corrected a typo concerning the URIs of the code lists of the INSPIRE Registry. No other changes have been done on [[GeoDCAT-AP-20151223]].</li>
+</ul>
+
+</section>
+
+<section id="changes-summary">
+
+<h2>Summary of changes to Application Profile classes and properties</h2>
+
 <p>The table below summarises the changes applied to the current release of GeoDCAT-AP, including those inherited from [[DCAT-AP]].</p>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/change-log.html"></div>
 
 </section>
 
-<!--
-</article>
--->
-
-<!--
-<script src="./js/script.js"></script>
--->
+</section>
 
 </body>
+
 </html>

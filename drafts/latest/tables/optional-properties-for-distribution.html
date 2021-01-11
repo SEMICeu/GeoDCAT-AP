@@ -19,6 +19,7 @@
 </tr>
 </thead>
 <tbody>
+
 <tr class="property optional ap-ext" id="distribution-access-rights">
 <td>
 <p>+access rights</p>
@@ -37,6 +38,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional" id="distribution-access-service">
 <td>
 <p>access service</p>
@@ -48,12 +50,13 @@
 <p><code>dcat:DataService</code></p>
 </td>
 <td>
-<p>This property refers to a data service that gives access to the distribution of the dataset.</p>
+<p>This property refers to a Data Service that gives access to the Distribution of the Dataset.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="distribution-byte-size">
 <td>
 <p>byte size</p>
@@ -71,6 +74,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional" id="distribution-checksum">
 <td>
 <p>checksum</p>
@@ -82,12 +86,13 @@
 <p><code>spdx:Checksum</code></p>
 </td>
 <td>
-<p>This property provides a mechanism that can be used to verify that the contents of a distribution have not changed. The checksum is related to the download URL.</p>
+<p>This property provides a mechanism that can be used to verify that the contents of a Distribution have not changed. The checksum is related to the download URL.</p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional" id="distribution-compression-format">
 <td>
 <p>compression format</p>
@@ -99,12 +104,13 @@
 <p><code>dct:MediaType</code></p>
 </td>
 <td>
-<p>This property refers to the format of the file in which the data is contained in a compressed form, e.g. to reduce the size of the downloadable file. It SHOULD be expressed using a media type as defined in the official register of media types managed by IANA [[IANA-MEDIA-TYPES]].</p>
+<p>This property refers to the format of the file in which the data is contained in a compressed form, e.g., to reduce the size of the downloadable file. It SHOULD be expressed using a media type as defined in the official register of media types managed by IANA [[IANA-MEDIA-TYPES]].</p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional" id="distribution-documentation">
 <td>
 <p>documentation</p>
@@ -122,6 +128,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="distribution-download-url">
 <td>
 <p>download URL</p>
@@ -139,6 +146,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="distribution-has-policy">
 <td>
 <p>has policy</p>
@@ -150,12 +158,13 @@
 <p><code>odrl:Policy</code></p>
 </td>
 <td>
-<p>This property refers to the policy expressing the rights associated with the distribution if using the ODRL vocabulary</p>
+<p>This property refers to the policy expressing the rights associated with the Distribution if using the [[VOCAB-ODRL]] vocabulary.</p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional" id="distribution-language">
 <td>
 <p>language</p>
@@ -173,6 +182,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="distribution-linked-schemas">
 <td>
 <p>linked schemas</p>
@@ -190,6 +200,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="distribution-media-type">
 <td>
 <p>media type</p>
@@ -207,6 +218,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional" id="distribution-packaging-format">
 <td>
 <p>packaging format</p>
@@ -224,6 +236,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="distribution-reference-system">
 <td>
 <p>+reference system</p>
@@ -242,6 +255,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="distribution-release-date">
 <td>
 <p>release date</p>
@@ -259,6 +273,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="distribution-representation-technique">
 <td>
 <p>+representation technique</p>
@@ -277,6 +292,7 @@
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional" id="distribution-rights">
 <td>
 <p>rights</p>
@@ -294,9 +310,29 @@
 <p>0..1</p>
 </td>
 </tr>
-<tr class="property optional" id="distribution-spatial-resolution">
+
+<tr class="property optional ap-ext" id="distribution-spatial-resolution">
 <td>
-<p>spatial resolution</p>
+<p>+spatial resolution</p>
+</td>
+<td>
+<p><code>dqv:hasQualityMeasurement</code></p>
+</td>
+<td>
+<p><code>dqv:QualityMeasurement</code></p>
+</td>
+<td>
+<p>Refers to the performed quality measurements.</p>
+<p>In GeoDCAT-AP, this property is used to specify "spatial resolution", as defined in [[INSPIRE-MD-REG]], [[ISO-19115]], and [[ISO-19115-1]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="distribution-spatial-resolution-in-metres">
+<td>
+<p>spatial resolution in metres</p>
 </td>
 <td>
 <p><code>dcat:spatialResolutionInMeters</code></p>
@@ -305,15 +341,16 @@
 <p><code>xsd:decimal</code></p>
 </td>
 <td>
-<p>This property refers to the minimum spatial separation resolvable in a dataset distribution, measured in meters.</p>
+<p>This property refers to the minimum spatial separation resolvable in a Distribution, measured in metres.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional ap-ext" id="distribution-spatial-resolution-general">
 <td>
-<p>+spatial resolution as equivalent scale, angular distance, vertical distance</p>
+<p>+spatial resolution as text</p>
 </td>
 <td>
 <p><code>rdfs:comment</code></p>
@@ -328,6 +365,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="distribution-status">
 <td>
 <p>status</p>
@@ -339,12 +377,13 @@
 <p><code>skos:Concept</code></p>
 </td>
 <td>
-<p>This property refers to the maturity of the Distribution. It MUST take one of the values Completed, Deprecated, Under Development, Withdrawn.</p>
+<p>This property refers to the maturity of the Distribution. It MUST take one of the values Completed, Deprecated, Under Development, Withdrawn from the ADMS status [[ADMS-SKOS]] vocabulary.</p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 </tr>
+
 <tr class="property optional" id="distribution-temporal-resolution">
 <td>
 <p>temporal resolution</p>
@@ -362,6 +401,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="distribution-title">
 <td>
 <p>title</p>
@@ -379,6 +419,7 @@
 <p>0..n</p>
 </td>
 </tr>
+
 <tr class="property optional" id="distribution-modification-date">
 <td>
 <p>update / modification date</p>
@@ -396,5 +437,6 @@
 <p>0..1</p>
 </td>
 </tr>
+
 </tbody>
 </table>

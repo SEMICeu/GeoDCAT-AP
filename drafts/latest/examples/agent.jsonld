@@ -1,0 +1,65 @@
+[
+  {
+  "@graph": [
+    {
+    "@id": "_:Nef6e7d3237be416dbcaa63e91ebac441",
+    "@type": [
+      "http://www.w3.org/ns/locn#Address"
+    ],
+    "http://www.w3.org/ns/locn#adminUnitL1": [
+      {
+      "@value": "Denmark"
+      }
+    ],
+    "http://www.w3.org/ns/locn#adminUnitL2": [
+      {
+      "@value": "K"
+      }
+    ],
+    "http://www.w3.org/ns/locn#postCode": [
+      {
+      "@value": "1050"
+      }
+    ],
+    "http://www.w3.org/ns/locn#postName": [
+      {
+      "@value": "Copenhagen"
+      }
+    ],
+    "http://www.w3.org/ns/locn#thoroughfare": [
+      {
+      "@value": "Kongens Nytorv 6"
+      }
+    ]
+    },
+    {
+    "@id": "_:N5abad0cfc1cf423a85efbd105592f8ff",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Organization"
+    ],
+    "http://www.w3.org/ns/locn#address": [
+      {
+      "@id": "_:Nef6e7d3237be416dbcaa63e91ebac441"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/mbox": [
+      {
+      "@id": "mailto:sdi@eea.europa.eu"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+      "@language": "en",
+      "@value": "European Environment Agency"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/phone": [
+      {
+      "@id": "tel:+451234567890"
+      }
+    ]
+    }
+  ],
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.develop/drafts/latest/examples/agent.rdf"
+  }
+]

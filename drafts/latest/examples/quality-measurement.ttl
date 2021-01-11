@@ -1,0 +1,28 @@
+@prefix dqv: <http://www.w3.org/ns/dqv#> .
+@prefix geodcatap: <http://data.europa.eu/930/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix resource: <https://some.catalogue/resource/> .
+@prefix sdmx-attribute: <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+resource:a12345 dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+      dqv:isMeasurementOf geodcatap:spatialResolutionAsScale ;
+      dqv:value 0.000001 ] .
+
+resource:b23456 dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+      sdmx-attribute:unitMeasure <http://www.wurvoc.org/vocabularies/om-1.8/metre> ;
+      dqv:isMeasurementOf geodcatap:spatialResolutionAsDistance ;
+      dqv:value 100.0 ] .
+
+resource:c34567 dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+      sdmx-attribute:unitMeasure <http://www.wurvoc.org/vocabularies/om-1.8/degree> ;
+      dqv:isMeasurementOf geodcatap:spatialResolutionAsAngularDistance ;
+      dqv:value 20.0 ] .
+
+resource:d45678 dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
+      sdmx-attribute:unitMeasure <http://www.wurvoc.org/vocabularies/om-1.8/metre> ;
+      dqv:isMeasurementOf geodcatap:spatialResolutionAsVerticalDistance ;
+      dqv:value 10.0 ] .
+

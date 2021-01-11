@@ -1,4 +1,4 @@
-<p>This version of GeoDCAT-AP extends [[DCAT-AP-20200608]] with 4 additional classes and 102 additional properties, listed in the following table.</p>
+<p>This version of GeoDCAT-AP extends [[DCAT-AP-20200608]] with 6 additional classes and 69 additional properties (some of which re-used across classes). They are listed in the following table.</p>
 
 <table class="simple" id="table-geodcat-ap-classes-and-properties">
 <thead>
@@ -100,6 +100,13 @@
 <p>+<a title="rights holder" href="#catalogue-rights-holder"><code>dct:rightsHolder</code></a></p>
 <p>+<a title="topic category" href="#catalogue-topic-category"><code>dct:subject</code></a></p>
 <p>+<a title="temporal coverage" href="#catalogue-temporal-coverage"><code>dct:temporal</code></a></p>
+<p>+<a title="custodian" href="#catalogue-custodian"><code>geodcatap:custodian</code></a></p>
+<p>+<a title="distributor" href="#catalogue-distributor"><code>geodcatap:distributor</code></a></p>
+<p>+<a title="originator" href="#catalogue-originator"><code>geodcatap:originator</code></a></p>
+<p>+<a title="principal investigator" href="#catalogue-principal-investigator"><code>geodcatap:principalInvestigator</code></a></p>
+<p>+<a title="processor" href="#catalogue-processor"><code>geodcatap:processor</code></a></p>
+<p>+<a title="resource provider" href="#catalogue-resource-provider"><code>geodcatap:resourceProvider</code></a></p>
+<p>+<a title="user" href="#catalogue-user"><code>geodcatap:user</code></a></p>
 <p>+<a title="qualified attribution" href="#catalogue-qualified-attribution"><code>prov:qualifiedAttribution</code></a></p>
 <p>+<a title="was used by" href="#catalogue-was-used-by"><code>prov:wasUsedBy</code></a></p>
 </td>
@@ -119,6 +126,13 @@
 <p>+<a title="identifier" href="#catalogue-record-identifier"><code>dct:identifier</code></a></p>
 <p>+<a title="publisher" href="#catalogue-record-publisher"><code>dct:publisher</code></a></p>
 <p>+<a title="rights holder" href="#catalogue-record-rights-holder"><code>dct:rightsHolder</code></a></p>
+<p>+<a title="custodian" href="#catalogue-record-custodian"><code>geodcatap:custodian</code></a></p>
+<p>+<a title="distributor" href="#catalogue-record-distributor"><code>geodcatap:distributor</code></a></p>
+<p>+<a title="originator" href="#catalogue-record-originator"><code>geodcatap:originator</code></a></p>
+<p>+<a title="principal investigator" href="#catalogue-record-principal-investigator"><code>geodcatap:principalInvestigator</code></a></p>
+<p>+<a title="processor" href="#catalogue-record-processor"><code>geodcatap:processor</code></a></p>
+<p>+<a title="resource provider" href="#catalogue-record-resource-provider"><code>geodcatap:resourceProvider</code></a></p>
+<p>+<a title="user" href="#catalogue-record-user"><code>geodcatap:user</code></a></p>
 <p>+<a title="qualified attribution" href="#catalogue-record-qualified-attribution"><code>prov:qualifiedAttribution</code></a></p>
 </td>
 </tr>
@@ -157,7 +171,7 @@
 </td>
 <td>
 <p>+<a title="contact point" href="#data-service-contact-point"><code>dcat:contactPoint</code></a></p>
-<p>+<a title="spatial resolution" href="#data-service-spatial-resolution"><code>dcat:spatialResolutionInMeters</code></a></p>
+<p>+<a title="spatial resolution in metres" href="#data-service-spatial-resolution-in-metres"><code>dcat:spatialResolutionInMeters</code></a></p>
 <p>+<a title="temporal resolution" href="#data-service-temporal-resolution"><code>dcat:temporalResolution</code></a></p>
 <p>+<a title="theme / category" href="#data-service-category"><code>dcat:theme</code></a></p>
 <p>+<a title="conforms to" href="#data-service-conforms-to"><code>dct:conformsTo</code></a></p>
@@ -165,7 +179,9 @@
 <p>+<a title="creation date" href="#data-service-creation-date"><code>dct:created</code></a></p>
 <p>+<a title="creator" href="#data-service-creator"><code>dct:creator</code></a></p>
 <p>+<a title="identifier" href="#data-service-identifier"><code>dct:identifier</code></a></p>
+<p>+<a title="release date" href="#data-service-release-date"><code>dct:issued</code></a></p>
 <p>+<a title="language" href="#data-service-language"><code>dct:language</code></a></p>
+<p>+<a title="update / modification date" href="#data-service-modification-date"><code>dct:modified</code></a></p>
 <p>+<a title="publisher" href="#data-service-publisher"><code>dct:publisher</code></a></p>
 <p>+<a title="rights holder" href="#data-service-rights-holder"><code>dct:rightsHolder</code></a></p>
 <p>+<a title="spatial / geographic coverage" href="#data-service-spatial-coverage"><code>dct:spatial</code></a></p>
@@ -174,9 +190,17 @@
 <p>+<a title="service category" href="#data-service-service-category"><code>dct:type</code></a></p>
 <p>+<a title="service type" href="#data-service-service-type"><code>dct:type</code></a></p>
 <p>+<a title="type" href="#data-service-type"><code>dct:type</code></a></p>
+<p>+<a title="spatial resolution" href="#data-service-spatial-resolution"><code>dqv:hasQualityMeasurement</code></a></p>
+<p>+<a title="custodian" href="#data-service-custodian"><code>geodcatap:custodian</code></a></p>
+<p>+<a title="distributor" href="#data-service-distributor"><code>geodcatap:distributor</code></a></p>
+<p>+<a title="originator" href="#data-service-originator"><code>geodcatap:originator</code></a></p>
+<p>+<a title="principal investigator" href="#data-service-principal-investigator"><code>geodcatap:principalInvestigator</code></a></p>
+<p>+<a title="processor" href="#data-service-processor"><code>geodcatap:processor</code></a></p>
+<p>+<a title="resource provider" href="#data-service-resource-provider"><code>geodcatap:resourceProvider</code></a></p>
+<p>+<a title="user" href="#data-service-user"><code>geodcatap:user</code></a></p>
 <p>+<a title="qualified attribution" href="#data-service-qualified-attribution"><code>prov:qualifiedAttribution</code></a></p>
 <p>+<a title="was used by" href="#data-service-was-used-by"><code>prov:wasUsedBy</code></a></p>
-<p>+<a title="spatial resolution as equivalent scale, angular distance, vertical distance" href="#data-service-spatial-resolution-general"><code>rdfs:comment</code></a></p>
+<p>+<a title="spatial resolution as text" href="#data-service-spatial-resolution-general"><code>rdfs:comment</code></a></p>
 </td>
 </tr>
 <tr>
@@ -191,8 +215,16 @@
 <p>+<a title="creation date" href="#dataset-creation-date"><code>dct:created</code></a></p>
 <p>+<a title="rights holder" href="#dataset-rights-holder"><code>dct:rightsHolder</code></a></p>
 <p>+<a title="topic category" href="#dataset-topic-category"><code>dct:subject</code></a></p>
+<p>+<a title="spatial resolution" href="#dataset-spatial-resolution"><code>dqv:hasQualityMeasurement</code></a></p>
+<p>+<a title="custodian" href="#dataset-custodian"><code>geodcatap:custodian</code></a></p>
+<p>+<a title="distributor" href="#dataset-distributor"><code>geodcatap:distributor</code></a></p>
+<p>+<a title="originator" href="#dataset-originator"><code>geodcatap:originator</code></a></p>
+<p>+<a title="principal investigator" href="#dataset-principal-investigator"><code>geodcatap:principalInvestigator</code></a></p>
+<p>+<a title="processor" href="#dataset-processor"><code>geodcatap:processor</code></a></p>
+<p>+<a title="resource provider" href="#dataset-resource-provider"><code>geodcatap:resourceProvider</code></a></p>
+<p>+<a title="user" href="#dataset-user"><code>geodcatap:user</code></a></p>
 <p>+<a title="was used by" href="#dataset-was-used-by"><code>prov:wasUsedBy</code></a></p>
-<p>+<a title="spatial resolution as equivalent scale, angular distance, vertical distance" href="#dataset-spatial-resolution-general"><code>rdfs:comment</code></a></p>
+<p>+<a title="spatial resolution as text" href="#dataset-spatial-resolution-general"><code>rdfs:comment</code></a></p>
 </td>
 </tr>
 <tr>
@@ -206,7 +238,8 @@
 <p>+<a title="representation technique" href="#distribution-representation-technique"><code>adms:representationTechnique</code></a></p>
 <p>+<a title="access rights" href="#distribution-access-rights"><code>dct:accessRights</code></a></p>
 <p>+<a title="reference system" href="#distribution-reference-system"><code>dct:conformsTo</code></a></p>
-<p>+<a title="spatial resolution as equivalent scale, angular distance, vertical distance" href="#distribution-spatial-resolution-general"><code>rdfs:comment</code></a></p>
+<p>+<a title="spatial resolution" href="#distribution-spatial-resolution"><code>dqv:hasQualityMeasurement</code></a></p>
+<p>+<a title="spatial resolution as text" href="#distribution-spatial-resolution-general"><code>rdfs:comment</code></a></p>
 </td>
 </tr>
 <tr>
@@ -273,12 +306,37 @@
 </td>
 </tr>
 <tr>
+<td>+<a href="#metric">Metric</a></td>
+<td><code>dqv:Metric</code></td>
+<td>
+</td>
+<td>
+<p>+<a title="expected data type" href="#metric-expected-data-type"><code>dqv:expectedDataType</code></a></p>
+<p>+<a title="dimension" href="#metric-dimension"><code>dqv:inDimension</code></a></p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
 <td><a href="#provenance-statement">Provenance Statement</a></td>
 <td><code>dct:ProvenanceStatement</code></td>
 <td>
 </td>
 <td>
 <p>+<a title="provenance statement text" href="#provenance-statement-provenance-statement-text"><code>rdfs:label</code></a></p>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>+<a href="#quality-measurement">Quality Measurement</a></td>
+<td><code>dqv:QualityMeasurement</code></td>
+<td>
+</td>
+<td>
+<p>+<a title="is measurement of" href="#quality-measurement-is-measurement-of"><code>dqv:isMeasurementOf</code></a></p>
+<p>+<a title="value" href="#quality-measurement-value"><code>dqv:value</code></a></p>
+<p>+<a title="unit of measure" href="#quality-measurement-unit-of-measure"><code>sdmx-attribute:unitMeasure</code></a></p>
 </td>
 <td>
 </td>
