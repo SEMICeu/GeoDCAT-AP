@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:N8c43f71ae618496f997a638b2b179668",
+    "@id": "_:N675268cec9c348feb96ae5d26d029463",
     "@type": [
       "http://www.w3.org/ns/dcat#Distribution"
     ],
@@ -24,7 +24,7 @@
     ],
     "http://purl.org/dc/terms/license": [
       {
-      "@id": "_:N0ef7f646da56459cb9c01994336339dd"
+      "@id": "_:Na0e98c7f8e3c4ea9a7a81b77b0bb7dff"
       }
     ],
     "http://www.w3.org/ns/adms#representationTechnique": [
@@ -34,7 +34,7 @@
     ],
     "http://www.w3.org/ns/dcat#accessService": [
       {
-      "@id": "_:N4da13c04b25945e6b14be2b6798186cc"
+      "@id": "_:N2fe10b0bcdcf485ab9f19db0de007701"
       }
     ],
     "http://www.w3.org/ns/dcat#accessURL": [
@@ -44,7 +44,19 @@
     ]
     },
     {
-    "@id": "_:N4da13c04b25945e6b14be2b6798186cc",
+    "@id": "_:Na0e98c7f8e3c4ea9a7a81b77b0bb7dff",
+    "@type": [
+      "http://purl.org/dc/terms/LicenseDocument"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+      "@language": "en",
+      "@value": "The full noise contour maps data set is in principle only available for EEA internal use. A public version of the data set may in the future be available, excluding those data sets for which there is any limitation or restriction in their use (beyond acknowledgement)."
+      }
+    ]
+    },
+    {
+    "@id": "_:N2fe10b0bcdcf485ab9f19db0de007701",
     "http://purl.org/dc/terms/conformsTo": [
       {
       "@id": "http://www.opengeospatial.org/standards/wms"
@@ -60,20 +72,8 @@
       "@id": "https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer"
       }
     ]
-    },
-    {
-    "@id": "_:N0ef7f646da56459cb9c01994336339dd",
-    "@type": [
-      "http://purl.org/dc/terms/LicenseDocument"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-      "@language": "en",
-      "@value": "The full noise contour maps data set is in principle only available for EEA internal use. A public version of the data set may in the future be available, excluding those data sets for which there is any limitation or restriction in their use (beyond acknowledgement)."
-      }
-    ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.develop/drafts/latest/examples/distribution.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/distribution.rdf"
   }
 ]

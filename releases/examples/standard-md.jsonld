@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:N0308864abb9249c08a0139b08836b6b9",
+    "@id": "_:Naa29981689214b08a9246d57d8c3d9e9",
     "@type": [
       "http://purl.org/dc/terms/Standard"
     ],
@@ -20,6 +20,6 @@
     ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.develop/drafts/latest/examples/standard-md.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/standard-md.rdf"
   }
 ]

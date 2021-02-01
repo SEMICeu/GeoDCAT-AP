@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:Nad023bcdcde44e25a821376af3935217",
+    "@id": "_:N6b9ba39f94c64856964577a08e19f624",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#ConceptScheme"
     ],
@@ -20,6 +20,6 @@
     ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.develop/drafts/latest/examples/category-scheme.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/category-scheme.rdf"
   }
 ]

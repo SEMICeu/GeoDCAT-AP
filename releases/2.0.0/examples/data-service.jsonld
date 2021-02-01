@@ -2,7 +2,68 @@
   {
   "@graph": [
     {
-    "@id": "_:N8b8dbb3d3ef849be94fcf58f1a1cac05",
+    "@id": "_:N835bb2ff339244a0bf731771d31db700",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Organization"
+    ],
+    "http://xmlns.com/foaf/0.1/mbox": [
+      {
+      "@id": "mailto:wisesoe.helpdesk@eionet.europa.eu"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+      "@language": "en",
+      "@value": "Tracasa"
+      }
+    ]
+    },
+    {
+    "@id": "_:N88baaacfb0434aaf9a4015ba467175a3",
+    "http://www.w3.org/ns/prov#hadPlan": [
+      {
+      "@id": "_:Nc8c76c83b65541aaa8caa934a215bbae"
+      }
+    ]
+    },
+    {
+    "@id": "_:N8cf8ae64b3be480a88c3c7e1e0fec344",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/ns/prov#generated": [
+      {
+      "@id": "_:Na70eafaaf923420995a42886c3c5cfd3"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedAssociation": [
+      {
+      "@id": "_:N88baaacfb0434aaf9a4015ba467175a3"
+      }
+    ]
+    },
+    {
+    "@id": "_:Nc8c76c83b65541aaa8caa934a215bbae",
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+      "@id": "http://inspire.ec.europa.eu/id/citation/ir/reg-976-2009"
+      }
+    ]
+    },
+    {
+    "@id": "_:Nf15cc986a882406c817c1d386cf7ef43",
+    "@type": [
+      "http://purl.org/dc/terms/LicenseDocument"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+      "@language": "en",
+      "@value": "No limitations in the use of this web service."
+      }
+    ]
+    },
+    {
+    "@id": "_:N2f921f31be08404cabb3abbf5f664f9b",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Address"
     ],
@@ -33,70 +94,15 @@
     ]
     },
     {
-    "@id": "_:Nb38f94ed65cb4cbea46fb8416dee0c8d",
-    "@type": [
-      "http://www.w3.org/ns/prov#Activity"
-    ],
-    "http://www.w3.org/ns/prov#generated": [
+    "@id": "_:Nf5bb9eaef5834c459c0979f7c1c32797",
+    "http://www.w3.org/ns/dcat#bbox": [
       {
-      "@id": "_:Nd74336e2537c4485ad667b39ea499f82"
-      }
-    ],
-    "http://www.w3.org/ns/prov#qualifiedAssociation": [
+      "@type": "http://www.opengis.net/ont/geosparql#gmlLiteral",
+      "@value": "<gml:Envelope srsName=\"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"><gml:lowerCorner>-62.9951 -21.378367</gml:lowerCorner><gml:upperCorner>55.813367 70.620781</gml:upperCorner></gml:Envelope>"
+      },
       {
-      "@id": "_:N7128dddc27d54a438ee3e1a646c45796"
-      }
-    ]
-    },
-    {
-    "@id": "_:N4761b66fa23e49959049bd484076ebb7",
-    "@type": [
-      "http://www.w3.org/2006/vcard/ns#Organization"
-    ],
-    "http://www.w3.org/2006/vcard/ns#fn": [
-      {
-      "@language": "en",
-      "@value": "European Environment Agency"
-      }
-    ],
-    "http://www.w3.org/2006/vcard/ns#hasAddress": [
-      {
-      "@id": "_:N8b8dbb3d3ef849be94fcf58f1a1cac05"
-      }
-    ],
-    "http://www.w3.org/2006/vcard/ns#hasEmail": [
-      {
-      "@id": "mailto:info@eea.europa.eu"
-      }
-    ],
-    "http://www.w3.org/2006/vcard/ns#hasURL": [
-      {
-      "@id": "http://www.eea.europa.eu"
-      }
-    ]
-    },
-    {
-    "@id": "_:Nf6691a4570cb4a559d92b19a704db130",
-    "@type": [
-      "http://xmlns.com/foaf/0.1/Organization"
-    ],
-    "http://xmlns.com/foaf/0.1/mbox": [
-      {
-      "@id": "mailto:wisesoe.helpdesk@eionet.europa.eu"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-      "@language": "en",
-      "@value": "Tracasa"
-      }
-    ]
-    },
-    {
-    "@id": "_:N7128dddc27d54a438ee3e1a646c45796",
-    "http://www.w3.org/ns/prov#hadPlan": [
-      {
-      "@id": "_:Nde0b43d05d3a4330a4a796f59e589e48"
+      "@type": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "@value": "POLYGON((-62.9951 70.620781,55.813367 70.620781,55.813367 -21.378367,-62.9951 -21.378367,-62.9951 70.620781))"
       }
     ]
     },
@@ -112,7 +118,7 @@
     ],
     "http://data.europa.eu/930/processor": [
       {
-      "@id": "_:Nf6691a4570cb4a559d92b19a704db130"
+      "@id": "_:N835bb2ff339244a0bf731771d31db700"
       }
     ],
     "http://purl.org/dc/terms/accessRights": [
@@ -122,19 +128,19 @@
     ],
     "http://purl.org/dc/terms/conformsTo": [
       {
-      "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+      "@id": "http://www.opengis.net/def/crs/EPSG/0/102100"
       },
       {
       "@id": "http://www.opengis.net/def/crs/EPSG/0/3857"
       },
       {
-      "@id": "http://www.opengeospatial.org/standards/wms"
-      },
-      {
       "@id": "http://www.opengis.net/def/crs/EPSG/0/4326"
       },
       {
-      "@id": "http://www.opengis.net/def/crs/EPSG/0/102100"
+      "@id": "http://www.opengeospatial.org/standards/wms"
+      },
+      {
+      "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
       }
     ],
     "http://purl.org/dc/terms/description": [
@@ -156,12 +162,12 @@
     ],
     "http://purl.org/dc/terms/license": [
       {
-      "@id": "_:N0da1841df72d40188e22ff56dd9843c7"
+      "@id": "_:Nf15cc986a882406c817c1d386cf7ef43"
       }
     ],
     "http://purl.org/dc/terms/spatial": [
       {
-      "@id": "_:N93c82c3519ad4aa899bfcdf756f3848d"
+      "@id": "_:Nf5bb9eaef5834c459c0979f7c1c32797"
       }
     ],
     "http://purl.org/dc/terms/title": [
@@ -180,7 +186,7 @@
     ],
     "http://www.w3.org/ns/dcat#contactPoint": [
       {
-      "@id": "_:N4761b66fa23e49959049bd484076ebb7"
+      "@id": "_:N0c64608498e8400698fa51c0325dbd74"
       }
     ],
     "http://www.w3.org/ns/dcat#endpointDescription": [
@@ -193,20 +199,20 @@
     ],
     "http://www.w3.org/ns/dcat#endpointURL": [
       {
-      "@id": "https://water.discomap.eea.europa.eu/arcgis/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer/WMSServer"
+      "@id": "https://water.discomap.eea.europa.eu/arcgis/rest/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer"
       },
       {
-      "@id": "https://water.discomap.eea.europa.eu/arcgis/rest/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer"
+      "@id": "https://water.discomap.eea.europa.eu/arcgis/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer/WMSServer"
       }
     ],
     "http://www.w3.org/ns/dcat#keyword": [
       {
       "@language": "en",
-      "@value": "Monitoring Site"
+      "@value": "Groundwater body"
       },
       {
       "@language": "en",
-      "@value": "Groundwater body"
+      "@value": "Water Information System for Europe"
       },
       {
       "@language": "en",
@@ -214,7 +220,7 @@
       },
       {
       "@language": "en",
-      "@value": "Water Information System for Europe"
+      "@value": "Monitoring Site"
       }
     ],
     "http://www.w3.org/ns/dcat#servesDataset": [
@@ -224,24 +230,24 @@
     ],
     "http://www.w3.org/ns/dcat#theme": [
       {
-      "@id": "http://www.eionet.europa.eu/gemet/concept/8229"
-      },
-      {
       "@id": "http://www.eionet.europa.eu/gemet/concept/3780"
       },
       {
-      "@id": "http://inspire.ec.europa.eu/theme/ef"
+      "@id": "http://www.eionet.europa.eu/gemet/concept/8229"
+      },
+      {
+      "@id": "http://www.eionet.europa.eu/gemet/concept/5352"
       },
       {
       "@id": "http://www.eionet.europa.eu/gemet/concept/12301"
       },
       {
-      "@id": "http://www.eionet.europa.eu/gemet/concept/5352"
+      "@id": "http://inspire.ec.europa.eu/theme/ef"
       }
     ],
     "http://www.w3.org/ns/prov#wasUsedBy": [
       {
-      "@id": "_:Nb38f94ed65cb4cbea46fb8416dee0c8d"
+      "@id": "_:N8cf8ae64b3be480a88c3c7e1e0fec344"
       }
     ],
     "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": [
@@ -251,32 +257,7 @@
     ]
     },
     {
-    "@id": "_:N93c82c3519ad4aa899bfcdf756f3848d",
-    "http://www.w3.org/ns/dcat#bbox": [
-      {
-      "@type": "http://www.opengis.net/ont/geosparql#wktLiteral",
-      "@value": "POLYGON((-62.9951 70.620781,55.813367 70.620781,55.813367 -21.378367,-62.9951 -21.378367,-62.9951 70.620781))"
-      },
-      {
-      "@type": "http://www.opengis.net/ont/geosparql#gmlLiteral",
-      "@value": "<gml:Envelope srsName=\"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"><gml:lowerCorner>-62.9951 -21.378367</gml:lowerCorner><gml:upperCorner>55.813367 70.620781</gml:upperCorner></gml:Envelope>"
-      }
-    ]
-    },
-    {
-    "@id": "_:N0da1841df72d40188e22ff56dd9843c7",
-    "@type": [
-      "http://purl.org/dc/terms/LicenseDocument"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-      "@language": "en",
-      "@value": "No limitations in the use of this web service."
-      }
-    ]
-    },
-    {
-    "@id": "_:Nd74336e2537c4485ad667b39ea499f82",
+    "@id": "_:Na70eafaaf923420995a42886c3c5cfd3",
     "http://purl.org/dc/terms/description": [
       {
       "@language": "en",
@@ -290,14 +271,33 @@
     ]
     },
     {
-    "@id": "_:Nde0b43d05d3a4330a4a796f59e589e48",
-    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+    "@id": "_:N0c64608498e8400698fa51c0325dbd74",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Organization"
+    ],
+    "http://www.w3.org/2006/vcard/ns#fn": [
       {
-      "@id": "http://inspire.ec.europa.eu/id/citation/ir/reg-976-2009"
+      "@language": "en",
+      "@value": "European Environment Agency"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasAddress": [
+      {
+      "@id": "_:N2f921f31be08404cabb3abbf5f664f9b"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasEmail": [
+      {
+      "@id": "mailto:info@eea.europa.eu"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasURL": [
+      {
+      "@id": "http://www.eea.europa.eu"
       }
     ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.develop/drafts/latest/examples/data-service.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/data-service.rdf"
   }
 ]

@@ -29,12 +29,12 @@
     ],
     "http://purl.org/dc/terms/source": [
       {
-      "@id": "_:N019e0dbbf9c04d83a3530244d0423321"
+      "@id": "_:Nfb3160ab75ca4ed9a2d09d7e04a23f1d"
       }
     ],
     "http://www.w3.org/ns/dcat#contactPoint": [
       {
-      "@id": "_:Na46d0310355244be871707a5b3ca17d3"
+      "@id": "_:N8fb97b2b8b674f0fbf18ca02f84d0401"
       }
     ],
     "http://xmlns.com/foaf/0.1/primaryTopic": [
@@ -44,10 +44,10 @@
     ]
     },
     {
-    "@id": "_:N019e0dbbf9c04d83a3530244d0423321",
+    "@id": "_:Nfb3160ab75ca4ed9a2d09d7e04a23f1d",
     "http://purl.org/dc/terms/conformsTo": [
       {
-      "@id": "_:Ne7084cc30a0d4c2286101cb624808875"
+      "@id": "_:Nad8ab266ce004dd79f277fc5d5ebcfdf"
       }
     ],
     "http://www.w3.org/2011/content#characterEncoding": [
@@ -57,44 +57,7 @@
     ]
     },
     {
-    "@id": "_:Na46d0310355244be871707a5b3ca17d3",
-    "@type": [
-      "http://www.w3.org/2006/vcard/ns#Organization"
-    ],
-    "http://www.w3.org/2006/vcard/ns#fn": [
-      {
-      "@language": "en",
-      "@value": "European Environment Agency"
-      }
-    ],
-    "http://www.w3.org/2006/vcard/ns#hasAddress": [
-      {
-      "@id": "_:N94681ace67b44427929219a8521eca62"
-      }
-    ],
-    "http://www.w3.org/2006/vcard/ns#hasEmail": [
-      {
-      "@id": "mailto:sdi@eea.europa.eu"
-      }
-    ]
-    },
-    {
-    "@id": "_:Ne7084cc30a0d4c2286101cb624808875",
-    "http://purl.org/dc/terms/title": [
-      {
-      "@language": "en",
-      "@value": "ISO 19119/19139"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#versionInfo": [
-      {
-      "@language": "en",
-      "@value": "1.0"
-      }
-    ]
-    },
-    {
-    "@id": "_:N94681ace67b44427929219a8521eca62",
+    "@id": "_:N4c532bd140564c7082c4e06aa3810460",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Address"
     ],
@@ -123,8 +86,45 @@
       "@value": "Kongens Nytorv 6"
       }
     ]
+    },
+    {
+    "@id": "_:N8fb97b2b8b674f0fbf18ca02f84d0401",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Organization"
+    ],
+    "http://www.w3.org/2006/vcard/ns#fn": [
+      {
+      "@language": "en",
+      "@value": "European Environment Agency"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasAddress": [
+      {
+      "@id": "_:N4c532bd140564c7082c4e06aa3810460"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasEmail": [
+      {
+      "@id": "mailto:sdi@eea.europa.eu"
+      }
+    ]
+    },
+    {
+    "@id": "_:Nad8ab266ce004dd79f277fc5d5ebcfdf",
+    "http://purl.org/dc/terms/title": [
+      {
+      "@language": "en",
+      "@value": "ISO 19119/19139"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+      "@language": "en",
+      "@value": "1.0"
+      }
+    ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.develop/drafts/latest/examples/catalogue-record.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/catalogue-record.rdf"
   }
 ]

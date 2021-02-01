@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:N3ce629ca7e6844ea9750ab018a5d07b7",
+    "@id": "_:Na661c4832e984337ba6ad47230e39b41",
     "@type": [
       "http://purl.org/dc/terms/PeriodOfTime"
     ],
@@ -20,6 +20,6 @@
     ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.develop/drafts/latest/examples/period-of-time.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/period-of-time.rdf"
   }
 ]

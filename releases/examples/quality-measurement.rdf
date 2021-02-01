@@ -21,7 +21,7 @@
     <dqv:hasQualityMeasurement>
       <dqv:QualityMeasurement>
         <dqv:isMeasurementOf rdf:resource="http://data.europa.eu/930/spatialResolutionAsDistance"/>
-        <sdmx-attribute:unitMeasure rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/metre"/>
+        <sdmx-attribute:unitMeasure rdf:resource="http://www.qudt.org/vocab/unit/M"/>
         <dqv:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100</dqv:value>
       </dqv:QualityMeasurement>
     </dqv:hasQualityMeasurement>
@@ -31,7 +31,7 @@
     <dqv:hasQualityMeasurement>
       <dqv:QualityMeasurement>
         <dqv:isMeasurementOf rdf:resource="http://data.europa.eu/930/spatialResolutionAsAngularDistance"/>
-        <sdmx-attribute:unitMeasure rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/degree"/>
+        <sdmx-attribute:unitMeasure rdf:resource="http://www.qudt.org/vocab/unit/DEG"/>
         <dqv:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20</dqv:value>
       </dqv:QualityMeasurement>
     </dqv:hasQualityMeasurement>
@@ -41,7 +41,7 @@
     <dqv:hasQualityMeasurement>
       <dqv:QualityMeasurement>
         <dqv:isMeasurementOf rdf:resource="http://data.europa.eu/930/spatialResolutionAsVerticalDistance"/>
-        <sdmx-attribute:unitMeasure rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/metre"/>
+        <sdmx-attribute:unitMeasure rdf:resource="http://www.qudt.org/vocab/unit/M"/>
         <dqv:value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</dqv:value>
       </dqv:QualityMeasurement>
     </dqv:hasQualityMeasurement>

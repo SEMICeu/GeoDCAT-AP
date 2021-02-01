@@ -208,6 +208,14 @@ var respecConfig = {
         "publisher":"European Commission, Joint Research Centre (JRC)",
         "date": "2019"
       },
+      "LOCN-MAPPING": {
+        "href": "https://semiceu.github.io/locn-mapping/",
+        "title": "LOCN mappings to vCard and Schema.org",
+        "authors": ["Andrea Perego"],
+        "status": "Working Draft",
+        "publisher":"European Commission, Joint Research Centre (JRC)",
+        "date": "2019"
+      },
       "CLD-FREQ": {
         "href":"http://dublincore.org/groups/collections/frequency/",
         "title":"Dublin Core Collection Description Frequency Vocabulary",
@@ -696,7 +704,7 @@ var respecConfig = {
       "CONNEG": {
         "href":"http://httpd.apache.org/docs/current/content-negotiation.html",
         "title":"Apache Web Server: content negotiation",
-        "publisher":"Apace Foundation"
+        "publisher":"Apache Foundation"
       },
       "ODRS": {
         "authors": ["Leigh Dodds"],
@@ -806,7 +814,7 @@ var respecConfig = {
         "title":"OGC® Sensor Planning Service Implementation Standard ",
         "publisher":"OGC",
         "date":"28 March 2011",
-        "author":["Ingo Simonis","Johannes Echterhoff"]
+        "authors":["Ingo Simonis","Johannes Echterhoff"]
       },
       "WCS": {
         "href":"http://www.ogc.org/standards/wcs",
@@ -814,11 +822,38 @@ var respecConfig = {
         "publisher":"OGC",
         "date":"16 August 2018"
       },
+      "QUDT-UNITS": {
+        "href":"http://www.qudt.org/vocab/unit",
+        "title":"QUDT Units Vocabulary",
+        "publisher":"QUDT.org",
+      },
+      "QUDT-UNITS-21": {
+        "href":"http://www.qudt.org/2.1/vocab/unit",
+        "title":"QUDT Units Vocabulary. Version 2.1",
+        "publisher":"QUDT.org",
+        "date":"28 January 2021",
+        "authors":["Ralph Hodgson"]
+      },
       "OM": {
         "href":"http://www.wurvoc.org/vocabularies/om-1.8/",
         "title":"Ontology of units of Measure (OM)",
         "publisher":"Wageningen UR",
-        "date":"4 June 2018"
+        "date":"4 June 2018",
+        "authors":["Hajo Rijgersberg", "Mark van Assem", "Don Willems", "Xin-Ying Ren", "Mari Wigham", "Jeen Broekstra", "Jan Top"]
+      },
+      "OM-2": {
+        "href":"http://www.ontology-of-units-of-measure.org/resource/om-2/",
+        "title":"Ontology of units of Measure (OM). Version 2",
+        "publisher":"Wageningen UR",
+        "date":"28 December 2017",
+        "authors":["Hajo Rijgersberg", "Don Willems", "Xin-Ying Ren", "Mari Wigham", "Jan Top"]
+      },
+      "OM-18": {
+        "href":"http://www.wurvoc.org/vocabularies/om-1.8/",
+        "title":"Ontology of units of Measure (OM). Version 1.8",
+        "publisher":"Wageningen UR",
+        "date":"4 June 2018",
+        "authors":["Hajo Rijgersberg", "Mark van Assem", "Don Willems", "Xin-Ying Ren", "Mari Wigham", "Jeen Broekstra", "Jan Top"]
       },
       "GeoSPARQL11": {
         "href": "https://github.com/opengeospatial/ogc-geosparql/1.1",

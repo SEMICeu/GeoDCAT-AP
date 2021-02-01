@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:N01ec7aa6a3254f6b8267919af9025f0b",
+    "@id": "_:N7ec2167e12db4c2aa29cfe445f0b56a3",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Organization"
     ],
@@ -14,7 +14,7 @@
     ],
     "http://www.w3.org/2006/vcard/ns#hasAddress": [
       {
-      "@id": "_:Nb9fade50e8bc4d888e1d9f5b5c61c528"
+      "@id": "_:Nfc9a4cf9b0f44ca391e1222f944924b5"
       }
     ],
     "http://www.w3.org/2006/vcard/ns#hasEmail": [
@@ -29,7 +29,7 @@
     ]
     },
     {
-    "@id": "_:Nb9fade50e8bc4d888e1d9f5b5c61c528",
+    "@id": "_:Nfc9a4cf9b0f44ca391e1222f944924b5",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Address"
     ],
@@ -60,6 +60,6 @@
     ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.develop/drafts/latest/examples/kind.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/kind.rdf"
   }
 ]

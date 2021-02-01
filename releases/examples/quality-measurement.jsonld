@@ -2,7 +2,59 @@
   {
   "@graph": [
     {
-    "@id": "_:N4194cd03555d4859891c00382b211f4e",
+    "@id": "_:N1e523b6efe5c4e0d834a11ee0c3c4622",
+    "@type": [
+      "http://www.w3.org/ns/dqv#QualityMeasurement"
+    ],
+    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
+      {
+      "@id": "http://www.qudt.org/vocab/unit/DEG"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#isMeasurementOf": [
+      {
+      "@id": "http://data.europa.eu/930/spatialResolutionAsAngularDistance"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#value": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@value": "20"
+      }
+    ]
+    },
+    {
+    "@id": "https://some.catalogue/resource/c34567",
+    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
+      {
+      "@id": "_:N1e523b6efe5c4e0d834a11ee0c3c4622"
+      }
+    ]
+    },
+    {
+    "@id": "_:Nff3416651b9b46bfbd9ccfc54f328b53",
+    "@type": [
+      "http://www.w3.org/ns/dqv#QualityMeasurement"
+    ],
+    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
+      {
+      "@id": "http://www.qudt.org/vocab/unit/M"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#isMeasurementOf": [
+      {
+      "@id": "http://data.europa.eu/930/spatialResolutionAsVerticalDistance"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#value": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@value": "10"
+      }
+    ]
+    },
+    {
+    "@id": "_:N721387ead55a40e29f65f4690229f8bb",
     "@type": [
       "http://www.w3.org/ns/dqv#QualityMeasurement"
     ],
@@ -22,48 +74,26 @@
     "@id": "https://some.catalogue/resource/d45678",
     "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
       {
-      "@id": "_:N345ac53ee41a4bc5b2720c2029e49bb9"
+      "@id": "_:Nff3416651b9b46bfbd9ccfc54f328b53"
       }
     ]
     },
     {
-    "@id": "_:N345ac53ee41a4bc5b2720c2029e49bb9",
-    "@type": [
-      "http://www.w3.org/ns/dqv#QualityMeasurement"
-    ],
-    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
-      {
-      "@id": "http://www.wurvoc.org/vocabularies/om-1.8/metre"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#isMeasurementOf": [
-      {
-      "@id": "http://data.europa.eu/930/spatialResolutionAsVerticalDistance"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#value": [
-      {
-      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-      "@value": "10"
-      }
-    ]
-    },
-    {
-    "@id": "https://some.catalogue/resource/c34567",
+    "@id": "https://some.catalogue/resource/a12345",
     "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
       {
-      "@id": "_:N6bfd0199e18a45ac9035f866bd6b0943"
+      "@id": "_:N721387ead55a40e29f65f4690229f8bb"
       }
     ]
     },
     {
-    "@id": "_:N6e3a7627fbf44180a3b5b969c847dda1",
+    "@id": "_:Nf2f8b8e664264c7692b311e4a8deab24",
     "@type": [
       "http://www.w3.org/ns/dqv#QualityMeasurement"
     ],
     "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
       {
-      "@id": "http://www.wurvoc.org/vocabularies/om-1.8/metre"
+      "@id": "http://www.qudt.org/vocab/unit/M"
       }
     ],
     "http://www.w3.org/ns/dqv#isMeasurementOf": [
@@ -79,44 +109,14 @@
     ]
     },
     {
-    "@id": "_:N6bfd0199e18a45ac9035f866bd6b0943",
-    "@type": [
-      "http://www.w3.org/ns/dqv#QualityMeasurement"
-    ],
-    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
-      {
-      "@id": "http://www.wurvoc.org/vocabularies/om-1.8/degree"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#isMeasurementOf": [
-      {
-      "@id": "http://data.europa.eu/930/spatialResolutionAsAngularDistance"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#value": [
-      {
-      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-      "@value": "20"
-      }
-    ]
-    },
-    {
-    "@id": "https://some.catalogue/resource/a12345",
-    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
-      {
-      "@id": "_:N4194cd03555d4859891c00382b211f4e"
-      }
-    ]
-    },
-    {
     "@id": "https://some.catalogue/resource/b23456",
     "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
       {
-      "@id": "_:N6e3a7627fbf44180a3b5b969c847dda1"
+      "@id": "_:Nf2f8b8e664264c7692b311e4a8deab24"
       }
     ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.develop/drafts/latest/examples/quality-measurement.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/quality-measurement.rdf"
   }
 ]

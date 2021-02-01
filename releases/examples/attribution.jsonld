@@ -5,12 +5,28 @@
     "@id": "https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00",
     "http://www.w3.org/ns/prov#qualifiedAttribution": [
       {
-      "@id": "_:Nc95343d0589840aaa0f9d0290fa8462f"
+      "@id": "_:N08ae9187ad4d4e9cb1ef73673467457c"
       }
     ]
     },
     {
-    "@id": "_:N45e68c63786247cc83572dd0050c8b1f",
+    "@id": "_:N08ae9187ad4d4e9cb1ef73673467457c",
+    "@type": [
+      "http://www.w3.org/ns/prov#Attribution"
+    ],
+    "http://www.w3.org/ns/dcat#hadRole": [
+      {
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact"
+      }
+    ],
+    "http://www.w3.org/ns/prov#agent": [
+      {
+      "@id": "http://publications.europa.eu/resource/authority/corporate-body/EEA"
+      }
+    ]
+    },
+    {
+    "@id": "_:N0b1e82f835164f1f8cb030fbc0c04f8b",
     "@type": [
       "http://www.w3.org/ns/locn#Address"
     ],
@@ -41,30 +57,14 @@
     ]
     },
     {
-    "@id": "_:Nc95343d0589840aaa0f9d0290fa8462f",
-    "@type": [
-      "http://www.w3.org/ns/prov#Attribution"
-    ],
-    "http://www.w3.org/ns/dcat#hadRole": [
-      {
-      "@id": "http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact"
-      }
-    ],
-    "http://www.w3.org/ns/prov#agent": [
-      {
-      "@id": "http://publications.europa.eu/resource/authority/corporate-body/EEA"
-      }
-    ]
-    },
-    {
     "@id": "http://publications.europa.eu/resource/authority/corporate-body/EEA",
     "@type": [
-      "http://www.w3.org/ns/prov#Organization",
-      "http://xmlns.com/foaf/0.1/Organization"
+      "http://xmlns.com/foaf/0.1/Organization",
+      "http://www.w3.org/ns/prov#Organization"
     ],
     "http://www.w3.org/ns/locn#address": [
       {
-      "@id": "_:N45e68c63786247cc83572dd0050c8b1f"
+      "@id": "_:N0b1e82f835164f1f8cb030fbc0c04f8b"
       }
     ],
     "http://xmlns.com/foaf/0.1/mbox": [
@@ -80,6 +80,6 @@
     ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.develop/drafts/latest/examples/attribution.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/attribution.rdf"
   }
 ]

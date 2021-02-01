@@ -2,7 +2,30 @@
   {
   "@graph": [
     {
-    "@id": "_:N3f00f52682424f35ac60ca2a0be052b1",
+    "@id": "_:N4ea582647be3451cacf3db09222b7d97",
+    "@type": [
+      "http://purl.org/dc/terms/Location",
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://purl.org/dc/terms/identifier": [
+      {
+      "@value": "202"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+      "@id": "_:N9a0f68ba48a14ec1809f4c0be62d0ab1"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+      "@language": "en",
+      "@value": "Sub-Saharan Africa"
+      }
+    ]
+    },
+    {
+    "@id": "_:N9a0f68ba48a14ec1809f4c0be62d0ab1",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#ConceptScheme"
     ],
@@ -18,31 +41,8 @@
       "@value": "UNSD - Methodology - Standard country or area codes for statistical use (M49)"
       }
     ]
-    },
-    {
-    "@id": "_:N9c54ea8b28c946e9939a8eabb467a2b5",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept",
-      "http://purl.org/dc/terms/Location"
-    ],
-    "http://purl.org/dc/terms/identifier": [
-      {
-      "@value": "202"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#inScheme": [
-      {
-      "@id": "_:N3f00f52682424f35ac60ca2a0be052b1"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-      "@language": "en",
-      "@value": "Sub-Saharan Africa"
-      }
-    ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.develop/drafts/latest/examples/location-gn.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/location-gn.rdf"
   }
 ]
