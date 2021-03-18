@@ -87,11 +87,11 @@
     ]
     },
     {
-    "@id": "http://purl.org/dc/terms/provenance",
+    "@id": "http://www.w3.org/ns/locn#Address",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used to specify a narrative description of \"lineage\", as defined in ISO 19155 and INSPIRE."
+      "@value": "In GeoDCAT-AP, this class MAY be used to specify a postal address of an Agent, with a role different from \"contact point\"."
       }
     ]
     },
@@ -118,10 +118,10 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-      "@id": "https://www.iso.org/standard/53798.html"
+      "@id": "http://data.europa.eu/930/"
       },
       {
-      "@id": "http://data.europa.eu/930/"
+      "@id": "https://www.iso.org/standard/53798.html"
       },
       {
       "@id": "https://www.iso.org/standard/26020.html"
@@ -177,11 +177,11 @@
     ]
     },
     {
-    "@id": "http://www.w3.org/ns/dcat#DataService",
+    "@id": "http://www.w3.org/2004/02/skos/core#notation",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this class is used to express all the information that, in ISO 19155 and INSPIRE, is specified on spatial data services."
+      "@value": "In GeoDCAT-AP, this property is used as in DCAT-AP."
       }
     ]
     },
@@ -195,56 +195,11 @@
     ]
     },
     {
-    "@id": "http://data.europa.eu/930/principalInvestigator",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-      "@language": "en",
-      "@value": "Key party responsible for gathering information and conducting research (ISO 19115:2003)."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-      "@id": "http://data.europa.eu/eli/reg/2008/1205/2008-12-24"
-      },
-      {
-      "@id": "http://data.europa.eu/930/"
-      },
-      {
-      "@id": "https://www.iso.org/standard/53798.html"
-      },
-      {
-      "@id": "https://www.iso.org/standard/26020.html"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-      "@language": "en",
-      "@value": "Principal investigator"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-      "@id": "http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-      "@value": "stable"
-      }
-    ],
+    "@id": "http://www.w3.org/ns/dcat#qualifiedRelation",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."
-      }
-    ],
-    "http://www.w3.org/ns/adms#status": [
-      {
-      "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."
       }
     ]
     },
@@ -258,6 +213,39 @@
     ]
     },
     {
+    "@id": "_:N59bda498f3194fb58beff5d5f5c97773",
+    "@type": [
+      "http://www.w3.org/ns/adms#AssetDistribution"
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+      "@id": "http://publications.europa.eu/resource/authority/file-type/HTML"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+      "@language": "en",
+      "@value": "HTML"
+      }
+    ],
+    "http://www.w3.org/ns/adms#representationTechnique": [
+      {
+      "@id": "http://purl.org/adms/representationtechnique/HumanLanguage"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#downloadURL": [
+      {
+      "@id": "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#mediaType": [
+      {
+      "@type": "http://purl.org/dc/terms/IMT",
+      "@value": "text/html"
+      }
+    ]
+    },
+    {
     "@id": "http://www.w3.org/ns/dcat#catalog",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
@@ -267,11 +255,11 @@
     ]
     },
     {
-    "@id": "http://spdx.org/rdf/terms#checksumValue",
+    "@id": "http://purl.org/dc/terms/MediaType",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."
+      "@value": "In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP."
       }
     ]
     },
@@ -294,11 +282,11 @@
     ]
     },
     {
-    "@id": "http://www.w3.org/ns/dcat#packageFormat",
+    "@id": "http://www.w3.org/ns/dcat#contactPoint",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."
+      "@value": "In GeoDCAT-AP, this property corresponds to responsible party role \"point of contact\" defined in ISO 19115 and INSPIRE."
       }
     ]
     },
@@ -330,11 +318,11 @@
     ]
     },
     {
-    "@id": "http://www.w3.org/ns/locn#Address",
+    "@id": "http://purl.org/dc/terms/provenance",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this class MAY be used to specify a postal address of an Agent, with a role different from \"contact point\"."
+      "@value": "In GeoDCAT-AP, this property is used to specify a narrative description of \"lineage\", as defined in ISO 19155 and INSPIRE."
       }
     ]
     },
@@ -357,56 +345,11 @@
     ]
     },
     {
-    "@id": "http://data.europa.eu/930/custodian",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-      "@language": "en",
-      "@value": "Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource (ISO 19115:2003)."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-      "@id": "http://data.europa.eu/930/"
-      },
-      {
-      "@id": "https://www.iso.org/standard/53798.html"
-      },
-      {
-      "@id": "http://data.europa.eu/eli/reg/2008/1205/2008-12-24"
-      },
-      {
-      "@id": "https://www.iso.org/standard/26020.html"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-      "@language": "en",
-      "@value": "Custodian"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-      "@id": "http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-      "@value": "stable"
-      }
-    ],
+    "@id": "http://www.w3.org/ns/org#memberOf",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."
-      }
-    ],
-    "http://www.w3.org/ns/adms#status": [
-      {
-      "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      "@value": "In GeoDCAT-AP, this property is used to specify the affiliation of an Agent, when the role is different from \"point of contact\"."
       }
     ]
     },
@@ -429,27 +372,20 @@
     ]
     },
     {
-    "@id": "https://andrea-perego.name/foaf/#me",
-    "@type": [
-      "http://xmlns.com/foaf/0.1/Person"
-    ],
-    "http://www.w3.org/2002/07/owl#sameAs": [
+    "@id": "http://www.w3.org/2006/vcard/ns#organization-name",
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
-      "@id": "https://orcid.org/0000-0001-9300-2694"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-      "@value": "Andrea Perego"
+      "@language": "en",
+      "@value": "In GeoDCAT-AP, this property is used to specify the affiliation of an Agent, but only when having the role of \"point of contact\"."
       }
     ]
     },
     {
-    "@id": "http://www.w3.org/ns/adms#versionNotes",
+    "@id": "http://www.w3.org/ns/dcat#record",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used as in DCAT-AP."
+      "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."
       }
     ]
     },
@@ -526,55 +462,16 @@
     ]
     },
     {
-    "@id": "_:N5ac3c1775f5547059264a41df8ed91bf",
-    "@type": [
-      "http://www.w3.org/ns/adms#AssetDistribution"
-    ],
-    "http://purl.org/dc/terms/format": [
-      {
-      "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"
-      },
-      {
-      "@id": "http://www.w3.org/ns/formats/data/Turtle"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-      "@language": "en",
-      "@value": "Turtle"
-      }
-    ],
-    "http://www.w3.org/ns/adms#representationTechnique": [
-      {
-      "@id": "http://purl.org/adms/representationtechnique/RDFSchema"
-      },
-      {
-      "@id": "http://purl.org/adms/representationtechnique/OWL"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#downloadURL": [
-      {
-      "@id": "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.ttl"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#mediaType": [
-      {
-      "@type": "http://purl.org/dc/terms/IMT",
-      "@value": "text/turtle"
-      }
-    ]
-    },
-    {
-    "@id": "http://www.w3.org/ns/adms#sample",
+    "@id": "http://www.w3.org/2006/vcard/ns#hasTelephone",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used as in DCAT-AP."
+      "@value": "In GeoDCAT-AP, this property is used to specify the phone number of an Agent, but only when having the role of \"point of contact\"."
       }
     ]
     },
     {
-    "@id": "http://www.w3.org/ns/dcat#accessURL",
+    "@id": "http://www.w3.org/ns/dcat#downloadURL",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
@@ -583,11 +480,49 @@
     ]
     },
     {
-    "@id": "http://purl.org/dc/terms/Standard",
+    "@id": "_:Nff8ec2a4c69a4ffc9bbd9431b3643eda",
+    "@type": [
+      "http://www.w3.org/ns/adms#AssetDistribution"
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+      "@id": "http://www.w3.org/ns/formats/data/JSON-LD"
+      },
+      {
+      "@id": "http://publications.europa.eu/resource/authority/file-type/JSON_LD"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+      "@language": "en",
+      "@value": "JSON-LD"
+      }
+    ],
+    "http://www.w3.org/ns/adms#representationTechnique": [
+      {
+      "@id": "http://purl.org/adms/representationtechnique/OWL"
+      },
+      {
+      "@id": "http://purl.org/adms/representationtechnique/RDFSchema"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#downloadURL": [
+      {
+      "@id": "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.jsonld"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#mediaType": [
+      {
+      "@id": "https://www.iana.org/assignments/media-types/application/ld+json"
+      }
+    ]
+    },
+    {
+    "@id": "http://www.w3.org/2006/vcard/ns#street-address",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP, and to express all the information that, in ISO 19155 and INSPIRE, is specified on \"metadata standard\", \"reference system\", \"reference specification\" (for conformity test results)."
+      "@value": "In GeoDCAT-AP, this property is used to specify the street name and civic number of a postal address of an Agent, but only when having the role of \"point of contact\"."
       }
     ]
     },
@@ -601,20 +536,20 @@
     ]
     },
     {
-    "@id": "http://www.w3.org/2004/02/skos/core#notation",
+    "@id": "http://www.w3.org/ns/dcat#DataService",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used as in DCAT-AP."
+      "@value": "In GeoDCAT-AP, this class is used to express all the information that, in ISO 19155 and INSPIRE, is specified on spatial data services."
       }
     ]
     },
     {
-    "@id": "http://purl.org/dc/terms/title",
+    "@id": "http://purl.org/dc/terms/ProvenanceStatement",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property corresponds to the notion of \"resource title\", as defined in ISO 19115 and INSPIRE."
+      "@value": "In GeoDCAT-AP, this class is used to express all the information that, in ISO 19155 and INSPIRE, is specified on \"lineage\"."
       }
     ]
     },
@@ -637,6 +572,15 @@
     ]
     },
     {
+    "@id": "http://www.w3.org/ns/dcat#compressFormat",
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+      "@language": "en",
+      "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."
+      }
+    ]
+    },
+    {
     "@id": "http://www.w3.org/ns/prov#wasUsedBy",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
@@ -646,11 +590,11 @@
     ]
     },
     {
-    "@id": "http://www.w3.org/ns/dcat#Distribution",
+    "@id": "http://www.w3.org/2004/02/skos/core#inScheme",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this class is used as in DCAT and in DCAT-AP."
+      "@value": "In GeoDCAT-AP, this property is used to link an item to a controlled vocabulary, gazetteer, or register of reference systems."
       }
     ]
     },
@@ -682,6 +626,15 @@
     ]
     },
     {
+    "@id": "http://purl.org/dc/terms/Standard",
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+      "@language": "en",
+      "@value": "In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP, and to express all the information that, in ISO 19155 and INSPIRE, is specified on \"metadata standard\", \"reference system\", \"reference specification\" (for conformity test results)."
+      }
+    ]
+    },
+    {
     "@id": "http://purl.org/dc/terms/LicenseDocument",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
@@ -709,29 +662,65 @@
     ]
     },
     {
-    "@id": "http://www.w3.org/ns/dcat#qualifiedRelation",
+    "@id": "http://data.europa.eu/930/principalInvestigator",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+      "@language": "en",
+      "@value": "Key party responsible for gathering information and conducting research (ISO 19115:2003)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+      "@id": "http://data.europa.eu/eli/reg/2008/1205/2008-12-24"
+      },
+      {
+      "@id": "http://data.europa.eu/930/"
+      },
+      {
+      "@id": "https://www.iso.org/standard/26020.html"
+      },
+      {
+      "@id": "https://www.iso.org/standard/53798.html"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+      "@language": "en",
+      "@value": "Principal investigator"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+      "@value": "stable"
+      }
+    ],
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."
+      "@value": "In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."
+      }
+    ],
+    "http://www.w3.org/ns/adms#status": [
+      {
+      "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
       }
     ]
     },
     {
-    "@id": "http://www.w3.org/ns/dcat#bbox",
+    "@id": "http://purl.org/dc/terms/type",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource (as a Catalogue, Data Service, Dataset), by using a bounding box. As such it is one of the properties used to represent the notion of \"geographic location / geographic bounding box\", as defined in ISO 19115 and INSPIRE."
-      }
-    ]
-    },
-    {
-    "@id": "http://xmlns.com/foaf/0.1/workplaceHomepage",
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
-      {
-      "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used to specify the work homepage of an Agent, when the role is different from \"point of contact\"."
+      "@value": "In GeoDCAT-AP, this property it is used as in DCAT-AP. Moreover, it corresponds to the notions of \"resource type\", \"service category\", \"service type\", and \"conformance degree\", as defined in ISO 19115 and INSPIRE. Finally, it is used to specify the type of reference system (spatial or temporal) by using the relevant URIs from the glossary hosted on the INSPIRE Registry."
       }
     ]
     },
@@ -741,6 +730,44 @@
       {
       "@language": "en",
       "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."
+      }
+    ]
+    },
+    {
+    "@id": "_:Nce3316767a5144929f6be9c9ec61fe64",
+    "@type": [
+      "http://www.w3.org/ns/adms#AssetDistribution"
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+      "@id": "http://www.w3.org/ns/formats/data/RDF_XML"
+      },
+      {
+      "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_XML"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+      "@language": "en",
+      "@value": "RDF/XML"
+      }
+    ],
+    "http://www.w3.org/ns/adms#representationTechnique": [
+      {
+      "@id": "http://purl.org/adms/representationtechnique/OWL"
+      },
+      {
+      "@id": "http://purl.org/adms/representationtechnique/RDFSchema"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#downloadURL": [
+      {
+      "@id": "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.rdf"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#mediaType": [
+      {
+      "@id": "https://www.iana.org/assignments/media-types/application/rdf+xml"
       }
     ]
     },
@@ -761,10 +788,10 @@
       "@id": "http://data.europa.eu/930/"
       },
       {
-      "@id": "https://www.iso.org/standard/53798.html"
+      "@id": "https://www.iso.org/standard/26020.html"
       },
       {
-      "@id": "https://www.iso.org/standard/26020.html"
+      "@id": "https://www.iso.org/standard/53798.html"
       },
       {
       "@id": "http://data.europa.eu/eli/reg/2008/1205/2008-12-24"
@@ -795,6 +822,15 @@
     "http://www.w3.org/ns/adms#status": [
       {
       "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
+      }
+    ]
+    },
+    {
+    "@id": "http://spdx.org/rdf/terms#Checksum",
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+      "@language": "en",
+      "@value": "In GeoDCAT-AP, this class is used as in DCAT-AP."
       }
     ]
     },
@@ -835,11 +871,11 @@
     ]
     },
     {
-    "@id": "http://www.w3.org/ns/dqv#isMeasurementOf",
+    "@id": "http://purl.org/dc/terms/relation",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used to specify the type of spatial resolution being described, by taking as object one of the following instances of dqv:Metric: geodcatap:spatialResolutionAsScale, geodcatap:spatialResolutionAsDistance, geodcatap:spatialResolutionAsAngularDistance, geodcatap:spatialResolutionAsVerticalDistance."
+      "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."
       }
     ]
     },
@@ -849,99 +885,6 @@
       {
       "@language": "en",
       "@value": "In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP to specify, via a qualified relationship, an agent role not supported in the reference vocabularies. In particular, in GeoDCAT-AP it provides a general mechanism to express all the responbile party roles defined in ISO 10115 and INSPIRE."
-      }
-    ]
-    },
-    {
-    "@id": "_:N4191b42577ce4a71afbe28ae62a3a2c6",
-    "@type": [
-      "http://www.w3.org/ns/adms#AssetDistribution"
-    ],
-    "http://purl.org/dc/terms/format": [
-      {
-      "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_XML"
-      },
-      {
-      "@id": "http://www.w3.org/ns/formats/data/RDF_XML"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-      "@language": "en",
-      "@value": "RDF/XML"
-      }
-    ],
-    "http://www.w3.org/ns/adms#representationTechnique": [
-      {
-      "@id": "http://purl.org/adms/representationtechnique/OWL"
-      },
-      {
-      "@id": "http://purl.org/adms/representationtechnique/RDFSchema"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#downloadURL": [
-      {
-      "@id": "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.rdf"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#mediaType": [
-      {
-      "@type": "http://purl.org/dc/terms/IMT",
-      "@value": "application/rdf+xml"
-      }
-    ]
-    },
-    {
-    "@id": "http://data.europa.eu/930/resourceProvider",
-    "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-      "@language": "en",
-      "@value": "Party that supplies the resource (ISO 19115:2003)."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-      {
-      "@id": "https://www.iso.org/standard/53798.html"
-      },
-      {
-      "@id": "http://data.europa.eu/930/"
-      },
-      {
-      "@id": "https://www.iso.org/standard/26020.html"
-      },
-      {
-      "@id": "http://data.europa.eu/eli/reg/2008/1205/2008-12-24"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-      "@language": "en",
-      "@value": "Resource provider"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-      "@id": "http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider"
-      }
-    ],
-    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
-      {
-      "@value": "stable"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
-      {
-      "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."
-      }
-    ],
-    "http://www.w3.org/ns/adms#status": [
-      {
-      "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
       }
     ]
     },
@@ -976,16 +919,16 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-      "@id": "http://data.europa.eu/eli/reg/2008/1205/2008-12-24"
+      "@id": "https://www.iso.org/standard/26020.html"
       },
       {
-      "@id": "https://www.iso.org/standard/53798.html"
+      "@id": "http://data.europa.eu/eli/reg/2008/1205/2008-12-24"
       },
       {
       "@id": "http://data.europa.eu/930/"
       },
       {
-      "@id": "https://www.iso.org/standard/26020.html"
+      "@id": "https://www.iso.org/standard/53798.html"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1028,11 +971,11 @@
     ]
     },
     {
-    "@id": "http://purl.org/dc/terms/MediaType",
+    "@id": "http://spdx.org/rdf/terms#checksumValue",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this class is used as in DCAT and DCAT-AP."
+      "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."
       }
     ]
     },
@@ -1046,6 +989,15 @@
     ]
     },
     {
+    "@id": "http://www.w3.org/ns/dcat#bbox",
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+      "@language": "en",
+      "@value": "In GeoDCAT-AP, this property is used as in DCAT and in DCAT-AP, to specify the spatial coverage of a resource (as a Catalogue, Data Service, Dataset), by using a bounding box. As such it is one of the properties used to represent the notion of \"geographic location / geographic bounding box\", as defined in ISO 19115 and INSPIRE."
+      }
+    ]
+    },
+    {
     "@id": "http://www.w3.org/ns/locn#address",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
@@ -1055,7 +1007,7 @@
     ]
     },
     {
-    "@id": "http://www.w3.org/ns/dcat#downloadURL",
+    "@id": "http://www.w3.org/ns/dcat#accessURL",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
@@ -1064,11 +1016,11 @@
     ]
     },
     {
-    "@id": "http://www.w3.org/ns/dcat#compressFormat",
+    "@id": "http://www.w3.org/ns/dqv#QualityMeasurement",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."
+      "@value": "In GeoDCAT-AP, this class corresponds to the notion of \"spatial resolution\", as defined in INSPIRE, ISO 19115:2003, and ISO 19115-1:2014."
       }
     ]
     },
@@ -1093,19 +1045,19 @@
     ],
     "http://purl.org/dc/terms/conformsTo": [
       {
+      "@id": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements"
+      },
+      {
+      "@id": "http://data.europa.eu/r5r/"
+      },
+      {
       "@id": "http://data.europa.eu/eli/reg/2008/1205/2008-12-24"
       },
       {
       "@id": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/document/change-and-release-management-policy-dcat-ap"
       },
       {
-      "@id": "http://data.europa.eu/r5r/"
-      },
-      {
       "@id": "https://www.w3.org/TR/vocab-dcat-2/"
-      },
-      {
-      "@id": "https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/document/process-and-methodology-developing-semantic-agreements"
       }
     ],
     "http://purl.org/dc/terms/created": [
@@ -1116,7 +1068,7 @@
     ],
     "http://purl.org/dc/terms/creator": [
       {
-      "@id": "_:N37af0c8c49eb48938dddb6a0426baff8"
+      "@id": "_:N614e93d773d34e5080a3fe5c82423293"
       }
     ],
     "http://purl.org/dc/terms/dateCopyrighted": [
@@ -1145,7 +1097,7 @@
     "http://purl.org/dc/terms/modified": [
       {
       "@type": "http://www.w3.org/2001/XMLSchema#date",
-      "@value": "2020-12-21"
+      "@value": "2021-03-18"
       }
     ],
     "http://purl.org/dc/terms/publisher": [
@@ -1166,21 +1118,21 @@
     ],
     "http://purl.org/dc/terms/type": [
       {
-      "@id": "http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"
+      "@id": "http://publications.europa.eu/resource/authority/asset-classification/c_89b4bdb7"
       },
       {
       "@id": "http://publications.europa.eu/resource/authority/dataset-type/APROF"
       },
       {
-      "@id": "http://publications.europa.eu/resource/authority/asset-classification/c_89b4bdb7"
+      "@id": "http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY"
       }
     ],
     "http://purl.org/ontology/bibo/editor": [
       {
-      "@id": "https://andrea-perego.name/foaf/#me"
+      "@id": "_:N00ab271c7e1a48cf87ab2a5d9ee275ad"
       },
       {
-      "@id": "_:N148ac9b7f7c34fdda0609a3433992888"
+      "@id": "https://andrea-perego.name/foaf/#me"
       }
     ],
     "http://purl.org/vocab/vann/preferredNamespacePrefix": [
@@ -1196,58 +1148,58 @@
     ],
     "http://purl.org/vocommons/voaf#reliesOn": [
       {
-      "@id": "http://www.w3.org/ns/prov#"
-      },
-      {
-      "@id": "http://www.w3.org/2002/07/owl#"
-      },
-      {
-      "@id": "http://www.w3.org/ns/org#"
-      },
-      {
-      "@id": "http://www.w3.org/ns/adms#"
-      },
-      {
-      "@id": "http://www.w3.org/2006/vcard/ns#"
-      },
-      {
-      "@id": "http://www.w3.org/2000/01/rdf-schema#"
-      },
-      {
-      "@id": "http://www.w3.org/ns/locn#"
-      },
-      {
       "@id": "http://spdx.org/rdf/terms#"
-      },
-      {
-      "@id": "http://www.w3.org/2011/content#"
-      },
-      {
-      "@id": "http://www.w3.org/ns/dqv#"
-      },
-      {
-      "@id": "http://www.w3.org/2004/02/skos/core#"
       },
       {
       "@id": "http://purl.org/dc/terms/"
       },
       {
-      "@id": "http://data.europa.eu/r5r/"
-      },
-      {
-      "@id": "http://www.w3.org/2006/time#"
-      },
-      {
-      "@id": "http://www.w3.org/ns/dcat#"
-      },
-      {
-      "@id": "http://purl.org/linked-data/sdmx/2009/attribute#"
+      "@id": "http://www.w3.org/2004/02/skos/core#"
       },
       {
       "@id": "http://xmlns.com/foaf/0.1/"
       },
       {
+      "@id": "http://www.w3.org/ns/dqv#"
+      },
+      {
+      "@id": "http://purl.org/linked-data/sdmx/2009/attribute#"
+      },
+      {
+      "@id": "http://www.w3.org/ns/adms#"
+      },
+      {
+      "@id": "http://www.w3.org/ns/org#"
+      },
+      {
+      "@id": "http://www.w3.org/2002/07/owl#"
+      },
+      {
+      "@id": "http://www.w3.org/2006/vcard/ns#"
+      },
+      {
+      "@id": "http://www.w3.org/2011/content#"
+      },
+      {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#"
+      },
+      {
+      "@id": "http://data.europa.eu/r5r/"
+      },
+      {
+      "@id": "http://www.w3.org/ns/locn#"
+      },
+      {
+      "@id": "http://www.w3.org/ns/dcat#"
+      },
+      {
       "@id": "http://www.w3.org/ns/odrl/2/"
+      },
+      {
+      "@id": "http://www.w3.org/ns/prov#"
+      },
+      {
+      "@id": "http://www.w3.org/2006/time#"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
@@ -1269,10 +1221,10 @@
     ],
     "http://www.w3.org/2002/07/owl#backwardCompatibleWith": [
       {
-      "@id": "http://data.europa.eu/930/1.0.1/"
+      "@id": "http://data.europa.eu/930/1.0.0/"
       },
       {
-      "@id": "http://data.europa.eu/930/1.0.0/"
+      "@id": "http://data.europa.eu/930/1.0.1/"
       }
     ],
     "http://www.w3.org/2002/07/owl#priorVersion": [
@@ -1320,13 +1272,16 @@
     ],
     "http://www.w3.org/ns/dcat#distribution": [
       {
-      "@id": "_:N6f4e93fc49894af8b1239ba117a3eb31"
+      "@id": "_:Naca8b7d633f7433a8cc9b7d32bac86be"
       },
       {
-      "@id": "_:N5ac3c1775f5547059264a41df8ed91bf"
+      "@id": "_:N59bda498f3194fb58beff5d5f5c97773"
       },
       {
-      "@id": "_:N4191b42577ce4a71afbe28ae62a3a2c6"
+      "@id": "_:Nff8ec2a4c69a4ffc9bbd9431b3643eda"
+      },
+      {
+      "@id": "_:Nce3316767a5144929f6be9c9ec61fe64"
       }
     ],
     "http://xmlns.com/foaf/0.1/depiction": [
@@ -1336,36 +1291,20 @@
     ]
     },
     {
-    "@id": "http://purl.org/dc/terms/conformsTo",
+    "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is generally used to specify conformity of a resource (as a Catalogue, Catalogue Record, Data Service, Dataset) with a reference standard / specification / regulation / reference system. As such, it is one of the properties used to represent the notions of \"conformity and data quality\", \"reference system\", \"metadata standard\", as defined in ISO 19115 and INSPIRE. About the notion of \"conformity and data quality\", this property can only be used when the conformity degree is \"conformant\"."
+      "@value": "In GeoDCAT-AP, this property is used to specify the name of a Category, Location (geographic name), and reference system."
       }
     ]
     },
     {
-    "@id": "_:N37af0c8c49eb48938dddb6a0426baff8",
-    "@type": [
-      "http://xmlns.com/foaf/0.1/Group"
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-      "@value": "GeoDCAT-AP Working Group"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/page": [
-      {
-      "@id": "https://github.com/semiceu/geodcat-ap/"
-      }
-    ]
-    },
-    {
-    "@id": "http://purl.org/dc/terms/relation",
+    "@id": "http://www.w3.org/ns/dqv#isMeasurementOf",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."
+      "@value": "In GeoDCAT-AP, this property is used to specify the type of spatial resolution being described, by taking as object one of the following instances of dqv:Metric: geodcatap:spatialResolutionAsScale, geodcatap:spatialResolutionAsDistance, geodcatap:spatialResolutionAsAngularDistance, geodcatap:spatialResolutionAsVerticalDistance."
       }
     ]
     },
@@ -1388,11 +1327,56 @@
     ]
     },
     {
-    "@id": "http://www.w3.org/ns/org#memberOf",
+    "@id": "http://data.europa.eu/930/custodian",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+      "@language": "en",
+      "@value": "Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource (ISO 19115:2003)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+      "@id": "http://data.europa.eu/eli/reg/2008/1205/2008-12-24"
+      },
+      {
+      "@id": "http://data.europa.eu/930/"
+      },
+      {
+      "@id": "https://www.iso.org/standard/26020.html"
+      },
+      {
+      "@id": "https://www.iso.org/standard/53798.html"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+      "@language": "en",
+      "@value": "Custodian"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+      "@value": "stable"
+      }
+    ],
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used to specify the affiliation of an Agent, when the role is different from \"point of contact\"."
+      "@value": "In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."
+      }
+    ],
+    "http://www.w3.org/ns/adms#status": [
+      {
+      "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
       }
     ]
     },
@@ -1462,8 +1446,8 @@
     {
     "@id": "http://data.europa.eu/930/user",
     "@type": [
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -1473,16 +1457,16 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-      "@id": "https://www.iso.org/standard/26020.html"
-      },
-      {
-      "@id": "http://data.europa.eu/eli/reg/2008/1205/2008-12-24"
+      "@id": "https://www.iso.org/standard/53798.html"
       },
       {
       "@id": "http://data.europa.eu/930/"
       },
       {
-      "@id": "https://www.iso.org/standard/53798.html"
+      "@id": "http://data.europa.eu/eli/reg/2008/1205/2008-12-24"
+      },
+      {
+      "@id": "https://www.iso.org/standard/26020.html"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1572,11 +1556,11 @@
     ]
     },
     {
-    "@id": "http://www.w3.org/2004/02/skos/core#prefLabel",
+    "@id": "http://purl.org/dc/terms/conformsTo",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used to specify the name of a Category, Location (geographic name), and reference system."
+      "@value": "In GeoDCAT-AP, this property is generally used to specify conformity of a resource (as a Catalogue, Catalogue Record, Data Service, Dataset) with a reference standard / specification / regulation / reference system. As such, it is one of the properties used to represent the notions of \"conformity and data quality\", \"reference system\", \"metadata standard\", as defined in ISO 19115 and INSPIRE. About the notion of \"conformity and data quality\", this property can only be used when the conformity degree is \"conformant\"."
       }
     ]
     },
@@ -1617,44 +1601,11 @@
     ]
     },
     {
-    "@id": "http://purl.org/dc/terms/ProvenanceStatement",
+    "@id": "http://purl.org/dc/terms/title",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this class is used to express all the information that, in ISO 19155 and INSPIRE, is specified on \"lineage\"."
-      }
-    ]
-    },
-    {
-    "@id": "_:N6f4e93fc49894af8b1239ba117a3eb31",
-    "@type": [
-      "http://www.w3.org/ns/adms#AssetDistribution"
-    ],
-    "http://purl.org/dc/terms/format": [
-      {
-      "@id": "http://publications.europa.eu/resource/authority/file-type/HTML"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-      "@language": "en",
-      "@value": "HTML"
-      }
-    ],
-    "http://www.w3.org/ns/adms#representationTechnique": [
-      {
-      "@id": "http://purl.org/adms/representationtechnique/HumanLanguage"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#downloadURL": [
-      {
-      "@id": "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/index.html"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#mediaType": [
-      {
-      "@type": "http://purl.org/dc/terms/IMT",
-      "@value": "text/html"
+      "@value": "In GeoDCAT-AP, this property corresponds to the notion of \"resource title\", as defined in ISO 19115 and INSPIRE."
       }
     ]
     },
@@ -1668,47 +1619,83 @@
     ]
     },
     {
-    "@id": "http://www.w3.org/ns/prov#qualifiedAttribution",
+    "@id": "http://www.w3.org/ns/dcat#endpointDescription",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP to specify an agent role not supported in the reference vocabularies."
+      "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."
       }
     ]
     },
     {
-    "@id": "http://purl.org/dc/terms/type",
+    "@id": "http://data.europa.eu/930/resourceProvider",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+      "@language": "en",
+      "@value": "Party that supplies the resource (ISO 19115:2003)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+      "@id": "http://data.europa.eu/930/"
+      },
+      {
+      "@id": "https://www.iso.org/standard/26020.html"
+      },
+      {
+      "@id": "https://www.iso.org/standard/53798.html"
+      },
+      {
+      "@id": "http://data.europa.eu/eli/reg/2008/1205/2008-12-24"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+      "@language": "en",
+      "@value": "Resource provider"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider"
+      }
+    ],
+    "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status": [
+      {
+      "@value": "stable"
+      }
+    ],
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property it is used as in DCAT-AP. Moreover, it corresponds to the notions of \"resource type\", \"service category\", \"service type\", and \"conformance degree\", as defined in ISO 19115 and INSPIRE. Finally, it is used to specify the type of reference system (spatial or temporal) by using the relevant URIs from the glossary hosted on the INSPIRE Registry."
+      "@value": "In GeoDCAT-AP, this property is typically used for Catalogues, Catalogue Records, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource."
+      }
+    ],
+    "http://www.w3.org/ns/adms#status": [
+      {
+      "@id": "http://publications.europa.eu/resource/dataset/concept-status/CURRENT"
       }
     ]
     },
     {
-    "@id": "http://www.w3.org/ns/dcat#spatialResolutionInMeters",
+    "@id": "http://www.w3.org/ns/dcat#themeTaxonomy",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used to specify \"spatial resolution\", as defined in INSPIRE, ISO 19115:2003, and ISO 19115-1:2014, whenever the spatial resolution is expressed as horizontal ground distance in metres."
+      "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."
       }
     ]
     },
     {
-    "@id": "http://purl.org/dc/terms/identifier",
+    "@id": "http://www.w3.org/ns/dcat#packageFormat",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property corresponds to the notions of \"resource identifier\", \"geographic identifier\", and \"metadata file identifier\", as defined in ISO 19115 and INSPIRE."
-      }
-    ]
-    },
-    {
-    "@id": "http://www.w3.org/ns/dcat#contactPoint",
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
-      {
-      "@language": "en",
-      "@value": "In GeoDCAT-AP, this property corresponds to responsible party role \"point of contact\" defined in ISO 19115 and INSPIRE."
+      "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."
       }
     ]
     },
@@ -1823,8 +1810,8 @@
     {
     "@id": "http://data.europa.eu/930/distributor",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
@@ -1834,16 +1821,16 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-      "@id": "http://data.europa.eu/eli/reg/2008/1205/2008-12-24"
+      "@id": "http://data.europa.eu/930/"
+      },
+      {
+      "@id": "https://www.iso.org/standard/26020.html"
       },
       {
       "@id": "https://www.iso.org/standard/53798.html"
       },
       {
-      "@id": "http://data.europa.eu/930/"
-      },
-      {
-      "@id": "https://www.iso.org/standard/26020.html"
+      "@id": "http://data.europa.eu/eli/reg/2008/1205/2008-12-24"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -1875,20 +1862,18 @@
     ]
     },
     {
-    "@id": "http://www.w3.org/2006/vcard/ns#street-address",
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+    "@id": "_:N614e93d773d34e5080a3fe5c82423293",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Group"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
       {
-      "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used to specify the street name and civic number of a postal address of an Agent, but only when having the role of \"point of contact\"."
+      "@value": "GeoDCAT-AP Working Group"
       }
-    ]
-    },
-    {
-    "@id": "http://www.w3.org/ns/dqv#QualityMeasurement",
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+    ],
+    "http://xmlns.com/foaf/0.1/page": [
       {
-      "@language": "en",
-      "@value": "In GeoDCAT-AP, this class corresponds to the notion of \"spatial resolution\", as defined in INSPIRE, ISO 19115:2003, and ISO 19115-1:2014."
+      "@id": "https://github.com/semiceu/geodcat-ap/"
       }
     ]
     },
@@ -1902,11 +1887,11 @@
     ]
     },
     {
-    "@id": "http://www.w3.org/2004/02/skos/core#inScheme",
+    "@id": "http://www.w3.org/ns/dcat#Distribution",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used to link an item to a controlled vocabulary, gazetteer, or register of reference systems."
+      "@value": "In GeoDCAT-AP, this class is used as in DCAT and in DCAT-AP."
       }
     ]
     },
@@ -1950,16 +1935,16 @@
     ],
     "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
       {
-      "@id": "http://data.europa.eu/930/"
+      "@id": "http://data.europa.eu/eli/reg/2008/1205/2008-12-24"
+      },
+      {
+      "@id": "https://www.iso.org/standard/53798.html"
       },
       {
       "@id": "https://www.iso.org/standard/26020.html"
       },
       {
-      "@id": "http://data.europa.eu/eli/reg/2008/1205/2008-12-24"
-      },
-      {
-      "@id": "https://www.iso.org/standard/53798.html"
+      "@id": "http://data.europa.eu/930/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -2011,6 +1996,17 @@
     ]
     },
     {
+    "@id": "_:N00ab271c7e1a48cf87ab2a5d9ee275ad",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Person"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+      "@value": "Bert van Nuffelen"
+      }
+    ]
+    },
+    {
     "@id": "http://www.w3.org/ns/locn#postName",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
@@ -2020,11 +2016,11 @@
     ]
     },
     {
-    "@id": "http://www.w3.org/ns/dcat#themeTaxonomy",
+    "@id": "http://purl.org/dc/terms/identifier",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."
+      "@value": "In GeoDCAT-AP, this property corresponds to the notions of \"resource identifier\", \"geographic identifier\", and \"metadata file identifier\", as defined in ISO 19115 and INSPIRE."
       }
     ]
     },
@@ -2101,11 +2097,11 @@
     ]
     },
     {
-    "@id": "http://www.w3.org/2006/vcard/ns#hasTelephone",
+    "@id": "http://www.w3.org/ns/adms#sample",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used to specify the phone number of an Agent, but only when having the role of \"point of contact\"."
+      "@value": "In GeoDCAT-AP, this property is used as in DCAT-AP."
       }
     ]
     },
@@ -2137,11 +2133,18 @@
     ]
     },
     {
-    "@id": "http://www.w3.org/2006/vcard/ns#organization-name",
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+    "@id": "https://andrea-perego.name/foaf/#me",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Person"
+    ],
+    "http://www.w3.org/2002/07/owl#sameAs": [
       {
-      "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used to specify the affiliation of an Agent, but only when having the role of \"point of contact\"."
+      "@id": "https://orcid.org/0000-0001-9300-2694"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+      "@value": "Andrea Perego"
       }
     ]
     },
@@ -2155,20 +2158,49 @@
     ]
     },
     {
-    "@id": "http://spdx.org/rdf/terms#Checksum",
-    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+    "@id": "_:Naca8b7d633f7433a8cc9b7d32bac86be",
+    "@type": [
+      "http://www.w3.org/ns/adms#AssetDistribution"
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+      "@id": "http://www.w3.org/ns/formats/data/Turtle"
+      },
+      {
+      "@id": "http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this class is used as in DCAT-AP."
+      "@value": "Turtle"
+      }
+    ],
+    "http://www.w3.org/ns/adms#representationTechnique": [
+      {
+      "@id": "http://purl.org/adms/representationtechnique/RDFSchema"
+      },
+      {
+      "@id": "http://purl.org/adms/representationtechnique/OWL"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#downloadURL": [
+      {
+      "@id": "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.ttl"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#mediaType": [
+      {
+      "@id": "https://www.iana.org/assignments/media-types/text/turtle"
       }
     ]
     },
     {
-    "@id": "http://www.w3.org/ns/dcat#endpointDescription",
+    "@id": "http://www.w3.org/ns/prov#qualifiedAttribution",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."
+      "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP to specify an agent role not supported in the reference vocabularies."
       }
     ]
     },
@@ -2187,17 +2219,6 @@
       {
       "@language": "en",
       "@value": "In GeoDCAT-AP, this class is used as in DCAT-AP."
-      }
-    ]
-    },
-    {
-    "@id": "_:N148ac9b7f7c34fdda0609a3433992888",
-    "@type": [
-      "http://xmlns.com/foaf/0.1/Person"
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-      "@value": "Bert van Nuffelen"
       }
     ]
     },
@@ -2238,6 +2259,15 @@
     ]
     },
     {
+    "@id": "http://www.w3.org/ns/dcat#spatialResolutionInMeters",
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+      "@language": "en",
+      "@value": "In GeoDCAT-AP, this property is used to specify \"spatial resolution\", as defined in INSPIRE, ISO 19115:2003, and ISO 19115-1:2014, whenever the spatial resolution is expressed as horizontal ground distance in metres."
+      }
+    ]
+    },
+    {
     "@id": "http://purl.org/dc/terms/spatial",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
@@ -2265,11 +2295,11 @@
     ]
     },
     {
-    "@id": "http://www.w3.org/ns/dcat#record",
+    "@id": "http://xmlns.com/foaf/0.1/workplaceHomepage",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",
-      "@value": "In GeoDCAT-AP, this property is used as in DCAT and DCAT-AP."
+      "@value": "In GeoDCAT-AP, this property is used to specify the work homepage of an Agent, when the role is different from \"point of contact\"."
       }
     ]
     },
@@ -2284,6 +2314,15 @@
     },
     {
     "@id": "http://www.w3.org/ns/adms#identifier",
+    "http://www.w3.org/2004/02/skos/core#scopeNote": [
+      {
+      "@language": "en",
+      "@value": "In GeoDCAT-AP, this property is used as in DCAT-AP."
+      }
+    ]
+    },
+    {
+    "@id": "http://www.w3.org/ns/adms#versionNotes",
     "http://www.w3.org/2004/02/skos/core#scopeNote": [
       {
       "@language": "en",

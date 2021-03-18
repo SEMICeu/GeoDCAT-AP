@@ -43,7 +43,7 @@
 <!-- Version information -->
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-10-12</dct:created>
     <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-10-12</dct:issued>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-12-21</dct:modified>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-03-18</dct:modified>
     <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED"/>
     <adms:last rdf:resource="http://data.europa.eu/930/"/>
     <adms:prev rdf:resource="http://data.europa.eu/930/1.0.1/"/>
@@ -125,7 +125,7 @@
         <adms:representationTechnique rdf:resource="http://purl.org/adms/representationtechnique/HumanLanguage"/>
         <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
         <dcat:mediaType rdf:datatype="http://purl.org/dc/terms/IMT">text/html</dcat:mediaType>
-        <dcat:downloadURL rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/index.html"/>
+        <dcat:downloadURL rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/"/>
       </adms:AssetDistribution>
     </dcat:distribution>  
     <dcat:distribution>
@@ -135,7 +135,7 @@
         <adms:representationTechnique rdf:resource="http://purl.org/adms/representationtechnique/RDFSchema"/>
         <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
         <dct:format rdf:resource="http://www.w3.org/ns/formats/data/RDF_XML"/>
-        <dcat:mediaType rdf:datatype="http://purl.org/dc/terms/IMT">application/rdf+xml</dcat:mediaType>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/rdf+xml"/>
         <dcat:downloadURL rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.rdf"/>
       </adms:AssetDistribution>
     </dcat:distribution>  
@@ -146,8 +146,19 @@
         <adms:representationTechnique rdf:resource="http://purl.org/adms/representationtechnique/RDFSchema"/>
         <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
         <dct:format rdf:resource="http://www.w3.org/ns/formats/data/Turtle"/>
-        <dcat:mediaType rdf:datatype="http://purl.org/dc/terms/IMT">text/turtle</dcat:mediaType>    
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/turtle"/>
         <dcat:downloadURL rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.ttl"/>
+      </adms:AssetDistribution>
+    </dcat:distribution>  
+    <dcat:distribution>
+      <adms:AssetDistribution>
+        <dct:title xml:lang="en">JSON-LD</dct:title>
+        <adms:representationTechnique rdf:resource="http://purl.org/adms/representationtechnique/OWL"/>
+        <adms:representationTechnique rdf:resource="http://purl.org/adms/representationtechnique/RDFSchema"/>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON_LD"/>
+        <dct:format rdf:resource="http://www.w3.org/ns/formats/data/JSON-LD"/>
+        <dcat:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/ld+json"/>
+        <dcat:downloadURL rdf:resource="https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/geodcat-ap.jsonld"/>
       </adms:AssetDistribution>
     </dcat:distribution>  
   </rdf:Description>
