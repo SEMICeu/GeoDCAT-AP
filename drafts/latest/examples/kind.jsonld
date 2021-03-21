@@ -2,34 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:N7ec2167e12db4c2aa29cfe445f0b56a3",
-    "@type": [
-      "http://www.w3.org/2006/vcard/ns#Organization"
-    ],
-    "http://www.w3.org/2006/vcard/ns#fn": [
-      {
-      "@language": "en",
-      "@value": "European Environment Agency"
-      }
-    ],
-    "http://www.w3.org/2006/vcard/ns#hasAddress": [
-      {
-      "@id": "_:Nfc9a4cf9b0f44ca391e1222f944924b5"
-      }
-    ],
-    "http://www.w3.org/2006/vcard/ns#hasEmail": [
-      {
-      "@id": "mailto:sdi@eea.europa.eu"
-      }
-    ],
-    "http://www.w3.org/2006/vcard/ns#hasTelephone": [
-      {
-      "@id": "tel:+451234567890"
-      }
-    ]
-    },
-    {
-    "@id": "_:Nfc9a4cf9b0f44ca391e1222f944924b5",
+    "@id": "_:N08211c3e14e14491bd5076336ee90a3a",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Address"
     ],
@@ -56,6 +29,33 @@
     "http://www.w3.org/2006/vcard/ns#street-address": [
       {
       "@value": "Kongens Nytorv 6"
+      }
+    ]
+    },
+    {
+    "@id": "_:N364415b9a58f4dff80708bfb749354c1",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Organization"
+    ],
+    "http://www.w3.org/2006/vcard/ns#fn": [
+      {
+      "@language": "en",
+      "@value": "European Environment Agency"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasAddress": [
+      {
+      "@id": "_:N08211c3e14e14491bd5076336ee90a3a"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasEmail": [
+      {
+      "@id": "mailto:sdi@eea.europa.eu"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasTelephone": [
+      {
+      "@id": "tel:+451234567890"
       }
     ]
     }

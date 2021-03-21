@@ -6,5 +6,3 @@ for file in ../*.rdf; do
   rdfpipe -o application/ld+json "$file" > "../$(basename "$file" .rdf).jsonld"
   sed -i $'s/    /  /g' "../$(basename "$file" .rdf).jsonld"
 done
-#sed -i $'s/    /  /g' ../*.ttl
-#sed -i $'s/    /  /g' ../*.jsonld

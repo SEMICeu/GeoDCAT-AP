@@ -4,7 +4,7 @@
   xmlns:dcat      = "http://www.w3.org/ns/dcat#" 
   xmlns:dct       = "http://purl.org/dc/terms/" 
   xmlns:foaf      = "http://xmlns.com/foaf/0.1/" 
-  xmlns:geodcatap = "http://data.europa.eu/930/" 
+  xmlns:geodcat   = "http://data.europa.eu/930/" 
   xmlns:gsp       = "http://www.opengis.net/ont/geosparql#" 
   xmlns:locn      = "http://www.w3.org/ns/locn#" 
   xmlns:prov      = "http://www.w3.org/ns/prov#" 
@@ -110,7 +110,7 @@
         </vcard:hasAddress>
       </rdf:Description>
     </dcat:contactPoint>
-    <geodcatap:custodian rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/EEA"/>
+    <geodcat:custodian rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/EEA"/>
   </rdf:Description>
 
 </rdf:RDF>

@@ -2,15 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00",
-    "http://www.w3.org/ns/prov#qualifiedAttribution": [
-      {
-      "@id": "_:N08ae9187ad4d4e9cb1ef73673467457c"
-      }
-    ]
-    },
-    {
-    "@id": "_:N08ae9187ad4d4e9cb1ef73673467457c",
+    "@id": "_:N6f8eefa18cc54ed4a53427c765251689",
     "@type": [
       "http://www.w3.org/ns/prov#Attribution"
     ],
@@ -26,7 +18,7 @@
     ]
     },
     {
-    "@id": "_:N0b1e82f835164f1f8cb030fbc0c04f8b",
+    "@id": "_:N1f6a40576b224da29816cae0a7f4d0ce",
     "@type": [
       "http://www.w3.org/ns/locn#Address"
     ],
@@ -57,14 +49,22 @@
     ]
     },
     {
+    "@id": "https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00",
+    "http://www.w3.org/ns/prov#qualifiedAttribution": [
+      {
+      "@id": "_:N6f8eefa18cc54ed4a53427c765251689"
+      }
+    ]
+    },
+    {
     "@id": "http://publications.europa.eu/resource/authority/corporate-body/EEA",
     "@type": [
-      "http://xmlns.com/foaf/0.1/Organization",
-      "http://www.w3.org/ns/prov#Organization"
+      "http://www.w3.org/ns/prov#Organization",
+      "http://xmlns.com/foaf/0.1/Organization"
     ],
     "http://www.w3.org/ns/locn#address": [
       {
-      "@id": "_:N0b1e82f835164f1f8cb030fbc0c04f8b"
+      "@id": "_:N1f6a40576b224da29816cae0a7f4d0ce"
       }
     ],
     "http://xmlns.com/foaf/0.1/mbox": [

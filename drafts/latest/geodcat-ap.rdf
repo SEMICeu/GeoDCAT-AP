@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:adms      = "http://www.w3.org/ns/adms#" 
-  xmlns:bibo      = "http://purl.org/ontology/bibo/" 
-  xmlns:cnt       = "http://www.w3.org/2011/content#" 
-  xmlns:dcat      = "http://www.w3.org/ns/dcat#" 
-  xmlns:dcatap    = "http://data.europa.eu/r5r/" 
-  xmlns:dct       = "http://purl.org/dc/terms/" 
-  xmlns:dqv       = "http://www.w3.org/ns/dqv#"
-  xmlns:foaf      = "http://xmlns.com/foaf/0.1/" 
-  xmlns:geodcatap = "http://data.europa.eu/930/" 
-  xmlns:locn      = "http://www.w3.org/ns/locn#" 
-  xmlns:owl       = "http://www.w3.org/2002/07/owl#" 
-  xmlns:odrl      = "http://www.w3.org/ns/odrl/2/" 
-  xmlns:org       = "http://www.w3.org/ns/org#" 
-  xmlns:prov      = "http://www.w3.org/ns/prov#" 
-  xmlns:rdf       = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
-  xmlns:rdfs      = "http://www.w3.org/2000/01/rdf-schema#" 
+  xmlns:adms    = "http://www.w3.org/ns/adms#" 
+  xmlns:bibo    = "http://purl.org/ontology/bibo/" 
+  xmlns:cnt     = "http://www.w3.org/2011/content#" 
+  xmlns:dcat    = "http://www.w3.org/ns/dcat#" 
+  xmlns:dcatap  = "http://data.europa.eu/r5r/" 
+  xmlns:dct     = "http://purl.org/dc/terms/" 
+  xmlns:dqv     = "http://www.w3.org/ns/dqv#"
+  xmlns:foaf    = "http://xmlns.com/foaf/0.1/" 
+  xmlns:geodcat = "http://data.europa.eu/930/" 
+  xmlns:locn    = "http://www.w3.org/ns/locn#" 
+  xmlns:owl     = "http://www.w3.org/2002/07/owl#" 
+  xmlns:odrl    = "http://www.w3.org/ns/odrl/2/" 
+  xmlns:org     = "http://www.w3.org/ns/org#" 
+  xmlns:prov    = "http://www.w3.org/ns/prov#" 
+  xmlns:rdf     = "http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:rdfs    = "http://www.w3.org/2000/01/rdf-schema#" 
   xmlns:sdmx-attribute = "http://purl.org/linked-data/sdmx/2009/attribute#" 
-  xmlns:skos      = "http://www.w3.org/2004/02/skos/core#" 
-  xmlns:spdx      = "http://spdx.org/rdf/terms#" 
-  xmlns:time      = "http://www.w3.org/2006/time#"
-  xmlns:vann      = "http://purl.org/vocab/vann/" 
-  xmlns:vcard     = "http://www.w3.org/2006/vcard/ns#"
-  xmlns:voaf      = "http://purl.org/vocommons/voaf#"
-  xmlns:vs        = "http://www.w3.org/2003/06/sw-vocab-status/ns#" 
-  xmlns:xsd       = "http://www.w3.org/2001/XMLSchema#"
+  xmlns:skos    = "http://www.w3.org/2004/02/skos/core#" 
+  xmlns:spdx    = "http://spdx.org/rdf/terms#" 
+  xmlns:time    = "http://www.w3.org/2006/time#"
+  xmlns:vann    = "http://purl.org/vocab/vann/" 
+  xmlns:vcard   = "http://www.w3.org/2006/vcard/ns#"
+  xmlns:voaf    = "http://purl.org/vocommons/voaf#"
+  xmlns:vs      = "http://www.w3.org/2003/06/sw-vocab-status/ns#" 
+  xmlns:xsd     = "http://www.w3.org/2001/XMLSchema#"
 >
 
 <!-- ========================================= -->
@@ -43,7 +43,7 @@
 <!-- Version information -->
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-10-12</dct:created>
     <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-10-12</dct:issued>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-03-18</dct:modified>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-03-21</dct:modified>
     <adms:status rdf:resource="http://publications.europa.eu/resource/dataset/dataset-status/COMPLETED"/>
     <adms:last rdf:resource="http://data.europa.eu/930/"/>
     <adms:prev rdf:resource="http://data.europa.eu/930/1.0.1/"/>
@@ -54,7 +54,7 @@
     <owl:versionInfo xml:lang="en">Version 2.0.0</owl:versionInfo>
     <adms:versionNotes xml:lang="en">This version of GeoDCAT-AP is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP and was built starting from GeoDCAT-AP version 1.0.1, with the purpose of aligning it with DCAT-AP version 2.0.1 and with version 2.0.1 of the INSPIRE Metadata Technical Guidelines.</adms:versionNotes>
 <!-- Namespace and prefix -->
-    <vann:preferredNamespacePrefix>geodcatap</vann:preferredNamespacePrefix>
+    <vann:preferredNamespacePrefix>geodcat</vann:preferredNamespacePrefix>
     <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://data.europa.eu/930/</vann:preferredNamespaceUri>
 <!-- Description -->
     <rdfs:label xml:lang="en">GeoDCAT-AP</rdfs:label>
@@ -863,7 +863,7 @@
   </rdf:Description>
 
   <rdf:Description rdf:about="http://www.w3.org/ns/dqv#isMeasurementOf">
-    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the type of spatial resolution being described, by taking as object one of the following instances of dqv:Metric: geodcatap:spatialResolutionAsScale, geodcatap:spatialResolutionAsDistance, geodcatap:spatialResolutionAsAngularDistance, geodcatap:spatialResolutionAsVerticalDistance.</skos:scopeNote>
+    <skos:scopeNote xml:lang="en">In GeoDCAT-AP, this property is used to specify the type of spatial resolution being described, by taking as object one of the following instances of dqv:Metric: geodcat:spatialResolutionAsScale, geodcat:spatialResolutionAsDistance, geodcat:spatialResolutionAsAngularDistance, geodcat:spatialResolutionAsVerticalDistance.</skos:scopeNote>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://www.w3.org/ns/dqv#value">

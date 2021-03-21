@@ -1051,13 +1051,13 @@
 <tr>
 <td>
 <p><code>dct:rightsHolder</code></p>
-<p><code>geodcatap:custodian</code></p>
-<p><code>geodcatap:distributor</code></p>
-<p><code>geodcatap:originator</code></p>
-<p><code>geodcatap:principalInvestigator</code></p>
-<p><code>geodcatap:processor</code></p>
-<p><code>geodcatap:resourceProvider</code></p>
-<p><code>geodcatap:user</code></p>
+<p><code>geodcat:custodian</code></p>
+<p><code>geodcat:distributor</code></p>
+<p><code>geodcat:originator</code></p>
+<p><code>geodcat:principalInvestigator</code></p>
+<p><code>geodcat:processor</code></p>
+<p><code>geodcat:resourceProvider</code></p>
+<p><code>geodcat:user</code></p>
 </td>
 <td>
 <p>-</p>
@@ -2851,7 +2851,7 @@
 # Spatial resolution as equivalent scale
 [] a dcat:Dataset ;
   dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
-    dqv:isMeasurementOf geodcatap:spatialResolutionAsScale ;
+    dqv:isMeasurementOf geodcat:spatialResolutionAsScale ;
     dqv:value "0.0001"^^xsd:decimal 
   ] .</pre> 
 
@@ -3175,14 +3175,14 @@ prov:wasUsedBy [
 <td>Resource provider</td>
 <td>Part B, §6.1</td>
 <td>Party that supplies the resource.</td>
-<td><code>geodcatap:resourceProvider</code></td>
+<td><code>geodcat:resourceProvider</code></td>
 </tr>
 
 <tr>
 <td>Custodian</td>
 <td>Part B, §6.2</td>
 <td>Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource.</td>
-<td><code>geodcatap:custodian</code></td>
+<td><code>geodcat:custodian</code></td>
 </tr>
 
 <tr>
@@ -3196,21 +3196,21 @@ prov:wasUsedBy [
 <td>User</td>
 <td>Part B, §6.4</td>
 <td>Party who uses the resource.</td>
-<td><code>geodcatap:user</code></td>
+<td><code>geodcat:user</code></td>
 </tr>
 
 <tr>
 <td>Distributor</td>
 <td>Part B, §6.5</td>
 <td>Party who distributes the resource</td>
-<td><code>geodcatap:distributor</code></td>
+<td><code>geodcat:distributor</code></td>
 </tr>
 
 <tr>
 <td>Originator</td>
 <td>Part B, §6.6</td>
 <td>Party who created the resource.</td>
-<td><code>geodcatap:originator</code></td>
+<td><code>geodcat:originator</code></td>
 </tr>
 
 <tr>
@@ -3224,14 +3224,14 @@ prov:wasUsedBy [
 <td>Principal investigator</td>
 <td>Part B, §6.8</td>
 <td>Key party responsible for gathering information and conducting research</td>
-<td><code>geodcatap:principalInvestigator</code></td>
+<td><code>geodcat:principalInvestigator</code></td>
 </tr>
 
 <tr>
 <td>Processor</td>
 <td>Part B, §6.9</td>
 <td>Party who has processed the data in a manner such that the resource has been modified.</td>
-<td><code>geodcatap:processor</code></td>
+<td><code>geodcat:processor</code></td>
 </tr>
 
 <tr>
@@ -3312,7 +3312,7 @@ prov:wasUsedBy [
 <pre>[] dcat:contactPoint [ a vcard:Organization ;
   vcard:hasEmail &lt;mailto:bag@kadaster.nl&gt; ;
   vcard:organization-name &quot;Kadaster&quot;@nl ] ;
-  geodcatap:custodian [ a prov:Agent , foaf:Organization ;
+  geodcat:custodian [ a prov:Agent , foaf:Organization ;
     foaf:mbox &lt;mailto:bag@kadaster.nl&gt; ;
     foaf:name &quot;Kadaster&quot;@nl ] ;
   prov:qualifiedAttribution

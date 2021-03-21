@@ -6,7 +6,7 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix dqv: <http://www.w3.org/ns/dqv#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix geodcatap: <http://data.europa.eu/930/> .
+@prefix geodcat: <http://data.europa.eu/930/> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -47,7 +47,7 @@
   dct:created "2020-12-23"^^xsd:date ;
   dct:issued "2021-01-04"^^xsd:date ;
   dct:dateCopyrighted "2020"^^xsd:gYear ;
-  dct:modified "2021-02-01"^^xsd:date ;
+  dct:modified "2021-03-21"^^xsd:date ;
   dct:title "The constraints of GeoDCAT Application Profile for Data Portals in Europe"@en ;
   owl:versionInfo "2.0.0" ;
   dct:description "This document specifies the constraints on properties and classes expressed by GeoDCAT-AP in SHACL."@en ;
@@ -78,7 +78,7 @@
 # in GeoDCAT-AP 2.0.0.
 #-------------------------------------------------------------------------
 
-geodcatap:Activity_Shape
+geodcat:Activity_Shape
   a sh:NodeShape ;
   sh:name "Activity"@en ;
   sh:property [
@@ -94,7 +94,7 @@ geodcatap:Activity_Shape
   ] ;
   sh:targetClass prov:Activity .
 
-geodcatap:Address_Agent_Shape
+geodcat:Address_Agent_Shape
   a sh:NodeShape ;
   sh:name "Address (Agent)"@en ;
   sh:property [
@@ -125,7 +125,7 @@ geodcatap:Address_Agent_Shape
   ] ;
   sh:targetClass locn:Address .
 
-geodcatap:Address_Kind_Shape
+geodcat:Address_Kind_Shape
   a sh:NodeShape ;
   sh:name "Address (Kind)"@en ;
   sh:property [
@@ -156,7 +156,7 @@ geodcatap:Address_Kind_Shape
   ] ;
   sh:targetClass vcard:Address .
 
-geodcatap:Attribution_Shape
+geodcat:Attribution_Shape
   a sh:NodeShape ;
   sh:name "Attribution"@en ;
   sh:property [
@@ -247,7 +247,7 @@ geodcatap:Attribution_Shape
   ] ;
   sh:targetClass dcat:Dataset .
 
-geodcatap:QualityMeasurement_Shape
+geodcat:QualityMeasurement_Shape
   a sh:NodeShape ;
   sh:name "Quality Measurement"@en ;
   sh:property [
@@ -268,7 +268,7 @@ geodcatap:QualityMeasurement_Shape
   ] ;
   sh:targetClass dqv:QualityMeasurement .
 
-geodcatap:Standard_Shape
+geodcat:Standard_Shape
   a sh:NodeShape ;
   sh:name "Standard"@en ;
   sh:property [

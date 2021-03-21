@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:N1e523b6efe5c4e0d834a11ee0c3c4622",
+    "@id": "_:Ndd1fed1b06694094b5cfc1faff2626b7",
     "@type": [
       "http://www.w3.org/ns/dqv#QualityMeasurement"
     ],
@@ -24,37 +24,7 @@
     ]
     },
     {
-    "@id": "https://some.catalogue/resource/c34567",
-    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
-      {
-      "@id": "_:N1e523b6efe5c4e0d834a11ee0c3c4622"
-      }
-    ]
-    },
-    {
-    "@id": "_:Nff3416651b9b46bfbd9ccfc54f328b53",
-    "@type": [
-      "http://www.w3.org/ns/dqv#QualityMeasurement"
-    ],
-    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
-      {
-      "@id": "http://www.qudt.org/vocab/unit/M"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#isMeasurementOf": [
-      {
-      "@id": "http://data.europa.eu/930/spatialResolutionAsVerticalDistance"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#value": [
-      {
-      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-      "@value": "10"
-      }
-    ]
-    },
-    {
-    "@id": "_:N721387ead55a40e29f65f4690229f8bb",
+    "@id": "_:N82bc4fc82c2b439f819c34b346c56be7",
     "@type": [
       "http://www.w3.org/ns/dqv#QualityMeasurement"
     ],
@@ -71,23 +41,7 @@
     ]
     },
     {
-    "@id": "https://some.catalogue/resource/d45678",
-    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
-      {
-      "@id": "_:Nff3416651b9b46bfbd9ccfc54f328b53"
-      }
-    ]
-    },
-    {
-    "@id": "https://some.catalogue/resource/a12345",
-    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
-      {
-      "@id": "_:N721387ead55a40e29f65f4690229f8bb"
-      }
-    ]
-    },
-    {
-    "@id": "_:Nf2f8b8e664264c7692b311e4a8deab24",
+    "@id": "_:N73e229f887b84c3c9211460abfd1ce25",
     "@type": [
       "http://www.w3.org/ns/dqv#QualityMeasurement"
     ],
@@ -109,10 +63,56 @@
     ]
     },
     {
+    "@id": "https://some.catalogue/resource/c34567",
+    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
+      {
+      "@id": "_:Ndd1fed1b06694094b5cfc1faff2626b7"
+      }
+    ]
+    },
+    {
+    "@id": "_:Na5b7398067b441608eccdec92db01d31",
+    "@type": [
+      "http://www.w3.org/ns/dqv#QualityMeasurement"
+    ],
+    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
+      {
+      "@id": "http://www.qudt.org/vocab/unit/M"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#isMeasurementOf": [
+      {
+      "@id": "http://data.europa.eu/930/spatialResolutionAsVerticalDistance"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#value": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@value": "10"
+      }
+    ]
+    },
+    {
+    "@id": "https://some.catalogue/resource/d45678",
+    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
+      {
+      "@id": "_:Na5b7398067b441608eccdec92db01d31"
+      }
+    ]
+    },
+    {
+    "@id": "https://some.catalogue/resource/a12345",
+    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
+      {
+      "@id": "_:N82bc4fc82c2b439f819c34b346c56be7"
+      }
+    ]
+    },
+    {
     "@id": "https://some.catalogue/resource/b23456",
     "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
       {
-      "@id": "_:Nf2f8b8e664264c7692b311e4a8deab24"
+      "@id": "_:N73e229f887b84c3c9211460abfd1ce25"
       }
     ]
     }

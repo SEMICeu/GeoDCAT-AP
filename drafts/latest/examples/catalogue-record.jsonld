@@ -29,12 +29,12 @@
     ],
     "http://purl.org/dc/terms/source": [
       {
-      "@id": "_:Nfb3160ab75ca4ed9a2d09d7e04a23f1d"
+      "@id": "_:N492c003c5b304b82bc29b3ec29e81d10"
       }
     ],
     "http://www.w3.org/ns/dcat#contactPoint": [
       {
-      "@id": "_:N8fb97b2b8b674f0fbf18ca02f84d0401"
+      "@id": "_:Nd1df77a3dafb4ad396b8e65b6e61a29f"
       }
     ],
     "http://xmlns.com/foaf/0.1/primaryTopic": [
@@ -44,20 +44,7 @@
     ]
     },
     {
-    "@id": "_:Nfb3160ab75ca4ed9a2d09d7e04a23f1d",
-    "http://purl.org/dc/terms/conformsTo": [
-      {
-      "@id": "_:Nad8ab266ce004dd79f277fc5d5ebcfdf"
-      }
-    ],
-    "http://www.w3.org/2011/content#characterEncoding": [
-      {
-      "@value": "UTF-8"
-      }
-    ]
-    },
-    {
-    "@id": "_:N4c532bd140564c7082c4e06aa3810460",
+    "@id": "_:N451b6c6884eb4abfb48b9be81e14a4e3",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Address"
     ],
@@ -88,7 +75,7 @@
     ]
     },
     {
-    "@id": "_:N8fb97b2b8b674f0fbf18ca02f84d0401",
+    "@id": "_:Nd1df77a3dafb4ad396b8e65b6e61a29f",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Organization"
     ],
@@ -100,7 +87,7 @@
     ],
     "http://www.w3.org/2006/vcard/ns#hasAddress": [
       {
-      "@id": "_:N4c532bd140564c7082c4e06aa3810460"
+      "@id": "_:N451b6c6884eb4abfb48b9be81e14a4e3"
       }
     ],
     "http://www.w3.org/2006/vcard/ns#hasEmail": [
@@ -110,7 +97,7 @@
     ]
     },
     {
-    "@id": "_:Nad8ab266ce004dd79f277fc5d5ebcfdf",
+    "@id": "_:N65fd57fce9554d4ba7beebfc667ab0dd",
     "http://purl.org/dc/terms/title": [
       {
       "@language": "en",
@@ -121,6 +108,19 @@
       {
       "@language": "en",
       "@value": "1.0"
+      }
+    ]
+    },
+    {
+    "@id": "_:N492c003c5b304b82bc29b3ec29e81d10",
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+      "@id": "_:N65fd57fce9554d4ba7beebfc667ab0dd"
+      }
+    ],
+    "http://www.w3.org/2011/content#characterEncoding": [
+      {
+      "@value": "UTF-8"
       }
     ]
     }

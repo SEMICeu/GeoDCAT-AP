@@ -1,5 +1,5 @@
 @prefix dqv: <http://www.w3.org/ns/dqv#> .
-@prefix geodcatap: <http://data.europa.eu/930/> .
+@prefix geodcat: <http://data.europa.eu/930/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix resource: <https://some.catalogue/resource/> .
@@ -8,21 +8,21 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 resource:a12345 dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
-      dqv:isMeasurementOf geodcatap:spatialResolutionAsScale ;
+      dqv:isMeasurementOf geodcat:spatialResolutionAsScale ;
       dqv:value 0.000001 ] .
 
 resource:b23456 dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
       sdmx-attribute:unitMeasure <http://www.qudt.org/vocab/unit/M> ;
-      dqv:isMeasurementOf geodcatap:spatialResolutionAsDistance ;
+      dqv:isMeasurementOf geodcat:spatialResolutionAsDistance ;
       dqv:value 100.0 ] .
 
 resource:c34567 dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
       sdmx-attribute:unitMeasure <http://www.qudt.org/vocab/unit/DEG> ;
-      dqv:isMeasurementOf geodcatap:spatialResolutionAsAngularDistance ;
+      dqv:isMeasurementOf geodcat:spatialResolutionAsAngularDistance ;
       dqv:value 20.0 ] .
 
 resource:d45678 dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
       sdmx-attribute:unitMeasure <http://www.qudt.org/vocab/unit/M> ;
-      dqv:isMeasurementOf geodcatap:spatialResolutionAsVerticalDistance ;
+      dqv:isMeasurementOf geodcat:spatialResolutionAsVerticalDistance ;
       dqv:value 10.0 ] .
 

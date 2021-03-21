@@ -1,7 +1,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix geodcatap: <http://data.europa.eu/930/> .
+@prefix geodcat: <http://data.europa.eu/930/> .
 @prefix gsp: <http://www.opengis.net/ont/geosparql#> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -14,8 +14,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 resource:eea_v_4326_250_k_wise-eionet-monitoring-sites_service a dcat:DataService ;
-  geodcatap:custodian <http://publications.europa.eu/resource/authority/corporate-body/EEA> ;
-  geodcatap:processor [ a foaf:Organization ;
+  geodcat:custodian <http://publications.europa.eu/resource/authority/corporate-body/EEA> ;
+  geodcat:processor [ a foaf:Organization ;
       foaf:mbox <mailto:wisesoe.helpdesk@eionet.europa.eu> ;
       foaf:name "Tracasa"@en ] ;
   dct:accessRights <http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations> ;
