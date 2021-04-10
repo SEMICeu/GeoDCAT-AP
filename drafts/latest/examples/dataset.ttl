@@ -57,7 +57,7 @@ resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
       dct:format <http://publications.europa.eu/resource/authority/file-type/TIFF> ;
       dct:license [ a dct:LicenseDocument ;
           rdfs:label "The full noise contour maps data set is in principle only available for EEA internal use. A public version of the data set may in the future be available, excluding those data sets for which there is any limitation or restriction in their use (beyond acknowledgement)."@en ] ;
-      adms:representationTechnique <http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode/grid> ;
+      adms:representationTechnique <http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/grid> ;
       dcat:accessService [ dct:conformsTo <http://www.opengeospatial.org/standards/wms> ;
           dcat:endpointDescription <https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&service=WMS> ;
           dcat:endpointURL <https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer> ] ;

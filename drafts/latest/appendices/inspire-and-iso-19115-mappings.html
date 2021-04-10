@@ -3578,7 +3578,7 @@ prov:wasUsedBy [
 
 <h2>Coordinate reference systems and Temporal reference systems – *Reference System</h2>
 
-<p>In GeoDCAT-AP, these elements are mapped to property <code>dct:conformsTo</code>. Moreover, in order to indicate that the object of <code>dct:conformsTo</code> denotes a reference system, an additional statement with predicate <code>dct:type</code> is added, with a code list value defining the notion of (spatial / temporal) reference system, taken from the glossary operated by the INSPIRE Registry.</p>
+<p>In GeoDCAT-AP, these elements are mapped to property <code>dct:conformsTo</code>. Moreover, in order to indicate that the object of <code>dct:conformsTo</code> denotes a reference system, an additional statement with predicate <code>dct:type</code> is added, with a code list value defining the notion of (spatial / temporal) reference system, taken from the glossary operated by the INSPIRE Registry [[INSPIRE-GLOSSARY]].</p>
 
 <p>More precisely, the following URIs SHOULD be used to denote, respectively, spatial and temporal reference systems:</p>
 
@@ -3967,9 +3967,15 @@ prov:wasUsedBy [
 
 <p>In [[ISO-19115]], element “Spatial representation type” is meant mainly to describe the “method used to represent geographic information in the dataset”, by using a code list (see the table below).</p>
 
+<!--
 <p>The <abbr title="Asset Description Metadata Schema">ADMS</abbr> vocabulary [[VOCAB-ADMS]] includes a property, namely, <code>adms:representationTechnique</code> that could be used for this purpose. It is worth noting that, in the ADMS specification, <code>adms:representationTechnique</code> decribes a distribution, and not the dataset. Moreover, the [[ISO-19115]] code list of spatial representation types might be in the future available as a URI register from the INSPIRE Registry.</p>
+-->
 
+<p>The <abbr title="Asset Description Metadata Schema">ADMS</abbr> vocabulary [[VOCAB-ADMS]] includes a property, namely, <code>adms:representationTechnique</code> that could be used for this purpose. It is worth noting that, in the ADMS specification, <code>adms:representationTechnique</code> decribes a distribution, and not the dataset. Moreover, the [[ISO-19115]] code list of spatial representation types is available as a URI register from the INSPIRE Registry [[INSPIRE-SRT]].</p>
+
+<!--
 <div class="issue" data-number="55"></div>
+-->
 
 <!-- TO BE RESTORED
 <aside class="ednote">
@@ -3984,7 +3990,11 @@ prov:wasUsedBy [
 </aside>
 -->
 
+<!--
 <p>Based on this, GeoDCAT-AP models this information by using property <code>adms:representationTechnique</code>, with the spatial representation type URIs that will be operated by the INSPIRE Registry.</p>
+-->
+
+<p>Based on this, GeoDCAT-AP models this information by using property <code>adms:representationTechnique</code>, with the spatial representation type URIs operated by the INSPIRE Registry [[INSPIRE-SRT]].</p>
 
 <p>This mapping is supported only in the extended mapping profile of GeoDCAT-AP.</p>
 
@@ -4045,7 +4055,7 @@ prov:wasUsedBy [
 
 <pre>[] a dcat:Dataset ;
   dcat:distribution [ a dcat:Distribution
-    adms:representionTechnique &lt;http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode/vector&gt;
+    adms:representionTechnique &lt;http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/vector&gt;
 ] .</pre>
 
 <p>Resource metadata in ISO 19139:</p>
@@ -4211,9 +4221,15 @@ prov:wasUsedBy [
 <p>[[VOCAB-DCAT-2]] and [[DCAT-AP-20200608]], the update frequency is expressed through <code>dct:accrualPeriodicity</code>, with the frequency codes defined in the Dublin Core Collection Description Frequency Vocabulary [[?CLD-FREQ]], which can be partially mapped to the ones used in [[ISO-19115]], as shown in the following table (the missing alignments are in bold). A similar mapping was added for the EU Vocabularies Frequency Named Authority List [[EUV-FREQ]].</p>
 -->
 
+<!--
 <p>The [[ISO-19115]] code list of maintenance frequency codes might be in the future available as a URI register from the INSPIRE Registry.</p>
+-->
 
+<p>The [[ISO-19115]] code list of maintenance frequency codes is available as a URI register from the INSPIRE Registry [[INSPIRE-MF]].</p>
+
+<!--
 <div class="issue" data-number="56"></div>
+-->
 
 <!-- TO BE RESTORED
 <aside class="ednote">
@@ -4227,7 +4243,7 @@ prov:wasUsedBy [
 
 <ul>
 <li><p>In the core mapping profile of GeoDCAT-AP these codes will be ignored.</p></li>
-<li><p>The extended mapping profile of GeoDCAT-AP will use the code list of ISO maintenance frequency codes operated by the INSPIRE Registry.</p></li>
+<li><p>The extended mapping profile of GeoDCAT-AP will use the code list of ISO maintenance frequency codes operated by the INSPIRE Registry [[INSPIRE-MF]].</p></li>
 </ul>
 
 <!-- TO BE RESTORED

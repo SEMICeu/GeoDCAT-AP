@@ -2,76 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:Ndd1fed1b06694094b5cfc1faff2626b7",
-    "@type": [
-      "http://www.w3.org/ns/dqv#QualityMeasurement"
-    ],
-    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
-      {
-      "@id": "http://www.qudt.org/vocab/unit/DEG"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#isMeasurementOf": [
-      {
-      "@id": "http://data.europa.eu/930/spatialResolutionAsAngularDistance"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#value": [
-      {
-      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-      "@value": "20"
-      }
-    ]
-    },
-    {
-    "@id": "_:N82bc4fc82c2b439f819c34b346c56be7",
-    "@type": [
-      "http://www.w3.org/ns/dqv#QualityMeasurement"
-    ],
-    "http://www.w3.org/ns/dqv#isMeasurementOf": [
-      {
-      "@id": "http://data.europa.eu/930/spatialResolutionAsScale"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#value": [
-      {
-      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-      "@value": "0.000001"
-      }
-    ]
-    },
-    {
-    "@id": "_:N73e229f887b84c3c9211460abfd1ce25",
-    "@type": [
-      "http://www.w3.org/ns/dqv#QualityMeasurement"
-    ],
-    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
-      {
-      "@id": "http://www.qudt.org/vocab/unit/M"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#isMeasurementOf": [
-      {
-      "@id": "http://data.europa.eu/930/spatialResolutionAsDistance"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#value": [
-      {
-      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-      "@value": "100"
-      }
-    ]
-    },
-    {
-    "@id": "https://some.catalogue/resource/c34567",
-    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
-      {
-      "@id": "_:Ndd1fed1b06694094b5cfc1faff2626b7"
-      }
-    ]
-    },
-    {
-    "@id": "_:Na5b7398067b441608eccdec92db01d31",
+    "@id": "_:N742cf61b8df54978a84b03fda45df953",
     "@type": [
       "http://www.w3.org/ns/dqv#QualityMeasurement"
     ],
@@ -96,7 +27,76 @@
     "@id": "https://some.catalogue/resource/d45678",
     "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
       {
-      "@id": "_:Na5b7398067b441608eccdec92db01d31"
+      "@id": "_:N742cf61b8df54978a84b03fda45df953"
+      }
+    ]
+    },
+    {
+    "@id": "_:N816080ae92364b909759bec8fca5ce78",
+    "@type": [
+      "http://www.w3.org/ns/dqv#QualityMeasurement"
+    ],
+    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
+      {
+      "@id": "http://www.qudt.org/vocab/unit/DEG"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#isMeasurementOf": [
+      {
+      "@id": "http://data.europa.eu/930/spatialResolutionAsAngularDistance"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#value": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@value": "20"
+      }
+    ]
+    },
+    {
+    "@id": "https://some.catalogue/resource/c34567",
+    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
+      {
+      "@id": "_:N816080ae92364b909759bec8fca5ce78"
+      }
+    ]
+    },
+    {
+    "@id": "_:N18fada498a4a436fa06fc3ae4489ccba",
+    "@type": [
+      "http://www.w3.org/ns/dqv#QualityMeasurement"
+    ],
+    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
+      {
+      "@id": "http://www.qudt.org/vocab/unit/M"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#isMeasurementOf": [
+      {
+      "@id": "http://data.europa.eu/930/spatialResolutionAsDistance"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#value": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@value": "100"
+      }
+    ]
+    },
+    {
+    "@id": "_:N0bcdac561ae047cb9a2077d808e072fb",
+    "@type": [
+      "http://www.w3.org/ns/dqv#QualityMeasurement"
+    ],
+    "http://www.w3.org/ns/dqv#isMeasurementOf": [
+      {
+      "@id": "http://data.europa.eu/930/spatialResolutionAsScale"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#value": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@value": "0.000001"
       }
     ]
     },
@@ -104,7 +104,7 @@
     "@id": "https://some.catalogue/resource/a12345",
     "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
       {
-      "@id": "_:N82bc4fc82c2b439f819c34b346c56be7"
+      "@id": "_:N0bcdac561ae047cb9a2077d808e072fb"
       }
     ]
     },
@@ -112,7 +112,7 @@
     "@id": "https://some.catalogue/resource/b23456",
     "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
       {
-      "@id": "_:N73e229f887b84c3c9211460abfd1ce25"
+      "@id": "_:N18fada498a4a436fa06fc3ae4489ccba"
       }
     ]
     }

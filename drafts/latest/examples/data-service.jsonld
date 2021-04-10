@@ -2,42 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:Ncce0ac5e86414f36a6b9c9ba421ec778",
-    "@type": [
-      "http://www.w3.org/2006/vcard/ns#Organization"
-    ],
-    "http://www.w3.org/2006/vcard/ns#fn": [
-      {
-      "@language": "en",
-      "@value": "European Environment Agency"
-      }
-    ],
-    "http://www.w3.org/2006/vcard/ns#hasAddress": [
-      {
-      "@id": "_:N9a606f6796e04bc0aa103dfe8726a218"
-      }
-    ],
-    "http://www.w3.org/2006/vcard/ns#hasEmail": [
-      {
-      "@id": "mailto:info@eea.europa.eu"
-      }
-    ],
-    "http://www.w3.org/2006/vcard/ns#hasURL": [
-      {
-      "@id": "http://www.eea.europa.eu"
-      }
-    ]
-    },
-    {
-    "@id": "_:N0025a52d292c40a8b90f92474f9630a9",
-    "http://www.w3.org/ns/prov#hadPlan": [
-      {
-      "@id": "_:N8b13c94c74094185935f9189791b16f5"
-      }
-    ]
-    },
-    {
-    "@id": "_:Nf4b24d3cc3f84e3d9cfea28c08f424fd",
+    "@id": "_:Nfc1b3b2dfa3d4ee0b16325ab9282ad9b",
     "http://www.w3.org/ns/dcat#bbox": [
       {
       "@type": "http://www.opengis.net/ont/geosparql#gmlLiteral",
@@ -50,23 +15,7 @@
     ]
     },
     {
-    "@id": "_:Ne3ee01b6ff8d4d27a9a67b65eb14bdd8",
-    "@type": [
-      "http://www.w3.org/ns/prov#Activity"
-    ],
-    "http://www.w3.org/ns/prov#generated": [
-      {
-      "@id": "_:N67c52243bbb649098e00038b381d6d69"
-      }
-    ],
-    "http://www.w3.org/ns/prov#qualifiedAssociation": [
-      {
-      "@id": "_:N0025a52d292c40a8b90f92474f9630a9"
-      }
-    ]
-    },
-    {
-    "@id": "_:N6427f32a1d464e5489c37290ba3e1546",
+    "@id": "_:N8443a2cfbf8f48af94e3603906bd4628",
     "@type": [
       "http://purl.org/dc/terms/LicenseDocument"
     ],
@@ -78,174 +27,7 @@
     ]
     },
     {
-    "@id": "https://some.catalogue/resource/eea_v_4326_250_k_wise-eionet-monitoring-sites_service",
-    "@type": [
-      "http://www.w3.org/ns/dcat#DataService"
-    ],
-    "http://data.europa.eu/930/custodian": [
-      {
-      "@id": "http://publications.europa.eu/resource/authority/corporate-body/EEA"
-      }
-    ],
-    "http://data.europa.eu/930/processor": [
-      {
-      "@id": "_:Nd4418bf5a9884cc7ba93121ce91e4022"
-      }
-    ],
-    "http://purl.org/dc/terms/accessRights": [
-      {
-      "@id": "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"
-      }
-    ],
-    "http://purl.org/dc/terms/conformsTo": [
-      {
-      "@id": "http://www.opengeospatial.org/standards/wms"
-      },
-      {
-      "@id": "http://www.opengis.net/def/crs/EPSG/0/4326"
-      },
-      {
-      "@id": "http://www.opengis.net/def/crs/EPSG/0/102100"
-      },
-      {
-      "@id": "http://www.opengis.net/def/crs/EPSG/0/3857"
-      },
-      {
-      "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-      }
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-      "@language": "en",
-      "@value": "\n    The service contains information on European surface water and groundwater \n    monitoring sites reported to the European Environment Agency between \n    2001-11-29 and 2020-01-17. The information was reported to the European \n    Environment Agency under the State of Environment reporting obligations. \n    ...\n  "
-      }
-    ],
-    "http://purl.org/dc/terms/identifier": [
-      {
-      "@value": "eea_v_4326_250_k_wise-eionet-monitoring-sites_service"
-      }
-    ],
-    "http://purl.org/dc/terms/issued": [
-      {
-      "@type": "http://www.w3.org/2001/XMLSchema#date",
-      "@value": "2018-09-15"
-      }
-    ],
-    "http://purl.org/dc/terms/license": [
-      {
-      "@id": "_:N6427f32a1d464e5489c37290ba3e1546"
-      }
-    ],
-    "http://purl.org/dc/terms/spatial": [
-      {
-      "@id": "_:Nf4b24d3cc3f84e3d9cfea28c08f424fd"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-      "@language": "en",
-      "@value": "EIONET monitoring sites - Web Service"
-      }
-    ],
-    "http://purl.org/dc/terms/type": [
-      {
-      "@id": "http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view"
-      },
-      {
-      "@id": "http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#contactPoint": [
-      {
-      "@id": "_:Ncce0ac5e86414f36a6b9c9ba421ec778"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#endpointDescription": [
-      {
-      "@id": "https://water.discomap.eea.europa.eu/arcgis/rest/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer"
-      },
-      {
-      "@id": "https://water.discomap.eea.europa.eu/arcgis/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#endpointURL": [
-      {
-      "@id": "https://water.discomap.eea.europa.eu/arcgis/rest/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer"
-      },
-      {
-      "@id": "https://water.discomap.eea.europa.eu/arcgis/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer/WMSServer"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#keyword": [
-      {
-      "@language": "en",
-      "@value": "Monitoring Site"
-      },
-      {
-      "@language": "en",
-      "@value": "Surface water body"
-      },
-      {
-      "@language": "en",
-      "@value": "Groundwater body"
-      },
-      {
-      "@language": "en",
-      "@value": "Water Information System for Europe"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#servesDataset": [
-      {
-      "@id": "https://some.catalogue/resource/eea_v_4326_250_k_wise-eionet_p_2001-2020_v01_r04"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#theme": [
-      {
-      "@id": "http://www.eionet.europa.eu/gemet/concept/3780"
-      },
-      {
-      "@id": "http://www.eionet.europa.eu/gemet/concept/5352"
-      },
-      {
-      "@id": "http://inspire.ec.europa.eu/theme/ef"
-      },
-      {
-      "@id": "http://www.eionet.europa.eu/gemet/concept/8229"
-      },
-      {
-      "@id": "http://www.eionet.europa.eu/gemet/concept/12301"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasUsedBy": [
-      {
-      "@id": "_:Ne3ee01b6ff8d4d27a9a67b65eb14bdd8"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": [
-      {
-      "@id": "https://some.catalogue/record/29e08b66-e6f6-4b4f-95ad-b582d9fe3df5"
-      }
-    ]
-    },
-    {
-    "@id": "_:Nd4418bf5a9884cc7ba93121ce91e4022",
-    "@type": [
-      "http://xmlns.com/foaf/0.1/Organization"
-    ],
-    "http://xmlns.com/foaf/0.1/mbox": [
-      {
-      "@id": "mailto:wisesoe.helpdesk@eionet.europa.eu"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-      "@language": "en",
-      "@value": "Tracasa"
-      }
-    ]
-    },
-    {
-    "@id": "_:N9a606f6796e04bc0aa103dfe8726a218",
+    "@id": "_:Nd4a9379e223848aa920829f37d0ce429",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Address"
     ],
@@ -276,15 +58,48 @@
     ]
     },
     {
-    "@id": "_:N8b13c94c74094185935f9189791b16f5",
-    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+    "@id": "_:N890ca1b6b69f4bfb9ab5a3b5313f5f41",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Organization"
+    ],
+    "http://xmlns.com/foaf/0.1/mbox": [
       {
-      "@id": "http://inspire.ec.europa.eu/id/citation/ir/reg-976-2009"
+      "@id": "mailto:wisesoe.helpdesk@eionet.europa.eu"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+      "@language": "en",
+      "@value": "Tracasa"
       }
     ]
     },
     {
-    "@id": "_:N67c52243bbb649098e00038b381d6d69",
+    "@id": "_:N3c7fa1a1161647e097f1518721be8b38",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/ns/prov#generated": [
+      {
+      "@id": "_:N538447af99804281b76f4085d9868399"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedAssociation": [
+      {
+      "@id": "_:N1684d0298ed24d9a817c684031e999d8"
+      }
+    ]
+    },
+    {
+    "@id": "_:N1684d0298ed24d9a817c684031e999d8",
+    "http://www.w3.org/ns/prov#hadPlan": [
+      {
+      "@id": "_:Ne58218e0bdcc4a508e0410b87b1ebf96"
+      }
+    ]
+    },
+    {
+    "@id": "_:N538447af99804281b76f4085d9868399",
     "http://purl.org/dc/terms/description": [
       {
       "@language": "en",
@@ -294,6 +109,191 @@
     "http://purl.org/dc/terms/type": [
       {
       "@id": "http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated"
+      }
+    ]
+    },
+    {
+    "@id": "https://some.catalogue/resource/eea_v_4326_250_k_wise-eionet-monitoring-sites_service",
+    "@type": [
+      "http://www.w3.org/ns/dcat#DataService"
+    ],
+    "http://data.europa.eu/930/custodian": [
+      {
+      "@id": "http://publications.europa.eu/resource/authority/corporate-body/EEA"
+      }
+    ],
+    "http://data.europa.eu/930/processor": [
+      {
+      "@id": "_:N890ca1b6b69f4bfb9ab5a3b5313f5f41"
+      }
+    ],
+    "http://purl.org/dc/terms/accessRights": [
+      {
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"
+      }
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+      "@id": "http://www.opengeospatial.org/standards/wms"
+      },
+      {
+      "@id": "http://www.opengis.net/def/crs/EPSG/0/4326"
+      },
+      {
+      "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+      },
+      {
+      "@id": "http://www.opengis.net/def/crs/EPSG/0/3857"
+      },
+      {
+      "@id": "http://www.opengis.net/def/crs/EPSG/0/102100"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+      "@language": "en",
+      "@value": "\n    The service contains information on European surface water and groundwater \n    monitoring sites reported to the European Environment Agency between \n    2001-11-29 and 2020-01-17. The information was reported to the European \n    Environment Agency under the State of Environment reporting obligations. \n    ...\n  "
+      }
+    ],
+    "http://purl.org/dc/terms/identifier": [
+      {
+      "@value": "eea_v_4326_250_k_wise-eionet-monitoring-sites_service"
+      }
+    ],
+    "http://purl.org/dc/terms/issued": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#date",
+      "@value": "2018-09-15"
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+      "@id": "_:N8443a2cfbf8f48af94e3603906bd4628"
+      }
+    ],
+    "http://purl.org/dc/terms/spatial": [
+      {
+      "@id": "_:Nfc1b3b2dfa3d4ee0b16325ab9282ad9b"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+      "@language": "en",
+      "@value": "EIONET monitoring sites - Web Service"
+      }
+    ],
+    "http://purl.org/dc/terms/type": [
+      {
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service"
+      },
+      {
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#contactPoint": [
+      {
+      "@id": "_:Ne2e078425e55437b9bb72937ae9d5b09"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#endpointDescription": [
+      {
+      "@id": "https://water.discomap.eea.europa.eu/arcgis/rest/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer"
+      },
+      {
+      "@id": "https://water.discomap.eea.europa.eu/arcgis/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer/WMSServer?request=GetCapabilities&service=WMS"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#endpointURL": [
+      {
+      "@id": "https://water.discomap.eea.europa.eu/arcgis/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer/WMSServer"
+      },
+      {
+      "@id": "https://water.discomap.eea.europa.eu/arcgis/rest/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#keyword": [
+      {
+      "@language": "en",
+      "@value": "Water Information System for Europe"
+      },
+      {
+      "@language": "en",
+      "@value": "Monitoring Site"
+      },
+      {
+      "@language": "en",
+      "@value": "Groundwater body"
+      },
+      {
+      "@language": "en",
+      "@value": "Surface water body"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#servesDataset": [
+      {
+      "@id": "https://some.catalogue/resource/eea_v_4326_250_k_wise-eionet_p_2001-2020_v01_r04"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#theme": [
+      {
+      "@id": "http://inspire.ec.europa.eu/theme/ef"
+      },
+      {
+      "@id": "http://www.eionet.europa.eu/gemet/concept/3780"
+      },
+      {
+      "@id": "http://www.eionet.europa.eu/gemet/concept/8229"
+      },
+      {
+      "@id": "http://www.eionet.europa.eu/gemet/concept/5352"
+      },
+      {
+      "@id": "http://www.eionet.europa.eu/gemet/concept/12301"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasUsedBy": [
+      {
+      "@id": "_:N3c7fa1a1161647e097f1518721be8b38"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": [
+      {
+      "@id": "https://some.catalogue/record/29e08b66-e6f6-4b4f-95ad-b582d9fe3df5"
+      }
+    ]
+    },
+    {
+    "@id": "_:Ne58218e0bdcc4a508e0410b87b1ebf96",
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+      "@id": "http://inspire.ec.europa.eu/id/citation/ir/reg-976-2009"
+      }
+    ]
+    },
+    {
+    "@id": "_:Ne2e078425e55437b9bb72937ae9d5b09",
+    "@type": [
+      "http://www.w3.org/2006/vcard/ns#Organization"
+    ],
+    "http://www.w3.org/2006/vcard/ns#fn": [
+      {
+      "@language": "en",
+      "@value": "European Environment Agency"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasAddress": [
+      {
+      "@id": "_:Nd4a9379e223848aa920829f37d0ce429"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasEmail": [
+      {
+      "@id": "mailto:info@eea.europa.eu"
+      }
+    ],
+    "http://www.w3.org/2006/vcard/ns#hasURL": [
+      {
+      "@id": "http://www.eea.europa.eu"
       }
     ]
     }

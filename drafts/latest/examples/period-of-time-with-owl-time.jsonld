@@ -2,23 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:Nf74277a1f34f4f49be1b1cca773432b0",
-    "@type": [
-      "http://purl.org/dc/terms/PeriodOfTime"
-    ],
-    "http://www.w3.org/2006/time#hasBeginning": [
-      {
-      "@id": "_:N09c4764029e44ca39bc2780a4ed3bbff"
-      }
-    ],
-    "http://www.w3.org/2006/time#hasEnd": [
-      {
-      "@id": "_:N37b51cb903dc40159847622430ae569b"
-      }
-    ]
-    },
-    {
-    "@id": "_:N09c4764029e44ca39bc2780a4ed3bbff",
+    "@id": "_:N0a5f84bf738f431d9c86a24dad081ffb",
     "http://www.w3.org/2006/time#inXSDDate": [
       {
       "@type": "http://www.w3.org/2001/XMLSchema#date",
@@ -27,7 +11,23 @@
     ]
     },
     {
-    "@id": "_:N37b51cb903dc40159847622430ae569b",
+    "@id": "_:N5a2d171fa13149ebb763f109f8b9b38e",
+    "@type": [
+      "http://purl.org/dc/terms/PeriodOfTime"
+    ],
+    "http://www.w3.org/2006/time#hasBeginning": [
+      {
+      "@id": "_:N0a5f84bf738f431d9c86a24dad081ffb"
+      }
+    ],
+    "http://www.w3.org/2006/time#hasEnd": [
+      {
+      "@id": "_:N7cd56bb315cd483a8cbbd2ee5512ca67"
+      }
+    ]
+    },
+    {
+    "@id": "_:N7cd56bb315cd483a8cbbd2ee5512ca67",
     "http://www.w3.org/2006/time#inXSDDate": [
       {
       "@type": "http://www.w3.org/2001/XMLSchema#date",

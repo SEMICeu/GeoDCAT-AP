@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:N7030c31e2e5741deaa21f5cceab921c8",
+    "@id": "_:Nb8df6606c3854a5aa4e7369777e03963",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#ConceptScheme"
     ],
@@ -20,10 +20,10 @@
     ]
     },
     {
-    "@id": "_:N6ab3445106b644508124e809342d7679",
+    "@id": "_:N3deccf30270a4926b897711acd1b537c",
     "@type": [
-      "http://purl.org/dc/terms/Location",
-      "http://www.w3.org/2004/02/skos/core#Concept"
+      "http://www.w3.org/2004/02/skos/core#Concept",
+      "http://purl.org/dc/terms/Location"
     ],
     "http://purl.org/dc/terms/identifier": [
       {
@@ -32,7 +32,7 @@
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
       {
-      "@id": "_:N7030c31e2e5741deaa21f5cceab921c8"
+      "@id": "_:Nb8df6606c3854a5aa4e7369777e03963"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [

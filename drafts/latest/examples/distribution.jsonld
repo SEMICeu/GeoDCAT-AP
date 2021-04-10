@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:Na2cc4e9a3291487d81d4dbe2abfc21d4",
+    "@id": "_:N394a10b0fe7c4212a8393d7767d8e398",
     "@type": [
       "http://purl.org/dc/terms/LicenseDocument"
     ],
@@ -14,7 +14,25 @@
     ]
     },
     {
-    "@id": "_:Nf9db804bb05e4f5386791dd18266608d",
+    "@id": "_:N22c9b58307cb4990ba36526fb9cddb6b",
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+      "@id": "http://www.opengeospatial.org/standards/wms"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#endpointDescription": [
+      {
+      "@id": "https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&service=WMS"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#endpointURL": [
+      {
+      "@id": "https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer"
+      }
+    ]
+    },
+    {
+    "@id": "_:N8c69889fd6d8447eb03657fd1039bb8a",
     "@type": [
       "http://www.w3.org/ns/dcat#Distribution"
     ],
@@ -36,40 +54,22 @@
     ],
     "http://purl.org/dc/terms/license": [
       {
-      "@id": "_:Na2cc4e9a3291487d81d4dbe2abfc21d4"
+      "@id": "_:N394a10b0fe7c4212a8393d7767d8e398"
       }
     ],
     "http://www.w3.org/ns/adms#representationTechnique": [
       {
-      "@id": "http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode/grid"
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/grid"
       }
     ],
     "http://www.w3.org/ns/dcat#accessService": [
       {
-      "@id": "_:Ncfabe8c99a3241cc8393dbc4dfcd48de"
+      "@id": "_:N22c9b58307cb4990ba36526fb9cddb6b"
       }
     ],
     "http://www.w3.org/ns/dcat#accessURL": [
       {
       "@id": "https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&service=WMS"
-      }
-    ]
-    },
-    {
-    "@id": "_:Ncfabe8c99a3241cc8393dbc4dfcd48de",
-    "http://purl.org/dc/terms/conformsTo": [
-      {
-      "@id": "http://www.opengeospatial.org/standards/wms"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#endpointDescription": [
-      {
-      "@id": "https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&service=WMS"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#endpointURL": [
-      {
-      "@id": "https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer"
       }
     ]
     }

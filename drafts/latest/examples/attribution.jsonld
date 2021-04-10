@@ -2,23 +2,15 @@
   {
   "@graph": [
     {
-    "@id": "_:N6f8eefa18cc54ed4a53427c765251689",
-    "@type": [
-      "http://www.w3.org/ns/prov#Attribution"
-    ],
-    "http://www.w3.org/ns/dcat#hadRole": [
+    "@id": "https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00",
+    "http://www.w3.org/ns/prov#qualifiedAttribution": [
       {
-      "@id": "http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact"
-      }
-    ],
-    "http://www.w3.org/ns/prov#agent": [
-      {
-      "@id": "http://publications.europa.eu/resource/authority/corporate-body/EEA"
+      "@id": "_:N05e7b35aeadf42169d59007f65915fc4"
       }
     ]
     },
     {
-    "@id": "_:N1f6a40576b224da29816cae0a7f4d0ce",
+    "@id": "_:N3061c1ca402b42259f11d1f1264ad268",
     "@type": [
       "http://www.w3.org/ns/locn#Address"
     ],
@@ -49,22 +41,30 @@
     ]
     },
     {
-    "@id": "https://some.catalogue/resource/eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00",
-    "http://www.w3.org/ns/prov#qualifiedAttribution": [
+    "@id": "_:N05e7b35aeadf42169d59007f65915fc4",
+    "@type": [
+      "http://www.w3.org/ns/prov#Attribution"
+    ],
+    "http://www.w3.org/ns/dcat#hadRole": [
       {
-      "@id": "_:N6f8eefa18cc54ed4a53427c765251689"
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact"
+      }
+    ],
+    "http://www.w3.org/ns/prov#agent": [
+      {
+      "@id": "http://publications.europa.eu/resource/authority/corporate-body/EEA"
       }
     ]
     },
     {
     "@id": "http://publications.europa.eu/resource/authority/corporate-body/EEA",
     "@type": [
-      "http://www.w3.org/ns/prov#Organization",
-      "http://xmlns.com/foaf/0.1/Organization"
+      "http://xmlns.com/foaf/0.1/Organization",
+      "http://www.w3.org/ns/prov#Organization"
     ],
     "http://www.w3.org/ns/locn#address": [
       {
-      "@id": "_:N1f6a40576b224da29816cae0a7f4d0ce"
+      "@id": "_:N3061c1ca402b42259f11d1f1264ad268"
       }
     ],
     "http://xmlns.com/foaf/0.1/mbox": [

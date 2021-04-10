@@ -416,6 +416,11 @@ var respecConfig = {
         "title":"INSPIRE Registry: Degrees of conformity",
         "publisher":"European Commission"
       },
+      "INSPIRE-MF": {
+        "href":"http://inspire.ec.europa.eu/metadata-codelist/MaintenanceFrequency",
+        "title":"INSPIRE Registry: Maintenance Frequency",
+        "publisher":"European Commission"
+      },
       "INSPIRE-RPR": {
         "href":"http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole",
         "title":"INSPIRE Registry: Responsible party roles",
@@ -424,6 +429,11 @@ var respecConfig = {
       "INSPIRE-SDSC": {
         "href":"http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory",
         "title":"INSPIRE Registry: Classification of spatial data services",
+        "publisher":"European Commission"
+      },
+      "INSPIRE-SRT": {
+        "href":"http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType",
+        "title":"INSPIRE Registry: Spatial Representation Types",
         "publisher":"European Commission"
       },
       "INSPIRE-THEMES": {
@@ -856,7 +866,8 @@ var respecConfig = {
         "authors":["Hajo Rijgersberg", "Mark van Assem", "Don Willems", "Xin-Ying Ren", "Mari Wigham", "Jeen Broekstra", "Jan Top"]
       },
       "GeoSPARQL11": {
-        "href": "https://github.com/opengeospatial/ogc-geosparql/1.1",
+//        "href": "https://github.com/opengeospatial/ogc-geosparql/1.1",
+        "href": "https://opengeospatial.github.io/ogc-geosparql/geosparql11/spec.html",
         "title": "OGC GeoSPARQL 1.1",
 //        "authors": [],
         "publisher":"OGC",
