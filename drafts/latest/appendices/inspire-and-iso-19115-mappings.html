@@ -134,7 +134,7 @@
 
 <p>The work started with the review of the suite of specifications concerning the INSPIRE profile of [[DCAT-AP]] (INSPIRE+DCAT-AP) [[INSPIRE-DCAT]], and of the preliminary proposals concerning the metadata elements not covered by INSPIRE+DCAT-AP.</p>
 
-<p>In two specific cases, feedback has been asked to relevant standardisation bodies, in order to validate the proposal made in GeoDCAT-AP. In particular, this concerned feedback provided by the W3C Provenance Working Group on the use of the W3C PROV ontology [[PROV-O]] to model responsible party roles and conformance results (data quality).</p>
+<p>In two specific cases, feedback has been asked to relevant standardisation bodies, in order to validate the proposal made in GeoDCAT-AP. In particular, this concerned feedback provided by the W3C Provenance Working Group on the use of the W3C PROV ontology [[PROV-O]] to specify responsible party roles and conformance results (data quality).</p>
 
 <p>Finally, the GeoDCAT-AP WG has worked in close coordination with the DCAT-AP WG, in order to ensure mutual compliance of the proposed solutions.</p>
 -->
@@ -520,7 +520,7 @@
 <p>(<code>dcat:Dataset</code> (M))</p>
 </td>
 <td><code>dct:Standard</code></td>
-<td>See <a href="#conformity-and-data-quality---not-in-iso19115-core"></a>. <code>dct:conformsTo</code> can model only one of the cases supported in INSPIRE. i.e., when the degree of conformity is “conformant”.</td>
+<td>See <a href="#conformity-and-data-quality---not-in-iso19115-core"></a>. <code>dct:conformsTo</code> can be used to specify only one of the cases supported in INSPIRE. i.e., when the degree of conformity is “conformant”.</td>
 </tr>
 
 <tr>
@@ -588,7 +588,7 @@
 <td>
 <p><code>dct:Agent</code></p>
 </td>
-<td rowspan="2">See <a href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"></a>. [[DCAT-AP-20200608]] supports only 3 of the 11 responsible party roles supported in INSPIRE. GeoDCAT-AP Extended makes use of [[PROV-O]] to model information concerning provenance not covered in [[DCAT-AP-20200608]].</td>
+<td rowspan="2">See <a href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"></a>. [[DCAT-AP-20200608]] supports only 3 of the 11 responsible party roles supported in INSPIRE. GeoDCAT-AP Extended makes use of [[PROV-O]] to specify information concerning provenance not covered in [[DCAT-AP-20200608]].</td>
 </tr>
 
 <tr>
@@ -705,7 +705,7 @@
 
 <ol>
 <li><p><strong>Partial coverage by a [[DCAT-AP-20200608]] binding</strong>: This concerns conformity (only degree of conformity equal to &ldquo;conformant&rdquo; is supported) and responsible organisation (only responsible party roles creator, publisher, and point of contact are supported).</p></li>
-<li><p><strong>Subsumption by a GeoDCAT-AP RDF binding</strong>: ISO metadata elements available in GeoDCAT-AP Core, but for which only a many-to-one mapping is supported in [[DCAT-AP-20200608]]. This concerns resource types, since the [[VOCAB-DCAT-2]] notion of dataset models both the ISO/INSPIRE notions of data set and data series.</p></li>
+<li><p><strong>Subsumption by a GeoDCAT-AP RDF binding</strong>: ISO metadata elements available in GeoDCAT-AP Core, but for which only a many-to-one mapping is supported in [[DCAT-AP-20200608]]. This concerns resource types, since the [[VOCAB-DCAT-2]] notion of dataset encompasses both the ISO/INSPIRE notions of data set and data series.</p></li>
 </ol>
 
 <p>In order to preserve the original semantics, the extended mapping profile of GeoDCAT-AP defines additional alignments to those included in GeoDCAT-AP Core. The two sets of alignments are not mutually exclusive, and can coexist without creating conflicts.</p>
@@ -2218,7 +2218,7 @@
 
 <p>Following [[DCAT-AP-20200608]] recommendations, keywords from controlled vocabularies SHOULD be preferably specified with dereferenceable HTTP URIs. In such a case, the information concerning the originating controlled vocabulary can be omitted.</p>
 
-<p>When keywords cannot be specified with HTTP URIs, they SHOULD be modelled as a <code>skos:Concept</code> associated with a <code>skos:ConceptScheme</code> (modelling the originating controlled vocabulary), and annotated with the textual content and reference date(s) in the relevant INSPIRE metadata elements.</p>
+<p>When keywords cannot be specified with HTTP URIs, they SHOULD be typed as a <code>skos:Concept</code> associated with a <code>skos:ConceptScheme</code> (used to type the originating controlled vocabulary), and annotated with the textual content and reference date(s) in the relevant INSPIRE metadata elements.</p>
 
 <p>The representation of the information concerning the controlled vocabulary is illustrated in the following table.</p>
 
@@ -3991,10 +3991,10 @@ prov:wasUsedBy [
 -->
 
 <!--
-<p>Based on this, GeoDCAT-AP models this information by using property <code>adms:representationTechnique</code>, with the spatial representation type URIs that will be operated by the INSPIRE Registry.</p>
+<p>Based on this, GeoDCAT-AP specifies this information by using property <code>adms:representationTechnique</code>, with the spatial representation type URIs that will be operated by the INSPIRE Registry.</p>
 -->
 
-<p>Based on this, GeoDCAT-AP models this information by using property <code>adms:representationTechnique</code>, with the spatial representation type URIs operated by the INSPIRE Registry [[INSPIRE-SRT]].</p>
+<p>Based on this, GeoDCAT-AP specifies this information by using property <code>adms:representationTechnique</code>, with the spatial representation type URIs operated by the INSPIRE Registry [[INSPIRE-SRT]].</p>
 
 <p>This mapping is supported only in the extended mapping profile of GeoDCAT-AP.</p>
 
@@ -4237,7 +4237,7 @@ prov:wasUsedBy [
 </aside>
 -->
 
-<p>Based on this, maintenance frequency is modelled in GeoDCAT-AP by using <code>dct:accrualPeriodicity</code> with the EU Vocabularies Frequency Named Authority List [[EUV-FREQ]].</p>
+<p>Based on this, maintenance frequency is specified in GeoDCAT-AP by using <code>dct:accrualPeriodicity</code> with the EU Vocabularies Frequency Named Authority List [[EUV-FREQ]].</p>
 
 <p>For the frequency codes not covered by the EU Vocabularies Frequency code list, the approach will be as follows:</p>
 
