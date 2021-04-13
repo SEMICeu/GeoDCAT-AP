@@ -2,7 +2,37 @@
   {
   "@graph": [
     {
-    "@id": "_:N1e523b6efe5c4e0d834a11ee0c3c4622",
+    "@id": "_:N742cf61b8df54978a84b03fda45df953",
+    "@type": [
+      "http://www.w3.org/ns/dqv#QualityMeasurement"
+    ],
+    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
+      {
+      "@id": "http://www.qudt.org/vocab/unit/M"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#isMeasurementOf": [
+      {
+      "@id": "http://data.europa.eu/930/spatialResolutionAsVerticalDistance"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#value": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@value": "10"
+      }
+    ]
+    },
+    {
+    "@id": "https://some.catalogue/resource/d45678",
+    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
+      {
+      "@id": "_:N742cf61b8df54978a84b03fda45df953"
+      }
+    ]
+    },
+    {
+    "@id": "_:N816080ae92364b909759bec8fca5ce78",
     "@type": [
       "http://www.w3.org/ns/dqv#QualityMeasurement"
     ],
@@ -27,67 +57,12 @@
     "@id": "https://some.catalogue/resource/c34567",
     "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
       {
-      "@id": "_:N1e523b6efe5c4e0d834a11ee0c3c4622"
+      "@id": "_:N816080ae92364b909759bec8fca5ce78"
       }
     ]
     },
     {
-    "@id": "_:Nff3416651b9b46bfbd9ccfc54f328b53",
-    "@type": [
-      "http://www.w3.org/ns/dqv#QualityMeasurement"
-    ],
-    "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure": [
-      {
-      "@id": "http://www.qudt.org/vocab/unit/M"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#isMeasurementOf": [
-      {
-      "@id": "http://data.europa.eu/930/spatialResolutionAsVerticalDistance"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#value": [
-      {
-      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-      "@value": "10"
-      }
-    ]
-    },
-    {
-    "@id": "_:N721387ead55a40e29f65f4690229f8bb",
-    "@type": [
-      "http://www.w3.org/ns/dqv#QualityMeasurement"
-    ],
-    "http://www.w3.org/ns/dqv#isMeasurementOf": [
-      {
-      "@id": "http://data.europa.eu/930/spatialResolutionAsScale"
-      }
-    ],
-    "http://www.w3.org/ns/dqv#value": [
-      {
-      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
-      "@value": "0.000001"
-      }
-    ]
-    },
-    {
-    "@id": "https://some.catalogue/resource/d45678",
-    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
-      {
-      "@id": "_:Nff3416651b9b46bfbd9ccfc54f328b53"
-      }
-    ]
-    },
-    {
-    "@id": "https://some.catalogue/resource/a12345",
-    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
-      {
-      "@id": "_:N721387ead55a40e29f65f4690229f8bb"
-      }
-    ]
-    },
-    {
-    "@id": "_:Nf2f8b8e664264c7692b311e4a8deab24",
+    "@id": "_:N18fada498a4a436fa06fc3ae4489ccba",
     "@type": [
       "http://www.w3.org/ns/dqv#QualityMeasurement"
     ],
@@ -109,10 +84,35 @@
     ]
     },
     {
+    "@id": "_:N0bcdac561ae047cb9a2077d808e072fb",
+    "@type": [
+      "http://www.w3.org/ns/dqv#QualityMeasurement"
+    ],
+    "http://www.w3.org/ns/dqv#isMeasurementOf": [
+      {
+      "@id": "http://data.europa.eu/930/spatialResolutionAsScale"
+      }
+    ],
+    "http://www.w3.org/ns/dqv#value": [
+      {
+      "@type": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@value": "0.000001"
+      }
+    ]
+    },
+    {
+    "@id": "https://some.catalogue/resource/a12345",
+    "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
+      {
+      "@id": "_:N0bcdac561ae047cb9a2077d808e072fb"
+      }
+    ]
+    },
+    {
     "@id": "https://some.catalogue/resource/b23456",
     "http://www.w3.org/ns/dqv#hasQualityMeasurement": [
       {
-      "@id": "_:Nf2f8b8e664264c7692b311e4a8deab24"
+      "@id": "_:N18fada498a4a436fa06fc3ae4489ccba"
       }
     ]
     }

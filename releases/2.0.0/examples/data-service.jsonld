@@ -2,56 +2,20 @@
   {
   "@graph": [
     {
-    "@id": "_:N835bb2ff339244a0bf731771d31db700",
-    "@type": [
-      "http://xmlns.com/foaf/0.1/Organization"
-    ],
-    "http://xmlns.com/foaf/0.1/mbox": [
+    "@id": "_:Nfc1b3b2dfa3d4ee0b16325ab9282ad9b",
+    "http://www.w3.org/ns/dcat#bbox": [
       {
-      "@id": "mailto:wisesoe.helpdesk@eionet.europa.eu"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
+      "@type": "http://www.opengis.net/ont/geosparql#gmlLiteral",
+      "@value": "<gml:Envelope srsName=\"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"><gml:lowerCorner>-62.9951 -21.378367</gml:lowerCorner><gml:upperCorner>55.813367 70.620781</gml:upperCorner></gml:Envelope>"
+      },
       {
-      "@language": "en",
-      "@value": "Tracasa"
+      "@type": "http://www.opengis.net/ont/geosparql#wktLiteral",
+      "@value": "POLYGON((-62.9951 70.620781,55.813367 70.620781,55.813367 -21.378367,-62.9951 -21.378367,-62.9951 70.620781))"
       }
     ]
     },
     {
-    "@id": "_:N88baaacfb0434aaf9a4015ba467175a3",
-    "http://www.w3.org/ns/prov#hadPlan": [
-      {
-      "@id": "_:Nc8c76c83b65541aaa8caa934a215bbae"
-      }
-    ]
-    },
-    {
-    "@id": "_:N8cf8ae64b3be480a88c3c7e1e0fec344",
-    "@type": [
-      "http://www.w3.org/ns/prov#Activity"
-    ],
-    "http://www.w3.org/ns/prov#generated": [
-      {
-      "@id": "_:Na70eafaaf923420995a42886c3c5cfd3"
-      }
-    ],
-    "http://www.w3.org/ns/prov#qualifiedAssociation": [
-      {
-      "@id": "_:N88baaacfb0434aaf9a4015ba467175a3"
-      }
-    ]
-    },
-    {
-    "@id": "_:Nc8c76c83b65541aaa8caa934a215bbae",
-    "http://www.w3.org/ns/prov#wasDerivedFrom": [
-      {
-      "@id": "http://inspire.ec.europa.eu/id/citation/ir/reg-976-2009"
-      }
-    ]
-    },
-    {
-    "@id": "_:Nf15cc986a882406c817c1d386cf7ef43",
+    "@id": "_:N8443a2cfbf8f48af94e3603906bd4628",
     "@type": [
       "http://purl.org/dc/terms/LicenseDocument"
     ],
@@ -63,7 +27,7 @@
     ]
     },
     {
-    "@id": "_:N2f921f31be08404cabb3abbf5f664f9b",
+    "@id": "_:Nd4a9379e223848aa920829f37d0ce429",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Address"
     ],
@@ -94,15 +58,57 @@
     ]
     },
     {
-    "@id": "_:Nf5bb9eaef5834c459c0979f7c1c32797",
-    "http://www.w3.org/ns/dcat#bbox": [
+    "@id": "_:N890ca1b6b69f4bfb9ab5a3b5313f5f41",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Organization"
+    ],
+    "http://xmlns.com/foaf/0.1/mbox": [
       {
-      "@type": "http://www.opengis.net/ont/geosparql#gmlLiteral",
-      "@value": "<gml:Envelope srsName=\"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"><gml:lowerCorner>-62.9951 -21.378367</gml:lowerCorner><gml:upperCorner>55.813367 70.620781</gml:upperCorner></gml:Envelope>"
-      },
+      "@id": "mailto:wisesoe.helpdesk@eionet.europa.eu"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
       {
-      "@type": "http://www.opengis.net/ont/geosparql#wktLiteral",
-      "@value": "POLYGON((-62.9951 70.620781,55.813367 70.620781,55.813367 -21.378367,-62.9951 -21.378367,-62.9951 70.620781))"
+      "@language": "en",
+      "@value": "Tracasa"
+      }
+    ]
+    },
+    {
+    "@id": "_:N3c7fa1a1161647e097f1518721be8b38",
+    "@type": [
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://www.w3.org/ns/prov#generated": [
+      {
+      "@id": "_:N538447af99804281b76f4085d9868399"
+      }
+    ],
+    "http://www.w3.org/ns/prov#qualifiedAssociation": [
+      {
+      "@id": "_:N1684d0298ed24d9a817c684031e999d8"
+      }
+    ]
+    },
+    {
+    "@id": "_:N1684d0298ed24d9a817c684031e999d8",
+    "http://www.w3.org/ns/prov#hadPlan": [
+      {
+      "@id": "_:Ne58218e0bdcc4a508e0410b87b1ebf96"
+      }
+    ]
+    },
+    {
+    "@id": "_:N538447af99804281b76f4085d9868399",
+    "http://purl.org/dc/terms/description": [
+      {
+      "@language": "en",
+      "@value": "See the referenced specification"
+      }
+    ],
+    "http://purl.org/dc/terms/type": [
+      {
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated"
       }
     ]
     },
@@ -118,7 +124,7 @@
     ],
     "http://data.europa.eu/930/processor": [
       {
-      "@id": "_:N835bb2ff339244a0bf731771d31db700"
+      "@id": "_:N890ca1b6b69f4bfb9ab5a3b5313f5f41"
       }
     ],
     "http://purl.org/dc/terms/accessRights": [
@@ -128,19 +134,19 @@
     ],
     "http://purl.org/dc/terms/conformsTo": [
       {
-      "@id": "http://www.opengis.net/def/crs/EPSG/0/102100"
-      },
-      {
-      "@id": "http://www.opengis.net/def/crs/EPSG/0/3857"
+      "@id": "http://www.opengeospatial.org/standards/wms"
       },
       {
       "@id": "http://www.opengis.net/def/crs/EPSG/0/4326"
       },
       {
-      "@id": "http://www.opengeospatial.org/standards/wms"
+      "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
       },
       {
-      "@id": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+      "@id": "http://www.opengis.net/def/crs/EPSG/0/3857"
+      },
+      {
+      "@id": "http://www.opengis.net/def/crs/EPSG/0/102100"
       }
     ],
     "http://purl.org/dc/terms/description": [
@@ -162,12 +168,12 @@
     ],
     "http://purl.org/dc/terms/license": [
       {
-      "@id": "_:Nf15cc986a882406c817c1d386cf7ef43"
+      "@id": "_:N8443a2cfbf8f48af94e3603906bd4628"
       }
     ],
     "http://purl.org/dc/terms/spatial": [
       {
-      "@id": "_:Nf5bb9eaef5834c459c0979f7c1c32797"
+      "@id": "_:Nfc1b3b2dfa3d4ee0b16325ab9282ad9b"
       }
     ],
     "http://purl.org/dc/terms/title": [
@@ -178,15 +184,15 @@
     ],
     "http://purl.org/dc/terms/type": [
       {
-      "@id": "http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view"
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service"
       },
       {
-      "@id": "http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service"
+      "@id": "http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view"
       }
     ],
     "http://www.w3.org/ns/dcat#contactPoint": [
       {
-      "@id": "_:N0c64608498e8400698fa51c0325dbd74"
+      "@id": "_:Ne2e078425e55437b9bb72937ae9d5b09"
       }
     ],
     "http://www.w3.org/ns/dcat#endpointDescription": [
@@ -199,28 +205,28 @@
     ],
     "http://www.w3.org/ns/dcat#endpointURL": [
       {
-      "@id": "https://water.discomap.eea.europa.eu/arcgis/rest/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer"
+      "@id": "https://water.discomap.eea.europa.eu/arcgis/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer/WMSServer"
       },
       {
-      "@id": "https://water.discomap.eea.europa.eu/arcgis/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer/WMSServer"
+      "@id": "https://water.discomap.eea.europa.eu/arcgis/rest/services/WISE_SoE/EIONET_MonitoringSite_WM/MapServer"
       }
     ],
     "http://www.w3.org/ns/dcat#keyword": [
-      {
-      "@language": "en",
-      "@value": "Groundwater body"
-      },
       {
       "@language": "en",
       "@value": "Water Information System for Europe"
       },
       {
       "@language": "en",
-      "@value": "Surface water body"
+      "@value": "Monitoring Site"
       },
       {
       "@language": "en",
-      "@value": "Monitoring Site"
+      "@value": "Groundwater body"
+      },
+      {
+      "@language": "en",
+      "@value": "Surface water body"
       }
     ],
     "http://www.w3.org/ns/dcat#servesDataset": [
@@ -229,6 +235,9 @@
       }
     ],
     "http://www.w3.org/ns/dcat#theme": [
+      {
+      "@id": "http://inspire.ec.europa.eu/theme/ef"
+      },
       {
       "@id": "http://www.eionet.europa.eu/gemet/concept/3780"
       },
@@ -240,14 +249,11 @@
       },
       {
       "@id": "http://www.eionet.europa.eu/gemet/concept/12301"
-      },
-      {
-      "@id": "http://inspire.ec.europa.eu/theme/ef"
       }
     ],
     "http://www.w3.org/ns/prov#wasUsedBy": [
       {
-      "@id": "_:N8cf8ae64b3be480a88c3c7e1e0fec344"
+      "@id": "_:N3c7fa1a1161647e097f1518721be8b38"
       }
     ],
     "http://xmlns.com/foaf/0.1/isPrimaryTopicOf": [
@@ -257,21 +263,15 @@
     ]
     },
     {
-    "@id": "_:Na70eafaaf923420995a42886c3c5cfd3",
-    "http://purl.org/dc/terms/description": [
+    "@id": "_:Ne58218e0bdcc4a508e0410b87b1ebf96",
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
       {
-      "@language": "en",
-      "@value": "See the referenced specification"
-      }
-    ],
-    "http://purl.org/dc/terms/type": [
-      {
-      "@id": "http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated"
+      "@id": "http://inspire.ec.europa.eu/id/citation/ir/reg-976-2009"
       }
     ]
     },
     {
-    "@id": "_:N0c64608498e8400698fa51c0325dbd74",
+    "@id": "_:Ne2e078425e55437b9bb72937ae9d5b09",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Organization"
     ],
@@ -283,7 +283,7 @@
     ],
     "http://www.w3.org/2006/vcard/ns#hasAddress": [
       {
-      "@id": "_:N2f921f31be08404cabb3abbf5f664f9b"
+      "@id": "_:Nd4a9379e223848aa920829f37d0ce429"
       }
     ],
     "http://www.w3.org/2006/vcard/ns#hasEmail": [

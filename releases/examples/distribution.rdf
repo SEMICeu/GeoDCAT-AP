@@ -22,7 +22,7 @@
         <rdfs:label xml:lang="en">The full noise contour maps data set is in principle only available for EEA internal use. A public version of the data set may in the future be available, excluding those data sets for which there is any limitation or restriction in their use (beyond acknowledgement).</rdfs:label>
       </dct:LicenseDocument>
     </dct:license>
-    <adms:representationTechnique rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode/grid"/>
+    <adms:representationTechnique rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/grid"/>
     <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/TIFF"/>
   </dcat:Distribution>
 

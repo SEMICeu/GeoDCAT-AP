@@ -46,8 +46,8 @@
   dct:license <https://creativecommons.org/licenses/by/4.0> ;
   dct:created "2020-12-23"^^xsd:date ;
   dct:issued "2021-01-04"^^xsd:date ;
+  dct:modified "2021-04-12"^^xsd:date ;
   dct:dateCopyrighted "2020"^^xsd:gYear ;
-  dct:modified "2021-03-21"^^xsd:date ;
   dct:title "The constraints of GeoDCAT Application Profile for Data Portals in Europe"@en ;
   owl:versionInfo "2.0.0" ;
   dct:description "This document specifies the constraints on properties and classes expressed by GeoDCAT-AP in SHACL."@en ;
@@ -283,56 +283,56 @@ geodcat:Standard_Shape
 # Concepts from additional controlled vocabularies used in GeoDCAT-AP.
 #-------------------------------------------------------------------------
 
-# Spatial representation type (ISO 19115) - not in the INSPIRE Registry
+# Spatial representation type (ISO 19115)
 
-<http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode> a skos:ConceptScheme ;
+<http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType> a skos:ConceptScheme ;
   dct:title "Spatial representation types"@en ;
 .
 
-<http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode/vector> a skos:Concept ;
+<http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/vector> a skos:Concept ;
   skos:prefLabel "Vector"@en ;
-  skos:inScheme <http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode> ;
+  skos:inScheme <http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType> ;
 .
 
-<http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode/grid> a skos:Concept ;
+<http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/grid> a skos:Concept ;
   skos:prefLabel "Grid"@en ;
-  skos:inScheme <http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode> ;
+  skos:inScheme <http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType> ;
 .
 
-<http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode/textTable> a skos:Concept ;
+<http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/textTable> a skos:Concept ;
   skos:prefLabel "Text table"@en ;
-  skos:inScheme <http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode> ;
+  skos:inScheme <http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType> ;
 .
 
-<http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode/tin> a skos:Concept ;
+<http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/tin> a skos:Concept ;
   skos:prefLabel "TIN"@en ;
-  skos:inScheme <http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode> ;
+  skos:inScheme <http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType> ;
 .
 
-<http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode/stereoModel> a skos:Concept ;
+<http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/stereoModel> a skos:Concept ;
   skos:prefLabel "Stereo model"@en ;
-  skos:inScheme <http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode> ;
+  skos:inScheme <http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType> ;
 .
 
-<http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode/video> a skos:Concept ;
+<http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/video> a skos:Concept ;
   skos:prefLabel "Video"@en ;
-  skos:inScheme <http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationTypeCode> ;
+  skos:inScheme <http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType> ;
 .
 
-# Maintenance frequency (ISO 19115) - not in the INSPIRE Registry
+# Maintenance frequency (ISO 19115)
 
-<http://inspire.ec.europa.eu/metadata-codelist/MaintenanceFrequencyCode> a skos:ConceptScheme ;
+<http://inspire.ec.europa.eu/metadata-codelist/MaintenanceFrequency> a skos:ConceptScheme ;
   dct:title "Maintenance frequencies"@en ;
 .
 
-<http://inspire.ec.europa.eu/metadata-codelist/MaintenanceFrequencyCode/asNeeded> a skos:Concept ;
+<http://inspire.ec.europa.eu/metadata-codelist/MaintenanceFrequency/asNeeded> a skos:Concept ;
   skos:prefLabel "As needed"@en ;
-  skos:inScheme <http://inspire.ec.europa.eu/metadata-codelist/MaintenanceFrequencyCode> ;
+  skos:inScheme <http://inspire.ec.europa.eu/metadata-codelist/MaintenanceFrequency> ;
 .
 
-<http://inspire.ec.europa.eu/metadata-codelist/MaintenanceFrequencyCode/notPlanned> a skos:Concept ;
+<http://inspire.ec.europa.eu/metadata-codelist/MaintenanceFrequency/notPlanned> a skos:Concept ;
   skos:prefLabel "Not planned"@en ;
-  skos:inScheme <http://inspire.ec.europa.eu/metadata-codelist/MaintenanceFrequencyCode> ;
+  skos:inScheme <http://inspire.ec.europa.eu/metadata-codelist/MaintenanceFrequency> ;
 .
 
 # INSPIRE Glossary 

@@ -2,24 +2,24 @@
   {
   "@graph": [
     {
-    "@id": "_:N3ca0397e4e394e6a92a12331f22d3189",
-    "@type": [
-      "http://www.w3.org/ns/dcat#Distribution"
-    ],
-    "http://purl.org/dc/terms/format": [
-      {
-      "@id": "_:N51e4e00d01464d1985d6eff4cb49c373"
-      }
-    ]
-    },
-    {
-    "@id": "_:N51e4e00d01464d1985d6eff4cb49c373",
+    "@id": "_:Ne2ecf4490f7b46619463c53a336a4c5b",
     "@type": [
       "http://purl.org/dc/terms/MediaType"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
       "@value": "Geopackage"
+      }
+    ]
+    },
+    {
+    "@id": "_:Na8e226f6c01e4eef901034d70a794229",
+    "@type": [
+      "http://www.w3.org/ns/dcat#Distribution"
+    ],
+    "http://purl.org/dc/terms/format": [
+      {
+      "@id": "_:Ne2ecf4490f7b46619463c53a336a4c5b"
       }
     ]
     }
