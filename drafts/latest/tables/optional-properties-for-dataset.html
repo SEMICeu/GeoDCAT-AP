@@ -49,6 +49,24 @@
 </td>
 </tr>
 
+<tr class="property optional" id="dataset-conforms-to">
+<td>
+<p>conforms to</p>
+</td>
+<td>
+<p><code>dct:conformsTo</code></p>
+</td>
+<td>
+<p><code>dct:Standard</code></p>
+</td>
+<td>
+<p>This property refers to an implementing rule or other specification.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
 <tr class="property optional ap-ext" id="dataset-creation-date">
 <td>
 <p>+creation date</p>
@@ -82,24 +100,6 @@
 </td>
 <td>
 <p>0..1</p>
-</td>
-</tr>
-
-<tr class="property optional" id="dataset-conforms-to">
-<td>
-<p>conforms to</p>
-</td>
-<td>
-<p><code>dct:conformsTo</code></p>
-</td>
-<td>
-<p><code>dct:Standard</code></p>
-</td>
-<td>
-<p>This property refers to an implementing rule or other specification.</p>
-</td>
-<td>
-<p>0..n</p>
 </td>
 </tr>
 
@@ -319,6 +319,25 @@
 </td>
 </tr>
 
+<tr class="property optional ap-ext" id="dataset-reference-system">
+<td>
+<p>+reference system</p>
+</td>
+<td>
+<p><code>dct:conformsTo</code></p>
+</td>
+<td>
+<p><code>dct:Standard</code></p>
+</td>
+<td>
+<p>This property SHOULD be used to specify the reference system used in the Dataset.</p>
+<p>Spatial reference systems SHOULD be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by <abbr title="Open Geospatial Consortium">OGC</abbr> [[OGC-EPSG]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
 <tr class="property optional" id="dataset-related-resource">
 <td>
 <p>related resource</p>
@@ -352,25 +371,6 @@
 </td>
 <td>
 <p>0..1</p>
-</td>
-</tr>
-
-<tr class="property optional ap-ext" id="dataset-reference-system">
-<td>
-<p>+reference system</p>
-</td>
-<td>
-<p><code>dct:conformsTo</code></p>
-</td>
-<td>
-<p><code>dct:Standard</code></p>
-</td>
-<td>
-<p>This property SHOULD be used to specify the reference system used in the Dataset.</p>
-<p>Spatial reference systems SHOULD be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by <abbr title="Open Geospatial Consortium">OGC</abbr> [[OGC-EPSG]].</p>
-</td>
-<td>
-<p>0..n</p>
 </td>
 </tr>
 

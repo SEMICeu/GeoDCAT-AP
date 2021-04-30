@@ -39,6 +39,24 @@
 </td>
 </tr>
 
+<tr class="property optional" id="catalogue-catalogue">
+<td>
+<p>catalogue</p>
+</td>
+<td>
+<p><code>dcat:catalog</code></p>
+</td>
+<td>
+<p><code>dcat:Catalog</code></p>
+</td>
+<td>
+<p>This property refers to a Catalogue whose contents are of interest in the context of this Catalogue.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
 <tr class="property optional ap-ext" id="catalogue-conforms-to">
 <td>
 <p>+conforms to</p>
@@ -69,24 +87,6 @@
 </td>
 <td>
 <p>This property contains contact information that can be used for sending comments about the Catalogue.</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
-
-<tr class="property optional" id="catalogue-catalogue">
-<td>
-<p>catalogue</p>
-</td>
-<td>
-<p><code>dcat:catalog</code></p>
-</td>
-<td>
-<p><code>dcat:Catalog</code></p>
-</td>
-<td>
-<p>This property refers to a Catalogue whose contents are of interest in the context of this Catalogue.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -237,24 +237,6 @@
 </td>
 </tr>
 
-<tr class="property optional" id="catalogue-rights">
-<td>
-<p>rights</p>
-</td>
-<td>
-<p><code>dct:rights</code></p>
-</td>
-<td>
-<p><code>dct:RightsStatement</code></p>
-</td>
-<td>
-<p>This property refers to a statement that specifies rights associated with the Catalogue.</p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-</tr>
-
 <tr class="property optional ap-ext" id="catalogue-reference-system">
 <td>
 <p>+reference system</p>
@@ -271,6 +253,24 @@
 </td>
 <td>
 <p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="catalogue-rights">
+<td>
+<p>rights</p>
+</td>
+<td>
+<p><code>dct:rights</code></p>
+</td>
+<td>
+<p><code>dct:RightsStatement</code></p>
+</td>
+<td>
+<p>This property refers to a statement that specifies rights associated with the Catalogue.</p>
+</td>
+<td>
+<p>0..1</p>
 </td>
 </tr>
 
@@ -292,24 +292,6 @@
 </td>
 </tr>
 
-<tr class="property optional ap-ext" id="catalogue-temporal-coverage">
-<td>
-<p>+temporal coverage</p>
-</td>
-<td>
-<p><code>dct:temporal</code></p>
-</td>
-<td>
-<p><code>dct:PeriodOfTime</code></p>
-</td>
-<td>
-<p>This property refers to a temporal period that the Catalogue covers.</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
-
 <tr class="property optional" id="catalogue-service">
 <td>
 <p>service</p>
@@ -322,6 +304,24 @@
 </td>
 <td>
 <p>This property refers to a Data Service that is listed in the Catalogue.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="catalogue-temporal-coverage">
+<td>
+<p>+temporal coverage</p>
+</td>
+<td>
+<p><code>dct:temporal</code></p>
+</td>
+<td>
+<p><code>dct:PeriodOfTime</code></p>
+</td>
+<td>
+<p>This property refers to a temporal period that the Catalogue covers.</p>
 </td>
 <td>
 <p>0..n</p>
