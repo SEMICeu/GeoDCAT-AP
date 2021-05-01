@@ -6,6 +6,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] a dct:PeriodOfTime ;
-  time:hasBeginning [ time:inXSDDate "2016-01-01"^^xsd:date ] ;
-  time:hasEnd [ time:inXSDDate "2016-12-31"^^xsd:date ] .
+  time:hasBeginning [ a time:Instant ;
+      time:inXSDDate "2016-01-01"^^xsd:date ] ;
+  time:hasEnd [ a time:Instant ;
+      time:inXSDDate "2016-12-31"^^xsd:date ] .
 

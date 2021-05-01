@@ -31,7 +31,8 @@ resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
   dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
   dct:provenance [ a dct:ProvenanceStatement ;
       rdfs:label "The raster data sets have been created out of the Noise Spatial Database, which in turn contains all versions delivered by the relevant countries (EU and EFTA) to Reportnet (CDR). The data from Reportnet is automatically incorporated into the database, with the exception of those data sets which require a manual review (due to problems with naming conventions or Coordinate Reference System). The data set covers any submission by the countries until 01/01/2019."@en ] ;
-  dct:spatial [ dcat:bbox "<gml:Envelope srsName=\"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"><gml:lowerCorner>-31.285 27.642</gml:lowerCorner><gml:upperCorner>34.099 70.075</gml:upperCorner></gml:Envelope>"^^gsp:gmlLiteral,
+  dct:spatial [ a dct:Location ;
+      dcat:bbox "<gml:Envelope srsName=\"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"><gml:lowerCorner>-31.285 27.642</gml:lowerCorner><gml:upperCorner>34.099 70.075</gml:upperCorner></gml:Envelope>"^^gsp:gmlLiteral,
         "POLYGON((-31.285 70.075,34.099 70.075,34.099 27.642,-31.285 27.642,-31.285 70.075))"^^gsp:wktLiteral ] ;
   dct:subject <http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment>,
     <http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health>,
@@ -58,7 +59,8 @@ resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
       dct:license [ a dct:LicenseDocument ;
           rdfs:label "The full noise contour maps data set is in principle only available for EEA internal use. A public version of the data set may in the future be available, excluding those data sets for which there is any limitation or restriction in their use (beyond acknowledgement)."@en ] ;
       adms:representationTechnique <http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/grid> ;
-      dcat:accessService [ dct:conformsTo <http://www.opengeospatial.org/standards/wms> ;
+      dcat:accessService [ a dcat:DataService ;
+          dct:conformsTo <http://www.opengeospatial.org/standards/wms> ;
           dcat:endpointDescription <https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&service=WMS> ;
           dcat:endpointURL <https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer> ] ;
       dcat:accessURL <https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&service=WMS> ] ;
@@ -72,9 +74,12 @@ resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
     <http://publications.europa.eu/resource/authority/data-theme/HEAL>,
     <http://www.eionet.europa.eu/gemet/concept/2884> ;
   prov:wasUsedBy [ a prov:Activity ;
-      prov:generated [ dct:description "See the referenced specification"@en ;
+      prov:generated [ a prov:Entity ;
+          dct:description "See the referenced specification"@en ;
           dct:type <http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated> ] ;
-      prov:qualifiedAssociation [ prov:hadPlan [ prov:wasDerivedFrom <http://data.europa.eu/eli/reg/2010/1089> ] ] ] ;
+      prov:qualifiedAssociation [ a prov:Association ;
+          prov:hadPlan [ a prov:Plan ;
+              prov:wasDerivedFrom <http://data.europa.eu/eli/reg/2010/1089> ] ] ] ;
   foaf:isPrimaryTopicOf record:e7807ecb-a8e6-4a33-baa2-d119eec9ce24 ;
   foaf:page <https://noise.eea.europa.eu/> .
 

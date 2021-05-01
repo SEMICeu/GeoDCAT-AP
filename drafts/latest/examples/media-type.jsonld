@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:Ne2ecf4490f7b46619463c53a336a4c5b",
+    "@id": "_:Nf78592ee237d45baaf2b991752201416",
     "@type": [
       "http://purl.org/dc/terms/MediaType"
     ],
@@ -13,17 +13,17 @@
     ]
     },
     {
-    "@id": "_:Na8e226f6c01e4eef901034d70a794229",
+    "@id": "_:N33b9b001ad6a4d5ba5a47d296d4a958d",
     "@type": [
       "http://www.w3.org/ns/dcat#Distribution"
     ],
     "http://purl.org/dc/terms/format": [
       {
-      "@id": "_:Ne2ecf4490f7b46619463c53a336a4c5b"
+      "@id": "_:Nf78592ee237d45baaf2b991752201416"
       }
     ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/media-type.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.fix-issue-61/drafts/latest/examples/media-type.rdf"
   }
 ]

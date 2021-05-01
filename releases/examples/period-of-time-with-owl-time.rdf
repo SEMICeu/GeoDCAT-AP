@@ -7,11 +7,15 @@
 >
 
   <dct:PeriodOfTime>
-    <time:hasBeginning rdf:parseType="Resource">
-      <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-01-01</time:inXSDDate>
+    <time:hasBeginning>
+      <time:Instant>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-01-01</time:inXSDDate>
+      </time:Instant>
     </time:hasBeginning>
-    <time:hasEnd rdf:parseType="Resource">
-      <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-12-31</time:inXSDDate>
+    <time:hasEnd>
+      <time:Instant>
+        <time:inXSDDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-12-31</time:inXSDDate>
+      </time:Instant>
     </time:hasEnd>
   </dct:PeriodOfTime>
 

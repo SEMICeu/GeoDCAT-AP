@@ -2,7 +2,24 @@
   {
   "@graph": [
     {
-    "@id": "_:Nb909be1ca823434caa2794d873572a46",
+    "@id": "_:N87ac041d036347db9e91fd6da2c3fbc8",
+    "@type": [
+      "http://www.w3.org/2004/02/skos/core#Concept"
+    ],
+    "http://www.w3.org/2004/02/skos/core#inScheme": [
+      {
+      "@id": "_:Ne3bf091feeb94de78ef8f2ed90608ca1"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#prefLabel": [
+      {
+      "@language": "en",
+      "@value": "geospatial data"
+      }
+    ]
+    },
+    {
+    "@id": "_:Ne3bf091feeb94de78ef8f2ed90608ca1",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#ConceptScheme"
     ],
@@ -18,25 +35,8 @@
       "@value": "EEA categories"
       }
     ]
-    },
-    {
-    "@id": "_:N86f9c508ef4a4214a367b2418e8f751b",
-    "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept"
-    ],
-    "http://www.w3.org/2004/02/skos/core#inScheme": [
-      {
-      "@id": "_:Nb909be1ca823434caa2794d873572a46"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#prefLabel": [
-      {
-      "@language": "en",
-      "@value": "geospatial data"
-      }
-    ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/category.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.fix-issue-61/drafts/latest/examples/category.rdf"
   }
 ]

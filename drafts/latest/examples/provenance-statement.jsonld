@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:N8a66edc6ef8a483eb6669b330c98403d",
+    "@id": "_:N40eef4339c2e4f37b62af4808535f4a0",
     "@type": [
       "http://purl.org/dc/terms/ProvenanceStatement"
     ],
@@ -14,6 +14,6 @@
     ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/provenance-statement.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.fix-issue-61/drafts/latest/examples/provenance-statement.rdf"
   }
 ]

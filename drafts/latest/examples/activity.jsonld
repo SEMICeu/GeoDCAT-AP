@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:Nbbc7180d10e7422580ae6402250ed7b6",
+    "@id": "_:N6a64c1b02b694581bb2388823133b623",
     "@type": [
       "http://www.w3.org/ns/prov#Entity"
     ],
@@ -19,40 +19,18 @@
     ]
     },
     {
-    "@id": "_:N385fea47c4c8463b965a249e511a8de6",
-    "@type": [
-      "http://www.w3.org/ns/prov#Plan"
-    ],
-    "http://www.w3.org/ns/prov#wasDerivedFrom": [
-      {
-      "@id": "http://data.europa.eu/eli/reg/2010/1089"
-      }
-    ]
-    },
-    {
-    "@id": "_:N297540213321443a84f90245195b6267",
-    "@type": [
-      "http://www.w3.org/ns/prov#Association"
-    ],
-    "http://www.w3.org/ns/prov#hadPlan": [
-      {
-      "@id": "_:N385fea47c4c8463b965a249e511a8de6"
-      }
-    ]
-    },
-    {
-    "@id": "_:Nb86a88d0e2474b82b3c5658366964eec",
+    "@id": "_:Nc58a33cab50b4cb8afa95f125014dc9e",
     "@type": [
       "http://www.w3.org/ns/prov#Activity"
     ],
     "http://www.w3.org/ns/prov#generated": [
       {
-      "@id": "_:Nbbc7180d10e7422580ae6402250ed7b6"
+      "@id": "_:N6a64c1b02b694581bb2388823133b623"
       }
     ],
     "http://www.w3.org/ns/prov#qualifiedAssociation": [
       {
-      "@id": "_:N297540213321443a84f90245195b6267"
+      "@id": "_:Neebc077e961b41a89acfb5fa0aaa1246"
       }
     ],
     "http://www.w3.org/ns/prov#used": [
@@ -64,8 +42,8 @@
     {
     "@id": "http://data.europa.eu/eli/reg/2010/1089",
     "@type": [
-      "http://www.w3.org/ns/prov#Entity",
-      "http://purl.org/dc/terms/Standard"
+      "http://purl.org/dc/terms/Standard",
+      "http://www.w3.org/ns/prov#Entity"
     ],
     "http://purl.org/dc/terms/issued": [
       {
@@ -79,8 +57,30 @@
       "@value": "\n    Commission Regulation (EU) No 1089/2010 of 23 November 2010 \n    implementing Directive 2007/2/EC of the European Parliament \n    and of the Council as regards interoperability of spatial \n    data sets and services\n  "
       }
     ]
+    },
+    {
+    "@id": "_:N90e8b22b901b4e3c8e641adbd6c69ebb",
+    "@type": [
+      "http://www.w3.org/ns/prov#Plan"
+    ],
+    "http://www.w3.org/ns/prov#wasDerivedFrom": [
+      {
+      "@id": "http://data.europa.eu/eli/reg/2010/1089"
+      }
+    ]
+    },
+    {
+    "@id": "_:Neebc077e961b41a89acfb5fa0aaa1246",
+    "@type": [
+      "http://www.w3.org/ns/prov#Association"
+    ],
+    "http://www.w3.org/ns/prov#hadPlan": [
+      {
+      "@id": "_:N90e8b22b901b4e3c8e641adbd6c69ebb"
+      }
+    ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/activity.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.fix-issue-61/drafts/latest/examples/activity.rdf"
   }
 ]

@@ -22,8 +22,7 @@
     <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-03-25</dct:modified>
     <dcat:contactPoint>
-      <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+      <vcard:Organization>
         <vcard:fn xml:lang="en">European Environment Agency</vcard:fn>
         <vcard:hasEmail rdf:resource="mailto:sdi@eea.europa.eu"/>
         <vcard:hasAddress>
@@ -35,15 +34,19 @@
             <vcard:country-name>Denmark</vcard:country-name>
           </vcard:Address>
         </vcard:hasAddress>
-      </rdf:Description>
+      </vcard:Organization>
     </dcat:contactPoint>
     <dct:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb</dct:identifier>
-    <dct:source rdf:parseType="Resource">
-      <cnt:characterEncoding rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UTF-8</cnt:characterEncoding>
-      <dct:conformsTo rdf:parseType="Resource">
-        <dct:title xml:lang="en">ISO 19119/19139</dct:title>
-        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
-      </dct:conformsTo>
+    <dct:source>
+      <dcat:CatalogRecord>
+        <cnt:characterEncoding rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UTF-8</cnt:characterEncoding>
+        <dct:conformsTo>
+          <dct:Standard>
+            <dct:title xml:lang="en">ISO 19119/19139</dct:title>
+            <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+          </dct:Standard>
+        </dct:conformsTo>
+      </dcat:CatalogRecord>
     </dct:source>
   </rdf:Description>
 
