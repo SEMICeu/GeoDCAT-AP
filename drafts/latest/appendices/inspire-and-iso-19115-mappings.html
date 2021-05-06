@@ -2083,7 +2083,7 @@
 <pre>[] a dcat:DataService ;
   dct:type &lt;http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service&gt; ,
     &lt;http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view&gt; ;
-  dcat:servesDataset [
+  dcat:servesDataset [ a dcat:Dataset ;
     dct:identifier &quot;1234567890&quot;^^xsd:string
   ] .</pre>
 
@@ -2144,7 +2144,8 @@
   &lt;http://publications.europa.eu/resource/authority/language/DEU&gt; ;
   foaf:isPrimaryTopicOf
 # Metadata on metadata
-    [ dct:language
+    [ a dcat:CatalogRecord ;
+      dct:language
       &lt;http://publications.europa.eu/resource/authority/language/NLD&gt; ] .</pre>
 
 <p>Resource metadata in ISO 19139</p>
@@ -2322,7 +2323,7 @@
     [ a skos:Concept ;
       skos:prefLabel &quot;coniferous forest&quot;@en ;
       skos:inScheme [ a skos:ConceptScheme ;
-        rdfs:label &quot;GEMET - Concepts, version 2.4&quot;@en ;
+        dct:title &quot;GEMET - Concepts, version 2.4&quot;@en ;
         dct:issued &quot;2010-01-13&quot;^^xsd:date ] ] ;
 ### Topic categories
   dct:subject &lt;http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation&gt; .
@@ -2338,8 +2339,8 @@
     [ a skos:Concept ;
     skos:prefLabel &quot;Floods&quot;@en ;
     skos:inScheme [ a skos:ConceptScheme ;
-    rdfs:label &quot;GEOSS - Societal Benefit Areas, version 1.0&quot;@en ;
-    dct:issued &quot;2010-08-25&quot;^^xsd:date ] ] .</pre>
+      dct:title &quot;GEOSS - Societal Benefit Areas, version 1.0&quot;@en ;
+      dct:issued &quot;2010-08-25&quot;^^xsd:date ] ] .</pre>
 
 <p>Resource metadata in ISO 19139:</p>
 
@@ -2651,10 +2652,10 @@
 
 # If no URI is used for the geographic identifier
 []
-  dct:spatial [
+  dct:spatial [ a dct:Location , skos:Concept ;
     skos:preflabel &quot;Netherlands&quot;@en;
     skos:prefLabel &quot;Nederland&quot;@nl;
-    skos:inScheme [
+    skos:inScheme [ skos:ConceptScheme ;
       dct:title &quot;Countries Authority Table&quot;@en;
       dct:modified &quot;2009-01-01&quot;^^xsd:date
     ]
@@ -2712,7 +2713,8 @@
   foaf:isPrimaryTopicOf
 # Metadata on metadata
 ## Metadata date
-    [ dct:modified &quot;2012-08-13&quot;^^xsd:date ] .</pre>
+    [ a dcat:CatalogRecord ;
+      dct:modified &quot;2012-08-13&quot;^^xsd:date ] .</pre>
 
 <p>Resource metadata in ISO 19139:</p>
 
@@ -2953,19 +2955,18 @@ To limit the impact, it was decided to only provide a partial mapping for Data Q
 prov:wasUsedBy [
   a prov:Activity;
 # Conformity degree
-  prov:generated [
+  prov:generated [ a prov:Entity ;
     dct:type &lt;http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant&gt; ;
     dct:description “See the referenced specification”@en
-    prov:qualifiedAssociation [
-      prov:hadPlan [
-      a prov:Plan;
-      prov:wasDerivedFrom [
+    prov:qualifiedAssociation [ a prov:Association ;
+      prov:hadPlan [ a prov:Plan;
+        prov:wasDerivedFrom [
 # Specification
-        a prov:Entity, dct:Standard;
-        dct:title &quot;COMMISSION REGULATION (EC) No 976/2009 of 19 October 2009
-        implementing Directive 2007/2/EC of the European Parliament and of the Council
-        as regards the Network Services&quot;@en
-        dct:issued &quot;2009-10-20&quot;^^xsd:date
+          a prov:Entity , dct:Standard ;
+          dct:title &quot;COMMISSION REGULATION (EC) No 976/2009 of 19 October 2009
+          implementing Directive 2007/2/EC of the European Parliament and of the Council
+          as regards the Network Services&quot;@en
+          dct:issued &quot;2009-10-20&quot;^^xsd:date
       ]
     ];
   ];
@@ -3485,6 +3486,7 @@ prov:wasUsedBy [
 
 &lt;https://joinup.ec.europa.eu/release/geodcat-ap/10&gt;
 # Standard name and version of the GeoDCAT-AP record
+  a dct:Standard ;
   dct:title &quot;GeoDCAT-AP&quot;@en ;
   owl:versionInfo &quot;1.0&quot; ;
 .</pre>
@@ -3511,10 +3513,9 @@ prov:wasUsedBy [
 
 <pre>[] a dcat:CatalogRecord ;
   dct:conformsTo &lt;https://joinup.ec.europa.eu/release/geodcat-ap/10&gt; ;
-  dct:source [
+  dct:source [ a dcat:CatalogRecord ; 
 # Standard name and version of the source ISO 19115 record
-    a dcat:CatalogRecord ;
-    dct:conformsTo [
+    dct:conformsTo [ a dct:Standard ;
       dct:title &quot;ISO 19115&quot;@en ;
       owl:versionInfo &quot;Nederlands metadata profiel op ISO 19115 voor geografie 1.3&quot;.
     ] ] ;
@@ -3617,6 +3618,7 @@ prov:wasUsedBy [
   dct:conformsTo &lt;http://www.opengis.net/def/crs/EPSG/0/4258&gt; .
 
 &lt;http://www.opengis.net/def/crs/EPSG/0/4258&gt;
+  a dct:Standard ;
   dct:type &lt;http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem&gt; .</pre>
 
 <p>Resource metadata in ISO 19139:</p>
@@ -3645,7 +3647,7 @@ prov:wasUsedBy [
 <p>Resource metadata in GeoDCAT-AP:</p>
 
 <pre>[] a dcat:Dataset ;
-  dct:conformsTo [
+  dct:conformsTo [ a dct:Standard ;
     dct:identifer &quot;EPSG:4258&quot;^^xsd:string ;
     dct:type &lt;http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem&gt; .
   ] .</pre>
@@ -3931,7 +3933,7 @@ prov:wasUsedBy [
 
 <pre>[] a dcat:Dataset ;
   dcat:distribution [ a dcat:Distribution ;
-    dcat:mediaType &lt;http://publications.europa.eu/resource/authority/file-type/TIFF&gt; ] .</pre>
+    dct:format &lt;http://publications.europa.eu/resource/authority/file-type/TIFF&gt; ] .</pre>
 
 <p>Resource metadata in ISO 19139:</p>
 

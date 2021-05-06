@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:Na92f508d0e02482b8306828aff9a8c85",
+    "@id": "_:N214677b369e94b09a81af610a14cb4a3",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Address"
     ],
@@ -33,6 +33,6 @@
     ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/address-kind.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.fix-issue-61/drafts/latest/examples/address-kind.rdf"
   }
 ]

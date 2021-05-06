@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:Nb8df6606c3854a5aa4e7369777e03963",
+    "@id": "_:N3b31777483544c1e84ac00447a5f9213",
     "@type": [
       "http://www.w3.org/2004/02/skos/core#ConceptScheme"
     ],
@@ -20,10 +20,10 @@
     ]
     },
     {
-    "@id": "_:N3deccf30270a4926b897711acd1b537c",
+    "@id": "_:N2269ddc652564c0aafbeb0607e42ccf4",
     "@type": [
-      "http://www.w3.org/2004/02/skos/core#Concept",
-      "http://purl.org/dc/terms/Location"
+      "http://purl.org/dc/terms/Location",
+      "http://www.w3.org/2004/02/skos/core#Concept"
     ],
     "http://purl.org/dc/terms/identifier": [
       {
@@ -32,7 +32,7 @@
     ],
     "http://www.w3.org/2004/02/skos/core#inScheme": [
       {
-      "@id": "_:Nb8df6606c3854a5aa4e7369777e03963"
+      "@id": "_:N3b31777483544c1e84ac00447a5f9213"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#prefLabel": [
@@ -43,6 +43,6 @@
     ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/location-gn.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.fix-issue-61/drafts/latest/examples/location-gn.rdf"
   }
 ]

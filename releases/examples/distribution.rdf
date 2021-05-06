@@ -10,10 +10,12 @@
 
   <dcat:Distribution>
     <dct:description xml:lang="en">NoiseContours_air_lnight</dct:description>
-    <dcat:accessService rdf:parseType="Resource">
-      <dcat:endpointURL rdf:resource="https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer"/>
-      <dcat:endpointDescription rdf:resource="https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&amp;service=WMS"/>
-      <dct:conformsTo rdf:resource="http://www.opengeospatial.org/standards/wms"/>
+    <dcat:accessService>
+      <dcat:DataService>
+        <dcat:endpointURL rdf:resource="https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer"/>
+        <dcat:endpointDescription rdf:resource="https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&amp;service=WMS"/>
+        <dct:conformsTo rdf:resource="http://www.opengeospatial.org/standards/wms"/>
+      </dcat:DataService>
     </dcat:accessService>
     <dcat:accessURL rdf:resource="https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&amp;service=WMS"/>
     <dct:accessRights rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e"/>

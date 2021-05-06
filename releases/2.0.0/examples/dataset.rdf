@@ -42,9 +42,11 @@
     <dcat:theme rdf:resource="http://www.eionet.europa.eu/gemet/concept/2884"/>
     <dct:identifier>eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00</dct:identifier>
     <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
-    <dct:spatial rdf:parseType="Resource">
-      <dcat:bbox rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral"><![CDATA[POLYGON((-31.285 70.075,34.099 70.075,34.099 27.642,-31.285 27.642,-31.285 70.075))]]></dcat:bbox>
-      <dcat:bbox rdf:datatype="http://www.opengis.net/ont/geosparql#gmlLiteral"><![CDATA[<gml:Envelope srsName="http://www.opengis.net/def/crs/OGC/1.3/CRS84"><gml:lowerCorner>-31.285 27.642</gml:lowerCorner><gml:upperCorner>34.099 70.075</gml:upperCorner></gml:Envelope>]]></dcat:bbox>
+    <dct:spatial>
+      <dct:Location>
+        <dcat:bbox rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral"><![CDATA[POLYGON((-31.285 70.075,34.099 70.075,34.099 27.642,-31.285 27.642,-31.285 70.075))]]></dcat:bbox>
+        <dcat:bbox rdf:datatype="http://www.opengis.net/ont/geosparql#gmlLiteral"><![CDATA[<gml:Envelope srsName="http://www.opengis.net/def/crs/OGC/1.3/CRS84"><gml:lowerCorner>-31.285 27.642</gml:lowerCorner><gml:upperCorner>34.099 70.075</gml:upperCorner></gml:Envelope>]]></dcat:bbox>
+      </dct:Location>
     </dct:spatial>
     <dct:temporal>
       <dct:PeriodOfTime>
@@ -62,14 +64,20 @@
     <dcat:spatialResolutionInMeters rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</dcat:spatialResolutionInMeters>
     <prov:wasUsedBy>
       <prov:Activity>
-        <prov:qualifiedAssociation rdf:parseType="Resource">
-          <prov:hadPlan rdf:parseType="Resource">
-            <prov:wasDerivedFrom rdf:resource="http://data.europa.eu/eli/reg/2010/1089"/>
-          </prov:hadPlan>
+        <prov:qualifiedAssociation>
+          <prov:Association>
+            <prov:hadPlan>
+              <prov:Plan>
+                <prov:wasDerivedFrom rdf:resource="http://data.europa.eu/eli/reg/2010/1089"/>
+              </prov:Plan>
+            </prov:hadPlan>
+          </prov:Association>
         </prov:qualifiedAssociation>
-        <prov:generated rdf:parseType="Resource">
-          <dct:type rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated"/>
-          <dct:description xml:lang="en">See the referenced specification</dct:description>
+        <prov:generated>
+          <prov:Entity>
+            <dct:type rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated"/>
+            <dct:description xml:lang="en">See the referenced specification</dct:description>
+          </prov:Entity>
         </prov:generated>
       </prov:Activity>
     </prov:wasUsedBy>
@@ -77,10 +85,12 @@
     <dcat:distribution>
       <dcat:Distribution>
         <dct:description xml:lang="en">NoiseContours_air_lnight</dct:description>
-        <dcat:accessService rdf:parseType="Resource">
-          <dcat:endpointURL rdf:resource="https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer"/>
-          <dcat:endpointDescription rdf:resource="https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&amp;service=WMS"/>
-          <dct:conformsTo rdf:resource="http://www.opengeospatial.org/standards/wms"/>
+        <dcat:accessService>
+          <dcat:DataService>
+            <dcat:endpointURL rdf:resource="https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer"/>
+            <dcat:endpointDescription rdf:resource="https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&amp;service=WMS"/>
+            <dct:conformsTo rdf:resource="http://www.opengeospatial.org/standards/wms"/>
+          </dcat:DataService>
         </dcat:accessService>
         <dcat:accessURL rdf:resource="https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&amp;service=WMS"/>
         <dct:accessRights rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e"/>
@@ -94,8 +104,7 @@
       </dcat:Distribution>
     </dcat:distribution>
     <dcat:contactPoint>
-      <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+      <vcard:Organization>
         <vcard:fn xml:lang="en">European Environment Agency</vcard:fn>
         <vcard:hasEmail rdf:resource="mailto:info@eea.europa.eu"/>
         <vcard:hasURL rdf:resource="http://www.eea.europa.eu"/>
@@ -108,7 +117,7 @@
             <vcard:country-name>Denmark</vcard:country-name>
           </vcard:Address>
         </vcard:hasAddress>
-      </rdf:Description>
+      </vcard:Organization>
     </dcat:contactPoint>
     <geodcat:custodian rdf:resource="http://publications.europa.eu/resource/authority/corporate-body/EEA"/>
   </rdf:Description>

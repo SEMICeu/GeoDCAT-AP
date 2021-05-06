@@ -2,7 +2,7 @@
   {
   "@graph": [
     {
-    "@id": "_:N3c54b3221f154c3ca637b0b0a97cc03a",
+    "@id": "_:N2a509977f6fb4515aad82b0dde964b85",
     "@type": [
       "http://www.w3.org/ns/locn#Address"
     ],
@@ -33,6 +33,6 @@
     ]
     }
   ],
-  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.gh-pages/drafts/latest/examples/address-agent.rdf"
+  "@id": "file:///var/www/html/git/github/semiceu/GeoDCAT-AP.fix-issue-61/drafts/latest/examples/address-agent.rdf"
   }
 ]
