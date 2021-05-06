@@ -2885,7 +2885,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           <a rel="alternate" href="./geodcat-ap.rdf">RDF/XML</a>, <a rel="alternate" href="./geodcat-ap.ttl">Turtle</a>, <a rel="alternate" href="./geodcat-ap.jsonld">JSON-LD</a>, and <a rel="alternate" href="./geodcat-ap.shacl.ttl">SHACL (Turtle)</a>
         </p>
     <p class="copyright">
-    <a href="https://europa.eu/european-union/abouteuropa/legal_notices_en#copyright_notice">Copyright</a>
+    <a href="https://europa.eu/european-union/abouteuropa/legal_notices_en#copyright-notice">Copyright</a>
     ©
     2020
     
@@ -5362,6 +5362,24 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 </td>
 </tr>
 
+<tr class="property optional" id="catalogue-catalogue">
+<td>
+<p>catalogue</p>
+</td>
+<td>
+<p><code>dcat:catalog</code></p>
+</td>
+<td>
+<p><code>dcat:Catalog</code></p>
+</td>
+<td>
+<p>This property refers to a Catalogue whose contents are of interest in the context of this Catalogue.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
 <tr class="property optional ap-ext" id="catalogue-conforms-to">
 <td>
 <p>+conforms to</p>
@@ -5392,24 +5410,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 </td>
 <td>
 <p>This property contains contact information that can be used for sending comments about the Catalogue.</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
-
-<tr class="property optional" id="catalogue-catalogue">
-<td>
-<p>catalogue</p>
-</td>
-<td>
-<p><code>dcat:catalog</code></p>
-</td>
-<td>
-<p><code>dcat:Catalog</code></p>
-</td>
-<td>
-<p>This property refers to a Catalogue whose contents are of interest in the context of this Catalogue.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -5560,24 +5560,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 </td>
 </tr>
 
-<tr class="property optional" id="catalogue-rights">
-<td>
-<p>rights</p>
-</td>
-<td>
-<p><code>dct:rights</code></p>
-</td>
-<td>
-<p><code>dct:RightsStatement</code></p>
-</td>
-<td>
-<p>This property refers to a statement that specifies rights associated with the Catalogue.</p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-</tr>
-
 <tr class="property optional ap-ext" id="catalogue-reference-system">
 <td>
 <p>+reference system</p>
@@ -5594,6 +5576,24 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 </td>
 <td>
 <p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="catalogue-rights">
+<td>
+<p>rights</p>
+</td>
+<td>
+<p><code>dct:rights</code></p>
+</td>
+<td>
+<p><code>dct:RightsStatement</code></p>
+</td>
+<td>
+<p>This property refers to a statement that specifies rights associated with the Catalogue.</p>
+</td>
+<td>
+<p>0..1</p>
 </td>
 </tr>
 
@@ -5615,24 +5615,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 </td>
 </tr>
 
-<tr class="property optional ap-ext" id="catalogue-temporal-coverage">
-<td>
-<p>+temporal coverage</p>
-</td>
-<td>
-<p><code>dct:temporal</code></p>
-</td>
-<td>
-<p><code>dct:PeriodOfTime</code></p>
-</td>
-<td>
-<p>This property refers to a temporal period that the Catalogue covers.</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
-
 <tr class="property optional" id="catalogue-service">
 <td>
 <p>service</p>
@@ -5645,6 +5627,24 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 </td>
 <td>
 <p>This property refers to a Data Service that is listed in the Catalogue.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="catalogue-temporal-coverage">
+<td>
+<p>+temporal coverage</p>
+</td>
+<td>
+<p><code>dct:temporal</code></p>
+</td>
+<td>
+<p><code>dct:PeriodOfTime</code></p>
+</td>
+<td>
+<p>This property refers to a temporal period that the Catalogue covers.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -6534,7 +6534,9 @@ record:af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb a dcat:CatalogRecord ;
   dct:identifier "af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb"^^xsd:string ;
   dct:language &lt;http://publications.europa.eu/resource/authority/language/ENG&gt; ;
   dct:modified "2020-03-25"^^xsd:date ;
-  dct:source [ dct:conformsTo [ dct:title "ISO 19119/19139"@en ;
+  dct:source [ a dcat:CatalogRecord ;
+      dct:conformsTo [ a dct:Standard ;
+          dct:title "ISO 19119/19139"@en ;
           owl:versionInfo "1.0"@en ] ;
       cnt:characterEncoding "UTF-8"^^xsd:string ] ;
   dcat:contactPoint [ a vcard:Organization ;
@@ -7576,24 +7578,6 @@ record:af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb a dcat:CatalogRecord ;
 </td>
 </tr>
 
-<tr class="property optional ap-ext" id="data-service-category">
-<td>
-<p>+theme / category</p>
-</td>
-<td>
-<p><code>dcat:theme</code></p>
-</td>
-<td>
-<p><code>skos:Concept</code></p>
-</td>
-<td>
-<p>This property refers to a Category of the Data Service. A Data Service may be associated with multiple Categories.</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
-
 <tr class="property optional ap-ext" id="data-service-spatial-coverage">
 <td>
 <p>+spatial / geographic coverage</p>
@@ -7697,6 +7681,24 @@ record:af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb a dcat:CatalogRecord ;
 </td>
 <td>
 <p>This property refers to the minimum time period resolvable in the Data Service.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="data-service-category">
+<td>
+<p>+theme / category</p>
+</td>
+<td>
+<p><code>dcat:theme</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property refers to a Category of the Data Service. A Data Service may be associated with multiple Categories.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -8071,7 +8073,8 @@ resource:eea_v_4326_250_k_wise-eionet-monitoring-sites_service a dcat:DataServic
   dct:issued "2018-09-15"^^xsd:date ;
   dct:license [ a dct:LicenseDocument ;
       rdfs:label "No limitations in the use of this web service."@en ] ;
-  dct:spatial [ dcat:bbox "<span class="hljs-tag">&lt;<span class="hljs-name">gml:Envelope</span> <span class="hljs-attr">srsName</span>=<span class="hljs-string">\</span>"<span class="hljs-attr">http:</span>//<span class="hljs-attr">www.opengis.net</span>/<span class="hljs-attr">def</span>/<span class="hljs-attr">crs</span>/<span class="hljs-attr">OGC</span>/<span class="hljs-attr">1.3</span>/<span class="hljs-attr">CRS84</span>\"&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">gml:lowerCorner</span>&gt;</span>-62.9951 -21.378367<span class="hljs-tag">&lt;/<span class="hljs-name">gml:lowerCorner</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">gml:upperCorner</span>&gt;</span>55.813367 70.620781<span class="hljs-tag">&lt;/<span class="hljs-name">gml:upperCorner</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">gml:Envelope</span>&gt;</span>"^^gsp:gmlLiteral,
+  dct:spatial [ a dct:Location ;
+      dcat:bbox "<span class="hljs-tag">&lt;<span class="hljs-name">gml:Envelope</span> <span class="hljs-attr">srsName</span>=<span class="hljs-string">\</span>"<span class="hljs-attr">http:</span>//<span class="hljs-attr">www.opengis.net</span>/<span class="hljs-attr">def</span>/<span class="hljs-attr">crs</span>/<span class="hljs-attr">OGC</span>/<span class="hljs-attr">1.3</span>/<span class="hljs-attr">CRS84</span>\"&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">gml:lowerCorner</span>&gt;</span>-62.9951 -21.378367<span class="hljs-tag">&lt;/<span class="hljs-name">gml:lowerCorner</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">gml:upperCorner</span>&gt;</span>55.813367 70.620781<span class="hljs-tag">&lt;/<span class="hljs-name">gml:upperCorner</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">gml:Envelope</span>&gt;</span>"^^gsp:gmlLiteral,
         "POLYGON((-62.9951 70.620781,55.813367 70.620781,55.813367 -21.378367,-62.9951 -21.378367,-62.9951 70.620781))"^^gsp:wktLiteral ] ;
   dct:title "EIONET monitoring sites - Web Service"@en ;
   dct:type &lt;http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service&gt;,
@@ -8101,9 +8104,12 @@ resource:eea_v_4326_250_k_wise-eionet-monitoring-sites_service a dcat:DataServic
     &lt;http://www.eionet.europa.eu/gemet/concept/5352&gt;,
     &lt;http://www.eionet.europa.eu/gemet/concept/8229&gt; ;
   prov:wasUsedBy [ a prov:Activity ;
-      prov:generated [ dct:description "See the referenced specification"@en ;
+      prov:generated [ a prov:Entity ;
+          dct:description "See the referenced specification"@en ;
           dct:type &lt;http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated&gt; ] ;
-      prov:qualifiedAssociation [ prov:hadPlan [ prov:wasDerivedFrom &lt;http://inspire.ec.europa.eu/id/citation/ir/reg-976-2009&gt; ] ] ] ;
+      prov:qualifiedAssociation [ a prov:Association ;
+          prov:hadPlan [ a prov:Plan ;
+              prov:wasDerivedFrom &lt;http://inspire.ec.europa.eu/id/citation/ir/reg-976-2009&gt; ] ] ] ;
   foaf:isPrimaryTopicOf &lt;https://some.catalogue/record/29e08b66-e6f6-4b4f-95ad-b582d9fe3df5&gt; .</code></pre>
 </aside>
 
@@ -8371,6 +8377,7 @@ resource:eea_v_4326_250_k_wise-eionet-monitoring-sites_service a dcat:DataServic
 <li>+<a href="#dataset-creation-date">creation date</a></li>
 <li>+<a href="#dataset-reference-system">reference system</a></li>
 <li>+<a href="#dataset-rights-holder">rights holder</a></li>
+<li>+<a href="#dataset-spatial-resolution">spatial resolution</a></li>
 <li>+<a href="#dataset-spatial-resolution-general">spatial resolution as text</a></li>
 <li>+<a href="#dataset-topic-category">topic category</a></li>
 <li>+<a href="#dataset-was-used-by">was used by</a></li>
@@ -8427,6 +8434,24 @@ resource:eea_v_4326_250_k_wise-eionet-monitoring-sites_service a dcat:DataServic
 </td>
 </tr>
 
+<tr class="property optional" id="dataset-conforms-to">
+<td>
+<p>conforms to</p>
+</td>
+<td>
+<p><code>dct:conformsTo</code></p>
+</td>
+<td>
+<p><code>dct:Standard</code></p>
+</td>
+<td>
+<p>This property refers to an implementing rule or other specification.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
 <tr class="property optional ap-ext" id="dataset-creation-date">
 <td>
 <p>+creation date</p>
@@ -8460,24 +8485,6 @@ resource:eea_v_4326_250_k_wise-eionet-monitoring-sites_service a dcat:DataServic
 </td>
 <td>
 <p>0..1</p>
-</td>
-</tr>
-
-<tr class="property optional" id="dataset-conforms-to">
-<td>
-<p>conforms to</p>
-</td>
-<td>
-<p><code>dct:conformsTo</code></p>
-</td>
-<td>
-<p><code>dct:Standard</code></p>
-</td>
-<td>
-<p>This property refers to an implementing rule or other specification.</p>
-</td>
-<td>
-<p>0..n</p>
 </td>
 </tr>
 
@@ -8697,6 +8704,25 @@ resource:eea_v_4326_250_k_wise-eionet-monitoring-sites_service a dcat:DataServic
 </td>
 </tr>
 
+<tr class="property optional ap-ext" id="dataset-reference-system">
+<td>
+<p>+reference system</p>
+</td>
+<td>
+<p><code>dct:conformsTo</code></p>
+</td>
+<td>
+<p><code>dct:Standard</code></p>
+</td>
+<td>
+<p>This property <em class="rfc2119">SHOULD</em> be used to specify the reference system used in the Dataset.</p>
+<p>Spatial reference systems <em class="rfc2119">SHOULD</em> be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by <abbr title="Open Geospatial Consortium">OGC</abbr> [<cite><a class="bibref" data-link-type="biblio" href="#bib-ogc-epsg" title="EPSG CRS Register">OGC-EPSG</a></cite>].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
 <tr class="property optional" id="dataset-related-resource">
 <td>
 <p>related resource</p>
@@ -8730,25 +8756,6 @@ resource:eea_v_4326_250_k_wise-eionet-monitoring-sites_service a dcat:DataServic
 </td>
 <td>
 <p>0..1</p>
-</td>
-</tr>
-
-<tr class="property optional ap-ext" id="dataset-reference-system">
-<td>
-<p>+reference system</p>
-</td>
-<td>
-<p><code>dct:conformsTo</code></p>
-</td>
-<td>
-<p><code>dct:Standard</code></p>
-</td>
-<td>
-<p>This property <em class="rfc2119">SHOULD</em> be used to specify the reference system used in the Dataset.</p>
-<p>Spatial reference systems <em class="rfc2119">SHOULD</em> be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by <abbr title="Open Geospatial Consortium">OGC</abbr> [<cite><a class="bibref" data-link-type="biblio" href="#bib-ogc-epsg" title="EPSG CRS Register">OGC-EPSG</a></cite>].</p>
-</td>
-<td>
-<p>0..n</p>
 </td>
 </tr>
 
@@ -9231,7 +9238,8 @@ resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
   dct:language &lt;http://publications.europa.eu/resource/authority/language/ENG&gt; ;
   dct:provenance [ a dct:ProvenanceStatement ;
       rdfs:label "The raster data sets have been created out of the Noise Spatial Database, which in turn contains all versions delivered by the relevant countries (EU and EFTA) to Reportnet (CDR). The data from Reportnet is automatically incorporated into the database, with the exception of those data sets which require a manual review (due to problems with naming conventions or Coordinate Reference System). The data set covers any submission by the countries until 01/01/2019."@en ] ;
-  dct:spatial [ dcat:bbox "<span class="hljs-tag">&lt;<span class="hljs-name">gml:Envelope</span> <span class="hljs-attr">srsName</span>=<span class="hljs-string">\</span>"<span class="hljs-attr">http:</span>//<span class="hljs-attr">www.opengis.net</span>/<span class="hljs-attr">def</span>/<span class="hljs-attr">crs</span>/<span class="hljs-attr">OGC</span>/<span class="hljs-attr">1.3</span>/<span class="hljs-attr">CRS84</span>\"&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">gml:lowerCorner</span>&gt;</span>-31.285 27.642<span class="hljs-tag">&lt;/<span class="hljs-name">gml:lowerCorner</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">gml:upperCorner</span>&gt;</span>34.099 70.075<span class="hljs-tag">&lt;/<span class="hljs-name">gml:upperCorner</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">gml:Envelope</span>&gt;</span>"^^gsp:gmlLiteral,
+  dct:spatial [ a dct:Location ;
+      dcat:bbox "<span class="hljs-tag">&lt;<span class="hljs-name">gml:Envelope</span> <span class="hljs-attr">srsName</span>=<span class="hljs-string">\</span>"<span class="hljs-attr">http:</span>//<span class="hljs-attr">www.opengis.net</span>/<span class="hljs-attr">def</span>/<span class="hljs-attr">crs</span>/<span class="hljs-attr">OGC</span>/<span class="hljs-attr">1.3</span>/<span class="hljs-attr">CRS84</span>\"&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">gml:lowerCorner</span>&gt;</span>-31.285 27.642<span class="hljs-tag">&lt;/<span class="hljs-name">gml:lowerCorner</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">gml:upperCorner</span>&gt;</span>34.099 70.075<span class="hljs-tag">&lt;/<span class="hljs-name">gml:upperCorner</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">gml:Envelope</span>&gt;</span>"^^gsp:gmlLiteral,
         "POLYGON((-31.285 70.075,34.099 70.075,34.099 27.642,-31.285 27.642,-31.285 70.075))"^^gsp:wktLiteral ] ;
   dct:subject &lt;http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment&gt;,
     &lt;http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health&gt;,
@@ -9258,7 +9266,8 @@ resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
       dct:license [ a dct:LicenseDocument ;
           rdfs:label "The full noise contour maps data set is in principle only available for EEA internal use. A public version of the data set may in the future be available, excluding those data sets for which there is any limitation or restriction in their use (beyond acknowledgement)."@en ] ;
       adms:representationTechnique &lt;http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/grid&gt; ;
-      dcat:accessService [ dct:conformsTo &lt;http://www.opengeospatial.org/standards/wms&gt; ;
+      dcat:accessService [ a dcat:DataService ;
+          dct:conformsTo &lt;http://www.opengeospatial.org/standards/wms&gt; ;
           dcat:endpointDescription &lt;https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&amp;service=WMS&gt; ;
           dcat:endpointURL &lt;https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer&gt; ] ;
       dcat:accessURL &lt;https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&amp;service=WMS&gt; ] ;
@@ -9272,9 +9281,12 @@ resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
     &lt;http://publications.europa.eu/resource/authority/data-theme/HEAL&gt;,
     &lt;http://www.eionet.europa.eu/gemet/concept/2884&gt; ;
   prov:wasUsedBy [ a prov:Activity ;
-      prov:generated [ dct:description "See the referenced specification"@en ;
+      prov:generated [ a prov:Entity ;
+          dct:description "See the referenced specification"@en ;
           dct:type &lt;http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated&gt; ] ;
-      prov:qualifiedAssociation [ prov:hadPlan [ prov:wasDerivedFrom &lt;http://data.europa.eu/eli/reg/2010/1089&gt; ] ] ] ;
+      prov:qualifiedAssociation [ a prov:Association ;
+          prov:hadPlan [ a prov:Plan ;
+              prov:wasDerivedFrom &lt;http://data.europa.eu/eli/reg/2010/1089&gt; ] ] ] ;
   foaf:isPrimaryTopicOf record:e7807ecb-a8e6-4a33-baa2-d119eec9ce24 ;
   foaf:page &lt;https://noise.eea.europa.eu/&gt; .</code></pre>
 </aside>
@@ -9473,8 +9485,10 @@ resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
 <p>The following properties are not included in [<cite><a class="bibref" data-link-type="biblio" href="#bib-dcat-ap-20200608" title="DCAT Application Profile for data portals in Europe. Version 2.0.1">DCAT-AP-20200608</a></cite>]:</p>
 <ul>
 <li>+<a href="#distribution-access-rights">access rights</a></li>
+<li>+<a href="#distribution-character-encoding">character encoding</a></li>
 <li>+<a href="#distribution-reference-system">reference system</a></li>
 <li>+<a href="#distribution-representation-technique">representation technique</a></li>
+<li>+<a href="#distribution-spatial-resolution">spatial resolution</a></li>
 <li>+<a href="#distribution-spatial-resolution-general">spatial resolution as text</a></li>
 </ul>
 </aside></div>
@@ -9553,6 +9567,24 @@ resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
 </td>
 <td>
 <p>0..1</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="distribution-character-encoding">
+<td>
+<p>+character encoding</p>
+</td>
+<td>
+<p><code>cnt:characterEncoding</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property <em class="rfc2119">SHOULD</em> be used to specify the character encoding of the Distribution, by using as value the character set names in the IANA register [<cite><a class="bibref" data-link-type="biblio" href="#bib-iana-charsets" title="Character sets">IANA-CHARSETS</a></cite>].</p>
+</td>
+<td>
+<p>0..n</p>
 </td>
 </tr>
 
@@ -9998,7 +10030,8 @@ resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
   dct:license [ a dct:LicenseDocument ;
       rdfs:label <span class="hljs-string">"The full noise contour maps data set is in principle only available for EEA internal use. A public version of the data set may in the future be available, excluding those data sets for which there is any limitation or restriction in their use (beyond acknowledgement)."</span>@en ] ;
   adms:representationTechnique &lt;http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/grid&gt; ;
-  dcat:accessService [ dct:conformsTo &lt;http://www.opengeospatial.org/standards/wms&gt; ;
+  dcat:accessService [ a dcat:DataService ;
+      dct:conformsTo &lt;http://www.opengeospatial.org/standards/wms&gt; ;
       dcat:endpointDescription &lt;https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&amp;service=WMS&gt; ;
       dcat:endpointURL &lt;https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer&gt; ] ;
   dcat:accessURL &lt;https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&amp;service=WMS&gt; .</code></pre>
@@ -11340,23 +11373,7 @@ geodcat:spatialResolutionAsVerticalDistance a dqv:Metric ;
 </tr>
 </thead>
 <tbody>
-<tr class="property recommended" id="period-of-time-start-date">
-<td>
-<p>start date</p>
-</td>
-<td>
-<p><code>dcat:startDate</code></p>
-</td>
-<td>
-<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
-</td>
-<td>
-<p>This property contains the start of the Period of Time.</p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-</tr>
+
 <tr class="property recommended" id="period-of-time-end-date">
 <td>
 <p>end date</p>
@@ -11374,6 +11391,25 @@ geodcat:spatialResolutionAsVerticalDistance a dqv:Metric ;
 <p>0..1</p>
 </td>
 </tr>
+
+<tr class="property recommended" id="period-of-time-start-date">
+<td>
+<p>start date</p>
+</td>
+<td>
+<p><code>dcat:startDate</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the start of the Period of Time.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
 </tbody>
 </table>
 
@@ -11477,20 +11513,7 @@ geodcat:spatialResolutionAsVerticalDistance a dqv:Metric ;
 </tr>
 </thead>
 <tbody>
-<tr class="property deprecated" id="period-of-time-schema-start-date">
-<td>
-<p>start date</p>
-</td>
-<td>
-<p><code>schema:startDate</code></p>
-</td>
-<td>
-<p><a href="#period-of-time-start-date"><code>dcat:startDate</code></a></p>
-</td>
-<td>
-<p>[<cite><a class="bibref" data-link-type="biblio" href="#bib-dcat-ap-20191120" title="DCAT Application Profile for data portals in Europe. Version 2.0.0">DCAT-AP-20191120</a></cite>]</p>
-</td>
-</tr>
+
 <tr class="property deprecated" id="period-of-time-schema-end-date">
 <td>
 <p>end date</p>
@@ -11505,6 +11528,22 @@ geodcat:spatialResolutionAsVerticalDistance a dqv:Metric ;
 <p>[<cite><a class="bibref" data-link-type="biblio" href="#bib-dcat-ap-20191120" title="DCAT Application Profile for data portals in Europe. Version 2.0.0">DCAT-AP-20191120</a></cite>]</p>
 </td>
 </tr>
+
+<tr class="property deprecated" id="period-of-time-schema-start-date">
+<td>
+<p>start date</p>
+</td>
+<td>
+<p><code>schema:startDate</code></p>
+</td>
+<td>
+<p><a href="#period-of-time-start-date"><code>dcat:startDate</code></a></p>
+</td>
+<td>
+<p>[<cite><a class="bibref" data-link-type="biblio" href="#bib-dcat-ap-20191120" title="DCAT Application Profile for data portals in Europe. Version 2.0.0">DCAT-AP-20191120</a></cite>]</p>
+</td>
+</tr>
+
 </tbody>
 </table>
 
@@ -11541,16 +11580,18 @@ geodcat:spatialResolutionAsVerticalDistance a dqv:Metric ;
 <aside class="example" id="ex-period-of-time-with-owl-time"><div class="marker">
     <a class="self-link" href="#ex-period-of-time-with-owl-time">Example<bdi> 20</bdi></a><span class="example-title">: Period of Time using properties time:hasBeginning and time:hasEnd</span>
   </div>
-<pre aria-busy="false"><code class="hljs css"><span class="hljs-keyword">@prefix</span> <span class="hljs-attribute">dct</span>: &lt;<span class="hljs-attribute">http</span>://purl.org/dc/terms/&gt; .
-@prefix <span class="hljs-attribute">rdf</span>: &lt;<span class="hljs-attribute">http</span>://www.w3.org/<span class="hljs-number">1999</span>/<span class="hljs-number">02</span>/<span class="hljs-number">22</span>-rdf-syntax-ns#&gt; .
-@prefix <span class="hljs-attribute">rdfs</span>: &lt;<span class="hljs-attribute">http</span>://www.w3.org/<span class="hljs-number">2000</span>/<span class="hljs-number">01</span>/rdf-schema#&gt; .
-@prefix <span class="hljs-attribute">time</span>: &lt;<span class="hljs-attribute">http</span>://www.w3.org/<span class="hljs-number">2006</span>/time#&gt; .
-@prefix <span class="hljs-attribute">xml</span>: &lt;<span class="hljs-attribute">http</span>://www.w3.org/XML/<span class="hljs-number">1998</span>/namespace&gt; .
-@prefix <span class="hljs-attribute">xsd</span>: &lt;<span class="hljs-attribute">http</span>://www.w3.org/<span class="hljs-number">2001</span>/XMLSchema#&gt; .
+<pre aria-busy="false"><code class="hljs">@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+@prefix rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix time: &lt;http://www.w3.org/2006/time#&gt; .
+@prefix xml: &lt;http://www.w3.org/XML/1998/namespace&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
-[] a <span class="hljs-attribute">dct</span>:PeriodOfTime ;
-  <span class="hljs-selector-tag">time</span><span class="hljs-selector-pseudo">:has</span>Beginning <span class="hljs-selector-attr">[ time:inXSDDate <span class="hljs-string">"2016-01-01"</span>^^xsd:date ]</span> ;
-  <span class="hljs-selector-tag">time</span><span class="hljs-selector-pseudo">:has</span>End <span class="hljs-selector-attr">[ time:inXSDDate <span class="hljs-string">"2016-12-31"</span>^^xsd:date ]</span> .</code></pre>
+[] a dct:PeriodOfTime ;
+  time:hasBeginning [ a time:Instant ;
+      time:inXSDDate "2016-01-01"^^xsd:date ] ;
+  time:hasEnd [ a time:Instant ;
+      time:inXSDDate "2016-12-31"^^xsd:date ] .</code></pre>
 </aside>
 
 </section>
@@ -13596,6 +13637,7 @@ Often there is applicable legislation or a licency policy in place which determi
 <td>
 <p>+<a title="representation technique" href="#distribution-representation-technique"><code>adms:representationTechnique</code></a></p>
 <p><a title="status" href="#distribution-status"><code>adms:status</code></a></p>
+<p>+<a title="character encoding" href="#distribution-character-encoding"><code>cnt:characterEncoding</code></a></p>
 <p><a title="access service" href="#distribution-access-service"><code>dcat:accessService</code></a></p>
 <p><a title="byte size" href="#distribution-byte-size"><code>dcat:byteSize</code></a></p>
 <p><a title="compression format" href="#distribution-compression-format"><code>dcat:compressFormat</code></a></p>
@@ -14107,6 +14149,7 @@ Often there is applicable legislation or a licency policy in place which determi
 </td>
 <td>
 <p>+<a title="representation technique" href="#distribution-representation-technique"><code>adms:representationTechnique</code></a></p>
+<p>+<a title="character encoding" href="#distribution-character-encoding"><code>cnt:characterEncoding</code></a></p>
 <p>+<a title="access rights" href="#distribution-access-rights"><code>dct:accessRights</code></a></p>
 <p>+<a title="reference system" href="#distribution-reference-system"><code>dct:conformsTo</code></a></p>
 <p>+<a title="spatial resolution" href="#distribution-spatial-resolution"><code>dqv:hasQualityMeasurement</code></a></p>
@@ -16410,7 +16453,7 @@ dqv:hasQualityMeasurement</code></a></td>
 <pre aria-busy="false"><code class="hljs css"><span class="hljs-selector-attr">[]</span> <span class="hljs-selector-tag">a</span> dcat:DataService ;
   dct:type &lt;http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service&gt; ,
     &lt;http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view&gt; ;
-  dcat:servesDataset [
+  dcat:servesDataset [ a dcat:Dataset ;
     dct:identifier <span class="hljs-string">"1234567890"</span>^^xsd:string
   ] .</code></pre>
 
@@ -16473,7 +16516,8 @@ dqv:hasQualityMeasurement</code></a></td>
   &lt;http://publications.europa.eu/resource/authority/language/DEU&gt; ;
   foaf:isPrimaryTopicOf
 # Metadata on metadata
-    [ dct:language
+    [ a dcat:CatalogRecord ;
+      dct:language
       &lt;http://publications.europa.eu/resource/authority/language/NLD&gt; ] .</code></pre>
 
 <p>Resource metadata in ISO 19139</p>
@@ -16651,7 +16695,7 @@ dqv:hasQualityMeasurement</code></a></td>
     [ a skos:Concept ;
       skos:prefLabel <span class="hljs-string">"coniferous forest"</span>@en ;
       skos:inScheme [ a skos:ConceptScheme ;
-        rdfs:label <span class="hljs-string">"GEMET - Concepts, version 2.4"</span>@en ;
+        dct:title <span class="hljs-string">"GEMET - Concepts, version 2.4"</span>@en ;
         dct<span class="hljs-selector-pseudo">:is</span>sued "<span class="hljs-number">2010</span>-<span class="hljs-number">01</span>-<span class="hljs-number">13</span>"^^xsd:date ] ] ;
 ### Topic categories
   dct:subject &lt;http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation&gt; .
@@ -16667,8 +16711,8 @@ dqv:hasQualityMeasurement</code></a></td>
     [ a skos:Concept ;
     skos:prefLabel <span class="hljs-string">"Floods"</span>@en ;
     skos:inScheme [ a skos:ConceptScheme ;
-    rdfs:label <span class="hljs-string">"GEOSS - Societal Benefit Areas, version 1.0"</span>@en ;
-    dct<span class="hljs-selector-pseudo">:is</span>sued "<span class="hljs-number">2010</span>-<span class="hljs-number">08</span>-<span class="hljs-number">25</span>"^^xsd:date ] ] .</code></pre>
+      dct:title <span class="hljs-string">"GEOSS - Societal Benefit Areas, version 1.0"</span>@en ;
+      dct<span class="hljs-selector-pseudo">:is</span>sued "<span class="hljs-number">2010</span>-<span class="hljs-number">08</span>-<span class="hljs-number">25</span>"^^xsd:date ] ] .</code></pre>
 
 <p>Resource metadata in ISO 19139:</p>
 
@@ -16969,10 +17013,10 @@ dqv:hasQualityMeasurement</code></a></td>
 
 # If no URI is used for the geographic identifier
 []
-  dct:spatial [
+  dct:spatial [ a dct:Location , skos:Concept ;
     skos:preflabel <span class="hljs-string">"Netherlands"</span>@en;
     skos:prefLabel <span class="hljs-string">"Nederland"</span>@nl;
-    skos:inScheme [
+    skos:inScheme [ skos:ConceptScheme ;
       dct:title <span class="hljs-string">"Countries Authority Table"</span>@en;
       dct:modified <span class="hljs-string">"2009-01-01"</span>^^xsd:date
     ]
@@ -17021,18 +17065,19 @@ dqv:hasQualityMeasurement</code></a></td>
 
 <p>Resource metadata in GeoDCAT-AP</p>
 
-<pre aria-busy="false"><code class="hljs css">## Creation, publication and last revision dates
-<span class="hljs-selector-attr">[]</span> dct:created <span class="hljs-string">"2010-03-01"</span>^^xsd:date ;
-  dct<span class="hljs-selector-pseudo">:is</span>sued "<span class="hljs-number">2010</span>-<span class="hljs-number">10</span>-<span class="hljs-number">05</span>"^^xsd:date ;
-  dct:modified <span class="hljs-string">"2011-09-01"</span>^^xsd:date ;
+<pre aria-busy="false"><code class="hljs">## Creation, publication and last revision dates
+[] dct:created "2010-03-01"^^xsd:date ;
+  dct:issued "2010-10-05"^^xsd:date ;
+  dct:modified "2011-09-01"^^xsd:date ;
 ## Temporal extent
   dct:temporal [ a dct:PeriodOfTime ;
-    dcat:endDate <span class="hljs-string">"2006-12-31"</span>^^xsd:date ;
-    dcat:startDate <span class="hljs-string">"2006-01-01"</span>^^xsd:date ] ;
-  foaf<span class="hljs-selector-pseudo">:is</span>PrimaryTopicOf
+    dcat:endDate "2006-12-31"^^xsd:date ;
+    dcat:startDate "2006-01-01"^^xsd:date ] ;
+  foaf:isPrimaryTopicOf
 # Metadata on metadata
 ## Metadata date
-    <span class="hljs-selector-attr">[ dct:modified <span class="hljs-string">"2012-08-13"</span>^^xsd:date ]</span> .</code></pre>
+    [ a dcat:CatalogRecord ;
+      dct:modified "2012-08-13"^^xsd:date ] .</code></pre>
 
 <p>Resource metadata in ISO 19139:</p>
 
@@ -17271,19 +17316,18 @@ dqv:hasQualityMeasurement</code></a></td>
 <pre aria-busy="false"><code class="hljs">prov:wasUsedBy [
   a prov:Activity;
 # Conformity degree
-  prov:generated [
+  prov:generated [ a prov:Entity ;
     dct:type &lt;http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant&gt; ;
     dct:description “See the referenced specification”@en
-    prov:qualifiedAssociation [
-      prov:hadPlan [
-      a prov:Plan;
-      prov:wasDerivedFrom [
+    prov:qualifiedAssociation [ a prov:Association ;
+      prov:hadPlan [ a prov:Plan;
+        prov:wasDerivedFrom [
 # Specification
-        a prov:Entity, dct:Standard;
-        dct:title "COMMISSION REGULATION (EC) No 976/2009 of 19 October 2009
-        implementing Directive 2007/2/EC of the European Parliament and of the Council
-        as regards the Network Services"@en
-        dct:issued "2009-10-20"^^xsd:date
+          a prov:Entity , dct:Standard ;
+          dct:title "COMMISSION REGULATION (EC) No 976/2009 of 19 October 2009
+          implementing Directive 2007/2/EC of the European Parliament and of the Council
+          as regards the Network Services"@en
+          dct:issued "2009-10-20"^^xsd:date
       ]
     ];
   ];
@@ -17799,6 +17843,7 @@ dqv:hasQualityMeasurement</code></a></td>
 
 &lt;https://joinup.ec.europa.eu/release/geodcat-ap/<span class="hljs-number">10</span>&gt;
 # Standard name and version of the GeoDCAT-AP record
+  a dct:Standard ;
   dct:title <span class="hljs-string">"GeoDCAT-AP"</span>@en ;
   owl:versionInfo <span class="hljs-string">"1.0"</span> ;
 .</code></pre>
@@ -17827,10 +17872,9 @@ dqv:hasQualityMeasurement</code></a></td>
 
 <pre aria-busy="false"><code class="hljs css"><span class="hljs-selector-attr">[]</span> <span class="hljs-selector-tag">a</span> dcat:CatalogRecord ;
   dct:conformsTo &lt;https://joinup.ec.europa.eu/release/geodcat-ap/<span class="hljs-number">10</span>&gt; ;
-  dct:source [
+  dct:source [ a dcat:CatalogRecord ; 
 # Standard name and version of the source ISO <span class="hljs-number">19115</span> record
-    a dcat:CatalogRecord ;
-    dct:conformsTo [
+    dct:conformsTo [ a dct:Standard ;
       dct:title <span class="hljs-string">"ISO 19115"</span>@en ;
       owl:versionInfo <span class="hljs-string">"Nederlands metadata profiel op ISO 19115 voor geografie 1.3"</span>.
     ] ] ;
@@ -17935,6 +17979,7 @@ dqv:hasQualityMeasurement</code></a></td>
   dct:conformsTo &lt;http://www.opengis.net/def/crs/EPSG/<span class="hljs-number">0</span>/<span class="hljs-number">4258</span>&gt; .
 
 &lt;http://www.opengis.net/def/crs/EPSG/<span class="hljs-number">0</span>/<span class="hljs-number">4258</span>&gt;
+  a dct:Standard ;
   dct:type &lt;http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem&gt; .</code></pre>
 
 <p>Resource metadata in ISO 19139:</p>
@@ -17965,7 +18010,7 @@ dqv:hasQualityMeasurement</code></a></td>
 <p>Resource metadata in GeoDCAT-AP:</p>
 
 <pre aria-busy="false"><code class="hljs css"><span class="hljs-selector-attr">[]</span> <span class="hljs-selector-tag">a</span> dcat:Dataset ;
-  dct:conformsTo [
+  dct:conformsTo [ a dct:Standard ;
     dct:identifer <span class="hljs-string">"EPSG:4258"</span>^^xsd:string ;
     dct:type &lt;http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem&gt; .
   ] .</code></pre>
@@ -18252,7 +18297,7 @@ dqv:hasQualityMeasurement</code></a></td>
 
 <pre aria-busy="false"><code class="hljs css"><span class="hljs-selector-attr">[]</span> <span class="hljs-selector-tag">a</span> dcat:Dataset ;
   dcat:distribution [ a dcat:Distribution ;
-    dcat:mediaType &lt;http://publications.europa.eu/resource/authority/file-type/TIFF&gt; ] .</code></pre>
+    dct:format &lt;http://publications.europa.eu/resource/authority/file-type/TIFF&gt; ] .</code></pre>
 
 <p>Resource metadata in ISO 19139:</p>
 
