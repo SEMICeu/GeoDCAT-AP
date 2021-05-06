@@ -2652,10 +2652,10 @@
 
 # If no URI is used for the geographic identifier
 []
-  dct:spatial [
+  dct:spatial [ a dct:Location , skos:Concept ;
     skos:preflabel &quot;Netherlands&quot;@en;
     skos:prefLabel &quot;Nederland&quot;@nl;
-    skos:inScheme [
+    skos:inScheme [ skos:ConceptScheme ;
       dct:title &quot;Countries Authority Table&quot;@en;
       dct:modified &quot;2009-01-01&quot;^^xsd:date
     ]
@@ -2962,7 +2962,7 @@ prov:wasUsedBy [
       prov:hadPlan [ a prov:Plan;
         prov:wasDerivedFrom [
 # Specification
-          a prov:Entity, dct:Standard;
+          a prov:Entity , dct:Standard ;
           dct:title &quot;COMMISSION REGULATION (EC) No 976/2009 of 19 October 2009
           implementing Directive 2007/2/EC of the European Parliament and of the Council
           as regards the Network Services&quot;@en
@@ -3933,7 +3933,7 @@ prov:wasUsedBy [
 
 <pre>[] a dcat:Dataset ;
   dcat:distribution [ a dcat:Distribution ;
-    dcat:mediaType &lt;http://publications.europa.eu/resource/authority/file-type/TIFF&gt; ] .</pre>
+    dct:format &lt;http://publications.europa.eu/resource/authority/file-type/TIFF&gt; ] .</pre>
 
 <p>Resource metadata in ISO 19139:</p>
 
