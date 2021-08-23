@@ -3,7 +3,7 @@ authors:
 - name: "European Commission"
 title: "Repository of the geospatial extension to DCAT-AP (GeoDCAT-AP)"
 version: 2.0.0
-date-released: 2020-12-23
+date-released: "2020-12-23"
 url: "https://github.com/SEMICeu/GeoDCAT-AP"
 preferred-citation:
   type: generic
