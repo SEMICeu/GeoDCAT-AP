@@ -6,13 +6,9 @@ version: 2.0.0
 date-released: "2020-12-23"
 url: "https://github.com/SEMICeu/GeoDCAT-AP"
 preferred-citation:
-  type: report
+  type: standard
   authors:
-  - family-names: Perego
-    given-names: Andrea
-    orcid: "https://orcid.org/0000-0001-9300-2694"
-  - family-names: "van Nuffelen"
-    given-names: Bert
+  - name: "European Commission"
   title: "GeoDCAT-AP: A geospatial extension for the DCAT application profile for data portals in Europe"
   version: 2.0.0
   date-released: "2020-12-23"
