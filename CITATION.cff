@@ -6,7 +6,7 @@ version: 2.0.0
 date-released: 2020-12-23
 url: "https://github.com/SEMICeu/GeoDCAT-AP"
 preferred-citation:
-  type: standard
+  type: generic
   editors:
   - family-names: Perego
     given-names: Andrea
