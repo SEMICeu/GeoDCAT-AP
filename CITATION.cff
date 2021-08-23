@@ -13,5 +13,5 @@ preferred-citation:
   version: 2.0.0
   date-released: "2020-12-23"
   institution:
-  - name: "European Commission"
+    name: "European Commission"
   url: "https://semiceu.github.io/GeoDCAT-AP/releases/"
