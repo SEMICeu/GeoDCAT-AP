@@ -7,7 +7,7 @@ date-released: "2020-12-23"
 url: "https://github.com/SEMICeu/GeoDCAT-AP"
 preferred-citation:
   type: generic
-  editors:
+  authors:
   - family-names: Perego
     given-names: Andrea
     orcid: "https://orcid.org/0000-0001-9300-2694"
