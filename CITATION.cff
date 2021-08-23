@@ -12,6 +12,6 @@ preferred-citation:
   title: "GeoDCAT-AP: A geospatial extension for the DCAT application profile for data portals in Europe"
   version: 2.0.0
   date-released: "2020-12-23"
-  publisher:
+  institution:
   - name: "European Commission"
   url: "https://semiceu.github.io/GeoDCAT-AP/releases/"
