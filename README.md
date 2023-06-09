@@ -1,3 +1,4 @@
+![SEMIC Core Vocabulary](/semic-icon-small.png)
 # GeoDCAT-AP
 
 This is the issue tracker for the maintenance of [GeoDCAT-AP](https://joinup.ec.europa.eu/solution/geodcat-application-profile-data-portals-europe).
@@ -29,5 +30,5 @@ Additional GeoDCAT-AP implementations are documented in the [dedicated page on J
 
 ## Licence
 
-GeoDCAT-AP releases and working drafts are distributed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Copyright © 2023 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the GeoDCAT-AP repository on GitHub.
 
