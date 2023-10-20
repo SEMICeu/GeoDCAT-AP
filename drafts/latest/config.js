@@ -81,32 +81,33 @@ var respecConfig = {
 //    previousMaturity:     "final",
 //    previousURI:          "https://joinup.ec.europa.eu/release/geodcat-ap/101",
 /* SEMICEU specific - start */	
-//    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
-//    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
-    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
+    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
+//    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.0-draft-0.1/",
+//    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/",
 //    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
-    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
+    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
+//    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.0-draft-0.1/",
 //    latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
     latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/releases/",
 /* SEMICEU specific - end   */	
     edDraftURI:           "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
     issueBase:            "https://github.com/semiceu/geodcat-ap/issues/",
     github:               "https://github.com/semiceu/geodcat-ap/",
-    formerEditors: [{
-      name:       "Andrea Perego",
-      company:    "European Commission, Joint Research Centre",
-      orcid:      "0000-0001-9300-2694",
-//      companyURL: "https://ec.europa.eu/jrc/"
-    },{
-      name: "Stijn Goedertier",
-      company: "PwC EU Services",
-//      companyURL: "https://www.pwc.com/gx/en/services/european-union.html"
-    },{
-      name: "Antonio Rotundo",
-      company: "Agenzia per l'Italia Digitale",
-      url: "",
-//      companyURL: "http://www.agid.gov.it/"
-    }],
+//    formerEditors: [{
+//      name:       "Andrea Perego",
+//      company:    "European Commission, Joint Research Centre",
+//      orcid:      "0000-0001-9300-2694",
+////      companyURL: "https://ec.europa.eu/jrc/"
+//    },{
+//      name: "Stijn Goedertier",
+//      company: "PwC EU Services",
+////      companyURL: "https://www.pwc.com/gx/en/services/european-union.html"
+//    },{
+//      name: "Antonio Rotundo",
+//      company: "Agenzia per l'Italia Digitale",
+//      url: "",
+////      companyURL: "http://www.agid.gov.it/"
+//    }],
     editors: [
       {
         name:    "Andrea Perego",
@@ -124,8 +125,10 @@ var respecConfig = {
     {
       name: "GeoDCAT-AP Working Group",
       url: "https://github.com/semiceu/geodcat-ap/",
-      company: "EU ISA² Programme",
-      companyURL: "https://ec.europa.eu/isa2/"
+      company: "Interoperable Europe",
+  //    company: "EU ISA² Programme",
+      companyURL: "https://joinup.ec.europa.eu/interoperable-europe"
+  //    companyURL: "https://ec.europa.eu/isa2/"
     },
     ],    
     otherLinks: [
@@ -133,8 +136,8 @@ var respecConfig = {
       key: "Document status",
       data: [
       {
-//        value: "Under development"
-        value: "Completed"
+        value: "Under development"
+//        value: "Completed"
       }
       ]
     },
@@ -142,8 +145,8 @@ var respecConfig = {
       key: "Document version",
       data: [
       {
-//        value: "0.2"
-        value: "1.0"
+        value: "0.1"
+//        value: "1.0"
       }
       ]
     },
