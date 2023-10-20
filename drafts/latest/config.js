@@ -113,7 +113,7 @@ var respecConfig = {
         name:    "Andrea Perego",
         company: "European Parliament",
         orcid:   "0000-0001-9300-2694",
-//        companyURL: "https://ec.europa.eu/jrc/"
+//        companyURL: "https://europarl.europa.eu/"
       },
       {
         name: "Bert van Nuffelen",
