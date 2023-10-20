@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<title>GeoDCAT-AP - Version 2.0.0</title>
+<title>GeoDCAT-AP - Version 3.0.0</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -85,7 +85,7 @@ table code, table pre {
 
 <h2>Introduction</h2>
 
-<p>This document contains version 2.0.0 of the specification for GeoDCAT-AP, an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]] for describing geospatial datasets, dataset series, and services.</p>
+<p>This document contains version 3.0.0 of the specification for GeoDCAT-AP, an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]] for describing geospatial datasets, dataset series, and services.</p>
 
 <p>Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 [[ISO-19115]] and those defined in the framework of the INSPIRE Directive [[INSPIRE-DIR]].</p>
 
@@ -948,6 +948,79 @@ A property which is not mentioned but would be applicable for a class according 
 
 <aside class="example" id="ex-dataset" title="Dataset">
 <pre data-include-format="text" data-include="./examples/dataset.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
+<!-- Dataset Series -->
+
+<section id="properties-for-dataset-series">
+
+<h3>Dataset Series</h3>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-dataset-series.html"></div>
+
+<section id="mandatory-properties-for-dataset-series">
+
+<h4>Mandatory properties for Dataset Series</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-dataset-series.html"></div>
+
+</section>
+
+<section id="recommended-properties-for-dataset-series">
+
+<h4>Recommended properties for Dataset Series</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-dataset-series.html"></div>
+
+</section>
+
+<section id="optional-properties-for-dataset-series">
+
+<h4>Optional properties for Dataset Series</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<ul>
+<li>+<a href="#dataset-series-creation-date">creation date</a></li>
+<li>+<a href="#dataset-series-reference-system">reference system</a></li>
+<li>+<a href="#dataset-series-rights-holder">rights holder</a></li>
+<li>+<a href="#dataset-series-spatial-resolution">spatial resolution</a></li>
+<li>+<a href="#dataset-series-spatial-resolution-general">spatial resolution as text</a></li>
+<li>+<a href="#dataset-series-topic-category">topic category</a></li>
+<li>+<a href="#dataset-series-was-used-by">was used by</a></li>
+
+<li>+<a href="#dataset-series-custodian">custodian</a></li>
+<li>+<a href="#dataset-series-distributor">distributor</a></li>
+<li>+<a href="#dataset-series-originator">originator</a></li>
+<li>+<a href="#dataset-series-principal-investigator">principal investigator</a></li>
+<li>+<a href="#dataset-series-processor">processor</a></li>
+<li>+<a href="#dataset-series-resource-provider">resource provider</a></li>
+<li>+<a href="#dataset-series-user">user</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-dataset-series.html"></div>
+
+</section>
+<!--
+<section id="deprecated-properties-for-dataset-series">
+
+<h4>Deprecated properties for Dataset Series</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-dataset-series.html"></div>
+
+</section>
+-->
+<section id="examples-for-dataset-series">
+
+<h4>Examples for Dataset Series</h4>
+
+<aside class="example" id="ex-dataset-series" title="Dataset Series">
+<pre data-include-format="text" data-include="./examples/dataset-series.ttl"></pre>
 </aside>
 
 </section>

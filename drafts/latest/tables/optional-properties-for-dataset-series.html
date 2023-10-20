@@ -1,0 +1,761 @@
+<!--
+<aside class="ednote">
+<p>The usage note for <code>dct:accessRights</code> says:</p>
+<blockquote>
+<p>This property refers to information that indicates whether the Dataset is open data, has access restrictions or is not public. A controlled vocabulary with three members (<code>:public</code>, <code>:restricted</code>, <code>:non-public</code>) will be created and maintained by the Publications Office of the EU.</p>
+</blockquote>
+<p>A code list with those values have been actually published by the OP [[?EUV-AR]], so the usage note should be updated accordingly.</p>
+<p>An issue has been raised in DCAT-AP: <a href="https://github.com/SEMICeu/DCAT-AP/issues/159">issue 159</a>.</p>
+</aside>
+-->
+<table class="simple" id="table-optional-properties-for-dataset-series">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="property optional" id="dataset-series-access-rights">
+<td>
+<p>access rights</p>
+</td>
+<td>
+<p><code>dct:accessRights</code></p>
+</td>
+<td>
+<p><code>dct:RightsStatement</code></p>
+</td>
+<td>
+<p>This property refers to information that indicates whether the Dataset Series is open data, has access restrictions or is not public.</p>
+<p>For INSPIRE metadata, this property SHOULD be used with the URIs of the "Limitations on public access" code list operated by the INSPIRE Registry [[INSPIRE-LPA]].</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-conforms-to">
+<td>
+<p>conforms to</p>
+</td>
+<td>
+<p><code>dct:conformsTo</code></p>
+</td>
+<td>
+<p><code>dct:Standard</code></p>
+</td>
+<td>
+<p>This property refers to an implementing rule or other specification.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="dataset-series-creation-date">
+<td>
+<p>+creation date</p>
+</td>
+<td>
+<p><code>dct:created</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the date on which the Dataset Series has been first created.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-creator">
+<td>
+<p>creator</p>
+</td>
+<td>
+<p><code>dct:creator</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>This property refers to the Agent primarily responsible for producing the Dataset Series.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-documentation">
+<td>
+<p>documentation</p>
+</td>
+<td>
+<p><code>foaf:page</code></p>
+</td>
+<td>
+<p><code>foaf:Document</code></p>
+</td>
+<td>
+<p>This property refers to a page or document about this Dataset Series.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-frequency">
+<td>
+<p>frequency</p>
+</td>
+<td>
+<p><code>dct:accrualPeriodicity</code></p>
+</td>
+<td>
+<p><code>dct:Frequency</code></p>
+</td>
+<td>
+<p>This property refers to the frequency at which the Dataset Series is updated.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-has-version">
+<td>
+<p>has version</p>
+</td>
+<td>
+<p><code>dct:hasVersion</code></p>
+</td>
+<td>
+<p><code>dcat:Dataset</code></p>
+</td>
+<td>
+<p>This property refers to a related Dataset Series that is a version, edition, or adaptation of the described Dataset Series.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-dentifier">
+<td>
+<p>identifier</p>
+</td>
+<td>
+<p><code>dct:identifier</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains the main identifier for the Dataset Series, e.g., the URI or other unique identifier in the context of the Catalogue.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-is-referenced-by">
+<td>
+<p>is referenced by</p>
+</td>
+<td>
+<p><code>dct:isReferencedBy</code></p>
+</td>
+<td>
+<p><code>rdfs:Resource</code></p>
+</td>
+<td>
+<p>This property is about a related resource, such as a publication, that references, cites, or otherwise points to the Dataset Series.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-is-version-of">
+<td>
+<p>is version of</p>
+</td>
+<td>
+<p><code>dct:isVersionOf</code></p>
+</td>
+<td>
+<p><code>dcat:Dataset</code></p>
+</td>
+<td>
+<p>This property refers to a related Dataset Series of which the described Dataset Series is a version, edition, or adaptation.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-landing-page">
+<td>
+<p>landing page</p>
+</td>
+<td>
+<p><code>dcat:landingPage</code></p>
+</td>
+<td>
+<p><code>foaf:Document</code></p>
+</td>
+<td>
+<p>This property refers to a Web page that provides access to the Dataset Series, its Distributions and/or additional information. It is intended to point to a landing page at the original data provider, not to a page on a site of a third party, such as an aggregator.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-language">
+<td>
+<p>language</p>
+</td>
+<td>
+<p><code>dct:language</code></p>
+</td>
+<td>
+<p><code>dct:LinguisticSystem</code></p>
+</td>
+<td>
+<p>This property refers to a language of the Dataset Series. This property can be repeated if there are multiple languages in the Dataset Series - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-other-identifier">
+<td>
+<p>other identifier</p>
+</td>
+<td>
+<p><code>adms:identifier</code></p>
+</td>
+<td>
+<p><code>adms:Identifier</code></p>
+</td>
+<td>
+<p>This property refers to a secondary identifier of the Dataset Series, such as MAST/ADS [[?MAST-ADS]], [[?DataCite]], [[?DOI]], [[?EZID]] or [[?W3ID]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-provenance">
+<td>
+<p>provenance</p>
+</td>
+<td>
+<p><code>dct:provenance</code></p>
+</td>
+<td>
+<p><code>dct:ProvenanceStatement</code></p>
+</td>
+<td>
+<p>This property contains a statement about the lineage of a Dataset Series.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-qualified-attribution">
+<td>
+<p>qualified attribution</p>
+</td>
+<td>
+<p><code>prov:qualifiedAttribution</code></p>
+</td>
+<td>
+<p><code>prov:Attribution</code></p>
+</td>
+<td>
+<p>This property refers to a link to an Agent having some form of responsibility for the Dataset Series.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-qualified-relation">
+<td>
+<p>qualified relation</p>
+</td>
+<td>
+<p><code>dcat:qualifiedRelation</code></p>
+</td>
+<td>
+<p><code>dcat:Relationship</code></p>
+</td>
+<td>
+<p>This property provides a link to a description of a relationship with another resource.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="dataset-series-reference-system">
+<td>
+<p>+reference system</p>
+</td>
+<td>
+<p><code>dct:conformsTo</code></p>
+</td>
+<td>
+<p><code>dct:Standard</code></p>
+</td>
+<td>
+<p>This property SHOULD be used to specify the reference system used in the Dataset Series.</p>
+<p>Spatial reference systems SHOULD be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by <abbr title="Open Geospatial Consortium">OGC</abbr> [[OGC-EPSG]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-related-resource">
+<td>
+<p>related resource</p>
+</td>
+<td>
+<p><code>dct:relation</code></p>
+</td>
+<td>
+<p><code>rdfs:Resource</code></p>
+</td>
+<td>
+<p>This property refers to a related resource.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-release-date">
+<td>
+<p>release date</p>
+</td>
+<td>
+<p><code>dct:issued</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the date of formal issuance (e.g., publication) of the Dataset Series.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="dataset-series-rights-holder">
+<td>
+<p>+rights holder</p>
+</td>
+<td>
+<p><code>dct:rightsHolder</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>This property refers to an Agent (organisation) holding rights on the Dataset Series.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-sample">
+<td>
+<p>sample</p>
+</td>
+<td>
+<p><code>adms:sample</code></p>
+</td>
+<td>
+<p><code>dcat:Distribution</code></p>
+</td>
+<td>
+<p>This property refers to a sample Distribution of the Dataset Series.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-source">
+<td>
+<p>source</p>
+</td>
+<td>
+<p><code>dct:source</code></p>
+</td>
+<td>
+<p><code>dcat:Dataset</code></p>
+</td>
+<td>
+<p>This property refers to a related Dataset Series from which the described Dataset is derived.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="dataset-series-spatial-resolution">
+<td>
+<p>+spatial resolution</p>
+</td>
+<td>
+<p><code>dqv:hasQualityMeasurement</code></p>
+</td>
+<td>
+<p><code>dqv:QualityMeasurement</code></p>
+</td>
+<td>
+<p>Refers to the performed quality measurements.</p>
+<p>In GeoDCAT-AP, this property is used to specify "spatial resolution", as defined in [[INSPIRE-MD-REG]], [[ISO-19115]], and [[ISO-19115-1]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-spatial-resolution-in-metres">
+<td>
+<p>spatial resolution in metres</p>
+</td>
+<td>
+<p><code>dcat:spatialResolutionInMeters</code></p>
+</td>
+<td>
+<p><code>xsd:decimal</code></p>
+</td>
+<td>
+<p>This property refers to the minimum spatial separation resolvable in a Dataset Series, measured in metres.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="dataset-series-spatial-resolution-general">
+<td>
+<p>+spatial resolution as text</p>
+</td>
+<td>
+<p><code>rdfs:comment</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property MAY be used to express spatial resolution as free-text, when it cannot be specified via <code>dqv:hasQualityMeasurement</code> and <code>dcat:spatialResolutionInMeters</code>.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-temporal-resolution">
+<td>
+<p>temporal resolution</p>
+</td>
+<td>
+<p><code>dcat:temporalResolution</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:duration</code></p>
+</td>
+<td>
+<p>This property refers to the minimum time period resolvable in the Dataset Series.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="dataset-series-topic-category">
+<td>
+<p>+topic category</p>
+</td>
+<td>
+<p><code>dct:subject</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>In GeoDCAT-AP, this property SHOULD take as value one of the URIs of the "Topic categories in accordance with EN ISO 19115" code list operated by the INSPIRE Registry [[INSPIRE-TC]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-type">
+<td>
+<p>type</p>
+</td>
+<td>
+<p><code>dct:type</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property refers to the type of the Dataset Series. A controlled vocabulary for the values has not been established in [[DCAT-AP]].</p>
+<p>In GeoDCAT-AP, this property SHOULD take as value one of the URIs of the "Resource types" code list operated by the INSPIRE Registry [[INSPIRE-RT]]. For Datasets, the possible values are those corresponding to "Spatial data set" and "Spatial data set series".</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-modification-date">
+<td>
+<p>update / modification date</p>
+</td>
+<td>
+<p><code>dct:modified</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
+</td>
+<td>
+<p>This property contains the most recent date on which the Dataset was changed or modified.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-version">
+<td>
+<p>version</p>
+</td>
+<td>
+<p><code>owl:versionInfo</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains a version number or other version designation of the Dataset Series.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-version-notes">
+<td>
+<p>version notes</p>
+</td>
+<td>
+<p><code>adms:versionNotes</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains a description of the differences between this version and a previous version of the Dataset Series. This property can be repeated for parallel language versions of the version notes - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional" id="dataset-series-was-generated-by">
+<td>
+<p>was generated by</p>
+</td>
+<td>
+<p><code>prov:wasGeneratedBy</code></p>
+</td>
+<td>
+<p><code>prov:Activity</code></p>
+</td>
+<td>
+<p>This property refers to an Activity that generated, or provides the business context for, the creation of the Dataset Series.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="dataset-series-was-used-by">
+<td>
+<p>+was used by</p>
+</td>
+<td>
+<p><code>prov:wasUsedBy</code></p>
+</td>
+<td>
+<p><code>prov:Activity</code></p>
+</td>
+<td>
+<p>This property refers to an Activity that used the Dataset Series.</p>
+<p>In GeoDCAT-AP, this property MAY be used to specify a testing Activity over a Dataset, against a given Standard, producing as output a conformance degree.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<!-- NEW -->
+
+<tr class="property optional ap-ext" id="dataset-series-custodian">
+<td>
+<p>+custodian</p>
+</td>
+<td>
+<p><code>geodcat:custodian</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="dataset-series-distributor">
+<td>
+<p>+distributor</p>
+</td>
+<td>
+<p><code>geodcat:distributor</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Party who distributes the resource [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="dataset-series-originator">
+<td>
+<p>+originator</p>
+</td>
+<td>
+<p><code>geodcat:originator</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Party who created the resource [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="dataset-series-principal-investigator">
+<td>
+<p>+principal investigator</p>
+</td>
+<td>
+<p><code>geodcat:principalInvestigator</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Key party responsible for gathering information and conducting research [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="dataset-series-processor">
+<td>
+<p>+processor</p>
+</td>
+<td>
+<p><code>geodcat:processor</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="dataset-series-resource-provider">
+<td>
+<p>+resource provider</p>
+</td>
+<td>
+<p><code>geodcat:resourceProvider</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Party that supplies the resource [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property optional ap-ext" id="dataset-series-user">
+<td>
+<p>+user</p>
+</td>
+<td>
+<p><code>geodcat:user</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>Party who uses the resource [[ISO-19115]].</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+</tbody>
+</table>
