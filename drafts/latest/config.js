@@ -24,7 +24,7 @@ var respecConfig = {
 //    copyrightHolder: "European Union",
 //    copyrightURL: "https://europa.eu/",
     copyrightStart: 2020,
-    publishDate: "2020-12-23",
+//    publishDate: "2020-12-23",
 
     alternateFormats: [
 /*
@@ -110,7 +110,7 @@ var respecConfig = {
     editors: [
       {
         name:    "Andrea Perego",
-        company: "External Consultant, European Commission, Joint Research Centre",
+        company: "European Parliament",
         orcid:   "0000-0001-9300-2694",
 //        companyURL: "https://ec.europa.eu/jrc/"
       },
@@ -155,10 +155,10 @@ var respecConfig = {
         value: "Pavlina Fragkou (European Commission)",
 //        href: "https://ec.europa.eu/"
       },
-      {
-        value: "Seth van Hooland (European Commission)",
+//      {
+//        value: "Seth van Hooland (European Commission)",
 //        href: "https://ec.europa.eu/"
-      },
+//      },
       ]
     },
     {
@@ -168,10 +168,10 @@ var respecConfig = {
         value: "Pavlina Fragkou (European Commission)",
 //        href: "https://ec.europa.eu/"
       },
-      {
-        value: "Seth van Hooland (European Commission)",
+//      {
+//        value: "Seth van Hooland (European Commission)",
 //        href: "https://ec.europa.eu/"
-      },
+//      },
       ]
     }
       
