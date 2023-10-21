@@ -19,6 +19,24 @@
 </tr>
 </thead>
 <tbody>
+<tr class="class deprecated ap-ext" id="deprecated-class-dataset-series">
+<td>
+<p>+Dataset Series</p>
+</td>
+<td>
+<p>A collection of datasets that are published separately, but share some characteristics that group them.</p>
+</td>
+<td>
+<p><code>dcat:Dataset</code></p>
+</td>
+<td>
+<p><a href="#dataset-series"><code>dcat:DatasetSeries</code></a></p>
+</td>
+<td>
+<p>GeoDCAT-AP 3.0.0</p>
+</td>
+</tr>
+-<!--
 <tr class="class deprecated" id="media-type-or-extent">
 <td>
 <p>Media Type or Extent</p>
@@ -36,6 +54,8 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
+-->
+<!--
 <tr class="class deprecated ap-ext" id="service">
 <td>
 <p>+Service</p>
@@ -54,11 +74,19 @@
 <p>GeoDCAT-AP 2.0.0</p>
 </td>
 </tr>
+-->
 </tbody>
 </table>
 
+<aside class="note">
+<p>Until GeoDCAT-AP version 2.0.0 [[GeoDCAT-AP-20201223]], class <code>dcat:Dataset</code> was used to type resources as Dataset Series, as a more specific class was missing in reference vocabularies.</p>
+<p>[[VOCAB-DCAT-3]] has defined a specific class for this purpose, namely, <code>dcat:DatasetSeries</code>, which has been adopted in [[DCAT-AP-3]]. Therefore, <code>dcat:DatasetSeries</code> replaces <code>dcat:Dataset</code> starting from this version of GeoDCAT-AP.</p>
+<p>It is worth noting that <code>dcat:DataserSeries</code> is a subclass of <code>dcat:Dataset</code>.</p>
+
+<!--
 <aside class="note">
 <p>Until GeoDCAT-AP version 1.0.1 [[GeoDCAT-AP-20160802]], class <code>dctype:Service</code> was used to type resources as Data Services, as a more specific class was missing in reference vocabularies.</p>
 <p>[[VOCAB-DCAT-2]] has defined a specific class for this purpose, namely, <code>dcat:DataService</code>, which has been adopted in [[DCAT-AP-20191120]]. Therefore, <code>dcat:DataService</code> replaces <code>dctype:Service</code> starting from this version of GeoDCAT-AP.</p>
 <p>It is worth noting that <code>dcat:DataService</code> is a subclass of <code>dctype:Service</code>.</p>
 </aside>
+-->
