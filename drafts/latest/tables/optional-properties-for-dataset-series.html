@@ -8,6 +8,7 @@
 <p>An issue has been raised in DCAT-AP: <a href="https://github.com/SEMICeu/DCAT-AP/issues/159">issue 159</a>.</p>
 </aside>
 -->
+
 <table class="simple" id="table-optional-properties-for-dataset-series">
 <thead>
 <tr>
@@ -30,9 +31,9 @@
 </thead>
 <tbody>
 
-<tr class="property optional" id="dataset-series-access-rights">
+<tr class="property optional ap-ext" id="dataset-series-access-rights">
 <td>
-<p>access rights</p>
+<p>+access rights</p>
 </td>
 <td>
 <p><code>dct:accessRights</code></p>
@@ -49,9 +50,9 @@
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-series-conforms-to">
+<tr class="property optional ap-ext" id="dataset-series-conforms-to">
 <td>
-<p>conforms to</p>
+<p>+conforms to</p>
 </td>
 <td>
 <p><code>dct:conformsTo</code></p>
@@ -85,9 +86,9 @@
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-series-creator">
+<tr class="property optional ap-ext" id="dataset-series-creator">
 <td>
-<p>creator</p>
+<p>+creator</p>
 </td>
 <td>
 <p><code>dct:creator</code></p>
@@ -103,7 +104,7 @@
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-series-distribution">
+<tr class="property optional ap-ext" id="dataset-series-distribution">
 <td>
 <p>+dataset series distribution</p>
 </td>
@@ -121,6 +122,7 @@
 </td>
 </tr>
 
+<!--
 <tr class="property optional" id="dataset-series-documentation">
 <td>
 <p>documentation</p>
@@ -136,6 +138,25 @@
 </td>
 <td>
 <p>0..n</p>
+</td>
+</tr>
+-->
+
+<tr class="property optional" id="dataset-series-first">
+<td>
+<p>first</p>
+</td>
+<td>
+<p><code>dcat:first</code></p>
+</td>
+<td>
+<p><code>dcat:Dataset</code></p>
+</td>
+<td>
+<p>This property refers to the frequency at which the Dataset Series is updated.</p>
+</td>
+<td>
+<p>0..1</p>
 </td>
 </tr>
 
@@ -157,6 +178,7 @@
 </td>
 </tr>
 
+<!--
 <tr class="property optional" id="dataset-series-has-version">
 <td>
 <p>has version</p>
@@ -174,10 +196,11 @@
 <p>0..n</p>
 </td>
 </tr>
+-->
 
-<tr class="property optional" id="dataset-series-dentifier">
+<tr class="property optional ap-ext" id="dataset-series-dentifier">
 <td>
-<p>identifier</p>
+<p>+identifier</p>
 </td>
 <td>
 <p><code>dct:identifier</code></p>
@@ -193,6 +216,7 @@
 </td>
 </tr>
 
+<!--
 <tr class="property optional" id="dataset-series-is-referenced-by">
 <td>
 <p>is referenced by</p>
@@ -210,7 +234,9 @@
 <p>0..n</p>
 </td>
 </tr>
+-->
 
+<!--
 <tr class="property optional" id="dataset-series-is-version-of">
 <td>
 <p>is version of</p>
@@ -228,10 +254,11 @@
 <p>0..n</p>
 </td>
 </tr>
+-->
 
-<tr class="property optional" id="dataset-series-landing-page">
+<tr class="property optional ap-ext" id="dataset-series-landing-page">
 <td>
-<p>landing page</p>
+<p>+landing page</p>
 </td>
 <td>
 <p><code>dcat:landingPage</code></p>
@@ -247,9 +274,9 @@
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-series-language">
+<tr class="property optional ap-ext" id="dataset-series-language">
 <td>
-<p>language</p>
+<p>+language</p>
 </td>
 <td>
 <p><code>dct:language</code></p>
@@ -265,6 +292,7 @@
 </td>
 </tr>
 
+<!--
 <tr class="property optional" id="dataset-series-other-identifier">
 <td>
 <p>other identifier</p>
@@ -282,10 +310,11 @@
 <p>0..n</p>
 </td>
 </tr>
+-->
 
-<tr class="property optional" id="dataset-series-provenance">
+<tr class="property optionalap-ext" id="dataset-series-provenance">
 <td>
-<p>provenance</p>
+<p>+provenance</p>
 </td>
 <td>
 <p><code>dct:provenance</code></p>
@@ -301,9 +330,9 @@
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-series-qualified-attribution">
+<tr class="property optional ap-ext" id="dataset-series-qualified-attribution">
 <td>
-<p>qualified attribution</p>
+<p>+qualified attribution</p>
 </td>
 <td>
 <p><code>prov:qualifiedAttribution</code></p>
@@ -319,6 +348,7 @@
 </td>
 </tr>
 
+<!--
 <tr class="property optional" id="dataset-series-qualified-relation">
 <td>
 <p>qualified relation</p>
@@ -336,6 +366,7 @@
 <p>0..n</p>
 </td>
 </tr>
+-->
 
 <tr class="property optional ap-ext" id="dataset-series-reference-system">
 <td>
@@ -356,6 +387,7 @@
 </td>
 </tr>
 
+<!--
 <tr class="property optional" id="dataset-series-related-resource">
 <td>
 <p>related resource</p>
@@ -373,6 +405,7 @@
 <p>0..n</p>
 </td>
 </tr>
+-->
 
 <tr class="property optional" id="dataset-series-release-date">
 <td>
@@ -410,6 +443,7 @@
 </td>
 </tr>
 
+<!--
 <tr class="property optional" id="dataset-series-sample">
 <td>
 <p>sample</p>
@@ -427,7 +461,9 @@
 <p>0..n</p>
 </td>
 </tr>
+-->
 
+<!--
 <tr class="property optional" id="dataset-series-source">
 <td>
 <p>source</p>
@@ -445,6 +481,7 @@
 <p>0..n</p>
 </td>
 </tr>
+-->
 
 <tr class="property optional ap-ext" id="dataset-series-spatial-resolution">
 <td>
@@ -465,9 +502,9 @@
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-series-spatial-resolution-in-metres">
+<tr class="property optional ap-ext" id="dataset-series-spatial-resolution-in-metres">
 <td>
-<p>spatial resolution in metres</p>
+<p>+spatial resolution in metres</p>
 </td>
 <td>
 <p><code>dcat:spatialResolutionInMeters</code></p>
@@ -501,9 +538,9 @@
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-series-temporal-resolution">
+<tr class="property optional ap-ext" id="dataset-series-temporal-resolution">
 <td>
-<p>temporal resolution</p>
+<p>+temporal resolution</p>
 </td>
 <td>
 <p><code>dcat:temporalResolution</code></p>
@@ -537,9 +574,9 @@
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-series-type">
+<tr class="property optional ap-ext" id="dataset-series-type">
 <td>
-<p>type</p>
+<p>+type</p>
 </td>
 <td>
 <p><code>dct:type</code></p>
@@ -574,6 +611,7 @@
 </td>
 </tr>
 
+<!--
 <tr class="property optional" id="dataset-series-version">
 <td>
 <p>version</p>
@@ -591,7 +629,9 @@
 <p>0..1</p>
 </td>
 </tr>
+-->
 
+<!--
 <tr class="property optional" id="dataset-series-version-notes">
 <td>
 <p>version notes</p>
@@ -609,7 +649,9 @@
 <p>0..n</p>
 </td>
 </tr>
+-->
 
+<!--
 <tr class="property optional" id="dataset-series-was-generated-by">
 <td>
 <p>was generated by</p>
@@ -627,6 +669,7 @@
 <p>0..n</p>
 </td>
 </tr>
+-->
 
 <tr class="property optional ap-ext" id="dataset-series-was-used-by">
 <td>
