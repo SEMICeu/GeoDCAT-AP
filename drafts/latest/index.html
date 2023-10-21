@@ -44,7 +44,7 @@ table code, table pre {
 
 <p>GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 and those defined in the framework of the <abbr title="Infrastructure for spatial information in Europe">INSPIRE</abbr> Directive of the European Union.</p>
 
-<p>This document is the result of the major change release process described in the Change and Release Management Policy for DCAT-AP and was built starting from GeoDCAT-AP version 1.0.1.</p>
+<p>This document is the result of the major change release process described in the Change and Release Management Policy for DCAT-AP and was built starting from GeoDCAT-AP version 2.0.0.</p>
 
 <p>Comments and queries should be sent via <a href="https://github.com/semiceu/geodcat-ap/issues/">the issue tracker of the dedicated GitHub repository</a>.</p>
 
@@ -105,9 +105,9 @@ table code, table pre {
 
 <p>The DCAT-AP application profile specifies the generic agreements for (open) data portals operated by public administrations in Europe. This specification extends DCAT-AP with additional requirements for geospatial data.</p>
 
-<p>The current document is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP [[DCAT-AP-CRMP]] and was built starting from GeoDCAT-AP version 1.0.1 [[GeoDCAT-AP-20160802]], with the purpose of aligning it with DCAT-AP version 2.0.1 [[DCAT-AP-20200608]] and with version 2.0.1 of the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20170302]].</p>
+<p>The current document is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP [[DCAT-AP-CRMP]] and was built starting from GeoDCAT-AP version 2.0.0 [[GeoDCAT-AP-20201223]], with the purpose of aligning it with DCAT-AP version 3.x.x [[DCAT-AP-3]] and with version 2.1.3 of the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20230731]].</p>
 
-<p>This work has been carried out in the context of Action 1.1 – Improving semantic interoperability in European eGovernment systems [[SEMIC]] of the European Commission’s Interoperability solutions for public administrations, businesses and citizens (ISA²) Programme [[ISA2]], and it is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP [[DCAT-AP-CRMP]] and was built starting from GeoDCAT-AP version 1.0.1 [[GeoDCAT-AP-20160802]], with the purpose of aligning it with DCAT-AP version 2.0.1 [[DCAT-AP-20200608]] and with version 2.0.1 of the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20170302]].</p>
+<p>This work has been carried out in the context of the European Commission’s <q>Interoperable Europe</a> initiative [[INTEROPERABLE-EUROPE]].</p>
 
 </section>
 
@@ -115,9 +115,9 @@ table code, table pre {
 
 <h3>Scope of the revision</h3>
 
-<p>The objective of this work is to produce an updated release of GeoDCAT-AP based on requests for change coming from real-world implementations of the specification and an alignment with [[DCAT-AP-20200608]] and [[INSPIRE-MD-20170302]].</p> 
+<p>The objective of this work is to produce an updated release of GeoDCAT-AP based on requests for change coming from real-world implementations of the specification and an alignment with [[DCAT-AP-3]] and [[INSPIRE-MD-20230731]].</p> 
 
-<p>As [[DCAT-AP-20200608]], the Application Profile specified in this document is based on the specification of the <strong>Data Catalog Vocabulary</strong> (DCAT), originally  developed under the responsibility of the Government Linked Data Working Group [[GLD]] at W3C, and significantly revised in 2020 by the W3C Dataset Exchange Working Group [[DXWG]]. DCAT is an RDF [[RDF11-CONCEPTS]] vocabulary designed to facilitate interoperability between data catalogues published on the Web. Additional classes and properties from other well-known vocabularies are re-used where necessary.</p> 
+<p>As [[DCAT-AP-3]], the Application Profile specified in this document is based on the specification of the <strong>Data Catalog Vocabulary</strong> (DCAT), originally  developed under the responsibility of the Government Linked Data Working Group [[GLD]] at W3C, and significantly revised in 2020 by the W3C Dataset Exchange Working Group [[DXWG]]. DCAT is an RDF [[RDF11-CONCEPTS]] vocabulary designed to facilitate interoperability between data catalogues published on the Web. Additional classes and properties from other well-known vocabularies are re-used where necessary.</p> 
 
 <p>The work does not cover implementation issues like mechanisms for exchange of data and expected behaviour of systems implementing the Application Profile other than what is defined in the Conformance Statement in <a class="no-sectionRef" href="#conformance"></a>.</p> 
 
@@ -133,7 +133,7 @@ table code, table pre {
 <p>The DCAT-AP Application Profile defined in this document is based on the specification of the Data Catalog Vocabulary (DCAT) of 16 January 2014 [[VOCAB-DCAT-20140116]], and the Data Catalog Vocabulary (DCAT) - Version 2, W3C Candidate Recommendation 03 October 2019 [[VOCAB-DCAT-2-20191003]].</p>
 -->
 
-<p>The GeoDCAT-AP specification is designed as an extension of DCAT-AP in conformance with the guidelines for the creation of DCAT-AP extensions [[DCAT-AP-EG]]. The DCAT-AP Application Profile on which this document is based is the DCAT-AP specification of 8 June 2020 [[DCAT-AP-20200608]].  According to the same principles DCAT-AP is in itself an extension of DCAT.</p>
+<p>The GeoDCAT-AP specification is designed as an extension of DCAT-AP in conformance with the guidelines for the creation of DCAT-AP extensions [[DCAT-AP-EG]]. The DCAT-AP Application Profile on which this document is based is the DCAT-AP specification of 8 June 2020 [[DCAT-AP-3]].  According to the same principles DCAT-AP is in itself an extension of DCAT.</p>
 
 <p>This dependency must be taken into account while reading and using this specification. When implementing GeoDCAT-AP, these specifications should be consulted first, to fill in any missing gaps in this document.</p> 
 
@@ -2020,6 +2020,8 @@ Often there is applicable legislation or a licency policy in place which determi
 
 <ul>
 <li>Editorial revisions.</li>
+<li>Updated section <a href="#deprecated-classes"></a>.</li>
+<li>Added class <code>dcat:DatasetSeries</code> (<a href="#dataset-series"></a>).</li>
 <!--
 <li>Document completely re-written starting from the [[DCAT-AP-20200608]] specification, with the purpose of using a consistent document structure across DCAT-AP specifications.</li>
 <li>Use of classes and properties aligned with [[DCAT-AP-20200608]] (see issues <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/1">#1</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/2">#2</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/5">#5</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/7">#7</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/8">#8</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/10">#10</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/16">#16</a>). Classes and properties no longer used or replaced by new ones have been deprecated (see <a class="no-secRef" href="#deprecated-classes-and-properties"></a>).</li>
