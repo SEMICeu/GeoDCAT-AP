@@ -1606,11 +1606,35 @@
 <p>This mapping has been revised in this version of the GeoDCAT-AP specification.</p>
 <p>In particular:</p>
 <ul>
+<li>Class <code>dcat:Dataset</code> has been replaced by class <code>dcat:DataSeries</code> to denote dataset series.</li>
+<li>Mappings for series have been moved to the core mapping profile of GeoDCAT-AP, following their support in [[DCAT-AP-3]], with the exception of property <code>dct:type</code>.</li>
+</ul>
+</aside>
+
+<!--
+<aside class="note">
+<p>This mapping has been revised in this version of the GeoDCAT-AP specification.</p>
+<p>In particular:</p>
+<ul>
 <li>Class <code>dctype:Service</code> has been <a href="#service">deprecated</a>, and replaced by class <code>dcat:DataService</code> to denote services.</li>
 <li>Mappings for services have been moved to the core mapping profile of GeoDCAT-AP, following their support in [[DCAT-AP-20200608]], with the exception of property <code>dct:type</code>.</li>
 </ul>
 </aside>
+-->
 
+<p>[[VOCAB-DCAT-3]] and [[DCAT-AP-3]] provide specific classes that can be used to represent the INSPIRE notions of <strong>dataset</strong>, <strong>dataset series</strong>, and <strong>service</strong>, namely, <code>dcat:Dataset</code>, <code>dcat:DatasetSeries</code>, and <code>dcat:DataService</code>.</p>
+
+<p>In order to explicitly indicate the correspondence with the relevant INSPIRE resource types, following the work on aligning INSPIRE Metadata and Dublin Core [[?INSPIRE-DC]], in the extended mapping profile of GeoDCAT-AP they will be denoted by using the resource type code list operated by the INSPIRE Registry [[INSPIRE-RT]], and by using <code>dct:type</code>. More precisely, the following URIs SHOULD be used to denote, respectively, dataset, series, and services:</p>
+
+<ul>
+<li><p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset">http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset</a></p></li>
+<li><p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType/series">http://inspire.ec.europa.eu/metadata-codelist/ResourceType/series</a></p></li>
+<li><p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service">http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service</a></p></li>
+</ul>
+
+<p>Additionally, the spatial data service type can be specified by using <code>dct:type</code> with the corresponding code lists operated by the INSPIRE Registry [[INSPIRE-SDST]].</p>
+
+<!--
 <p>In [[VOCAB-DCAT-2]], the notion of dataset is quite broad, and may include both the INSPIRE notions of <strong>dataset</strong> and <strong>dataset series</strong>. Moreover, currently no existing vocabulary provides suitable candidates for the INSPIRE notions of dataset series – the existing ones are very generic (e.g., <code>dctype:Collection</code> is defined as <q>An aggregation of resources</q> [[DCTERMS]]).</p>
 
 <p>Based on this, in GeoDCAT-AP both INSPIRE datasets and dataset series are specified as instances of <code>dcat:Dataset</code>.</p>
@@ -1626,6 +1650,7 @@
 <ul>
 <li><p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service">http://inspire.ec.europa.eu/metadata-codelist/ResourceType/service</a></p></li>
 </ul>
+-->
 
 <aside class="example" id="ex-mapping-resource-type" title="Resource type">
 
@@ -1636,7 +1661,7 @@
   dct:type &lt;http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset&gt; .
 
 ## Resource type for series
-[] a dcat:Dataset;
+[] a dcat:DatasetSeries;
   dct:type &lt;http://inspire.ec.europa.eu/metadata-codelist/ResourceType/series&gt; .
 
 ## Resource type for services (here, a view service)
