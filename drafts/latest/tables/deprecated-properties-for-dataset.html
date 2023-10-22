@@ -16,6 +16,38 @@
 </tr>
 </thead>
 <tbody>
+
+<tr class="property deprecated" id="deprecated-property-dataset-has-version">
+<td>
+<p>has version</p>
+</td>
+<td>
+<p><code>dct:hasVersion</code></p>
+</td>
+<td>
+<p><a href="#dataset-has-version"><code>dcat:hasVersion</code></a></p>
+</td>
+<td>
+<p>DCAT-AP 3.x.x</p>
+</td>
+</tr>
+
+<tr class="property deprecated" id="deprecated-property-dataset-is-version-of">
+<td>
+<p>is version of</p>
+</td>
+<td>
+<p><code>dct:isVersionOf</code></p>
+</td>
+<td>
+<p><a href="#dataset-is-version-of"><code>dcat:isVersionOf</code></a></p>
+</td>
+<td>
+<p>DCAT-AP 3.x.x</p>
+</td>
+</tr>
+
+<!--
 <tr class="property deprecated" id="dataset-comment">
 <td>
 <p>spatial resolution</p>
@@ -31,12 +63,22 @@
 <p>GeoDCAT-AP 2.0.0</p>
 </td>
 </tr>
+-->
+
 </tbody>
 </table>
 
+<aside class="note">
+<p>Until GeoDCAT-AP version 2.0.0 [[GeoDCAT-AP-20201223]], properties <code>dct:hasVersion</code> and its inverse <code>dct:isVersionOf</code> were used with class <code>dcat:Dataset</code> to specify the relationships between a Dataset and its versions.</p>
+<p>[[VOCAB-DCAT-3]] has defined specific properties for this purpose, namely, <code>dcat:hasVersion</code> and <code>dcat:isVersionOf</code>, which have been adopted by [[DCAT-AP-3]]. Therefore they replace <code>dct:hasVersion</code> and <code>dct:isVersionOf</code> starting from this version of GeoDCAT-AP.</p>
+<p>It is worth noting that <code>dcat:hasVersion</code> and <code>dcat:isVersionOf</code> are subproperties of <code>dct:hasVersion</code> and <code>dct:isVersionOf</code>, respectively.</p>
+</aside>
+
+<!--
 <aside class="note">
 <p>Until GeoDCAT-AP version 1.0.1 [[GeoDCAT-AP-20160802]], property <code>rdfs:comment</code> was used with class <code>dcat:Dataset</code> to specify the spatial resolution of a Dataset, since a more specific property was not available in reference vocabularies.</p>
 <p>[[VOCAB-DCAT-2]] and [[?SDW-BP]] recommend the use of [[VOCAB-DQV]] for the specification of different types of spatial resolution, where property <code>dqv:hasQualityMeasurement</code> is used for this purpose. Moreover, [[VOCAB-DCAT-2]] has defined a specific property to specify spatial resolution as distance in metres, namely, <code>dcat:spatialResolutionInMeters</code>.</p>
 <p>Therefore, starting from this version of GeoDCAT-AP, property <code>dcat:spatialResolutionInMeters</code> replaces <code>rdfs:comment</code> when spatial resolution is expressed as distance in metres, whereas property <code>dqv:hasQualityMeasurement</code> replaces <code>rdfs:comment</code> in the other cases.</p>
 <p>Property <code>rdfs:comment</code> MAY still be used when spatial resolution is specified as free-text.</p>
 </aside>
+-->
