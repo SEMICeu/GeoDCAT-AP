@@ -139,6 +139,7 @@
 </td>
 </tr>
 
+<!-- DEPRECATED in DCAT-AP 3
 <tr class="property optional" id="dataset-has-version">
 <td>
 <p>has version</p>
@@ -151,6 +152,26 @@
 </td>
 <td>
 <p>This property refers to a related Dataset that is a version, edition, or adaptation of the described Dataset.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+-->
+
+<!-- ADDED in DCAT-AP 3 -->
+<tr class="property optional" id="dataset-has-version">
+<td>
+<p>has version</p>
+</td>
+<td>
+<p><code>dcat:hasVersion</code></p>
+</td>
+<td>
+<p><code>dcat:Dataset</code></p>
+</td>
+<td>
+<p>This property refers to a related Dataset that is a version of the described Dataset.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -193,6 +214,7 @@
 </td>
 </tr>
 
+<!-- DEPRECATED in DCAT-AP 3
 <tr class="property optional" id="dataset-is-version-of">
 <td>
 <p>is version of</p>
@@ -205,6 +227,26 @@
 </td>
 <td>
 <p>This property refers to a related Dataset of which the described Dataset is a version, edition, or adaptation.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+-->
+
+<!-- ADDED in DCAT-AP 3 -->
+<tr class="property optional" id="dataset-is-version-of">
+<td>
+<p>is version of</p>
+</td>
+<td>
+<p><code>dcat:isVersionOf</code></p>
+</td>
+<td>
+<p><code>dcat:Dataset</code></p>
+</td>
+<td>
+<p>This property refers to a related Dataset of which the described Dataset is a version.</p>
 </td>
 <td>
 <p>0..n</p>
