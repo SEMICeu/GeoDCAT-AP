@@ -151,32 +151,32 @@ var respecConfig = {
       ]
     },
 	    
-    {
-      key: "Reviewed by",
-      data: [
-      {
-        value: "Pavlina Fragkou (European Commission)",
-//        href: "https://ec.europa.eu/"
-      },
+//    {
+//      key: "Reviewed by",
+//      data: [
 //      {
-//        value: "Seth van Hooland (European Commission)",
-//        href: "https://ec.europa.eu/"
+//        value: "Pavlina Fragkou (European Commission)",
+////        href: "https://ec.europa.eu/"
 //      },
-      ]
-    },
-    {
-      key: "Approved by",
-      data: [
-      {
-        value: "Pavlina Fragkou (European Commission)",
-//        href: "https://ec.europa.eu/"
-      },
+////      {
+////        value: "Seth van Hooland (European Commission)",
+////        href: "https://ec.europa.eu/"
+////      },
+//      ]
+//    },
+//    {
+//      key: "Approved by",
+//      data: [
 //      {
-//        value: "Seth van Hooland (European Commission)",
-//        href: "https://ec.europa.eu/"
+//        value: "Pavlina Fragkou (European Commission)",
+////        href: "https://ec.europa.eu/"
 //      },
-      ]
-    }
+////      {
+////        value: "Seth van Hooland (European Commission)",
+////        href: "https://ec.europa.eu/"
+////      },
+//      ]
+//    }
       
     ],
     wg: "GeoDCAT-AP Working Group",
