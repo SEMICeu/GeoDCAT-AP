@@ -47,6 +47,21 @@
 </td>
 </tr>
 
+<tr class="property deprecated" id="deprecated-property-dataset-version">
+<td>
+<p>version</p>
+</td>
+<td>
+<p><code>owl:versionInfo</code></p>
+</td>
+<td>
+<p><a href="#dataset-version"><code>dcat:version</code></a></p>
+</td>
+<td>
+<p>DCAT-AP 3.x.x</p>
+</td>
+</tr>
+
 <!--
 <tr class="property deprecated" id="dataset-comment">
 <td>
@@ -69,8 +84,8 @@
 </table>
 
 <aside class="note">
-<p>Until GeoDCAT-AP version 2.0.0 [[GeoDCAT-AP-20201223]], properties <code>dct:hasVersion</code> and its inverse <code>dct:isVersionOf</code> were used with class <code>dcat:Dataset</code> to specify the relationships between a Dataset and its versions.</p>
-<p>[[VOCAB-DCAT-3]] has defined specific properties for this purpose, namely, <code>dcat:hasVersion</code> and <code>dcat:isVersionOf</code>, which have been adopted by [[DCAT-AP-3]]. Therefore they replace <code>dct:hasVersion</code> and <code>dct:isVersionOf</code> starting from this version of GeoDCAT-AP.</p>
+<p>Until GeoDCAT-AP version 2.0.0 [[GeoDCAT-AP-20201223]], properties <code>dcat:version</code>, <code>dct:hasVersion</code>, and its inverse <code>dct:isVersionOf</code> were used with class <code>dcat:Dataset</code> to specify, respectively, the version indicator of a dataset and the relationships between a Dataset and its versions.</p>
+<p>[[VOCAB-DCAT-3]] has defined specific properties for this purpose, namely, <code>dcat:version</code>, <code>dcat:hasVersion</code>, and <code>dcat:isVersionOf</code>, which have been adopted by [[DCAT-AP-3]]. Therefore they replace, respectively, <code>owl:versionInfo</code>, <code>dct:hasVersion</code>, and <code>dct:isVersionOf</code> starting from this version of GeoDCAT-AP.</p>
 <p>It is worth noting that <code>dcat:hasVersion</code> and <code>dcat:isVersionOf</code> are subproperties of <code>dct:hasVersion</code> and <code>dct:isVersionOf</code>, respectively.</p>
 </aside>
 
