@@ -3,10 +3,11 @@
   $folder = "../examples/";
   $target = $folder . "README.md";
 
-  $ext = array(".ttl",".rdf",".jsonld");
+//  $ext = array(".ttl",".rdf",".jsonld");
+  $ext = array(".ttl",".rdf");
   $label[".ttl"] = "Turtle";
   $label[".rdf"] = "RDF/XML";
-  $label[".jsonld"] = "JSON-LD";
+//  $label[".jsonld"] = "JSON-LD";
   $file = array();
 
   foreach ($ext as $e) {
