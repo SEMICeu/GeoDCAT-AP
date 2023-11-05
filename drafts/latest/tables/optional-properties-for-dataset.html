@@ -1,4 +1,4 @@
-<!--
+<!-- EDNOTE to GeoDCAT-AP 2
 <aside class="ednote">
 <p>The usage note for <code>dct:accessRights</code> says:</p>
 <blockquote>
@@ -8,6 +8,27 @@
 <p>An issue has been raised in DCAT-AP: <a href="https://github.com/SEMICeu/DCAT-AP/issues/159">issue 159</a>.</p>
 </aside>
 -->
+
+<aside class="ednote">
+<p>Some of the max cardinality constraints in DCAT-AP 3 are to be reviewed. In particular:</p>
+<ol>
+<li>The cardinality constraint for <code>dcat:isVersionOf</code> is set to 0-to-many. However, a dataset is not supposed to be the version of more than one dataset. So, the cardinality should be 0-to-1.</li>
+<li>
+<p>The cardinality constraint for <code>dcat:prev</code> (and <code>dcat:next</code>) is set to 0-to-many. However, this is in conflict with <a data-cite="VOCAB-DCAT-3##Property:resource_previous">the definition of this property</a> in [[VOCAB-DCAT-3]], namely:</p>
+<blockquote>
+<p>The previous resource (before the current one) in an ordered collection or series of resources.</p>
+</blockquote>
+<p>Such definition is further clarified in the usage note:</p>
+<blockquote>
+<p>[&hellip;] this property [&hellip;] denote[s] distinct a resource immediately preceding the current one in an ordered collection of resources.</p>
+</blockquote>
+<p>So, the cardinality should be 0-to-1.</p>
+</li>
+</ol>
+<p>An issue has been raised in DCAT-AP: <a href="https://github.com/SEMICeu/DCAT-AP/issues/???">issue ???</a>.</p>
+<p>For the moment, the cardinality of these properties has been set to 0-to-1 in this version of GeoDCAT-AP.</p>
+</aside>
+
 <table class="simple" id="table-optional-properties-for-dataset">
 <thead>
 <tr>
@@ -196,6 +217,25 @@
 </td>
 </tr>
 
+<!-- ADDED in DCAT-AP 3 -->
+<tr class="property optional" id="dataset-in-series">
+<td>
+<p>in series</p>
+</td>
+<td>
+<p><code>dcat:inSeries</code></p>
+</td>
+<td>
+<p><code>dcat:DatasetSeries</code></p>
+</td>
+<td>
+<p>A dataset series of which the dataset is part.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
 <tr class="property optional" id="dataset-is-referenced-by">
 <td>
 <p>is referenced by</p>
@@ -304,6 +344,25 @@
 </td>
 <td>
 <p>0..n</p>
+</td>
+</tr>
+
+<!-- ADDED in DCAT-AP 3 -->
+<tr class="property optional" id="dataset-previous">
+<td>
+<p>previous</p>
+</td>
+<td>
+<p><code>dcat:prev</code></p>
+</td>
+<td>
+<p><code>dcat:Dataset</code></p>
+</td>
+<td>
+<p>The previous Dataset (before the current one) in an ordered Dataset Series.</p>
+</td>
+<td>
+<p>0..1</p>
 </td>
 </tr>
 
@@ -618,6 +677,7 @@
 </tr>
 -->
 
+<!-- ADDED in DCAT-AP 3-->
 <tr class="property optional" id="dataset-version">
 <td>
 <p>version</p>
