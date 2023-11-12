@@ -18,6 +18,7 @@
     <foaf:isPrimaryTopicOf rdf:resource="https://some.catalogue/record/e7807ecb-a8e6-4a33-baa2-d119eec9ce24"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
     <dct:type rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset"/>
+    <dcat:inSeries rdf:resource="https://some.catalogue/resource/eea_noise-contours_s"/>
     <dct:title xml:lang="en">Noise contours data reported under Environmental Noise Directive (END) 2017 (raster 10m) - version 2019, Oct. 2019</dct:title>
     <dct:description xml:lang="en">
       The data set includes the rasterized noise contours which have been 

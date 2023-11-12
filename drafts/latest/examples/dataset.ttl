@@ -1,6 +1,6 @@
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geodcat: <http://data.europa.eu/930/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -12,10 +12,10 @@
 
 resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
   geodcat:custodian <http://publications.europa.eu/resource/authority/corporate-body/EEA> ;
-  dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
-  dcterms:conformsTo <http://www.opengis.net/def/crs/EPSG/0/3035> ;
-  dcterms:created "2019-10-31"^^xsd:date ;
-  dcterms:description """
+  dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+  dct:conformsTo <http://www.opengis.net/def/crs/EPSG/0/3035> ;
+  dct:created "2019-10-31"^^xsd:date ;
+  dct:description """
     The data set includes the rasterized noise contours which have been 
     reported by countries under the terms of the Environmental Noise 
     Directive (END) by the 33 EEA member countries (EEA-33) excluding 
@@ -23,21 +23,21 @@ resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
     includes submissions from the countries until 01/01/2019. 
     ...
   """@en ;
-  dcterms:identifier "eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00" ;
-  dcterms:language <http://publications.europa.eu/resource/authority/language/ENG> ;
-  dcterms:provenance [ a dcterms:ProvenanceStatement ;
+  dct:identifier "eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00" ;
+  dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
+  dct:provenance [ a dct:ProvenanceStatement ;
       rdfs:label "The raster data sets have been created out of the Noise Spatial Database, which in turn contains all versions delivered by the relevant countries (EU and EFTA) to Reportnet (CDR). The data from Reportnet is automatically incorporated into the database, with the exception of those data sets which require a manual review (due to problems with naming conventions or Coordinate Reference System). The data set covers any submission by the countries until 01/01/2019."@en ] ;
-  dcterms:spatial [ a dcterms:Location ;
+  dct:spatial [ a dct:Location ;
       dcat:bbox "<gml:Envelope srsName=\"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"><gml:lowerCorner>-31.285 27.642</gml:lowerCorner><gml:upperCorner>34.099 70.075</gml:upperCorner></gml:Envelope>"^^<http://www.opengis.net/ont/geosparql#gmlLiteral>,
         "POLYGON((-31.285 70.075,34.099 70.075,34.099 27.642,-31.285 27.642,-31.285 70.075))"^^<http://www.opengis.net/ont/geosparql#wktLiteral> ] ;
-  dcterms:subject <http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment>,
+  dct:subject <http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment>,
     <http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health>,
     <http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation> ;
-  dcterms:temporal [ a dcterms:PeriodOfTime ;
+  dct:temporal [ a dct:PeriodOfTime ;
       dcat:endDate "2016-12-31"^^xsd:date ;
       dcat:startDate "2016-01-01"^^xsd:date ] ;
-  dcterms:title "Noise contours data reported under Environmental Noise Directive (END) 2017 (raster 10m) - version 2019, Oct. 2019"@en ;
-  dcterms:type <http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset> ;
+  dct:title "Noise contours data reported under Environmental Noise Directive (END) 2017 (raster 10m) - version 2019, Oct. 2019"@en ;
+  dct:type <http://inspire.ec.europa.eu/metadata-codelist/ResourceType/dataset> ;
   dcat:contactPoint [ a vcard:Organization ;
       vcard:fn "European Environment Agency"@en ;
       vcard:hasAddress [ a vcard:Address ;
@@ -49,17 +49,18 @@ resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
       vcard:hasEmail <mailto:info@eea.europa.eu> ;
       vcard:hasURL <http://www.eea.europa.eu> ] ;
   dcat:distribution [ a dcat:Distribution ;
-      dcterms:accessRights <http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e> ;
-      dcterms:description "NoiseContours_air_lnight"@en ;
-      dcterms:format <http://publications.europa.eu/resource/authority/file-type/TIFF> ;
-      dcterms:license [ a dcterms:LicenseDocument ;
+      dct:accessRights <http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e> ;
+      dct:description "NoiseContours_air_lnight"@en ;
+      dct:format <http://publications.europa.eu/resource/authority/file-type/TIFF> ;
+      dct:license [ a dct:LicenseDocument ;
           rdfs:label "The full noise contour maps data set is in principle only available for EEA internal use. A public version of the data set may in the future be available, excluding those data sets for which there is any limitation or restriction in their use (beyond acknowledgement)."@en ] ;
       adms:representationTechnique <http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType/grid> ;
       dcat:accessService [ a dcat:DataService ;
-          dcterms:conformsTo <http://www.opengeospatial.org/standards/wms> ;
+          dct:conformsTo <http://www.opengeospatial.org/standards/wms> ;
           dcat:endpointDescription <https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&service=WMS> ;
           dcat:endpointURL <https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer> ] ;
       dcat:accessURL <https://noise.discomap.eea.europa.eu/arcgis/services/noiseStoryMap/NoiseContours_air_lnight/ImageServer/WMSServer?request=GetCapabilities&service=WMS> ] ;
+  dcat:inSeries resource:eea_noise-contours_s ;
   dcat:keyword "Environmental Noise Directive"@en,
     "Noise map"@en,
     "agglomerations"@en,
@@ -71,8 +72,8 @@ resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
     <http://www.eionet.europa.eu/gemet/concept/2884> ;
   prov:wasUsedBy [ a prov:Activity ;
       prov:generated [ a prov:Entity ;
-          dcterms:description "See the referenced specification"@en ;
-          dcterms:type <http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated> ] ;
+          dct:description "See the referenced specification"@en ;
+          dct:type <http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated> ] ;
       prov:qualifiedAssociation [ a prov:Association ;
           prov:hadPlan [ a prov:Plan ;
               prov:wasDerivedFrom <http://data.europa.eu/eli/reg/2010/1089> ] ] ] ;
