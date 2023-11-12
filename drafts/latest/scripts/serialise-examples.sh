@@ -6,3 +6,4 @@ for file in ../examples/*.rdf; do
 done
 sed -i $'s/    /  /g' ../examples/*.ttl
 #sed -i $'s/    /  /g' ../examples/*.jsonld
+sed -i $'s/dcterms:/dct:/g' ../examples/*.ttl
