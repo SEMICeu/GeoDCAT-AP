@@ -1,10 +1,10 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] a skos:Concept ;
   skos:inScheme [ a skos:ConceptScheme ;
-      dcterms:issued "2010-07-06"^^xsd:date ;
-      dcterms:title "EEA categories"@en ] ;
+      dct:issued "2010-07-06"^^xsd:date ;
+      dct:title "EEA categories"@en ] ;
   skos:prefLabel "geospatial data"@en .
 

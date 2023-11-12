@@ -1,8 +1,8 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-[] a dcterms:PeriodOfTime ;
+[] a dct:PeriodOfTime ;
   time:hasBeginning [ a time:Instant ;
       time:inXSDDate "2016-01-01"^^xsd:date ] ;
   time:hasEnd [ a time:Instant ;

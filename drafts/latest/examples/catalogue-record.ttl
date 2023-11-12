@@ -1,6 +1,6 @@
 @prefix cnt: <http://www.w3.org/2011/content#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix record: <https://some.catalogue/record/> .
@@ -9,13 +9,13 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 record:af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb a dcat:CatalogRecord ;
-  dcterms:conformsTo <http://data.europa.eu/930/> ;
-  dcterms:identifier "af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb"^^xsd:string ;
-  dcterms:language <http://publications.europa.eu/resource/authority/language/ENG> ;
-  dcterms:modified "2020-03-25"^^xsd:date ;
-  dcterms:source [ a dcat:CatalogRecord ;
-      dcterms:conformsTo [ a dcterms:Standard ;
-          dcterms:title "ISO 19119/19139"@en ;
+  dct:conformsTo <http://data.europa.eu/930/> ;
+  dct:identifier "af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb"^^xsd:string ;
+  dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
+  dct:modified "2020-03-25"^^xsd:date ;
+  dct:source [ a dcat:CatalogRecord ;
+      dct:conformsTo [ a dct:Standard ;
+          dct:title "ISO 19119/19139"@en ;
           owl:versionInfo "1.0"@en ] ;
       cnt:characterEncoding "UTF-8"^^xsd:string ] ;
   dcat:contactPoint [ a vcard:Organization ;
