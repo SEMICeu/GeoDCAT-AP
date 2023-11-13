@@ -11,15 +11,24 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
-  dct:title "Noise contours data reported under Environmental Noise Directive (END) 2017 (raster 10m) - version 2019, Oct. 2019"@en ;
+  dct:title """
+    Noise contours data reported under Environmental Noise Directive 
+    (END) 2017 (raster 10m) - version 2019, Oct. 2019
+  """@en ;
   dcat:inSeries resource:eea_noise-contours_s .
 
 resource:eea_v_3035_10_mio_noise-exposure-end2017_i_2016_v01_r00 a dcat:Dataset ;
-  dct:title "Noise exposure data reported under Environmental Noise Directive (END) 2017, version 2019, Oct. 2019"@en ;
+  dct:title """
+    Noise exposure data reported under Environmental Noise Directive 
+    (END) 2017, version 2019, Oct. 2019
+  """@en ;
   dcat:inSeries resource:eea_noise-contours_s .
 
 resource:eea_v_3035_1_k_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
-  dct:title "Noise contours data reported under Environmental Noise Directive (END) 2017 (vector) - version 2019, Oct. 2019"@en ;
+  dct:title """
+    Noise contours data reported under Environmental Noise Directive 
+    (END) 2017 (vector) - version 2019, Oct. 2019
+  """@en ;
   dcat:inSeries resource:eea_noise-contours_s .
 
 resource:eea_noise-contours_s a dcat:DatasetSeries ;
@@ -33,14 +42,14 @@ resource:eea_noise-contours_s a dcat:DatasetSeries ;
   dct:identifier "eea_noise-contours_s"^^xsd:string ;
   dct:language <http://publications.europa.eu/resource/authority/language/ENG> ;
   dct:spatial [ a dct:Location ;
-      dcat:bbox "<gml:Envelope srsName=\"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"><gml:lowerCorner>-31.285 27.642</gml:lowerCorner><gml:upperCorner>44.807 71.165</gml:upperCorner></gml:Envelope>"^^<http://www.opengis.net/ont/geosparql#gmlLiteral>,
-        "POLYGON((-31.285 71.165,44.807 71.165,44.807 27.642,-31.285 27.642,-31.285 71.165))"^^<http://www.opengis.net/ont/geosparql#wktLiteral> ],
-    [ a dct:Location ;
       dcat:bbox "<gml:Envelope srsName=\"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"><gml:lowerCorner>-31.285 27.642</gml:lowerCorner><gml:upperCorner>34.099 70.075</gml:upperCorner></gml:Envelope>"^^<http://www.opengis.net/ont/geosparql#gmlLiteral>,
         "POLYGON((-31.285 70.075,34.099 70.075,34.099 27.642,-31.285 27.642,-31.285 70.075))"^^<http://www.opengis.net/ont/geosparql#wktLiteral> ],
     [ a dct:Location ;
       dcat:bbox "<gml:Envelope srsName=\"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"><gml:lowerCorner>-30.00 25.00</gml:lowerCorner><gml:upperCorner>35.00 72.00</gml:upperCorner></gml:Envelope>"^^<http://www.opengis.net/ont/geosparql#gmlLiteral>,
         "POLYGON((-30.00 72.00,35.00 72.00,35.00 25.00,-30.00 25.00,-30.00 72.00))"^^<http://www.opengis.net/ont/geosparql#wktLiteral> ],
+    [ a dct:Location ;
+      dcat:bbox "<gml:Envelope srsName=\"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"><gml:lowerCorner>-31.285 27.642</gml:lowerCorner><gml:upperCorner>44.807 71.165</gml:upperCorner></gml:Envelope>"^^<http://www.opengis.net/ont/geosparql#gmlLiteral>,
+        "POLYGON((-31.285 71.165,44.807 71.165,44.807 27.642,-31.285 27.642,-31.285 71.165))"^^<http://www.opengis.net/ont/geosparql#wktLiteral> ],
     [ a dct:Location ;
       dcat:bbox "<gml:Envelope srsName=\"http://www.opengis.net/def/crs/OGC/1.3/CRS84\"><gml:lowerCorner>-30.00 25.00</gml:lowerCorner><gml:upperCorner>35.00 75.00</gml:upperCorner></gml:Envelope>"^^<http://www.opengis.net/ont/geosparql#gmlLiteral>,
         "POLYGON((-30.00 75.00,35.00 75.00,35.00 25.00,-30.00 25.00,-30.00 75.00))"^^<http://www.opengis.net/ont/geosparql#wktLiteral> ] ;
@@ -79,10 +88,10 @@ resource:eea_noise-contours_s a dcat:DatasetSeries ;
     <http://www.eionet.europa.eu/gemet/concept/2884> ;
   dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
       dqv:isMeasurementOf geodcat:spatialResolutionAsScale ;
-      dqv:value 0.001 ],
+      dqv:value 0.0000001 ],
     [ a dqv:QualityMeasurement ;
       dqv:isMeasurementOf geodcat:spatialResolutionAsScale ;
-      dqv:value 0.0000001 ] ;
+      dqv:value 0.001 ] ;
   prov:qualifiedAttribution [ a prov:Attribution ;
       dcat:hadRole <http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact> ;
       prov:agent [ a prov:Agent,

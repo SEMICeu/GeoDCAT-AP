@@ -17,19 +17,28 @@
   <rdf:Description rdf:about="https://some.catalogue/resource/eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00">
     <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
     <dcat:inSeries rdf:resource="https://some.catalogue/resource/eea_noise-contours_s"/>
-    <dct:title xml:lang="en">Noise contours data reported under Environmental Noise Directive (END) 2017 (raster 10m) - version 2019, Oct. 2019</dct:title>
+    <dct:title xml:lang="en">
+      Noise contours data reported under Environmental Noise Directive 
+      (END) 2017 (raster 10m) - version 2019, Oct. 2019
+    </dct:title>
   </rdf:Description>
   
   <rdf:Description rdf:about="https://some.catalogue/resource/eea_v_3035_1_k_noise-contours-end2017_i_2016_v01_r00">
     <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
     <dcat:inSeries rdf:resource="https://some.catalogue/resource/eea_noise-contours_s"/>
-    <dct:title xml:lang="en">Noise contours data reported under Environmental Noise Directive (END) 2017 (vector) - version 2019, Oct. 2019</dct:title>
+    <dct:title xml:lang="en">
+      Noise contours data reported under Environmental Noise Directive 
+      (END) 2017 (vector) - version 2019, Oct. 2019
+    </dct:title>
   </rdf:Description>
   
   <rdf:Description rdf:about="https://some.catalogue/resource/eea_v_3035_10_mio_noise-exposure-end2017_i_2016_v01_r00">
     <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
     <dcat:inSeries rdf:resource="https://some.catalogue/resource/eea_noise-contours_s"/>
-    <dct:title xml:lang="en">Noise exposure data reported under Environmental Noise Directive (END) 2017, version 2019, Oct. 2019</dct:title>
+    <dct:title xml:lang="en">
+      Noise exposure data reported under Environmental Noise Directive 
+      (END) 2017, version 2019, Oct. 2019
+    </dct:title>
   </rdf:Description>
   
   <rdf:Description rdf:about="https://some.catalogue/resource/eea_noise-contours_s">
