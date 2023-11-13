@@ -44,6 +44,10 @@
 <td><a href="./data-service.rdf"><code>data-service.rdf</code></a></td>
 </tr>
 <tr>
+<td><a href="./dataset-series.ttl"><code>dataset-series.ttl</code></a></td>
+<td><a href="./dataset-series.rdf"><code>dataset-series.rdf</code></a></td>
+</tr>
+<tr>
 <td><a href="./dataset.ttl"><code>dataset.ttl</code></a></td>
 <td><a href="./dataset.rdf"><code>dataset.rdf</code></a></td>
 </tr>
