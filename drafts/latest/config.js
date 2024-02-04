@@ -259,6 +259,42 @@ var respecConfig = {
         "publisher":"Dublin Core Metadata Initiative",
 //        "date":"9 March 2007"
       },
+      "ELI": {
+        "href":"https://eurlex.europa.eu/eli",
+        "title":"European Legislation Identifier (ELI)",
+        "publisher":"Publications Office of the European Union",
+//        "date":""
+      },
+      "ELI-ONTOLOGY": {
+        "href":"https://op.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/eli",
+        "title":"ELI Metadata Ontology",
+        "publisher":"Publications Office of the European Union",
+//        "date":""
+      },
+      "ELI-TG": {
+        "href":"https://doi.org/10.2830/51169",
+        "title":"ELI technical guide",
+        "publisher":"Publications Office of the European Union",
+        "date":"2018"
+      },
+      "ELI-GP": {
+        "href":"https://doi.org/10.2830/44907",
+        "title":"ELI, the European legislation identifier – Good practices and guidelines",
+        "publisher":"Publications Office of the European Union",
+        "date":"2018"
+      },
+      "ELI-CONCL-20121026": {
+        "href":"https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52012XG1026(01)",
+        "title":"Council conclusions inviting the introduction of the European Legislation Identifier (ELI)",
+        "publisher":"OJ C 325",
+        "date":"26 October 2012"
+      },
+      "ELI-CONCL-20171106": {
+        "href":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017XG1222(02)",
+        "title":"Council conclusions of 6 November 2017 on the European Legislation Identifier",
+        "publisher":"OJ C 441",
+        "date":"6 November 2017"
+      },
       "EPRINTS-AR": {
         "href":"http://purl.org/eprint/accessRights/",
         "title":"Eprints AccessRights Vocabulary Encoding Scheme",
@@ -368,7 +404,7 @@ var respecConfig = {
         "date":"2014"
       },
       "INSPIRE-DIR": {
-        "href":"http://data.europa.eu/eli/dir/2007/2/oj",
+        "href":"http://data.europa.eu/eli/dir/2007/2",
         "title":"DIRECTIVE 2007/2/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)",
         "publisher":"OJ L 108",
         "date":"25 April 2007"
