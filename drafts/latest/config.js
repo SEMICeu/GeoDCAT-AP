@@ -923,6 +923,7 @@ var respecConfig = {
         "date":"4 June 2018",
         "authors":["Hajo Rijgersberg", "Mark van Assem", "Don Willems", "Xin-Ying Ren", "Mari Wigham", "Jeen Broekstra", "Jan Top"]
       },
+/*
       "GeoSPARQL11": {
 //        "href": "https://github.com/opengeospatial/ogc-geosparql/1.1",
         "href": "https://opengeospatial.github.io/ogc-geosparql/geosparql11/spec.html",
@@ -931,6 +932,15 @@ var respecConfig = {
         "publisher":"OGC",
         "status":"Draft",
         "date": "16 December 2020"
+      },
+*/
+      "GeoSPARQL11": {
+        "href": "http://www.opengis.net/doc/IS/geosparql/1.1",
+        "title": "OGC GeoSPARQL - A Geographic Query Language for RDF Data. Version 1.1",
+//        "authors": ["Nicholas J. Car", "Timo Homburg", "Matthew Perry", "Frans Knibbe", "Simon J.D. Cox", "Joseph Abhayaratna", "Matthias Bonduel", "Paul J. Cripps", "Krzysztof Janowicz"],
+        "publisher":"OGC",
+        "status":"International Standard",
+        "date": "29 January 2024"
       },
       "DCAT-AP-3": {
         "href": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/",
