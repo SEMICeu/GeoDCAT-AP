@@ -414,16 +414,24 @@ var respecConfig = {
         "title":"INSPIRE Glossary",
         "publisher":"European Commission"
       },
-      "INSPIRE-SDSS-REG": {
-        "href":"http://data.europa.eu/eli/reg/2010/1089",
-        "title":"Commission Regulation (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services",
-        "publisher":"OJ L 323",
-        "date":"8 December 2010"
-      },
       "INSPIRE-LPA": {
         "href":"http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess",
         "title":"INSPIRE Registry: Limitations on public access",
         "publisher":"European Commission"
+      },
+      "INSPIRE-MD": {
+        "href":"https://inspire-mif.github.io/technical-guidelines/metadata/",
+        "title":"Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007. Version 2.2.0",
+//        "authors":["European Commission"],
+        "publisher":"European Commission",
+        "date":"31 January 2024"
+      },
+      "INSPIRE-MD-20240131": {
+        "href":"https://inspire-mif.github.io/technical-guidelines/metadata/",
+        "title":"Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007. Version 2.2.0",
+//        "authors":["European Commission"],
+        "publisher":"European Commission",
+        "date":"31 January 2024"
       },
       "INSPIRE-MD-REG": {
         "href":"http://data.europa.eu/eli/reg/2008/1205",
@@ -499,6 +507,12 @@ var respecConfig = {
         "href":"http://inspire.ec.europa.eu/metadata-codelist/ResourceType",
         "title":"INSPIRE Registry: Resource types",
         "publisher":"European Commission"
+      },
+      "INSPIRE-SDSS-REG": {
+        "href":"http://data.europa.eu/eli/reg/2010/1089",
+        "title":"Commission Regulation (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services",
+        "publisher":"OJ L 323",
+        "date":"8 December 2010"
       },
       "OGC-EPSG": {
         "href":"http://www.opengis.net/def/crs/EPSG/",
