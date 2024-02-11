@@ -10,112 +10,32 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="#media-type-or-extent">Media Type or Extent</a></td>
-<td><code>dct:MediaTypeOrExtent</code></td>
+<td>+<a href="#deprecated-class-dataset-series">Dataset Series</a></td>
+<td><code>dcat:Dataset</code></td>
 <td></td>
-<td><a href="#media-type"><code>dct:MediaType</code></a></td>
-<td>[[DCAT-AP-20191120]]</td>
+<td><a href="#dataset-series"><code>dcat:DatasetSeries</code></a></td>
+<td>GeoDCAT-AP 3.x.x</td>
 </tr>
 <tr>
-<td>+<a href="#service">Service</a></td>
-<td><code>dctype:Service</code></td>
-<td></td>
-<td><a href="#data-service"><code>dcat:DataService</code></a></td>
-<td>GeoDCAT-AP 2.0.0</td>
-</tr>
-<tr>
-<td><a href="#period-of-time-schema-end-date">end date</a></td>
-<td><code>schema:endDate</code></td>
-<td><a title="Period of time" href="#period-of-time"><code>dct:PeriodOfTime</code></a></td>
-<td><a href="#period-of-time-end-date"><code>dcat:endDate</code></a></td>
-<td>[[DCAT-AP-20191120]]</td>
-</tr>
-<tr>
-<td><a href="#data-service-homepage">endpoint URL</a></td>
-<td><code>foaf:homepage</code></td>
-<td><a title="Data Service" href="#data-service"><code>dcat:DataService</code></a></td>
-<td><a href="#data-service-endpoint-url"><code>dcat:endpointURL</code></a></td>
-<td>GeoDCAT-AP 2.0.0</td>
-</tr>
-<tr>
-<td>+<a href="#attribution-type">had role</a></td>
-<td><code>dct:type</code></td>
-<td>+<a title="Attribution" href="#attribution"><code>prov:Attribution</code></a></td>
-<td><a href="#attribution-had-role"><code>dcat:hadRole</code></a></td>
-<td>GeoDCAT-AP 2.0.0</td>
-</tr>
-<tr>
-<td>+<a href="#catalogue-subject-as-tag">keyword / tag</a></td>
-<td><code>dc:subject</code></td>
-<td><a title="Catalogue" href="#catalogue"><code>dcat:Catalog</code></a></td>
-<td><a href="#catalogue-keyword"><code>dcat:keyword</code></a></td>
-<td>GeoDCAT-AP 2.0.0</td>
-</tr>
-<tr>
-<td>+<a href="#data-service-subject-as-tag">keyword / tag</a></td>
-<td><code>dc:subject</code></td>
-<td><a title="Data Service" href="#data-service"><code>dcat:DataService</code></a></td>
-<td><a href="#data-service-keyword"><code>dcat:keyword</code></a></td>
-<td>GeoDCAT-AP 2.0.0</td>
-</tr>
-<tr>
-<td><a href="#data-service-has-part">serves dataset</a></td>
-<td><code>dct:hasPart</code></td>
-<td><a title="Data Service" href="#data-service"><code>dcat:DataService</code></a></td>
-<td><a href="#data-service-serves-dataset"><code>dcat:servesDataset</code></a></td>
-<td>GeoDCAT-AP 2.0.0</td>
-</tr>
-<tr>
-<td><a href="#catalogue-has-service">service</a></td>
-<td><code>dct:hasPart</code></td>
-<td><a title="Catalogue" href="#catalogue"><code>dcat:Catalog</code></a></td>
-<td><a href="#catalogue-service"><code>dcat:service</code></a></td>
-<td>GeoDCAT-AP 2.0.0</td>
-</tr>
-<tr>
-<td>+<a href="#data-service-comment">spatial resolution</a></td>
-<td><code>rdfs:comment</code></td>
-<td><a title="Data Service" href="#data-service"><code>dcat:DataService</code></a></td>
-<td><a href="#data-service-spatial-resolution-in-metres"><code>dcat:spatialResolutionInMeters
-dqv:hasQualityMeasurement</code></a></td>
-<td>GeoDCAT-AP 2.0.0</td>
-</tr>
-<tr>
-<td><a href="#dataset-comment">spatial resolution</a></td>
-<td><code>rdfs:comment</code></td>
+<td><a href="#deprecated-property-dataset-has-version">has version</a></td>
+<td><code>dct:hasVersion</code></td>
 <td><a title="Dataset" href="#dataset"><code>dcat:Dataset</code></a></td>
-<td><a href="#dataset-spatial-resolution-in-metres"><code>dcat:spatialResolutionInMeters
-dqv:hasQualityMeasurement</code></a></td>
-<td>GeoDCAT-AP 2.0.0</td>
+<td><a href="#dataset-has-version"><code>dcat:hasVersion</code></a></td>
+<td>DCAT-AP 3.x.x</td>
 </tr>
 <tr>
-<td>+<a href="#distribution-comment">spatial resolution</a></td>
-<td><code>rdfs:comment</code></td>
-<td><a title="Distribution" href="#distribution"><code>dcat:Distribution</code></a></td>
-<td><a href="#distribution-spatial-resolution-in-metres"><code>dcat:spatialResolutionInMeters
-dqv:hasQualityMeasurement</code></a></td>
-<td>GeoDCAT-AP 2.0.0</td>
+<td><a href="#deprecated-property-dataset-is-version-of">is version of</a></td>
+<td><code>dct:isVersionOf</code></td>
+<td><a title="Dataset" href="#dataset"><code>dcat:Dataset</code></a></td>
+<td><a href=""><code>dcat:isVersionOf [[VOCAB-DCAT-3]]</code></a></td>
+<td>DCAT-AP 3.x.x</td>
 </tr>
 <tr>
-<td><a href="#period-of-time-schema-start-date">start date</a></td>
-<td><code>schema:startDate</code></td>
-<td><a title="Period of time" href="#period-of-time"><code>dct:PeriodOfTime</code></a></td>
-<td><a href="#period-of-time-start-date"><code>dcat:startDate</code></a></td>
-<td>[[DCAT-AP-20191120]]</td>
-</tr>
-<tr>
-<td>+<a href="#catalogue-subject">theme / category</a></td>
-<td><code>dct:subject</code></td>
-<td><a title="Catalogue" href="#catalogue"><code>dcat:Catalog</code></a></td>
-<td><a href="#catalogue-category"><code>dcat:theme</code></a></td>
-<td>GeoDCAT-AP 2.0.0</td>
-</tr>
-<tr>
-<td>+<a href="#data-service-subject">theme / category</a></td>
-<td><code>dct:subject</code></td>
-<td><a title="Data Service" href="#data-service"><code>dcat:DataService</code></a></td>
-<td><a href="#data-service-category"><code>dcat:theme</code></a></td>
-<td>GeoDCAT-AP 2.0.0</td>
+<td><a href="#deprecated-property-dataset-version">version</a></td>
+<td><code>owl:versionInfo</code></td>
+<td><a title="Dataset" href="#dataset"><code>dcat:Dataset</code></a></td>
+<td><a href="#dataset-version"><code>dcat:version</code></a></td>
+<td>DCAT-AP 3.x.x</td>
 </tr>
 </tbody>
 </table>

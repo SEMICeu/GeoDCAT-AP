@@ -17,9 +17,11 @@
 </thead>
 <tbody>
 
-<tr class="class optional ap-ext" id="activity">
+<tr class="class optional" id="activity">
+<!--<tr class="class optional ap-ext" id="activity">-->
 <td>
-<p>+<a href="#properties-for-activity">Activity</a></p>
+<p><a href="#properties-for-activity">Activity</a></p>
+<!--<p>+<a href="#properties-for-activity">Activity</a></p>-->
 </td>
 <td>
 <p>An activity carried out by an Agent over an entity, according to a plan, and generating another entity.</p>
@@ -31,7 +33,7 @@
 <td>
 <p>
 <a data-cite="PROV-O#Activity">§&nbsp;(2) Class: prov:Activity</a> [[PROV-O]]; 
-<a class="src-ref" data-cite="VOCAB-DCAT-2#quality-conformance-degree">§&nbsp;<bdi class="secno">12.2.2 </bdi>Relationships between datasets and agents</a> [[VOCAB-DCAT-2]]</p>
+<a class="src-ref" data-cite="VOCAB-DCAT-3#quality-conformance-degree">§&nbsp;<bdi class="secno">14.2.2 </bdi>Degree of conformance</a> [[VOCAB-DCAT-3]]</p>
 </td>
 </tr>
 
@@ -65,9 +67,11 @@
 </td>
 </tr>
 
-<tr class="class optional ap-ext" id="attribution">
+<tr class="class optional" id="attribution">
+<!--<tr class="class optional ap-ext" id="attribution">-->
 <td>
-<p>+<a href="#properties-for-attribution">Attribution</a></p>
+<p><a href="#properties-for-attribution">Attribution</a></p>
+<!--<p>+<a href="#properties-for-attribution">Attribution</a></p>-->
 </td>
 <td>
 <p>A responsibility of an Agent for a resource.</p>
@@ -78,7 +82,7 @@
 <td>
 <p>
 <a data-cite="PROV-O#Attribution">§&nbsp;(50) Class: prov:Attribution</a> [[PROV-O]]; 
-<a class="src-ref" data-cite="VOCAB-DCAT-2#qualified-attribution">§&nbsp;<bdi class="secno">13.1 </bdi>Relationships between datasets and agents</a> [[VOCAB-DCAT-2]]</p>
+<a class="src-ref" data-cite="VOCAB-DCAT-3#qualified-attribution">§&nbsp;<bdi class="secno">15.1 </bdi>Relationships between datasets and agents</a> [[VOCAB-DCAT-3]]</p>
 </td>
 </tr>
 
@@ -93,7 +97,7 @@
 <p><code>dcat:CatalogRecord</code></p>
 </td>
 <td>
-<p><a data-cite="VOCAB-DCAT-2#Class:Catalog_Record">§&nbsp;<bdi class="secno">6.5 </bdi>Class: Catalog Record</a> [[VOCAB-DCAT-2]]</p>
+<p><a data-cite="VOCAB-DCAT-3#Class:Catalog_Record">§&nbsp;<bdi class="secno">6.5 </bdi>Class: Catalog Record</a> [[VOCAB-DCAT-3]]</p>
 </td>
 </tr>
 
@@ -123,7 +127,7 @@
 <p><code>dcat:DataService</code></p>
 </td>
 <td>
-<p><a data-cite="VOCAB-DCAT-2#Class:Data_Service">§&nbsp;<bdi class="secno">6.8 </bdi>Class: Data Service</a> [[VOCAB-DCAT-2]]</p>
+<p><a data-cite="VOCAB-DCAT-3#Class:Data_Service">§&nbsp;<bdi class="secno">6.9 </bdi>Class: Data Service</a> [[VOCAB-DCAT-3]]</p>
 </td>
 </tr>
 
@@ -187,12 +191,29 @@
 </td>
 </tr>
 
+<!-- Added in DCAT-AP 3 -->
+<tr class="class optional" id="legal-resource">
+<td>
+<p>Legal resource</p>
+</td>
+<td>
+<p>A work in a legislative corpus [[ELI-ONTOLOGY]].</p>
+<p>The definition and properties of the Legal Resource class are aligned with the ontology included in <q>Council conclusions inviting the introduction of the European Legislation Identifier (ELI)</q> [[ELI-CONCL-20121026]]. For describing the attributes of a Legal Resource (labels, preferred labels, alternative labels, definition, etc.) we refer to the ELI ontology. In this data specification the use is restricted to instances of this class that follow the ELI URI guidelines.</p>
+</td>
+<td>
+<p><code>eli:LegalResource</code></p>
+</td>
+<td>
+<p>[[ELI-ONTOLOGY]]</p>
+</td>
+</tr>
+
 <tr class="class optional" id="linguistic-system">
 <td>
 <p>Linguistic system</p>
 </td>
 <td>
-<p>A system of signs, symbols, sounds, gestures, or rules used in communication, e.g. a language</p>
+<p>A system of signs, symbols, sounds, gestures, or rules used in communication, e.g. a language.</p>
 </td>
 <td>
 <p><code>dct:LinguisticSystem</code></p>
@@ -324,7 +345,7 @@ In the latter case, the use of the Core Location Vocabulary [[CLV]] is recommend
 <p><code>dcat:Relationship</code></p>
 </td>
 <td>
-<p><a data-cite="VOCAB-DCAT-2#Class:Relationship">§&nbsp;<bdi class="secno">6.12 </bdi>Class: Relationship</a> [[VOCAB-DCAT-2]]</p>
+<p><a data-cite="VOCAB-DCAT-3#Class:Relationship">§&nbsp;<bdi class="secno">6.13 </bdi>Class: Relationship</a> [[VOCAB-DCAT-3]]</p>
 </td>
 </tr>
 
@@ -355,7 +376,7 @@ In the latter case, the use of the Core Location Vocabulary [[CLV]] is recommend
 <p><code>dcat:Role</code></p>
 </td>
 <td>
-<p><a class="src-ref" data-cite="VOCAB-DCAT-2#Class:Role">§&nbsp;<bdi class="secno">6.13 </bdi>Class: Role</a> [[VOCAB-DCAT-2]]</p>
+<p><a class="src-ref" data-cite="VOCAB-DCAT-3#Class:Role">§&nbsp;<bdi class="secno">6.14 </bdi>Class: Role</a> [[VOCAB-DCAT-3]]</p>
 </td>
 </tr>
 

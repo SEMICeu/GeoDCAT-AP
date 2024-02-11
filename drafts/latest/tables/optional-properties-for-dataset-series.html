@@ -1,4 +1,4 @@
-<!-- EDNOTE to GeoDCAT-AP 2
+<!--
 <aside class="ednote">
 <p>The usage note for <code>dct:accessRights</code> says:</p>
 <blockquote>
@@ -9,29 +9,7 @@
 </aside>
 -->
 
-<!--
-<aside class="ednote">
-<p>Some of the max cardinality constraints in DCAT-AP 3 are to be reviewed. In particular:</p>
-<ol>
-<li>The cardinality constraint for <code>dcat:isVersionOf</code> is set to 0-to-many. However, a dataset is not supposed to be the version of more than one dataset. So, the cardinality should be 0-to-1.</li>
-<li>
-<p>The cardinality constraint for <code>dcat:prev</code> (and <code>dcat:next</code>) is set to 0-to-many. However, this is in conflict with <a data-cite="VOCAB-DCAT-3##Property:resource_previous">the definition of this property</a> in [[VOCAB-DCAT-3]], namely:</p>
-<blockquote>
-<p>The previous resource (before the current one) in an ordered collection or series of resources.</p>
-</blockquote>
-<p>Such definition is further clarified in the usage note:</p>
-<blockquote>
-<p>[&hellip;] this property [&hellip;] denote[s] a distinct resource immediately preceding the current one in an ordered collection of resources.</p>
-</blockquote>
-<p>So, the cardinality should be 0-to-1.</p>
-</li>
-</ol>
-<p>An issue has been raised in DCAT-AP: <a href="https://github.com/SEMICeu/DCAT-AP/issues/???">issue ???</a>.</p>
-<p>For the moment, the cardinality of these properties has been set to 0-to-1 in this version of GeoDCAT-AP.</p>
-</aside>
--->
-
-<table class="simple" id="table-optional-properties-for-dataset">
+<table class="simple" id="table-optional-properties-for-dataset-series">
 <thead>
 <tr>
 <th>
@@ -53,9 +31,9 @@
 </thead>
 <tbody>
 
-<tr class="property optional" id="dataset-access-rights">
+<tr class="property optional ap-ext" id="dataset-series-access-rights">
 <td>
-<p>access rights</p>
+<p>+access rights</p>
 </td>
 <td>
 <p><code>dct:accessRights</code></p>
@@ -64,7 +42,7 @@
 <p><code>dct:RightsStatement</code></p>
 </td>
 <td>
-<p>This property refers to information that indicates whether the Dataset is open data, has access restrictions or is not public.</p>
+<p>This property refers to information that indicates whether the Dataset Series is open data, has access restrictions or is not public.</p>
 <p>For INSPIRE metadata, this property SHOULD be used with the URIs of the "Limitations on public access" code list operated by the INSPIRE Registry [[INSPIRE-LPA]].</p>
 </td>
 <td>
@@ -73,7 +51,7 @@
 </tr>
 
 <!-- Added in DCAT-AP 3 -->
-<tr class="property optional" id="dataset-applicable-legislation">
+<tr class="property optional" id="dataset-series-applicable-legislation">
 <td>
 <p>applicable legislation</p>
 </td>
@@ -84,7 +62,7 @@
 <p><code>eli:LegalResource</code></p>
 </td>
 <td>
-<p>The legislation that mandates the creation or management of the Dataset.</p>
+<p>The legislation that mandates the creation or management of the Dataset Series.</p>
 <p>For INSPIRE metadata, this property SHOULD be used with the European Legislation Identifier (<abbr title="European Legislation Identifier">ELI</abbr>) [[ELI]] of the INSPIRE Directive [[INSPIRE-DIR]]:</p>
 <p><a href="http://data.europa.eu/eli/dir/2007/2"><code>http://data.europa.eu/eli/dir/2007/2</code></a></p>
 </td>
@@ -93,9 +71,9 @@
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-conforms-to">
+<tr class="property optional ap-ext" id="dataset-series-conforms-to">
 <td>
-<p>conforms to</p>
+<p>+conforms to</p>
 </td>
 <td>
 <p><code>dct:conformsTo</code></p>
@@ -113,7 +91,7 @@
 </td>
 </tr>
 
-<tr class="property optional ap-ext" id="dataset-creation-date">
+<tr class="property optional ap-ext" id="dataset-series-creation-date">
 <td>
 <p>+creation date</p>
 </td>
@@ -124,16 +102,16 @@
 <p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
 </td>
 <td>
-<p>This property contains the date on which the Dataset has been first created.</p>
+<p>This property contains the date on which the Dataset Series has been first created.</p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-creator">
+<tr class="property optional ap-ext" id="dataset-series-creator">
 <td>
-<p>creator</p>
+<p>+creator</p>
 </td>
 <td>
 <p><code>dct:creator</code></p>
@@ -142,16 +120,36 @@
 <p><code>foaf:Agent</code></p>
 </td>
 <td>
-<p>This property refers to the Agent primarily responsible for producing the Dataset.</p>
+<p>This property refers to the Agent primarily responsible for producing the Dataset Series.</p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-documentation">
+<!--
+<tr class="property optional ap-ext" id="dataset-series-distribution">
 <td>
-<p>documentation</p>
+<p>+dataset series distribution</p>
+</td>
+<td>
+<p><code>dcat:distribution</code></p>
+</td>
+<td>
+<p><code>dcat:Distribution</code></p>
+</td>
+<td>
+<p>This property links the Dataset Series to an available Distribution.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+-->
+
+<tr class="property optional ap-ext" id="dataset-series-documentation">
+<td>
+<p>+documentation</p>
 </td>
 <td>
 <p><code>foaf:page</code></p>
@@ -160,14 +158,34 @@
 <p><code>foaf:Document</code></p>
 </td>
 <td>
-<p>This property refers to a page or document about this Dataset.</p>
+<p>This property refers to a page or document about this Dataset Series.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-frequency">
+<!--
+<tr class="property optional" id="dataset-series-first">
+<td>
+<p>first</p>
+</td>
+<td>
+<p><code>dcat:first</code></p>
+</td>
+<td>
+<p><code>dcat:Dataset</code></p>
+</td>
+<td>
+<p>The first resource in an ordered collection or series of resources, to which the current resource belongs.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+-->
+
+<tr class="property optional" id="dataset-series-frequency">
 <td>
 <p>frequency</p>
 </td>
@@ -178,17 +196,16 @@
 <p><code>dct:Frequency</code></p>
 </td>
 <td>
-<p>This property refers to the frequency at which the Dataset is updated.</p>
+<p>This property refers to the frequency at which the Dataset Series is updated.</p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 </tr>
 
-<!-- DEPRECATED in DCAT-AP 3
-<tr class="property optional" id="dataset-has-version">
+<tr class="property optional ap-ext" id="dataset-series-has-version">
 <td>
-<p>has version</p>
+<p>+has version</p>
 </td>
 <td>
 <p><code>dct:hasVersion</code></p>
@@ -197,36 +214,16 @@
 <p><code>dcat:Dataset</code></p>
 </td>
 <td>
-<p>This property refers to a related Dataset that is a version, edition, or adaptation of the described Dataset.</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
--->
-
-<!-- ADDED in DCAT-AP 3 -->
-<tr class="property optional" id="dataset-has-version">
-<td>
-<p>has version</p>
-</td>
-<td>
-<p><code>dcat:hasVersion</code></p>
-</td>
-<td>
-<p><code>dcat:Dataset</code></p>
-</td>
-<td>
-<p>This property refers to a related Dataset that is a version of the described Dataset.</p>
+<p>This property refers to a related Dataset Series that is a version, edition, or adaptation of the described Dataset Series.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-identifier">
+<tr class="property optional ap-ext" id="dataset-series-identifier">
 <td>
-<p>identifier</p>
+<p>+identifier</p>
 </td>
 <td>
 <p><code>dct:identifier</code></p>
@@ -235,17 +232,16 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property contains the main identifier for the Dataset, e.g., the URI or other unique identifier in the context of the Catalogue.</p>
+<p>This property contains the main identifier for the Dataset Series, e.g., the URI or other unique identifier in the context of the Catalogue.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<!-- ADDED in DCAT-AP 3 -->
-<tr class="property optional" id="dataset-in-series">
+<tr class="property optional ap-ext" id="dataset-series-in-series">
 <td>
-<p>in series</p>
+<p>+in series</p>
 </td>
 <td>
 <p><code>dcat:inSeries</code></p>
@@ -254,16 +250,16 @@
 <p><code>dcat:DatasetSeries</code></p>
 </td>
 <td>
-<p>A dataset series of which the dataset is part.</p>
+<p>A dataset series of which the Dataset Series is part.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-is-referenced-by">
+<tr class="property optional ap-ext" id="dataset-series-is-referenced-by">
 <td>
-<p>is referenced by</p>
+<p>+is referenced by</p>
 </td>
 <td>
 <p><code>dct:isReferencedBy</code></p>
@@ -272,17 +268,17 @@
 <p><code>rdfs:Resource</code></p>
 </td>
 <td>
-<p>This property is about a related resource, such as a publication, that references, cites, or otherwise points to the Dataset.</p>
+<p>This property is about a related resource, such as a publication, that references, cites, or otherwise points to the Dataset Series.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<!-- DEPRECATED in DCAT-AP 3
-<tr class="property optional" id="dataset-is-version-of">
+<!--
+<tr class="property optional ap-ext" id="dataset-series-is-version-of">
 <td>
-<p>is version of</p>
+<p>+is version of</p>
 </td>
 <td>
 <p><code>dct:isVersionOf</code></p>
@@ -291,7 +287,7 @@
 <p><code>dcat:Dataset</code></p>
 </td>
 <td>
-<p>This property refers to a related Dataset of which the described Dataset is a version, edition, or adaptation.</p>
+<p>This property refers to a related Dataset Series of which the described Dataset Series is a version, edition, or adaptation.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -299,30 +295,9 @@
 </tr>
 -->
 
-<!-- ADDED in DCAT-AP 3 -->
-<!--
-<tr class="property optional" id="dataset-is-version-of">
+<tr class="property optional ap-ext" id="dataset-series-landing-page">
 <td>
-<p>is version of</p>
-</td>
-<td>
-<p><code>dcat:isVersionOf</code></p>
-</td>
-<td>
-<p><code>dcat:Dataset</code></p>
-</td>
-<td>
-<p>This property refers to a related Dataset of which the described Dataset is a version.</p>
-</td>
-<td>
-<p>0..n</p>
-</td>
-</tr>
--->
-
-<tr class="property optional" id="dataset-landing-page">
-<td>
-<p>landing page</p>
+<p>+landing page</p>
 </td>
 <td>
 <p><code>dcat:landingPage</code></p>
@@ -331,16 +306,16 @@
 <p><code>foaf:Document</code></p>
 </td>
 <td>
-<p>This property refers to a Web page that provides access to the Dataset, its Distributions and/or additional information. It is intended to point to a landing page at the original data provider, not to a page on a site of a third party, such as an aggregator.</p>
+<p>This property refers to a Web page that provides access to the Dataset Series, its Distributions and/or additional information. It is intended to point to a landing page at the original data provider, not to a page on a site of a third party, such as an aggregator.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-language">
+<tr class="property optional ap-ext" id="dataset-series-language">
 <td>
-<p>language</p>
+<p>+language</p>
 </td>
 <td>
 <p><code>dct:language</code></p>
@@ -349,16 +324,36 @@
 <p><code>dct:LinguisticSystem</code></p>
 </td>
 <td>
-<p>This property refers to a language of the Dataset. This property can be repeated if there are multiple languages in the Dataset - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+<p>This property refers to a language of the Dataset Series. This property can be repeated if there are multiple languages in the Dataset Series - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-other-identifier">
+<!--
+<tr class="property optional" id="dataset-series-last">
 <td>
-<p>other identifier</p>
+<p>last</p>
+</td>
+<td>
+<p><code>dcat:last</code></p>
+</td>
+<td>
+<p><code>dcat:Dataset</code></p>
+</td>
+<td>
+<p>The last resource in an ordered collection or series.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+-->
+
+<tr class="property optional ap-ext" id="dataset-series-other-identifier">
+<td>
+<p>+other identifier</p>
 </td>
 <td>
 <p><code>adms:identifier</code></p>
@@ -367,37 +362,16 @@
 <p><code>adms:Identifier</code></p>
 </td>
 <td>
-<p>This property refers to a secondary identifier of the Dataset, such as MAST/ADS [[?MAST-ADS]], [[?DataCite]], [[?DOI]], [[?EZID]] or [[?W3ID]].</p>
+<p>This property refers to a secondary identifier of the Dataset Series, such as MAST/ADS [[?MAST-ADS]], [[?DataCite]], [[?DOI]], [[?EZID]] or [[?W3ID]].</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<!-- ADDED in DCAT-AP 3 -->
-<!--
-<tr class="property optional" id="dataset-previous">
+<tr class="property optionalap-ext" id="dataset-series-provenance">
 <td>
-<p>previous</p>
-</td>
-<td>
-<p><code>dcat:prev</code></p>
-</td>
-<td>
-<p><code>dcat:Dataset</code></p>
-</td>
-<td>
-<p>The previous Dataset (before the current one) in an ordered Dataset Series.</p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-</tr>
--->
-
-<tr class="property optional" id="dataset-provenance">
-<td>
-<p>provenance</p>
+<p>+provenance</p>
 </td>
 <td>
 <p><code>dct:provenance</code></p>
@@ -406,16 +380,16 @@
 <p><code>dct:ProvenanceStatement</code></p>
 </td>
 <td>
-<p>This property contains a statement about the lineage of a Dataset.</p>
+<p>This property contains a statement about the lineage of a Dataset Series.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-qualified-attribution">
+<tr class="property optional ap-ext" id="dataset-series-qualified-attribution">
 <td>
-<p>qualified attribution</p>
+<p>+qualified attribution</p>
 </td>
 <td>
 <p><code>prov:qualifiedAttribution</code></p>
@@ -424,16 +398,16 @@
 <p><code>prov:Attribution</code></p>
 </td>
 <td>
-<p>This property refers to a link to an Agent having some form of responsibility for the Dataset.</p>
+<p>This property refers to a link to an Agent having some form of responsibility for the Dataset Series.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-qualified-relation">
+<tr class="property optional ap-ext" id="dataset-series-qualified-relation">
 <td>
-<p>qualified relation</p>
+<p>+qualified relation</p>
 </td>
 <td>
 <p><code>dcat:qualifiedRelation</code></p>
@@ -449,7 +423,7 @@
 </td>
 </tr>
 
-<tr class="property optional ap-ext" id="dataset-reference-system">
+<tr class="property optional ap-ext" id="dataset-series-reference-system">
 <td>
 <p>+reference system</p>
 </td>
@@ -460,7 +434,7 @@
 <p><code>dct:Standard</code></p>
 </td>
 <td>
-<p>This property SHOULD be used to specify the reference system used in the Dataset.</p>
+<p>This property SHOULD be used to specify the reference system used in the Dataset Series.</p>
 <p>Spatial reference systems SHOULD be specified by using the corresponding URIs from the “EPSG coordinate reference systems” register operated by <abbr title="Open Geospatial Consortium">OGC</abbr> [[OGC-EPSG]].</p>
 </td>
 <td>
@@ -468,9 +442,9 @@
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-related-resource">
+<tr class="property optional ap-ext" id="dataset-series-related-resource">
 <td>
-<p>related resource</p>
+<p>+related resource</p>
 </td>
 <td>
 <p><code>dct:relation</code></p>
@@ -486,7 +460,7 @@
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-release-date">
+<tr class="property optional" id="dataset-series-release-date">
 <td>
 <p>release date</p>
 </td>
@@ -497,14 +471,14 @@
 <p><code>rdfs:Literal</code> typed as <code>xsd:date</code> or <code>xsd:dateTime</code></p>
 </td>
 <td>
-<p>This property contains the date of formal issuance (e.g., publication) of the Dataset.</p>
+<p>This property contains the date of formal issuance (e.g., publication) of the Dataset Series.</p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 </tr>
 
-<tr class="property optional ap-ext" id="dataset-rights-holder">
+<tr class="property optional ap-ext" id="dataset-series-rights-holder">
 <td>
 <p>+rights holder</p>
 </td>
@@ -515,16 +489,16 @@
 <p><code>foaf:Agent</code></p>
 </td>
 <td>
-<p>This property refers to an Agent (organisation) holding rights on the Dataset.</p>
+<p>This property refers to an Agent (organisation) holding rights on the Dataset Series.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-sample">
+<tr class="property optional ap-ext" id="dataset-series-sample">
 <td>
-<p>sample</p>
+<p>+sample</p>
 </td>
 <td>
 <p><code>adms:sample</code></p>
@@ -533,16 +507,16 @@
 <p><code>dcat:Distribution</code></p>
 </td>
 <td>
-<p>This property refers to a sample Distribution of the Dataset.</p>
+<p>This property refers to a sample Distribution of the Dataset Series.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-source">
+<tr class="property optional ap-ext" id="dataset-series-source">
 <td>
-<p>source</p>
+<p>+source</p>
 </td>
 <td>
 <p><code>dct:source</code></p>
@@ -551,14 +525,14 @@
 <p><code>dcat:Dataset</code></p>
 </td>
 <td>
-<p>This property refers to a related Dataset from which the described Dataset is derived.</p>
+<p>This property refers to a related Dataset Series from which the described Dataset is derived.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<tr class="property optional ap-ext" id="dataset-spatial-resolution">
+<tr class="property optional ap-ext" id="dataset-series-spatial-resolution">
 <td>
 <p>+spatial resolution</p>
 </td>
@@ -577,9 +551,9 @@
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-spatial-resolution-in-metres">
+<tr class="property optional ap-ext" id="dataset-series-spatial-resolution-in-metres">
 <td>
-<p>spatial resolution in metres</p>
+<p>+spatial resolution in metres</p>
 </td>
 <td>
 <p><code>dcat:spatialResolutionInMeters</code></p>
@@ -588,14 +562,14 @@
 <p><code>xsd:decimal</code></p>
 </td>
 <td>
-<p>This property refers to the minimum spatial separation resolvable in a Dataset, measured in metres.</p>
+<p>This property refers to the minimum spatial separation resolvable in a Dataset Series, measured in metres.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<tr class="property optional ap-ext" id="dataset-spatial-resolution-general">
+<tr class="property optional ap-ext" id="dataset-series-spatial-resolution-general">
 <td>
 <p>+spatial resolution as text</p>
 </td>
@@ -613,9 +587,9 @@
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-temporal-resolution">
+<tr class="property optional ap-ext" id="dataset-series-temporal-resolution">
 <td>
-<p>temporal resolution</p>
+<p>+temporal resolution</p>
 </td>
 <td>
 <p><code>dcat:temporalResolution</code></p>
@@ -624,14 +598,14 @@
 <p><code>rdfs:Literal</code> typed as <code>xsd:duration</code></p>
 </td>
 <td>
-<p>This property refers to the minimum time period resolvable in the Dataset.</p>
+<p>This property refers to the minimum time period resolvable in the Dataset Series.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<tr class="property optional ap-ext" id="dataset-topic-category">
+<tr class="property optional ap-ext" id="dataset-series-topic-category">
 <td>
 <p>+topic category</p>
 </td>
@@ -649,9 +623,9 @@
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-type">
+<tr class="property optional ap-ext" id="dataset-series-type">
 <td>
-<p>type</p>
+<p>+type</p>
 </td>
 <td>
 <p><code>dct:type</code></p>
@@ -660,7 +634,7 @@
 <p><code>skos:Concept</code></p>
 </td>
 <td>
-<p>This property refers to the type of the Dataset. A controlled vocabulary for the values has not been established in [[DCAT-AP]].</p>
+<p>This property refers to the type of the Dataset Series. A controlled vocabulary for the values has not been established in [[DCAT-AP]].</p>
 <p>In GeoDCAT-AP, this property SHOULD take as value one of the URIs of the "Resource types" code list operated by the INSPIRE Registry [[INSPIRE-RT]]. For Datasets, the possible values are those corresponding to "Spatial data set" and "Spatial data set series".</p>
 </td>
 <td>
@@ -668,7 +642,7 @@
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-modification-date">
+<tr class="property optional" id="dataset-series-modification-date">
 <td>
 <p>update / modification date</p>
 </td>
@@ -686,30 +660,9 @@
 </td>
 </tr>
 
-<!-- DEPRECATED in DCAT-AP 3
-<tr class="property optional" id="dataset-version">
+<tr class="property optional ap-ext" id="dataset-series-version">
 <td>
-<p>version</p>
-</td>
-<td>
-<p><code>owl:versionInfo</code></p>
-</td>
-<td>
-<p><code>rdfs:Literal</code></p>
-</td>
-<td>
-<p>This property contains a version number or other version designation of the Dataset.</p>
-</td>
-<td>
-<p>0..1</p>
-</td>
-</tr>
--->
-
-<!-- ADDED in DCAT-AP 3-->
-<tr class="property optional" id="dataset-version">
-<td>
-<p>version</p>
+<p>+version</p>
 </td>
 <td>
 <p><code>dcat:version</code></p>
@@ -718,16 +671,16 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>The version indicator (name or identifier) of the Dataset.</p>
+<p>This property contains a version number or other version designation of the Dataset Series.</p>
 </td>
 <td>
 <p>0..1</p>
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-version-notes">
+<tr class="property optional ap-ext" id="dataset-series-version-notes">
 <td>
-<p>version notes</p>
+<p>+version notes</p>
 </td>
 <td>
 <p><code>adms:versionNotes</code></p>
@@ -736,16 +689,16 @@
 <p><code>rdfs:Literal</code></p>
 </td>
 <td>
-<p>This property contains a description of the differences between this version and a previous version of the Dataset. This property can be repeated for parallel language versions of the version notes - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
+<p>This property contains a description of the differences between this version and a previous version of the Dataset Series. This property can be repeated for parallel language versions of the version notes - see <a class="no-secRef" href="#accessibility-and-multilingual-aspects"></a>.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<tr class="property optional" id="dataset-was-generated-by">
+<tr class="property optional ap-ext" id="dataset-series-was-generated-by">
 <td>
-<p>was generated by</p>
+<p>+was generated by</p>
 </td>
 <td>
 <p><code>prov:wasGeneratedBy</code></p>
@@ -754,14 +707,14 @@
 <p><code>prov:Activity</code></p>
 </td>
 <td>
-<p>This property refers to an Activity that generated, or provides the business context for, the creation of the Dataset.</p>
+<p>This property refers to an Activity that generated, or provides the business context for, the creation of the Dataset Series.</p>
 </td>
 <td>
 <p>0..n</p>
 </td>
 </tr>
 
-<tr class="property optional ap-ext" id="dataset-was-used-by">
+<tr class="property optional ap-ext" id="dataset-series-was-used-by">
 <td>
 <p>+was used by</p>
 </td>
@@ -772,7 +725,7 @@
 <p><code>prov:Activity</code></p>
 </td>
 <td>
-<p>This property refers to an Activity that used the Dataset.</p>
+<p>This property refers to an Activity that used the Dataset Series.</p>
 <p>In GeoDCAT-AP, this property MAY be used to specify a testing Activity over a Dataset, against a given Standard, producing as output a conformance degree.</p>
 </td>
 <td>
@@ -782,7 +735,7 @@
 
 <!-- NEW -->
 
-<tr class="property optional ap-ext" id="dataset-custodian">
+<tr class="property optional ap-ext" id="dataset-series-custodian">
 <td>
 <p>+custodian</p>
 </td>
@@ -800,7 +753,7 @@
 </td>
 </tr>
 
-<tr class="property optional ap-ext" id="dataset-distributor">
+<tr class="property optional ap-ext" id="dataset-series-distributor">
 <td>
 <p>+distributor</p>
 </td>
@@ -818,7 +771,7 @@
 </td>
 </tr>
 
-<tr class="property optional ap-ext" id="dataset-originator">
+<tr class="property optional ap-ext" id="dataset-series-originator">
 <td>
 <p>+originator</p>
 </td>
@@ -836,7 +789,7 @@
 </td>
 </tr>
 
-<tr class="property optional ap-ext" id="dataset-principal-investigator">
+<tr class="property optional ap-ext" id="dataset-series-principal-investigator">
 <td>
 <p>+principal investigator</p>
 </td>
@@ -854,7 +807,7 @@
 </td>
 </tr>
 
-<tr class="property optional ap-ext" id="dataset-processor">
+<tr class="property optional ap-ext" id="dataset-series-processor">
 <td>
 <p>+processor</p>
 </td>
@@ -872,7 +825,7 @@
 </td>
 </tr>
 
-<tr class="property optional ap-ext" id="dataset-resource-provider">
+<tr class="property optional ap-ext" id="dataset-series-resource-provider">
 <td>
 <p>+resource provider</p>
 </td>
@@ -890,7 +843,7 @@
 </td>
 </tr>
 
-<tr class="property optional ap-ext" id="dataset-user">
+<tr class="property optional ap-ext" id="dataset-series-user">
 <td>
 <p>+user</p>
 </td>

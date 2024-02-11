@@ -39,6 +39,27 @@
 </td>
 </tr>
 
+<!-- Added in DCAT-AP 3 -->
+<tr class="property optional" id="catalogue-applicable-legislation">
+<td>
+<p>applicable legislation</p>
+</td>
+<td>
+<p><code>dctap:applicableLegislation</code></p>
+</td>
+<td>
+<p><code>eli:LegalResource</code></p>
+</td>
+<td>
+<p>The legislation that mandates the creation or management of the Catalogue.</p>
+<p>For INSPIRE metadata, this property SHOULD be used with the European Legislation Identifier (<abbr title="European Legislation Identifier">ELI</abbr>) [[ELI]] of the INSPIRE Directive [[INSPIRE-DIR]]:</p>
+<p><a href="http://data.europa.eu/eli/dir/2007/2"><code>http://data.europa.eu/eli/dir/2007/2</code></a></p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
 <tr class="property optional" id="catalogue-catalogue">
 <td>
 <p>catalogue</p>
@@ -50,7 +71,11 @@
 <p><code>dcat:Catalog</code></p>
 </td>
 <td>
+<!-- Definition in DCAT 2, DCAT-AP 2, GeoDCAT-AP-2
 <p>This property refers to a Catalogue whose contents are of interest in the context of this Catalogue.</p>
+-->
+<!-- Definition aligned with DCAT 3 -->
+<p>A catalogue that is listed in the Catalogue.</p>
 </td>
 <td>
 <p>0..n</p>
@@ -69,6 +94,8 @@
 </td>
 <td>
 <p>This property refers to an implementing rule or other specification.</p>
+<p>For INSPIRE metadata, this property SHOULD be used with the European Legislation Identifier (<abbr title="European Legislation Identifier">ELI</abbr>) [[ELI]] of the INSPIRE Regulation on the interoperability of spatial data sets and services [[INSPIRE-SDSS-REG]]:</p>
+<p><a href="http://data.europa.eu/eli/reg/2010/1089"><code>http://data.europa.eu/eli/reg/2010/1089</code></a></p>
 </td>
 <td>
 <p>0..n</p>
@@ -303,7 +330,11 @@
 <p><code>dcat:DataService</code></p>
 </td>
 <td>
+<!-- Definition in DCAT 2, DCAT-AP 2, GeoDCAT-AP-2
 <p>This property refers to a Data Service that is listed in the Catalogue.</p>
+-->
+<!-- Definition aligned with DCAT 3 -->
+<p>A service that is listed in the Catalogue.</p>
 </td>
 <td>
 <p>0..n</p>

@@ -24,7 +24,7 @@ var respecConfig = {
 //    copyrightHolder: "European Union",
 //    copyrightURL: "https://europa.eu/",
     copyrightStart: 2020,
-    publishDate: "2020-12-23",
+//    publishDate: "2020-12-23",
 
     alternateFormats: [
 /*
@@ -81,38 +81,39 @@ var respecConfig = {
 //    previousMaturity:     "final",
 //    previousURI:          "https://joinup.ec.europa.eu/release/geodcat-ap/101",
 /* SEMICEU specific - start */	
-//    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
-//    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
-    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
+    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
+//    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.0-draft-0.1/",
+//    thisVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/",
 //    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
-    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/2.0.0-draft-0.1/",
+    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
+//    prevVersionURI:       "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.0-draft-0.1/",
 //    latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
     latestVersionURI:     "https://semiceu.github.io/GeoDCAT-AP/releases/",
 /* SEMICEU specific - end   */	
     edDraftURI:           "https://semiceu.github.io/GeoDCAT-AP/drafts/latest/",
     issueBase:            "https://github.com/semiceu/geodcat-ap/issues/",
     github:               "https://github.com/semiceu/geodcat-ap/",
-    formerEditors: [{
-      name:       "Andrea Perego",
-      company:    "European Commission, Joint Research Centre",
-      orcid:      "0000-0001-9300-2694",
-//      companyURL: "https://ec.europa.eu/jrc/"
-    },{
-      name: "Stijn Goedertier",
-      company: "PwC EU Services",
-//      companyURL: "https://www.pwc.com/gx/en/services/european-union.html"
-    },{
-      name: "Antonio Rotundo",
-      company: "Agenzia per l'Italia Digitale",
-      url: "",
-//      companyURL: "http://www.agid.gov.it/"
-    }],
+//    formerEditors: [{
+//      name:       "Andrea Perego",
+//      company:    "European Commission, Joint Research Centre",
+//      orcid:      "0000-0001-9300-2694",
+////      companyURL: "https://ec.europa.eu/jrc/"
+//    },{
+//      name: "Stijn Goedertier",
+//      company: "PwC EU Services",
+////      companyURL: "https://www.pwc.com/gx/en/services/european-union.html"
+//    },{
+//      name: "Antonio Rotundo",
+//      company: "Agenzia per l'Italia Digitale",
+//      url: "",
+////      companyURL: "http://www.agid.gov.it/"
+//    }],
     editors: [
       {
         name:    "Andrea Perego",
-        company: "External Consultant, European Commission, Joint Research Centre",
+        company: "European Parliament",
         orcid:   "0000-0001-9300-2694",
-//        companyURL: "https://ec.europa.eu/jrc/"
+//        companyURL: "https://europarl.europa.eu/"
       },
       {
         name: "Bert van Nuffelen",
@@ -124,8 +125,10 @@ var respecConfig = {
     {
       name: "GeoDCAT-AP Working Group",
       url: "https://github.com/semiceu/geodcat-ap/",
-      company: "EU ISA² Programme",
-      companyURL: "https://ec.europa.eu/isa2/"
+      company: "Interoperable Europe",
+  //    company: "EU ISA² Programme",
+      companyURL: "https://joinup.ec.europa.eu/interoperable-europe"
+  //    companyURL: "https://ec.europa.eu/isa2/"
     },
     ],    
     otherLinks: [
@@ -133,8 +136,8 @@ var respecConfig = {
       key: "Document status",
       data: [
       {
-//        value: "Under development"
-        value: "Completed"
+        value: "Under development"
+//        value: "Completed"
       }
       ]
     },
@@ -142,38 +145,38 @@ var respecConfig = {
       key: "Document version",
       data: [
       {
-//        value: "0.2"
-        value: "1.0"
+        value: "0.1"
+//        value: "1.0"
       }
       ]
     },
 	    
-    {
-      key: "Reviewed by",
-      data: [
-      {
-        value: "Pavlina Fragkou (European Commission)",
-//        href: "https://ec.europa.eu/"
-      },
-      {
-        value: "Seth van Hooland (European Commission)",
-//        href: "https://ec.europa.eu/"
-      },
-      ]
-    },
-    {
-      key: "Approved by",
-      data: [
-      {
-        value: "Pavlina Fragkou (European Commission)",
-//        href: "https://ec.europa.eu/"
-      },
-      {
-        value: "Seth van Hooland (European Commission)",
-//        href: "https://ec.europa.eu/"
-      },
-      ]
-    }
+//    {
+//      key: "Reviewed by",
+//      data: [
+//      {
+//        value: "Pavlina Fragkou (European Commission)",
+////        href: "https://ec.europa.eu/"
+//      },
+////      {
+////        value: "Seth van Hooland (European Commission)",
+////        href: "https://ec.europa.eu/"
+////      },
+//      ]
+//    },
+//    {
+//      key: "Approved by",
+//      data: [
+//      {
+//        value: "Pavlina Fragkou (European Commission)",
+////        href: "https://ec.europa.eu/"
+//      },
+////      {
+////        value: "Seth van Hooland (European Commission)",
+////        href: "https://ec.europa.eu/"
+////      },
+//      ]
+//    }
       
     ],
     wg: "GeoDCAT-AP Working Group",
@@ -255,6 +258,42 @@ var respecConfig = {
         "authors":["Stefanie Rühle","Tom Baker","Pete Johnston"],
         "publisher":"Dublin Core Metadata Initiative",
 //        "date":"9 March 2007"
+      },
+      "ELI": {
+        "href":"https://eurlex.europa.eu/eli",
+        "title":"European Legislation Identifier (ELI)",
+        "publisher":"Publications Office of the European Union",
+//        "date":""
+      },
+      "ELI-ONTOLOGY": {
+        "href":"https://op.europa.eu/en/web/eu-vocabularies/at-dataset/-/resource/dataset/eli",
+        "title":"ELI Metadata Ontology",
+        "publisher":"Publications Office of the European Union",
+//        "date":""
+      },
+      "ELI-TG": {
+        "href":"https://doi.org/10.2830/51169",
+        "title":"ELI technical guide",
+        "publisher":"Publications Office of the European Union",
+        "date":"2018"
+      },
+      "ELI-GP": {
+        "href":"https://doi.org/10.2830/44907",
+        "title":"ELI, the European legislation identifier – Good practices and guidelines",
+        "publisher":"Publications Office of the European Union",
+        "date":"2018"
+      },
+      "ELI-CONCL-20121026": {
+        "href":"https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:52012XG1026(01)",
+        "title":"Council conclusions inviting the introduction of the European Legislation Identifier (ELI)",
+        "publisher":"OJ C 325",
+        "date":"26 October 2012"
+      },
+      "ELI-CONCL-20171106": {
+        "href":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017XG1222(02)",
+        "title":"Council conclusions of 6 November 2017 on the European Legislation Identifier",
+        "publisher":"OJ C 441",
+        "date":"6 November 2017"
       },
       "EPRINTS-AR": {
         "href":"http://purl.org/eprint/accessRights/",
@@ -365,7 +404,7 @@ var respecConfig = {
         "date":"2014"
       },
       "INSPIRE-DIR": {
-        "href":"http://data.europa.eu/eli/dir/2007/2/oj",
+        "href":"http://data.europa.eu/eli/dir/2007/2",
         "title":"DIRECTIVE 2007/2/EC OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 14 March 2007 establishing an Infrastructure for Spatial Information in the European Community (INSPIRE)",
         "publisher":"OJ L 108",
         "date":"25 April 2007"
@@ -375,16 +414,24 @@ var respecConfig = {
         "title":"INSPIRE Glossary",
         "publisher":"European Commission"
       },
-      "INSPIRE-SDSS-REG": {
-        "href":"http://data.europa.eu/eli/reg/2010/1089",
-        "title":"Commission Regulation (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services",
-        "publisher":"OJ L 323",
-        "date":"8 December 2010"
-      },
       "INSPIRE-LPA": {
         "href":"http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess",
         "title":"INSPIRE Registry: Limitations on public access",
         "publisher":"European Commission"
+      },
+      "INSPIRE-MD": {
+        "href":"https://inspire-mif.github.io/technical-guidelines/metadata/",
+        "title":"Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007. Version 2.2.0",
+//        "authors":["European Commission"],
+        "publisher":"European Commission",
+        "date":"31 January 2024"
+      },
+      "INSPIRE-MD-20240131": {
+        "href":"https://inspire-mif.github.io/technical-guidelines/metadata/",
+        "title":"Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007. Version 2.2.0",
+//        "authors":["European Commission"],
+        "publisher":"European Commission",
+        "date":"31 January 2024"
       },
       "INSPIRE-MD-REG": {
         "href":"http://data.europa.eu/eli/reg/2008/1205",
@@ -460,6 +507,12 @@ var respecConfig = {
         "href":"http://inspire.ec.europa.eu/metadata-codelist/ResourceType",
         "title":"INSPIRE Registry: Resource types",
         "publisher":"European Commission"
+      },
+      "INSPIRE-SDSS-REG": {
+        "href":"http://data.europa.eu/eli/reg/2010/1089",
+        "title":"Commission Regulation (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services",
+        "publisher":"OJ L 323",
+        "date":"8 December 2010"
       },
       "OGC-EPSG": {
         "href":"http://www.opengis.net/def/crs/EPSG/",
@@ -645,6 +698,11 @@ var respecConfig = {
         "publisher":"United Nations Statistics Division"
        },
 
+      "INTEROPERABLE-EUROPE":{
+        "href":"https://joinup.ec.europa.eu/interoperable-europe",
+        "title":"Interoperable Europe",
+        "publisher":"European Commission"
+       },
       "ISA":{
         "href":"https://ec.europa.eu/isa/",
         "title":"Interoperability Solutions for European Public Administrations (ISA)",
@@ -865,6 +923,7 @@ var respecConfig = {
         "date":"4 June 2018",
         "authors":["Hajo Rijgersberg", "Mark van Assem", "Don Willems", "Xin-Ying Ren", "Mari Wigham", "Jeen Broekstra", "Jan Top"]
       },
+/*
       "GeoSPARQL11": {
 //        "href": "https://github.com/opengeospatial/ogc-geosparql/1.1",
         "href": "https://opengeospatial.github.io/ogc-geosparql/geosparql11/spec.html",
@@ -873,6 +932,23 @@ var respecConfig = {
         "publisher":"OGC",
         "status":"Draft",
         "date": "16 December 2020"
+      },
+*/
+      "GeoSPARQL11": {
+        "href": "http://www.opengis.net/doc/IS/geosparql/1.1",
+        "title": "OGC GeoSPARQL - A Geographic Query Language for RDF Data. Version 1.1",
+//        "authors": ["Nicholas J. Car", "Timo Homburg", "Matthew Perry", "Frans Knibbe", "Simon J.D. Cox", "Joseph Abhayaratna", "Matthias Bonduel", "Paul J. Cripps", "Krzysztof Janowicz"],
+        "publisher":"OGC",
+        "status":"International Standard",
+        "date": "29 January 2024"
+      },
+      "DCAT-AP-3": {
+        "href": "https://semiceu.github.io/DCAT-AP/releases/3.0.0/",
+        "title": "DCAT-AP 3.0",
+//        "authors": ["Makx Dekkers", "Pavlina Fragkou", "Natasa Sofou", "Bert Van Nuffelen"],
+        "status": "Working Draft",
+        "publisher":"European Commission",
+        "date": "17 July 2023"
       },
     }
   };

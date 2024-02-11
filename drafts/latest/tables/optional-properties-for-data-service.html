@@ -39,6 +39,28 @@
 </td>
 </tr>
 
+<!-- Added in DCAT-AP 3 -->
+<tr class="property optional" id="data-service-applicable-legislation">
+<td>
+<p>applicable legislation</p>
+</td>
+<td>
+<p><code>dctap:applicableLegislation</code></p>
+</td>
+<td>
+<p><code>eli:LegalResource</code></p>
+</td>
+<td>
+<p>The legislation that mandates the creation or management of the Data Service.</p>
+<p>For INSPIRE metadata, this property SHOULD be used with the European Legislation Identifier (<abbr title="European Legislation Identifier">ELI</abbr>) [[ELI]] of the INSPIRE Directive [[INSPIRE-DIR]]:</p>
+<p><a href="http://data.europa.eu/eli/dir/2007/2"><code>http://data.europa.eu/eli/dir/2007/2</code></a></p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<!-- Added in GeoDCAT-AP 3 -->
 <tr class="property optional ap-ext" id="data-service-conforms-to">
 <td>
 <p>+conforms to</p>
@@ -50,7 +72,9 @@
 <p><code>dct:Standard</code></p>
 </td>
 <td>
-<p>This property is used to indicate the general standard or specification that the Data Service endpoints implement.</p>
+<p>This property refers to an implementing rule or other specification.</p>
+<p>For INSPIRE metadata, this property SHOULD be used with the European Legislation Identifier (<abbr title="European Legislation Identifier">ELI</abbr>) [[ELI]] of the INSPIRE Regulation on the interoperability of spatial data sets and services [[INSPIRE-SDSS-REG]]:</p>
+<p><a href="http://data.europa.eu/eli/reg/2010/1089"><code>http://data.europa.eu/eli/reg/2010/1089</code></a></p>
 </td>
 <td>
 <p>0..n</p>
@@ -198,6 +222,26 @@
 </td>
 <td>
 <p>0..1</p>
+</td>
+</tr>
+
+<!-- Re-labelled "protocol" in GeoDCAT-AP 3. Labelled "conforms to" until GeoDCAT-AP 2 -->
+<tr class="property optional ap-ext" id="data-service-protocol">
+<td>
+<p>+protocol</p>
+</td>
+<td>
+<p><code>dct:conformsTo</code></p>
+</td>
+<td>
+<p><code>dct:Standard</code></p>
+</td>
+<td>
+<p>This property is used to indicate the general standard or specification that the Data Service endpoints implement.</p>
+<p>For INSPIRE metadata, this property SHOULD be used with the URIs of the "Protocol values" code list operated by the INSPIRE Registry [[INSPIRE-PV]].</p>
+</td>
+<td>
+<p>0..n</p>
 </td>
 </tr>
 

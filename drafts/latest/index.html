@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<title>GeoDCAT-AP - Version 2.0.0</title>
+<title>GeoDCAT-AP - Version 3.0.0</title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -44,7 +44,7 @@ table code, table pre {
 
 <p>GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe (DCAT-AP) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 and those defined in the framework of the <abbr title="Infrastructure for spatial information in Europe">INSPIRE</abbr> Directive of the European Union.</p>
 
-<p>This document is the result of the major change release process described in the Change and Release Management Policy for DCAT-AP and was built starting from GeoDCAT-AP version 1.0.1.</p>
+<p>This document is the result of the major change release process described in the Change and Release Management Policy for DCAT-AP and was built starting from GeoDCAT-AP version 2.0.0.</p>
 
 <p>Comments and queries should be sent via <a href="https://github.com/semiceu/geodcat-ap/issues/">the issue tracker of the dedicated GitHub repository</a>.</p>
 
@@ -85,7 +85,7 @@ table code, table pre {
 
 <h2>Introduction</h2>
 
-<p>This document contains version 2.0.0 of the specification for GeoDCAT-AP, an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]] for describing geospatial datasets, dataset series, and services.</p>
+<p>This document contains version 3.0.0 of the specification for GeoDCAT-AP, an extension of the DCAT application profile for data portals in Europe (DCAT-AP) [[DCAT-AP]] for describing geospatial datasets, dataset series, and services.</p>
 
 <p>Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 [[ISO-19115]] and those defined in the framework of the INSPIRE Directive [[INSPIRE-DIR]].</p>
 
@@ -105,9 +105,9 @@ table code, table pre {
 
 <p>The DCAT-AP application profile specifies the generic agreements for (open) data portals operated by public administrations in Europe. This specification extends DCAT-AP with additional requirements for geospatial data.</p>
 
-<p>The current document is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP [[DCAT-AP-CRMP]] and was built starting from GeoDCAT-AP version 1.0.1 [[GeoDCAT-AP-20160802]], with the purpose of aligning it with DCAT-AP version 2.0.1 [[DCAT-AP-20200608]] and with version 2.0.1 of the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20170302]].</p>
+<p>The current document is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP [[DCAT-AP-CRMP]] and was built starting from GeoDCAT-AP version 2.0.0 [[GeoDCAT-AP-20201223]], with the purpose of aligning it with DCAT-AP version 3.x.x [[DCAT-AP-3]] and with version 2.1.3 of the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20230731]].</p>
 
-<p>This work has been carried out in the context of Action 1.1 – Improving semantic interoperability in European eGovernment systems [[SEMIC]] of the European Commission’s Interoperability solutions for public administrations, businesses and citizens (ISA²) Programme [[ISA2]], and it is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP [[DCAT-AP-CRMP]] and was built starting from GeoDCAT-AP version 1.0.1 [[GeoDCAT-AP-20160802]], with the purpose of aligning it with DCAT-AP version 2.0.1 [[DCAT-AP-20200608]] and with version 2.0.1 of the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20170302]].</p>
+<p>This work has been carried out in the context of the European Commission’s <q>Interoperable Europe</q> initiative [[INTEROPERABLE-EUROPE]].</p>
 
 </section>
 
@@ -115,9 +115,9 @@ table code, table pre {
 
 <h3>Scope of the revision</h3>
 
-<p>The objective of this work is to produce an updated release of GeoDCAT-AP based on requests for change coming from real-world implementations of the specification and an alignment with [[DCAT-AP-20200608]] and [[INSPIRE-MD-20170302]].</p> 
+<p>The objective of this work is to produce an updated release of GeoDCAT-AP based on requests for change coming from real-world implementations of the specification and an alignment with [[DCAT-AP-3]] and [[INSPIRE-MD-20230731]].</p> 
 
-<p>As [[DCAT-AP-20200608]], the Application Profile specified in this document is based on the specification of the <strong>Data Catalog Vocabulary</strong> (DCAT), originally  developed under the responsibility of the Government Linked Data Working Group [[GLD]] at W3C, and significantly revised in 2020 by the W3C Dataset Exchange Working Group [[DXWG]]. DCAT is an RDF [[RDF11-CONCEPTS]] vocabulary designed to facilitate interoperability between data catalogues published on the Web. Additional classes and properties from other well-known vocabularies are re-used where necessary.</p> 
+<p>As [[DCAT-AP-3]], the Application Profile specified in this document is based on the specification of the <strong>Data Catalog Vocabulary</strong> (DCAT), originally  developed under the responsibility of the Government Linked Data Working Group [[GLD]] at W3C, and significantly revised in 2020 by the W3C Dataset Exchange Working Group [[DXWG]]. DCAT is an RDF [[RDF11-CONCEPTS]] vocabulary designed to facilitate interoperability between data catalogues published on the Web. Additional classes and properties from other well-known vocabularies are re-used where necessary.</p> 
 
 <p>The work does not cover implementation issues like mechanisms for exchange of data and expected behaviour of systems implementing the Application Profile other than what is defined in the Conformance Statement in <a class="no-sectionRef" href="#conformance"></a>.</p> 
 
@@ -133,7 +133,7 @@ table code, table pre {
 <p>The DCAT-AP Application Profile defined in this document is based on the specification of the Data Catalog Vocabulary (DCAT) of 16 January 2014 [[VOCAB-DCAT-20140116]], and the Data Catalog Vocabulary (DCAT) - Version 2, W3C Candidate Recommendation 03 October 2019 [[VOCAB-DCAT-2-20191003]].</p>
 -->
 
-<p>The GeoDCAT-AP specification is designed as an extension of DCAT-AP in conformance with the guidelines for the creation of DCAT-AP extensions [[DCAT-AP-EG]]. The DCAT-AP Application Profile on which this document is based is the DCAT-AP specification of 8 June 2020 [[DCAT-AP-20200608]].  According to the same principles DCAT-AP is in itself an extension of DCAT.</p>
+<p>The GeoDCAT-AP specification is designed as an extension of DCAT-AP in conformance with the guidelines for the creation of DCAT-AP extensions [[DCAT-AP-EG]]. The DCAT-AP Application Profile on which this document is based is the DCAT-AP specification of 8 June 2020 [[DCAT-AP-3]].  According to the same principles DCAT-AP is in itself an extension of DCAT.</p>
 
 <p>This dependency must be taken into account while reading and using this specification. When implementing GeoDCAT-AP, these specifications should be consulted first, to fill in any missing gaps in this document.</p> 
 
@@ -205,17 +205,19 @@ table code, table pre {
 
 <h3>Application Profile Overview</h3>
 
-<p>This Application Profile extends [[DCAT-AP-20200608]] by including</p>
+<p>This Application Profile extends [[DCAT-AP-3]] by including</p>
 
 <ul>
 <li>additional classes and properties (marked with a prepended &ldquo;plus&rdquo; sign (+) in this document, and summarised in <a class="no-sectionRef" href="#geodcat-ap-classes-and-properties"></a>);</li>
 <li>additional recommendations on the use of classes and properties (documented in <a class="no-sectionRef" href="#classes"></a> and <a class="no-sectionRef" href="#properties"></a>);</li>
-<li>additional controlled vocabularies (documented in <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>, along with the ones used in [[DCAT-AP-20200608]]).</li>
+<li>additional controlled vocabularies (documented in <a class="no-sectionRef" href="#controlled-vocabularies-to-be-used"></a>, along with the ones used in [[DCAT-AP-3]]).</li>
 </ul>
 
 <p>These extensions are meant to provide a DCAT-AP-conformant representation of geospatial metadata, identified by defining RDF syntax mappings covering the union of the elements in the INSPIRE metadata schema [[INSPIRE-MD-REG]] [[INSPIRE-MD]] and the core profile of [[ISO-19115]], following the criteria illustrated in <a class="no-sectionRef" href="#inspire-and-iso-19115-mappings"></a>.</p>
 
-<p>The current specification does not change the set of geospatial metadata elements already covered in its previous version [[GeoDCAT-AP-20160802]], but rather it updates some of the corresponding mappings based on the new classes and properties included in [[DCAT-AP-20200608]], following the release of version 2 of the W3C Data Catalog (DCAT) Vocabulary [[VOCAB-DCAT-2]], and aligns them with version 2.0.1 of the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20170302]]. With the same objective, new terms have been defined in the GeoDCAT-AP namespace for the specification of agent roles (see <a class="no-secRef" href="#agent-roles"></a>) and spatial resolution (see <a class="no-secRef" href="#instances-of-metric"></a>). As a result, some of the classes and properties defined in [[GeoDCAT-AP-20160802]] have been deprecated and replaced by the equivalent ones in [[DCAT-AP-20200608]] and by the newly defined terms.</p>
+<p>The current specification does not change the set of geospatial metadata elements already covered in its previous version [[GeoDCAT-AP-20201223]], but rather it updates some of the corresponding mappings based on the new classes and properties included in [[DCAT-AP-3]], following the release of version 3 of the W3C Data Catalog (DCAT) Vocabulary [[VOCAB-DCAT-3]], and aligns them with version 2.1.3 of the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20230731]].
+<!--With the same objective, new terms have been defined in the GeoDCAT-AP namespace for the specification of agent roles (see <a class="no-secRef" href="#agent-roles"></a>) and spatial resolution (see <a class="no-secRef" href="#instances-of-metric"></a>).-->
+As a result, some of the classes and properties defined in [[GeoDCAT-AP-20201223]] have been deprecated and replaced by the equivalent ones in [[DCAT-AP-3]] and by the newly defined terms.</p>
 
 <p>The list of deprecated classes and properties is summarised in <a class="no-sectionRef" href="#deprecated-classes-and-properties"></a>.</p>
 
@@ -223,6 +225,11 @@ table code, table pre {
   
 <aside class="note">	
 <p>For legibility, the diagram does not visualise all the classes as boxes. Supportive classes, as <code>skos:Concept</code>, are directly mentioned as the range of properties. The figure, therefore, might not highlight all the constraints and recommendations for these supportive classes, which are documented in the following sections. Moreover, the figure does not include the agent role properties defined in the GeoDCAT-AP namespace (<a class="no-secRef" href="#agent-roles"></a>), and whose use is illustrated in <a class="no-secRef" href="#properties"></a>.</p>
+</aside>
+
+
+<aside class="ednote">
+<p>Diagram yet to be updated.</p>
 </aside>
 
 <figure id="fig-geodcat-ap-uml-class-diagram">
@@ -244,6 +251,8 @@ table code, table pre {
 
 <h3>Mandatory Classes</h3>
 
+<div class="issue" data-number="71"></div>
+
 <div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-classes.html"></div>
 
 </section>
@@ -261,6 +270,15 @@ table code, table pre {
 <h3>Optional Classes</h3>
 
 <aside class="note">
+<p>The following classes are not included in [[DCAT-AP-3]]:</p>
+<ul>
+<li>+<a href="#address-agent">Address (Agent)</a></li>
+<li>+<a href="#address-kind">Address (Kind)</a></li>
+</ul>
+</aside>
+
+<!--
+<aside class="note">
 <p>The following classes are not included in [[DCAT-AP-20200608]]:</p>
 <ul>
 <li>+<a href="#activity">Activity</a></li>
@@ -269,6 +287,7 @@ table code, table pre {
 <li>+<a href="#address-kind">Address (Kind)</a></li>
 </ul>
 </aside>
+-->
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/optional-classes.html"></div>
 
@@ -290,22 +309,36 @@ table code, table pre {
 
 <h2>Application Profile Properties per Class</h2>
 
-<p>A quick reference table of properties per class is included in <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a>. The list of included properties contains all the properties in [[DCAT-AP-20200608]], plus a selection of properties from [[VOCAB-DCAT-2]] and [[DCTERMS]], on which GeoDCAT-AP expresses additional constraints or on which GeoDCAT-AP wants to emphasise their usage.
 <!--
-A property which is not mentioned but would be applicable for a class according to [[VOCAB-DCAT-2]] is considered out of scope for GeoDCAT-AP.
+<p>A quick reference table of properties per class is included in <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a>. The list of included properties contains all the properties in [[DCAT-AP-3]], plus a selection of properties from [[VOCAB-DCAT-3]] and [[DCTERMS]], on which GeoDCAT-AP expresses additional constraints or on which GeoDCAT-AP wants to emphasise their usage.
 -->
+<p>A quick reference table of properties per class is included in <a class="no-sectionRef" href="#quick-reference-of-classes-and-properties"></a>. The list of included properties contains all the properties in [[DCAT-AP-3]], plus:</p>
+<ul>
+<li>a selection of properties and classess from [[VOCAB-DCAT-3]], [[VOCAB-DQV]], and [[DCTERMS]], on which GeoDCAT-AP expresses additional constraints or on which GeoDCAT-AP wants to emphasise their usage;</li>
+<li>a set of properties defined in the GeoDCAT-AP namespace.</li>
+</ul>
+<!--
+A property which is not mentioned but would be applicable for a class according to [[VOCAB-DCAT-3]] is considered out of scope for GeoDCAT-AP.
 </p>
+-->
 
-<p>Examples on the use of these properties, encoded in [[Turtle]], are included in the relevant sections. The examples are also available in [[Turtle]], RDF/XML [[RDF-SYNTAX-GRAMMAR]], and JSON-LD [[JSON-LD11]] from a <a href="./examples/">separate folder</a>.</p>
+<p>Examples on the use of these properties, encoded in [[Turtle]], are included in the relevant sections. The examples are also available <!--in [[Turtle]], RDF/XML [[RDF-SYNTAX-GRAMMAR]], and JSON-LD [[JSON-LD11]]--> from a <a href="./examples/">separate folder</a>.</p>
 
 <!-- Activity -->
 
 <section id="properties-for-activity">
 
-<h3>+Activity</h3>
+<h3>Activity</h3>
+<!--<h3>+Activity</h3>-->
 
+<!--
 <aside class="note">
 <p>This class is not included in [[DCAT-AP-20200608]].</p>
+</aside>
+-->
+
+<aside class="note">
+<p>This class is not explicitly associated with any property in [[DCAT-AP-3]].</p>
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-activity.html"></div>
@@ -317,7 +350,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Mandatory properties for Activity</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#activity-generated">generated</a></li>
 <li>+<a href="#activity-qualified-association">qualified association</a></li>
@@ -350,7 +383,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h3>+Address (Agent)</h3>
 
 <aside class="note">
-<p>This class is not included in [[DCAT-AP-20200608]].</p>
+<p>This class is not included in [[DCAT-AP-3]].</p>
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-address-agent.html"></div>
@@ -360,7 +393,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Recommended properties for Address (Agent)</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#address-agent-administrative-area">administrative area</a></li>
 <li>+<a href="#address-agent-city">city</a></li>
@@ -394,7 +427,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h3>+Address (Kind)</h3>
 
 <aside class="note">
-<p>This class is not included in [[DCAT-AP-20200608]].</p>
+<p>This class is not included in [[DCAT-AP-3]].</p>
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-address-kind.html"></div>
@@ -404,7 +437,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Recommended properties for Address (Kind)</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#address-kind-administrative-area">administrative area</a></li>
 <li>+<a href="#address-kind-city">city</a></li>
@@ -461,7 +494,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Optional properties for Agent</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#agent-address">address</a></li>
 <li>+<a href="#agent-affiliation">affiliation</a></li>
@@ -491,10 +524,17 @@ A property which is not mentioned but would be applicable for a class according 
 
 <section id="properties-for-attribution">
 
-<h3>+Attribution</h3>
+<h3>Attribution</h3>
+<!--<h3>+Attribution</h3>-->
 
+<!--
 <aside class="note">
 <p>This class is not included in [[DCAT-AP-20200608]].</p>
+</aside>
+-->
+
+<aside class="note">
+<p>This class is not explicitly associated with any property in [[DCAT-AP-3]].</p>
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-attribution.html"></div>
@@ -506,7 +546,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Mandatory properties for Attribution</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#attribution-agent">agent</a></li>
 <li>+<a href="#attribution-had-role">had role</a></li>
@@ -516,7 +556,7 @@ A property which is not mentioned but would be applicable for a class according 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-attribution.html"></div>
 
 </section>
-
+<!--
 <section id="deprecated-properties-for-attribution">
 
 <h4>Deprecated properties for Attribution</h4>
@@ -524,7 +564,7 @@ A property which is not mentioned but would be applicable for a class according 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-attribution.html"></div>
 
 </section>
-
+-->
 <section id="examples-for-attribution">
 
 <h4>Examples for Attribution</h4>
@@ -544,6 +584,45 @@ A property which is not mentioned but would be applicable for a class according 
 <h3>Catalogue</h3>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-catalogue.html"></div>
+
+<aside class="ednote">
+
+<p>In [[VOCAB-DCAT-3]], the definitions of properties <code>dcat:catalog</code>, <code>dcat:dataset</code>, and <code>dcat:service</code> have been revised, whereas [[DCAT-AP-3]] still uses the definitions in [[VOCAB-DCAT-2]].</p>
+
+<p>In this version of GeoDCAT-AP, the definitions of these properties have been aligned with [[VOCAB-DCAT-3]].</p>
+
+<table class="simple">
+<thead>
+<tr>
+<th>Property</th>
+<th>Original definition</th>
+<th>Revised as</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td><code>dcat:catalog</code></td>
+<td>This property refers to a Catalogue whose contents are of interest in the context of this Catalogue.</td>
+<td>A catalogue that is listed in the Catalogue.</td>
+</tr>
+
+<tr>
+<td><code>dcat:dataset</code></td>
+<td>This property links the Catalogue with a Dataset that is part of the Catalogue.</td>
+<td>A dataset that is listed in the Catalogue.</td>
+</tr>
+
+<tr>
+<td><code>dcat:service</code></td>
+<td>This property refers to a Data Service that is listed in the Catalogue.</td>
+<td>A service that is listed in the Catalogue.</td>
+</tr>
+</tbody>
+</table>
+
+</aside>
+
 
 <section id="mandatory-properties-for-catalogue">
 
@@ -566,7 +645,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Optional properties for Catalogue</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#catalogue-access-rights">access rights</a></li>
 <li>+<a href="#catalogue-conforms-to">conforms to</a></li>
@@ -594,7 +673,7 @@ A property which is not mentioned but would be applicable for a class according 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-catalogue.html"></div>
 
 </section>
-
+<!--
 <section id="deprecated-properties-for-catalogue">
 
 <h4>Deprecated properties for Catalogue</h4>
@@ -602,7 +681,7 @@ A property which is not mentioned but would be applicable for a class according 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-catalogue.html"></div>
 
 </section>
-
+-->
 <!--
 <section id="examples-for-catalogue">
 
@@ -646,7 +725,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Optional properties for Catalogue Record</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#catalogue-record-character-encoding">character encoding</a></li>
 <li>+<a href="#catalogue-record-contact-point">contact point</a></li>
@@ -704,7 +783,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Optional property for Category</h4>
 
 <aside class="note">
-<p>The following property is not included in [[DCAT-AP-20200608]]:</p>
+<p>The following property is not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#category-category-scheme">category scheme</a></li>
 </ul>
@@ -747,7 +826,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Optional properties for Category Scheme</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#category-scheme-creation-date">creation date</a></li>
 <li>+<a href="#category-scheme-release-date">release date</a></li>
@@ -819,8 +898,9 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Optional properties for Data Service</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
 <ul>
+<!-- Added in GeoDCAT-AP 3 -->
 <li>+<a href="#data-service-conforms-to">conforms to</a></li>
 <li>+<a href="#data-service-contact-point">contact point</a></li>
 <li>+<a href="#data-service-creation-date">creation date</a></li>
@@ -828,6 +908,8 @@ A property which is not mentioned but would be applicable for a class according 
 <li>+<a href="#data-service-identifier">identifier</a></li>
 <li>+<a href="#data-service-keyword">keyword / tag</a></li>
 <li>+<a href="#data-service-language">language</a></li>
+<!-- Re-labelled "protocol" in GeoDCAT-AP 3. Labelled "conforms to" until GeoDCAT-AP 2 -->
+<li>+<a href="#data-service-protocol">protocol</a></li>
 <li>+<a href="#data-service-publisher">publisher</a></li>
 <li>+<a href="#data-service-qualified-attribution">qualified attribution</a></li>
 <li>+<a href="#data-service-reference-system">reference system</a></li>
@@ -860,7 +942,7 @@ A property which is not mentioned but would be applicable for a class according 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-data-service.html"></div>
 
 </section>
-
+<!--
 <section id="deprecated-properties-for-data-service">
 
 <h4>Deprecated properties for Data Service</h4>
@@ -868,7 +950,7 @@ A property which is not mentioned but would be applicable for a class according 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-data-service.html"></div>
 
 </section>
-
+-->
 <section id="examples-for-data-service">
 
 <h4>Examples for Data Service</h4>
@@ -909,8 +991,12 @@ A property which is not mentioned but would be applicable for a class according 
 
 <h4>Optional properties for Dataset</h4>
 
+<div class="issue" data-number="73"></div>
+
+<div class="issue" data-number="75"></div>
+
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#dataset-creation-date">creation date</a></li>
 <li>+<a href="#dataset-reference-system">reference system</a></li>
@@ -947,7 +1033,122 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Examples for Dataset</h4>
 
 <aside class="example" id="ex-dataset" title="Dataset">
+<p>The dataset in this example is part of the dataset series in <a href="#ex-dataset-series"></a>, with which is associated via property <a href="#dataset-in-series"><code>dcat:inSeries</code></a>.</p>
 <pre data-include-format="text" data-include="./examples/dataset.ttl"></pre>
+</aside>
+
+</section>
+
+</section>
+
+<!-- Dataset Series -->
+
+<section id="properties-for-dataset-series">
+
+<h3>Dataset Series</h3>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-dataset-series.html"></div>
+
+<div class="issue" data-number="72"></div>
+
+<section id="mandatory-properties-for-dataset-series">
+
+<h4>Mandatory properties for Dataset Series</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/mandatory-properties-for-dataset-series.html"></div>
+
+</section>
+
+<section id="recommended-properties-for-dataset-series">
+
+<h4>Recommended properties for Dataset Series</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
+<ul>
+<li>+<a href="#dataset-series-distribution">dataset series distribution</a></li>
+<li>+<a href="#dataset-series-keyword">keyword / tag</a></li>
+<li>+<a href="#dataset-series-category">theme / category</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/recommended-properties-for-dataset-series.html"></div>
+
+</section>
+
+<section id="optional-properties-for-dataset-series">
+
+<h4>Optional properties for Dataset Series</h4>
+
+<aside class="note">
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
+<ul>
+<li>+<a href="#dataset-series-access-rights">access rights</a></li>
+<li>+<a href="#dataset-series-conforms-to">conforms to</a></li>
+<li>+<a href="#dataset-series-creation-date">creation date</a></li>
+<li>+<a href="#dataset-series-creator">creator</a></li>
+<!--
+<li>+<a href="#dataset-series-distribution">dataset series distribution</a></li>
+-->
+<li>+<a href="#dataset-series-documentation">documentation</a></li>
+<li>+<a href="#dataset-series-has-version">has version</a></li>
+<li>+<a href="#dataset-series-identifier">identifier</a></li>
+<li>+<a href="#dataset-series-in-series">in series</a></li>
+<li>+<a href="#dataset-series-is-referenced-by">is referenced by</a></li>
+<!--
+<li>+<a href="#dataset-series-is-version-of">is version of</a></li>
+-->
+<li>+<a href="#dataset-series-landing-page">landing page</a></li>
+<li>+<a href="#dataset-series-language">language</a></li>
+<li>+<a href="#dataset-series-other-identifier">other identifier</a></li>
+<li>+<a href="#dataset-series-provenance">provenance</a></li>
+<li>+<a href="#dataset-series-qualified-attribution">qualified attribution</a></li>
+<li>+<a href="#dataset-series-qualified-relation">qualified relation</a></li>
+<li>+<a href="#dataset-series-reference-system">reference system</a></li>
+<li>+<a href="#dataset-series-related-resource">related resource</a></li>
+<li>+<a href="#dataset-series-rights-holder">rights holder</a></li>
+<li>+<a href="#dataset-series-sample">sample</a></li>
+<li>+<a href="#dataset-series-source">source</a></li>
+<li>+<a href="#dataset-series-spatial-resolution">spatial resolution</a></li>
+<li>+<a href="#dataset-series-spatial-resolution-in-metres">spatial resolution in metres</a></li>
+<li>+<a href="#dataset-series-spatial-resolution-general">spatial resolution as text</a></li>
+<li>+<a href="#dataset-series-temporal-resolution">temporal resolution</a></li>
+<li>+<a href="#dataset-series-topic-category">topic category</a></li>
+<li>+<a href="#dataset-series-type">type</a></li>
+<li>+<a href="#dataset-series-version">version</a></li>
+<li>+<a href="#dataset-series-version-notes">version notes</a></li>
+<li>+<a href="#dataset-series-was-generated-by">was generated by</a></li>
+<li>+<a href="#dataset-series-was-used-by">was used by</a></li>
+
+<li>+<a href="#dataset-series-custodian">custodian</a></li>
+<li>+<a href="#dataset-series-distributor">distributor</a></li>
+<li>+<a href="#dataset-series-originator">originator</a></li>
+<li>+<a href="#dataset-series-principal-investigator">principal investigator</a></li>
+<li>+<a href="#dataset-series-processor">processor</a></li>
+<li>+<a href="#dataset-series-resource-provider">resource provider</a></li>
+<li>+<a href="#dataset-series-user">user</a></li>
+</ul>
+</aside>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-dataset-series.html"></div>
+
+</section>
+<!--
+<section id="deprecated-properties-for-dataset-series">
+
+<h4>Deprecated properties for Dataset Series</h4>
+
+<div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-dataset-series.html"></div>
+
+</section>
+-->
+<section id="examples-for-dataset-series">
+
+<h4>Examples for Dataset Series</h4>
+
+<aside class="example" id="ex-dataset-series" title="Dataset Series">
+<p>The example shows a metadata record of a dataset series, and some datasets associated with it via property <a href="#dataset-in-series"><code>dcat:inSeries</code></a>. The full metadata record of one of the datasets in the series is shown in <a href="#ex-dataset"></a>.</p>
+<pre data-include-format="text" data-include="./examples/dataset-series.ttl"></pre>
 </aside>
 
 </section>
@@ -983,7 +1184,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Optional properties for Distribution</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#distribution-access-rights">access rights</a></li>
 <li>+<a href="#distribution-character-encoding">character encoding</a></li>
@@ -997,7 +1198,7 @@ A property which is not mentioned but would be applicable for a class according 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-distribution.html"></div>
 
 </section>
-
+<!--
 <section id="deprecated-properties-for-distribution">
 
 <h4>Deprecated properties for Distribution</h4>
@@ -1005,7 +1206,7 @@ A property which is not mentioned but would be applicable for a class according 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-distribution.html"></div>
 
 </section>
-
+-->
 <section id="examples-for-distribution">
 
 <h4>Examples for Distribution</h4>
@@ -1025,7 +1226,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h3>Document</h3>
 
 <aside class="note">
-<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
+<p>This class is not explicitly associated with any property in [[DCAT-AP-3]].</p>
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-document.html"></div>
@@ -1035,7 +1236,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Recommended properties for Document</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#document-description">description</a></li>
 <li>+<a href="#document-title">title</a></li>
@@ -1083,7 +1284,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h3>Kind</h3>
 
 <aside class="note">
-<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
+<p>This class is not explicitly associated with any property in [[DCAT-AP-3]].</p>
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-kind.html"></div>
@@ -1093,7 +1294,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Recommended properties for Kind</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#kind-email">email</a></li>
 <li>+<a href="#kind-name">name</a></li>
@@ -1110,7 +1311,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Optional properties for Kind</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#kind-address">address</a></li>
 <li>+<a href="#kind-affiliation">affiliation</a></li>
@@ -1156,7 +1357,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Optional property for Licence Document</h4>
 
 <aside class="note">
-<p>The following property is not included in [[DCAT-AP-20200608]]:</p>
+<p>The following property is not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#licence-document-licence-text">licence text</a></li>
 </ul>
@@ -1199,7 +1400,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Optional properties for Location</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#location-gazetteer">gazetteer</a></li>
 <li>+<a href="#location-geographic-identifier">geographic identifier</a></li>
@@ -1234,7 +1435,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h3>Media Type</h3>
 
 <aside class="note">
-<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
+<p>This class is not explicitly associated with any property in [[DCAT-AP-3]].</p>
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-media-type.html"></div>
@@ -1244,7 +1445,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Recommended property for Media Type</h4>
 
 <aside class="note">
-<p>The following property is not included in [[DCAT-AP-20200608]]:</p>
+<p>The following property is not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#media-type-label">label</a></li>
 </ul>
@@ -1273,7 +1474,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h3>+Metric</h3>
 
 <aside class="note">
-<p>This class is not included in [[DCAT-AP-20200608]].</p>
+<p>This class is not included in [[DCAT-AP-3]].</p>
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-metric.html"></div>
@@ -1283,7 +1484,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Instances of Metric</h4>
 
 <aside class="note">
-<p>The following instances are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following instances are not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#metric-spatial-resolution-as-angular-distance">Spatial resolution as angular distance</a></li>
 <li>+<a href="#metric-spatial-resolution-as-distance">Spatial resolution as distance</a></li>
@@ -1303,7 +1504,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Recommended properties for Metric</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#metric-dimension">dimension</a></li>
 <li>+<a href="#metric-expected-data-type">expected data type</a></li>
@@ -1350,7 +1551,7 @@ A property which is not mentioned but would be applicable for a class according 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/optional-properties-for-period-of-time.html"></div>
 
 </section>
-
+<!--
 <section id="deprecated-properties-for-period-of-time">
 
 <h4>Deprecated properties for Period of Time</h4>
@@ -1358,7 +1559,7 @@ A property which is not mentioned but would be applicable for a class according 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/deprecated-properties-for-period-of-time.html"></div>
 
 </section>
-
+-->
 <section id="examples-for-period-of-time">
 
 <h4>Examples for Period of Time</h4>
@@ -1384,7 +1585,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h3>Provenance Statement</h3>
 
 <aside class="note">
-<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
+<p>This class is not explicitly associated with any property in [[DCAT-AP-3]].</p>
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-provenance-statement.html"></div>
@@ -1394,7 +1595,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Recommended property for Provenance Statement</h4>
 
 <aside class="note">
-<p>The following property is not included in [[DCAT-AP-20200608]]:</p>
+<p>The following property is not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#provenance-statement-provenance-statement-text">provenance statement text</a></li>
 </ul>
@@ -1423,7 +1624,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h3>+Quality Measurement</h3>
 
 <aside class="note">
-<p>This class is not included in [[DCAT-AP-20200608]].</p>
+<p>This class is not included in [[DCAT-AP-3]].</p>
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-quality-measurement.html"></div>
@@ -1433,7 +1634,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Recommended properties for Quality Measurement</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#quality-measurement-is-measurement-of">is measurement of</a></li>
 <li>+<a href="#quality-measurement-unit-of-measure">unit of measure</a></li>
@@ -1484,7 +1685,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h3>Rights Statement</h3>
 
 <aside class="note">
-<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
+<p>This class is not explicitly associated with any property in [[DCAT-AP-3]].</p>
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-rights-statement.html"></div>
@@ -1494,7 +1695,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Recommended property for Rights Statement</h4>
 
 <aside class="note">
-<p>The following property is not included in [[DCAT-AP-20200608]]:</p>
+<p>The following property is not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#rights-statement-rights-statement-text">rights statement text</a></li>
 </ul>
@@ -1523,7 +1724,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h3>Standard</h3>
 
 <aside class="note">
-<p>This class is not explicitly associated with any property in [[DCAT-AP-20200608]].</p>
+<p>This class is not explicitly associated with any property in [[DCAT-AP-3]].</p>
 </aside>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/class-standard.html"></div>
@@ -1533,7 +1734,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Recommended properties for Standard</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#standard-description">description</a></li>
 <li>+<a href="#standard-identifier">identifier</a></li>
@@ -1554,7 +1755,7 @@ A property which is not mentioned but would be applicable for a class according 
 <h4>Optional properties for Standard</h4>
 
 <aside class="note">
-<p>The following properties are not included in [[DCAT-AP-20200608]]:</p>
+<p>The following properties are not included in [[DCAT-AP-3]]:</p>
 <ul>
 <li>+<a href="#standard-creation-date">creation date</a></li>
 <li>+<a href="#standard-modification-date">update / modification date</a></li>
@@ -1623,7 +1824,7 @@ A property which is not mentioned but would be applicable for a class according 
 
 <p>In the table below, a number of properties are listed with controlled vocabularies that MUST be used for the listed properties. The declaration of the following controlled vocabularies as mandatory ensures a minimum level of interoperability.</p>
 
-<p>Compared with [[DCAT-AP-20200608]], GeoDCAT-AP makes use of additional controlled vocabularies mandated by [[INSPIRE-MD-REG]], and operated by the INSPIRE Registry - with the only exceptions of the coordinate reference systems register maintained by OGC [[OGC-EPSG]].</p>
+<p>Compared with DCAT-AP, GeoDCAT-AP makes use of additional controlled vocabularies mandated by [[INSPIRE-MD-REG]], and operated by the INSPIRE Registry - with the only exceptions of the coordinate reference systems register maintained by OGC [[OGC-EPSG]].</p>
 
 <p>For two of these controlled vocabularies, namely the INSPIRE spatial data themes [[INSPIRE-THEMES]] and the ISO topic categories [[INSPIRE-TC]], the GeoDCAT-AP Working Group has defined a set of harmonised mappings to the EU Vocabularies Data Themes [[EUV-THEMES]], in order to facilitate the identification of the relevant theme in [[EUV-THEMES]] for geospatial metadata. The status of this work, along with links to a machine readable representation of the mappings, is documented on a dedicated page in Joinup [[?GeoDCAT-ACV]].</p>
 
@@ -1755,7 +1956,7 @@ Often there is applicable legislation or a licency policy in place which determi
 
 <p>GeoDCAT-AP supports the 11 agent roles defined in [[INSPIRE-MD-REG]] and [[ISO-19115]] by using two different but not mutually exclusive approaches.</p>
 
-<p>In the first approach, roles are mapped to specific properties. In particular, GeoDCAT-AP makes use of the relevant properties from [[DCAT-AP-20200608]] and [[DCTERMS]], which overall cover 4 of the relevant roles - namely, <code>dcat:contactPoint</code>, <code>dct:creator</code>, <code>dct:publisher</code>, and <code>dct:rightsHolder</code> (not supported in [[DCAT-AP-20200608]]). The remaining 7 are covered by the corresponding properties defined in the GeoDCAT-AP namespace - namely, <code>geodcat:custodian</code>, <code>geodcat:distributor</code>, <code>geodcat:originator</code>, <code>geodcat:principalInvestigator</code>, <code>geodcat:processor</code>, <code>geodcat:resourceProvider</code>, and <code>geodcat:user</code>.</p>
+<p>In the first approach, roles are mapped to specific properties. In particular, GeoDCAT-AP makes use of the relevant properties from [[DCAT-AP-3]] and [[DCTERMS]], which overall cover 4 of the relevant roles - namely, <code>dcat:contactPoint</code>, <code>dct:creator</code>, <code>dct:publisher</code>, and <code>dct:rightsHolder</code> (not supported in [[DCAT-AP-3]]). The remaining 7 are covered by the corresponding properties defined in the GeoDCAT-AP namespace - namely, <code>geodcat:custodian</code>, <code>geodcat:distributor</code>, <code>geodcat:originator</code>, <code>geodcat:principalInvestigator</code>, <code>geodcat:processor</code>, <code>geodcat:resourceProvider</code>, and <code>geodcat:user</code>.</p>
 
 <p>It is important to note that, following [[INSPIRE-MD-REG]] and [[ISO-19115]], in GeoDCAT-AP all these agent roles can be specified on Catalogues, Catalogue Records, Datasets, and Data Services.</p>
 
@@ -1841,11 +2042,9 @@ Often there is applicable legislation or a licency policy in place which determi
 
 <h2>Acknowledgements</h2>
 
-<!-- TO BE RESTORED
 <aside class="ednote">
 <p>Representatives, editors and contributors to be updated.</p>
 </aside>
--->
 
 <!--
 <p>This work was elaborated by a Working Group under the ISA² programme. The ISA² Programme of the European Commission was represented by <strong>TBD</strong>. <strong>TBD</strong> were the editors of the specification. Contributors: TBD.</p>
@@ -1853,15 +2052,22 @@ Often there is applicable legislation or a licency policy in place which determi
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/geodcat-ap-wg-members.html"></div>
 -->
-<p>
-  This work was elaborated by the <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/geodcat-application-profile-data-portals-europe/members">GeoDCAT-AP Working Group</a> under the ISA² programme. 
+<p>This work was elaborated by the <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/geodcat-application-profile-data-portals-europe/members">GeoDCAT-AP Working Group</a> under the Interoperable Europe initiative of the European Commission. </p>
+<p>The Interoperable Europe initiative was represented by <strong>Pavlina Fragkou</strong><!-- and <strong>Seth van Hooland</strong>-->. <strong>Andrea Perego</strong> and <strong>Bert van Nuffelen</strong> were the editors of the specification. 
 </p>
-<p>
-  The ISA² Programme of the European Commission was represented by <strong>Pavlina Fragkou</strong> and <strong>Seth van Hooland</strong>. 
-  <strong>Andrea Perego</strong> and <strong>Bert van Nuffelen</strong> were the editors of the specification. 
-</p>
-<p>
-  Contributors: Andreas Kuckartz, Antonio Rotundo, Danny Vandenbroucke, Fabian Kirstein, Franck Cotton, Hannes Reuter, Jakub Klímek, James Passmore, Matthias Palmér, Riccardo Albertoni, Simon Cox.
+<p>Contributors: 
+<!--Andreas Kuckartz,--> 
+Antonio Rotundo
+<!--Danny Vandenbroucke,--> 
+<!--Fabian Kirstein, -->
+<!--Franck Cotton, -->
+<!--Hannes Reuter, -->
+<!--Jakub Klímek, -->
+<!--James Passmore, -->
+<!--Matthias Palmér, -->
+<!--Riccardo Albertoni, -->
+<!--Simon Cox -->
+.
 </p>
   
 </section>
@@ -1940,6 +2146,28 @@ Often there is applicable legislation or a licency policy in place which determi
 
 <p>A full change-log is available on <a href="https://github.com/semiceu/GeoDCAT-AP/commits/gh-pages/drafts/latest/">GitHub</a></p>
 
+<section id="changes-since-20201223">
+
+<h2>Changes since GeoDCAT-AP 2.0.0 (23 December 2020)</h2>
+
+<ul>
+<li>Editorial revisions.</li>
+<li>Deprecated the use of class <code>dcat:Dataset</code> to represent dataset series (<a href="#deprecated-classes"></a>) - see issue <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/71">#71</a>.</li>
+<li>Added property <code>dcat:inSeries</code> <!--and <code>dcat:prev</code>--> to class <code>dcat:Dataset</code> (<a href="#optional-properties-for-dataset"></a>) - see issue <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/75">#75</a>.</li>
+<li>Added properties <code>dcat:hasVersion</code><!--, <code>dcat:isVersionOf</code>,--> and <code>dcat:version</code> to class <code>dcat:Dataset</code> (<a href="#optional-properties-for-dataset"></a>) - see issue <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/73">#73</a>.</li>
+<li>Deprecated properties <code>dct:hasVersion</code>, <code>dct:isVersionOf</code>, and <code>owl:versionInfo</code> for class <code>dcat:Dataset</code> (<a href="#deprecated-properties-for-dataset"></a>) - see issue <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/73">#73</a>.</li>
+<li>Added class <code>dcat:DatasetSeries</code> and related properties (<a href="#properties-for-dataset-series"></a>) - see issue <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/71">#71</a> and issue <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">#72</a>.</li>
+<li>Updated mappings for dataset series in section <a href="#resource-type---not-in-iso19115-core"></a> - see issue <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/71">#71</a>.</li>
+<li>Added class <code>eli:LegalResource</code> (<a href="#optional-classes"></a>) - see issue <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/??">#??</a>.</li>
+<li>Added property <code>dcatap:applicableLegislation</code> to classes <code>dcat:Catalog</code> (<a href="#optional-properties-for-catalogue"></a>), <code>dcat:DataService</code> (<a href="#optional-properties-for-data-service"></a>), <code>dcat:Dataset</code> (<a href="#optional-properties-for-dataset"></a>), <code>dcat:DatasetSeries</code> (<a href="#optional-properties-for-dataset-series"></a>), and <code>dcat:Distribution</code> (<a href="#optional-properties-for-distribution"></a>) - see issue <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/??">#??</a>.</li>
+<!--
+<li>Document completely re-written starting from the [[DCAT-AP-20200608]] specification, with the purpose of using a consistent document structure across DCAT-AP specifications.</li>
+<li>Use of classes and properties aligned with [[DCAT-AP-20200608]] (see issues <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/1">#1</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/2">#2</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/5">#5</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/7">#7</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/8">#8</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/10">#10</a>, <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/16">#16</a>). Classes and properties no longer used or replaced by new ones have been deprecated (see <a class="no-secRef" href="#deprecated-classes-and-properties"></a>).</li>
+-->
+</ul>
+
+</section>
+<!-- CHANGELOG for GeoDCAT-AP 2
 <section id="changes-since-20201012">
 
 <h2>Changes since first public working draft of 12 October 2020</h2>
@@ -1974,12 +2202,12 @@ Often there is applicable legislation or a licency policy in place which determi
 </ul>
 
 </section>
-
+-->
 <section id="changes-summary">
 
 <h2>Summary of changes to Application Profile classes and properties</h2>
 
-<p>The table below summarises the changes applied to the current release of GeoDCAT-AP, including those inherited from [[DCAT-AP]].</p>
+<p>The table below summarises the changes applied to the current release of GeoDCAT-AP, including those inherited from [[DCAT-AP-3]].</p>
 
 <div data-include-format="html" data-include-replace="true" data-include="./tables/change-log.html"></div>
 

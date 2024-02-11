@@ -3,14 +3,11 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix geodcat: <http://data.europa.eu/930/> .
 @prefix gsp: <http://www.opengis.net/ont/geosparql#> .
-@prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix record: <https://some.catalogue/record/> .
 @prefix resource: <https://some.catalogue/resource/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 resource:eea_v_4326_250_k_wise-eionet-monitoring-sites_service a dcat:DataService ;
@@ -72,5 +69,5 @@ resource:eea_v_4326_250_k_wise-eionet-monitoring-sites_service a dcat:DataServic
       prov:qualifiedAssociation [ a prov:Association ;
           prov:hadPlan [ a prov:Plan ;
               prov:wasDerivedFrom <http://inspire.ec.europa.eu/id/citation/ir/reg-976-2009> ] ] ] ;
-  foaf:isPrimaryTopicOf <https://some.catalogue/record/29e08b66-e6f6-4b4f-95ad-b582d9fe3df5> .
+  foaf:isPrimaryTopicOf record:29e08b66-e6f6-4b4f-95ad-b582d9fe3df5 .
 

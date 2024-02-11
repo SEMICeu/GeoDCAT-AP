@@ -11,1286 +11,8 @@
 </thead>
 <tbody>
 
-<!-- CHANGELOG for GeoDCAT-AP 3 -->
-
-<tr>
-<td>
-<p><code>dcatap:applicableLegislation</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Catalogue)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>eli:LegalResource</code></p>
-<p>Applicable legislation.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/260">DCAT-AP-260</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p><code>dcatap:applicableLegislation</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Data Service)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>eli:LegalResource</code></p>
-<p>Applicable legislation.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/260">DCAT-AP-260</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p><code>dcatap:applicableLegislation</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>eli:LegalResource</code></p>
-<p>Applicable legislation.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/260">DCAT-AP-260</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p><code>dct:hasVersion</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset)</p>
-</td>
-<td>
-<p>Deprecated</p>
-</td>
-<td>
-<p>Range: <code>dcat:Dataset</code></p>
-<p>Has version.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/241">DCAT-AP-241</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p><code>dcat:hasVersion</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>dcat:Dataset</code></p>
-<p>Has version.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/241">DCAT-AP-241</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p><code>dct:isVersionOf</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset)</p>
-</td>
-<td>
-<p>Deprecated</p>
-</td>
-<td>
-<p>Range: <code>dcat:Dataset</code></p>
-<p>Has version.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/241">DCAT-AP-241</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<!--
-<tr>
-<td>
-<p><code>dcat:isVersionOf</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>dcat:Dataset</code></p>
-<p>Has version.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/241">DCAT-AP-241</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
--->
-
-<tr>
-<td>
-<p><code>owl:versionInfo</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset)</p>
-</td>
-<td>
-<p>Deprecated</p>
-</td>
-<td>
-<p>Range: <code>rdfs:Literal</code></p>
-<p>Version.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/241">DCAT-AP-241</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p><code>dcat:version</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>rdfs:Literal</code></p>
-<p>Version.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/241">DCAT-AP-241</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p><code>dcat:inSeries</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>dcat:DatasetSeries</code></p>
-<p>In series.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/241">DCAT-AP-240</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<!--
-<tr>
-<td>
-<p><code>dcat:prev</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>dcat:Dataset</code></p>
-<p>Previous.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/241">DCAT-AP-240</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
--->
-
-<tr>
-<td>
-<p>+<code>dcat:Dataset</code></p>
-</td>
-<td>
-<p>Mandatory class</p>
-</td>
-<td>
-<p>Deprecated</p>
-</td>
-<td>
-<p>Dataset Series</p>
-<p>A collection of datasets that are published separately, but share some characteristics that group them.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/71">GeoDCAT-AP-71</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p><code>dcat:DatasetSeries</code></p>
-</td>
-<td>
-<p>Mandatory class</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Dataset Series</p>
-<p>A collection of datasets that are published separately, but share some characteristics that group them.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/240">DCAT-AP-240</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p><code>dct:description</code></p>
-</td>
-<td>
-<p>Mandatory property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>rdfs:Literal</code></p>
-<p>Description.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/240">DCAT-AP-240</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p><code>dct:title</code></p>
-</td>
-<td>
-<p>Mandatory property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>rdfs:Literal</code></p>
-<p>Title.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/240">DCAT-AP-240</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p><code>dcat:contactPoint</code></p>
-</td>
-<td>
-<p>Recommended property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>vcard:Kind</code></p>
-<p>Contact point.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/240">DCAT-AP-240</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>dcat:distribution</code></p>
-</td>
-<td>
-<p>Recommended property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>dcat:Distribution</code></p>
-<p>Dataset series distribution.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>dcat:keyword</code></p>
-</td>
-<td>
-<p>Recommended property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>rdfs:Literal</code></p>
-<p>Keyword/tag.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p><code>dct:publisher</code></p>
-</td>
-<td>
-<p>Recommended property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>foaf:Agent</code></p>
-<p>Publisher.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/240">DCAT-AP-240</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p><code>dct:spatial</code></p>
-</td>
-<td>
-<p>Recommended property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>dct:Location</code></p>
-<p>Spatial / geographic coverage.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/240">DCAT-AP-240</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p><code>dct:temporal</code></p>
-</td>
-<td>
-<p>Recommended property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>dct:PeriodOfTime</code></p>
-<p>Temporal coverage.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/240">DCAT-AP-240</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>dcat:theme</code></p>
-</td>
-<td>
-<p>Recommended property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>skos:Concept</code></p>
-<p>Theme / category.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>dct:accessRights</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>dct:RightsStatement</code></p>
-<p>Access rights.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p><code>dcatap:applicableLegislation</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>eli:LegalResource</code></p>
-<p>Applicable legislation.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/260">DCAT-AP-260</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>dct:conformsTo</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>dct:Standard</code></p>
-<p>Conforms to.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>dct:created</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>rdfs:Literal</code></p>
-<p>Creation date.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>dct:creator</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>foaf:Agent</code></p>
-<p>Creator.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-<!--
-<tr>
-<td>
-<p>+<code>dcat:distribution</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>dcat:Distribution</code></p>
-<p>Dataset series distribution.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
--->
-
-<!--
-<tr>
-<td>
-<p><code>dcat:first</code></p>
-</td>
-<td>
-<p>Recommended property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>dcat:Dataset</code></p>
-<p>First.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/240">DCAT-AP-240</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
--->
-
-<tr>
-<td>
-<p><code>dct:accrualPeriodicity</code></p>
-</td>
-<td>
-<p>Recommended property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>dct:Frequency</code></p>
-<p>Frequency.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/240">DCAT-AP-240</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>dct:identifier</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>rdfs:Literal</code></p>
-<p>Identifier.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>dcat:landingPage</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>foaf:Document</code></p>
-<p>Landing page.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>dct:language</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>dct:LinguisticSystem</code></p>
-<p>Language.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<!--
-<tr>
-<td>
-<p><code>dcat:last</code></p>
-</td>
-<td>
-<p>Recommended property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>dcat:Dataset</code></p>
-<p>Last.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/240">DCAT-AP-240</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
--->
-
-<tr>
-<td>
-<p>+<code>dct:provenance</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>dct:ProvenanceStatement</code></p>
-<p>Provenance.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>dqv:qualifiedAttribution</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>prov:Attribution</code></p>
-<p>Qualified attribution.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>dct:conformsTo</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>dct:Standard</code></p>
-<p>Reference system.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p><code>dct:issued</code></p>
-</td>
-<td>
-<p>Recommended property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>rdfs:Literal</code></p>
-<p>Release date.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/240">DCAT-AP-240</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>dct:rightsHolder</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>foaf:Agent</code></p>
-<p>Rights holder.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>dqv:hasQualityMeasurement</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>dqv:QualityMeasurement</code></p>
-<p>Spatial resolution.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>dcat:spatialResolutionInMeters</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>xsd:decimal</code></p>
-<p>Spatial resolution in metres.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>rdfs:comment</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>rdfs:Literal</code></p>
-<p>Spatial resolution as text.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>dcat:temporalResolution</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>rdfs:Literal</code></p>
-<p>Temporal resolution.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>dct:subject</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>skos:Concept</code></p>
-<p>Topic category.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>dct:type</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>skos:Concept</code></p>
-<p>Type.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p><code>dct:modified</code></p>
-</td>
-<td>
-<p>Recommended property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>rdfs:Literal</code></p>
-<p>Update / modification date.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/240">DCAT-AP-240</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>prov:wasUsedBy</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>prov:Activity</code></p>
-<p>Was used by.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<!-- Agent roles -->
-
-<tr>
-<td>
-<p>+<code>geodcat:custodian</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>foaf:Agent</code></p>
-<p>Custodian.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>geodcat:distributor</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>foaf:Agent</code></p>
-<p>Distributor.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>geodcat:originator</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>foaf:Agent</code></p>
-<p>Originator.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>geodcat:principalInvestigator</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>foaf:Agent</code></p>
-<p>Principal investigator.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>geodcat:processor</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>foaf:Agent</code></p>
-<p>Processor.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>geodcat:resourceProvider</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>foaf:Agent</code></p>
-<p>Resource provider.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p>+<code>geodcat:user</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Dataset Series)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>foaf:Agent</code></p>
-<p>User.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/72">GeoDCAT-AP-72</a></p>
-</td>
-<td>
-<p>GeoDCAT-AP 3.0.0</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p><code>dcatap:applicableLegislation</code></p>
-</td>
-<td>
-<p>Optional property</p>
-<p>(Distribution)</p>
-</td>
-<td>
-<p>New</p>
-</td>
-<td>
-<p>Range: <code>eli:LegalResource</code></p>
-<p>Applicable legislation.</p>
-</td>
-<td>
-<p><a href="https://github.com/SEMICeu/DCAT-AP/issues/260">DCAT-AP-260</a></p>
-</td>
-<td>
-<p>[[DCAT-AP-3]]</p>
-</td>
-</tr>
-
-<!-- CHANGELOG for GeoDCAT-AP 2 -->
-
 <!-- Datatypes -->
-<!--
+
 <tr>
 <td>
 <p><code>gsp:geoJSONLiteral</code></p>
@@ -1334,9 +56,9 @@
 <p>GeoDCAT-AP 2.0.0</p>
 </td>
 </tr>
--->
+
 <!-- Agent roles -->
-<!--
+
 <tr>
 <td>
 <p>+<code>geodcat:custodian</code></p>
@@ -1497,9 +219,9 @@
 <p>GeoDCAT-AP 2.0.0</p>
 </td>
 </tr>
--->
+
 <!-- Spatial resolution -->
-<!--
+
 <tr>
 <td>
 <p>+<code>dqv:hasQualityMeasurement</code></p>
@@ -2016,7 +738,7 @@
 <p>GeoDCAT-AP 2.0.0</p>
 </td>
 </tr>
--->
+
 <!--
 <tr>
 <td>
@@ -2040,7 +762,7 @@
 </td>
 </tr>
 -->
-<!--
+
 <tr>
 <td>
 <p><code>dct:MediaTypeorExtent</code></p>
@@ -2126,7 +848,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
--->
+
 <!--
 <tr>
 <td>
@@ -2151,7 +873,7 @@
 </td>
 </tr>
 -->
-<!--
+
 <tr>
 <td>
 <p><code>dcat:bbox</code></p>
@@ -2632,7 +1354,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
--->
+
 <!--
 <tr>
 <td>
@@ -2657,7 +1379,7 @@
 </td>
 </tr>
 -->
-<!--
+
 <tr>
 <td>
 <p><code>prov:wasGeneratedBy</code></p>
@@ -2772,7 +1494,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
--->
+
 <!--
 <tr>
 <td>
@@ -2866,7 +1588,7 @@
 </td>
 </tr>
 -->
-<!--
+
 <tr>
 <td>
 <p><code>dcat:servesDataset</code></p>
@@ -2935,7 +1657,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
--->
+
 <!--
 <tr>
 <td>
@@ -2960,7 +1682,7 @@
 </td>
 </tr>
 -->
-<!--
+
 <tr>
 <td>
 <p><code>dcat:DataService</code></p>
@@ -3097,7 +1819,7 @@
 <p>[[DCAT-AP-20191120]]</p>
 </td>
 </tr>
--->
+
 <!--
 <tr>
 <td>
@@ -3175,7 +1897,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 </td>
 </tr>
 -->
-<!--
+
 <tr>
 <td>
 <p><code>dct:type</code></p>
@@ -3222,7 +1944,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
--->
+
 <!--
 <tr>
 <td>
@@ -3248,7 +1970,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 </td>
 </tr>
 -->
-<!--
+
 <tr>
 <td>
 <p><code>dct:LicenseDocument</code></p>
@@ -3271,7 +1993,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
--->
+
 <!--
 <tr>
 <td>
@@ -3294,7 +2016,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 </td>
 </tr>
 -->
-<!--
+
 <tr>
 <td>
 <p><code>dct:source</code></p>
@@ -3452,7 +2174,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
--->
+
 <!--
 <tr>
 <td>
@@ -3500,7 +2222,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 </td>
 </tr>
 -->
-<!--
+
 <tr>
 <td>
 <p><code>dct:source</code></p>
@@ -3818,7 +2540,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
--->
+
 <!--
 <tr>
 <td>
@@ -3860,7 +2582,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 </td>
 </tr>
 -->
-<!--
+
 <tr>
 <td>
 <p><code>dct:accrualPeriodicity</code></p>
@@ -3904,7 +2626,7 @@ http://publications.europa.eu/resource/authority/place/.</p>
 <p>[[DCAT-AP-20170224]]</p>
 </td>
 </tr>
--->
+
 </tbody>
 </table>
 

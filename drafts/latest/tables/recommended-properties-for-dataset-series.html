@@ -1,0 +1,150 @@
+<table class="simple" id="table-recommended-properties-for-dataset-series">
+<thead>
+<tr>
+<th>
+<p>Property</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Range</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<th>
+<p>Card.</p>
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr class="property recommended" id="dataset-series-contact-point">
+<td>
+<p>contact point</p>
+</td>
+<td>
+<p><code>dcat:contactPoint</code></p>
+</td>
+<td>
+<p><code>vcard:Kind</code></p>
+</td>
+<td>
+<p>This property contains contact information that can be used for sending comments about the Dataset Series.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property recommended ap-ext" id="dataset-series-distribution">
+<td>
+<p>+dataset series distribution</p>
+</td>
+<td>
+<p><code>dcat:distribution</code></p>
+</td>
+<td>
+<p><code>dcat:Distribution</code></p>
+</td>
+<td>
+<p>This property links the Dataset Series to an available Distribution.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property recommended ap-ext" id="dataset-series-keyword">
+<td>
+<p>+keyword / tag</p>
+</td>
+<td>
+<p><code>dcat:keyword</code></p>
+</td>
+<td>
+<p><code>rdfs:Literal</code></p>
+</td>
+<td>
+<p>This property contains a keyword or tag describing the Dataset Series.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property recommended" id="dataset-series-publisher">
+<td>
+<p>publisher</p>
+</td>
+<td>
+<p><code>dct:publisher</code></p>
+</td>
+<td>
+<p><code>foaf:Agent</code></p>
+</td>
+<td>
+<p>This property refers to an Agent (organisation) responsible for making the Dataset Series available.</p>
+</td>
+<td>
+<p>0..1</p>
+</td>
+</tr>
+
+<tr class="property recommended" id="dataset-series-spatial-coverage">
+<td>
+<p>spatial / geographic coverage</p>
+</td>
+<td>
+<p><code>dct:spatial</code></p>
+</td>
+<td>
+<p><code>dct:Location</code></p>
+</td>
+<td>
+<p>This property refers to a geographic region that is covered by the Dataset Series.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property recommended" id="dataset-series-temporal-coverage">
+<td>
+<p>temporal coverage</p>
+</td>
+<td>
+<p><code>dct:temporal</code></p>
+</td>
+<td>
+<p><code>dct:PeriodOfTime</code></p>
+</td>
+<td>
+<p>This property refers to a temporal period that the Dataset Series covers.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+<tr class="property recommended ap-ext" id="dataset-series-category">
+<td>
+<p>+theme / category</p>
+</td>
+<td>
+<p><code>dcat:theme</code></p>
+</td>
+<td>
+<p><code>skos:Concept</code></p>
+</td>
+<td>
+<p>This property refers to a category of the Dataset Series. A Dataset Series may be associated with multiple themes.</p>
+</td>
+<td>
+<p>0..n</p>
+</td>
+</tr>
+
+</tbody>
+</table>
