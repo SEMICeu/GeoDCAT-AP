@@ -1,0 +1,403 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schemas: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.europa.eu/930/custodian> a owl:ObjectProperty;
+  rdfs:label "custodian"@en;
+  rdfs:comment "Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource [[ISO-19115]]."@en;
+  rdfs:domain rdfs:Resource;
+  rdfs:isDefinedBy <http://data.europa.eu/930>;
+  rdfs:range foaf:Agent .
+
+<http://data.europa.eu/930/distributor> a owl:ObjectProperty;
+  rdfs:label "distributor"@en;
+  rdfs:comment "Party who distributes the resource [[ISO-19115]]."@en;
+  rdfs:domain rdfs:Resource;
+  rdfs:isDefinedBy <http://data.europa.eu/930>;
+  rdfs:range foaf:Agent .
+
+<http://data.europa.eu/930/originator> a owl:ObjectProperty;
+  rdfs:label "originator"@en;
+  rdfs:comment """
+Party who created the resource [[ISO-19115]]."""@en;
+  rdfs:domain rdfs:Resource;
+  rdfs:isDefinedBy <http://data.europa.eu/930>;
+  rdfs:range foaf:Agent .
+
+<http://data.europa.eu/930/principalInvestigator> a owl:ObjectProperty;
+  rdfs:label "principal investigator"@en;
+  rdfs:comment "Key party responsible for gathering information and conducting research [[ISO-19115]]."@en;
+  rdfs:domain rdfs:Resource;
+  rdfs:isDefinedBy <http://data.europa.eu/930>;
+  rdfs:range foaf:Agent .
+
+<http://data.europa.eu/930/processor> a owl:ObjectProperty;
+  rdfs:label "processor"@en;
+  rdfs:comment """
+Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]]."""@en;
+  rdfs:domain rdfs:Resource;
+  rdfs:isDefinedBy <http://data.europa.eu/930>;
+  rdfs:range foaf:Agent .
+
+<http://data.europa.eu/930/referenceSystem> a owl:ObjectProperty;
+  rdfs:label "reference system"@en;
+  rdfs:comment "The reference system used in accordance with OGC EPSG Coordinate Reference Systems Register [[OGC-EPSG]]."@en;
+  rdfs:domain rdfs:Resource;
+  rdfs:isDefinedBy <http://data.europa.eu/930>;
+  rdfs:range skos:Concept;
+  rdfs:subPropertyOf dc:conformsTo .
+
+<http://data.europa.eu/930/resourceProvider> a owl:ObjectProperty;
+  rdfs:label "resource provider"@en;
+  rdfs:comment """
+Party that supplies the resource [[ISO-19115]]."""@en;
+  rdfs:domain rdfs:Resource;
+  rdfs:isDefinedBy <http://data.europa.eu/930>;
+  rdfs:range foaf:Agent .
+
+<http://data.europa.eu/930/resourceType> a owl:ObjectProperty;
+  rdfs:label "resource type"@en;
+  rdfs:comment "Resource type in accordance with INSPIRE Resource Types [[INSPIRE-RT]]."@en;
+  rdfs:domain dcat:Resource;
+  rdfs:isDefinedBy <http://data.europa.eu/930>;
+  rdfs:range skos:Concept;
+  rdfs:subPropertyOf dc:type .
+
+<http://data.europa.eu/930/serviceCategory> a owl:ObjectProperty;
+  rdfs:label "service category"@en;
+  rdfs:comment "Service category in accordance with INSPIRE Spatial Data Service Categories [[INSPIRE-SDSC]]."@en;
+  rdfs:domain dcat:DataService;
+  rdfs:isDefinedBy <http://data.europa.eu/930>;
+  rdfs:range skos:Concept;
+  rdfs:subPropertyOf dc:type .
+
+<http://data.europa.eu/930/serviceProtocol> a owl:ObjectProperty;
+  rdfs:label "service protocol"@en;
+  rdfs:comment "Protocol value in accordance with INSPIRE Protocol Values [[INSPIRE-PV]]."@en;
+  rdfs:domain dcat:DataService;
+  rdfs:isDefinedBy <http://data.europa.eu/930>;
+  rdfs:range skos:Concept;
+  rdfs:subPropertyOf dc:conformsTo .
+
+<http://data.europa.eu/930/serviceType> a owl:ObjectProperty;
+  rdfs:label "service type"@en;
+  rdfs:comment "Service type in accordance with INSPIRE Spatial Data Service Types [[INSPIRE-SDST]]."@en;
+  rdfs:domain dcat:DataService;
+  rdfs:isDefinedBy <http://data.europa.eu/930>;
+  rdfs:range skos:Concept;
+  rdfs:subPropertyOf dc:type .
+
+<http://data.europa.eu/930/spatialResolutionAsText> a owl:ObjectProperty;
+  rdfs:label "spatial resolution as text"@en;
+  rdfs:comment "Textual description of spatial resolution."@en;
+  rdfs:domain rdfs:Resource;
+  rdfs:isDefinedBy <http://data.europa.eu/930>;
+  rdfs:range rdfs:Literal .
+
+<http://data.europa.eu/930/topicCategory> a owl:ObjectProperty;
+  rdfs:label "topic category"@en;
+  rdfs:comment "Topic category in accordance with ISO-19115 [[INSPIRE-TC]]."@en;
+  rdfs:domain dcat:Resource;
+  rdfs:isDefinedBy <http://data.europa.eu/930>;
+  rdfs:range skos:Concept;
+  rdfs:subPropertyOf dc:subject .
+
+<http://data.europa.eu/930/user> a owl:ObjectProperty;
+  rdfs:label "user"@en;
+  rdfs:comment "Party who uses the resource [[ISO-19115]]."@en;
+  rdfs:domain rdfs:Resource;
+  rdfs:isDefinedBy <http://data.europa.eu/930>;
+  rdfs:range foaf:Agent .
+
+<http://data.europa.eu/930> a owl:Ontology;
+  rdfs:label "930"@en,
+    "930"@nl;
+  dc:contributor [
+    a foaf:Person;
+    foaf:firstName "Øystein";
+    foaf:lastName "Åsnes"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Joeri";
+    foaf:lastName "van der Velde"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Agnieszka";
+    foaf:lastName "Zajac"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Christian";
+    foaf:lastName "Wittig"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Suzanne";
+    foaf:lastName "Wigard"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Thomas";
+    foaf:lastName "Weber"
+  ], [
+    a foaf:Person;
+    foaf:firstName "William";
+    foaf:lastName "Verbeeck"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Bert";
+    foaf:lastName "Van Nuffelen"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Sander";
+    foaf:lastName "Van Dooren"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Kristine";
+    foaf:lastName "Ulander"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Thomas";
+    foaf:lastName "Tursics"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Kees";
+    foaf:lastName "Trautwein"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Igor";
+    foaf:lastName "Stefelin"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Emidio";
+    foaf:lastName "Stani"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Michele";
+    foaf:lastName "Spichtig"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Sebastian";
+    foaf:lastName "Sklarß"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Maxime";
+    foaf:lastName "Servais"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Giampaolo";
+    foaf:lastName "Sellitto"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Fabian";
+    foaf:lastName "Santi"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Maik";
+    foaf:lastName "Roth"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Daniele";
+    foaf:lastName "Rizzi"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Ludger";
+    foaf:lastName "Rinsche"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Taavi";
+    foaf:lastName "Ploompuu"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Andrea";
+    foaf:lastName "Perego"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Matthias";
+    foaf:lastName "Palmer"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Frederik";
+    foaf:lastName "Nordlander"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Geraldine";
+    foaf:lastName "Nolf"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Anastasija";
+    foaf:lastName "Nikiforova"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Lina";
+    foaf:lastName "Molinas Comet"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Peter";
+    foaf:lastName "Lubrich"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Giorgia";
+    foaf:lastName "Lodi"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Anja";
+    foaf:lastName "Loddenkemper"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Petros";
+    foaf:lastName "Likidis"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Christoph";
+    foaf:lastName "Lange"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Christine";
+    foaf:lastName "Laaboudi-Spoiden"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Andreas";
+    foaf:lastName "Kuckartz"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Nataliia";
+    foaf:lastName "Kovalchuk"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Jakub";
+    foaf:lastName "Klímek"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Fabian";
+    foaf:lastName "Kirstein"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Agnieszka";
+    foaf:lastName "Jasiczek"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Bart";
+    foaf:lastName "Hanssens"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Bart";
+    foaf:lastName "Hanssens"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Casper";
+    foaf:lastName "Gras"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Stijn";
+    foaf:lastName "Goedertier"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Dietmar";
+    foaf:lastName "Gattwinkel"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Pavlina";
+    foaf:lastName "Fragkou";
+    schemas:affiliation [foaf:name "SEMIC EU"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Adina";
+    foaf:lastName "Dragan"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Ulrika";
+    foaf:lastName "Domellöf Mattsson"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Jean";
+    foaf:lastName "Delahousse"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Makx";
+    foaf:lastName "Dekkers"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Ine";
+    foaf:lastName "De Visser"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Jitse";
+    foaf:lastName "De Cock"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Luis";
+    foaf:lastName "Daniel Ibáñez"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Peter";
+    foaf:lastName "Burian"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Oystein";
+    foaf:lastName "Asnes"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Stefano";
+    foaf:lastName "Ambrogio"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Martin";
+    foaf:lastName "Alvarez-Espinar"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Miguel";
+    foaf:lastName "Alvarez"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Matej";
+    foaf:lastName "Alic"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Anssi";
+    foaf:lastName "Ahlberg"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Kuldar";
+    foaf:lastName "Aasaga"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Ludger";
+    foaf:lastName "A. Rinsche"
+  ];
+  dc:issued "2024-06-26";
+  dc:license <https://creativecommons.org/licenses/by/4.0/>;
+  dc:mediator [
+    foaf:homepage <https://semic.eu>;
+    foaf:name "Semantic Interoperability Community (SEMIC)"
+  ];
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    foaf:firstName "Natasa";
+    foaf:lastName "Sofou"
+  ], [
+    a foaf:Person;
+    foaf:firstName "Pavlina";
+    foaf:lastName "Fragkou";
+    schemas:affiliation [foaf:name "SEMIC EU"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Makx";
+    foaf:lastName "Dekkers"
+  ];
+  foaf:maker [
+    a foaf:Person;
+    foaf:firstName "Bert";
+    foaf:lastName "Van Nuffelen";
+    foaf:mbox <mailto:bert.vannuffelen@vlaanderen.be>;
+    schemas:affiliation [foaf:name "Digitaal Vlaanderen"]
+  ], [
+    a foaf:Person;
+    foaf:firstName "Jakub";
+    foaf:lastName "Klímek";
+    foaf:mbox <mailto:jakub@cuit.cz>;
+    schemas:affiliation [foaf:name "CUIT"]
+  ] .
