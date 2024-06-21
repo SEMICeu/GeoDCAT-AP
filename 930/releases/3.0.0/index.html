@@ -7,6 +7,7 @@
     
 	
     <meta charset="utf-8" />
+    <meta name="color-scheme" content="light dark">
     <title>GeoDCAT-AP vocabulary, the 930 namespace</title>
     <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
     <script class="remove">
@@ -233,7 +234,7 @@
     </style>
      
     <p class="copyright">
-        Copyright © 2022
+        Copyright © 2024
     </p>
     
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -366,15 +367,9 @@ The namespace for this vocabulary is <code>http://data.europa.eu/930/</code> .
             <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
             <tbody>
             <tr><td><code>dcat</code></td><td><code>http://www.w3.org/ns/dcat#</code></td></tr>
-            <tr><td><code>dcatap</code></td><td><code>http://data.europa.eu/r5r/</code></td></tr>
             <tr><td><code>geodcatap</code></td><td><code>http://data.europa.eu/930/</code></td></tr>
-            <tr><td><code>oa</code></td><td><code>http://www.w3.org/ns/oa#</code></td></tr>
-            <tr><td><code>qb</code></td><td><code>http://purl.org/linked-data/cube#</code></td></tr>
-            <tr><td><code>rdf</code></td><td><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></td></tr>
             <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
             <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
-            <tr><td><code>stat</code></td><td><code>http://data.europa.eu/s1n/</code></td></tr>
-            <tr><td><code>xsd</code></td><td><code>http://www.w3.org/2001/XMLSchema#</code></td></tr>
             </tbody>
         </table>
 
@@ -2260,6 +2255,15 @@ Past and current contributors are :
         .simple th a{color:#fff;padding:3px 5px;text-align:left}                            
         .simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}   
         .simple td{padding:3px 10px;border-top:1px solid #ddd}                              
-        .simple tr:nth-child(even){background:#f0f6ff}                   
+        .simple tr:nth-child(even){background:#f0f6ff}
+    body.darkmode .simple th{background:#005a9c94;color:#ddd}
+	body.darkmode .simple th a{color:#ddd}
+	body.darkmode .simple tr:nth-child(even){background:#f0f6ff26}
+    body.darkmode :is(h4,h5,h6)+a.self-link::before {
+        color: var(--heading-text);
+    }
+    body.darkmode img {
+        background: none;
+    }
   </style>
 </html>
