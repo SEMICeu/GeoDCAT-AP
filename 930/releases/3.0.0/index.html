@@ -22,8 +22,20 @@
 	    
 		
 		   {
-		    name: "Makx Dekkers",
+		    name: "Jitse De Cock",
 		      
+		      
+		    company: "PwC EU Services",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Jordi Escriu",
+		      
+		      
+		    company: "JRC",
 		      
 		      
 		    }
@@ -33,16 +45,50 @@
 		    name: "Pavlina Fragkou",
 		      
 		      
-		    company: "SEMIC EU",
+		    company: "DIGIT",
 		      
 		      
 		    }
 		, 
 		
 		   {
-		    name: "Natasa Sofou",
+		    name: "Andrea Perego",
 		      
 		      
+		    company: "European Parliament",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Joeri Robberecht",
+		      
+		      
+		    company: "DG ENV",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Arthur Schiltz",
+		      
+		      
+		    company: "PwC EU Services",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Bert Van Nuffelen",
+		      
+		      
+		    company: "Digitaal Vlaanderen",
+		      
+		      
+		    mailto: "bert.vannuffelen@vlaanderen.be"
 		      
 		    }
 		
@@ -70,18 +116,6 @@
 		    mailto: "jakub@cuit.cz"
 		      
 		    }
-		, 
-		
-		   {
-		    name: "Bert Van Nuffelen",
-		      
-		      
-		    company: "Digitaal Vlaanderen",
-		      
-		      
-		    mailto: "bert.vannuffelen@vlaanderen.be"
-		      
-		    }
 		
 		
              
@@ -95,11 +129,11 @@
 
     var myowners = [
             {
-                value: "SEMIC",
-                href: "https://joinup.ec.europa.eu/collection/semic-support-centre",
+                value: "Pavlina Fragkou (DIGIT)",
             },
             {
-                value: "Pavlina Fragkou (DG DIGIT)",
+                value: "SEMIC",
+                href: "https://joinup.ec.europa.eu/collection/semic-support-centre",
             },
 		]
 
@@ -107,10 +141,12 @@
    
 
     var respecConfig = {
-      edDraftURI: "https://semiceu.github.ioGeoDCAT-AP/930/releases/3.0.0",
-      latestVersion: "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
+      prevRecURI: "https://semiceu.github.io/GeoDCAT-AP/930/releases/2.0.0/",
+      thisVersionURI: "https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0",
+      edDraftURI: "https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/",
+      latestVersion: "https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0",
       specStatus: "base",
-      publishDate: "2024-06-26",
+      publishDate: "2024-07-09",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [
@@ -302,7 +338,7 @@ It is under maintenance by the SEMIC action, Interoperable Europe.
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This vocabulary has the status Candidate Recommendation published at 2024-06-26.
+            This vocabulary has the status Candidate Recommendation published on 2024-07-09.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/CHANGELOG.html">Changelog</a>.
@@ -343,7 +379,7 @@ In order to conform to this vocabulary the usage of the terms MUST:
 
 When reusing the terms, the reuse principles of the SEMIC styleguide SHOULD be followed.
 <p/>
-To make the properties widely reuseable the domain and ranges are usually very open. For any kind of entity, the class rdfs:Resource is used.
+To make the properties widely reuseable the domain and ranges are in most cases very open. For any kind of entity, the class rdfs:Resource is used.
 For any kind of value, rdfs:Literal is used. 
 In the RDF ecosystem these are the universal denominators. 
 
@@ -396,10 +432,13 @@ The namespace for this vocabulary is <code>http://data.europa.eu/930/</code> .
                 
     </div>
     <div>
-        <a href="/GeoDCAT-AP/930/releases/3.0.0/html/overview.jpg"
-           target="_blank">
-            <img src="/GeoDCAT-AP/930/releases/3.0.0/html/overview.jpg"/>
-        </a>
+        <figure>
+            <a href="/GeoDCAT-AP/930/releases/3.0.0/html/overview.jpg"
+            target="_blank">
+                <img src="/GeoDCAT-AP/930/releases/3.0.0/html/overview.jpg"/>
+            </a>
+            <figcaption>UML diagram overview of the terms defined in the 930 namespace</figcaption>
+        </figure>
     </div>
 
 
@@ -415,6 +454,10 @@ This section lists the classes matching the base namespace of this vocabulary.
 </h2>
 This section lists the properties matching the base namespace of this vocabulary.
 
+<div class="note">
+    ISO 19115:2003 [[ISO-19115]] is currently withdrawn.
+    However, it is pragmatically considered as a reference standard since most geospatial metadata implementations and software tools are still using it as such, instead of ISO 19115-1:2014 [[ISO-19115-1]].
+</div>
 
 
    
@@ -1646,15 +1689,14 @@ Either these are reused as-is, i.e. with no formal additional constraints compar
 
 
  
-  <section id="controlled-vocs" class="informative">
+  <section id="controlled-vocs">
   <h2>Controlled Vocabularies</h2>
-  The shared use of Controlled Vocabularie is an important aspect in data harmonisation. 
+  The shared use of Controlled Vocabularies is an important aspect in data harmonisation. 
   This section contains information on the controlled vocabularies (or data instances) that are defined in the namespace <code>http://data.europa.eu/930</code>.
   And additionally it connects properties that are defined in this namespace with external Controlled Vocabularies to improve the semantical interoperability.
   
-
-
-  <h3 id="instances-of-metric">Instances of Metric</h3>
+  <section>
+    <h3 id="instances-of-metric">Instances of Metric</h3>
   For the class Metric the following instances are defined in the namespace <code>http://data.europa.eu/930</code>.
 
   <table class="simple" id="table-instances-of-metric">
@@ -1765,7 +1807,11 @@ Either these are reused as-is, i.e. with no formal additional constraints compar
 </tbody>
 </table>
 
+  
+  </section>
 
+  <section class="informative">
+    
   <h3 id="suggestions-of-cv">Suggested Controlled Vocabularies</h3> 
   Imposing the use of a controlled vocabulary for a property in the vocabulary is restricting severely its reusability. 
   The table below is added to increase the insight in the preferred way how to use these properties.
@@ -1907,6 +1953,8 @@ Either these are reused as-is, i.e. with no formal additional constraints compar
 </tbody>
 </table>
 
+  </section>
+
 </section>
 
 
@@ -1918,12 +1966,12 @@ Either these are reused as-is, i.e. with no formal additional constraints compar
 <h2>Acknowledgments</h2>
 <p>
 The editors gratefully acknowledge the contributions made to this document by all members of the working group.
-Especially we would like to express our gratetude for the former editor and author Andrea Perego.
+Especially we would like to express our gratitude for the former editor and author Andrea Perego.
 </p><p>
 This work was elaborated by a Working Group under SEMIC by Interoperable Europe in collaboration with DG Environment and JRC.
 Interoperable Europe of the European Commission was represented by Pavlina Fragkou.
-DG Environment was represented by Joeri Robbrecht and JRC by Jordi Escrui. 
-Jakub Klimek and Bert Van Nuffelen are the authors of this specification.
+DG Environment was represented by Joeri Robbrecht and JRC by Jordi Escriu. 
+Jakub Klímek and Bert Van Nuffelen are the authors of this specification.
 </p><p>
 
 Past and current contributors are :
@@ -1936,190 +1984,391 @@ Past and current contributors are :
      
      
            
-	 	Ludger A. Rinsche
+	 	Paloma Abad 
 		, 
            
-	 	Kuldar Aasaga
+	 	Anssi Ahlberg 
 		, 
            
-	 	Anssi Ahlberg
+	 	Riccardo Albertoni
 		, 
            
-	 	Matej Alic
+	 	Martin Alvarez
 		, 
            
-	 	Miguel Alvarez
+	 	Laima Amatniece 
 		, 
            
-	 	Martin Alvarez-Espinar
+	 	Darius Amilevicius 
 		, 
            
-	 	Stefano Ambrogio
+	 	Inga Andriuskeviciute 
 		, 
            
-	 	Oystein Asnes
+	 	Raphaelle Arnaud 
 		, 
            
-	 	Peter Burian
+	 	Lars-Inge Arnevik 
 		, 
            
-	 	Luis Daniel Ibáñez
+	 	Claudia Attard 
 		, 
            
-	 	Jitse De Cock
+	 	Teresa Barrueco 
 		, 
            
-	 	Ine De Visser
+	 	Julius Belickas 
 		, 
            
-	 	Makx Dekkers
+	 	Laura Bolocan 
 		, 
            
-	 	Jean Delahousse
+	 	Peter Bruhn Andersen
 		, 
            
-	 	Ulrika Domellöf Mattsson
+	 	Dominique Buffet 
 		, 
            
-	 	Adina Dragan
+	 	Petr Bures 
 		, 
            
-	 	Pavlina Fragkou
+	 	Mathieu Chaussier 
 		, 
            
-	 	Dietmar Gattwinkel
+	 	Radoslav Chudy 
 		, 
            
-	 	Stijn Goedertier
+	 	Byron Cochrane 
 		, 
            
-	 	Casper Gras
+	 	Eugeniu Costetchi 
 		, 
            
-	 	Bart Hanssens
+	 	Bart Cosyn 
 		, 
            
-	 	Bart Hanssens
+	 	Franck Cotton
 		, 
            
-	 	Agnieszka Jasiczek
+	 	Simon Cox
+		, 
+           
+	 	Rodolfo Da Silva
+		, 
+           
+	 	Vendula Dastychova 
+		, 
+           
+	 	Ine de Visser
+		, 
+           
+	 	Pascal Derycke 
+		, 
+           
+	 	Loes Deventer 
+		, 
+           
+	 	Ilias Dimopoulos 
+		, 
+           
+	 	Ulrika Domellof Mattsson
+		, 
+           
+	 	Erik Edberg 
+		, 
+           
+	 	August Edstrom 
+		, 
+           
+	 	Jitka Faugnerova 
+		, 
+           
+	 	Benoit Fricheteau 
+		, 
+           
+	 	Aniko Gerencser 
+		, 
+           
+	 	Kety Giuliacci 
+		, 
+           
+	 	Daniel Gomez 
+		, 
+           
+	 	Jonas Gottschlich 
+		, 
+           
+	 	Elena Grigoriou 
+		, 
+           
+	 	Matthias Gronewald 
+		, 
+           
+	 	Bjorn Hagstrom 
+		, 
+           
+	 	Lena Hallin-Pihlatie 
+		, 
+           
+	 	Gerald Henskens 
+		, 
+           
+	 	Kim Hoang 
+		, 
+           
+	 	Jana Hojsakova 
+		, 
+           
+	 	Martin Hons 
+		, 
+           
+	 	Hanna Horppila 
+		, 
+           
+	 	Antoine Jacques 
+		, 
+           
+	 	Markus Jobst 
+		, 
+           
+	 	Stepan Kafka 
+		, 
+           
+	 	Juliana Karciauskiene 
+		, 
+           
+	 	Svetlogor Kirov 
 		, 
            
 	 	Fabian Kirstein
 		, 
            
-	 	Jakub Klímek
+	 	Ouns Kissiyar 
 		, 
            
-	 	Nataliia Kovalchuk
+	 	Peter Kochmann 
+		, 
+           
+	 	Jiri Kocourek 
+		, 
+           
+	 	Jeff Konnen 
+		, 
+           
+	 	Martin Koska
+		, 
+           
+	 	Lenka Kovacova 
+		, 
+           
+	 	Pavla Kramolisova 
+		, 
+           
+	 	Michal Kuban 
 		, 
            
 	 	Andreas Kuckartz
 		, 
            
-	 	Christine Laaboudi-Spoiden
+	 	Veronika Kusova 
 		, 
            
-	 	Christoph Lange
+	 	Kim Lan Vu
 		, 
            
-	 	Petros Likidis
+	 	Frithjof Lemmel 
 		, 
            
-	 	Anja Loddenkemper
+	 	Darja Lihteneger 
 		, 
            
-	 	Giorgia Lodi
+	 	Anja Litka 
 		, 
            
-	 	Peter Lubrich
+	 	Anja Loddenkemper 
 		, 
            
-	 	Lina Molinas Comet
+	 	Emilio Lopez 
 		, 
            
-	 	Anastasija Nikiforova
+	 	Tamas Lorincz 
 		, 
            
-	 	Geraldine Nolf
+	 	Marceau Louis 
 		, 
            
-	 	Frederik Nordlander
+	 	Peter Lubrich 
+		, 
+           
+	 	Kate Lyndegaard 
+		, 
+           
+	 	Christoph Mikula 
+		, 
+           
+	 	Martynas Mockus 
+		, 
+           
+	 	Olga Moravcova 
+		, 
+           
+	 	Stefanie Nadler 
+		, 
+           
+	 	Gery Nicolay 
+		, 
+           
+	 	Joachim Nielandt 
+		, 
+           
+	 	Geraldine Nolf 
+		, 
+           
+	 	Erik Obersteiner 
+		, 
+           
+	 	Rossana Paciello 
 		, 
            
 	 	Matthias Palmer
 		, 
            
-	 	Andrea Perego
+	 	Tamas Palya 
 		, 
            
-	 	Taavi Ploompuu
+	 	James Passmore
 		, 
            
-	 	Ludger Rinsche
+	 	Mihai Paunescu 
 		, 
            
-	 	Daniele Rizzi
+	 	Barbara Phiesel 
 		, 
            
-	 	Maik Roth
+	 	Joel Plana 
 		, 
            
-	 	Fabian Santi
+	 	Francois Prunayre 
 		, 
            
-	 	Giampaolo Sellitto
+	 	Ines Quintanilha 
 		, 
            
-	 	Maxime Servais
+	 	Mart Randmae 
 		, 
            
-	 	Sebastian Sklarß
+	 	Athina Rapsomaniki 
 		, 
            
-	 	Michele Spichtig
+	 	Lenka Rejentova 
 		, 
            
-	 	Emidio Stani
+	 	Riikka Repo 
 		, 
            
-	 	Igor Stefelin
+	 	Hannes Reuter
 		, 
            
-	 	Kees Trautwein
+	 	Ludger Rinsche 
 		, 
            
-	 	Thomas Tursics
+	 	David Robberechts 
 		, 
            
-	 	Kristine Ulander
+	 	Maik Roth 
 		, 
            
-	 	Joeri van der Velde
+	 	Antonio Rotundo
 		, 
            
-	 	Sander Van Dooren
+	 	Thomas Ruhl 
 		, 
            
-	 	Bert Van Nuffelen
+	 	Danica Saponja 
 		, 
            
-	 	William Verbeeck
+	 	Giampaolo Sellitto 
 		, 
            
-	 	Thomas Weber
+	 	Silvie Semeradova 
 		, 
            
-	 	Suzanne Wigard
+	 	Age Sild 
 		, 
            
-	 	Christian Wittig
+	 	Jan Skornsek
 		, 
            
-	 	Agnieszka Zajac
+	 	Pawel Soczewski 
 		, 
            
-	 	Øystein Åsnes
+	 	Petr Soucek 
+		, 
+           
+	 	Michele Spichtig 
+		, 
+           
+	 	Simon Steuer 
+		, 
+           
+	 	Corinne Straub 
+		, 
+           
+	 	Aurelija Sturaite
+		, 
+           
+	 	Ivana Svata 
+		, 
+           
+	 	Stijn Tallir 
+		, 
+           
+	 	Naomi Thiru 
+		, 
+           
+	 	Michal Tichy 
+		, 
+           
+	 	Mayte Toscano 
+		, 
+           
+	 	Martin Tuchyna 
+		, 
+           
+	 	Thomas Tursics 
+		, 
+           
+	 	Floor Van Damme
+		, 
+           
+	 	Danny Vandenbroucke
+		, 
+           
+	 	Kusova Veronika 
+		, 
+           
+	 	Jose Vicente Calle
+		, 
+           
+	 	Fabio Vinci 
+		, 
+           
+	 	Uwe Voges 
+		, 
+           
+	 	Klaus-Peter Wenz 
+		, 
+           
+	 	Melissa Wittens 
+		, 
+           
+	 	Jim Yang 
+		, 
+           
+	 	Jesper Zedlitz 
+		, 
+           
+	 	Mantas Zimnickas 
 		
           
      
@@ -2264,6 +2513,9 @@ Past and current contributors are :
     }
     body.darkmode img {
         background: none;
+    }
+    body.darkmode section#references :target {
+        background: #04162d;
     }
   </style>
 </html>

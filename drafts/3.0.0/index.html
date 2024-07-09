@@ -32,10 +32,20 @@
 		, 
 		
 		   {
+		    name: "Jordi Escriu",
+		      
+		      
+		    company: "JRC",
+		      
+		      
+		    }
+		, 
+		
+		   {
 		    name: "Pavlina Fragkou",
 		      
 		      
-		    company: "DG DIGIT",
+		    company: "DIGIT",
 		      
 		      
 		    }
@@ -108,12 +118,19 @@
 		]
 	
     var myowners = [
+            
+            {
+                value: "Jordi Escriu (JRC)",
+            },
+            {
+                value: "Joeri Robberecht (DG ENV)",
+            },
+            {
+                value: "Pavlina Fragkou (DIGIT)",
+            },
             {
                 value: "SEMIC",
                 href: "https://joinup.ec.europa.eu/collection/semic-support-centre",
-            },
-            {
-                value: "Pavlina Fragkou (DG DIGIT)",
             },
 		]
 
@@ -126,9 +143,11 @@
     var respecConfig = {
       postProcess: [quickreference],
       edDraftURI: "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.0/",
-      latestVersion: "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
+      thisVersionURI: "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0",
+      prevVersionURI: "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
+      latestVersion: "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.0/",
       specStatus: "base",
-      publishDate: "2024-06-25",
+      publishDate: "2024-07-09",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [
@@ -423,12 +442,6 @@
         "publisher":"European Commission"
       },
       "INSPIRE-MD": {
-        "href":"https://inspire-mif.github.io/technical-guidelines/metadata/",
-        "title":"Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007. Version 2.2.0",
-        "publisher":"European Commission",
-        "date":"31 January 2024"
-      },
-      "INSPIRE-MD-20240131": {
         "href":"https://inspire-mif.github.io/technical-guidelines/metadata/",
         "title":"Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007. Version 2.2.0",
         "publisher":"European Commission",
@@ -941,7 +954,27 @@
         "publisher": "European Commission, Joint Research Centre (JRC)",
         "date": "2019",
         "id": "locn-mapping"
-      }
+      },
+      "AGRI-POLICY" : {
+        "href":" https://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX:32013R1306",
+        "title":"Regulation (EU) No 1306/2013 of the European Parliament and of the Council of 17 December 2013 on the financing, management and monitoring of the common agricultural policy and repealing Council Regulations (EEC) No 352/78, (EC) No 165/94, (EC) No 2799/98, (EC) No 814/2000, (EC) No 1290/2005 and (EC) No 485/2008",
+        "publisher":"European Union"
+      },
+      "AGRI-POLICY-FARMERS" : {
+        "href":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R1307",
+        "title":"Regulation (EU) No 1307/2013 of the European Parliament and of the Council of 17 December 2013 establishing rules for direct payments to farmers under support schemes within the framework of the common agricultural policy and repealing Council Regulation (EC) No 637/2008 and Council Regulation (EC) No 73/2009",
+        "publisher":"European Union"
+      },
+      "IACS" : {
+        "href":"https://publications.jrc.ec.europa.eu/repository/handle/JRC121450",
+        "title":"Technical guidelines on IACS spatial data sharing. Part 1 - Data discovery",
+        "publisher":"JRC"
+      },
+      "A2.5" : {
+        "href":"https://wikis.ec.europa.eu/display/InspireMIG/Action+2.5+Alignment+of+INSPIRE+and+high-value+dataset+implementation",
+        "title":"Action 2.5 Alignment of INSPIRE and high-value dataset implementation",
+        "publisher":"European Commission - INSPIRE Maintenance and Implementation Group (MIG)"
+      }    
     }
 
     };
@@ -976,7 +1009,7 @@
 
 <section id="abstract">
     <h2>Abstract</h2>
-GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe ([[[DCAT-AP-3]]]) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 [[ISO-19115]] and those defined in the framework of the INSPIRE Directive [[INSPIRE-DIR]] of the European Union.
+GeoDCAT-AP is an extension of the DCAT application profile for data portals in Europe ([[[DCAT-AP-3]]]) for describing geospatial datasets, dataset series, and services. Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 [[ISO-19115]], those defined in the framework of the INSPIRE Directive [[INSPIRE-DIR]] of the European Union and those defined in the Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007 [[INSPIRE-MD]].
 </section>
 
 
@@ -987,9 +1020,9 @@ GeoDCAT-AP is an extension of the DCAT application profile for data portals in E
     
   <p>This document contains version 3.0.0 of the specification for GeoDCAT-AP, an extension of the DCAT application profile for data portals in Europe [[DCAT-AP-3]] for describing geospatial datasets, dataset series, and services.</p>
 
-<p>Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 [[ISO-19115]] and those defined in the framework of the INSPIRE Directive [[INSPIRE-DIR]].</p>
+<p>Its basic use case is to make spatial datasets, dataset series, and services searchable on general data portals, thereby making geospatial information better findable across borders and sectors. For this purpose, GeoDCAT-AP provides an RDF vocabulary and the corresponding RDF syntax binding for the union of metadata elements of the core profile of ISO 19115:2003 [[ISO-19115]], its XML metadata encoding standard, ISO/TS 19139:2007 [[ISO-19139]], and those defined in the framework of the INSPIRE Directive [[INSPIRE-DIR]].</p>
 
-<p><strong>The GeoDCAT-AP specification does not replace the INSPIRE Metadata Regulation</strong> [[?INSPIRE-MD-REG]] <strong>nor the INSPIRE Metadata technical guidelines</strong> [[INSPIRE-MD]] <strong>based on ISO 19115 and ISO 19119.</strong> Its purpose is to give owners of geospatial metadata the possibility to achieve more by providing the means of an <em>additional</em> implementation through harmonised RDF syntax bindings. Conversion rules to RDF syntax would allow Member States to maintain their collections of INSPIRE-relevant datasets following the INSPIRE Metadata technical guidelines based on [[ISO-19115]] and [[ISO-19119]], while at the same time publishing these collections on [[DCAT-AP-3]]-conformant data portals. A conversion to an RDF representation allows additional metadata elements to be displayed on general-purposed data portals, provided that such data portals are capable of displaying additional metadata elements. Additionally, data portals may be capable of providing machine-to-machine interfaces where additional metadata could be provided.</p>
+<p><strong>The GeoDCAT-AP specification does not replace the INSPIRE Metadata Regulation</strong> [[?INSPIRE-MD-REG]] <strong>nor the INSPIRE Metadata technical guidelines</strong> [[INSPIRE-MD]] <strong>based on ISO 19115 and ISO 19119.</strong> Its purpose is to give producers and maintainers of geospatial metadata the possibility to achieve more by providing the means of an <em>additional</em> implementation through harmonised RDF syntax bindings used in the Open Data community. Conversion rules to RDF syntax would allow Member States to maintain their collections of INSPIRE-relevant datasets following the INSPIRE Metadata technical guidelines based on [[ISO-19115]] and [[ISO-19119]], while at the same time publishing these collections on [[DCAT-AP-3]]-conformant data portals. A conversion to an RDF representation allows additional metadata elements to be displayed on general-purposed open data portals, provided that such data portals are capable of displaying additional metadata elements. Additionally, data portals may be capable of providing machine-to-machine interfaces where additional metadata could be provided.</p>
 
 <section id="context">
 
@@ -1003,9 +1036,9 @@ GeoDCAT-AP is an extension of the DCAT application profile for data portals in E
 
 <p>With this regard, the wide range of (open) data portals developed by European public administrations is the result of this mission. These Web-based interfaces allow access to data by providing users means to explore a catalogue of datasets. To facilitate the sharing, discovery and re-use of the data beyond the (open) data portal, common agreements for the exchange of catalogues of datasets are needed. These interoperability agreements enable to connect (open) data catalogues into a pan-european catalogue of datasets.</p>
 
-<p>The DCAT Application Profile specifies the generic agreements for (open) data portals operated by public administrations in Europe. This specification extends DCAT-AP with additional requirements for geospatial data.</p>
+<p>The DCAT Application Profile specifies the generic agreements for (open) data portals operated by public administrations in Europe. This specification extends DCAT-AP with additional requirements for describing geospatial data.</p>
 
-<p>The current document is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP [[DCAT-AP-CRMP]] and was built starting from GeoDCAT-AP version 2.0.0 [[GeoDCAT-AP-20201223]], with the purpose of aligning it with DCAT-AP version 3.x.x [[DCAT-AP-3]] and with version 2.1.3 of the INSPIRE Metadata Technical Guidelines [[INSPIRE-MD-20230731]].</p>
+<p>The current document is the result of the major semantic change release process described in the Change and Release Management Policy for DCAT-AP [[DCAT-AP-CRMP]] and was built starting from GeoDCAT-AP version 2.0.0 [[GeoDCAT-AP-20201223]], with the purpose of aligning it with DCAT-AP version 3.x.x [[DCAT-AP-3]] and with version 2.2.0 of the INSPIRE Metadata Technical Guidelines for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007 [[INSPIRE-MD]].</p>
 
 <p>This work has been carried out in the context of the European Commission’s <q>Interoperable Europe</q> initiative [[INTEROPERABLE-EUROPE]].</p>
 
@@ -1015,12 +1048,12 @@ GeoDCAT-AP is an extension of the DCAT application profile for data portals in E
 
 <h3>Scope of the Application Profile</h3>
 
-<p>The objective of this work is to produce an updated release of GeoDCAT-AP based on requests for change coming from real-world implementations of the specification and an alignment with [[DCAT-AP-3]] and [[INSPIRE-MD-20230731]].</p> 
+<p>The objective of this work is to produce an updated release of GeoDCAT-AP based on requests for change coming from real-world implementations of the specification and an alignment with [[DCAT-AP-3]] and [[INSPIRE-MD]].</p> 
 
 <p>As [[[DCAT-AP-3]]], the Application Profile specified in this document is based on the specification of the <strong>Data Catalog Vocabulary</strong> (DCAT). DCAT is originally developed under the responsibility of the Government Linked Data Working Group [[GLD]] at W3C, and was significantly revised in 2020 by the W3C Dataset Exchange Working Group [[DXWG]]. DCAT is an RDF [[RDF11-CONCEPTS]] vocabulary designed to facilitate interoperability between data catalogues published on the Web.
 </p> 
 
-<p>The objective of this work is to produce an extension of [[DCAT-AP-3]] based on numerous requests for change coming from real-world implementations of the specification listed on the <a href="https://github.com/SEMICeu/geoDCAT-AP/issues/">GitHub issues section</a> since the previous release [[GeoDCAT-AP-20201223]]. For that purpose the [[DCAT-AP-3]] specification is extended with improved definitions, usage notes and usages constraints such as cardinalities for properties and the usage of controlled vocabularies. Additional classes and properties are re-used or introduced where necessary.
+<p>The objective of this work is to produce an extension of [[DCAT-AP-3]] based on numerous requests for change coming from real-world implementations of the specification listed on the <a href="https://github.com/SEMICeu/geoDCAT-AP/issues/">GitHub issues section</a> since the previous release [[GeoDCAT-AP-20201223]]. For that purpose the [[DCAT-AP-3]] specification is extended with improved definitions, usage notes and usage constraints such as cardinalities for properties and the usage of controlled vocabularies. Additional classes and properties are re-used or introduced where necessary.
 </p>
 
 <p>The work does not cover implementation issues like mechanisms for exchange of data and expected behaviour of systems implementing the Application Profile other than what is defined in the Conformance Statement in section [[[#conformance]]].
@@ -1029,9 +1062,6 @@ GeoDCAT-AP is an extension of the DCAT application profile for data portals in E
 
 <p>The Application Profile is intended to facilitate data exchange and therefore the classes and properties defined in this document are only relevant for the data to be exchanged; there are no requirements for communicating systems to implement specific technical environments. The only requirement is that the systems can export and import data in RDF in conformance with this Application Profile.
 </p>
-
-<p>The work does not cover implementation issues like mechanisms for exchange of data and expected behaviour of systems implementing the Application Profile other than what is defined in the Conformance Statement in <a class="no-sectionRef" href="#conformance"></a>.
-</p> 
 
 <p>The Application Profile is intended to facilitate data exchange and therefore the classes and properties defined in this document are only relevant for the data to be exchanged; there are no requirements for communicating systems to implement specific technical environments. The only requirement is that the systems can export and import data in RDF in conformance with this Application Profile.
 </p> 
@@ -1060,8 +1090,8 @@ Therefore, to overcome these hurdles, the European Commission invested in polici
 
 <p>Interoperable Europe, within its mission to stimulate the data interoperability in Europe, manages this specification on the metadata agreements for sharing dataset descriptions between data portals. 
 The governance is taken care by the SEMIC action within Interoperable Europe. 
-Initially, the scope of the specification was the exchange between Open Data Portals in Europa.
-Although this is still at the core of the specification, DCAT-AP is not limited to public accessible Open Data, but can be applied to any kind of datasets.
+Initially, the scope of the specification was the exchange between Open Data Portals in Europe.
+Although this is still at the core of the specification, DCAT-AP is not limited to publicly accessible Open Data, but can be applied to any kind of datasets.
 In the past decade, DCAT-AP has grown from a single specification to a whole ecosystem of related and interconnected specifications.
 </p>
 
@@ -1071,16 +1101,16 @@ In the past decade, DCAT-AP has grown from a single specification to a whole eco
 <h3>Revision history</h3>
 The first GeoDCAT-AP specification was released in December 2015. The subsequent release 1.0.1 improved the specification. These specifications are aligned with the core profile of ISO 19115:2003 [[ISO-19115]] and those defined in the framework of the INSPIRE Directive [[INSPIRE-DIR]].
 Five years later in December 2020 the second version of GeoDCAT-AP was released. W3C DCAT 2 restructured DCAT by introducing the notions of a generic Catalogued Resource of which Datasets and Data Services are special cases. As a consequence both DCAT-AP and GeoDCAT-AP required a major revision ensuring alignment between the different specifications.
-In 2023, the adoption of W3C DCAT 3 [[vocab-dcat-3]] triggered a new alignment for DCAT-AP, and consquently for GeoDCAT-AP.
+In 2023, the adoption of W3C DCAT 3 [[vocab-dcat-3]] triggered a new alignment for DCAT-AP, and consequently for GeoDCAT-AP.
 W3C DCAT 3 extends the profile with the Dataset Series notion.
-This document is the combination of addressing issues raised by the community and this alignment.
+This document is the combination of this alignment and addressing issues raised by the community.
 
 <h4>Notes on alignment with DCAT 3</h4>
 Being an extension of [[DCAT-AP-3]], GeoDCAT-AP inherits the changes that were introduced in [[[DCAT-AP-3]]] due to the aligment with [[[vocab-dcat-3]]]. The introduction of Dataset Series in DCAT is an additive operation from semantical, data modeling perspective. 
 Therefore the impact on existing GeoDCAT-AP 2.x, exchanges is limited. 
 Nevertheless, publishers may face substantial impact on the existing catalogues as the new terminology for Dataset Series may require to revisit the publisher's metadata guidelines.
 For instance, if the publisher had chosen to document a Dataset Series as a Dataset with multiple Distributions, then the alignment with Dataset Series as expressed in this specification will require a substantial effort. 
-This impact goes beyond the specification and dependent on the usage of the shared information.
+This impact goes beyond the specification and is dependent on the usage of the shared information.
 In the context of GeoDCAT-AP and in line with the conformance expectations and [[DCAT-AP-3]], the term Dataset Series will be solely used for resources that are explicitly identified by the class Dataset Series. 
 The situation, as mentioned, where a Dataset has multiple Distributions, will be considered as a Dataset with multiple Distributions and not as a Dataset Series. 
 This way, receivers of GeoDCAT-AP metadata can rely on the classes to process the metadata.
@@ -1111,7 +1141,7 @@ The following webinars have been held for the creation of this release
       <li>Webinar 20 February 2024 (<a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2024-03/20240220%20MM%20Introductory%20Webinar%20GeoDCAT-AP.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=mR56-TPyX6U">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2024-02/20240220%20GeoDCAT-AP%20Introductionary%20webinar.pdf">slides</a>) </li>
       <li>Webinar 12 March 2024 (<a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2024-03/20240312%20Second%20Working%20Group%20webinar%20GeoDCAT-AP.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=JgdIDdYYao8">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2024-03/20240312%20GeoDCAT-AP%20WG2%20Webinar.pdf">slides</a>) </li>
       <li>Webinar 23 April 2024 (<a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2024-05/20240423%20GeoDCAT-AP%20WG3.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=h8pTTXyjxHk">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2024-04/20240423%20GeoDCAT-AP%20WG3%20Webinar_0.pdf">slides</a>) </li>
-      <li>Webinar 14 May 2024 (<a href="">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=G6ohOIXo-cE">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2024-05/20240514%20GeoDCAT-AP%20%20Fourth%20WG%20Webinar.pdf">slides</a>) </li>
+      <li>Webinar 14 May 2024 (<a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2024-06/20240514%20Meeting%20Minutes%20GeoDCAT-AP%20WG4.docx.pdf">Meeting Minutes</a>, <a href="https://www.youtube.com/watch?v=G6ohOIXo-cE">recording</a>, <a href="https://joinup.ec.europa.eu/sites/default/files/event/attachment/2024-05/20240514%20GeoDCAT-AP%20%20Fourth%20WG%20Webinar.pdf">slides</a>) </li>
    </ul>
 
 
@@ -1130,9 +1160,9 @@ The following webinars have been held for the creation of this release
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsCR">Candidate Recommendation</a> published at 2024-06-25.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsCR">Candidate Recommendation</a> published at 2024-07-09.
 -->
-	This application profile has the status Candidate Recommendation published at 2024-06-25.
+	This application profile has the status Candidate Recommendation published at 2024-07-09.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/CHANGELOG.html">Changelog</a>.
@@ -1254,11 +1284,14 @@ The current specification does not change the set of geospatial metadata element
 
 An overview of GeoDCAT-AP is shown by the UML diagram below. The UML diagram illustrates the specification described in this document. For readability purposes, the representation has been condensed as follows:
 <ul>
-<li> no ranges for data properties are shown, because some of them are expressed as unions of XSD types</li>
-<li> The figure contain the key classes with some important supporting classes. Other object properties (relationships) are listed as properties on the UML class with their target range.</li>
-<li> The class dcat:Resource has been included to ease to see the connection with W3C DCAT. GeoDCAT-AP treats it as an abstract notion. </li>
+<!--<li> no ranges for data properties are shown, because some of them are expressed as unions of XSD types</li>-->
+<li> The figure contains the key classes with some important supporting classes. Other object properties (relationships) are listed as properties on the UML class with their target range.</li>
+<li> The class <code>dcat:Resource</code> has been included to ease to see the connection with W3C DCAT. GeoDCAT-AP treats it as an abstract notion. </li>
 </ul>
 The cardinalities and qualifications are included in the figure.
+
+This specification distinguishes between main entities, i.e. classes in the core of the application profile, supporting entities, i.e. classes used for representation of less crucial aspects of the application profile, and datatypes used for typing literal values.
+
 
     <div id="overview">
                 
@@ -1324,10 +1357,13 @@ The cardinalities and qualifications are included in the figure.
                 
     </div>
     <div>
-        <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/html/overview.jpg"
-           target="_blank">
-            <img src="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/html/overview.jpg"/>
-        </a>
+        <figure>
+            <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/html/overview.jpg"
+            target="_blank">
+             <img src="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/html/overview.jpg"/>
+         </a>
+        <figcaption>UML diagram overview of the GeoDCAT-AP 3.0.0 Application profile</figcaption>             
+        </figure>
     </div>
 </section>
 
@@ -22359,11 +22395,11 @@ Inherited from DCAT [[vocab-dcat-3]]
 <p><code>dct:accessRights</code></p>
 </td>
 <td rowspan="2">
+<p><a href="#Catalogue.accessrights">Catalogue</a></p>
 <p><a href="#Dataset.accessrights">Dataset</a></p>
 <p><a href="#DatasetSeries.accessrights">Dataset Series</a></p>
 <p><a href="#DataService.accessrights">Data Service</a></p>
-<p><a href="#Catalogue.accessrights">Data Service</a></p>
-<p><a href="#Distribution.accessrights">Data Service</a></p>
+<p><a href="#Distribution.accessrights">Distribution</a></p>
 </td>
 <td>
 <p>EU Vocabularies Access rights [[?EUV-AR]]</p>
@@ -22923,7 +22959,7 @@ How multilingual information is handled in systems, for example in indexing and 
 
 <p>
 In light of the growing importance of data, the European Commission has adopted an <href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138">implementing regulation</a> focused on high-value datasets on 21 December 2022 [[HVD]]. 
-The ambition of the High-Value Datasets implementing regulation (HVD IR) is to improve the quality, the accessibility and use of a selective number of core datasets within the public sector.
+The ambition of the High-Value Datasets implementing regulation (HVD IR) is to improve the availability, accessibility, quality and reuse of a selective set of core datasets from the public sector whose re-use is associated with important socio-economic benefits.
 To achieve this the HVD IR sets, among others, requirements on the metadata associated with the disclosed datasets.
 </p>
 <p>
@@ -22932,13 +22968,37 @@ The requirements expressed in DCAT-AP HVD are additional constraints and usages 
 </p>
 <p>
 Because GeoDCAT-AP is also applicable for datasets that are not within the scope of the HVD IR, the constraints of DCAT-AP HVD are not included in this specification. 
-Implementers of the HVD IR should consult DCAT-AP HVD for the specific requirements of the HVD IR.
+Implementers of the HVD IR should consult DCAT-AP HVD to check the specific requirements of the HVD IR and the adherence to them.
 However, since GeoDCAT-AP is mainly used as the DCAT view derived from the INSPIRE ISO metadata [[[#inspire-and-iso-19115-mappings]]], 
-the implementation of the DCAT-AP HVD in the context of a GeoDCAT-AP mapping requires to implement additional mapping rules.
-Currently the metadata guidelines for HVD in INSPIRE are under design by the INSPIRE Action 2.5 subgroup. 
-When the guidelines become available a reference implementation will be shared here.
+the implementation of the DCAT-AP HVD in the context of a GeoDCAT-AP mapping requires to implement additional mapping rules, specified in [[[#inspire-and-iso-19115-mappings]]].
 
+<p>
+A clear mapping between HVD categories and INSPIRE data themes has been early defined by this community during the process of drafting the High-Value Datasets implementing regulation [[HVD]], as illustrated in the figure below:
+</p>
 
+<figure>
+    <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/html/mapping-HVD-categories-to-INSPIRE-themes.webp"
+           target="_blank">
+            <img src="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/html/mapping-HVD-categories-to-INSPIRE-themes.webp"/>
+    </a>
+    <figcaption>Mapping between HVD categories and INSPIRE data themes</figcaption>
+</figure>
+
+<p>
+For this reason, the identification of HVD in the scope of INSPIRE is currently relying on this mapping. No additional generic requirements for tagging these datasets are provisioned, except in the case of Integrated Administration and Control System (IACS) agricultural datasets in the scope of the European Common Agricultural Policy (CAP), mainly represented by the Land Parcel Identification System (LPIS) and the Geospatial Aid application (GSAA) datasets.
+</p>
+
+<p>
+Despite IACS datasets are in the scope of either the Land cover, Land use, Cadastral parcels, Agricultural facilities and/or Area management zones INSPIRE themes, there is a need to further facilitate their discoverability among other datasets belonging to the Geospatial HVD category (See the Annex of the Implementing Regulation focused on high-value datasets on 21 December 2022 [[HVD]]). Additionally, a need to classify them as Reference parcels or Agricultural parcels as defined in Regulation (EU) No 1306/2013 of the European Parliament and of the Council [[AGRI-POLICY]] and of Regulation (EU) No 1307/2013 of the European Parliament and of the Council [[AGRI-POLICY-FARMERS]], respectively.
+</p>
+
+<p>
+To satisfy these needs, the "INSPIRE Technical guidelines on IACS spatial data sharing. Part 1 - Data discovery" [[IACS]] sets specific requirements and recommendations for describing IACS datasets through the INSPIRE infrastructure.
+</p>
+
+<p>
+The INSPIRE Maintenance and Implementation Group (MIG) is discussing potential additional requirements and recommendations for the provision of INSPIRE HVD datasets and their corresponding metadata (e.g. on metadata tagging) as part of the ongoing activities of its Ad-hoc Subgroup on the Alignment of INSPIRE and High-Value Datasets implementation (MIG Action 2.5) [[A2.5]]. This specification will be duly updated in case additional provisions enter into force in the future.
+</p>
 
 </section>
 
@@ -23118,8 +23178,8 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 <p>More precisely, the supported INSPIRE metadata elements include:</p>
 <ul>
 <li><p>The set of metadata elements defined in the INSPIRE Metadata Regulation [[?INSPIRE-MD-REG]].</p></li>
-<li><p>The set of metadata elements defined in the INSPIRE Data and Services Regulation (Article 13: “Metadata required for Interoperability”) [[INSPIRE-SDSS-REG]]. These elements are also listed in Appendix C.3 to the INSPIRE Metadata Technical Guidelines (version 2.1.3) [[INSPIRE-MD-20230731]].</p></li>
-<li><p>The set of metadata elements recommended as common to most of the INSPIRE spatial data themes in the INSPIRE Data Specifications Technical Guidelines, and listed in the first table included in Appendix C.7 to the INSPIRE Metadata Technical Guidelines (version 2.0.1) [[INSPIRE-MD-20170302]]. These elements are the following ones:</p>
+<li><p>The set of metadata elements defined in the INSPIRE Data and Services Regulation (Article 13: “Metadata required for Interoperability”) [[INSPIRE-SDSS-REG]]. These elements are also listed in Appendix C.3 to the INSPIRE Metadata Technical Guidelines (version 2.2.0) [[INSPIRE-MD]].</p></li>
+<li><p>The set of metadata elements recommended as common to most of the INSPIRE spatial data themes in the INSPIRE Data Specifications Technical Guidelines, and listed in the first table included in Appendix C.7 to the INSPIRE Metadata Technical Guidelines (version 2.2.0) [[INSPIRE-MD]]. These elements are the following ones:</p>
 <ul>
 <li><p>Maintenance information.</p></li>
 <li><p>Conceptual and domain consistency (Data quality – Logical consistency).</p></li>
@@ -23128,7 +23188,7 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 
 <p>The full list of metadata elements covered by the current version of GeoDCAT-AP is available in <a href="#overview-of-metadata-elements-covered-by-geodcat-ap"></a> to this document.</p>
 
-<p>The metadata elements not supported in the current version of GeoDCAT-AP are those recommended only for <em>specific</em> INSPIRE spatial data themes in the INSPIRE Data Specifications Technical Guidelines, and listed in Appendix C.7 to the INSPIRE Metadata Technical Guidelines (version 2.1.3) [[INSPIRE-MD-20230731]].</p>
+<p>The metadata elements not supported in the current version of GeoDCAT-AP are those recommended only for <em>specific</em> INSPIRE spatial data themes in the INSPIRE Data Specifications Technical Guidelines, and listed in Appendix C.7 to the INSPIRE Metadata Technical Guidelines (version 2.2.0) [[INSPIRE-MD]].</p>
 
 <p>These elements have been excluded in the current version of GeoDCAT-AP for the following reasons:</p>
 
@@ -23146,7 +23206,7 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 
 <p>The alignments defined in the current version of GeoDCAT-AP are the result of an iterative revision process of [[GeoDCAT-AP-20201223]], following the criteria illustrated in the previous sections and the review of the GeoDCAT-AP WG. Alignments for [[ISO-19115-1]] have not been defined. <a class="no-sectionRef" href="#comparison-between-inspire-and-iso19115-12014"></a> contains an overview of the most important changes with respect to [[ISO-19115]].</p>
 
-<p>The work started with the review of [[DCAT-AP-3]], [[VOCAB-DCAT-3]], and [[INSPIRE-MD-20230731]], with the purpose of identifying possible disalignments of the mappings defined in [[GeoDCAT-AP]], as well as possible gaps in [[DCAT-AP-3]] and [[VOCAB-DCAT-3]], which may require the use of different vocabularies or the definition of new classes and/or properties in the GeoDCAT-AP namespace. In all these cases, backward compatibility with [[GeoDCAT-AP-20201223]] has been taken into account when implementing revisions.</p>
+<p>The work started with the review of [[DCAT-AP-3]], [[VOCAB-DCAT-3]], and [[INSPIRE-MD]], with the purpose of identifying possible disalignments of the mappings defined in [[GeoDCAT-AP]], as well as possible gaps in [[DCAT-AP-3]] and [[VOCAB-DCAT-3]], which may require the use of different vocabularies or the definition of new classes and/or properties in the GeoDCAT-AP namespace. In all these cases, backward compatibility with [[GeoDCAT-AP-20201223]] has been taken into account when implementing revisions.</p>
 <p>Finally, the GeoDCAT-AP WG has worked in close coordination with the DCAT-AP WG, in order to ensure mutual compliance of the proposed solutions.</p>
 
 <!---
@@ -32396,7 +32456,7 @@ Especially we would like to express our gratetude for the former editor and auth
 </p><p>
 This work was elaborated by a Working Group under SEMIC by Interoperable Europe in collaboration with DG Environment and JRC.
 Interoperable Europe of the European Commission was represented by Pavlina Fragkou.
-DG Environment was represented by Joeri Robbrecht and JRC by Jordi Escrui. 
+DG Environment was represented by Joeri Robbrecht and JRC by Jordi Escriu. 
 Jakub Klímek, Bert Van Nuffelen, Pavlina Fragkou, Jitse De Cock, and Arthur Schiltz were the editors of this specification.
 <p/>
 Past and current contributors are :
@@ -32409,187 +32469,391 @@ Past and current contributors are :
      
      
            
-	 	Ludger A. Rinsche
+	 	Paloma Abad 
 		, 
            
-	 	Kuldar Aasaga
+	 	Anssi Ahlberg 
 		, 
            
-	 	Anssi Ahlberg
+	 	Riccardo Albertoni
 		, 
            
-	 	Matej Alic
+	 	Martin Alvarez
 		, 
            
-	 	Miguel Alvarez
+	 	Laima Amatniece 
 		, 
            
-	 	Martin Alvarez-Espinar
+	 	Darius Amilevicius 
 		, 
            
-	 	Stefano Ambrogio
+	 	Inga Andriuskeviciute 
 		, 
            
-	 	Oystein Asnes
+	 	Raphaelle Arnaud 
 		, 
            
-	 	Peter Burian
+	 	Lars-Inge Arnevik 
 		, 
            
-	 	Luis Daniel Ibáñez
+	 	Claudia Attard 
 		, 
            
-	 	Ine De Visser
+	 	Teresa Barrueco 
 		, 
            
-	 	Makx Dekkers
+	 	Julius Belickas 
 		, 
            
-	 	Makx Dekkers
+	 	Laura Bolocan 
 		, 
            
-	 	Jean Delahousse
+	 	Peter Bruhn Andersen
 		, 
            
-	 	Ulrika Domellöf Mattsson
+	 	Dominique Buffet 
 		, 
            
-	 	Adina Dragan
+	 	Petr Bures 
 		, 
            
-	 	Dietmar Gattwinkel
+	 	Mathieu Chaussier 
 		, 
            
-	 	Stijn Goedertier
+	 	Radoslav Chudy 
 		, 
            
-	 	Casper Gras
+	 	Byron Cochrane 
 		, 
            
-	 	Bart Hanssens
+	 	Eugeniu Costetchi 
 		, 
            
-	 	Agnieszka Jasiczek
+	 	Bart Cosyn 
+		, 
+           
+	 	Franck Cotton
+		, 
+           
+	 	Simon Cox
+		, 
+           
+	 	Rodolfo Da Silva
+		, 
+           
+	 	Vendula Dastychova 
+		, 
+           
+	 	Ine de Visser
+		, 
+           
+	 	Pascal Derycke 
+		, 
+           
+	 	Loes Deventer 
+		, 
+           
+	 	Ilias Dimopoulos 
+		, 
+           
+	 	Ulrika Domellof Mattsson
+		, 
+           
+	 	Erik Edberg 
+		, 
+           
+	 	August Edstrom 
+		, 
+           
+	 	Jitka Faugnerova 
+		, 
+           
+	 	Benoit Fricheteau 
+		, 
+           
+	 	Aniko Gerencser 
+		, 
+           
+	 	Kety Giuliacci 
+		, 
+           
+	 	Daniel Gomez 
+		, 
+           
+	 	Jonas Gottschlich 
+		, 
+           
+	 	Elena Grigoriou 
+		, 
+           
+	 	Matthias Gronewald 
+		, 
+           
+	 	Bjorn Hagstrom 
+		, 
+           
+	 	Lena Hallin-Pihlatie 
+		, 
+           
+	 	Gerald Henskens 
+		, 
+           
+	 	Kim Hoang 
+		, 
+           
+	 	Jana Hojsakova 
+		, 
+           
+	 	Martin Hons 
+		, 
+           
+	 	Hanna Horppila 
+		, 
+           
+	 	Antoine Jacques 
+		, 
+           
+	 	Markus Jobst 
+		, 
+           
+	 	Stepan Kafka 
+		, 
+           
+	 	Juliana Karciauskiene 
+		, 
+           
+	 	Svetlogor Kirov 
 		, 
            
 	 	Fabian Kirstein
 		, 
            
-	 	Nataliia Kovalchuk
+	 	Ouns Kissiyar 
+		, 
+           
+	 	Peter Kochmann 
+		, 
+           
+	 	Jiri Kocourek 
+		, 
+           
+	 	Jeff Konnen 
+		, 
+           
+	 	Martin Koska
+		, 
+           
+	 	Lenka Kovacova 
+		, 
+           
+	 	Pavla Kramolisova 
+		, 
+           
+	 	Michal Kuban 
 		, 
            
 	 	Andreas Kuckartz
 		, 
            
-	 	Christine Laaboudi-Spoiden
+	 	Veronika Kusova 
 		, 
            
-	 	Christoph Lange
+	 	Kim Lan Vu
 		, 
            
-	 	Petros Likidis
+	 	Frithjof Lemmel 
 		, 
            
-	 	Anja Loddenkemper
+	 	Darja Lihteneger 
 		, 
            
-	 	Giorgia Lodi
+	 	Anja Litka 
 		, 
            
-	 	Hagar Lowenthal
+	 	Anja Loddenkemper 
 		, 
            
-	 	Peter Lubrich
+	 	Emilio Lopez 
 		, 
            
-	 	Lina Molinas Comet
+	 	Tamas Lorincz 
 		, 
            
-	 	Anastasija Nikiforova
+	 	Marceau Louis 
 		, 
            
-	 	Geraldine Nolf
+	 	Peter Lubrich 
 		, 
            
-	 	Frederik Nordlander
+	 	Kate Lyndegaard 
+		, 
+           
+	 	Christoph Mikula 
+		, 
+           
+	 	Martynas Mockus 
+		, 
+           
+	 	Olga Moravcova 
+		, 
+           
+	 	Stefanie Nadler 
+		, 
+           
+	 	Gery Nicolay 
+		, 
+           
+	 	Joachim Nielandt 
+		, 
+           
+	 	Geraldine Nolf 
+		, 
+           
+	 	Erik Obersteiner 
+		, 
+           
+	 	Rossana Paciello 
 		, 
            
 	 	Matthias Palmer
 		, 
            
-	 	Andrea Perego
+	 	Tamas Palya 
 		, 
            
-	 	Taavi Ploompuu
+	 	James Passmore
 		, 
            
-	 	Ludger Rinsche
+	 	Mihai Paunescu 
 		, 
            
-	 	Daniele Rizzi
+	 	Barbara Phiesel 
 		, 
            
-	 	Maik Roth
+	 	Joel Plana 
 		, 
            
-	 	Fabian Santi
+	 	Francois Prunayre 
 		, 
            
-	 	Giampaolo Sellitto
+	 	Ines Quintanilha 
 		, 
            
-	 	Maxime Servais
+	 	Mart Randmae 
 		, 
            
-	 	Sebastian Sklarß
+	 	Athina Rapsomaniki 
 		, 
            
-	 	Anastasia Sofou
+	 	Lenka Rejentova 
 		, 
            
-	 	Michele Spichtig
+	 	Riikka Repo 
 		, 
            
-	 	Emidio Stani
+	 	Hannes Reuter
 		, 
            
-	 	Igor Stefelin
+	 	Ludger Rinsche 
 		, 
            
-	 	Kees Trautwein
+	 	David Robberechts 
 		, 
            
-	 	Thomas Tursics
+	 	Maik Roth 
 		, 
            
-	 	Kristine Ulander
+	 	Antonio Rotundo
 		, 
            
-	 	Joeri van der Velde
+	 	Thomas Ruhl 
 		, 
            
-	 	Sander Van Dooren
+	 	Danica Saponja 
 		, 
            
-	 	Bert Van Nuffelen
+	 	Giampaolo Sellitto 
 		, 
            
-	 	William Verbeeck
+	 	Silvie Semeradova 
 		, 
            
-	 	Thomas Weber
+	 	Age Sild 
 		, 
            
-	 	Suzanne Wigard
+	 	Jan Skornsek
 		, 
            
-	 	Christian Wittig
+	 	Pawel Soczewski 
 		, 
            
-	 	Agnieszka Zajac
+	 	Petr Soucek 
 		, 
            
-	 	Øystein Åsnes
+	 	Michele Spichtig 
+		, 
+           
+	 	Simon Steuer 
+		, 
+           
+	 	Corinne Straub 
+		, 
+           
+	 	Aurelija Sturaite
+		, 
+           
+	 	Ivana Svata 
+		, 
+           
+	 	Stijn Tallir 
+		, 
+           
+	 	Naomi Thiru 
+		, 
+           
+	 	Michal Tichy 
+		, 
+           
+	 	Mayte Toscano 
+		, 
+           
+	 	Martin Tuchyna 
+		, 
+           
+	 	Thomas Tursics 
+		, 
+           
+	 	Floor Van Damme
+		, 
+           
+	 	Danny Vandenbroucke
+		, 
+           
+	 	Kusova Veronika 
+		, 
+           
+	 	Jose Vicente Calle
+		, 
+           
+	 	Fabio Vinci 
+		, 
+           
+	 	Uwe Voges 
+		, 
+           
+	 	Klaus-Peter Wenz 
+		, 
+           
+	 	Melissa Wittens 
+		, 
+           
+	 	Jim Yang 
+		, 
+           
+	 	Jesper Zedlitz 
+		, 
+           
+	 	Mantas Zimnickas 
 		
           
      
@@ -32729,6 +32993,9 @@ Past and current contributors are :
     }
     body.darkmode img {
         background: none;
+    }
+    body.darkmode section#references :target {
+        background: #04162d;
     }
     
     .simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
