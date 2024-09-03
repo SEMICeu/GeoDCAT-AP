@@ -90,7 +90,7 @@ The following changes were done to the reference XSLT implementation:
 - Issue [95](https://github.com/SEMICeu/GeoDCAT-AP/issues/95) mapping spatial resolution as text to geodcat:spatialResolutionAsText instead of rdfs:comment
 - Issue [108](https://github.com/SEMICeu/GeoDCAT-AP/issues/108) changing rdfs:label to dct:description for describing RightsStatements
 - Issue [113](https://github.com/SEMICeu/GeoDCAT-AP/issues/113) changing handling of free-text licence and access rights statements
-- Change output prefix from geodcat to geodcat to avoid confusion with the upcoming OGC GeoDCAT
+- Change output prefix from `geodcat` to `geodcatap` to avoid confusion with the upcoming OGC GeoDCAT
 - Accepted community pull requests
   - Avoid error on multilingual organisation name (PR [#41](https://github.com/SEMICeu/iso-19139-to-dcat-ap/pull/41))
   - Update to XSLT v2 (PR [#42](https://github.com/SEMICeu/iso-19139-to-dcat-ap/pull/42))
