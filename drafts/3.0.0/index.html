@@ -147,7 +147,7 @@
       prevVersionURI: "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
       latestVersion: "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.0/",
       specStatus: "base",
-      publishDate: "2024-09-16",
+      publishDate: "2024-09-23",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [
@@ -1160,9 +1160,9 @@ The following webinars have been held for the creation of this release
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsCR">Candidate Recommendation</a> published at 2024-09-16.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsCR">Candidate Recommendation</a> published at 2024-09-23.
 -->
-	This application profile has the status Candidate Recommendation published at 2024-09-16.
+	This application profile has the status Candidate Recommendation published at 2024-09-23.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/CHANGELOG.html">Changelog</a>.
@@ -23099,7 +23099,26 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 
 <h2>Supported tooling</h2>
 
-<p>To support the transformation from INSPIRE metadata to GeoDCAT-AP compliant metadata an XSLT tool was developed. This tool has been updated to transform data to be compliant with GeoDCAT-AP 3.0.0. The GeoDCAT-AP XSLT can be found on <a href="https://github.com/SEMICeu/iso-19139-to-dcat-ap/tree/dev">the <code>dev</code> branch of the GitHub repository</a>. The XSLT can be run directly on the output of a CSW or on single metadata records, by using any of the programming languages supporting XSLT conversion. Additionally, a proof-of-concept API has been developed to facilitate the testing of the XSLT on single metadata records or on top of a CSW endpoint.</p>
+<p>
+  To support the transformation from INSPIRE metadata to GeoDCAT-AP compliant metadata, a reference XSLT transformation was developed, and is being maintained.
+  This transformation has been updated to transform data to be compliant with GeoDCAT-AP 3.0.0.
+  The reference XSLT can be found in a <a href="https://github.com/SEMICeu/iso-19139-to-dcat-ap">GitHub repository</a>.
+  The XSLT can be run directly on the output of a CSW or on single metadata records, by using any of the programming languages supporting XSLT conversion.
+</p>
+
+<div class="note" title="Reference XSLT limitations">
+  <p>
+    The reference XSLT is not meant to be used in production directly.
+    It serves as a reference which needs to be adjusted according to the specific needs and practice of the individual metadata publishers, as the practice is currently not coherent across publishers in certain aspects.
+    These aspects include:
+  </p>
+  <ul>
+    <li>Identifiers of datasets, dataset series, distributions and data services, and their persistence for HVD. A method for establishing the identifiers needs to be implemented.</li>
+    <li>Licenses for HVD in cases where they are identified by IRIs, but do not use the <a href="https://op.europa.eu/en/web/eu-vocabularies/concept-scheme/-/resource?uri=http://publications.europa.eu/resource/authority/licence">EU Vocabularies Licence NAL</a> directly. See [[DCAT-AP-HVD]]. A mapping needs to be implemented.</li>
+    <li>Representation of Data Services and their connection to Datasets due to the INSPIRE metadata simplification. Identification of Data Services and a method for their connection to Datasets needs to be implemented.</li>
+    <li>Mapping of INSPIRE themes to <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/data-theme">EU Vocabularies Data themes</a> for cases where the Data themes are not included in the source metadata.</li>
+  </ul>
+</div>
 
 </section>
 
