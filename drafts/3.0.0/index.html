@@ -23245,6 +23245,14 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 
 <p>For detailed usage notes and examples of each of the metadata elements covered by GeoDCAT-AP, we refer the reader to <a href="#detailed-usage-notes-and-examples"></a> (the relevant section is specified in the “comments” column of the mapping table).</p>
 
+<p>There are three basic situations for each binding defined below:</p>
+
+<ol>
+  <li><strong>Binding directly supported by [[DCAT-AP-3]]</strong>: binding is defined as part of GeoDCAT-AP Core </li>
+  <li><strong>Binding partially supported by [[DCAT-AP-3]]</strong>: binding is defined as part of GeoDCAT-AP Core and supplemented by a binding in GeoDCAT-AP Extended</li>
+  <li><strong>Binding not supported by [[DCAT-AP-3]]</strong>: binding is defined as part of GeoDCAT-AP Extended</li>
+</ol>
+
 <section id="overview-of-bindings-for-geodcat-ap-core">
 
 <h2>Overview of bindings for GeoDCAT-AP Core</h2>
@@ -23796,11 +23804,11 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 
 <h2>Overview of bindings for GeoDCAT-AP Extended</h2>
 
-<p>This section provides an overview of the RDF syntax bindings in GeoDCAT-AP Extended. This GeoDCAT-AP mapping profile covers elements defined in INSPIRE and the core of [[ISO-19115]], for which [[DCAT-AP-3]] does not provide a syntax binding. GeoDCAT-AP Extended is a <em>superset</em> of GeoDCAT-AP Core.</p>
+<p>This section provides an overview of the RDF syntax bindings in GeoDCAT-AP Extended. This GeoDCAT-AP mapping profile covers elements defined in INSPIRE and the core of [[ISO-19115]], for which [[DCAT-AP-3]] does not provide a fully suitable syntax binding. GeoDCAT-AP Extended therefore complements GeoDCAT-AP Core with a more complete representation beyond [[DCAT-AP-3]].</p>
 
 <p>The following table contains the defined RDF syntax binding for INSPIRE metadata. In the table below, the starred elements (*) are used to indicate the corresponding metadata element in the core of [[ISO-19115]]. For each metadata element, it is indicated whether the element is mandatory (M), optional (O), conditional (C), or recommended (R) in either specification.</p>
 
-<p>Please note that some metadata elements have an RDF syntax binding in both the GeoDCAT-AP Core and Extended mapping profile. These elements fall in one of these categories:</p>
+<p>Please note that some metadata elements have an RDF syntax binding in both the GeoDCAT-AP Core and Extended mapping profile. These elements fall in one of the following two categories:</p>
 
 <ol>
 <li><p><strong>Partial coverage by a [[DCAT-AP-3]] binding</strong>: This concerns conformity (only degree of conformity equal to &ldquo;conformant&rdquo; is supported) and responsible organisation (only responsible party roles creator, publisher, and point of contact are supported).</p></li>
