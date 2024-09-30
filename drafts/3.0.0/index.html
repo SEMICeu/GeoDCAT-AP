@@ -147,7 +147,7 @@
       prevVersionURI: "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
       latestVersion: "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.0/",
       specStatus: "base",
-      publishDate: "2024-09-23",
+      publishDate: "2024-09-30",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [
@@ -1160,9 +1160,9 @@ The following webinars have been held for the creation of this release
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsCR">Candidate Recommendation</a> published at 2024-09-23.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsCR">Candidate Recommendation</a> published at 2024-09-30.
 -->
-	This application profile has the status Candidate Recommendation published at 2024-09-23.
+	This application profile has the status Candidate Recommendation published at 2024-09-30.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/CHANGELOG.html">Changelog</a>.
@@ -23087,7 +23087,7 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 <dt>Datasets on national <abbr title="Spatial Data Infrastructures">SDIs</abbr></dt>
 <dd><p>GeoDCAT-AP would facilitate the integration of SDIs operated by EU Member States with any data catalogue able to consume [[DCAT-AP-3]]-compliant metadata.</p></dd>
 <dt>General geospatial datasets</dt>
-<dd><p>The geospatial community shares a common background and makes consistent use of consolidated standards and technologies. In particular, as far as metadata are concerned, it is widespread to use standards like [[ISO-19115]] / [[ISO-19139]], for the representation and encoding of metadata, and OGC’s [[?CSW]] (Catalog Service for the Web) for accessing and querying metadata records. These standards are also those currently recommended in INSPIRE.</p></dd>
+<dd><p>The geospatial community shares a common background and makes consistent use of consolidated standards and technologies. In particular, as far as metadata are concerned, it is widespread to use standards like [[ISO-19115]] / [[ISO-19139]], for the representation and encoding of metadata, and OGC’s [[?CSW]] (Catalog Service for the Web) for accessing and querying metadata records. These standards are also those required in INSPIRE.</p></dd>
 </dl>
 
 <p>An additional RDF syntax for INSPIRE and ISO 19115 metadata elements is beneficial, especially when other data portals support the [[DCAT-AP-3]] metadata elements only.</p>
@@ -23138,7 +23138,7 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 
 <h2>Alignment criteria and requirements</h2>
 
-<p>The overall objective of GeoDCAT-AP is twofold:</p>
+<p>The overall objectives of GeoDCAT-AP are:</p>
 
 <ol>
 <li><p>Provide a [[DCAT-AP-3]]-conformant representation of geospatial metadata.</p></li>
@@ -23167,11 +23167,11 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 
 <h2>Metadata elements to be covered by GeoDCAT-AP</h2>
 
-<p>The general criterion used for this task was that GeoDCAT-AP would ideally cover <em>all</em> the metadata elements of the core profile of [[ISO-19115]] and those defined in INSPIRE, with the requirement that only <em>optional</em> elements MAY be excluded.</p>
+<p>The general criterion used for this task was that GeoDCAT-AP would ideally cover <em>all</em> the metadata elements of the core of [[ISO-19115]] and those defined in INSPIRE, with the requirement that only <em>optional</em> elements MAY be excluded.</p>
 <p>Based on this, the current version of GeoDCAT-AP covers the following set of metadata elements:</p>
 
 <ul>
-<li><p>All the metadata elements in the core profile of [[ISO-19115]].</p></li>
+<li><p>All the metadata elements in the core of [[ISO-19115]].</p></li>
 <li><p>All the metadata elements defined in INSPIRE, with the exclusion of those not common to all the INSPIRE spatial data themes.</p></li>
 </ul>
 <p>More precisely, the supported INSPIRE metadata elements include:</p>
@@ -23221,7 +23221,6 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 <p>The results of this work, reflected in the current version of GeoDCAT-AP, can be summarised as follows:</p>
 
 <ul>
-<li><p>Backward compatibility with [[GeoDCAT-AP-20201223]] is ensured: The revised mappings have been deprecated, but maintained in the mapping rules implemented in [[GeoDCAT-XSLT]] along with the new one, in the extended mapping profile of GeoDCAT-AP, and their support has been included in <a class="no-sectionRef" href="#conformance"></a>.</p></li>
 <li><p>Compliance with [[DCAT-AP-3]] is ensured: The geospatial metadata elements covered by the defined mappings include all those that in [[DCAT-AP-3]] are mandatory, plus a subset of those that are recommended and optional.</p></li>
 <li><p>GeoDCAT-AP offers alignments for all the metadata elements illustrated in <a href="#metadata-elements-to-be-covered-by-geodcat-ap"></a>, by using existing vocabularies, and without defining new terms.</p></li>
 </ul>
@@ -23242,7 +23241,7 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 
 <h1>RDF syntax bindings for INSPIRE and ISO 19115 metadata elements </h1>
 
-<p>The following sections provide the list of the bindings defined in GeoDCAT-AP for the RDF representation of INSPIRE metadata and the core profile of [[ISO-19115]].</p>
+<p>The following sections provide the list of the bindings defined in GeoDCAT-AP for the RDF representation of INSPIRE metadata and the core of [[ISO-19115]].</p>
 
 <p>For detailed usage notes and examples of each of the metadata elements covered by GeoDCAT-AP, we refer the reader to <a href="#detailed-usage-notes-and-examples"></a> (the relevant section is specified in the “comments” column of the mapping table).</p>
 
@@ -23250,11 +23249,11 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 
 <h2>Overview of bindings for GeoDCAT-AP Core</h2>
 
-<p>This section provides an overview of <strong>GeoDCAT-AP Core</strong>. This includes bindings for metadata elements of the INSPIRE metadata and metadata elements in the core profile of [[ISO-19115]] core <em>for which DCAT-AP provides an RDF syntax binding</em>. Those metadata elements for which [[DCAT-AP-3]] does not provide a binding are part of the GeoDCAT-AP Extended mapping profile described in <a href="#overview-of-bindings-for-geodcat-ap-extended"></a>.</p>
+<p>This section provides an overview of <strong>GeoDCAT-AP Core</strong>. This includes bindings for metadata elements of the INSPIRE metadata and metadata elements in the core of [[ISO-19115]] <em>for which DCAT-AP provides an RDF syntax binding</em>. Those metadata elements for which [[DCAT-AP-3]] does not provide a binding are part of the GeoDCAT-AP Extended mapping profile described in <a href="#overview-of-bindings-for-geodcat-ap-extended"></a>.</p>
 
 <p>GeoDCAT-AP Core is meant to enable the harvesting and re-use of spatial metadata records through [[DCAT-AP-3]]-conformant applications and services, including data portals and APIs. The alignments for INSPIRE and [[ISO-19115]] metadata elements that are not included in GeoDCAT-AP Core are defined in GeoDCAT-AP Extended, see <a href="#overview-of-bindings-for-geodcat-ap-extended"></a>.</p>
 
-<p>In the following table, the starred elements (*) are used to indicate the corresponding metadata element in the core profile of [[ISO-19115]]. For each element, it is indicated whether the element is mandatory (<abbr title="mandatory">M</abbr>), optional (<abbr title="optional">O</abbr>), conditional (<abbr title="conditional">C</abbr>), or recommended (<abbr title="recommended">R</abbr>) in either specification.</p>
+<p>In the following table, the starred elements (*) are used to indicate the corresponding metadata element in the core of [[ISO-19115]]. For each element, it is indicated whether the element is mandatory (<abbr title="mandatory">M</abbr>), optional (<abbr title="optional">O</abbr>), conditional (<abbr title="conditional">C</abbr>), or recommended (<abbr title="recommended">R</abbr>) in either specification.</p>
 
 <table id="table-overview-of-bindings-for-geodcat-ap-core" class="simple">
 <!--
@@ -23459,9 +23458,25 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 <p><code>dcat:DatasetSeries</code></p>
 </td>
 <td><code>rdfs:Literal</code></td>
-<td>See <a href="#unique-resource-identifier---not-in-iso19115-core"></a>. In RDF, this could also be represented as the URI of the dataseti or of the dataset series.</td>
+<td>See <a href="#unique-resource-identifier---not-in-iso19115-core"></a>. In RDF, this could also be represented as the URI of the dataset or of the dataset series.</td>
 </tr>
 
+<tr>
+  <td>
+  <p>Coupled resource (O)</p>
+  <p>*not in ISO&nbsp;19115 core</p>
+  </td>
+  <td><code>dcat:servesDataset</code> (O)</td>
+  <td>
+  <p><code>dcat:DataService</code></p>
+  </td>
+  <td>
+    <p><code>dcat:Dataset</code></p>
+    <p><code>dcat:DatasetSeries</code></p>
+  </td>
+  <td>See <a href="#coupled-resource---not-in-iso19115-core"></a>.</td>
+</tr>
+  
 <tr>
 <td>
 <p>Resource language (C)</p>
@@ -23781,9 +23796,9 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 
 <h2>Overview of bindings for GeoDCAT-AP Extended</h2>
 
-<p>This section provides an overview of the RDF syntax bindings in GeoDCAT-AP Extended. This GeoDCAT-AP mapping profile covers elements defined in INSPIRE and the core profile of [[ISO-19115]], for which [[DCAT-AP-3]] does not provide a syntax binding. GeoDCAT-AP Extended is a <em>superset</em> of GeoDCAT-AP Core.</p>
+<p>This section provides an overview of the RDF syntax bindings in GeoDCAT-AP Extended. This GeoDCAT-AP mapping profile covers elements defined in INSPIRE and the core of [[ISO-19115]], for which [[DCAT-AP-3]] does not provide a syntax binding. GeoDCAT-AP Extended is a <em>superset</em> of GeoDCAT-AP Core.</p>
 
-<p>The following table contains the defined RDF syntax binding for INSPIRE metadata. In the table below, the starred elements (*) are used to indicate the corresponding metadata element in the core profile of [[ISO-19115]]. For each metadata element, it is indicated whether the element is mandatory (M), optional (O), conditional (C), or recommended (R) in either specification.</p>
+<p>The following table contains the defined RDF syntax binding for INSPIRE metadata. In the table below, the starred elements (*) are used to indicate the corresponding metadata element in the core of [[ISO-19115]]. For each metadata element, it is indicated whether the element is mandatory (M), optional (O), conditional (C), or recommended (R) in either specification.</p>
 
 <p>Please note that some metadata elements have an RDF syntax binding in both the GeoDCAT-AP Core and Extended mapping profile. These elements fall in one of these categories:</p>
 
@@ -23877,7 +23892,7 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 <tr>
 <td>
 <p>Spatial data service type (M)</p>
-<p>*not in ISO&nbsp;19115</p>
+<p>*not in ISO&nbsp;19115 core</p>
 </td>
 <td><code>geodcatap:serviceType</code></td>
 <td>
@@ -24267,7 +24282,7 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 
 <h1>Overview of metadata elements covered by GeoDCAT-AP</h1>
 
-<p>The following table provides an overview of the metadata elements in the INSPIRE metadata schema and in the core profile of [[ISO-19115]], and the available mappings in [[DCAT-AP-3]] and GeoDCAT-AP. Columns titled with “obligation” specify whether the corresponding metadata elements are mandatory (M), conditional (C), and optional (O) (where “conditional” means “mandatory under given conditions”).</p>
+<p>The following table provides an overview of the metadata elements in the INSPIRE metadata schema and in the core of [[ISO-19115]], and the available mappings in [[DCAT-AP-3]] and GeoDCAT-AP. Columns titled with “obligation” specify whether the corresponding metadata elements are mandatory (M), conditional (C), and optional (O) (where “conditional” means “mandatory under given conditions”).</p>
 <p>Note that the mappings covered by [[DCAT-AP-3]] correspond to those defined in GeoDCAT-AP <em>core</em>, whereas those covered only by GeoDCAT-AP correspond to those defined in the GeoDCAT-AP <em>extended</em>.</p>
 
 <table id="table-overview-of-metadata-elements-covered-by-geodcat-ap" class="simple">
@@ -25599,7 +25614,7 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 </ul>
 </aside>
 -->
-<p>In the core profile of [[ISO-19115]], spatial coverage can be specified either with a bounding box (a geometry) or a geographic identifier. INSPIRE is more restrictive, in that it requires using a bounding box</p>
+<p>In the core of [[ISO-19115]], spatial coverage can be specified either with a bounding box (a geometry) or a geographic identifier. INSPIRE is more restrictive, in that it requires using a bounding box</p>
 
 <p>Based on that, GeoDCAT-AP specified spatial coverage as illustrated in the following sections.</p>
 
