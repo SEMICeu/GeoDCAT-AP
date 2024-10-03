@@ -147,7 +147,7 @@
       prevVersionURI: "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
       latestVersion: "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.0/",
       specStatus: "base",
-      publishDate: "2024-09-30",
+      publishDate: "2024-10-03",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [
@@ -1160,9 +1160,9 @@ The following webinars have been held for the creation of this release
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsCR">Candidate Recommendation</a> published at 2024-09-30.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsCR">Candidate Recommendation</a> published at 2024-10-03.
 -->
-	This application profile has the status Candidate Recommendation published at 2024-09-30.
+	This application profile has the status Candidate Recommendation published at 2024-10-03.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/CHANGELOG.html">Changelog</a>.
@@ -23042,7 +23042,7 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
   
   <section id="inspire-and-iso-19115-mappings" class="appendix">
 
-<h2>INSPIRE and ISO 19115 Mappings</h2>
+<h2>INSPIRE and ISO&nbsp;19115 Mappings</h2>
 
 <section id="objectives">
 
@@ -23264,243 +23264,408 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 <p>In the following table, the starred elements (*) are used to indicate the corresponding metadata element in the core of [[ISO-19115]]. For each element, it is indicated whether the element is mandatory (<abbr title="mandatory">M</abbr>), optional (<abbr title="optional">O</abbr>), conditional (<abbr title="conditional">C</abbr>), or recommended (<abbr title="recommended">R</abbr>) in either specification.</p>
 
 <table id="table-overview-of-bindings-for-geodcat-ap-core" class="simple">
-<!--
+  <!--
 <caption>Table 2: Element bindings for GeoDCAT-AP Core</caption>
 -->
-<thead>
-<tr>
-<th>
-<p>INSPIRE metadata</p>
-<p>*ISO&nbsp;19115:2003 Core Profile</p>
-</th>
-<th>DCAT-AP Property</th>
-<th>Domain</th>
-<th>Range</th>
-<th>Comments</th>
-</tr>
-</thead>
-<tbody>
+  <thead>
+    <tr>
+      <th>
+        <p>INSPIRE metadata</p>
+        <p>* ISO&nbsp;19115:2003 Core</p>
+        <p>ISO&nbsp;19115 path</p>
+      </th>
+      <th>Required in INSPIRE</th>
+      <th>DCAT-AP Property</th>
+      <th>Domain</th>
+      <th>Range</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody>
 
-<tr>
-<td>
-<p>Resource title (M)</p>
-<p>*Dataset title (M)</p>
-</td>
-<td><code>dct:title</code> (M)</td>
-<td>
+    <tr>
+      <td>
+        <p>Resource title (M)</p>
+        <p>* Resource title (M)</p>
+        <p>
+          <code>./identificationInfo/citation/title</code>
+        </p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>dct:title</code> (M)</td>
+      <td>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <code>rdfs:Literal</code>
+      </td>
+      <td>See <a href="#resource-title---dataset-title"></a>
+      </td>
+    </tr>
 
-<p><code>dcat:Catalog</code></p>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><code>rdfs:Literal</code></td>
-<td>See <a href="#resource-title---dataset-title"></a></td>
-</tr>
+    <tr>
+      <td>
+        <p>Resource abstract (M)</p>
+        <p>* Abstract describing the resource (M)</p>
+        <p>
+          <code>./identificationInfo/abstract</code>
+        </p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>dct:description</code> (M)</td>
+      <td>
 
-<tr>
-<td>
-<p>Resource abstract (M)</p>
-<p>*Abstract describing the dataset (M)</p>
-</td>
-<td><code>dct:description</code> (M)</td>
-<td>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <code>rdfs:Literal</code>
+      </td>
+      <td>See <a href="#resource-abstract---abstract-describing-the-dataset"></a>
+      </td>
+    </tr>
 
-<p><code>dcat:Catalog</code></p>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><code>rdfs:Literal</code></td>
-<td>See <a href="#resource-abstract---abstract-describing-the-dataset"></a></td>
-</tr>
+    <tr>
+      <td>
+        <p>Resource type (M)</p>
+        <p>* Hierarchy Level (C) (not in ISO&nbsp;19115 core)</p>
+        <p><code>./hierarchyLevel</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <p>
+          <code>rdf:type</code> (M)</p>
+        <p>(see also binding for GeoDCAT-AP Extended)</p>
+      </td>
+      <td>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <p>
+          <code>rdfs:Class</code>
+        </p>
+        <p>(values <code>dcat:Catalog</code>,
+          <code>dcat:Dataset</code>,
+          <code>dcat:DatasetSeries</code>,
+          <code>dcat:DataService</code>)
+        </p>
+      </td>
+      <td>See <a href="#resource-type---not-in-iso19115-core"></a>.
+        <code>dcat:Catalog</code> can be used for catalogue / discovery services, in addition to <code>dcat:DataService</code>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p>Resource type (M)</p>
-<p>*not in ISO&nbsp;19115 core</p>
-</td>
-<td>
-<p><code>rdf:type</code> (M)</p>
-<p>(see also binding for GeoDCAT-AP Extended)</p>
-</td>
-<td>
+    <tr>
+      <td>
+        <p>Resource locator (C)</p>
+        <p>* On-line resource (O)</p>
+        <p><code>./distributionInfo/transferOptions/onLine/linkage</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>See <a href="#resource-locator---on-line-resource"></a>. The defined encoding depends whether the resource is a service or a dataset or dataset series. Also, the value of the function code (<code>CI_OnlineFunctionCode</code>) is to be taken into account.</td>
+    </tr>
 
-<p><code>dcat:Catalog</code></p>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-<td>
-<p><code>rdfs:Class</code></p>
-<p>(values <code>dcat:Catalog</code>, <code>dcat:Dataset</code>, <code>dcat:DatasetSeries</code>, <code>dcat:DataService</code>)</p>
-</td>
-<td>See <a href="#resource-type---not-in-iso19115-core"></a>. <!--[[DCAT-AP-20200608]] does not distinguish between datasets and dataset series.--> <code>dcat:Catalog</code> can be used for catalogue / discovery services, in addition to <code>dcat:DataService</code>.</td>
-</tr>
+    <tr>
+      <td>
+        <blockquote>
+          <p>For services</p>
+        </blockquote>
+      </td>
+      <td></td>
+      <td>
+        <p>
+          <code>foaf:homepage</code>
+        </p>
+        <p>
+          <code>dcat:endpointURL</code>
+        </p>
+        <p>
+          <code>dcat:endpointDescription</code>
+        </p>
+      </td>
+      <td>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <code>foaf:Document</code>
+        <code>rdfs:Resource</code>
+        <code>foaf:Document</code>
+      </td>
+      <td>See <a href="#resource-locator---on-line-resource"></a>. Properties <code>dcat:endpointURL</code> and <code>dcat:endpointDescription</code> are used when the resource locator points to a service endpoint.</td>
+    </tr>
 
-<tr>
-<td>
-<p>Resource locator (C)</p>
-<p>*On-line resource (O)</p>
-</td>
-<td></td>
-<td></td>
-<td></td>
-<td>See <a href="#resource-locator---on-line-resource"></a>. The defined encoding depends whether the resource is a service or a dataset or data series. Also, the value of the function code (<code>CI_OnlineFunctionCode</code>) is to be taken into account.</td>
-</tr>
+    <tr>
+      <td>
+        <blockquote>
+          <p>For dataset and dataset series (function code not provided)</p>
+        </blockquote>
+      </td>
+      <td></td>
+      <td>
+        <code>dcat:landingPage</code> (O)</td>
+      <td>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+      </td>
+      <td>
+        <code>foaf:Document</code>
+      </td>
+      <td>See <a href="#resource-locator---on-line-resource"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<blockquote>
-<p>For services</p>
-</blockquote>
-</td>
-<td>
-<p><code>foaf:homepage</code></p>
-<p><code>dcat:endpointURL</code></p>
-<p><code>dcat:endpointDescription</code></p>
-</td>
-<td>
+    <tr>
+      <td>
+        <blockquote>
+          <p>For dataset and dataset series (‘download’ function code)</p>
+        </blockquote>
+      </td>
+      <td></td>
+      <td>
+        <code>dcat:accessURL</code> (M)</td>
+      <td>
+        <code>dcat:Distribution</code>
+      </td>
+      <td>
+        <code>rdfs:Resource</code>
+      </td>
+      <td>See <a href="#resource-locator---on-line-resource"></a>. Property <code>dcat:accessURL</code> is also used whenever the resource locator points to a service endpoint.</td>
+    </tr>
 
-<p><code>dcat:Catalog</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-<td>
-<code>foaf:Document</code>
-<code>rdfs:Resource</code>
-<code>foaf:Document</code>
-</td>
-<td>See <a href="#resource-locator---on-line-resource"></a>. Properties <code>dcat:endpointURL</code> and <code>dcat:endpointDescription</code> are used when the resource locator points to a service endpoint.</td>
-</tr>
+    <tr>
+      <td>
+        <blockquote>
+          <p>For dataset and dataset series (‘information’ function code)</p>
+        </blockquote>
+      </td>
+      <td></td>
+      <td>
+        <code>foaf:page</code>
+      </td>
+      <td>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+      </td>
+      <td>
+        <code>foaf:Document</code>
+      </td>
+      <td>See <a href="#resource-locator---on-line-resource"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<blockquote>
-<p>For dataset and data series (function code not provided)</p>
-</blockquote>
-</td>
-<td><code>dcat:landingPage</code> (O)</td>
-<td>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-</td>
-<td><code>foaf:Document</code></td>
-<td>See <a href="#resource-locator---on-line-resource"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <blockquote>
+          <p>For dataset and dataset series (‘offlineAccess’ function code)</p>
+        </blockquote>
+      </td>
+      <td></td>
+      <td>
+        <code>dcat:accessURL</code> (M)</td>
+      <td>
+        <code>dcat:Distribution</code>
+      </td>
+      <td>
+        <code>rdfs:Resource</code>
+      </td>
+      <td>See <a href="#resource-locator---on-line-resource"></a>. Property <code>dcat:accessURL</code> is also used whenever the resource locator points to a service endpoint.</td>
+    </tr>
 
-<tr>
-<td>
-<blockquote>
-<p>For dataset and data series (‘download’ function code)</p>
-</blockquote>
-</td>
-<td><code>dcat:accessURL</code> (M)</td>
-<td><code>dcat:Distribution</code></td>
-<td><code>rdfs:Resource</code></td>
-<td>See <a href="#resource-locator---on-line-resource"></a>. Property <code>dcat:accessURL</code> is also used whenever the resource locator points to a service endpoint.</td>
-</tr>
+    <tr>
+      <td>
+        <blockquote>
+          <p>For dataset and dataset series (‘order’ function code)</p>
+        </blockquote>
+      </td>
+      <td></td>
+      <td>
+        <code>dcat:accessURL</code> (M)</td>
+      <td>
+        <code>dcat:Distribution</code>
+      </td>
+      <td>
+        <code>rdfs:Resource</code>
+      </td>
+      <td>See <a href="#resource-locator---on-line-resource"></a>. Property <code>dcat:accessURL</code> is also used whenever the resource locator points to a service endpoint.</td>
+    </tr>
 
-<tr>
-<td>
-<blockquote>
-<p>For dataset and data series (‘information’ function code)</p>
-</blockquote>
-</td>
-<td><code>foaf:page</code></td>
-<td>
+    <tr>
+      <td>
+        <blockquote>
+          <p>For dataset and dataset series (‘search’ function code)</p>
+        </blockquote>
+      </td>
+      <td></td>
+      <td>
+        <code>foaf:page</code>
+      </td>
+      <td>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+      </td>
+      <td>
+        <code>foaf:Document</code>
+      </td>
+      <td>See <a href="#resource-locator---on-line-resource"></a>.
+      </td>
+    </tr>
 
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-</td>
-<td><code>foaf:Document</code></td>
-<td>See <a href="#resource-locator---on-line-resource"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Unique resource identifier (M)</p>
+        <p>* Dataset identifier (O) (not in ISO&nbsp;19115 core)</p>
+        <p><code>./identificationInfo/citation/identifier</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+      </td>
+      <td>
+        <code>dct:identifier</code> (O)</td>
+      <td>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+      </td>
+      <td>
+        <code>rdfs:Literal</code>
+      </td>
+      <td>See <a href="#unique-resource-identifier---not-in-iso19115-core"></a>. In RDF, this could also be represented as the URI of the dataset or of the dataset series.</td>
+    </tr>
 
-<tr>
-<td>
-<blockquote>
-<p>For dataset and data series (‘offlineAccess’ function code)</p>
-</blockquote>
-</td>
-<td><code>dcat:accessURL</code> (M)</td>
-<td><code>dcat:Distribution</code></td>
-<td><code>rdfs:Resource</code></td>
-<td>See <a href="#resource-locator---on-line-resource"></a>. Property <code>dcat:accessURL</code> is also used whenever the resource locator points to a service endpoint.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Coupled resource (O)</p>
+        <p>* Operates On (O) (not in ISO&nbsp;19115 core)</p>
+        <p><code>./identificationInfo/operatesOn</code></p>
+      </td>
+      <td>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>dcat:servesDataset</code> (O)</td>
+      <td>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+      </td>
+      <td>See <a href="#coupled-resource---not-in-iso19115-core"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<blockquote>
-<p>For dataset and data series (‘order’ function code)</p>
-</blockquote>
-</td>
-<td><code>dcat:accessURL</code> (M)</td>
-<td><code>dcat:Distribution</code></td>
-<td><code>rdfs:Resource</code></td>
-<td>See <a href="#resource-locator---on-line-resource"></a>. Property <code>dcat:accessURL</code> is also used whenever the resource locator points to a service endpoint.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Resource language (C)</p>
+        <p>* Dataset language (M)</p>
+        <p><code>./identificationInfo/language</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+      </td>
+      <td>
+        <code>dct:language</code> (O for <code>dcat:Dataset</code> and <code>dcat:DatasetSeries</code>, R for <code>dcat:Catalog</code>)
+      </td>
+      <td>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+      </td>
+      <td>
+        <code>dct:LinguisticSystem</code>
+      </td>
+      <td>See <a href="#resource-language-and-metadata-language---dataset-language-and-metadata-language"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<blockquote>
-<p>For dataset and data series (‘search’ function code)</p>
-</blockquote>
-</td>
-<td><code>foaf:page</code></td>
-<td>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-</td>
-<td><code>foaf:Document</code></td>
-<td>See <a href="#resource-locator---on-line-resource"></a>.</td>
-</tr>
-
-<tr>
-<td>
-<p>Unique resource identifier (M)</p>
-<p>*not in ISO&nbsp;19115 core</p>
-</td>
-<td><code>dct:identifier</code> (O)</td>
-<td>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-</td>
-<td><code>rdfs:Literal</code></td>
-<td>See <a href="#unique-resource-identifier---not-in-iso19115-core"></a>. In RDF, this could also be represented as the URI of the dataset or of the dataset series.</td>
-</tr>
-
-<tr>
-  <td>
-  <p>Coupled resource (O)</p>
-  <p>*not in ISO&nbsp;19115 core</p>
-  </td>
-  <td><code>dcat:servesDataset</code> (O)</td>
-  <td>
-  <p><code>dcat:DataService</code></p>
-  </td>
-  <td>
-    <p><code>dcat:Dataset</code></p>
-    <p><code>dcat:DatasetSeries</code></p>
-  </td>
-  <td>See <a href="#coupled-resource---not-in-iso19115-core"></a>.</td>
-</tr>
-  
-<tr>
-<td>
-<p>Resource language (C)</p>
-<p>*Dataset language (M)</p>
-</td>
-<td><code>dct:language</code> (O for <code>dcat:Dataset</code> and <code>dcat:DatasetSeries</code>, R for <code>dcat:Catalog</code>)</td>
-<td>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-<p><code>dcat:Catalog</code></p>
-</td>
-<td><code>dct:LinguisticSystem</code></td>
-<td>See <a href="#resource-language-and-metadata-language---dataset-language-and-metadata-language"></a>.</td>
-</tr>
-
-<!--
+    <!--
 <tr>
 <td><p>Spatial data service type (M)</p>
 <p>*not in ISO&nbsp;19115 core</p></td>
@@ -23513,287 +23678,575 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 </tr>
 -->
 
-<tr>
-<td>
-<p>Keyword value (M)</p>
-<p>*not in ISO&nbsp;19115 core</p>
-</td>
-<td><p><code>dcat:keyword</code> (R)</p>
-<p><code>dcat:theme</code> (R)</p>
-<p>(see also binding for GeoDCAT-AP Extended)</p></td>
-<td>
-<p><code>dcat:Dataset</code></p>
-</td>
-<td><code>rdfs:Literal</code></td>
-<td>
-<p>See <a href="#topic-category-originating-controlled-vocabulary-and-keyword-value---dataset-topic-category"></a>. For datasets and data series, <code>dcat:keyword</code> is used for free keywords; <code>dcat:theme</code> for controlled vocabularies.</p>
-<p>Keywords whose controlled vocabulary is the one of the INSPIRE spatial data themes are mapped to <code>dcat:theme</code>, and expressed by the corresponding URI in the INSPIRE Registry. See controlled vocabulary for theme in <a href="#controlled-vocabularies-to-be-used"></a>.</p>
-<p>For services a syntax binding is provided in GeoDCAT-AP Extended only.</p>
-</td>
-</tr>
+    <tr>
+      <td>
+        <p>Keyword (M)</p>
+        <p>* Keyword (O) (not in ISO&nbsp;19115 core)</p>
+        <p><code>./identificationInfo/descriptiveKeywords/keyword</code></p>
+        <p><code>./identificationInfo/descriptiveKeywords/Type</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <p>
+          <code>dcat:keyword</code> (R)</p>
+        <p>
+          <code>dcat:theme</code> (R)</p>
+        <p>(see also binding for GeoDCAT-AP Extended)</p>
+      </td>
+      <td>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+      </td>
+      <td>
+        <code>rdfs:Literal</code>
+      </td>
+      <td>
+        <p>See <a href="#topic-category-originating-controlled-vocabulary-and-keyword-value---dataset-topic-category"></a>. For datasets and dataset series, <code>dcat:keyword</code> is used for free keywords; <code>dcat:theme</code> for controlled vocabularies.</p>
+        <p>Keywords whose controlled vocabulary is the one of the INSPIRE spatial data themes are mapped to <code>dcat:theme</code>, and expressed by the corresponding URI in the INSPIRE Registry. See controlled vocabulary for theme in <a href="#controlled-vocabularies-to-be-used"></a>.
+        </p>
+        <p>For services a syntax binding is provided in GeoDCAT-AP Extended only.</p>
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p>Geographic bounding box (M)</p>
-<p>*Geographic location of the dataset (by four coordinates or by geographic identifier) (C)</p>
-</td>
-<td><code>dct:spatial</code> (O)</td>
-<td>
-<p><code>dcat:Catalog</code></p>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-</td>
-<td><code>dct:Location</code></td>
-<td>See <a href="#geographic-bounding-box---geographic-location-of-the-dataset-by-4-coordinates-or-by-geographic-identifier"></a> on the preferred format to be used in RDF for the representation of geometries.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Geographic bounding box (M)</p>
+        <p>* Geographic location of the resource (C)</p>
+        <p><code>./identificationInfo/extent/geographicElement/westBoundLongitude</code></p>
+        <p><code>./identificationInfo/extent/geographicElement/eastBoundLongitude</code></p>
+        <p><code>./identificationInfo/extent/geographicElement/southBoundLatitude</code></p>
+        <p><code>./identificationInfo/extent/geographicElement/northBoundLatitude</code></p>
+        <p><code>./identificationInfo/extent/geographicElement/geographicIdentifier</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>dct:spatial</code> (O)</td>
+      <td>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+      </td>
+      <td>
+        <code>dct:Location</code>
+      </td>
+      <td>See <a href="#geographic-bounding-box---geographic-location-of-the-dataset-by-4-coordinates-or-by-geographic-identifier"></a> on the preferred format to be used in RDF for the representation of geometries.</td>
+    </tr>
 
-<tr>
-<td>
-<p>Temporal extent (C)</p>
-<p>*Additional extent information for the dataset (vertical and temporal) (O)</p>
-</td>
-<td><code>dct:temporal</code> (O)</td>
-<td>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-</td>
-<td><code>dct:PeriodOfTime</code></td>
-<td>See <a href="#temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Temporal reference (C)</p>
+        <p>* Temporal extent (O)</p>
+        <p><code>./identificationInfo/extent/temporalElement/extent</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>dct:temporal</code> (O)</td>
+      <td>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+      </td>
+      <td>
+        <code>dct:PeriodOfTime</code>
+      </td>
+      <td>See <a href="#temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p>Date of publication (C)</p>
-<p>*Dataset reference date (M) – publication</p>
-</td>
-<td><code>dct:issued</code> (R for <code>dcat:Catalog</code> and O for <code>dcat:Dataset</code> and <code>dcat:DatasetSeries</code>)</td>
-<td>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-<p><code>dcat:Catalog</code></p>
-</td>
-<td><code><a href="#TemporalLiteral">Temporal Literal</a></code></td>
-<td>See <a href="#temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Temporal reference - Date of publication (C)</p>
+        <p>* Dataset reference date (M) – publication</p>
+        <p><code>./identificationInfo/citation/date (date type = 'publication')</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>dct:issued</code> (R for <code>dcat:Catalog</code> and O for <code>dcat:Dataset</code> and <code>dcat:DatasetSeries</code>)
+      </td>
+      <td>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+      </td>
+      <td>
+        <code>
+          <a href="#TemporalLiteral">Temporal Literal</a>
+        </code>
+      </td>
+      <td>See <a href="#temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p>Date of last revision (C)</p>
-<p>*Dataset reference date (M) – revision</p>
-</td>
-<td><code>dct:modified</code> (R for <code>dcat:Catalog</code> and O for <code>dcat:Dataset</code> and <code>dcat:DatasetSeries</code>)</td>
-<td>
-<p><code>dcat:Catalog</code></p>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-</td>
-<td><code><a href="#TemporalLiteral">Temporal Literal</a></code></td>
-<td>See <a href="#temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Temporal reference - Date of last revision (C)</p>
+        <p>* Dataset reference date (M) – revision</p>
+        <p><code>./identificationInfo/citation/date (date type = 'revision')</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>dct:modified</code> (R for <code>dcat:Catalog</code> and O for <code>dcat:Dataset</code> and <code>dcat:DatasetSeries</code>)
+      </td>
+      <td>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+      </td>
+      <td>
+        <code>
+          <a href="#TemporalLiteral">Temporal Literal</a>
+        </code>
+      </td>
+      <td>See <a href="#temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p>Spatial resolution (C)</p>
-<p>*Spatial resolution of the dataset (O)</p>
-</td>
-<td>
-<p><code>dcat:spatialResolutionInMeters</code> (O)</p>
-</td>
-<td>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-</td>
-<td><code>xsd:decimal</code></td>
-<td>See <a href="#spatial-resolution-spatial-resolution-of-the-dataset"></a>. Property <code>dcat:spatialResolutionInMeters</code> can only be used when spatial resolution is expressed as distance in metres.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Spatial resolution (C)</p>
+        <p>* Spatial resolution (O)</p>
+        <p><code>./identificationInfo/spatialResolution/equivalentScale/denominator</code></p>
+        <p><code>./identificationInfo/spatialResolution/distance</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <p>
+          <code>dcat:spatialResolutionInMeters</code> (O)</p>
+      </td>
+      <td>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+      </td>
+      <td>
+        <code>xsd:decimal</code>
+      </td>
+      <td>See <a href="#spatial-resolution-spatial-resolution-of-the-dataset"></a>. Property <code>dcat:spatialResolutionInMeters</code> can only be used when spatial resolution is expressed as distance in metres.</td>
+    </tr>
 
-<tr>
-<td>
-<p>Lineage (M)</p>
-<p>*Lineage (O)</p>
-</td>
-<td><code>dct:provenance</code> (O)</td>
-<td>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-</td>
-<td><code>dct:ProvenanceStatement</code></td>
-<td>See <a href="#lineage---lineage"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Lineage (M)</p>
+        <p>* Lineage (O)</p>
+        <p><code>./dataQualityInfo/lineage/statement</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+      </td>
+      <td>
+        <code>dct:provenance</code> (O)</td>
+      <td>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+      </td>
+      <td>
+        <code>dct:ProvenanceStatement</code>
+      </td>
+      <td>See <a href="#lineage---lineage"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p>Conformity (M)</p>
-<p>*not in ISO&nbsp;19115 core</p>
-</td>
-<td><p><code>dct:conformsTo</code> (O)</p>
-<p>(see also binding for GeoDCAT-AP Extended)</p></td>
-<td>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-</td>
-<td><code>dct:Standard</code></td>
-<td>See <a href="#conformity-and-data-quality---not-in-iso19115-core"></a>. <code>dct:conformsTo</code> can be used to specify only one of the cases supported in INSPIRE. i.e., when the degree of conformity is “conformant”.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Conformity (M)</p>
+        <p>* Report result (O) (not in ISO&nbsp;19115 core)</p>
+        <p><code>./dataQualityInfo/report/result (applied to DQ_DomainConsistency)</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <p>
+          <code>dct:conformsTo</code> (O)</p>
+        <p>(see also binding for GeoDCAT-AP Extended)</p>
+      </td>
+      <td>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+      </td>
+      <td>
+        <code>dct:Standard</code>
+      </td>
+      <td>See <a href="#conformity-and-data-quality---not-in-iso19115-core"></a>.        <code>dct:conformsTo</code> can be used to specify only one of the cases supported in INSPIRE. i.e., when the degree of conformity is “conformant”.</td>
+    </tr>
 
-<tr>
-<td>
-<p>Conformity Specification (M)</p>
-<p>*not in ISO&nbsp;19115 core</p>
-</td>
-<td>
-<p><code>dct:title</code> (R)</p>
-<p><code>dct:issued</code> (R)</p>
-<p><code>dct:modified</code> (O)</p>
-<p><code>dct:created</code> (O)</p>
-<p>(see also binding for GeoDCAT-AP Extended)</p>
-</td>
-<td><code>rdfs:Resource</code></td>
-<td><code><a href="#TemporalLiteral">Temporal Literal</a></code></td>
-<td>See <a href="#conformity-and-data-quality---not-in-iso19115-core"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Conformity Specification (M)</p>
+        <p>* Report result - Specification (O) (not in ISO&nbsp;19115 core)</p>
+        <p><code>./dataQualityInfo/report/result/specification (applied to DQ_DomainConsistency)</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <p>
+          <code>dct:title</code> (R)</p>
+        <p>
+          <code>dct:issued</code> (R)</p>
+        <p>
+          <code>dct:modified</code> (O)</p>
+        <p>
+          <code>dct:created</code> (O)</p>
+        <p>(see also binding for GeoDCAT-AP Extended)</p>
+      </td>
+      <td>
+        <code>rdfs:Resource</code>
+      </td>
+      <td>
+        <code>
+          <a href="#TemporalLiteral">Temporal Literal</a>
+        </code>
+      </td>
+      <td>See <a href="#conformity-and-data-quality---not-in-iso19115-core"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p>Conditions for access and use (M)</p>
-<p>*not in ISO&nbsp;19115 core</p>
-</td>
-<td><code>dct:license</code> (R for <code>dcat:Catalog</code> and <code>dcat:Distribution</code>, O for <code>dcat:DataService</code>), <code>dct:rights</code> (O)</td>
-<td>
-<p><code>dcat:Catalog</code></p>
-<p><code>dcat:Distribution</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-</td>
-<td><code>dct:LicenseDocument</code></td>
-<td>See <a href="#conditions-for-access-and-use-and-limitations-on-public-access-use-limitation-and-access-other-constraints"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Conditions for access and use (M)</p>
+        <p>* Restrictions on the access and use of the resource (O) (not in ISO&nbsp;19115 core)</p>
+        <p>either: <code>./identificationInfo/resourceConstraints/accessConstraints (gmd:MD_RestrictionCode = 'otherRestrictions')</code></p>
+        <p>Or: <code>./identificationInfo/resourceConstraints/useConstraints (gmd:MD_RestrictionCode = 'otherRestrictions')</code></p>
+        <p>And: <code>./identificationInfo/resourceConstraints/otherConstraints</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>dct:license</code> (R for <code>dcat:Catalog</code> and <code>dcat:Distribution</code>, O for <code>dcat:DataService</code>),        <code>dct:rights</code> (O)</td>
+      <td>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+        <p>
+          <code>dcat:Distribution</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+    </td>
+    <td>
+      <code>dct:LicenseDocument</code>
+    </td>
+    <td>See <a href="#conditions-for-access-and-use-and-limitations-on-public-access-use-limitation-and-access-other-constraints"></a>.
+    </td>
+  </tr>
 
-<tr>
-<td>
-<p>Limitations on public access (C)</p>
-<p>*not in ISO&nbsp;19115 core</p>
-</td>
-<td><code>dct:accessRights</code> (O)</td>
-<td>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><code>dct:RightsStatement</code></td>
-<td>See <a href="#conditions-for-access-and-use-and-limitations-on-public-access-use-limitation-and-access-other-constraints"></a>.</td>
-</tr>
+  <tr>
+    <td>
+      <p>Limitations on public access (C)</p>
+      <p>* Restrictions on the access and use of the resource (O) (not in ISO&nbsp;19115 core)</p>
+      <p><code>./identificationInfo/resourceConstraints/accessConstraints (gmd:MD_RestrictionCode = 'otherRestrictions')</code></p>
+      <p>And: <code>./identificationInfo/resourceConstraints/otherConstraints</code> (with <code>gmx:Anchor</code> pointing to one values from the LimitationsOnPublicAccess INSPIRE code list)</p>
+    </td>
+    <td>
+      <p>Datasets</p>
+      <p>Dataset series</p>
+      <p>Services</p>
+    </td>
+    <td>
+      <code>dct:accessRights</code> (O)</td>
+    <td>
+      <p>
+        <code>dcat:DataService</code>
+      </p>
+    </td>
+    <td>
+      <code>dct:RightsStatement</code>
+    </td>
+    <td>See <a href="#conditions-for-access-and-use-and-limitations-on-public-access-use-limitation-and-access-other-constraints"></a>.
+    </td>
+  </tr>
 
-<tr>
-<td rowspan="2">
-<p>Responsible party (M)</p>
-<p>*Dataset responsible party (O)</p>
-</td>
-<td>
-<p><code>dct:publisher</code> (M)</p>
-<p><code>dct:creator</code> (O)</p>
-</td>
-<td>
-<p><code>dcat:Catalog</code></p>
-</td>
-<td>
-<p><code>foaf:Agent</code></p>
-</td>
-<td rowspan="2">See <a href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"></a>. [[DCAT-AP-3]] supports only 3 of the 11 responsible party roles supported in INSPIRE. GeoDCAT-AP Extended makes use of [[PROV-O]] to specify information concerning provenance not covered in [[DCAT-AP-3]].</td>
-</tr>
+  <tr>
+    <td rowspan="2">
+      <p>Responsible party (M)</p>
+      <p>* Responsible party (O)</p>
+      <p><code>./identificationInfo/pointOfContact</code></p>
+    </td>
+    <td rowspan="2">
+      <p>Datasets</p>
+      <p>Dataset series</p>
+      <p>Services</p>
+    </td>
+    <td>
+      <p>
+        <code>dct:publisher</code> (M)</p>
+      <p>
+        <code>dct:creator</code> (O)</p>
+    </td>
+    <td>
+      <p>
+        <code>dcat:Catalog</code>
+      </p>
+    </td>
+    <td>
+      <p>
+        <code>foaf:Agent</code>
+      </p>
+    </td>
+    <td rowspan="2">See <a href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"></a>. [[DCAT-AP-3]] supports only 3 of the 11 responsible party roles supported in INSPIRE. GeoDCAT-AP Extended makes use of [[PROV-O]] to specify information concerning provenance not covered in [[DCAT-AP-3]].</td>
+  </tr>
 
-<tr>
-<td>
-<p><code>dct:publisher</code> (R)</p>
-<p><code>dcat:contactPoint</code> (R)</p>
-<p><code>dct:creator</code> (O)</p>
-</td>
-<td>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-</td>
-<td>
-<p><code>foaf:Agent</code></p>
-<p><code>vcard:Kind</code></p>
-<p><code>foaf:Agent</code></p>
-</td>
-</tr>
+  <tr>
+    <td>
+      <p>
+        <code>dct:publisher</code> (R)</p>
+      <p>
+        <code>dcat:contactPoint</code> (R)</p>
+      <p>
+        <code>dct:creator</code> (O)</p>
+    </td>
+    <td>
+      <p>
+        <code>dcat:Dataset</code>
+      </p>
+      <p>
+        <code>dcat:DatasetSeries</code>
+      </p>
+    </td>
+    <td>
+      <p>
+        <code>foaf:Agent</code>
+      </p>
+      <p>
+        <code>vcard:Kind</code>
+      </p>
+      <p>
+        <code>foaf:Agent</code>
+      </p>
+    </td>
+  </tr>
 
-<tr>
-<td>
-<p>Encoding (M)</p>
-<p>*Distribution format (O)</p>
-</td>
-<td><code>dct:format</code> (R), <code>dcat:mediaType</code> (O)</td>
-<td><code>dcat:Distribution</code></td>
-<td><code>dct:MediaTypeOrExtent</code></td>
-<td>See <a href="#encoding---distribution-format"></a>. See controlled vocabularies for encoding in <a href="#controlled-vocabularies-to-be-used"></a>.</td>
-</tr>
+  <tr>
+    <td>
+      <p>Encoding (M)</p>
+      <p>* Distribution format (O)</p>
+      <p><code>./identificationInfo/distributionFormat/name</code></p>
+    </td>
+    <td>
+      <p>Datasets</p>
+      <p>Dataset series</p>
+    </td>
+    <td>
+      <code>dct:format</code> (R), <code>dcat:mediaType</code> (O)</td>
+    <td>
+      <code>dcat:Distribution</code>
+    </td>
+    <td>
+      <code>dct:MediaTypeOrExtent</code>
+    </td>
+    <td>See <a href="#encoding---distribution-format"></a>. See controlled vocabularies for encoding in <a href="#controlled-vocabularies-to-be-used"></a>.
+    </td>
+  </tr>
 
-<tr>
-<td>
-<p>Maintenance information (R)</p>
-<p>*not in ISO&nbsp;19115 core</p>
-</td>
-<td><code>dct:accrualPeriodicity</code> (O)</td>
-<td>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-</td>
-<td><code>dct:Frequency</code></td>
-<td>See <a href="#maintenance-information---not-in-iso19115-core"></a>.</td>
-</tr>
+  <tr>
+    <td>
+      <p>Maintenance information (R)</p>
+      <p>* Maintenance and update frequency (not in ISO&nbsp;19115 core)</p>
+      <p><code>./identificationInfo/resourceMaintenance/maintenanceAndUpdateFrequency</code></p>
+    </td>
+    <td>
+    </td>
+    <td>
+      <code>dct:accrualPeriodicity</code> (O)</td>
+    <td>
+      <p>
+        <code>dcat:Dataset</code>
+      </p>
+      <p>
+        <code>dcat:DatasetSeries</code>
+      </p>
+    </td>
+    <td>
+      <code>dct:Frequency</code>
+    </td>
+    <td>See <a href="#maintenance-information---not-in-iso19115-core"></a>.
+    </td>
+  </tr>
 
-<tr>
-<td><em>*Metadata standard</em></td>
-<td><code>dct:conformsTo</code> (R)</td>
-<td>
-<p><code>dcat:CatalogRecord</code></p></td>
-<td><code>dct:Standard</code></td>
-<td>See <a href="#metadata-standard-name-metadata-standard-version"></a>. This element, not existing in ISO 19115, is just meant to provide the context for the specification of the metadata standard name and version.</td>
-</tr>
+  <tr>
+    <td>
+      <p>- not in [[INSPIRE-MD-REG]] -</p>
+      <p><em>* Metadata standard</em></p>
+      <p><em>implicit element</em></p>
+    </td>
+    <td>
+    </td>
+    <td>
+      <code>dct:conformsTo</code> (R)</td>
+    <td>
+      <p>
+        <code>dcat:CatalogRecord</code>
+      </p>
+    </td>
+    <td>
+      <code>dct:Standard</code>
+    </td>
+    <td>See <a href="#metadata-standard-name-metadata-standard-version"></a>. This element, not existing in ISO 19115, is just meant to provide the context for the specification of the metadata standard name and version.</td>
+  </tr>
 
-<tr>
-<td>*Metadata standard name (O)</td>
-<td><code>dct:title</code></td>
-<td>
-<p><code>dct:Standard</code></p></td>
-<td><code>rdfs:Literal</code></td>
-<td>See <a href="#metadata-standard-name-metadata-standard-version"></a>.</td>
-</tr>
+  <tr>
+    
+    <td>
+      <p>- not in [[INSPIRE-MD-REG]] -</p>
+      <p>* Metadata standard name (O)</p>
+      <p><code>./metadataStandardName</code></p>
+    </td>
+    <td></td>
+    <td>
+      <code>dct:title</code>
+    </td>
+    <td>
+      <p>
+        <code>dct:Standard</code>
+      </p>
+    </td>
+    <td>
+      <code>rdfs:Literal</code>
+    </td>
+    <td>See <a href="#metadata-standard-name-metadata-standard-version"></a>.
+    </td>
+  </tr>
 
-<tr>
-<td>*Metadata standard version (O)</td>
-<td><code>owl:versionInfo</code></td>
-<td>
-<p><code>dct:Standard</code></p>
-</td>
-<td><code>rdfs:Literal</code></td>
-<td>See <a href="#metadata-standard-name-metadata-standard-version"></a>. This can be part of the information specified for metadata standard name.</td>
-</tr>
+  <tr>
+    <td>
+      <p>- not in [[INSPIRE-MD-REG]] -</p>
+      <p>* Metadata standard version (O)</p>
+      <p><code>./metadataStandardVersion</code></p>
+    </td>
+    <td></td>
+    <td>
+      <code>owl:versionInfo</code>
+    </td>
+    <td>
+      <p>
+        <code>dct:Standard</code>
+      </p>
+    </td>
+    <td>
+      <code>rdfs:Literal</code>
+    </td>
+    <td>See <a href="#metadata-standard-name-metadata-standard-version"></a>. This can be part of the information specified for metadata standard name.</td>
+  </tr>
 
-<tr>
-<td>
-<p>Metadata date (M)</p>
-<p>*Metadata date stamp (M)</p>
-</td>
-<td><code>dct:modified</code> (M)</td>
-<td>
-<p><code>dcat:CatalogRecord</code></p></td>
-<td><code><a href="#TemporalLiteral">Temporal Literal</a></code></td>
-<td>See <a href="#temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp"></a>.</td>
-</tr>
+  <tr>
+    <td>
+      <p>Metadata date (M)</p>
+      <p>* Metadata date stamp (M)</p>
+      <p><code>./dateStamp</code></p>
+    </td>
+    <td>
+      <p>Datasets</p>
+      <p>Dataset series</p>
+      <p>Services</p>
+    </td>
+    <td>
+      <code>dct:modified</code> (M)</td>
+    <td>
+      <p>
+        <code>dcat:CatalogRecord</code>
+      </p>
+    </td>
+    <td>
+      <code>
+        <a href="#TemporalLiteral">Temporal Literal</a>
+      </code>
+    </td>
+    <td>See <a href="#temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp"></a>.
+    </td>
+  </tr>
 
-<tr>
-<td>
-<p>Metadata language (M)</p>
-<p>*Metadata language (C)</p>
-</td>
-<td><code>dct:language</code> (O)</td>
-<td>
-<p><code>dcat:CatalogRecord</code></p>
-</td>
-<td><code>dct:LinguisticSystem</code></td>
-<td>See <a href="#resource-language-and-metadata-language---dataset-language-and-metadata-language"></a>.</td>
-</tr>
+  <tr>
+    <td>
+      <p>Metadata language (M)</p>
+      <p>* Metadata language (C)</p>
+      <p><code>./language</code></p>
+    </td>
+    <td>
+      <p>Datasets</p>
+      <p>Dataset series</p>
+      <p>Services</p>
+    </td>
+    <td>
+      <code>dct:language</code> (O)</td>
+    <td>
+      <p>
+        <code>dcat:CatalogRecord</code>
+      </p>
+    </td>
+    <td>
+      <code>dct:LinguisticSystem</code>
+    </td>
+    <td>See <a href="#resource-language-and-metadata-language---dataset-language-and-metadata-language"></a>.
+    </td>
+  </tr>
 
 </tbody>
 </table>
@@ -23812,474 +24265,973 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 
 <ol>
 <li><p><strong>Partial coverage by a [[DCAT-AP-3]] binding</strong>: This concerns conformity (only degree of conformity equal to &ldquo;conformant&rdquo; is supported) and responsible organisation (only responsible party roles creator, publisher, and point of contact are supported).</p></li>
-<li><p><strong>Subsumption by a GeoDCAT-AP RDF binding</strong>: ISO metadata elements available in GeoDCAT-AP Core, but for which only a many-to-one mapping is supported in [[DCAT-AP-3]].<!-- This concerns resource types, since the [[VOCAB-DCAT-2]] notion of dataset encompasses both the ISO/INSPIRE notions of data set and data series.--></p></li>
+<li><p><strong>Subsumption by a GeoDCAT-AP RDF binding</strong>: ISO metadata elements available in GeoDCAT-AP Core, but for which only a many-to-one mapping is supported in [[DCAT-AP-3]].</p></li>
 </ol>
 
 <p>In order to preserve the original semantics, the extended mapping profile of GeoDCAT-AP defines additional alignments to those included in GeoDCAT-AP Core. The two sets of alignments are not mutually exclusive, and can coexist without creating conflicts.</p>
 
 <table id="table-overview-of-bindings-for-geodcat-ap-extended" class="simple">
-<!--
+  <!--
 <caption>Table 3: Element bindings for GeoDCAT-AP Extended</caption>
 -->
-<thead>
-<tr>
-<th>
-<p>INSPIRE metadata</p>
-<p>*ISO&nbsp;19115:2003 Core Profile</p>
-</th>
-<th>Property</th>
-<th>Domain</th>
-<th>Range</th>
-<th>Comments</th>
-</tr>
-</thead>
-<tbody>
+  <thead>
+    <tr>
+      <th>
+        <p>INSPIRE metadata</p>
+        <p>* ISO&nbsp;19115:2003 Core Profile</p>
+        <p>ISO&nbsp;19115 path</p>
+      </th>
+      <th>Required in INSPIRE</th>
+      <th>Property</th>
+      <th>Domain</th>
+      <th>Range</th>
+      <th>Comments</th>
+    </tr>
+  </thead>
+  <tbody>
 
-<tr>
-<td>
-<p>Resource type (M)</p>
-<p>*not in ISO&nbsp;19115 core</p>
-</td>
-<td><code>geodcatap:resourceType</code></td>
-<td>
-<p><code>dcat:Catalog</code></p>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><p><code>skos:Concept</code></p></td>
-<td>See <a href="#resource-type---not-in-iso19115-core"></a> and the controlled vocabulary for resource type in <a href="#controlled-vocabularies-to-be-used"></a>. [[DCAT-AP-3]] supports the use of <code>dct:type</code> on <code>dct:Dataset</code> only.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Resource type (M)</p>
+        <p>* Hierarchy Level (C) (not in ISO&nbsp;19115 core)</p>
+        <p><code>./hierarchyLevel</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>geodcatap:resourceType</code>
+      </td>
+      <td>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <p>
+          <code>skos:Concept</code>
+        </p>
+      </td>
+      <td>See <a href="#resource-type---not-in-iso19115-core"></a> and the controlled vocabulary for resource type in <a href="#controlled-vocabularies-to-be-used"></a>. [[DCAT-AP-3]] supports the use of <code>dct:type</code> on <code>dct:Dataset</code> only.</td>
+    </tr>
 
-<tr>
-<td>
-<p>Unique resource identifier (M)</p>
-<p>*not in ISO&nbsp;19115 core</p>
-</td>
-<td><code>dct:identifier</code></td>
-<td>
-<p><code>dcat:Catalog</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><code>rdfs:Literal</code></td>
-<td>See <a href="#unique-resource-identifier---not-in-iso19115-core"></a>. In RDF, this could also be represented as the URI of the resource.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Unique resource identifier (M)</p>
+        <p>* Dataset identifier (O) (not in ISO&nbsp;19115 core)</p>
+        <p><code>./identificationInfo/citation/identifier</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+      </td>
+      <td>
+        <code>dct:identifier</code>
+      </td>
+      <td>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <code>rdfs:Literal</code>
+      </td>
+      <td>See <a href="#unique-resource-identifier---not-in-iso19115-core"></a>. In RDF, this could also be represented as the URI of the resource.</td>
+    </tr>
 
-<tr>
-<td>
-<p>Resource language (C)</p>
-<p>*Dataset language (M)</p>
-</td>
-<td><code>dct:language</code></td>
-<td>
-<p><code>dcat:DatasetSeries</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><code>dct:LinguisticSystem</code></td>
-<td>See <a href="#resource-language-and-metadata-language---dataset-language-and-metadata-language"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Resource language (C)</p>
+        <p>* Dataset language (M)</p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+      </td>
+      <td>
+        <code>dct:language</code>
+      </td>
+      <td>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <code>dct:LinguisticSystem</code>
+      </td>
+      <td>See <a href="#resource-language-and-metadata-language---dataset-language-and-metadata-language"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p>Topic category (M)</p>
-<p>*Dataset topic category (M)</p>
-</td>
-<td><code>geodcatap:topicCategory</code></td>
-<td>
-<p><code>dcat:Catalog</code></p>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-<td>
-<p><code>skos:Concept</code></p></td>
-<td>See <a href="#topic-category-originating-controlled-vocabulary-and-keyword-value---dataset-topic-category"></a> and the controlled vocabulary for topic category in <a href="#controlled-vocabularies-to-be-used"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Topic category (M)</p>
+        <p>* Dataset topic category (M)</p>
+        <p><code>./identificationInfo/topicCategory</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+      </td>
+      <td>
+        <code>geodcatap:topicCategory</code>
+      </td>
+      <td>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <p>
+          <code>skos:Concept</code>
+        </p>
+      </td>
+      <td>See <a href="#topic-category-originating-controlled-vocabulary-and-keyword-value---dataset-topic-category"></a> and the controlled vocabulary for topic category in <a href="#controlled-vocabularies-to-be-used"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p>Spatial data service type (M)</p>
-<p>*not in ISO&nbsp;19115 core</p>
-</td>
-<td><code>geodcatap:serviceType</code></td>
-<td>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><p><code>skos:Concept</code></p></td>
-<td>See <a href="#resource-type---not-in-iso19115-core"></a>. See controlled vocabulary for spatial data service type in <a href="#controlled-vocabularies-to-be-used"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Spatial data service type (M)</p>
+        <p>* Service type (not in ISO&nbsp;19115 core)</p>
+      </td>
+      <td>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>geodcatap:serviceType</code>
+      </td>
+      <td>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <p>
+          <code>skos:Concept</code>
+        </p>
+      </td>
+      <td>See <a href="#resource-type---not-in-iso19115-core"></a>. See controlled vocabulary for spatial data service type in <a href="#controlled-vocabularies-to-be-used"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p>Keyword value (M)</p>
-<p>*not in ISO&nbsp;19115 core</p>
-</td>
-<td>
-<p><code>dcat:keyword</code></p>
-<p><code>dcat:theme</code></p>
-<p><code>geodcatap:serviceCategory</code></p>
-</td>
-<td>
-<p><code>dcat:Catalog</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-<td>
-<p><code>rdfs:Literal</code></p>
-<p><code>skos:Concept</code></p>
-</td>
-<td>See <a href="#topic-category-originating-controlled-vocabulary-and-keyword-value---dataset-topic-category"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Keyword (M)</p>
+        <p>* Keyword (O) (not in ISO&nbsp;19115 core)</p>
+        <p><code>./identificationInfo/descriptiveKeywords/keyword</code></p>
+        <p><code>./identificationInfo/descriptiveKeywords/Type</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <p>
+          <code>dcat:keyword</code>
+        </p>
+        <p>
+          <code>dcat:theme</code>
+        </p>
+        <p>
+          <code>geodcatap:serviceCategory</code>
+        </p>
+      </td>
+      <td>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <p>
+          <code>rdfs:Literal</code>
+        </p>
+        <p>
+          <code>skos:Concept</code>
+        </p>
+      </td>
+      <td>See <a href="#topic-category-originating-controlled-vocabulary-and-keyword-value---dataset-topic-category"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p>Originating controlled vocabulary (C)</p>
-<p>*not in ISO&nbsp;19115 core</p>
-</td>
-<td><code>skos:inScheme</code></td>
-<td><code>skos:Concept</code></td>
-<td><code>skos:ConceptScheme</code>
-</td>
-<td>See <a href="#topic-category-originating-controlled-vocabulary-and-keyword-value---dataset-topic-category"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Originating controlled vocabulary (C)</p>
+        <p>* Thesaurus name (not in ISO&nbsp;19115 core)</p>
+        <p><code>./identificationInfo/descriptiveKeywords/thesaurusName</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>skos:inScheme</code>
+      </td>
+      <td>
+        <code>skos:Concept</code>
+      </td>
+      <td>
+        <code>skos:ConceptScheme</code>
+      </td>
+      <td>See <a href="#topic-category-originating-controlled-vocabulary-and-keyword-value---dataset-topic-category"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p>Geographic bounding box (M)</p>
-<p>*Geographic location of the dataset (by four coordinates or by geographic identifier) (C)</p>
-</td>
-<td><code>dct:spatial</code> (O)</td>
-<td>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><code>dct:Location</code></td>
-<td>See <a href="#geographic-bounding-box---geographic-location-of-the-dataset-by-4-coordinates-or-by-geographic-identifier"></a> on the preferred format to be used in RDF for the representation of geometries.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Geographic bounding box (M)</p>
+        <p>* Geographic location of the resource (C)</p>
+        <p><code>./identificationInfo/extent/geographicElement/westBoundLongitude</code></p>
+        <p><code>./identificationInfo/extent/geographicElement/eastBoundLongitude</code></p>
+        <p><code>./identificationInfo/extent/geographicElement/southBoundLatitude</code></p>
+        <p><code>./identificationInfo/extent/geographicElement/northBoundLatitude</code></p>
+        <p><code>./identificationInfo/extent/geographicElement/geographicIdentifier</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>dct:spatial</code> (O)</td>
+      <td>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <code>dct:Location</code>
+      </td>
+      <td>See <a href="#geographic-bounding-box---geographic-location-of-the-dataset-by-4-coordinates-or-by-geographic-identifier"></a> on the preferred format to be used in RDF for the representation of geometries.</td>
+    </tr>
 
-<tr>
-<td>
-<p>Temporal extent (C)</p>
-<p>*Additional extent information for the dataset (vertical and temporal) (O)</p>
-</td>
-<td><code>dct:temporal</code> (O)</td>
-<td>
-<p><code>dcat:Catalog</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><code>dct:PeriodOfTime</code></td>
-<td>See <a href="#temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Temporal reference (C)</p>
+        <p>* Temporal extent (O)</p>
+        <p><code>./identificationInfo/extent/temporalElement/extent</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>dct:temporal</code> (O)</td>
+      <td>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <code>dct:PeriodOfTime</code>
+      </td>
+      <td>See <a href="#temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p>Date of publication (C)</p>
-<p>*Dataset reference date (M) – publication</p>
-</td>
-<td><code>dct:issued</code></td>
-<td>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><a href="#TemporalLiteral">Temporal Literal</a></td>
-<td>See <a href="#temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Temporal reference - Date of publication (C)</p>
+        <p>* Dataset reference date (M) – publication</p>
+        <p><code>./identificationInfo/citation/date (date type = 'publication')</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>dct:issued</code>
+      </td>
+      <td>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <a href="#TemporalLiteral">Temporal Literal</a>
+      </td>
+      <td>See <a href="#temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p>Date of last revision (C)</p>
-<p>*Dataset reference date (M) – revision</p>
-</td>
-<td><code>dct:modified</code></td>
-<td>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><a href="#TemporalLiteral">Temporal Literal</a></td>
-<td>See <a href="#temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Temporal reference - Date of last revision (C)</p>
+        <p>* Dataset reference date (M) – revision</p>
+        <p><code>./identificationInfo/citation/date (date type = 'revision')</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>dct:modified</code>
+      </td>
+      <td>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <a href="#TemporalLiteral">Temporal Literal</a>
+      </td>
+      <td>See <a href="#temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p>Date of creation (C)</p>
-<p>*Dataset reference date (M) - creation</p>
-</td>
-<td><code>dct:created</code></td>
-<td>
-<p><code>dcat:Catalog</code></p>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><a href="#TemporalLiteral">Temporal Literal</a></td>
-<td>See <a href="#temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Temporal reference - Date of creation (C)</p>
+        <p>* Resource reference date (M) - creation</p>
+        <p><code>./identificationInfo/citation/date (date type = 'creation')</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>dct:created</code>
+      </td>
+      <td>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <a href="#TemporalLiteral">Temporal Literal</a>
+      </td>
+      <td>See <a href="#temporal-reference-and-metadata-date-additional-extent-information-for-the-dataset-vertical-and-temporal-and-metadata-date-stamp"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td rowspan="3">
-<p>Spatial resolution (C)</p>
-<p>*Spatial resolution of the dataset (O)</p>
-</td>
-<td>
-<p><code>dcat:spatialResolutionInMeters</code></p>
-</td>
-<td>
-<p><code>dcat:DatasetSeries</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><code>xsd:decimal</code></td>
-<td rowspan="3">See <a href="#spatial-resolution-spatial-resolution-of-the-dataset"></a>. Property <code>dcat:spatialResolutionInMeters</code> can only be used when spatial resolution is expressed as distance in metres. Property <code>dqv:hasQualityMeasurement</code> can be used to specify any type of spatial resolution. Property <code>geodcatap:spatialResolutionAsText</code> is used only in case spatial resolution is specified as free-text.</td>
-</tr>
+    <tr>
+      <td rowspan="3">
+        <p>Spatial resolution (C)</p>
+        <p>* Spatial resolution (O)</p>
+        <p><code>./identificationInfo/spatialResolution/equivalentScale/denominator</code></p>
+        <p><code>./identificationInfo/spatialResolution/distance</code></p>
+      </td>
+      <td rowspan="3">
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <p>
+          <code>dcat:spatialResolutionInMeters</code>
+        </p>
+      </td>
+      <td>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <code>xsd:decimal</code>
+      </td>
+      <td rowspan="3">See <a href="#spatial-resolution-spatial-resolution-of-the-dataset"></a>. Property <code>dcat:spatialResolutionInMeters</code> can only be used when spatial resolution is expressed as distance in metres. Property <code>dqv:hasQualityMeasurement</code> can be used to specify any type of spatial resolution. Property <code>geodcatap:spatialResolutionAsText</code> is used only in case spatial resolution is specified as free-text.</td>
+    </tr>
 
-<tr>
-<td>
-<p><code>dqv:hasQualityMeasurement</code></p>
-</td>
-<td rowspan="2">
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><code>dqv:QualityMeasurement</code></td>
-</tr>
+    <tr>
+      <td>
+        <p>
+          <code>dqv:hasQualityMeasurement</code>
+        </p>
+      </td>
+      <td rowspan="2">
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <code>dqv:QualityMeasurement</code>
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p><code>geodcatap:spatialResolutionAsText</code></p>
-</td>
-<td><code>rdfs:Literal</code></td>
-</tr>
+    <tr>
+      <td>
+        <p>
+          <code>geodcatap:spatialResolutionAsText</code>
+        </p>
+      </td>
+      <td>
+        <code>rdfs:Literal</code>
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p>Conformity (M)</p>
-<p>*not in ISO&nbsp;19115 core</p>
-</td>
-<td><code>prov:wasUsedBy</code></td>
-<td>
-<p><code>prov:Entity</code></p>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><code>prov:Activity</code></td>
-<td>See <a href="#conformity-and-data-quality---not-in-iso19115-core"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Conformity (M)</p>
+        <p>* Report result (O) (not in ISO&nbsp;19115 core)</p>
+        <p><code>./dataQualityInfo/report/result (applied to DQ_DomainConsistency)</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>prov:wasUsedBy</code>
+      </td>
+      <td>
+        <p>
+          <code>prov:Entity</code>
+        </p>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <code>prov:Activity</code>
+      </td>
+      <td>See <a href="#conformity-and-data-quality---not-in-iso19115-core"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p>Conformity Specification (M)</p>
-<p>*not in ISO&nbsp;19115 core</p>
-</td>
-<td><code>prov:wasDerivedFrom</code></td>
-<td><code>prov:Entity</code></td>
-<td><code>prov:Entity</code></td>
-<td>See <a href="#conformity-and-data-quality---not-in-iso19115-core"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Conformity Specification (M)</p>
+        <p>* Report result - Specification (O) (not in ISO&nbsp;19115 core)</p>
+        <p><code>./dataQualityInfo/report/result/specification (applied to DQ_DomainConsistency)</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>prov:wasDerivedFrom</code>
+      </td>
+      <td>
+        <code>prov:Entity</code>
+      </td>
+      <td>
+        <code>prov:Entity</code>
+      </td>
+      <td>See <a href="#conformity-and-data-quality---not-in-iso19115-core"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p>Conformity degree (M)</p>
-<p>*not in ISO&nbsp;19115 core</p>
-</td>
-<td><code>prov:generated</code></td>
-<td><code>prov:Activity</code></td>
-<td><code>prov:Entity</code></td>
-<td>See <a href="#conformity-and-data-quality---not-in-iso19115-core"></a> and the controlled vocabulary for conformity degree in <a href="#controlled-vocabularies-to-be-used"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Conformity degree (M)</p>
+        <p>* Conformance Indication (M) (not in ISO&nbsp;19115 core)</p>
+        <p><code>./dataQualityInfo/report/result/pass(applied to DQ_DomainConsistency)</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>prov:generated</code>
+      </td>
+      <td>
+        <code>prov:Activity</code>
+      </td>
+      <td>
+        <code>prov:Entity</code>
+      </td>
+      <td>See <a href="#conformity-and-data-quality---not-in-iso19115-core"></a> and the controlled vocabulary for conformity degree in <a href="#controlled-vocabularies-to-be-used"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p>Topological Consistency (C)</p>
-<p>*not in ISO&nbsp;19115 core</p>
-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>See <a href="#conformity-and-data-quality---not-in-iso19115-core"></a>. No syntax binding is provided for data quality, other than data conformity.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Topological Consistency (C)</p>
+        <p>* Topological consistency (O) (not in ISO&nbsp;19115 core)</p>
+        <p><code>./dataQualityInfo/report (applied to DQ_TopologicalConsistency)</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+      </td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>See <a href="#conformity-and-data-quality---not-in-iso19115-core"></a>. No syntax binding is provided for data quality, other than data conformity.</td>
+    </tr>
 
-<tr>
-<td>
-<p>Data Quality – Logical Consistency – Conceptual Consistency, Domain Consistency – (R)</p>
-<p>*not in ISO&nbsp;19115 core</p>
-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>See <a href="#conformity-and-data-quality---not-in-iso19115-core"></a>. No syntax binding is provided for data quality, other than conformity.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Data Quality – Logical Consistency – Conceptual Consistency, Domain Consistency – (R)</p>
+        <p>* Domain consistency (O) (not in ISO&nbsp;19115 core)</p>
+        <p><code>./dataQualityInfo/report (applied to DQ_DomainConsistency)</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>See <a href="#conformity-and-data-quality---not-in-iso19115-core"></a>. No syntax binding is provided for data quality, other than conformity.</td>
+    </tr>
 
-<tr>
-<td>
-<p>Limitations on public access (C)</p>
-<p>*not in ISO&nbsp;19115 core</p>
-</td>
-<td><code>dct:accessRights</code> (O), <code>dct:rights</code> (O)</td>
-<td>
-<p><code>dcat:Catalog</code></p>
-<p><code>dcat:Distribution</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><code>dct:RightsStatement</code></td>
-<td>See <a href="#conditions-for-access-and-use-and-limitations-on-public-access-use-limitation-and-access-other-constraints"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Limitations on public access (C)</p>
+        <p>* Restrictions on the access and use of the resource (O) (not in ISO&nbsp;19115 core)</p>
+        <p><code>./identificationInfo/resourceConstraints/accessConstraints (gmd:MD_RestrictionCode = 'otherRestrictions')</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>dct:accessRights</code> (O), <code>dct:rights</code> (O)</td>
+      <td>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+        <p>
+          <code>dcat:Distribution</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <code>dct:RightsStatement</code>
+      </td>
+      <td>See <a href="#conditions-for-access-and-use-and-limitations-on-public-access-use-limitation-and-access-other-constraints"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td rowspan="4">
-<p>Responsible party (M)</p>
-<p>*Dataset responsible party (O)</p>
-</td>
-<td>
-<p><code>dct:publisher</code></p>
-<p><code>dct:creator</code></p>
-</td>
-<td>
-<p><code>dcat:CatalogRecord</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><code>foaf:Agent</code></td>
-<td rowspan="4">See <a href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"></a>.</td>
-</tr>
+    <tr>
+      <td rowspan="4">
+        <p>Responsible party (M)</p>
+        <p>* Responsible party (O)</p>
+        <p><code>./identificationInfo/pointOfContact</code></p>
+      </td>
+      <td rowspan="4">
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+        <td>
+        <p>
+          <code>dct:publisher</code>
+        </p>
+        <p>
+          <code>dct:creator</code>
+        </p>
+      </td>
+      <td>
+        <p>
+          <code>dcat:CatalogRecord</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <code>foaf:Agent</code>
+      </td>
+      <td rowspan="4">See <a href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td><code>dcat:contactPoint</code></td>
-<td>
-<p><code>dcat:Catalog</code></p>
-<p><code>dcat:CatalogRecord</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><code>vcard:Kind</code></td>
-</tr>
+    <tr>
+      <td>
+        <code>dcat:contactPoint</code>
+      </td>
+      <td>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+        <p>
+          <code>dcat:CatalogRecord</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <code>vcard:Kind</code>
+      </td>
+    </tr>
 
-<tr>
-<td>
-<p><code>dct:rightsHolder</code></p>
-<p><code>geodcatap:custodian</code></p>
-<p><code>geodcatap:distributor</code></p>
-<p><code>geodcatap:originator</code></p>
-<p><code>geodcatap:principalInvestigator</code></p>
-<p><code>geodcatap:processor</code></p>
-<p><code>geodcatap:resourceProvider</code></p>
-<p><code>geodcatap:user</code></p>
-</td>
-<td>
-<p><code>dcat:Catalog</code></p>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-<p><code>dcat:CatalogRecord</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><code>foaf:Agent</code></td>
-</tr>
+    <tr>
+      <td>
+        <p>
+          <code>dct:rightsHolder</code>
+        </p>
+        <p>
+          <code>geodcatap:custodian</code>
+        </p>
+        <p>
+          <code>geodcatap:distributor</code>
+        </p>
+        <p>
+          <code>geodcatap:originator</code>
+        </p>
+        <p>
+          <code>geodcatap:principalInvestigator</code>
+        </p>
+        <p>
+          <code>geodcatap:processor</code>
+        </p>
+        <p>
+          <code>geodcatap:resourceProvider</code>
+        </p>
+        <p>
+          <code>geodcatap:user</code>
+        </p>
+      </td>
+      <td>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+        <p>
+          <code>dcat:CatalogRecord</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <code>foaf:Agent</code>
+      </td>
+    </tr>
 
-<tr>
-<td><code>prov:qualifiedAttribution</code></td>
-<td>
-<p><code>prov:Entity</code></p>
-<p><code>dcat:Catalog</code></p>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-<p><code>dcat:CatalogRecord</code></p>
-<p><code>dcat:DataService</code></p>
-</td>
-<td><code>prov:Attribution</code></td>
-</tr>
+    <tr>
+      <td>
+        <code>prov:qualifiedAttribution</code>
+      </td>
+      <td>
+        <p>
+          <code>prov:Entity</code>
+        </p>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+        <p>
+          <code>dcat:CatalogRecord</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+      </td>
+      <td>
+        <code>prov:Attribution</code>
+      </td>
+    </tr>
 
-<tr>
-<td>Responsible party role (M)</td>
-<td><code>dcat:hadRole</code></td>
-<td>
-<p><code>prov:Attribution</code></p>
-</td>
-<td><code>dcat:Role</code></td>
-<td>See <a href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"></a> and controlled vocabulary for responsible party role in <a href="#controlled-vocabularies-to-be-used"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Responsible party role (M)</p>
+        <p>* Responsible party role</p>
+        <p><code>./identificationInfo/pointOfContact/role</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>dcat:hadRole</code>
+      </td>
+      <td>
+        <p>
+          <code>prov:Attribution</code>
+        </p>
+      </td>
+      <td>
+        <code>dcat:Role</code>
+      </td>
+      <td>See <a href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"></a> and controlled vocabulary for responsible party role in <a href="#controlled-vocabularies-to-be-used"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td>*Metadata file identifier (O)</td>
-<td><code>dct:identifier</code></td>
-<td>
-<p><code>dcat:CatalogRecord</code></p></td>
-<td><code>rdfs:Literal</code></td>
-<td>See <a href="#metadata-file-identifier"></a>. In RDF, this could also be represented as the URI of the metadata / catalogue record.</td>
-</tr>
+    <tr>
+      <td>
+        <p>- not in [[INSPIRE-MD-REG]] -</p>
+        <p>* Metadata file identifier (O)</p>
+        <p><code>./fileIdentifier</code></p>
+      </td>
+      <td></td>
+      <td>
+        <code>dct:identifier</code>
+      </td>
+      <td>
+        <p>
+          <code>dcat:CatalogRecord</code>
+        </p>
+      </td>
+      <td>
+        <code>rdfs:Literal</code>
+      </td>
+      <td>See <a href="#metadata-file-identifier"></a>. In RDF, this could also be represented as the URI of the metadata / catalogue record.</td>
+    </tr>
 
-<tr>
-<td rowspan="2">
-<p>Metadata point of contact (M)</p>
-<p>*Metadata point of contact (M)</p>
-</td>
-<td><code>dcat:contactPoint</code></td>
-<td>
-<p><code>dcat:CatalogRecord</code></p></td>
-<td><code>vcard:Kind</code></td>
-<td rowspan="2">See <a href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"></a>.</td>
-</tr>
+    <tr>
+      <td rowspan="2">
+        <p>Metadata point of contact (M)</p>
+        <p>* Metadata point of contact (M)</p>
+        <p><code>./contact</code></p>
+      </td>
+      <td rowspan="2">
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>      
+      <td>
+        <code>dcat:contactPoint</code>
+      </td>
+      <td>
+        <p>
+          <code>dcat:CatalogRecord</code>
+        </p>
+      </td>
+      <td>
+        <code>vcard:Kind</code>
+      </td>
+      <td rowspan="2">See <a href="#responsible-party-and-metadata-point-of-contact---dataset-responsible-party-and-metadata-point-of-contact"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td><code>prov:qualifiedAttribution</code></td>
-<td>
-<p><code>dcat:CatalogRecord</code></p></td>
-<td><code>prov:Attribution</code></td>
-</tr>
+    <tr>
+      <td>
+        <code>prov:qualifiedAttribution</code>
+      </td>
+      <td>
+        <p>
+          <code>dcat:CatalogRecord</code>
+        </p>
+      </td>
+      <td>
+        <code>prov:Attribution</code>
+      </td>
+    </tr>
 
-<!--removed in GeoDCAT-AP 3.0.0 -->
-<tr>
-<td>*Metadata character set (C)</td>
-<td><p>-</p></td>
-<td><p>-</p></td>
-<td><p>-</p></td>
-<td>Metadata in GeoDCAT-AP are always in UTF-8. See <a href="#character-encoding---dataset-character-set-and-metadata-character-set"></a>.</td>
-</tr>
+    <!--removed in GeoDCAT-AP 3.0.0 -->
+    <tr>
+      <td>
+        <p>- not in [[INSPIRE-MD-REG]] -</p>
+        <p>* Metadata character set (C)</p>
+        <p><code>./characterSet</code></p>
+      </td>
+      <td></td>
+      <td>
+        <p>-</p>
+      </td>
+      <td>
+        <p>-</p>
+      </td>
+      <td>
+        <p>-</p>
+      </td>
+      <td>Metadata in GeoDCAT-AP are always in UTF-8. See <a href="#character-encoding---dataset-character-set-and-metadata-character-set"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td><p>Coordinate Reference System (M)</p>
-<p>*Reference System (0)</p></td>
-<td><code>geodcatap:referenceSystem</code></td>
-<td>
-<p><code>dcat:Catalog</code></p>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-<p><code>dcat:DataService</code></p>
-<p><code>dcat:Distribution</code></p>
-</td>
-<td><code>skos:Concept</code></td>
-<td>See <a href="#coordinate-reference-systems-and-temporal-reference-systems-reference-system"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Coordinate Reference System (M)</p>
+        <p>* Reference System (O) (spatial component)</p>
+        <p><code>./referenceSystemInfo</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+        <p>Services</p>
+      </td>
+      <td>
+        <code>geodcatap:referenceSystem</code>
+      </td>
+      <td>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+        <p>
+          <code>dcat:Distribution</code>
+        </p>
+      </td>
+      <td>
+        <code>skos:Concept</code>
+      </td>
+      <td>See <a href="#coordinate-reference-systems-and-temporal-reference-systems-reference-system"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td><p>Temporal Reference System (C)</p>
-<p>*Reference System (0)</p></td>
-<td><code>geodcatap:referenceSystem</code></td>
-<td>
-<p><code>dcat:Catalog</code></p>
-<p><code>dcat:Dataset</code></p>
-<p><code>dcat:DatasetSeries</code></p>
-<p><code>dcat:DataService</code></p>
-<p><code>dcat:Distribution</code></p>
-</td>
-<td><code>skos:Concept</code></td>
-<td>See <a href="#coordinate-reference-systems-and-temporal-reference-systems-reference-system"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Temporal Reference System (C)</p>
+        <p>* Reference System (O) (temporal component)</p>
+        <p><code>./referenceSystemInfo</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+      </td>
+      <td>
+        <code>geodcatap:referenceSystem</code>
+      </td>
+      <td>
+        <p>
+          <code>dcat:Catalog</code>
+        </p>
+        <p>
+          <code>dcat:Dataset</code>
+        </p>
+        <p>
+          <code>dcat:DatasetSeries</code>
+        </p>
+        <p>
+          <code>dcat:DataService</code>
+        </p>
+        <p>
+          <code>dcat:Distribution</code>
+        </p>
+      </td>
+      <td>
+        <code>skos:Concept</code>
+      </td>
+      <td>See <a href="#coordinate-reference-systems-and-temporal-reference-systems-reference-system"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td><p>Character Encoding (C)</p>
-<p>*Dataset character set (C)</p></td>
-<td><code>cnt:characterEncoding</code></td>
-<td><p><code>dcat:Distribution</code></p></td>
-<td><code>rdfs:Literal</code></td>
-<td>See <a href="#character-encoding---dataset-character-set-and-metadata-character-set"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Character Encoding (C)</p>
+        <p>* Dataset character set (C)</p>
+        <p><code>./identificationInfo/characterSet</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+      </td>
+      <td>
+        <code>cnt:characterEncoding</code>
+      </td>
+      <td>
+        <p>
+          <code>dcat:Distribution</code>
+        </p>
+      </td>
+      <td>
+        <code>rdfs:Literal</code>
+      </td>
+      <td>See <a href="#character-encoding---dataset-character-set-and-metadata-character-set"></a>.
+      </td>
+    </tr>
 
-<tr>
-<td><p>Spatial representation type – (M)</p>
-<p>*Spatial representation type (O)</p></td>
-<td><code>adms:representationTechnique</code></td>
-<td><code>dcat:Distribution</code></td>
-<td><code>skos:Concept</code></td>
-<td>See <a href="#spatial-representation-type-spatial-representation-type"></a>.</td>
-</tr>
+    <tr>
+      <td>
+        <p>Spatial representation type – (M)</p>
+        <p>* Spatial representation type (O)</p>
+        <p><code>./identificationInfo/spatialRepresentationType</code></p>
+      </td>
+      <td>
+        <p>Datasets</p>
+        <p>Dataset series</p>
+      </td>
+      <td>
+        <code>adms:representationTechnique</code>
+      </td>
+      <td>
+        <code>dcat:Distribution</code>
+      </td>
+      <td>
+        <code>skos:Concept</code>
+      </td>
+      <td>See <a href="#spatial-representation-type-spatial-representation-type"></a>.
+      </td>
+    </tr>
 
-</tbody>
+  </tbody>
 </table>
 
 </section>
@@ -24291,328 +25243,329 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 <h1>Overview of metadata elements covered by GeoDCAT-AP</h1>
 
 <p>The following table provides an overview of the metadata elements in the INSPIRE metadata schema and in the core of [[ISO-19115]], and the available mappings in [[DCAT-AP-3]] and GeoDCAT-AP. Columns titled with “obligation” specify whether the corresponding metadata elements are mandatory (M), conditional (C), and optional (O) (where “conditional” means “mandatory under given conditions”).</p>
-<p>Note that the mappings covered by [[DCAT-AP-3]] correspond to those defined in GeoDCAT-AP <em>core</em>, whereas those covered only by GeoDCAT-AP correspond to those defined in the GeoDCAT-AP <em>extended</em>.</p>
+<p>Note that the mappings covered by [[DCAT-AP-3]] correspond to those defined in GeoDCAT-AP <em>core</em>, whereas those covered only by GeoDCAT-AP correspond to those defined in the GeoDCAT-AP <em>extended</em>.
+</p>
 
 <table id="table-overview-of-metadata-elements-covered-by-geodcat-ap" class="simple">
 <!--
 <caption>Table 5: Overview of covered metadata elements</caption>
 -->
 <thead>
-<tr>
-<th>INSPIRE</th>
-<th>Obligation</th>
-<th>ISO 19115 Core</th>
-<th>Obligation</th>
-<th>DCAT-AP</th>
-<th>GeoDCAT-AP</th>
-</tr>
+  <tr>
+    <th>INSPIRE</th>
+    <th>Obligation</th>
+    <th>ISO 19115 Core</th>
+    <th>Obligation</th>
+    <th>DCAT-AP</th>
+    <th>GeoDCAT-AP</th>
+  </tr>
 </thead>
 <tbody>
 
-<tr>
-<td>Metadata point of contact</td>
-<td>M</td>
-<td>Metadata point of contact</td>
-<td>M</td>
-<td></td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Metadata point of contact</td>
+    <td>M</td>
+    <td>Metadata point of contact</td>
+    <td>M</td>
+    <td></td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Metadata date</td>
-<td>M</td>
-<td>Metadata date stamp</td>
-<td>M</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Metadata date</td>
+    <td>M</td>
+    <td>Metadata date stamp</td>
+    <td>M</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Metadata language</td>
-<td>M</td>
-<td>Metadata language</td>
-<td>C</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Metadata language</td>
+    <td>M</td>
+    <td>Metadata language</td>
+    <td>C</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td></td>
-<td></td>
-<td>Metadata character set</td>
-<td>C</td>
-<td></td>
-<!-- Removed in GeoDCAT-AP 3.0.0-->
-<td>Always UTF-8</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Metadata file identifier</td>
-<td>O</td>
-<td></td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>Metadata character set</td>
+    <td>C</td>
+    <td></td>
+    <!-- Removed in GeoDCAT-AP 3.0.0-->
+    <td>Always UTF-8</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>Metadata file identifier</td>
+    <td>O</td>
+    <td></td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td></td>
-<td></td>
-<td>Metadata standard name</td>
-<td>O</td>
-<td></td>
-<td>Yes</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Metadata standard version</td>
-<td>O</td>
-<td></td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>Metadata standard name</td>
+    <td>O</td>
+    <td></td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>Metadata standard version</td>
+    <td>O</td>
+    <td></td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Resource title</td>
-<td>M</td>
-<td>Dataset title</td>
-<td>M</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Resource title</td>
+    <td>M</td>
+    <td>Dataset title</td>
+    <td>M</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Temporal reference - Date of creation / publication / last revision</td>
-<td>C</td>
-<td>Dataset reference date</td>
-<td>M</td>
-<td>Partially (creation date not included)</td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Temporal reference - Date of creation / publication / last revision</td>
+    <td>C</td>
+    <td>Dataset reference date</td>
+    <td>M</td>
+    <td>Partially (creation date not included)</td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Resource abstract</td>
-<td>M</td>
-<td>Abstract describing the dataset</td>
-<td>M</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Resource abstract</td>
+    <td>M</td>
+    <td>Abstract describing the dataset</td>
+    <td>M</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Resource language</td>
-<td>C</td>
-<td>Dataset language</td>
-<td>M</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Resource language</td>
+    <td>C</td>
+    <td>Dataset language</td>
+    <td>M</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Topic category</td>
-<td>M</td>
-<td>Dataset topic category</td>
-<td>M</td>
-<td></td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Topic category</td>
+    <td>M</td>
+    <td>Dataset topic category</td>
+    <td>M</td>
+    <td></td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Geographic bounding box</td>
-<td>M</td>
-<td>Geographic location of the dataset (by four coordinates or by geographic identifier)</td>
-<td>C</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Geographic bounding box</td>
+    <td>M</td>
+    <td>Geographic location of the dataset (by four coordinates or by geographic identifier)</td>
+    <td>C</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Character encoding</td>
-<td>C</td>
-<td>Dataset character set</td>
-<td>C</td>
-<td></td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Character encoding</td>
+    <td>C</td>
+    <td>Dataset character set</td>
+    <td>C</td>
+    <td></td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Temporal reference - Temporal extent</td>
-<td>C</td>
-<td>Additional extent information for the dataset (vertical and temporal)</td>
-<td>O</td>
-<td>Partially (temporal extent only)</td>
-<td>Partially (temporal extent only)</td>
-</tr>
+  <tr>
+    <td>Temporal reference - Temporal extent</td>
+    <td>C</td>
+    <td>Additional extent information for the dataset (vertical and temporal)</td>
+    <td>O</td>
+    <td>Partially (temporal extent only)</td>
+    <td>Partially (temporal extent only)</td>
+  </tr>
 
-<tr>
-<td>Lineage</td>
-<td>M</td>
-<td>Lineage</td>
-<td>O</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Lineage</td>
+    <td>M</td>
+    <td>Lineage</td>
+    <td>O</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Spatial representation type</td>
-<td>M</td>
-<td>Spatial representation type</td>
-<td>O</td>
-<td></td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Spatial representation type</td>
+    <td>M</td>
+    <td>Spatial representation type</td>
+    <td>O</td>
+    <td></td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Encoding</td>
-<td>M</td>
-<td>Distribution format</td>
-<td>O</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Encoding</td>
+    <td>M</td>
+    <td>Distribution format</td>
+    <td>O</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Spatial resolution</td>
-<td>C</td>
-<td>Spatial resolution of the dataset</td>
-<td>O</td>
-<td>Yes (but only as horizontal ground distance)</td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Spatial resolution</td>
+    <td>C</td>
+    <td>Spatial resolution of the dataset</td>
+    <td>O</td>
+    <td>Yes (but only as horizontal ground distance)</td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Responsible organisation</td>
-<td>M</td>
-<td>Dataset responsible party</td>
-<td>O</td>
-<td>Partially (only 3 of the 11 responsible party roles are supported)</td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Responsible organisation</td>
+    <td>M</td>
+    <td>Dataset responsible party</td>
+    <td>O</td>
+    <td>Partially (only 3 of the 11 responsible party roles are supported)</td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Resource locator</td>
-<td>C</td>
-<td>On-line resource</td>
-<td>O</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Resource locator</td>
+    <td>C</td>
+    <td>On-line resource</td>
+    <td>O</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Coordinate reference system; Temporal reference system</td>
-<td>M; C</td>
-<td>Reference system</td>
-<td>O</td>
-<td></td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Coordinate reference system; Temporal reference system</td>
+    <td>M; C</td>
+    <td>Reference system</td>
+    <td>O</td>
+    <td></td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Conformity</td>
-<td>M</td>
-<td></td>
-<td></td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Conformity</td>
+    <td>M</td>
+    <td></td>
+    <td></td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Resource type</td>
-<td>M</td>
-<td></td>
-<td></td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Resource type</td>
+    <td>M</td>
+    <td></td>
+    <td></td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Spatial data service type</td>
-<td>M</td>
-<td></td>
-<td></td>
-<td></td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Spatial data service type</td>
+    <td>M</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Keyword</td>
-<td>M</td>
-<td></td>
-<td></td>
-<td>Partially (only for datasets and dataset series)</td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Keyword</td>
+    <td>M</td>
+    <td></td>
+    <td></td>
+    <td>Partially (only for datasets and dataset series)</td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Coupled resource</td>
-<td>C</td>
-<td></td>
-<td></td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Coupled resource</td>
+    <td>C</td>
+    <td></td>
+    <td></td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Unique resource identifier</td>
-<td>M</td>
-<td></td>
-<td></td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Unique resource identifier</td>
+    <td>M</td>
+    <td></td>
+    <td></td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Conditions for access and use</td>
-<td>M</td>
-<td></td>
-<td></td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Conditions for access and use</td>
+    <td>M</td>
+    <td></td>
+    <td></td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Limitations on public access</td>
-<td>M</td>
-<td></td>
-<td></td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
+  <tr>
+    <td>Limitations on public access</td>
+    <td>M</td>
+    <td></td>
+    <td></td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
 
-<tr>
-<td>Maintenance information</td>
-<td>O</td>
-<td></td>
-<td></td>
-<td>Partially (only maintenance and update frequency)</td>
-<td>Partially (only maintenance and update frequency)</td>
-</tr>
+  <tr>
+    <td>Maintenance information</td>
+    <td>O</td>
+    <td></td>
+    <td></td>
+    <td>Partially (only maintenance and update frequency)</td>
+    <td>Partially (only maintenance and update frequency)</td>
+  </tr>
 
-<tr>
-<td>Data quality – Logical consistency – Topological consistency</td>
-<td>C</td>
-<td></td>
-<td></td>
-<td></td>
-<td>Partially (only conformance results)</td>
-</tr>
+  <tr>
+    <td>Data quality – Logical consistency – Topological consistency</td>
+    <td>C</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Partially (only conformance results)</td>
+  </tr>
 
-<tr>
-<td>Data quality – Logical consistency – Conceptual consistency</td>
-<td>O</td>
-<td></td>
-<td></td>
-<td></td>
-<td>Partially (only conformance results)</td>
-</tr>
+  <tr>
+    <td>Data quality – Logical consistency – Conceptual consistency</td>
+    <td>O</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Partially (only conformance results)</td>
+  </tr>
 
-<tr>
-<td>Data quality – Logical consistency – Domain consistency</td>
-<td>O</td>
-<td></td>
-<td></td>
-<td></td>
-<td>Partially (only conformance results)</td>
-</tr>
+  <tr>
+    <td>Data quality – Logical consistency – Domain consistency</td>
+    <td>O</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Partially (only conformance results)</td>
+  </tr>
 
 </tbody>
 </table>
@@ -24794,7 +25747,7 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
   ...
 &lt;/gmd:MD_Metadata&gt;
 
-&lt;!-- MD_ScopeCode for a data series in ISO 19139 --&gt;
+&lt;!-- MD_ScopeCode for a dataset series in ISO 19139 --&gt;
 &lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:hierarchyLevel&gt;
@@ -24857,7 +25810,7 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 <table class="simple" id="table-online-function-code">
 <thead>
 <tr>
-<th>ISO 19115 – CI_OnlineFunctionCode</th>
+<th>ISO&nbsp;19115 – CI_OnlineFunctionCode</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -24897,7 +25850,7 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 <table class="simple">
 <thead>
 <tr>
-<th>ISO 19115 – CI_OnlineFunctionCode</th>
+<th>ISO&nbsp;19115 – CI_OnlineFunctionCode</th>
 <th>Property</th>
 <th>Domain</th>
 <th>Range</th>
@@ -26622,10 +27575,10 @@ prov:wasUsedBy [
 <pre class="xml">&lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:metadataStandardName&gt;
-    &lt;gco:CharacterString&gt;ISO 19115&lt;/gco:CharacterString&gt;
+    &lt;gco:CharacterString&gt;ISO&nbsp;19115&lt;/gco:CharacterString&gt;
   &lt;/gmd:metadataStandardName&gt;
   &lt;gmd:metadataStandardVersion&gt;
-    &lt;gco:CharacterString&gt;Nederlands metadata profiel op ISO 19115 voor geografie 1.3&lt;/gco:CharacterString&gt;
+    &lt;gco:CharacterString&gt;Nederlands metadata profiel op ISO&nbsp;19115 voor geografie 1.3&lt;/gco:CharacterString&gt;
   &lt;/gmd:metadataStandardVersion&gt;
 &lt;/gmd:MD_Metadata&gt;</pre>
 
@@ -26640,10 +27593,10 @@ prov:wasUsedBy [
 <pre class="turtle">[] a dcat:CatalogRecord ;
   dct:conformsTo &lt;https://joinup.ec.europa.eu/release/geodcat-ap/10&gt; ;
   dct:source [ a dcat:CatalogRecord ; 
-# Standard name and version of the source ISO 19115 record
+# Standard name and version of the source ISO&nbsp;19115 record
     dct:conformsTo [ a dct:Standard ;
-      dct:title &quot;ISO 19115&quot;@en ;
-      owl:versionInfo &quot;Nederlands metadata profiel op ISO 19115 voor geografie 1.3&quot;.
+      dct:title &quot;ISO&nbsp;19115&quot;@en ;
+      owl:versionInfo &quot;Nederlands metadata profiel op ISO&nbsp;19115 voor geografie 1.3&quot;.
     ] ] ;
 .
 
@@ -26658,10 +27611,10 @@ prov:wasUsedBy [
 <pre class="xml">&lt;gmd:MD_Metadata&gt;
   ...
   &lt;gmd:metadataStandardName&gt;
-    &lt;gco:CharacterString&gt;ISO 19115&lt;/gco:CharacterString&gt;
+    &lt;gco:CharacterString&gt;ISO&nbsp;19115&lt;/gco:CharacterString&gt;
   &lt;/gmd:metadataStandardName&gt;
   &lt;gmd:metadataStandardVersion&gt;
-    &lt;gco:CharacterString&gt;Nederlands metadata profiel op ISO 19115 voor geografie 1.3&lt;/gco:CharacterString&gt;
+    &lt;gco:CharacterString&gt;Nederlands metadata profiel op ISO&nbsp;19115 voor geografie 1.3&lt;/gco:CharacterString&gt;
   &lt;/gmd:metadataStandardVersion&gt;
 &lt;/gmd:MD_Metadata&gt;</pre>
 
@@ -26812,7 +27765,7 @@ prov:wasUsedBy [
 <table class="simple">
 <thead>
 <tr>
-<th>ISO 19115 - MD_CharacterSetCode</th>
+<th>ISO&nbsp;19115 - MD_CharacterSetCode</th>
 <th>Description</th>
 <th>IANA</th>
 </tr>
@@ -27095,7 +28048,7 @@ prov:wasUsedBy [
 <!-- TO BE RESTORED
 <aside class="ednote">
 <p>The relevant register has not been eventually created.</p>
-<p>A possible option is to use the corresponding URIs from <a href="https://github.com/ISO-TC211/GOM/blob/master/isotc211_GOM_harmonizedOntology/iso19115/2003/IdentificationInformation.rdf">the relevant ISO 19115 ontology</a>, although they are not dereferenceable (as the ones currently used in GeoDCAT-AP) - namely:</p>
+<p>A possible option is to use the corresponding URIs from <a href="https://github.com/ISO-TC211/GOM/blob/master/isotc211_GOM_harmonizedOntology/iso19115/2003/IdentificationInformation.rdf">the relevant ISO&nbsp;19115 ontology</a>, although they are not dereferenceable (as the ones currently used in GeoDCAT-AP) - namely:</p>
 <ul>
 <li><code>http://def.isotc211.org/iso19115/2003/IdentificationInformation/code/MD_SpatialRepresentationTypeCode/vector</code></li>
 <li><code>http://def.isotc211.org/iso19115/2003/IdentificationInformation/code/MD_SpatialRepresentationTypeCode/grid</code></li>
@@ -27118,7 +28071,7 @@ prov:wasUsedBy [
 <table class="simple">
 <thead>
 <tr>
-<th>ISO 19115 - MD_SpatialRepresentionTypeCode</th>
+<th>ISO&nbsp;19115 - MD_SpatialRepresentionTypeCode</th>
 <th>Description</th>
 <th>In scope of INSPIRE?</th>
 </tr>
@@ -27196,7 +28149,7 @@ prov:wasUsedBy [
 <table class="simple">
 <thead>
 <tr>
-<th>ISO 19115 - MD_MaintenanceFrequencyCode</th>
+<th>ISO&nbsp;19115 - MD_MaintenanceFrequencyCode</th>
 <th>Dublin Core Collection Description Frequency Vocabulary [[?CLD-FREQ]]</th>
 <th>EU Vocabularies Frequency Named Authority List [[EUV-FREQ]]</th>
 </tr>
@@ -27365,7 +28318,7 @@ prov:wasUsedBy [
 <aside class="ednote">
 <p>A possible option to address this disalignment is to submit a request to have [[EUV-FREQ]] updated accordingly.</p>
 <p>Otherwise, the missing codes could be mapped to existing ones in [[EUV-FREQ]].</p>
-<p>Another option is to use the corresponding URIs from <a href="https://github.com/ISO-TC211/GOM/blob/master/isotc211_GOM_harmonizedOntology/iso19115/2003/MaintenanceInformation.rdf">the relevant ISO 19115 ontology</a>, although they are not dereferenceable (as the ones currently used in GeoDCAT-AP) - namely:</p>
+<p>Another option is to use the corresponding URIs from <a href="https://github.com/ISO-TC211/GOM/blob/master/isotc211_GOM_harmonizedOntology/iso19115/2003/MaintenanceInformation.rdf">the relevant ISO&nbsp;19115 ontology</a>, although they are not dereferenceable (as the ones currently used in GeoDCAT-AP) - namely:</p>
 <ul>
 <li><code>http://def.isotc211.org/iso19115/2003/MaintenanceInformation/code/MD_MaintenanceFrequencyCode/asNeeded</code></li>
 <li><code>http://def.isotc211.org/iso19115/2003/MaintenanceInformation/code/MD_MaintenanceFrequencyCode/notPlanned</code></li>
@@ -27407,7 +28360,7 @@ prov:wasUsedBy [
 
 <h2>Spatial dataset and spatial dataset series</h2>
 
-<p>The table below compares the core requirements of ISO 19115:2003 (see Table 3 in 6.5 of [[?ISO-19115]]), the requirements of INSPIRE for spatial dataset and spatial dataset series as defined in the Implementing Rules for metadata and the discovery metadata for geographic datasets and series (see Table F.1 in annex F of [[?ISO-19115-1]]). For those last metadata elements in the last field of the table the path is indicated. For each element, in brackets the obligation/max occurrence (3rd field).</p>
+<p>The table below compares the core requirements of ISO&nbsp;19115:2003 (see Table 3 in 6.5 of [[?ISO-19115]]), the requirements of INSPIRE for spatial dataset and spatial dataset series as defined in the Implementing Rules for metadata and the discovery metadata for geographic datasets and series (see Table F.1 in annex F of [[?ISO-19115-1]]). For those last metadata elements in the last field of the table the path is indicated. For each element, in brackets the obligation/max occurrence (3rd field).</p>
 
 <table id="table-comparison-datasets-and-series" class="simple">
 <!--
@@ -27415,10 +28368,10 @@ prov:wasUsedBy [
 -->
 <thead>
 <tr>
-<th>ISO 19115 Core</th>
+<th>ISO&nbsp;19115 Core</th>
 <th>INSPIRE Implementing Rules for Metadata</th>
-<th>ISO 19115-1:2014 Discovery metadata for datasets and series (Table F.1)</th>
-<th>ISO 19115-1:2014 Path</th>
+<th>ISO&nbsp;19115-1:2014 Discovery metadata for datasets and series (Table F.1)</th>
+<th>ISO&nbsp;19115-1:2014 Path</th>
 </tr>
 </thead>
 <tbody>
@@ -27628,7 +28581,7 @@ prov:wasUsedBy [
 
 <h2>Services</h2>
 
-<p>The table below compares the core requirements of ISO 19115:2003 (see Table 3 in 6.5 of ISO 19115:2003), the requirements of INSPIRE for services as defined in the Implementing Rules for metadata and the discovery metadata for services (see Table F.2 in annex F of ISO 19115-1:2014). For those metadata elements in the last field of the table the path is indicated. For each element, in brackets the obligation/max occurrence (3<sup>rd</sup> field).</p>
+<p>The table below compares the core requirements of ISO&nbsp;19115:2003 (see Table 3 in 6.5 of ISO&nbsp;19115:2003), the requirements of INSPIRE for services as defined in the Implementing Rules for metadata and the discovery metadata for services (see Table F.2 in annex F of ISO&nbsp;19115-1:2014). For those metadata elements in the last field of the table the path is indicated. For each element, in brackets the obligation/max occurrence (3<sup>rd</sup> field).</p>
 
 <table id="table-comparison-services" class="simple">
 <!--
@@ -27636,10 +28589,10 @@ prov:wasUsedBy [
 -->
 <thead>
 <tr>
-<th>ISO 19115 Core</th>
+<th>ISO&nbsp;19115 Core</th>
 <th>INSPIRE</th>
-<th>ISO 19115-1:2014 Discovery metadata for services (Table F.2)</th>
-<th>Path ISO 19115-1:2014</th>
+<th>ISO&nbsp;19115-1:2014 Discovery metadata for services (Table F.2)</th>
+<th>Path ISO&nbsp;19115-1:2014</th>
 </tr>
 </thead>
 <tbody>
