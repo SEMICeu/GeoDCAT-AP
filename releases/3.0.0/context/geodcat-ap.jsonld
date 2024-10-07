@@ -22,17 +22,17 @@
     },
     "Address (coreLocation)": {
       "@context": {
-        "administrativeArea": {
-          "@id": "http://www.w3.org/ns/locn#adminUnitL2"
+        "administrativeUnitLevel1": {
+          "@id": "http://www.w3.org/ns/locn#adminUnitL1"
         },
-        "city": {
-          "@id": "http://www.w3.org/ns/locn#postName"
-        },
-        "country": {
+        "administrativeUnitLevel2": {
           "@id": "http://www.w3.org/ns/locn#adminUnitL2"
         },
         "postCode": {
           "@id": "http://www.w3.org/ns/locn#postCode"
+        },
+        "postName": {
+          "@id": "http://www.w3.org/ns/locn#postName"
         },
         "streetAddress": {
           "@id": "http://www.w3.org/ns/locn#thoroughfare"

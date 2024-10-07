@@ -1,6 +1,6 @@
 # **Consolidated Changelog**
 
-This changelog provides an overview of the changes incorporated in GeoDCAT-AP 3.0.0. A complete list of the issues closed with this release is accessible on [GitHub](https://github.com/SEMICeu/GeoDCAT-AP/issues?q=is%3Aissue+is%3Aopen+label%3Arelease%3A3.0.0-oct2024).
+This changelog provides an overview of the changes incorporated in GeoDCAT-AP 3.0.0. A complete list of the issues closed with this release is accessible on [GitHub](https://github.com/SEMICeu/GeoDCAT-AP/issues?q=is%3Aissue+is%3Aopen+label%3Arelease%3A3.0.0-jun2024).
 
 # **Editorial changes**
 

@@ -179,9 +179,7 @@
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/2772ea71869e38556ebc47c064607a25b9d5b6eb> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#CatalogueRecord.processor";
   shacl:class foaf:Agent;
-  shacl:description """	
-
-Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]]."""@en;
+  shacl:description "Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]]."@en;
   shacl:name "processor"@en;
   shacl:path <http://data.europa.eu/930/processor> .
 
@@ -192,9 +190,7 @@ Party who has processed the data in a manner such that the resource has been mod
   shacl:path dc:language .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/30957911e1c6c79c065b6a0fa632a3c58d6b1841> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#CatalogueRecord.resourceprovider";
-  shacl:description """	
-
-Party that supplies the resource [[ISO-19115]]."""@en;
+  shacl:description "Party that supplies the resource [[ISO-19115]]."@en;
   shacl:name "resource provider"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/930/resourceProvider> .
@@ -231,9 +227,7 @@ Party that supplies the resource [[ISO-19115]]."""@en;
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/48476aa3f2bfa8f7c3e4d22652531e590c90e9ac> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#CatalogueRecord.originator";
   shacl:class foaf:Agent;
-  shacl:description """	
-
-Party who created the resource [[ISO-19115]]."""@en;
+  shacl:description "Party who created the resource [[ISO-19115]]."@en;
   shacl:name "originator"@en;
   shacl:path <http://data.europa.eu/930/originator> .
 
@@ -280,9 +274,7 @@ Party who created the resource [[ISO-19115]]."""@en;
   shacl:path dc:modified .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/6c19a6337121f15029388b949ea0dab772437b2a> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#CatalogueRecord.processor";
-  shacl:description """	
-
-Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]]."""@en;
+  shacl:description "Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]]."@en;
   shacl:name "processor"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/930/processor> .
@@ -325,9 +317,7 @@ Party who has processed the data in a manner such that the resource has been mod
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/9169149cf5b5a794cac331851a3a1a92ff279293> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#CatalogueRecord.resourceprovider";
   shacl:class foaf:Agent;
-  shacl:description """	
-
-Party that supplies the resource [[ISO-19115]]."""@en;
+  shacl:description "Party that supplies the resource [[ISO-19115]]."@en;
   shacl:name "resource provider"@en;
   shacl:path <http://data.europa.eu/930/resourceProvider> .
 
@@ -452,9 +442,7 @@ Party that supplies the resource [[ISO-19115]]."""@en;
   shacl:path foaf:primaryTopic .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:CatalogRecordShape/f15ac8e72da8db00ffde633a42483a8874e9f5b4> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#CatalogueRecord.originator";
-  shacl:description """	
-
-Party who created the resource [[ISO-19115]]."""@en;
+  shacl:description "Party who created the resource [[ISO-19115]]."@en;
   shacl:name "originator"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/930/originator> .
@@ -622,9 +610,7 @@ Party who created the resource [[ISO-19115]]."""@en;
   shacl:path dc:language .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:CatalogShape/30957911e1c6c79c065b6a0fa632a3c58d6b1841> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Catalogue.resourceprovider";
-  shacl:description """	
-
-Party that supplies the resource [[ISO-19115]]."""@en;
+  shacl:description "Party that supplies the resource [[ISO-19115]]."@en;
   shacl:name "resource provider"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/930/resourceProvider> .
@@ -811,9 +797,7 @@ Party that supplies the resource [[ISO-19115]]."""@en;
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:CatalogShape/9169149cf5b5a794cac331851a3a1a92ff279293> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Catalogue.resourceprovider";
   shacl:class foaf:Agent;
-  shacl:description """	
-
-Party that supplies the resource [[ISO-19115]]."""@en;
+  shacl:description "Party that supplies the resource [[ISO-19115]]."@en;
   shacl:name "resource provider"@en;
   shacl:path <http://data.europa.eu/930/resourceProvider> .
 
@@ -1131,14 +1115,12 @@ Party that supplies the resource [[ISO-19115]]."""@en;
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DataServiceShape/01e271bbf4ae8e75217e81a49d8d852bdf541c79> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#DataService.orginator";
   shacl:class foaf:Agent;
-  shacl:description """	
-
-Party who created the resource [[ISO-19115]]."""@en;
+  shacl:description "Party who created the resource [[ISO-19115]]."@en;
   shacl:name "orginator"@en;
   shacl:path <http://data.europa.eu/930/originator> .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DataServiceShape/0383ae85d347aaaa1366ede6a5651503e07b7240> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#DataService.serviceprotocol";
-  shacl:description """	Protocol value in accordance with INSPIRE Protocol Values [[INSPIRE-PV]]."""@en;
+  shacl:description "Protocol value in accordance with INSPIRE Protocol Values [[INSPIRE-PV]]."@en;
   shacl:name "service protocol"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/930/serviceProtocol> .
@@ -1205,9 +1187,7 @@ Party who created the resource [[ISO-19115]]."""@en;
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DataServiceShape/2772ea71869e38556ebc47c064607a25b9d5b6eb> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#DataService.processor";
   shacl:class foaf:Agent;
-  shacl:description """	
-
-Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]]."""@en;
+  shacl:description "Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]]."@en;
   shacl:name "processor"@en;
   shacl:path <http://data.europa.eu/930/processor> .
 
@@ -1224,9 +1204,7 @@ Party who has processed the data in a manner such that the resource has been mod
   shacl:path dc:language .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DataServiceShape/30957911e1c6c79c065b6a0fa632a3c58d6b1841> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#DataService.resourceprovider";
-  shacl:description """	
-
-Party that supplies the resource [[ISO-19115]]."""@en;
+  shacl:description "Party that supplies the resource [[ISO-19115]]."@en;
   shacl:name "resource provider"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/930/resourceProvider> .
@@ -1274,9 +1252,7 @@ Party that supplies the resource [[ISO-19115]]."""@en;
   shacl:path <http://www.w3.org/ns/dqv#hasQualityMeasurement> .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DataServiceShape/4a645eccb039c27c621f619e3c84b75bd3f807ab> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#DataService.orginator";
-  shacl:description """	
-
-Party who created the resource [[ISO-19115]]."""@en;
+  shacl:description "Party who created the resource [[ISO-19115]]."@en;
   shacl:name "orginator"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/930/originator> .
@@ -1342,9 +1318,7 @@ Party who created the resource [[ISO-19115]]."""@en;
   shacl:path dc:modified .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DataServiceShape/6c19a6337121f15029388b949ea0dab772437b2a> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#DataService.processor";
-  shacl:description """	
-
-Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]]."""@en;
+  shacl:description "Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]]."@en;
   shacl:name "processor"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/930/processor> .
@@ -1441,9 +1415,7 @@ Party who has processed the data in a manner such that the resource has been mod
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DataServiceShape/9169149cf5b5a794cac331851a3a1a92ff279293> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#DataService.resourceprovider";
   shacl:class foaf:Agent;
-  shacl:description """	
-
-Party that supplies the resource [[ISO-19115]]."""@en;
+  shacl:description "Party that supplies the resource [[ISO-19115]]."@en;
   shacl:name "resource provider"@en;
   shacl:path <http://data.europa.eu/930/resourceProvider> .
 
@@ -1473,7 +1445,7 @@ Party that supplies the resource [[ISO-19115]]."""@en;
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DataServiceShape/99435c17158fbaa12d1d955b8886d5bf935ab016> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#DataService.rights";
   shacl:class dc:RightsStatement;
-  shacl:description """	A statement that specifies rights associated with the Data Service."""@en;
+  shacl:description "A statement that specifies rights associated with the Data Service."@en;
   shacl:name "rights"@en;
   shacl:path dc:rights .
 
@@ -1538,7 +1510,7 @@ Party that supplies the resource [[ISO-19115]]."""@en;
   shacl:path dc:publisher .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DataServiceShape/b4c4138f0581e7240ec4dd866004c56407b3705a> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#DataService.rights";
-  shacl:description """	A statement that specifies rights associated with the Data Service."""@en;
+  shacl:description "A statement that specifies rights associated with the Data Service."@en;
   shacl:name "rights"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path dc:rights .
@@ -1634,7 +1606,7 @@ Party that supplies the resource [[ISO-19115]]."""@en;
   shacl:path <http://data.europa.eu/930/serviceCategory> .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DataServiceShape/e52c27802f529de05e9ebc5ba348f6c24dbf3176> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#DataService.serviceprotocol";
-  shacl:description """	Protocol value in accordance with INSPIRE Protocol Values [[INSPIRE-PV]]."""@en;
+  shacl:description "Protocol value in accordance with INSPIRE Protocol Values [[INSPIRE-PV]]."@en;
   shacl:maxCount 1;
   shacl:name "service protocol"@en;
   shacl:path <http://data.europa.eu/930/serviceProtocol> .
@@ -1659,7 +1631,7 @@ Party that supplies the resource [[ISO-19115]]."""@en;
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DataServiceShape/eb98dee81407da4e91a31895d95101d0335b7c81> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#DataService.serviceprotocol";
   shacl:class skos:Concept;
-  shacl:description """	Protocol value in accordance with INSPIRE Protocol Values [[INSPIRE-PV]]."""@en;
+  shacl:description "Protocol value in accordance with INSPIRE Protocol Values [[INSPIRE-PV]]."@en;
   shacl:name "service protocol"@en;
   shacl:path <http://data.europa.eu/930/serviceProtocol> .
 
@@ -1796,7 +1768,7 @@ Party that supplies the resource [[ISO-19115]]."""@en;
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/00bd195f813949c75d02f8a5916b9697bb4eb89f> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#DatasetSeries.resourcetype";
   shacl:class skos:Concept;
-  shacl:description """	Resource type in accordance with INSPIRE Resource Types [[INSPIRE-RT]]."""@en;
+  shacl:description "Resource type in accordance with INSPIRE Resource Types [[INSPIRE-RT]]."@en;
   shacl:name "resource type"@en;
   shacl:path <http://data.europa.eu/930/resourceType> .
 
@@ -1861,14 +1833,14 @@ Party that supplies the resource [[ISO-19115]]."""@en;
   shacl:path prov:wasGeneratedBy .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/26fb54e0c953f5aa1e4db5b7bf3b6e6698f4ac4e> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#DatasetSeries.custodian";
-  shacl:description """	Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource [[ISO-19115]]."""@en;
+  shacl:description "Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource [[ISO-19115]]."@en;
   shacl:name "custodian"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/930/custodian> .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/2772ea71869e38556ebc47c064607a25b9d5b6eb> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#DatasetSeries.processor";
   shacl:class foaf:Agent;
-  shacl:description """	Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]]."""@en;
+  shacl:description "Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]]."@en;
   shacl:name "processor"@en;
   shacl:path <http://data.europa.eu/930/processor> .
 
@@ -1969,7 +1941,7 @@ Party that supplies the resource [[ISO-19115]]."""@en;
   shacl:path dc:issued .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/4cba2ec81cc2d95d149041a01cbc4d9a16def925> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#DatasetSeries.resourcetype";
-  shacl:description """	Resource type in accordance with INSPIRE Resource Types [[INSPIRE-RT]]."""@en;
+  shacl:description "Resource type in accordance with INSPIRE Resource Types [[INSPIRE-RT]]."@en;
   shacl:maxCount 1;
   shacl:name "resource type"@en;
   shacl:path <http://data.europa.eu/930/resourceType> .
@@ -1981,7 +1953,7 @@ Party that supplies the resource [[ISO-19115]]."""@en;
   shacl:path dc:rightsHolder .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/5ad428d8500be9b1d9580021b00aa767c33402bb> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#DatasetSeries.versionnotes";
-  shacl:description """	A description of the differences between this version and a previous version of the Dataset."""@en;
+  shacl:description "A description of the differences between this version and a previous version of the Dataset."@en;
   shacl:name "version notes"@en;
   shacl:nodeKind shacl:Literal;
   shacl:path <http://www.w3.org/ns/adms#versionNotes> .
@@ -2041,7 +2013,7 @@ Party that supplies the resource [[ISO-19115]]."""@en;
   shacl:path dc:modified .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/6c19a6337121f15029388b949ea0dab772437b2a> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#DatasetSeries.processor";
-  shacl:description """	Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]]."""@en;
+  shacl:description "Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]]."@en;
   shacl:name "processor"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/930/processor> .
@@ -2066,7 +2038,7 @@ Party that supplies the resource [[ISO-19115]]."""@en;
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/79c0c2e1bcab213fd06ca4c1782849db4a11225f> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#DatasetSeries.custodian";
   shacl:class foaf:Agent;
-  shacl:description """	Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource [[ISO-19115]]."""@en;
+  shacl:description "Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource [[ISO-19115]]."@en;
   shacl:name "custodian"@en;
   shacl:path <http://data.europa.eu/930/custodian> .
 
@@ -2359,7 +2331,7 @@ Party that supplies the resource [[ISO-19115]]."""@en;
   shacl:path dcat:qualifiedRelation .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DatasetSeriesShape/fc3438bd29ddee75508841ad26a8dfbe0a68c2d7> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#DatasetSeries.resourcetype";
-  shacl:description """	Resource type in accordance with INSPIRE Resource Types [[INSPIRE-RT]]."""@en;
+  shacl:description "Resource type in accordance with INSPIRE Resource Types [[INSPIRE-RT]]."@en;
   shacl:name "resource type"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/930/resourceType> .
@@ -2561,9 +2533,7 @@ Party that supplies the resource [[ISO-19115]]."""@en;
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DatasetShape/2772ea71869e38556ebc47c064607a25b9d5b6eb> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Dataset.processor";
   shacl:class foaf:Agent;
-  shacl:description """	
-
-Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]]."""@en;
+  shacl:description "Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]]."@en;
   shacl:name "processor"@en;
   shacl:path <http://data.europa.eu/930/processor> .
 
@@ -2592,9 +2562,7 @@ Party who has processed the data in a manner such that the resource has been mod
   shacl:path dc:source .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DatasetShape/30957911e1c6c79c065b6a0fa632a3c58d6b1841> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Dataset.resourceprovider";
-  shacl:description """	
-
-Party that supplies the resource [[ISO-19115]]."""@en;
+  shacl:description "Party that supplies the resource [[ISO-19115]]."@en;
   shacl:name "resource provider"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/930/resourceProvider> .
@@ -2655,9 +2623,7 @@ Party that supplies the resource [[ISO-19115]]."""@en;
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DatasetShape/48476aa3f2bfa8f7c3e4d22652531e590c90e9ac> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Dataset.originator";
   shacl:class foaf:Agent;
-  shacl:description """	
-
-Party who created the resource [[ISO-19115]]."""@en;
+  shacl:description "Party who created the resource [[ISO-19115]]."@en;
   shacl:name "originator"@en;
   shacl:path <http://data.europa.eu/930/originator> .
 
@@ -2758,9 +2724,7 @@ Party who created the resource [[ISO-19115]]."""@en;
   shacl:path dc:modified .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DatasetShape/6c19a6337121f15029388b949ea0dab772437b2a> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Dataset.processor";
-  shacl:description """	
-
-Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]]."""@en;
+  shacl:description "Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]]."@en;
   shacl:name "processor"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/930/processor> .
@@ -2869,9 +2833,7 @@ Party who has processed the data in a manner such that the resource has been mod
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DatasetShape/9169149cf5b5a794cac331851a3a1a92ff279293> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Dataset.resourceprovider";
   shacl:class foaf:Agent;
-  shacl:description """	
-
-Party that supplies the resource [[ISO-19115]]."""@en;
+  shacl:description "Party that supplies the resource [[ISO-19115]]."@en;
   shacl:name "resource provider"@en;
   shacl:path <http://data.europa.eu/930/resourceProvider> .
 
@@ -2901,7 +2863,7 @@ Party that supplies the resource [[ISO-19115]]."""@en;
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DatasetShape/99435c17158fbaa12d1d955b8886d5bf935ab016> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Dataset.rights";
   shacl:class dc:RightsStatement;
-  shacl:description """	A statement that specifies rights associated with the Dataset."""@en;
+  shacl:description "A statement that specifies rights associated with the Dataset."@en;
   shacl:name "rights"@en;
   shacl:path dc:rights .
 
@@ -2966,7 +2928,7 @@ Party that supplies the resource [[ISO-19115]]."""@en;
   shacl:path dc:publisher .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DatasetShape/b4c4138f0581e7240ec4dd866004c56407b3705a> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Dataset.rights";
-  shacl:description """	A statement that specifies rights associated with the Dataset."""@en;
+  shacl:description "A statement that specifies rights associated with the Dataset."@en;
   shacl:name "rights"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path dc:rights .
@@ -3056,9 +3018,7 @@ Party that supplies the resource [[ISO-19115]]."""@en;
   shacl:path dc:accessRights .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#dcat:DatasetShape/f15ac8e72da8db00ffde633a42483a8874e9f5b4> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Dataset.originator";
-  shacl:description """	
-
-Party who created the resource [[ISO-19115]]."""@en;
+  shacl:description "Party who created the resource [[ISO-19115]]."@en;
   shacl:name "originator"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://data.europa.eu/930/originator> .
@@ -4274,22 +4234,22 @@ Party who created the resource [[ISO-19115]]."""@en;
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape> a shacl:NodeShape;
   shacl:closed false;
-  shacl:property <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/21fd2e018915cd010aee64c9aa451a414a1ad052>,
+  shacl:property <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/256ffe464f9c7682e950f7853ef0b6060580435b>,
     <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/3600d16af075596ea231283d76b3fd39021d34d6>,
-    <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/5234ad4024f72ef2894b9a3c4070d21aa283ed87>,
-    <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/76f52e1760b9529a53a110a32ab67d39af5ee8c5>,
+    <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/55cf47fe54e6f7cb41a1ca42a8a8a68b05a4519a>,
     <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/8cdc8ea2985ba7820ce90020c745a8e6242343ed>,
-    <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/9d054aa1cd0678e060bb045923a830217657aeb4>,
-    <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/9ee1f7cd40d31d8408c9983890cb564eb7c7ac1a>,
-    <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/9fcf9cecb8b2b1761f1d1d12ffcad8cce4b11da6>,
+    <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/9aaaf1750887d905949d78ac718f18c02809a28e>,
     <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/c053bb4ab74094ab01d8385a0428c50994b3b5a6>,
-    <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/c0a2b78a80a731301e2f54d040ca9aa2c9b125b1>;
+    <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/c0a2b78a80a731301e2f54d040ca9aa2c9b125b1>,
+    <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/e46a136574af7aa2d423b302480c56fd38255dda>,
+    <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/f8d38c3580ea5d4e47ea9e1ad447a47ebe91d5fa>,
+    <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/fb0e32fb7f38c269210ffbd1af5a2814de765ca6>;
   shacl:targetClass <http://www.w3.org/ns/locn#Address> .
 
-<https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/21fd2e018915cd010aee64c9aa451a414a1ad052> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Address(CoreLocation).country";
-  shacl:description """	The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."""@en;
-  shacl:maxCount 1;
-  shacl:name "country"@en;
+<https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/256ffe464f9c7682e950f7853ef0b6060580435b> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Address(CoreLocation).administrativeunitlevel2";
+  shacl:description "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."@en;
+  shacl:name "administrative unit level 2"@en;
+  shacl:nodeKind shacl:Literal;
   shacl:path <http://www.w3.org/ns/locn#adminUnitL2> .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/3600d16af075596ea231283d76b3fd39021d34d6> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Address(CoreLocation).streetaddress";
@@ -4298,41 +4258,23 @@ Party who created the resource [[ISO-19115]]."""@en;
   shacl:nodeKind shacl:Literal;
   shacl:path <http://www.w3.org/ns/locn#thoroughfare> .
 
-<https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/5234ad4024f72ef2894b9a3c4070d21aa283ed87> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Address(CoreLocation).country";
-  shacl:description """	The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."""@en;
-  shacl:name "country"@en;
-  shacl:nodeKind shacl:Literal;
-  shacl:path <http://www.w3.org/ns/locn#adminUnitL2> .
-
-<https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/76f52e1760b9529a53a110a32ab67d39af5ee8c5> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Address(CoreLocation).administrativearea";
-  shacl:description """	The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."""@en;
-  shacl:name "administrative area"@en;
-  shacl:nodeKind shacl:Literal;
+<https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/55cf47fe54e6f7cb41a1ca42a8a8a68b05a4519a> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Address(CoreLocation).administrativeunitlevel2";
+  shacl:description "The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."@en;
+  shacl:maxCount 1;
+  shacl:name "administrative unit level 2"@en;
   shacl:path <http://www.w3.org/ns/locn#adminUnitL2> .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/8cdc8ea2985ba7820ce90020c745a8e6242343ed> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Address(CoreLocation).postcode";
-  shacl:description """	The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."""@en;
+  shacl:description "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."@en;
   shacl:maxCount 1;
   shacl:name "post code"@en;
   shacl:path <http://www.w3.org/ns/locn#postCode> .
 
-<https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/9d054aa1cd0678e060bb045923a830217657aeb4> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Address(CoreLocation).city";
-  shacl:description """	A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."""@en;
-  shacl:maxCount 1;
-  shacl:name "city"@en;
-  shacl:path <http://www.w3.org/ns/locn#postName> .
-
-<https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/9ee1f7cd40d31d8408c9983890cb564eb7c7ac1a> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Address(CoreLocation).city";
-  shacl:description """	A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."""@en;
-  shacl:name "city"@en;
+<https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/9aaaf1750887d905949d78ac718f18c02809a28e> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Address(CoreLocation).administrativeunitlevel1";
+  shacl:description "The name of the uppermost level of the address, almost always a country."@en;
+  shacl:name "administrative unit level 1"@en;
   shacl:nodeKind shacl:Literal;
-  shacl:path <http://www.w3.org/ns/locn#postName> .
-
-<https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/9fcf9cecb8b2b1761f1d1d12ffcad8cce4b11da6> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Address(CoreLocation).administrativearea";
-  shacl:description """	The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities."""@en;
-  shacl:maxCount 1;
-  shacl:name "administrative area"@en;
-  shacl:path <http://www.w3.org/ns/locn#adminUnitL2> .
+  shacl:path <http://www.w3.org/ns/locn#adminUnitL1> .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/c053bb4ab74094ab01d8385a0428c50994b3b5a6> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Address(CoreLocation).streetaddress";
   shacl:description "The name of a passage or way through from one location to another."@en;
@@ -4341,10 +4283,28 @@ Party who created the resource [[ISO-19115]]."""@en;
   shacl:path <http://www.w3.org/ns/locn#thoroughfare> .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/c0a2b78a80a731301e2f54d040ca9aa2c9b125b1> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Address(CoreLocation).postcode";
-  shacl:description """	The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."""@en;
+  shacl:description "The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."@en;
   shacl:name "post code"@en;
   shacl:nodeKind shacl:Literal;
   shacl:path <http://www.w3.org/ns/locn#postCode> .
+
+<https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/e46a136574af7aa2d423b302480c56fd38255dda> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Address(CoreLocation).administrativeunitlevel1";
+  shacl:description "The name of the uppermost level of the address, almost always a country."@en;
+  shacl:maxCount 1;
+  shacl:name "administrative unit level 1"@en;
+  shacl:path <http://www.w3.org/ns/locn#adminUnitL1> .
+
+<https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/f8d38c3580ea5d4e47ea9e1ad447a47ebe91d5fa> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Address(CoreLocation).postname";
+  shacl:description "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."@en;
+  shacl:name "post name"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path <http://www.w3.org/ns/locn#postName> .
+
+<https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:AddressShape/fb0e32fb7f38c269210ffbd1af5a2814de765ca6> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#Address(CoreLocation).postname";
+  shacl:description "A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points."@en;
+  shacl:maxCount 1;
+  shacl:name "post name"@en;
+  shacl:path <http://www.w3.org/ns/locn#postName> .
 
 <https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0#locn:GeometryShape> a shacl:NodeShape;
   shacl:closed false;
