@@ -1,6 +1,6 @@
 # **Consolidated Changelog**
 
-This changelog provides an overview of the changes incorporated in GeoDCAT-AP 3.0.0. A complete list of the issues closed with this release is accessible on [GitHub](https://github.com/SEMICeu/GeoDCAT-AP/issues?q=is%3Aissue+is%3Aopen+label%3Arelease%3A3.0.0-oct2024).
+This changelog provides an overview of the changes incorporated in GeoDCAT-AP 3.0.0. A complete list of the issues closed with this release is accessible on [GitHub](https://github.com/SEMICeu/GeoDCAT-AP/issues?q=is%3Aissue+is%3Aopen+label%3Arelease%3A3.0.0-jun2024).
 
 # **Editorial changes**
 
@@ -12,6 +12,12 @@ This changelog provides an overview of the changes incorporated in GeoDCAT-AP 3.
 - Annex Quick Reference of Classes and Properties: improved the HTML table making it interactive.
 - New document for GeoDCAT-AP vocabulary (<https://data.europa.eu/930>).
 - Added links to individual re-used classes and properties from DCAT-AP and DCAT for easier navigation through the profile hierarchy.
+
+Over the public review the following editorial changes were applied:
+- A.3: Supported Tooling: Add clarification on the capabilities and limitations of the XSLT.
+- A.5: Additional clarification on each situation for the binding defined in GeoDCAT-AP for the RDF representation of INSPIRE metadata and the core of ISO-19115.
+- A.5.1: Additional clarification on what is included in GeoDCAT-AP Core.
+- A.5.1 & A.5.2: Updating both tables to improve their readability.
 
 ## **Data model adaptations**
 
@@ -46,7 +52,7 @@ Further the changes of DCAT-AP 2.1.1 to DCAT-AP 3.0.0 have been adopted in GeoDC
 - Issue [86](https://github.com/SEMICeu/GeoDCAT-AP/issues/86): Update controlled vocabulary to be used for Distribution.availability.
 - Issue [87](https://github.com/SEMICeu/GeoDCAT-AP/issues/87): Update definition of CatalogueRecord.changetype.
 - Issue [89](https://github.com/SEMICeu/GeoDCAT-AP/issues/89): The range of spdx:algorithm was changed to spdx:ChecksumAlgorithm. The class spdx:ChecksumAlgorithm was added.
-- Issue [90](http://90): dct:isVersionOf was deprecated and the example on foaf:PrimaryTopic was changed.
+- Issue [90](https://github.com/SEMICeu/GeoDCAT-AP/issues/90): dct:isVersionOf was deprecated and the example on foaf:PrimaryTopic was changed.
 - Issue [91](https://github.com/SEMICeu/GeoDCAT-AP/issues/91): Range of dcat:byteSize was changed from xsd:decimal to xsd:nonNegativeInteger.
 - Issue [92](https://github.com/SEMICeu/GeoDCAT-AP/issues/92): skos:notation was made mandatory for adms:Identifier and and its range was lifted to rdfs:Literal without specifying a mandatory type.
 - Issue [93](https://github.com/SEMICeu/GeoDCAT-AP/issues/93): Temporal Literal data type was added.
@@ -80,6 +86,13 @@ These are issues that point out editorial improvements.
 - Issue [98](https://github.com/SEMICeu/GeoDCAT-AP/issues/98): Removed note on Kind.
 - Issue [129](https://github.com/SEMICeu/GeoDCAT-AP/issues/129): A section on usage of DCAT-AP for HVD in relation to GeoDCAT-AP 3.0.0 was added to the spec.
 
+Over the public review the following bug fixes were applied:
+- Change reference to DCAT-AP HVD 3.0.0 throughout the specification.
+- Change reference to Core Location Vocabulary 2.1.0 and adjusted names of adminUnitL1 and adminUnitL2 accordingly (there was actually also a bug where adminUnitL1 was described as L2).
+- Removal of superfluous "tab" and "newline" characters from descriptions of properties (affects mainly SHACL)
+- Issue [130](https://github.com/SEMICeu/GeoDCAT-AP/issues/130): Changed 'Catalogued Record' to 'Catalogued Resource' in usage note of Catalogued Resource.
+- Issue [132](https://github.com/SEMICeu/GeoDCAT-AP/issues/132): Changed reference to data.europa.eu.
+
 # **XSLT changes**
 
 The following changes were done to the reference XSLT implementation:
@@ -90,7 +103,7 @@ The following changes were done to the reference XSLT implementation:
 - Issue [95](https://github.com/SEMICeu/GeoDCAT-AP/issues/95) mapping spatial resolution as text to geodcat:spatialResolutionAsText instead of rdfs:comment
 - Issue [108](https://github.com/SEMICeu/GeoDCAT-AP/issues/108) changing rdfs:label to dct:description for describing RightsStatements
 - Issue [113](https://github.com/SEMICeu/GeoDCAT-AP/issues/113) changing handling of free-text licence and access rights statements
-- Change output prefix from `geodcat` to `geodcatap` to avoid confusion with the upcoming OGC GeoDCAT
+- Change output prefix from geodcat to geodcatap to avoid confusion with the upcoming OGC GeoDCAT
 - Accepted community pull requests
   - Avoid error on multilingual organisation name (PR [#41](https://github.com/SEMICeu/iso-19139-to-dcat-ap/pull/41))
   - Update to XSLT v2 (PR [#42](https://github.com/SEMICeu/iso-19139-to-dcat-ap/pull/42))
