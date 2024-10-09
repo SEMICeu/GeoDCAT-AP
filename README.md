@@ -4,7 +4,7 @@ This is the issue tracker for the maintenance of [GeoDCAT-AP](https://joinup.ec.
 
 GeoDCAT-AP is an extension of [DCAT-AP](https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe) for describing geospatial datasets, dataset series, and services. It provides an RDF syntax binding for the union of metadata elements defined in the core profile of [ISO 19115:2003](https://www.iso.org/standard/26020.html) and those defined in the framework of the [EU INSPIRE Directive](https://inspire.ec.europa.eu/). Its basic use case is to make spatial datasets, data series, and services searchable on general data portals, thereby making geospatial information better searchable across borders and sectors.
 
-GeoDCAT-AP is a joint initiative of the [European Commission's Joint Research Centre (JRC)](https://ec.europa.eu/jrc/), the [Publications Office of the European Union (PO)](https://publications.europa.eu/), the [EU ISA² Programme](https://ec.europa.eu/isa2/) and [DG CONNECT](https://ec.europa.eu/info/departments/communications-networks-content-and-technology).
+GeoDCAT-AP is a joint initiative of the [European Commission's Joint Research Centre (JRC)](https://ec.europa.eu/jrc/), [DG ENV](https://commission.europa.eu/about-european-commission/departments-and-executive-agencies/environment_en), the [Publications Office of the European Union (PO)](https://publications.europa.eu/), [DG CONNECT](https://ec.europa.eu/info/departments/communications-networks-content-and-technology) and the [Interoperable Europe Programme](https://joinup.ec.europa.eu/interoperable-europe) (former ISA² programme).
 
 The latest version of GeoDCAT-AP (v3.0.0) is available:
 
