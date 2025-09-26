@@ -93,7 +93,16 @@
       },
       "@id": "http://xmlns.com/foaf/0.1/Agent"
     },
-    "Association": "http://www.w3.org/ns/prov#Association",
+    "Association": {
+      "@context": {
+        "hadPlan": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/prov#hadPlan",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://www.w3.org/ns/prov#Association"
+    },
     "Attribution": {
       "@context": {
         "agent": {
@@ -767,6 +776,10 @@
           "@id": "http://purl.org/dc/terms/publisher",
           "@type": "@id"
         },
+        "purpose": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/930/purpose"
+        },
         "qualifiedAttribution": {
           "@container": "@set",
           "@id": "http://www.w3.org/ns/prov#qualifiedAttribution",
@@ -1004,6 +1017,10 @@
         "publisher": {
           "@id": "http://purl.org/dc/terms/publisher",
           "@type": "@id"
+        },
+        "purpose": {
+          "@container": "@set",
+          "@id": "http://data.europa.eu/930/purpose"
         },
         "qualifiedAttribution": {
           "@container": "@set",
@@ -1264,7 +1281,24 @@
       "@id": "http://xmlns.com/foaf/0.1/Document"
     },
     "Email (vCard)": "http://www.w3.org/2006/vcard/ns#Email",
-    "Entity": "http://www.w3.org/ns/prov#Entity",
+    "Entity": {
+      "@context": {
+        "degreeOfConformity": {
+          "@id": "http://purl.org/dc/terms/type",
+          "@type": "@id"
+        },
+        "description": {
+          "@container": "@set",
+          "@id": "http://purl.org/dc/terms/description"
+        },
+        "qualifiedAssociation": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/prov#qualifiedAssociation",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://www.w3.org/ns/prov#Entity"
+    },
     "Frequency": "http://purl.org/dc/terms/Frequency",
     "Geometry": "http://www.w3.org/ns/locn#Geometry",
     "Identifier": {
@@ -1443,7 +1477,7 @@
           "@id": "http://purl.org/dc/terms/identifier"
         },
         "referenceRegister": {
-          "@id": "http://www.w3.org/2004/02/skos/core#ínScheme",
+          "@id": "http://www.w3.org/2004/02/skos/core#ï¿½nScheme",
           "@type": "@id"
         },
         "releaseDate": {
@@ -1467,6 +1501,16 @@
       "@id": "http://purl.org/dc/terms/Standard"
     },
     "TemporalLiteral": "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "TestPlan": {
+      "@context": {
+        "wasDerivedFrom": {
+          "@container": "@set",
+          "@id": "http://www.w3.org/ns/prov#wasDerivedFrom",
+          "@type": "@id"
+        }
+      },
+      "@id": "http://www.w3.org/ns/prov#Plan"
+    },
     "TimeInstant": "http://www.w3.org/2006/time#Instant",
     "Xsd:decimal": "http://www.w3.org/2001/XMLSchema#decimal",
     "Xsd:duration": "http://www.w3.org/2001/XMLSchema#duration",
