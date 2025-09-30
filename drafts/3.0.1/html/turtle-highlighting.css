@@ -1,0 +1,134 @@
+/* Turtle syntax highlighting CSS for ReSpec documents */
+/* Enhanced styling for turtle code blocks */
+
+pre.turtle {
+    background-color: #f8f9fa !important;
+    border: 1px solid #e1e4e8 !important;
+    border-radius: 6px !important;
+    padding: 16px !important;
+    overflow-x: auto !important;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace !important;
+    font-size: 14px !important;
+    line-height: 1.45 !important;
+    color: #24292e !important;
+}
+
+pre.turtle code.turtle-highlighted {
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    color: inherit !important;
+    white-space: pre !important;
+}
+
+/* Turtle syntax highlighting classes - Light mode */
+.turtle-comment { 
+    color: #656d76; 
+    font-style: italic; 
+}
+
+.turtle-string { 
+    color: #0a3069; 
+}
+
+.turtle-uri { 
+    color: #0550ae; 
+}
+
+.turtle-prefix { 
+    color: #0969da; 
+    font-weight: bold; 
+}
+
+.turtle-keyword { 
+    color: #0969da; 
+    font-weight: bold; 
+}
+
+.turtle-keyword-a { 
+    color: #24292e; 
+}
+
+.turtle-prefix-keyword { 
+    color: #656d76; 
+}
+
+.turtle-prefixed { 
+    color: #8250df; 
+}
+
+.turtle-lang { 
+    color: #656d76; 
+}
+
+.turtle-prefix-name { 
+    color: #8250df; 
+}
+
+.turtle-local-name { 
+    color: #cf222e; 
+}
+
+.turtle-punct { 
+    color: #24292f; 
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    pre.turtle {
+        background-color: #0d1117 !important;
+        border-color: #30363d !important;
+        color: #e6edf3 !important;
+    }
+    
+    .turtle-comment { 
+        color: #8b949e; 
+    }
+    
+    .turtle-string { 
+        color: #a5d6ff; 
+    }
+    
+    .turtle-uri { 
+        color: #79c0ff; 
+    }
+    
+    .turtle-prefix { 
+        color: #79c0ff; 
+    }
+    
+    .turtle-keyword { 
+        color: #79c0ff; 
+    }
+    
+    .turtle-keyword-a { 
+        color: #e6edf3; 
+    }
+    
+    .turtle-prefix-keyword { 
+        color: #8b949e; 
+    }
+    
+    .turtle-prefixed { 
+        color: #d2a8ff; 
+    }
+    
+    .turtle-lang { 
+        color: #8b949e; 
+    }
+    
+    .turtle-prefix-name { 
+        color: #d2a8ff; 
+    }
+    
+    .turtle-local-name { 
+        color: #ffa657; 
+    }
+    
+    .turtle-punct { 
+        color: #e6edf3; 
+    }
+}

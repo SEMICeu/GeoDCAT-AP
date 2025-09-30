@@ -10,6 +10,11 @@
     <meta name="color-scheme" content="light dark">
     <title>GeoDCAT-AP 3.0.1</title>
     <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
+
+    <!-- RDF Turtle syntax highlighting -->
+    <link rel="stylesheet" href="html/turtle-highlighting.css">
+    <script src='html/turtle-highlighting.js' class='remove'></script>
+
     <script class="remove">
     // All config options at https://respec.org/docs/
 
@@ -111,7 +116,7 @@
    
 
     var respecConfig = {
-      postProcess: [quickreference],
+      postProcess: [quickreference, setupTurtleHighlighting],
       edDraftURI: "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1/",
       thisVersion: "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1/",
       prevRecURI: "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/",
@@ -947,6 +952,7 @@
 
 
     </script>
+
     <style>
       .figure img, .sidefigure img, figure img, .figure object, .sidefigure object, figure object, img, .img {
       max-width: 100%;
