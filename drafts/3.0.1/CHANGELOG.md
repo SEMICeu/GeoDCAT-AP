@@ -20,6 +20,7 @@ This changelog provides an overview of the changes incorporated in GeoDCAT-AP 3.
 - Updated Maintenance information section (https://github.com/SEMICeu/GeoDCAT-AP/issues/56, https://github.com/SEMICeu/GeoDCAT-AP/issues/153) and removed the INSPIRE Maintenance Frequency controlled vocabulary as the EU Vocabularies Frequency NAL is mandatory and fully covers the INSPIRE one
 
 # **Alignment with INSPIRE**
+- Mentioned the INSPIRE HVD tagging good practice, its implementation in the XSLT, and its limitations in the HVD section
 
 # **Alignment with the SEMIC Style Guide**
 
