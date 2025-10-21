@@ -185,16 +185,16 @@
           "sh:path": "http://www.w3.org/2004/02/skos/core#inScheme"
         },
         {
-          "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/30453aca17d55948de316c49a7f3dd1190123971",
-          "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Location.geograhicidentifier",
+          "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/33e381ee565d4967597190de5407462136b5201f",
+          "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Location.geographicname",
           "sh:description": {
-            "en": "The geographic identifier for the Location, e.g., the URI or other unique identifier in the context of the relevant gazetteer."
+            "en": "A preferred label of the Location."
           },
           "sh:name": {
-            "en": "geograhic identifier"
+            "en": "geographic name"
           },
           "sh:nodeKind": "sh:Literal",
-          "sh:path": "http://purl.org/dc/terms/identifier"
+          "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel"
         },
         {
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/49b1848bfcfa586a2fba0522e3655f9097d9ff42",
@@ -231,18 +231,6 @@
             "en": "gazetteer"
           },
           "sh:path": "http://www.w3.org/2004/02/skos/core#inScheme"
-        },
-        {
-          "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/8fa6514820e3c9438e9e4c42e7fa09c39fb0fd77",
-          "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Location.geograhicname",
-          "sh:description": {
-            "en": "A preferred label of the Location."
-          },
-          "sh:name": {
-            "en": "geograhic name"
-          },
-          "sh:nodeKind": "sh:Literal",
-          "sh:path": "http://www.w3.org/2004/02/skos/core#prefLabel"
         },
         {
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/ac645171f7bc10bfce0730166a193316727dcdf3",
@@ -303,6 +291,18 @@
             "en": "geometry"
           },
           "sh:path": "http://www.w3.org/ns/locn#geometry"
+        },
+        {
+          "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/e8ee1e84cb83b9448511b77b2105dcaebb8942df",
+          "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Location.geographicidentifier",
+          "sh:description": {
+            "en": "The geographic identifier for the Location, e.g., the URI or other unique identifier in the context of the relevant gazetteer."
+          },
+          "sh:name": {
+            "en": "geographic identifier"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://purl.org/dc/terms/identifier"
         }
       ],
       "sh:targetClass": "http://purl.org/dc/terms/Location"
@@ -458,7 +458,7 @@
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:ProvenanceStatementShape/bc27744673ed61ca6c408817195bc96522c815c5",
           "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#ProvenanceStatement.provenancestatementtext",
           "sh:description": {
-            "en": "The text of the Provenance Statement"
+            "en": "The text of the Provenance Statement."
           },
           "sh:name": {
             "en": "provenance statement text"
@@ -540,7 +540,7 @@
             "en": "reference register"
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
-          "sh:path": "http://www.w3.org/2004/02/skos/core#ï¿½nScheme"
+          "sh:path": "http://www.w3.org/2004/02/skos/core#inScheme"
         },
         {
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:StandardShape/4be37093e4c3ba0d5b5a18ef6b97778d6d689392",
@@ -660,7 +660,7 @@
           "sh:name": {
             "en": "reference register"
           },
-          "sh:path": "http://www.w3.org/2004/02/skos/core#ï¿½nScheme"
+          "sh:path": "http://www.w3.org/2004/02/skos/core#inScheme"
         },
         {
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:StandardShape/d5d74574f70f9a979535f3624608f88180dd0c97",
@@ -696,7 +696,7 @@
           "sh:name": {
             "en": "reference register"
           },
-          "sh:path": "http://www.w3.org/2004/02/skos/core#ï¿½nScheme"
+          "sh:path": "http://www.w3.org/2004/02/skos/core#inScheme"
         }
       ],
       "sh:targetClass": "http://purl.org/dc/terms/Standard"
@@ -2936,18 +2936,6 @@
           "sh:path": "http://purl.org/dc/terms/spatial"
         },
         {
-          "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/01e271bbf4ae8e75217e81a49d8d852bdf541c79",
-          "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DataService.orginator",
-          "sh:class": "http://xmlns.com/foaf/0.1/Agent",
-          "sh:description": {
-            "en": "Party who created the resource [[ISO-19115]]."
-          },
-          "sh:name": {
-            "en": "orginator"
-          },
-          "sh:path": "http://data.europa.eu/930/originator"
-        },
-        {
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/0383ae85d347aaaa1366ede6a5651503e07b7240",
           "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DataService.serviceprotocol",
           "sh:description": {
@@ -3212,15 +3200,15 @@
           "sh:path": "http://www.w3.org/ns/dqv#hasQualityMeasurement"
         },
         {
-          "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/4a645eccb039c27c621f619e3c84b75bd3f807ab",
-          "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DataService.orginator",
+          "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/48476aa3f2bfa8f7c3e4d22652531e590c90e9ac",
+          "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DataService.originator",
+          "sh:class": "http://xmlns.com/foaf/0.1/Agent",
           "sh:description": {
             "en": "Party who created the resource [[ISO-19115]]."
           },
           "sh:name": {
-            "en": "orginator"
+            "en": "originator"
           },
-          "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/930/originator"
         },
         {
@@ -3329,7 +3317,7 @@
             "en": "spatial resolution in metres"
           },
           "sh:nodeKind": "sh:Literal",
-          "sh:path": "https://www.w3.org/ns/dcat#spatialResolutionInMeters"
+          "sh:path": "http://www.w3.org/ns/dcat#spatialResolutionInMeters"
         },
         {
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/6b7242b6b89977700c05e4875131fbb975c4235e",
@@ -3665,7 +3653,7 @@
           "sh:name": {
             "en": "spatial resolution in metres"
           },
-          "sh:path": "https://www.w3.org/ns/dcat#spatialResolutionInMeters"
+          "sh:path": "http://www.w3.org/ns/dcat#spatialResolutionInMeters"
         },
         {
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
@@ -3992,6 +3980,18 @@
           "sh:path": "http://purl.org/dc/terms/accessRights"
         },
         {
+          "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/f15ac8e72da8db00ffde633a42483a8874e9f5b4",
+          "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DataService.originator",
+          "sh:description": {
+            "en": "Party who created the resource [[ISO-19115]]."
+          },
+          "sh:name": {
+            "en": "originator"
+          },
+          "sh:nodeKind": "sh:BlankNodeOrIRI",
+          "sh:path": "http://data.europa.eu/930/originator"
+        },
+        {
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/f30149ffb6ec9d00dd5866b052105729fa27d02a",
           "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DataService.licence",
           "sh:description": {
@@ -4063,7 +4063,7 @@
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DatasetShape/016e621848f36eb558335ecb98b4b24cb2447d37",
           "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Dataset.otheridentifier",
           "sh:description": {
-            "en": "A secondary identifier of the Dataset"
+            "en": "A secondary identifier of the Dataset."
           },
           "sh:name": {
             "en": "other identifier"
@@ -4940,7 +4940,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Dataset.otheridentifier",
           "sh:class": "http://www.w3.org/ns/adms#Identifier",
           "sh:description": {
-            "en": "A secondary identifier of the Dataset"
+            "en": "A secondary identifier of the Dataset."
           },
           "sh:name": {
             "en": "other identifier"
@@ -5727,7 +5727,7 @@
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DatasetSeriesShape/67dcdb36167ca7969c0532898e11a98e9c2a80f5",
           "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DatasetSeries.publisher",
           "sh:description": {
-            "en": "An entity (organisation) responsible for ensuring the coherency of the Dataset Series"
+            "en": "An entity (organisation) responsible for ensuring the coherency of the Dataset Series."
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -6027,7 +6027,7 @@
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DatasetSeriesShape/93f73e69bb03d2928fcf758a253ef316becdf9b9",
           "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DatasetSeries.publisher",
           "sh:description": {
-            "en": "An entity (organisation) responsible for ensuring the coherency of the Dataset Series"
+            "en": "An entity (organisation) responsible for ensuring the coherency of the Dataset Series."
           },
           "sh:name": {
             "en": "publisher"
@@ -6208,7 +6208,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DatasetSeries.publisher",
           "sh:class": "http://xmlns.com/foaf/0.1/Agent",
           "sh:description": {
-            "en": "An entity (organisation) responsible for ensuring the coherency of the Dataset Series"
+            "en": "An entity (organisation) responsible for ensuring the coherency of the Dataset Series."
           },
           "sh:name": {
             "en": "publisher"

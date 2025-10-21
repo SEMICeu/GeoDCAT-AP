@@ -1015,7 +1015,6 @@
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape> a shacl:NodeShape;
   shacl:closed false;
   shacl:property <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/00a99d55cbc03165373a8348d5a88402ea4f239a>,
-    <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/01e271bbf4ae8e75217e81a49d8d852bdf541c79>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/0383ae85d347aaaa1366ede6a5651503e07b7240>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/08118c51bfc41b71d11f3a58e9410da74e6480e6>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb>,
@@ -1038,7 +1037,7 @@
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/3bde2663aaca96d953765ac2e525ef64710bf4d6>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/42110293925ce8bdb81f82dee95d1f78b2fca91c>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/46a60c7d3d828d3006937a12f82c1958b94e6f76>,
-    <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/4a645eccb039c27c621f619e3c84b75bd3f807ab>,
+    <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/48476aa3f2bfa8f7c3e4d22652531e590c90e9ac>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/4be37093e4c3ba0d5b5a18ef6b97778d6d689392>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/4f381639bb6e021939f65b4f41409d1edaeade9b>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/5247ab8155663a32970621a13083ea5813ec3ab7>,
@@ -1103,6 +1102,7 @@
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/eb3ac4e4fdde2e2588a9502c5956060a18c5c99f>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/eb98dee81407da4e91a31895d95101d0335b7c81>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/ee60fdd4b8581460f5fc4077813b8bb3e3d77441>,
+    <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/f15ac8e72da8db00ffde633a42483a8874e9f5b4>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/f30149ffb6ec9d00dd5866b052105729fa27d02a>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/ffbbcd28b1fd92213d8350e1b6418d3d998c7197>;
@@ -1113,12 +1113,6 @@
   shacl:description "A geographic region that is covered by the Data Service."@en;
   shacl:name "geographical coverage"@en;
   shacl:path dc:spatial .
-
-<https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/01e271bbf4ae8e75217e81a49d8d852bdf541c79> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DataService.orginator";
-  shacl:class foaf:Agent;
-  shacl:description "Party who created the resource [[ISO-19115]]."@en;
-  shacl:name "orginator"@en;
-  shacl:path <http://data.europa.eu/930/originator> .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/0383ae85d347aaaa1366ede6a5651503e07b7240> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DataService.serviceprotocol";
   shacl:description "Protocol value in accordance with INSPIRE Protocol Values [[INSPIRE-PV]]."@en;
@@ -1252,10 +1246,10 @@
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://www.w3.org/ns/dqv#hasQualityMeasurement> .
 
-<https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/4a645eccb039c27c621f619e3c84b75bd3f807ab> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DataService.orginator";
+<https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/48476aa3f2bfa8f7c3e4d22652531e590c90e9ac> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DataService.originator";
+  shacl:class foaf:Agent;
   shacl:description "Party who created the resource [[ISO-19115]]."@en;
-  shacl:name "orginator"@en;
-  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:name "originator"@en;
   shacl:path <http://data.europa.eu/930/originator> .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/4be37093e4c3ba0d5b5a18ef6b97778d6d689392> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DataService.releasedate";
@@ -1310,7 +1304,7 @@
   shacl:description "The minimum spatial separation resolvable in a Data Service, measured in metres."@en;
   shacl:name "spatial resolution in metres"@en;
   shacl:nodeKind shacl:Literal;
-  shacl:path <https://www.w3.org/ns/dcat#spatialResolutionInMeters> .
+  shacl:path dcat:spatialResolutionInMeters .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/6b7242b6b89977700c05e4875131fbb975c4235e> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DataService.modificationdate";
   shacl:description "The most recent date on which the Data Service was changed or modified."@en;
@@ -1478,7 +1472,7 @@
   shacl:datatype xsd:decimal;
   shacl:description "The minimum spatial separation resolvable in a Data Service, measured in metres."@en;
   shacl:name "spatial resolution in metres"@en;
-  shacl:path <https://www.w3.org/ns/dcat#spatialResolutionInMeters> .
+  shacl:path dcat:spatialResolutionInMeters .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/aadbd67a77a624f073be2076627fb9dc883cbe48> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DataService.identifier";
   shacl:description "The main identifier for the Data Service, e.g. the URI or other unique identifier in the context of the Catalogue."@en;
@@ -1641,6 +1635,12 @@
   shacl:description "Information regarding access or restrictions based on privacy, security, or other policies."@en;
   shacl:name "access rights"@en;
   shacl:path dc:accessRights .
+
+<https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/f15ac8e72da8db00ffde633a42483a8874e9f5b4> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DataService.originator";
+  shacl:description "Party who created the resource [[ISO-19115]]."@en;
+  shacl:name "originator"@en;
+  shacl:nodeKind shacl:BlankNodeOrIRI;
+  shacl:path <http://data.europa.eu/930/originator> .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DataServiceShape/f30149ffb6ec9d00dd5866b052105729fa27d02a> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DataService.licence";
   shacl:description "A licence under which the Data service is made available."@en;
@@ -1991,7 +1991,7 @@
   shacl:path dc:created .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DatasetSeriesShape/67dcdb36167ca7969c0532898e11a98e9c2a80f5> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DatasetSeries.publisher";
-  shacl:description "An entity (organisation) responsible for ensuring the coherency of the Dataset Series"@en;
+  shacl:description "An entity (organisation) responsible for ensuring the coherency of the Dataset Series."@en;
   shacl:maxCount 1;
   shacl:name "publisher"@en;
   shacl:path dc:publisher .
@@ -2141,7 +2141,7 @@
   shacl:path <http://data.europa.eu/930/resourceProvider> .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DatasetSeriesShape/93f73e69bb03d2928fcf758a253ef316becdf9b9> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DatasetSeries.publisher";
-  shacl:description "An entity (organisation) responsible for ensuring the coherency of the Dataset Series"@en;
+  shacl:description "An entity (organisation) responsible for ensuring the coherency of the Dataset Series."@en;
   shacl:name "publisher"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path dc:publisher .
@@ -2232,7 +2232,7 @@
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DatasetSeriesShape/b3ec0655204c62a2531244aaeab12f1a2c5e5b5d> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#DatasetSeries.publisher";
   shacl:class foaf:Agent;
-  shacl:description "An entity (organisation) responsible for ensuring the coherency of the Dataset Series"@en;
+  shacl:description "An entity (organisation) responsible for ensuring the coherency of the Dataset Series."@en;
   shacl:name "publisher"@en;
   shacl:path dc:publisher .
 
@@ -2469,7 +2469,7 @@
   shacl:path <http://data.europa.eu/930/resourceType> .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DatasetShape/016e621848f36eb558335ecb98b4b24cb2447d37> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Dataset.otheridentifier";
-  shacl:description "A secondary identifier of the Dataset"@en;
+  shacl:description "A secondary identifier of the Dataset."@en;
   shacl:name "other identifier"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path <http://www.w3.org/ns/adms#identifier> .
@@ -2908,7 +2908,7 @@
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dcat:DatasetShape/9fe7c5889615d19dd4849fb66a5664fc016aa598> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Dataset.otheridentifier";
   shacl:class <http://www.w3.org/ns/adms#Identifier>;
-  shacl:description "A secondary identifier of the Dataset"@en;
+  shacl:description "A secondary identifier of the Dataset."@en;
   shacl:name "other identifier"@en;
   shacl:path <http://www.w3.org/ns/adms#identifier> .
 
@@ -3660,16 +3660,16 @@
   shacl:closed false;
   shacl:property <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/0ae2f89b0ca180c9b7eed510013f60fd9fa34f52>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/2449ade6be593ee2b1e1d30b8731d175e477403f>,
-    <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/30453aca17d55948de316c49a7f3dd1190123971>,
+    <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/33e381ee565d4967597190de5407462136b5201f>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/49b1848bfcfa586a2fba0522e3655f9097d9ff42>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/53c8e9f0fc79ab4ed706e31129a2b3e02f7edd22>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/63b78d27e017efcfb90a023b79d957a934869de6>,
-    <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/8fa6514820e3c9438e9e4c42e7fa09c39fb0fd77>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/ac645171f7bc10bfce0730166a193316727dcdf3>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/caa9d15ad38096046fd527702c7620800aea178b>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/d0b958cd33e8ef1bc031edaf2859b44db128a644>,
     <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/d75cb3222eabce83fa3e236344cbf419e465f10e>,
-    <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/dde6f1d3b53e457ed56cd01d51f110aea62f5d72>;
+    <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/dde6f1d3b53e457ed56cd01d51f110aea62f5d72>,
+    <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/e8ee1e84cb83b9448511b77b2105dcaebb8942df>;
   shacl:targetClass dc:Location .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/0ae2f89b0ca180c9b7eed510013f60fd9fa34f52> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Location.bbox";
@@ -3684,11 +3684,11 @@
   shacl:name "gazetteer"@en;
   shacl:path skos:inScheme .
 
-<https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/30453aca17d55948de316c49a7f3dd1190123971> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Location.geograhicidentifier";
-  shacl:description "The geographic identifier for the Location, e.g., the URI or other unique identifier in the context of the relevant gazetteer."@en;
-  shacl:name "geograhic identifier"@en;
+<https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/33e381ee565d4967597190de5407462136b5201f> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Location.geographicname";
+  shacl:description "A preferred label of the Location."@en;
+  shacl:name "geographic name"@en;
   shacl:nodeKind shacl:Literal;
-  shacl:path dc:identifier .
+  shacl:path skos:prefLabel .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/49b1848bfcfa586a2fba0522e3655f9097d9ff42> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Location.gazetteer";
   shacl:description "The gazetteer to which the Location belongs."@en;
@@ -3707,12 +3707,6 @@
   shacl:description "The gazetteer to which the Location belongs."@en;
   shacl:name "gazetteer"@en;
   shacl:path skos:inScheme .
-
-<https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/8fa6514820e3c9438e9e4c42e7fa09c39fb0fd77> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Location.geograhicname";
-  shacl:description "A preferred label of the Location."@en;
-  shacl:name "geograhic name"@en;
-  shacl:nodeKind shacl:Literal;
-  shacl:path skos:prefLabel .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/ac645171f7bc10bfce0730166a193316727dcdf3> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Location.centroid";
   shacl:description "The geographic center (centroid) of a resource."@en;
@@ -3743,6 +3737,12 @@
   shacl:maxCount 1;
   shacl:name "geometry"@en;
   shacl:path <http://www.w3.org/ns/locn#geometry> .
+
+<https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:LocationShape/e8ee1e84cb83b9448511b77b2105dcaebb8942df> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Location.geographicidentifier";
+  shacl:description "The geographic identifier for the Location, e.g., the URI or other unique identifier in the context of the relevant gazetteer."@en;
+  shacl:name "geographic identifier"@en;
+  shacl:nodeKind shacl:Literal;
+  shacl:path dc:identifier .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:MediaTypeOrExtentShape> a shacl:NodeShape;
   shacl:closed false;
@@ -3832,7 +3832,7 @@
   shacl:targetClass dc:ProvenanceStatement .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:ProvenanceStatementShape/bc27744673ed61ca6c408817195bc96522c815c5> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#ProvenanceStatement.provenancestatementtext";
-  shacl:description "The text of the Provenance Statement"@en;
+  shacl:description "The text of the Provenance Statement."@en;
   shacl:name "provenance statement text"@en;
   shacl:nodeKind shacl:Literal;
   shacl:path dc:description .
@@ -3891,7 +3891,7 @@
   shacl:description "The reference register to which the Standard belongs."@en;
   shacl:name "reference register"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
-  shacl:path <http://www.w3.org/2004/02/skos/core#ï¿½nScheme> .
+  shacl:path skos:inScheme .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:StandardShape/4be37093e4c3ba0d5b5a18ef6b97778d6d689392> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Standard.releasedate";
   shacl:description "The date of formal issuance (e.g., publication) of the Standard."@en;
@@ -3951,7 +3951,7 @@
   shacl:description "The reference register to which the Standard belongs."@en;
   shacl:maxCount 1;
   shacl:name "reference register"@en;
-  shacl:path <http://www.w3.org/2004/02/skos/core#ï¿½nScheme> .
+  shacl:path skos:inScheme .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dct:StandardShape/d5d74574f70f9a979535f3624608f88180dd0c97> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Standard.title";
   shacl:description "Name given to the Standard."@en;
@@ -3969,7 +3969,7 @@
   shacl:class skos:ConceptScheme;
   shacl:description "The reference register to which the Standard belongs."@en;
   shacl:name "reference register"@en;
-  shacl:path <http://www.w3.org/2004/02/skos/core#ï¿½nScheme> .
+  shacl:path skos:inScheme .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#dqv:DimensionShape> a shacl:NodeShape;
   shacl:closed false;

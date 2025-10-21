@@ -530,7 +530,7 @@
         "modificationDate": {
           "@id": "http://purl.org/dc/terms/modified"
         },
-        "orginator": {
+        "originator": {
           "@container": "@set",
           "@id": "http://data.europa.eu/930/originator",
           "@type": "@id"
@@ -605,7 +605,7 @@
         },
         "spatialResolutionInMetres": {
           "@container": "@set",
-          "@id": "https://www.w3.org/ns/dcat#spatialResolutionInMeters",
+          "@id": "http://www.w3.org/ns/dcat#spatialResolutionInMeters",
           "@type": "http://www.w3.org/2001/XMLSchema#decimal"
         },
         "temporalCoverage": {
@@ -1361,11 +1361,11 @@
           "@id": "http://www.w3.org/2004/02/skos/core#inScheme",
           "@type": "@id"
         },
-        "geograhicIdentifier": {
+        "geographicIdentifier": {
           "@container": "@set",
           "@id": "http://purl.org/dc/terms/identifier"
         },
-        "geograhicName": {
+        "geographicName": {
           "@container": "@set",
           "@id": "http://www.w3.org/2004/02/skos/core#prefLabel"
         },
@@ -1477,7 +1477,7 @@
           "@id": "http://purl.org/dc/terms/identifier"
         },
         "referenceRegister": {
-          "@id": "http://www.w3.org/2004/02/skos/core#ï¿½nScheme",
+          "@id": "http://www.w3.org/2004/02/skos/core#inScheme",
           "@type": "@id"
         },
         "releaseDate": {

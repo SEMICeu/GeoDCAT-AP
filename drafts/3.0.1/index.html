@@ -122,7 +122,7 @@
       prevRecURI: "https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/",
       latestVersion: "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1/",
       specStatus: "base",
-      publishDate: "2025-10-06",
+      publishDate: "2025-10-21",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [
@@ -1103,9 +1103,9 @@ The following webinars have been held for the creation of this release
     <h2>Status</h2>
         <p>
 <!-- readd when SEMIC has a codelist about it process 
-	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsCR">Draft</a> published at 2025-10-06.
+	This application profile has the status <a href="https://www.w3.org/2021/Process-20211102/#RecsCR">Draft</a> published at 2025-10-21.
 -->
-	This application profile has the status Draft published at 2025-10-06.
+	This application profile has the status Draft published at 2025-10-21.
         </p>
         <p>
             Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1/CHANGELOG.html">Changelog</a>.
@@ -3765,7 +3765,7 @@ For the purpose of this application profile, Agent from the FOAF Vocabulary [[FO
                                     A knowledge organization system used to classify the Resources that are in the Catalogue.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    This property refers to a knowledge organization system used to classify the Catalogue's Datasets. It must have at least the value NAL:data-theme as this is the manatory controlled vocabulary for dcat:theme.
+                                    This property refers to a knowledge organization system used to classify the Catalogue's Datasets. It must have at least the value NAL:data-theme as this is the mandatory controlled vocabulary for dcat:theme.
                                 </td>
 				<!--
                                 <td>
@@ -4844,7 +4844,7 @@ For the purpose of this application profile, Agent from the FOAF Vocabulary [[FO
                                     A link to the Dataset, Data service or Catalog described in the record.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    A catalogue record will refer to one entity in a catalogue. This can be either a Dataset or a Data Service. To ensure an unambigous reading of the cardinality the range is set to Catalogued Resource. However it is not the intend with this range to require the explicit use of the class Catalogued Record. As abstract class, an subclass should be used.
+                                    A catalogue record will refer to one entity in a catalogue. This can be either a Dataset or a Data Service. To ensure an unambiguous reading of the cardinality the range is set to Catalogued Resource. However it is not the intend with this range to require the explicit use of the class Catalogued Record. As abstract class, an subclass should be used.
                                 </td>
 				<!--
                                 <td>
@@ -5732,7 +5732,7 @@ record:af4c4fd6-0485-45c8-b6bc-8a8ed12aa3eb a dcat:CatalogRecord ;
                             , <a href="#DataService.language">language</a>
                             , <a href="#DataService.licence">licence</a>
                             , <a href="#DataService.modificationdate">modification date</a>
-                            , <a href="#DataService.orginator">orginator</a>
+                            , <a href="#DataService.originator">originator</a>
                             , <a href="#DataService.principalinvestigator">principal investigator</a>
                             , <a href="#DataService.processor">processor</a>
                             , <a href="#DataService.publisher">publisher</a>
@@ -6820,13 +6820,13 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                                 </td>
                             </tr>
                         
-                            <tr id="DataService.orginator"
+                            <tr id="DataService.originator"
                                 typeof="rdf:Property"
                                 resource="http://data.europa.eu/930/originator"
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20orginator%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1%23DataService.orginator" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20originator%20in%20Data Service&body=Explain%20your%20issue%20for%20https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1%23DataService.originator" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -6836,7 +6836,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                                            data-toggle="tooltip"
                                            data-content="http://data.europa.eu/930/originator"
                                            data-placement="right">
-                                        orginator</a>
+                                        originator</a>
                                 </td>
                                 <td>
                                     
@@ -7676,7 +7676,7 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                         
                             <tr id="DataService.spatialresolutioninmetres"
                                 typeof="rdf:Property"
-                                resource="https://www.w3.org/ns/dcat#spatialResolutionInMeters"
+                                resource="http://www.w3.org/ns/dcat#spatialResolutionInMeters"
                                 class="class mandatory">
 <!--
                                 <td>
@@ -7686,9 +7686,9 @@ For instance the data service adheres to the OGC WFS API standard, while the ass
                                 </td>
 --->
                                 <td>
-                                        <a href="https://www.w3.org/ns/dcat#spatialResolutionInMeters"
+                                        <a href="http://www.w3.org/ns/dcat#spatialResolutionInMeters"
                                            data-toggle="tooltip"
-                                           data-content="https://www.w3.org/ns/dcat#spatialResolutionInMeters"
+                                           data-content="http://www.w3.org/ns/dcat#spatialResolutionInMeters"
                                            data-placement="right">
                                         spatial resolution in metres</a>
                                 </td>
@@ -9589,7 +9589,7 @@ For this usage, consult the <a href="https://semiceu.github.io/DCAT-AP/releases/
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    A secondary identifier of the Dataset
+                                    A secondary identifier of the Dataset.
                                 </td>
                                 <td property="skos:scopeNote">
                                     Examples are MAST/ADS [[MASTADS]], DOI [[DOI]], EZID [[EZID]] or W3ID [[W3ID]].
@@ -12757,7 +12757,7 @@ resource:eea_r_3035_10_m_noise-contours-end2017_i_2016_v01_r00 a dcat:Dataset ;
                                     0..1
                                 </td>
                                 <td property="rdfs:comment">
-                                    An entity (organisation) responsible for ensuring the coherency of the Dataset Series
+                                    An entity (organisation) responsible for ensuring the coherency of the Dataset Series.
                                 </td>
                                 <td property="skos:scopeNote">
                                     The publisher of the dataset series may not be the publisher of all datasets.
@@ -16485,8 +16485,8 @@ This is not equal to the release date of the oldest dataset in the collection of
                             For this entity the following properties are defined: <a href="#Location.bbox">bbox</a>
                             , <a href="#Location.centroid">centroid</a>
                             , <a href="#Location.gazetteer">gazetteer</a>
-                            , <a href="#Location.geograhicidentifier">geograhic identifier</a>
-                            , <a href="#Location.geograhicname">geograhic name</a>
+                            , <a href="#Location.geographicidentifier">geographic identifier</a>
+                            , <a href="#Location.geographicname">geographic name</a>
                             , <a href="#Location.geometry">geometry</a>
                             .
                     </dd>
@@ -16693,13 +16693,13 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
                             </tr>
                         
-                            <tr id="Location.geograhicidentifier"
+                            <tr id="Location.geographicidentifier"
                                 typeof="rdf:Property"
                                 resource="http://purl.org/dc/terms/identifier"
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20geograhic identifier%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1%23Location.geograhicidentifier" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20geographic identifier%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1%23Location.geographicidentifier" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -16709,7 +16709,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                            data-toggle="tooltip"
                                            data-content="http://purl.org/dc/terms/identifier"
                                            data-placement="right">
-                                        geograhic identifier</a>
+                                        geographic identifier</a>
                                 </td>
                                 <td>
                                     
@@ -16746,13 +16746,13 @@ This is not equal to the release date of the oldest dataset in the collection of
                                 </td>
                             </tr>
                         
-                            <tr id="Location.geograhicname"
+                            <tr id="Location.geographicname"
                                 typeof="rdf:Property"
                                 resource="http://www.w3.org/2004/02/skos/core#prefLabel"
                                 class="class mandatory">
 <!--
                                 <td>
-				    <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20geograhic name%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1%23Location.geograhicname" target="_blank" rel="noopener noreferrer" >
+				    <a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20geographic name%20in%20Location&body=Explain%20your%20issue%20for%20https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1%23Location.geographicname" target="_blank" rel="noopener noreferrer" >
                                         <img src="html/callout.png" loading="lazy" alt="[o]" width="100" height="100"/>
                                     </a>
                                 </td>
@@ -16762,7 +16762,7 @@ This is not equal to the release date of the oldest dataset in the collection of
                                            data-toggle="tooltip"
                                            data-content="http://www.w3.org/2004/02/skos/core#prefLabel"
                                            data-placement="right">
-                                        geograhic name</a>
+                                        geographic name</a>
                                 </td>
                                 <td>
                                     
@@ -18393,7 +18393,7 @@ For the mapping between [[LOCN]] and [[VCARD-RDF]], see [[LOCN-MAPPING]].
                         Usage Note
                     </dt>
                     <dd>
-                        The agent roles mapped to properties (see <a href="#agent-roles"></a>) SHOULD primarily be indicated using those properties. All other roles can be described using quailified attribution.
+                        The agent roles mapped to properties (see <a href="#agent-roles"></a>) SHOULD primarily be indicated using those properties. All other roles can be described using qualified attribution.
                     </dd>
                 
                 
@@ -19405,7 +19405,7 @@ resource:eea_v_4326_1_mio_EU27-2020-basemap_i_2020_v01_r00 prov:qualifiedAttribu
                         Usage Note
                     </dt>
                     <dd>
-                        See <a href="https://www.w3.org/TR/vcard-rdf/#d4e1588">Email</a> in VCard Ontology [[VCARD]].
+                        See <a href="https://www.w3.org/TR/vcard-rdf/#d4e1588">Email</a> in vCard Ontology [[VCARD]].
                     </dd>
                 
                 
@@ -21033,7 +21033,7 @@ geodcatap:spatialResolutionAsVerticalDistance a dqv:Metric ;
                                     0..*
                                 </td>
                                 <td property="rdfs:comment">
-                                    The text of the Provenance Statement
+                                    The text of the Provenance Statement.
                                 </td>
                                 <td property="skos:scopeNote">
                                     This property can be repeated for parallel language versions of the text.
@@ -21904,7 +21904,7 @@ resource:d45678 dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
                         
                             <tr id="Standard.referenceregister"
                                 typeof="rdf:Property"
-                                resource="http://www.w3.org/2004/02/skos/core#ï¿½nScheme"
+                                resource="http://www.w3.org/2004/02/skos/core#inScheme"
                                 class="class mandatory">
 <!--
                                 <td>
@@ -21914,9 +21914,9 @@ resource:d45678 dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ;
                                 </td>
 --->
                                 <td>
-                                        <a href="http://www.w3.org/2004/02/skos/core#ï¿½nScheme"
+                                        <a href="http://www.w3.org/2004/02/skos/core#inScheme"
                                            data-toggle="tooltip"
-                                           data-content="http://www.w3.org/2004/02/skos/core#ï¿½nScheme"
+                                           data-content="http://www.w3.org/2004/02/skos/core#inScheme"
                                            data-placement="right">
                                         reference register</a>
                                 </td>
@@ -23305,12 +23305,12 @@ Inherited from DCAT [[vocab-dcat-3]]
 <ul>
 <li><p><strong>For marine regions: </strong></p>
 <ul>
-<li><p><a href="http://www.marineregions.org/">Marine Regions </a></p></li>
+<li><p><a href="https://www.marineregions.org/">Marine Regions </a></p></li>
 <li><p><a href="https://www.bodc.ac.uk/resources/vocabularies/seavox/#:~:text=SeaVoX%20Salt%20and%20Fresh%20Water%20Body%20Gazetteer">SeaVoX salt and fresh water body gazetteer</a></p></li>
 </ul></li>
 <li><p><strong>General:</strong></p>
 <ul>
-<li><p><a href="http://dbpedia.org/about">DBpedia for Geographic Placenames</a></p></li>
+<li><p><a href="https://www.dbpedia.org/about/">DBpedia for Geographic Placenames</a></p></li>
 <li><p>National gazetteer vocabularies where feasible</p></li>
 <li><p><a href="https://www.bodc.ac.uk/resources/vocabularies/seavox/#:~:text=SeaVoX%20Salt%20and%20Fresh%20Water%20Body%20Gazetteer">SeaVoX salt and fresh water body gazetteer</a> for ‘marine geonames’</p></li>
 </ul></li>
@@ -23325,7 +23325,7 @@ Inherited from DCAT [[vocab-dcat-3]]
 <ul>
 <li><p><a href="https://en.wikipedia.org/wiki/Societal_Benefit_Areas"><abbr title="Global Earth Observation System of Systems">GEOSS</abbr> Societal Benefit Areas</a></p></li>
 <li><p><a href="https://www.eionet.europa.eu/gemet/">General Multilingual Environmental Thesaurus (GEMET)</a></p></li>
-<li><p><a href="http://www.bodc.ac.uk/">British Oceanographic Data centre</a></p></li>
+<li><p><a href="https://www.bodc.ac.uk/">British Oceanographic Data centre</a></p></li>
 </ul>
 </li>
 </ul>
@@ -23486,7 +23486,7 @@ One perspective is to consider GeoDCAT-AP as an extension to DCAT-AP and thus im
 first validation against DCAT-AP and then additionally validate the GeoDCAT-AP specific constraints. 
 Another perspective is to consider this specification as a standalone specification and validate all constraints at once.
 Besides these there are many other validation perspectives possible.
-For additional considirations on validation consult the section Validation in DCAT-AP.
+For additional considerations on validation consult the section Validation in DCAT-AP.
 </p><p>
 As there is yet not preferred perspective decided nor requested by the community, a similar to DCAT-AP SHACL artefact with all the constraints is provided. 
 The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
@@ -23587,7 +23587,7 @@ The shape is downloadable <a href="./shacl/geodcat-ap-SHACL.ttl">here</a>.
 <ol>
 <li><p>Provide a [[DCAT-AP-3]]-conformant representation of geospatial metadata.</p></li>
 <li><p>Provide an as much as possible comprehensive RDF-based representation of geospatial metadata, based on widely used vocabularies, trying, at the same time, to avoid semantic loss and to promote cross-domain re-use.</p></li>
-<li><p>Ensure backward compatibiliy with previous versions of GeoDCAT-AP.</p></li>
+<li><p>Ensure backward compatibility with previous versions of GeoDCAT-AP.</p></li>
 </ol>
 
 <p>The first two goals, having a different scope and applying to different use cases (see <a href="#motivation-and-use-cases"></a>), are reflected in the two mapping profiles of GeoDCAT-AP, core and extended, described in <a href="#rdf-syntax-bindings-for-inspire-and-iso19115-metadata-elements"></a>.</p>
@@ -27428,7 +27428,7 @@ To limit the impact, it was decided to only provide a partial mapping for Data Q
 <td rowspan="4">Specification (M)</td>
 <td colspan="2">Title</td>
 <td rowspan="6"><code>prov:wasUsedBy</code> (range <code>prov:Activity</code>)</td>
-<td rowspan="4"><code>prov:qualifiedAssociation</code> (range <code>prov:Assocation</code>) &gt; <code>prov:hadPlan</code> (range <code>prov:Plan</code>) &gt; <code>prov:wasDerivedFrom</code> (range: <code>prov:Entity</code>, <code>dct:Standard</code>)</td>
+<td rowspan="4"><code>prov:qualifiedAssociation</code> (range <code>prov:Association</code>) &gt; <code>prov:hadPlan</code> (range <code>prov:Plan</code>) &gt; <code>prov:wasDerivedFrom</code> (range: <code>prov:Entity</code>, <code>dct:Standard</code>)</td>
 <td><code>dct:title</code></td>
 </tr>
 
@@ -28787,7 +28787,7 @@ prov:wasUsedBy [
 <td>Dataset reference date (M)</td>
 <td>Part B 5 Temporal Reference</td>
 <td>Resource reference date (O/N)</td>
-<td><code>MD_Metadata.idenitificationInfo</code> &gt; <code>MD_DataIdentification.citation</code> &gt; <code>CI_Citation.date</code></td>
+<td><code>MD_Metadata.identificationInfo</code> &gt; <code>MD_DataIdentification.citation</code> &gt; <code>CI_Citation.date</code></td>
 </tr>
 
 <tr>
@@ -31006,7 +31006,7 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><a href="#DataService">Data Service</a></td>
 								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
 								<td>Optional</td>
-								<td><a href="#DataService.orginator">orginator </a></td>
+								<td><a href="#DataService.originator">originator </a></td>
 								<td><div class="shorten">http://data.europa.eu/930/originator</div></td>
 							</tr>
 						
@@ -31151,7 +31151,7 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></td>
 								<td>Optional</td>
 								<td><a href="#DataService.spatialresolutioninmetres">spatial resolution in metres </a></td>
-								<td><div class="shorten">https://www.w3.org/ns/dcat#spatialResolutionInMeters</div></td>
+								<td><div class="shorten">http://www.w3.org/ns/dcat#spatialResolutionInMeters</div></td>
 							</tr>
 						
 					
@@ -33459,7 +33459,7 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><a href="#Location">Location</a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/Location</div></td>
 								<td>Optional</td>
-								<td><a href="#Location.geograhicidentifier">geograhic identifier </a></td>
+								<td><a href="#Location.geographicidentifier">geographic identifier </a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/identifier</div></td>
 							</tr>
 						
@@ -33469,7 +33469,7 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><a href="#Location">Location</a></td>
 								<td><div class="shorten">http://purl.org/dc/terms/Location</div></td>
 								<td>Optional</td>
-								<td><a href="#Location.geograhicname">geograhic name </a></td>
+								<td><a href="#Location.geographicname">geographic name </a></td>
 								<td><div class="shorten">http://www.w3.org/2004/02/skos/core#prefLabel</div></td>
 							</tr>
 						
@@ -33853,7 +33853,7 @@ The properties are grouped under headings <it>mandatory, recommended, optional</
 								<td><div class="shorten">http://purl.org/dc/terms/Standard</div></td>
 								<td>Optional</td>
 								<td><a href="#Standard.referenceregister">reference register </a></td>
-								<td><div class="shorten">http://www.w3.org/2004/02/skos/core#ï¿½nScheme</div></td>
+								<td><div class="shorten">http://www.w3.org/2004/02/skos/core#inScheme</div></td>
 							</tr>
 						
 					
