@@ -4122,7 +4122,7 @@
   shacl:path org:memberOf .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#foaf:AgentShape/236f0210baaf149903750c43bbe7012c21debb2a> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Agent.type";
-  shacl:description "The nature of the agent."@en;
+  shacl:description "The nature of the Agent."@en;
   shacl:maxCount 1;
   shacl:name "type"@en;
   shacl:path dc:type .
@@ -4141,12 +4141,12 @@
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#foaf:AgentShape/322371a77364a50f049d46180f6192532eea26dc> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Agent.type";
   shacl:class skos:Concept;
-  shacl:description "The nature of the agent."@en;
+  shacl:description "The nature of the Agent."@en;
   shacl:name "type"@en;
   shacl:path dc:type .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#foaf:AgentShape/4f381639bb6e021939f65b4f41409d1edaeade9b> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Agent.type";
-  shacl:description "The nature of the agent."@en;
+  shacl:description "The nature of the Agent."@en;
   shacl:name "type"@en;
   shacl:nodeKind shacl:BlankNodeOrIRI;
   shacl:path dc:type .
@@ -4182,7 +4182,7 @@
   shacl:path org:memberOf .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#foaf:AgentShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Agent.name";
-  shacl:description "A name of the agent."@en;
+  shacl:description "A name of the Agent."@en;
   shacl:minCount 1;
   shacl:name "name"@en;
   shacl:path foaf:name .
@@ -4200,7 +4200,7 @@
   shacl:path foaf:mbox .
 
 <https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#foaf:AgentShape/9caf9e629daa0e64ece77788576468821d7cff8c> rdfs:seeAlso "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Agent.name";
-  shacl:description "A name of the agent."@en;
+  shacl:description "A name of the Agent."@en;
   shacl:name "name"@en;
   shacl:nodeKind shacl:Literal;
   shacl:path foaf:name .

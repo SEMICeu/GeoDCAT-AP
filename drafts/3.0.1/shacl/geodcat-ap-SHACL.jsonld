@@ -8065,7 +8065,7 @@
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#foaf:AgentShape/236f0210baaf149903750c43bbe7012c21debb2a",
           "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Agent.type",
           "sh:description": {
-            "en": "The nature of the agent."
+            "en": "The nature of the Agent."
           },
           "sh:maxCount": "1",
           "sh:name": {
@@ -8102,7 +8102,7 @@
           "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Agent.type",
           "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
-            "en": "The nature of the agent."
+            "en": "The nature of the Agent."
           },
           "sh:name": {
             "en": "type"
@@ -8113,7 +8113,7 @@
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#foaf:AgentShape/4f381639bb6e021939f65b4f41409d1edaeade9b",
           "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Agent.type",
           "sh:description": {
-            "en": "The nature of the agent."
+            "en": "The nature of the Agent."
           },
           "sh:name": {
             "en": "type"
@@ -8185,7 +8185,7 @@
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#foaf:AgentShape/96cdcbb0489a41ab01fc39c521f5ed607a0b2c41",
           "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Agent.name",
           "sh:description": {
-            "en": "A name of the agent."
+            "en": "A name of the Agent."
           },
           "sh:minCount": "1",
           "sh:name": {
@@ -8221,7 +8221,7 @@
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#foaf:AgentShape/9caf9e629daa0e64ece77788576468821d7cff8c",
           "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.0.1#Agent.name",
           "sh:description": {
-            "en": "A name of the agent."
+            "en": "A name of the Agent."
           },
           "sh:name": {
             "en": "name"
