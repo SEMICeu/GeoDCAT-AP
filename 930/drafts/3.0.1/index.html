@@ -1,0 +1,2604 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+
+
+
+<head>
+    
+	
+    <meta charset="utf-8" />
+    <meta name="color-scheme" content="light dark">
+    <title>GeoDCAT-AP vocabulary, the 930 namespace</title>
+    <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
+    <script class="remove">
+    // All config options at https://respec.org/docs/
+
+	var myeditors = [
+	
+	
+	
+	
+	    
+	    
+		
+		   {
+		    name: "Jitse De Cock",
+		      
+		      
+		    company: "PwC EU Services",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Jordi Escriu",
+		      
+		      
+		    company: "JRC",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Pavlina Fragkou",
+		      
+		      
+		    company: "DIGIT",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Andrea Perego",
+		      
+		      
+		    company: "European Parliament",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Joeri Robberecht",
+		      
+		      
+		    company: "DG ENV",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Arthur Schiltz",
+		      
+		      
+		    company: "PwC EU Services",
+		      
+		      
+		    }
+		, 
+		
+		   {
+		    name: "Bert Van Nuffelen",
+		      
+		      
+		    company: "Digitaal Vlaanderen",
+		      
+		      
+		    mailto: "bert.vannuffelen@vlaanderen.be"
+		      
+		    }
+		
+		
+             
+        
+	
+	
+	
+		]
+
+	var myauthors = [
+	
+	
+	    
+	    
+		
+		   {
+		    name: "Jakub Klímek",
+		      
+		      
+		    company: "CUIT",
+		      
+		      
+		    mailto: "jakub@cuit.cz"
+		      
+		    }
+		
+		
+             
+        
+	
+	
+	
+	
+	
+		]
+
+    var myowners = [
+            {
+                value: "Pavlina Fragkou (DIGIT)",
+            },
+            {
+                value: "SEMIC",
+                href: "https://joinup.ec.europa.eu/collection/semic-support-centre",
+            },
+		]
+
+
+   
+
+    var respecConfig = {
+      prevRecURI: "https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/",
+      thisVersionURI: "https://semiceu.github.io/GeoDCAT-AP/930/drafts/3.0.1/",
+      edDraftURI: "https://semiceu.github.io/GeoDCAT-AP/930/drafts/3.0.1/",
+      latestVersion: "https://semiceu.github.io/GeoDCAT-AP/930/drafts/3.0.1/",
+      specStatus: "base",
+      publishDate: "2025-10-22",
+      editors: myeditors,
+      authors: myauthors,
+      otherLinks: [
+        {
+          key: "Owners:",
+          data: myowners
+        }
+      ],
+      github: "SEMICeu/DCAT-AP",
+      shortName: "GeoDCAT-AP vocabulary, the 930 namespace",
+      xref: "web-platform",
+      doJsonLd: true,
+	  historyURI: null,
+      logos: [{
+        src: "https://semiceu.github.io/CPOV/releases/2.1.0/html/semic-icon.png",
+        url: "https://semic.eu",
+        alt: "SEMIC",
+        width: 154,
+        height: 140,
+        id: "semic-logo",
+      },],
+      generatedSubtitle: "",
+      additionalCopyrightHolders: "",
+      localBiblio: {
+        "DXWG": {
+          "href" : "https://www.w3.org/2017/dxwg/wiki/Main_Page",
+          "title" : "Dataset Exchange Working Group",
+          "publisher" : "W3C"
+        },
+        "ISA":{
+           "href":"https://ec.europa.eu/isa/",
+           "title":"Interoperability Solutions for European Public Administrations (ISA)",
+           "publisher":"European Commission"
+        },
+        "ISA2":{
+          "href":"https://ec.europa.eu/isa2/",
+          "title":"Interoperability solutions for public administrations, businesses and citizens (ISA²)",
+          "publisher":"European Commission"
+        },
+        "SEMIC":{
+          "href":"https://joinup.ec.europa.eu/",
+          "title":"JoinUp welcomes Interoperable Europe",
+          "publisher":"European Commission"
+        },
+        "DEU": {
+          "href":"https://data.europa.eu",
+          "title":"The official portal for European data",
+          "publisher":"European Commission"
+        },
+        "HVD": {
+          "href":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0138",
+          "title":"Implementing Regulation for High Value Datasets",
+          "publisher":"European Union"
+        },
+        "DCAT-AP-HVD": {
+          "href":"https://semiceu.github.io/uri.semic.eu-generated/DCAT-AP/releases/2.2.0-hvd/",
+          "title":"Usage Guidelines of DCAT-AP for High-Value Datasets",
+          "publisher":"European Commission"
+        },
+        "DCAT-AP": {
+          "href":"https://semiceu.github.io/DCAT-AP/releases/3.0.0/",
+          "title":"DCAT-AP, a DCAT profile for European data portals",
+          "publisher":"European Commission"
+        },
+        "GEODCAT-AP": {
+          "href":"https://semiceu.github.io/GEODCAT-AP/releases/3.0.0/",
+          "title":"GEODCAT-AP, a DCAT-AP profile for geospatial datasets",
+          "publisher":"European Commission"
+        },
+        "GEODCAT-AP-2.0.0": {
+          "href":"https://semiceu.github.io/GEODCAT-AP/releases/2.0.0/",
+          "title":"GEODCAT-AP, a DCAT-AP profile for geospatial datasets",
+          "publisher":"European Commission"
+        },
+        "PSI": {
+          "href": "https://eur-lex.europa.eu/eli/dir/2019/1024/oj",
+          "title" :  "Directive on open data and the re-use of public sector information (recast)",
+          "publisher" : "European Union"           
+        },
+        "INSPIRE-TC": {
+          "href":"http://inspire.ec.europa.eu/metadata-codelist/TopicCategory",
+          "title":"INSPIRE Registry: Topic categories in accordance with EN ISO 19115",
+          "publisher":"European Commission"
+        },
+        "INSPIRE-SDSC": {
+          "href":"http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory",
+          "title":"INSPIRE Registry: Classification of spatial data services",
+          "publisher":"European Commission"
+        },
+        "INSPIRE-SDST": {
+          "href":"http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType",
+          "title":"INSPIRE Registry: Spatial data service types",
+          "publisher":"European Commission"
+        },
+        "INSPIRE-PV": {
+          "href":"https://inspire.ec.europa.eu/metadata-codelist/ProtocolValue",
+          "title":"INSPIRE Registry: Protocol values",
+          "publisher":"European Commission"
+        },
+        "INSPIRE-RT": {
+          "href":"http://inspire.ec.europa.eu/metadata-codelist/ResourceType",
+          "title":"INSPIRE Registry: Resource types",
+          "publisher":"European Commission"
+        },
+        "OGC-EPSG": {
+          "href":"http://www.opengis.net/def/crs/EPSG/",
+          "title":"EPSG CRS Register",
+          "publisher":"OGC"
+        }
+      }
+    };
+
+
+
+    </script>
+    <style>
+      .figure img, .sidefigure img, figure img, .figure object, .sidefigure object, figure object, img, .img {
+      max-width: 100%;
+      margin: auto;
+      height: auto;
+      }
+    </style>
+     
+    <p class="copyright">
+        Copyright © 2024
+    </p>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="msapplication-TileColor" content="#7ED956" />
+</head>
+<body>
+    
+
+    <!-- Start page content -->
+
+
+
+<section id="specintro">
+    <h2>
+        Introduction
+    </h2>
+    
+<h3>Context</h3>
+
+This vocabulary is <strong>supporting</strong> GeoDCAT-AP [[GEODCAT-AP]], a specialisation of the DCAT application profile for European data portals [[DCAT-AP]] for geospatial data. 
+The terms defined in this namespace are defined as broad as possible for wider reuse but are scoped to the needs of GeoDCAT-AP. 
+All terms in this vocabulary have therefore a strong connection with GeoDCAT-AP.
+
+
+<h3>Revision history</h3>
+
+Up to GeoDCAT-AP 2.0.0 [[GEODCAT-AP-2.0.0]] this vocabulary and the DCAT-AP application profile for geospatial datasets where combined in a single document. 
+In order to facilitate the reuse of the defined terms in a broader context than GEODCAT-AP this specification with solely the terms defined in the namespace 
+<code>http://data.europa.eu/930</code> is created and published.
+
+<p>
+This reuse objective resulted in wideing the domain and ranges of the properties. 
+In case the properties could be applied to any catalogued resource they are set to dcat:Resource.
+Where needed or possible, the range has been even further broadened to rdfs:Resource. 
+This is because according to DCAT the class dcat:Distribution not a subclass is from dcat:Resource. 
+</p>
+
+<p>
+The creation of  GEODCAT-AP 3 also applied the SEMIC Style Guide. 
+This resulted in the creation of explicit subproperties which where implictly present in GEODCAT-AP 2.
+</p>
+
+
+<h3>Meeting minutes</h3>
+</p>
+
+
+
+
+</section>
+
+
+<section id="abstract">
+    <h2>Abstract</h2>
+The GeoDCAT-AP vocabulary supports the <a href="https://semiceu.github.io/GeoDCAT-AP/releases/">GeoDCAT-AP profile</a>. 
+The namespace for this vocabulary is <code>http://data.europa.eu/930/</code> . 
+It is under maintenance by the SEMIC action, Interoperable Europe.
+</section>
+
+
+
+<!--  should support https://www.w3.org/2021/Process-20211102/, mostly like https://www.w3.org/2021/Process-20211102/#maturity-levels -->
+<section id="specstatus">
+    <h2>Status</h2>
+        <p>
+            This vocabulary has the status Candidate Recommendation published on 2025-10-22.
+        </p>
+        <p>
+            Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/CHANGELOG.html">Changelog</a>.
+        </p>
+</section>
+
+
+
+
+<section id="speclicence">
+    <h2>
+        License
+    </h2>
+    
+        <p>
+	<!--
+            <span rel="dct:type"
+                  property="dct:title"
+                  href="http://purl.org/dc/dcmitype/Text"
+                  xmlns:dct="http://purl.org/dc/terms/">
+		  This specification </span> of <a rel="cc:attributionURL" property="cc:attributionName" href="ORGANISATION" xmlns:cc="http://creativecommons.org/ns#">ORGANISATION </a> 
+	          is published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">"CC0"</a>.
+	-->
+             Copyright © 2024 European Union. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.
+        </p>
+    
+</section>
+
+
+  <section id="conformance" class="informative">
+<h2>Conformance Statement</h2>
+
+In order to conform to this vocabulary the usage of the terms MUST:
+<ul>
+<li>Be in line with the provided definitions</li>
+<li>Satisfy the formal constraints such as domain and ranges restrictions, if present</li>
+</ul>
+
+When reusing the terms, the reuse principles of the SEMIC styleguide SHOULD be followed.
+<p/>
+To make the properties widely reuseable the domain and ranges are in most cases very open. For any kind of entity, the class rdfs:Resource is used.
+For any kind of value, rdfs:Literal is used. 
+In the RDF ecosystem these are the universal denominators. 
+
+
+
+
+</section>
+
+
+
+
+<section id="specterminology">
+    <h2>Terminology</h2>
+
+The namespace for this vocabulary is <code>http://data.europa.eu/930/</code> . 
+<p>
+<h3>Used Prefixes</h3>
+
+
+        <table id="table-namespaces" class="simple">
+            <thead><tr><th>Prefix</th><th>Namespace IRI</th></tr></thead>
+            <tbody>
+            <tr><td><code>dcat</code></td><td><code>http://www.w3.org/ns/dcat#</code></td></tr>
+            <tr><td><code>geodcatap</code></td><td><code>http://data.europa.eu/930/</code></td></tr>
+            <tr><td><code>rdfs</code></td><td><code>http://www.w3.org/2000/01/rdf-schema#</code></td></tr>
+            <tr><td><code>skos</code></td><td><code>http://www.w3.org/2004/02/skos/core#</code></td></tr>
+            </tbody>
+        </table>
+
+</section>
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+
+
+<section>
+<h1>Vocabulary Overview</h1>
+
+    <div id="overview">
+                
+                
+    </div>
+    <div>
+        <figure>
+            <a href="/GeoDCAT-AP/930/drafts/3.0.1/html/overview.svg"
+            target="_blank">
+                <img src="/GeoDCAT-AP/930/drafts/3.0.1/html/overview.svg"/>
+            </a>
+            <figcaption>UML diagram overview of the terms defined in the 930 namespace</figcaption>
+        </figure>
+    </div>
+
+
+<h2>
+   Classes
+</h2>
+This section lists the classes matching the base namespace of this vocabulary.
+
+
+
+<h2>
+   Properties
+</h2>
+This section lists the properties matching the base namespace of this vocabulary.
+
+<div class="note">
+    ISO 19115:2003 [[ISO-19115]] is currently withdrawn.
+    However, it is pragmatically considered as a reference standard since most geospatial metadata implementations and software tools are still using it as such, instead of ISO 19115-1:2014 [[ISO-19115-1]].
+</div>
+
+
+   
+
+    <h3 id="custodian">custodian</h3>
+    <table class="def" id="table-term-custodian">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20custodian&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/930/custodian"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/930/custodian"
+					   data-placement="right">custodian</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="custodian.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				http://data.europa.eu/930/custodian
+				</td>
+			</tr>
+                        <tr id="custodian.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				custodian
+				</td>
+			</tr>
+                        <tr id="custodian.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource [[ISO-19115]].
+				</td>
+			</tr>
+			
+			
+                        <tr id="custodian.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2000/01/rdf-schema#Resource"><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="custodian.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://xmlns.com/foaf/0.1/Agent"><div class="shorten">http://xmlns.com/foaf/0.1/Agent</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+   
+
+    <h3 id="distributor">distributor</h3>
+    <table class="def" id="table-term-distributor">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20distributor&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/930/distributor"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/930/distributor"
+					   data-placement="right">distributor</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="distributor.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				http://data.europa.eu/930/distributor
+				</td>
+			</tr>
+                        <tr id="distributor.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				distributor
+				</td>
+			</tr>
+                        <tr id="distributor.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				Party who distributes the resource [[ISO-19115]].
+				</td>
+			</tr>
+			
+			
+                        <tr id="distributor.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2000/01/rdf-schema#Resource"><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="distributor.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://xmlns.com/foaf/0.1/Agent"><div class="shorten">http://xmlns.com/foaf/0.1/Agent</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+   
+
+    <h3 id="originator">originator</h3>
+    <table class="def" id="table-term-originator">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20originator&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/930/originator"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/930/originator"
+					   data-placement="right">originator</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="originator.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				http://data.europa.eu/930/originator
+				</td>
+			</tr>
+                        <tr id="originator.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				originator
+				</td>
+			</tr>
+                        <tr id="originator.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				
+Party who created the resource [[ISO-19115]].
+				</td>
+			</tr>
+			
+			
+                        <tr id="originator.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2000/01/rdf-schema#Resource"><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="originator.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://xmlns.com/foaf/0.1/Agent"><div class="shorten">http://xmlns.com/foaf/0.1/Agent</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+   
+
+    <h3 id="principalInvestigator">principal investigator</h3>
+    <table class="def" id="table-term-principalInvestigator">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20principalInvestigator&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/930/principalInvestigator"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/930/principalInvestigator"
+					   data-placement="right">principal investigator</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="principalinvestigator.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				http://data.europa.eu/930/principalInvestigator
+				</td>
+			</tr>
+                        <tr id="principalinvestigator.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				principal investigator
+				</td>
+			</tr>
+                        <tr id="principalinvestigator.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				Key party responsible for gathering information and conducting research [[ISO-19115]].
+				</td>
+			</tr>
+			
+			
+                        <tr id="principalinvestigator.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2000/01/rdf-schema#Resource"><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="principalinvestigator.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://xmlns.com/foaf/0.1/Agent"><div class="shorten">http://xmlns.com/foaf/0.1/Agent</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+   
+
+    <h3 id="processor">processor</h3>
+    <table class="def" id="table-term-processor">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20processor&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/930/processor"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/930/processor"
+					   data-placement="right">processor</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="processor.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				http://data.europa.eu/930/processor
+				</td>
+			</tr>
+                        <tr id="processor.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				processor
+				</td>
+			</tr>
+                        <tr id="processor.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				
+Party who has processed the data in a manner such that the resource has been modified [[ISO-19115]].
+				</td>
+			</tr>
+			
+			
+                        <tr id="processor.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2000/01/rdf-schema#Resource"><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="processor.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://xmlns.com/foaf/0.1/Agent"><div class="shorten">http://xmlns.com/foaf/0.1/Agent</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+   
+
+    <h3 id="purpose">purpose</h3>
+    <table class="def" id="table-term-purpose">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20purpose&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/930/purpose"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/930/purpose"
+					   data-placement="right">purpose</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="purpose.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				http://data.europa.eu/930/purpose
+				</td>
+			</tr>
+                        <tr id="purpose.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				purpose
+				</td>
+			</tr>
+                        <tr id="purpose.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				Summary of the intentions for which the dataset was developed.
+				</td>
+			</tr>
+			
+			
+                        <tr id="purpose.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/ns/dcat#Resource"><div class="shorten">http://www.w3.org/ns/dcat#Resource</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="purpose.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2000/01/rdf-schema#Literal"><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Literal</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+   
+
+    <h3 id="referenceSystem">reference system</h3>
+    <table class="def" id="table-term-referenceSystem">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20referenceSystem&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/930/referenceSystem"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/930/referenceSystem"
+					   data-placement="right">reference system</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="referencesystem.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				http://data.europa.eu/930/referenceSystem
+				</td>
+			</tr>
+                        <tr id="referencesystem.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				reference system
+				</td>
+			</tr>
+                        <tr id="referencesystem.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				The reference system used in accordance with OGC EPSG Coordinate Reference Systems Register [[OGC-EPSG]].
+				</td>
+			</tr>
+			
+			
+                        <tr id="referencesystem.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2000/01/rdf-schema#Resource"><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="referencesystem.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2004/02/skos/core#Concept"><div class="shorten">http://www.w3.org/2004/02/skos/core#Concept</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="referencesystem.subproperty">
+                                <td></td>
+                                <td>
+				   subproperty of 
+				</td>
+				<td> <a href="http://purl.org/dc/terms/conformsTo"><div class="shorten">http://purl.org/dc/terms/conformsTo</div></a>
+                                
+				</td>
+			</tr>
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+   
+
+    <h3 id="resourceProvider">resource provider</h3>
+    <table class="def" id="table-term-resourceProvider">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20resourceProvider&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/930/resourceProvider"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/930/resourceProvider"
+					   data-placement="right">resource provider</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="resourceprovider.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				http://data.europa.eu/930/resourceProvider
+				</td>
+			</tr>
+                        <tr id="resourceprovider.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				resource provider
+				</td>
+			</tr>
+                        <tr id="resourceprovider.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				
+Party that supplies the resource [[ISO-19115]].
+				</td>
+			</tr>
+			
+			
+                        <tr id="resourceprovider.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2000/01/rdf-schema#Resource"><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="resourceprovider.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://xmlns.com/foaf/0.1/Agent"><div class="shorten">http://xmlns.com/foaf/0.1/Agent</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+   
+
+    <h3 id="resourceType">resource type</h3>
+    <table class="def" id="table-term-resourceType">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20resourceType&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/930/resourceType"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/930/resourceType"
+					   data-placement="right">resource type</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="resourcetype.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				http://data.europa.eu/930/resourceType
+				</td>
+			</tr>
+                        <tr id="resourcetype.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				resource type
+				</td>
+			</tr>
+                        <tr id="resourcetype.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				Resource type in accordance with INSPIRE Resource Types [[INSPIRE-RT]].
+				</td>
+			</tr>
+			
+			
+                        <tr id="resourcetype.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/ns/dcat#Resource"><div class="shorten">http://www.w3.org/ns/dcat#Resource</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="resourcetype.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2004/02/skos/core#Concept"><div class="shorten">http://www.w3.org/2004/02/skos/core#Concept</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="resourcetype.subproperty">
+                                <td></td>
+                                <td>
+				   subproperty of 
+				</td>
+				<td> <a href="http://purl.org/dc/terms/type"><div class="shorten">http://purl.org/dc/terms/type</div></a>
+                                
+				</td>
+			</tr>
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+   
+
+    <h3 id="serviceCategory">service category</h3>
+    <table class="def" id="table-term-serviceCategory">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20serviceCategory&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/930/serviceCategory"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/930/serviceCategory"
+					   data-placement="right">service category</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="servicecategory.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				http://data.europa.eu/930/serviceCategory
+				</td>
+			</tr>
+                        <tr id="servicecategory.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				service category
+				</td>
+			</tr>
+                        <tr id="servicecategory.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				Service category in accordance with INSPIRE Spatial Data Service Categories [[INSPIRE-SDSC]].
+				</td>
+			</tr>
+			
+			
+                        <tr id="servicecategory.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/ns/dcat#DataService"><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="servicecategory.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2004/02/skos/core#Concept"><div class="shorten">http://www.w3.org/2004/02/skos/core#Concept</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="servicecategory.subproperty">
+                                <td></td>
+                                <td>
+				   subproperty of 
+				</td>
+				<td> <a href="http://purl.org/dc/terms/type"><div class="shorten">http://purl.org/dc/terms/type</div></a>
+                                
+				</td>
+			</tr>
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+   
+
+    <h3 id="serviceProtocol">service protocol</h3>
+    <table class="def" id="table-term-serviceProtocol">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20serviceProtocol&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/930/serviceProtocol"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/930/serviceProtocol"
+					   data-placement="right">service protocol</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="serviceprotocol.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				http://data.europa.eu/930/serviceProtocol
+				</td>
+			</tr>
+                        <tr id="serviceprotocol.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				service protocol
+				</td>
+			</tr>
+                        <tr id="serviceprotocol.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				Protocol value in accordance with INSPIRE Protocol Values [[INSPIRE-PV]].
+				</td>
+			</tr>
+			
+			
+                        <tr id="serviceprotocol.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/ns/dcat#DataService"><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="serviceprotocol.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2004/02/skos/core#Concept"><div class="shorten">http://www.w3.org/2004/02/skos/core#Concept</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="serviceprotocol.subproperty">
+                                <td></td>
+                                <td>
+				   subproperty of 
+				</td>
+				<td> <a href="http://purl.org/dc/terms/conformsTo"><div class="shorten">http://purl.org/dc/terms/conformsTo</div></a>
+                                
+				</td>
+			</tr>
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+   
+
+    <h3 id="serviceType">service type</h3>
+    <table class="def" id="table-term-serviceType">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20serviceType&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/930/serviceType"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/930/serviceType"
+					   data-placement="right">service type</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="servicetype.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				http://data.europa.eu/930/serviceType
+				</td>
+			</tr>
+                        <tr id="servicetype.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				service type
+				</td>
+			</tr>
+                        <tr id="servicetype.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				Service type in accordance with INSPIRE Spatial Data Service Types [[INSPIRE-SDST]].
+				</td>
+			</tr>
+			
+			
+                        <tr id="servicetype.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/ns/dcat#DataService"><div class="shorten">http://www.w3.org/ns/dcat#DataService</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="servicetype.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2004/02/skos/core#Concept"><div class="shorten">http://www.w3.org/2004/02/skos/core#Concept</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="servicetype.subproperty">
+                                <td></td>
+                                <td>
+				   subproperty of 
+				</td>
+				<td> <a href="http://purl.org/dc/terms/type"><div class="shorten">http://purl.org/dc/terms/type</div></a>
+                                
+				</td>
+			</tr>
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+   
+
+    <h3 id="spatialResolutionAsText">spatial resolution as text</h3>
+    <table class="def" id="table-term-spatialResolutionAsText">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20spatialResolutionAsText&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/930/spatialResolutionAsText"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/930/spatialResolutionAsText"
+					   data-placement="right">spatial resolution as text</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="spatialresolutionastext.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				http://data.europa.eu/930/spatialResolutionAsText
+				</td>
+			</tr>
+                        <tr id="spatialresolutionastext.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				spatial resolution as text
+				</td>
+			</tr>
+                        <tr id="spatialresolutionastext.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				Textual description of spatial resolution.
+				</td>
+			</tr>
+			
+			
+                        <tr id="spatialresolutionastext.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2000/01/rdf-schema#Resource"><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="spatialresolutionastext.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2000/01/rdf-schema#Literal"><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Literal</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+   
+
+    <h3 id="topicCategory">topic category</h3>
+    <table class="def" id="table-term-topicCategory">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20topicCategory&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/930/topicCategory"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/930/topicCategory"
+					   data-placement="right">topic category</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="topiccategory.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				http://data.europa.eu/930/topicCategory
+				</td>
+			</tr>
+                        <tr id="topiccategory.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				topic category
+				</td>
+			</tr>
+                        <tr id="topiccategory.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				Topic category in accordance with ISO-19115 [[INSPIRE-TC]].
+				</td>
+			</tr>
+			
+			
+                        <tr id="topiccategory.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/ns/dcat#Resource"><div class="shorten">http://www.w3.org/ns/dcat#Resource</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="topiccategory.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2004/02/skos/core#Concept"><div class="shorten">http://www.w3.org/2004/02/skos/core#Concept</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="topiccategory.subproperty">
+                                <td></td>
+                                <td>
+				   subproperty of 
+				</td>
+				<td> <a href="http://purl.org/dc/terms/subject"><div class="shorten">http://purl.org/dc/terms/subject</div></a>
+                                
+				</td>
+			</tr>
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+   
+
+    <h3 id="user">user</h3>
+    <table class="def" id="table-term-user">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20user&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/930/user"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/930/user"
+					   data-placement="right">user</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="user.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				http://data.europa.eu/930/user
+				</td>
+			</tr>
+                        <tr id="user.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				user
+				</td>
+			</tr>
+                        <tr id="user.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				Party who uses the resource [[ISO-19115]].
+				</td>
+			</tr>
+			
+			
+                        <tr id="user.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2000/01/rdf-schema#Resource"><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Resource</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="user.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://xmlns.com/foaf/0.1/Agent"><div class="shorten">http://xmlns.com/foaf/0.1/Agent</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+</section>
+
+<!--
+<section>
+<h2>
+   External terms
+</h2>
+This section lists the classes and properties that are mapped on external URIs.
+Either these are reused as-is, i.e. with no formal additional constraints compared to those retrievable via dereferencing the URI, or they are reused with terminological changes, i.e. having additional changes restricting the use to the needs of this vocabulary context.
+
+
+
+
+</section>
+-->
+
+
+ 
+  <section id="controlled-vocs">
+  <h2>Controlled Vocabularies</h2>
+  The shared use of Controlled Vocabularies is an important aspect in data harmonisation. 
+  This section contains information on the controlled vocabularies (or data instances) that are defined in the namespace <code>http://data.europa.eu/930</code>.
+  And additionally it connects properties that are defined in this namespace with external Controlled Vocabularies to improve the semantical interoperability.
+  
+  <section>
+    <h3 id="instances-of-metric">Instances of Metric</h3>
+  For the class Metric the following instances are defined in the namespace <code>http://data.europa.eu/930</code>.
+
+  <table class="simple" id="table-instances-of-metric">
+<thead>
+<tr>
+<th>
+<p>Instance</p>
+</th>
+<th>
+<p>URI</p>
+</th>
+<th>
+<p>Class</p>
+</th>
+<th>
+<p>Usage note</p>
+</th>
+<!--
+<th>
+<p>Card.</p>
+</th>
+-->
+</tr>
+</thead>
+<tbody>
+
+<tr class="instance ap-ext" id="metric-spatial-resolution-as-angular-distance">
+<td>
+<p>+Spatial resolution as angular distance</p>
+</td>
+<td>
+<p><code>geodcatap:spatialResolutionAsAngularDistance</code></p>
+</td>
+<td>
+<p><code>dqv:Metric</code></p>
+</td>
+<td>
+<p>Spatial resolution expressed as angular distance [[ISO-19115-1]], by using a decimal degree.</p>
+</td>
+<!--
+<td>
+<p>0..1</p>
+</td>
+-->
+</tr>
+
+<tr class="instance ap-ext" id="metric-spatial-resolution-as-distance">
+<td>
+<p>+Spatial resolution as distance</p>
+</td>
+<td>
+<p><code>geodcatap:spatialResolutionAsDistance</code></p>
+</td>
+<td>
+<p><code>dqv:Metric</code></p>
+</td>
+<td>
+<p>Spatial resolution expressed as distance. It corresponds to the notion of spatial resolution as "ground distance" of [[ISO-19115]] and "horizontal ground distance" of [[ISO-19115-1]].</p>
+</td>
+<!--
+<td>
+<p>0..1</p>
+</td>
+-->
+</tr>
+
+<tr class="instance ap-ext" id="metric-spatial-resolution-as-scale">
+<td>
+<p>+Spatial resolution as equivalent scale</p>
+</td>
+<td>
+<p><code>geodcatap:spatialResolutionAsScale</code></p>
+</td>
+<td>
+<p><code>dqv:Metric</code></p>
+</td>
+<td>
+<p>Spatial resolution expressed as equivalent scale [[ISO-19115]], [[ISO-19115-1]], by using a representative fraction (e.g., 1:1,000, 1:1,000,000).</p>
+</td>
+<!--
+<td>
+<p>0..1</p>
+</td>
+-->
+</tr>
+
+<tr class="instance ap-ext" id="metric-spatial-resolution-as-vertical-distance">
+<td>
+<p>+Spatial resolution as vertical distance</p>
+</td>
+<td>
+<p><code>geodcatap:spatialResolutionAsVerticalDistance</code></p>
+</td>
+<td>
+<p><code>dqv:Metric</code></p>
+</td>
+<td>
+<p>Spatial resolution expressed as vertical distance [[ISO-19115-1]].</p>
+<p>In GeoDCAT-AP, this property is typically used for Catalogues, Data Services, and Datasets. However, no domain restriction is defined, and therefore this property can be used on any resource.</p>
+</td>
+<!--
+<td>
+<p>0..1</p>
+</td>
+-->
+</tr>
+
+</tbody>
+</table>
+
+  
+  </section>
+
+  <section class="informative">
+    
+  <h3 id="suggestions-of-cv">Suggested Controlled Vocabularies</h3> 
+  Imposing the use of a controlled vocabulary for a property in the vocabulary is restricting severely its reusability. 
+  The table below is added to increase the insight in the preferred way how to use these properties.
+  <p/>
+  Therefore the table SHOULD be read as a strong suggestion because deviating from the presented choices may lead to conflicts 
+  when using it for datasets that are also described by GeoDCAT-AP.
+  It should be observed that this strong suggestion is also a consequense from the precise semantics of the properties. 
+  Their definitions hint at the usage of a Controlled Vocabulary.
+  Nevertheless it should be noted that the listed Controlled Vocabularies and properties have seperate life cycles. 
+  And that in the future other choices might be presented. 
+
+  <table class="simple" id="table-controlled-vocabularies-to-be-used">
+<thead>
+<tr>
+<th>
+<p>Property URI</p>
+</th>
+<th>
+<p>Used for Class</p>
+</th>
+<th>
+<p>Vocabulary name</p>
+</th>
+<th>
+<p>Vocabulary URI</p>
+</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>
+    <p><code>geodcatap:referenceSystem</code></p>
+</td>
+<td>
+    <p><code>dcat:Catalog</code>, <code>dcat:Dataset</code>, <code>dcat:DataService</code>, <code>dcat:Distribution</code></p>
+</td>
+<td>
+    <p>OGC EPSG Coordinate Reference Systems Register [[OGC-EPSG]]</p>
+</td>
+<td>
+    <p><a href="http://www.opengis.net/def/crs/EPSG/0/">http://www.opengis.net/def/crs/EPSG/0/</a></p>
+</td>
+</tr>
+
+<tr>
+<td>
+    <p><code>geodcatap:resourceType</code></p>
+</td>
+<td>
+    <p><code>dcat:Dataset</code>, <code>dcat:DataService</code></p>
+</td>
+<td>
+    <p>INSPIRE Resource Types [[INSPIRE-RT]]</p>
+</td>
+<td>
+    <p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResourceType">http://inspire.ec.europa.eu/metadata-codelist/ResourceType</a></p>
+</td>
+</tr>
+
+<tr>
+<td>
+    <p><code>geodcatap:serviceCateogry</code></p>
+</td>
+<td>
+    <p><code>dcat:DataService</code></p>
+</td>
+<td>
+    <p>INSPIRE Spatial Data Service Categories [[INSPIRE-SDSC]]</p>
+</td>
+<td>
+    <p><a href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory">http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory</a></p>
+</td>
+</tr>
+
+<tr>
+<td>
+    <p><code>geodcatap:serviceProtocol</code></p>
+</td>
+<td>
+    <p><code>dcat:DataService</code></p>
+</td>
+<td>
+    <p>INSPIRE Protocol Values [[INSPIRE-PV]]</p>
+</td>
+<td>
+    <p><a href="https://inspire.ec.europa.eu/metadata-codelist/ProtocolValue">https://inspire.ec.europa.eu/metadata-codelist/ProtocolValue</a></p>
+</td>
+</tr>
+
+<tr>
+<td>
+    <p><code>geodcatap:serviceType</code></p>
+</td>
+<td>
+    <p><code>dcat:DataService</code></p>
+</td>
+<td>
+    <p>INSPIRE Spatial Data Service Types [[INSPIRE-SDST]]</p>
+</td>
+<td>
+    <p><a href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType">http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType</a></p>
+</td>
+</tr>
+
+<tr>
+<td>
+    <p><code>geodcatap:topicCategory</code></p>
+</td>
+    <td><p><code>dcat:Catalog</code>, <code>dcat:Dataset</code>, <code>dcat:DataService</code></p></td>
+<td>
+    <p>INSPIRE Topic Categories [[INSPIRE-TC]]</p>
+</td>
+<td>
+    <p><a href="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory">http://inspire.ec.europa.eu/metadata-codelist/TopicCategory</a></p>
+</td>
+</tr>    
+
+<!--<tr>
+<td>
+<p>+<code>dct:type</code></p>
+</td>
+<td>
+<p><a href="#Standard.type">Standard</a></p>
+</td>
+<td>
+<p>INSPIRE Glossary [[INSPIRE-GLOSSARY]]</p>
+</td>
+<td>
+<p><a href="http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem">http://inspire.ec.europa.eu/glossary/SpatialReferenceSystem</a></p>
+<p><a href="http://inspire.ec.europa.eu/glossary/TemporalReferenceSystem">http://inspire.ec.europa.eu/glossary/TemporalReferenceSystem</a></p>
+</td>
+<td>
+<p>GeoDCAT-AP extension.</p>
+<p>When the Standard is a spatial or temporal reference system, the relevant URIs from the [[INSPIRE-GLOSSARY]] SHOULD be used.</p>
+</td>
+</tr>-->
+
+</tbody>
+</table>
+
+  </section>
+
+</section>
+
+
+ 
+
+
+<section class="appendix">
+
+<h2>Acknowledgments</h2>
+<p>
+The editors gratefully acknowledge the contributions made to this document by all members of the working group.
+Especially we would like to express our gratitude for the former editor and author Andrea Perego.
+</p><p>
+This work was elaborated by a Working Group under SEMIC by Interoperable Europe in collaboration with DG Environment and JRC.
+Interoperable Europe of the European Commission was represented by Pavlina Fragkou.
+DG Environment was represented by Joeri Robbrecht and JRC by Jordi Escriu. 
+Jakub Klímek and Bert Van Nuffelen are the authors of this specification.
+</p><p>
+
+Past and current contributors are :
+
+
+
+
+
+
+     
+     
+           
+	 	Paloma Abad 
+		, 
+           
+	 	Anssi Ahlberg 
+		, 
+           
+	 	Riccardo Albertoni
+		, 
+           
+	 	Martin Alvarez
+		, 
+           
+	 	Laima Amatniece 
+		, 
+           
+	 	Darius Amilevicius 
+		, 
+           
+	 	Inga Andriuskeviciute 
+		, 
+           
+	 	Raphaelle Arnaud 
+		, 
+           
+	 	Lars-Inge Arnevik 
+		, 
+           
+	 	Claudia Attard 
+		, 
+           
+	 	Teresa Barrueco 
+		, 
+           
+	 	Julius Belickas 
+		, 
+           
+	 	Laura Bolocan 
+		, 
+           
+	 	Peter Bruhn Andersen
+		, 
+           
+	 	Dominique Buffet 
+		, 
+           
+	 	Petr Bures 
+		, 
+           
+	 	Mathieu Chaussier 
+		, 
+           
+	 	Radoslav Chudy 
+		, 
+           
+	 	Byron Cochrane 
+		, 
+           
+	 	Eugeniu Costetchi 
+		, 
+           
+	 	Bart Cosyn 
+		, 
+           
+	 	Franck Cotton
+		, 
+           
+	 	Simon Cox
+		, 
+           
+	 	Rodolfo Da Silva
+		, 
+           
+	 	Vendula Dastychova 
+		, 
+           
+	 	Ine de Visser
+		, 
+           
+	 	Pascal Derycke 
+		, 
+           
+	 	Loes Deventer 
+		, 
+           
+	 	Ilias Dimopoulos 
+		, 
+           
+	 	Ulrika Domellof Mattsson
+		, 
+           
+	 	Erik Edberg 
+		, 
+           
+	 	August Edstrom 
+		, 
+           
+	 	Jitka Faugnerova 
+		, 
+           
+	 	Benoit Fricheteau 
+		, 
+           
+	 	Aniko Gerencser 
+		, 
+           
+	 	Kety Giuliacci 
+		, 
+           
+	 	Daniel Gomez 
+		, 
+           
+	 	Jonas Gottschlich 
+		, 
+           
+	 	Elena Grigoriou 
+		, 
+           
+	 	Matthias Gronewald 
+		, 
+           
+	 	Bjorn Hagstrom 
+		, 
+           
+	 	Lena Hallin-Pihlatie 
+		, 
+           
+	 	Gerald Henskens 
+		, 
+           
+	 	Kim Hoang 
+		, 
+           
+	 	Jana Hojsakova 
+		, 
+           
+	 	Martin Hons 
+		, 
+           
+	 	Hanna Horppila 
+		, 
+           
+	 	Antoine Jacques 
+		, 
+           
+	 	Markus Jobst 
+		, 
+           
+	 	Stepan Kafka 
+		, 
+           
+	 	Juliana Karciauskiene 
+		, 
+           
+	 	Svetlogor Kirov 
+		, 
+           
+	 	Fabian Kirstein
+		, 
+           
+	 	Ouns Kissiyar 
+		, 
+           
+	 	Peter Kochmann 
+		, 
+           
+	 	Jiri Kocourek 
+		, 
+           
+	 	Jeff Konnen 
+		, 
+           
+	 	Martin Koska
+		, 
+           
+	 	Lenka Kovacova 
+		, 
+           
+	 	Pavla Kramolisova 
+		, 
+           
+	 	Michal Kuban 
+		, 
+           
+	 	Andreas Kuckartz
+		, 
+           
+	 	Veronika Kusova 
+		, 
+           
+	 	Kim Lan Vu
+		, 
+           
+	 	Frithjof Lemmel 
+		, 
+           
+	 	Darja Lihteneger 
+		, 
+           
+	 	Anja Litka 
+		, 
+           
+	 	Anja Loddenkemper 
+		, 
+           
+	 	Emilio Lopez 
+		, 
+           
+	 	Tamas Lorincz 
+		, 
+           
+	 	Marceau Louis 
+		, 
+           
+	 	Peter Lubrich 
+		, 
+           
+	 	Kate Lyndegaard 
+		, 
+           
+	 	Christoph Mikula 
+		, 
+           
+	 	Martynas Mockus 
+		, 
+           
+	 	Olga Moravcova 
+		, 
+           
+	 	Stefanie Nadler 
+		, 
+           
+	 	Gery Nicolay 
+		, 
+           
+	 	Joachim Nielandt 
+		, 
+           
+	 	Geraldine Nolf 
+		, 
+           
+	 	Erik Obersteiner 
+		, 
+           
+	 	Rossana Paciello 
+		, 
+           
+	 	Matthias Palmer
+		, 
+           
+	 	Tamas Palya 
+		, 
+           
+	 	James Passmore
+		, 
+           
+	 	Mihai Paunescu 
+		, 
+           
+	 	Barbara Phiesel 
+		, 
+           
+	 	Joel Plana 
+		, 
+           
+	 	Francois Prunayre 
+		, 
+           
+	 	Ines Quintanilha 
+		, 
+           
+	 	Mart Randmae 
+		, 
+           
+	 	Athina Rapsomaniki 
+		, 
+           
+	 	Lenka Rejentova 
+		, 
+           
+	 	Riikka Repo 
+		, 
+           
+	 	Hannes Reuter
+		, 
+           
+	 	Ludger Rinsche 
+		, 
+           
+	 	David Robberechts 
+		, 
+           
+	 	Maik Roth 
+		, 
+           
+	 	Antonio Rotundo
+		, 
+           
+	 	Thomas Ruhl 
+		, 
+           
+	 	Danica Saponja 
+		, 
+           
+	 	Giampaolo Sellitto 
+		, 
+           
+	 	Silvie Semeradova 
+		, 
+           
+	 	Age Sild 
+		, 
+           
+	 	Jan Skornsek
+		, 
+           
+	 	Pawel Soczewski 
+		, 
+           
+	 	Petr Soucek 
+		, 
+           
+	 	Michele Spichtig 
+		, 
+           
+	 	Simon Steuer 
+		, 
+           
+	 	Corinne Straub 
+		, 
+           
+	 	Aurelija Sturaite
+		, 
+           
+	 	Ivana Svata 
+		, 
+           
+	 	Stijn Tallir 
+		, 
+           
+	 	Naomi Thiru 
+		, 
+           
+	 	Michal Tichy 
+		, 
+           
+	 	Mayte Toscano 
+		, 
+           
+	 	Martin Tuchyna 
+		, 
+           
+	 	Thomas Tursics 
+		, 
+           
+	 	Floor Van Damme
+		, 
+           
+	 	Danny Vandenbroucke
+		, 
+           
+	 	Kusova Veronika 
+		, 
+           
+	 	Jose Vicente Calle
+		, 
+           
+	 	Fabio Vinci 
+		, 
+           
+	 	Uwe Voges 
+		, 
+           
+	 	Klaus-Peter Wenz 
+		, 
+           
+	 	Melissa Wittens 
+		, 
+           
+	 	Jim Yang 
+		, 
+           
+	 	Jesper Zedlitz 
+		, 
+           
+	 	Mantas Zimnickas 
+		
+          
+     
+
+.
+
+
+</section>
+<!-- End page content -->
+</body>
+
+<!-- This must be at the end of the template, to ensure that the iterator properly works -->
+    <script defer>
+
+
+	    var prefixes = [ 
+{'pref':'adms:', 'ns': 'http://www.w3.org/ns/adms#'},
+{'pref':'dcat:', 'ns': 'http://www.w3.org/ns/dcat#'},
+{'pref':'dcatap:', 'ns': 'http://data.europa.eu/r5r/'},
+{'pref':'geodcatap:', 'ns': 'http://data.europa.eu/930/'},
+{'pref':'stat:', 'ns': 'http://data.europa.eu/s1n/'},
+{'pref':'oa:', 'ns': 'http://www.w3.org/ns/oa#'},
+{'pref':'qb:', 'ns': 'http://purl.org/linked-data/cube#'},
+{'pref':'dqv:', 'ns': 'http://www.w3.org/ns/dqv#'},
+{'pref':'dcterms:', 'ns': 'http://purl.org/dc/terms/'},
+{'pref':'dctype:', 'ns': 'http://purl.org/dc/dcmitype/'},
+{'pref':'eli:', 'ns': 'http://data.europa.eu/eli/ontology#'},
+{'pref':'foaf:', 'ns': 'http://xmlns.com/foaf/0.1/'},
+{'pref':'locn:', 'ns': 'http://www.w3.org/ns/locn#'},
+{'pref':'odrl:', 'ns': 'http://www.w3.org/ns/odrl/2/'},
+{'pref':'owl:', 'ns': 'http://www.w3.org/2002/07/owl#'},
+{'pref':'prov:', 'ns': 'http://www.w3.org/ns/prov#'},
+{'pref':'rdf:', 'ns': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'},
+{'pref':'rdfs:', 'ns': 'http://www.w3.org/2000/01/rdf-schema#'},
+{'pref':'skos:', 'ns': 'http://www.w3.org/2004/02/skos/core#'},
+{'pref':'spdx:', 'ns': 'http://spdx.org/rdf/terms#'},
+{'pref':'time:', 'ns': 'http://www.w3.org/2006/time#'},
+{'pref':'vcard:', 'ns': 'http://www.w3.org/2006/vcard/ns#'},
+{'pref':'xhv:', 'ns': 'http://www.w3.org/1999/xhtml/vocab#'},
+{'pref':'xsd:', 'ns': 'http://www.w3.org/2001/XMLSchema#'}
+				];
+
+	    function shorturl (url) {
+				var short = url;
+				for (e in prefixes) {
+				   var elem = prefixes[e];
+				   if (short.startsWith(elem.ns)) {
+  					short = elem.pref + short.slice(elem.ns.length);
+					}
+				};
+				return short;
+			};
+
+	    var shorten = document.getElementsByClassName("shorten");
+	    for (k=0;k < shorten.length ; k++){
+			var selem = shorten[k];	
+	                selem.innerHTML = shorturl(selem.innerHTML.trim());
+			}
+    </script>
+    <script defer>
+	    document.getElementById("w3c-state").insertAdjacentText("afterbegin", "SEMIC Recommendation ");
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/codemirror.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/javascript/javascript.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.6/mode/turtle/turtle.min.js" ></script>
+    <script src="https://codemirror.net/5/mode/javascript/javascript.js" ></script>
+    <script src="./html/example.js" ></script>
+	<script type="text/javascript">
+		function elementInView(elem){
+				goesIn = ($(window).height() + $(window).scrollTop()) > $(elem).offset().top;
+				goesOut = ($(window).scrollTop()) > ($(elem).offset().top + $(elem).height());
+				if (goesIn && !goesOut)
+					return 1;
+				else
+					return 0;
+			};
+
+		$(window).scroll(function(){
+			$('.CodeMirror').each(function(){
+				if (elementInView($(this))){
+					$(this).each(function(i, el){
+						el.CodeMirror.refresh();
+					});
+				}
+			});
+			
+		});
+	</script>
+	<style>
+		.CodeMirror {
+		  border: 1px solid #eee;
+		  height: auto;
+		}
+		.buttonsample {
+		cursor: pointer;
+		margin-top: 10px;
+		margin-left: 10px;
+		font-weight: 700;
+		border:0 outset buttonface;
+		background: #F5F6F8;
+		background-image: linear-gradient(to bottom,#F5F6F8,#DBDCDE);
+		border-radius:4px;
+		box-shadow:0 1px 3px #666;
+		font-family: Arial;
+		color: grey;
+		font-size: 14px;
+		padding: 10px 5px;
+		text-decoration: none;
+		float: right
+	}
+	.buttonsample:hover {color:#2a70d3}
+	.tabsstyle {
+		padding: 10px;
+		overflow: hidden;
+	}
+	li.ui-tabs-tab > a:hover {
+		background-color:dodgerblue;
+		color:white;
+	}
+	table.simple {                                                                      
+                  font-size: small;                                                           
+                          border-spacing:0;                                                   
+                          border-collapse:collapse;                                           
+                          border-bottom:3px solid #005a9c                                     
+        }                                                                                   
+        .simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}           
+        .simple th a{color:#fff;padding:3px 5px;text-align:left}                            
+        .simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}   
+        .simple td{padding:3px 10px;border-top:1px solid #ddd}                              
+        .simple tr:nth-child(even){background:#f0f6ff}
+    body.darkmode .simple th{background:#005a9c94;color:#ddd}
+	body.darkmode .simple th a{color:#ddd}
+	body.darkmode .simple tr:nth-child(even){background:#f0f6ff26}
+    body.darkmode :is(h4,h5,h6)+a.self-link::before {
+        color: var(--heading-text);
+    }
+    body.darkmode img {
+        background: none;
+    }
+    body.darkmode section#references :target {
+        background: #04162d;
+    }
+  </style>
+</html>
