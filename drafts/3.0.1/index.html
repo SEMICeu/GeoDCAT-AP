@@ -18535,7 +18535,7 @@ For the mapping between [[LOCN]] and [[VCARD-RDF]], see [[LOCN-MAPPING]].
                                     A function of an entity or agent with respect to another entity or resource.
                                 </td>
                                 <td property="skos:scopeNote">
-                                    In GeoDCAT-AP, this property SHOULD take as value one of the URIs of the "Responsible party roles" code list operated by the INSPIRE Registry [[INSPIRE-RPR]].
+                                    In GeoDCAT-AP, this property SHOULD take as at least one value the URIs of the "Responsible party roles" code list operated by the INSPIRE Registry [[INSPIRE-RPR]].
                                 </td>
 				<!--
                                 <td>
@@ -22733,6 +22733,21 @@ The last column is a first assessment of the usage of the controlled vocabularie
 
 <tr>
 <td>
+<p><code>adms:representationTechnique</code></p>
+</td>
+<td>
+<p><a href="#Distribution.representationtechnique">Distribution</a></p>
+</td>
+<td>
+<p><a href="http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType">INSPIRE Spatial Representation Type</a> [[INSPIRE-SRT]]</p>
+</td>
+<td>
+<p>GeoDCAT-AP extension.</p>
+</td>
+</tr>
+
+<tr>
+<td>
 <p><code>adms:status</code></p>
 </td>
 <td>
@@ -22746,14 +22761,12 @@ Inherited from DCAT-AP [[DCAT-AP-3]]
 </td>
 </tr>
 
-<!-- Media type -->
-
 <tr>
 <td>
-<p><code>dcat:mediaType</code></p>
+<p><code>dcat:compressFormat</code></p>
 </td>
 <td>
-<p><a href="#Distribution.mediatype">Distribution</a></p>
+<p><a href="#Distribution.compressionformat">Distribution</a></p>
 </td>
 <td>
 <p><a href="http://www.iana.org/assignments/media-types">IANA Media Types</a> [[IANA-MEDIA-TYPES]]</p>
@@ -22765,10 +22778,10 @@ Inherited from DCAT [[vocab-dcat-3]]
 
 <tr>
 <td>
-<p><code>dcat:compressFormat</code></p>
+<p><code>dcat:mediaType</code></p>
 </td>
 <td>
-<p><a href="#Distribution.compressionformat">Distribution</a></p>
+<p><a href="#Distribution.mediatype">Distribution</a></p>
 </td>
 <td>
 <p><a href="http://www.iana.org/assignments/media-types">IANA Media Types</a> [[IANA-MEDIA-TYPES]]</p>
@@ -22793,8 +22806,6 @@ Inherited from DCAT [[vocab-dcat-3]]
 </td>
 </tr>
 
-<!-- Availability -->
-
 <tr>
 <td>
 <p><code>dcatap:availability</code></p>
@@ -22809,8 +22820,6 @@ Inherited from DCAT [[vocab-dcat-3]]
 <p>Inherited from DCAT-AP [[DCAT-AP-3]]</p>
 </td>
 </tr>
-
-<!-- Update frequency -->
 
 <tr>
 <td>
@@ -22828,8 +22837,6 @@ Inherited from DCAT [[vocab-dcat-3]]
 </td>
 </tr>
 
-<!-- Format -->
-
 <tr>
 <td>
 <p><code>dct:format</code></p>
@@ -22845,8 +22852,6 @@ Inherited from DCAT [[vocab-dcat-3]]
 <p>Inherited from DCAT-AP [[DCAT-AP-3]]</p>
 </td>
 </tr>
-
-<!-- Language -->
 
 <tr>
 <td>
@@ -22867,8 +22872,6 @@ Inherited from DCAT [[vocab-dcat-3]]
 <p>Inherited from DCAT-AP [[DCAT-AP-3]]</p>
 </td>
 </tr>
-
-<!-- Reference system -->
 
 <tr>
 <td>
@@ -22905,7 +22908,6 @@ Inherited from DCAT [[vocab-dcat-3]]
 </td>
 </tr>
 
-<!-- service Category -->
 <tr>
 <td>
 <p><code>geodcatap:serviceCategory</code></p>
@@ -22969,6 +22971,21 @@ Inherited from DCAT [[vocab-dcat-3]]
 </td>
 </tr>
 
+<tr>
+<td>
+<p><code>sdmx-attribute:unitMeasure</code></p>
+</td>
+<td>
+<p><a href="#QualityMeasurement">Quality Measurement</a></p>
+</td>
+<td>
+<p><a href="http://www.qudt.org/vocab/unit">QUDT Units Vocabulary</a> [[QUDT-UNITS]]</p>
+</td>
+<td>
+<p>GeoDCAT-AP extension.</p>
+</td>
+</tr>
+
 </tbody>
 </table>
 </section>
@@ -22997,21 +23014,6 @@ Inherited from DCAT [[vocab-dcat-3]]
 
 <tr>
 <td>
-<p><code>adms:representationTechnique</code></p>
-</td>
-<td>
-<p><a href="#Distribution.representationtechnique">Distribution</a></p>
-</td>
-<td>
-<p><a href="http://inspire.ec.europa.eu/metadata-codelist/SpatialRepresentationType">INSPIRE Spatial Representation Type</a> [[INSPIRE-SRT]]</p>
-</td>
-<td>
-<p>GeoDCAT-AP extension.</p>
-</td>
-</tr>
-
-<tr>
-<td>
 <p><code>dcat:hadRole</code></p>
 </td>
 <td>
@@ -23019,21 +23021,6 @@ Inherited from DCAT [[vocab-dcat-3]]
 </td>
 <td>
 <p><a href="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole">INSPIRE Responsible Party Roles</a> [[INSPIRE-RPR]]</p>
-</td>
-<td>
-<p>GeoDCAT-AP extension.</p>
-</td>
-</tr>
-
-<tr>
-<td>
-<p><code>sdmx-attribute:unitMeasure</code></p>
-</td>
-<td>
-<p><a href="#QualityMeasurement">Quality Measurement</a></p>
-</td>
-<td>
-<p><a href="http://www.qudt.org/vocab/unit">QUDT Units Vocabulary</a> [[QUDT-UNITS]]</p>
 </td>
 <td>
 <p>GeoDCAT-AP extension.</p>
@@ -23051,10 +23038,10 @@ Inherited from DCAT [[vocab-dcat-3]]
 <p><a href="#DatasetSeries.theme">Dataset Series</a></p>
 </td>
 <td>
-<p><a href="http://publications.europa.eu/resource/authority/data-theme">Dataset Theme Vocabulary</a> [[EUV-THEMES]]</p>
+<p><a href="http://publications.europa.eu/resource/authority/data-theme">Data Theme Vocabulary</a> [[EUV-THEMES]]</p>
 </td>
 <td>
-<p>Inherited from DCAT-AP [[DCAT-AP-3]]</p>
+<p>Inherited from DCAT-AP [[DCAT-AP-3]]. In GeoDCAT-AP, the usage of <a href="#properties-with-may-use-a-controlled-vocabularies">additional values</a> from the <a href="http://publications.europa.eu/resource/authority/data-theme">Data Theme Vocabulary</a> [[EUV-THEMES]] is allowed.</p>
 </td>
 </tr>
 
@@ -23188,7 +23175,7 @@ Inherited from DCAT [[vocab-dcat-3]]
 <p><a href="http://inspire.ec.europa.eu/theme">INSPIRE Spatial Data Themes</a> [[INSPIRE-THEMES]]</p>
 </td>
 <td>
-<p>Mapping INSPIRE to GeoDCAT-AP</p>
+<p>Mapping INSPIRE to GeoDCAT-AP. Note that the additional values from the <a href="http://inspire.ec.europa.eu/theme">INSPIRE Spatial Data Themes</a> [[INSPIRE-THEMES]] MAY be used only in addition to the values from the <a href="http://publications.europa.eu/resource/authority/data-theme">Data Theme Vocabulary</a> [[EUV-THEMES]].</p>
 </td>
 </tr>
 
