@@ -24,7 +24,7 @@ Any problems encountered, or suggestions for new functionalities can be submitte
 Additional GeoDCAT-AP implementations are documented in the [dedicated page on Joinup](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/geodcat-application-profile-data-portals-europe/document/geodcat-ap-implementations).
 
 ## Licence
-Copyright © 2024 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the GeoDCAT-AP repository on GitHub.
+Copyright © 2025 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the GeoDCAT-AP repository on GitHub.
 
 ## Webinar Overview
 This section offers an overview of the webinars and events related to GeoDCAT-AP.

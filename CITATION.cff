@@ -2,16 +2,16 @@ cff-version: 1.2.0
 authors:
 - name: "European Commission"
 title: "Repository of the geospatial extension to DCAT-AP (GeoDCAT-AP)"
-version: 2.0.0
-date-released: "2020-12-23"
+version: 3.0.1
+date-released: "2025-12-15"
 url: "https://github.com/SEMICeu/GeoDCAT-AP"
 preferred-citation:
   type: standard
   authors:
   - name: "European Commission"
   title: "GeoDCAT-AP: A geospatial extension for the DCAT application profile for data portals in Europe"
-  version: 2.0.0
-  date-released: "2020-12-23"
+  version: 3.0.1
+  date-released: "2025-12-15"
   institution:
     name: "European Commission"
   url: "https://semiceu.github.io/GeoDCAT-AP/releases/"
