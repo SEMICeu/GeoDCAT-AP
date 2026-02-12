@@ -314,9 +314,6 @@
           "@id": "http://www.w3.org/ns/dcat#contactPoint",
           "@type": "@id"
         },
-        "creationDate": {
-          "@id": "http://purl.org/dc/terms/created"
-        },
         "creator": {
           "@container": "@set",
           "@id": "http://purl.org/dc/terms/creator",
@@ -549,6 +546,9 @@
           "@id": "http://purl.org/dc/terms/publisher",
           "@type": "@id"
         },
+        "purpose": {
+          "@id": "http://data.europa.eu/930/purpose"
+        },
         "qualifiedAttribution": {
           "@container": "@set",
           "@id": "http://www.w3.org/ns/prov#qualifiedAttribution",
@@ -777,7 +777,6 @@
           "@type": "@id"
         },
         "purpose": {
-          "@container": "@set",
           "@id": "http://data.europa.eu/930/purpose"
         },
         "qualifiedAttribution": {
@@ -1019,7 +1018,6 @@
           "@type": "@id"
         },
         "purpose": {
-          "@container": "@set",
           "@id": "http://data.europa.eu/930/purpose"
         },
         "qualifiedAttribution": {

@@ -1818,7 +1818,7 @@
         {
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#dcat:CatalogShape/87161588819073178c8f6950dcce2286cac45320",
           "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#Catalogue.referencesystem",
-          "sh:class": "http://purl.org/dc/terms/Standard",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
             "en": "The reference system used in accordance with OGC EPSG Coordinate Reference Systems Register [[OGC-EPSG]]."
           },
@@ -2532,18 +2532,6 @@
           "sh:path": "http://xmlns.com/foaf/0.1/primaryTopic"
         },
         {
-          "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#dcat:CatalogRecordShape/675f9ab2c273ab67c79caa42282e4cec463c08f6",
-          "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#CatalogueRecord.creationdate",
-          "sh:description": {
-            "en": "The date on which the Catalogue Record has been first created."
-          },
-          "sh:maxCount": "1",
-          "sh:name": {
-            "en": "creation date"
-          },
-          "sh:path": "http://purl.org/dc/terms/created"
-        },
-        {
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#dcat:CatalogRecordShape/67dcdb36167ca7969c0532898e11a98e9c2a80f5",
           "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#CatalogueRecord.publisher",
           "sh:description": {
@@ -2722,18 +2710,6 @@
             "en": "modification date"
           },
           "sh:path": "http://purl.org/dc/terms/modified"
-        },
-        {
-          "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#dcat:CatalogRecordShape/9ebdae98241e4f451997ba6a4a2252e28ea561d9",
-          "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#CatalogueRecord.creationdate",
-          "sh:description": {
-            "en": "The date on which the Catalogue Record has been first created."
-          },
-          "sh:name": {
-            "en": "creation date"
-          },
-          "sh:nodeKind": "sh:Literal",
-          "sh:path": "http://purl.org/dc/terms/created"
         },
         {
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#dcat:CatalogRecordShape/aadbd67a77a624f073be2076627fb9dc883cbe48",
@@ -3114,6 +3090,18 @@
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/930/resourceProvider"
+        },
+        {
+          "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#dcat:DataServiceShape/30c2de1b85595fb7b8ff738893031cf824165ba1",
+          "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#DataService.purpose",
+          "sh:description": {
+            "en": "Summary of the intentions for which the data servicewas developed."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "purpose"
+          },
+          "sh:path": "http://data.europa.eu/930/purpose"
         },
         {
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#dcat:DataServiceShape/30e78cd98aa6cd5dbc31678289abb5e0cc0b55c7",
@@ -3498,6 +3486,18 @@
           },
           "sh:nodeKind": "sh:Literal",
           "sh:path": "http://data.europa.eu/930/spatialResolutionAsText"
+        },
+        {
+          "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#dcat:DataServiceShape/8932cdc11dcea78a104fe961daef62e126485fc3",
+          "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#DataService.purpose",
+          "sh:description": {
+            "en": "Summary of the intentions for which the data servicewas developed."
+          },
+          "sh:name": {
+            "en": "purpose"
+          },
+          "sh:nodeKind": "sh:Literal",
+          "sh:path": "http://data.europa.eu/930/purpose"
         },
         {
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#dcat:DataServiceShape/8e3b1c0888909beb09cd832b3145ad1f7abb1caa",
@@ -4274,6 +4274,18 @@
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/930/resourceProvider"
+        },
+        {
+          "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#dcat:DatasetShape/30c2de1b85595fb7b8ff738893031cf824165ba1",
+          "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#Dataset.purpose",
+          "sh:description": {
+            "en": "Summary of the intentions for which the dataset was developed."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "purpose"
+          },
+          "sh:path": "http://data.europa.eu/930/purpose"
         },
         {
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#dcat:DatasetShape/30e78cd98aa6cd5dbc31678289abb5e0cc0b55c7",
@@ -5470,6 +5482,18 @@
           },
           "sh:nodeKind": "sh:BlankNodeOrIRI",
           "sh:path": "http://data.europa.eu/930/resourceProvider"
+        },
+        {
+          "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#dcat:DatasetSeriesShape/30c2de1b85595fb7b8ff738893031cf824165ba1",
+          "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#DatasetSeries.purpose",
+          "sh:description": {
+            "en": "Summary of the intentions for which the dataset was developed."
+          },
+          "sh:maxCount": "1",
+          "sh:name": {
+            "en": "purpose"
+          },
+          "sh:path": "http://data.europa.eu/930/purpose"
         },
         {
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#dcat:DatasetSeriesShape/30e78cd98aa6cd5dbc31678289abb5e0cc0b55c7",
@@ -6886,7 +6910,7 @@
         {
           "@id": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#dcat:DistributionShape/87161588819073178c8f6950dcce2286cac45320",
           "rdfs:seeAlso": "https://semiceu.github.io/GeoDCAT-AP/drafts/3.1.0#Distribution.referencesystem",
-          "sh:class": "http://purl.org/dc/terms/Standard",
+          "sh:class": "http://www.w3.org/2004/02/skos/core#Concept",
           "sh:description": {
             "en": "The reference system used in the Distribution."
           },
