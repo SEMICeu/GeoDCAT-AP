@@ -5,6 +5,131 @@
 <title>GeoDCAT-AP vocabulary, the 930 namespace</title>
 <desc>Diagram for GeoDCAT-AP vocabulary, the 930 namespace</desc>
 
+<defs>
+    <style>
+@media (prefers-color-scheme: dark) {
+  svg {
+    background-color: #1e1e1e;
+  }
+  
+  /* Background */
+  g > rect[width="2139"] {
+    fill: #1e1e1e !important;
+  }
+  
+  /* Map original colors to dark mode alternatives */
+  /* #FDFAF7 (cream/beige) → dark tan */
+  g[style*="fill:#FDFAF7"] {
+    fill: #3d3530 !important;
+  }
+  
+  polygon[style*="fill:#FDFAF7"] {
+    fill: #3d3530 !important;
+  }
+  
+  /* #DCF8F0 (cyan/turquoise) → dark teal */
+  g[style*="fill:#DCF8F0"] {
+    fill: #1a4a45 !important;
+  }
+  
+  polygon[style*="fill:#DCF8F0"] {
+    fill: #1a4a45 !important;
+  }
+  
+  path[style*="fill:#DCF8F0"] {
+    fill: #1a4a45 !important;
+  }
+  
+  /* #FAF1EC (pinkish/cream) → dark burgundy/rust */
+  g[style*="fill:#FAF1EC"] {
+    fill: #3d2a24 !important;
+  }
+  
+  polygon[style*="fill:#FAF1EC"] {
+    fill: #3d2a24 !important;
+  }
+  
+  /* #FAF9E6 (light yellowish cream) → dark olive/tan */
+  g[style*="fill:#FAF9E6"] {
+    fill: #2d281f !important;
+  }
+  
+  polygon[style*="fill:#FAF9E6"] {
+    fill: #2d281f !important;
+  }
+  
+  g[style*="fill:#FFFFFF"][style*="fill-opacity:1"] {
+    fill: #1e1e1e !important;
+  }
+  
+  polygon[style*="fill:#FFFFFF"][style*="fill-opacity:1"] {
+    fill: #1e1e1e !important;
+  }
+  
+  /* ALL text elements - light text (default for most) */
+  text {
+    fill: #f0f0f0 !important;
+  }
+  
+  /* Mandatory text (from #595959) - light gray */
+  g[style*="fill:#595959"] text {
+    fill: #d0d0d0 !important;
+  }
+  
+  /* Regular attributes (from #66413F) - slightly less bright gray */
+  g[style*="fill:#66413F"] text {
+    fill: #b8b8b8 !important;
+  }
+  
+  /* Map stroke colors to dark mode alternatives */
+  /* #9A8484 (taupe) → lighter taupe */
+  g[style*="stroke:#9A8484"] {
+    stroke: #c8a89f !important;
+  }
+  
+  path[style*="stroke:#9A8484"] {
+    stroke: #c8a89f !important;
+  }
+  
+  /* #577AC1 (blue) → lighter blue */
+  g[style*="stroke:#577AC1"] {
+    stroke: #7fa3e8 !important;
+  }
+  
+  path[style*="stroke:#577AC1"] {
+    stroke: #7fa3e8 !important;
+  }
+  
+  /* #8C8C8C (gray) → lighter gray */
+  g[style*="stroke:#8C8C8C"] {
+    stroke: #a8a8a8 !important;
+  }
+  
+  path[style*="stroke:#8C8C8C"] {
+    stroke: #a8a8a8 !important;
+  }
+  
+  /* #69738C (blue-gray) → lighter blue-gray */
+  g[style*="stroke:#69738C"] {
+    stroke: #8a96b8 !important;
+  }
+  
+  path[style*="stroke:#69738C"] {
+    stroke: #8a96b8 !important;
+  }
+  
+  /* Black strokes → dark gray */
+  g[style*="stroke:#000000"][style*="stroke-opacity:1"] {
+    stroke: #707070 !important;
+  }
+  
+  path[style*="stroke:#000000"][style*="fill-opacity:0"] {
+    stroke: #707070 !important;
+  }
+}
+</style>
+</defs>
+
 <g style="fill:#FFFFFF;fill-opacity:1.00;">
 	 <rect x="0" y="0" width="1033" height="317" shape-rendering="auto"/>
 </g><g style="stroke-width:1;stroke-linecap:square;stroke-linejoin:miter; fill:#000000;fill-opacity:0.00; stroke:#000000; stroke-opacity:1.00;">

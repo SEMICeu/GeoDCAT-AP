@@ -17,5 +17,5 @@ In addition to the initial version which was based on GeoDCAT-AP 2.0.0 additiona
   - spatial resolution as text
   - topic category
 
-On 2025-10-22, the following property was added:
+For GeoDCAT-AP 3.1.0, the following property was included:
   - purpose

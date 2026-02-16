@@ -42,40 +42,10 @@
 		, 
 		
 		   {
-		    name: "Pavlina Fragkou",
-		      
-		      
-		    company: "DIGIT",
-		      
-		      
-		    }
-		, 
-		
-		   {
-		    name: "Andrea Perego",
-		      
-		      
-		    company: "European Parliament",
-		      
-		      
-		    }
-		, 
-		
-		   {
 		    name: "Joeri Robberecht",
 		      
 		      
 		    company: "DG ENV",
-		      
-		      
-		    }
-		, 
-		
-		   {
-		    name: "Arthur Schiltz",
-		      
-		      
-		    company: "PwC EU Services",
 		      
 		      
 		    }
@@ -129,10 +99,7 @@
 
     var myowners = [
             {
-                value: "Pavlina Fragkou (DIGIT)",
-            },
-            {
-                value: "SEMIC",
+                value: "SEMIC Team",
                 href: "https://joinup.ec.europa.eu/collection/semic-support-centre",
             },
 		]
@@ -141,24 +108,33 @@
    
 
     var respecConfig = {
-      prevRecURI: "https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
-      thisVersionURI: "https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/",
-      edDraftURI: "https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/",
+      prevRecURI: "https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/",
+      thisVersionURI: "https://semiceu.github.io/GeoDCAT-AP/930/releases/3.1.0/",
+      edDraftURI: "https://semiceu.github.io/GeoDCAT-AP/930/releases/3.1.0/",
       latestVersion: "https://semiceu.github.io/GeoDCAT-AP/930/releases/3.1.0/",
       specStatus: "base",
-      publishDate: "2024-07-09",
+      publishDate: "2026-02-16",
       editors: myeditors,
       authors: myauthors,
       otherLinks: [
         {
           key: "Owners:",
           data: myowners
-        }
-      ],
+        },
+        {
+          key: "Links",
+          data: [
+            {
+              value: "GeoDCAT-AP application profile",
+              href: "../../../releases/3.1.0/"
+            }
+          ]
+      }],
       github: "SEMICeu/DCAT-AP",
       shortName: "GeoDCAT-AP vocabulary, the 930 namespace",
       xref: "web-platform",
       doJsonLd: true,
+      historyURI: null,
       logos: [{
         src: "https://semiceu.github.io/CPOV/releases/2.1.0/html/semic-icon.png",
         url: "https://semic.eu",
@@ -211,13 +187,13 @@
           "publisher":"European Commission"
         },
         "GEODCAT-AP": {
-          "href":"https://semiceu.github.io/GEODCAT-AP/releases/3.0.0/",
-          "title":"GEODCAT-AP, a DCAT-AP profile for geospatial datasets",
+          "href":"https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/",
+          "title":"GeoDCAT-AP, a DCAT-AP profile for geospatial datasets",
           "publisher":"European Commission"
         },
         "GEODCAT-AP-2.0.0": {
-          "href":"https://semiceu.github.io/GEODCAT-AP/releases/2.0.0/",
-          "title":"GEODCAT-AP, a DCAT-AP profile for geospatial datasets",
+          "href":"https://semiceu.github.io/GeoDCAT-AP/releases/2.0.0/",
+          "title":"GeoDCAT-AP, a DCAT-AP profile for geospatial datasets",
           "publisher":"European Commission"
         },
         "PSI": {
@@ -270,7 +246,7 @@
     </style>
      
     <p class="copyright">
-        Copyright © 2024
+        Copyright © 2026
     </p>
     
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -300,19 +276,19 @@ All terms in this vocabulary have therefore a strong connection with GeoDCAT-AP.
 <h3>Revision history</h3>
 
 Up to GeoDCAT-AP 2.0.0 [[GEODCAT-AP-2.0.0]] this vocabulary and the DCAT-AP application profile for geospatial datasets where combined in a single document. 
-In order to facilitate the reuse of the defined terms in a broader context than GEODCAT-AP this specification with solely the terms defined in the namespace 
-<code>http://data.europa.eu/930</code> is created and published.
+In order to facilitate the reuse of the defined terms in a broader context than GeoDCAT-AP this specification with solely the terms defined in the namespace 
+<code>http://data.europa.eu/930/</code> is created and published.
 
 <p>
 This reuse objective resulted in wideing the domain and ranges of the properties. 
-In case the properties could be applied to any catalogued resource they are set to dcat:Resource.
-Where needed or possible, the range has been even further broadened to rdfs:Resource. 
-This is because according to DCAT the class dcat:Distribution not a subclass is from dcat:Resource. 
+In case the properties could be applied to any catalogued resource they are set to <code>dcat:Resource</code>.
+Where needed or possible, the range has been even further broadened to <code>rdfs:Resource</code>. 
+This is because according to DCAT the class <code>dcat:Distribution</code> not a subclass is from <code>dcat:Resource</code>. 
 </p>
 
 <p>
-The creation of  GEODCAT-AP 3 also applied the SEMIC Style Guide. 
-This resulted in the creation of explicit subproperties which where implictly present in GEODCAT-AP 2.
+The creation of GeoDCAT-AP 3 also applied the SEMIC Style Guide.
+This resulted in the creation of explicit subproperties which where implictly present in GeoDCAT-AP 2.
 </p>
 
 
@@ -338,10 +314,10 @@ It is under maintenance by the SEMIC action, Interoperable Europe.
 <section id="specstatus">
     <h2>Status</h2>
         <p>
-            This vocabulary has the status Candidate Recommendation published on 2024-07-09.
+            This vocabulary has the status SEMIC Recommendation published on 2026-02-16.
         </p>
         <p>
-            Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/GeoDCAT-AP/930/releases/3.0.0/CHANGELOG.html">Changelog</a>.
+            Information about the process and the decisions involved in the creation of this specification are consultable at the <a href="https://semiceu.github.io/GeoDCAT-AP/930/releases/3.1.0/CHANGELOG.html">Changelog</a>.
         </p>
 </section>
 
@@ -362,7 +338,7 @@ It is under maintenance by the SEMIC action, Interoperable Europe.
 		  This specification </span> of <a rel="cc:attributionURL" property="cc:attributionName" href="ORGANISATION" xmlns:cc="http://creativecommons.org/ns#">ORGANISATION </a> 
 	          is published under <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">"CC0"</a>.
 	-->
-             Copyright © 2024 European Union. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.
+             Copyright © 2026 European Union. All material in this repository is published under the license CC-BY 4.0, unless explicitly otherwise mentioned.
         </p>
     
 </section>
@@ -379,12 +355,9 @@ In order to conform to this vocabulary the usage of the terms MUST:
 
 When reusing the terms, the reuse principles of the SEMIC styleguide SHOULD be followed.
 <p/>
-To make the properties widely reuseable the domain and ranges are in most cases very open. For any kind of entity, the class rdfs:Resource is used.
-For any kind of value, rdfs:Literal is used. 
+To make the properties widely reuseable the domain and ranges are in most cases very open. For any kind of entity, the class <code>rdfs:Resource</code> is used.
+For any kind of value, <code>rdfs:Literal</code> is used. 
 In the RDF ecosystem these are the universal denominators. 
-
-
-
 
 </section>
 
@@ -433,9 +406,9 @@ The namespace for this vocabulary is <code>http://data.europa.eu/930/</code> .
     </div>
     <div>
         <figure>
-            <a href="/GeoDCAT-AP/930/releases/3.0.0/html/overview.jpg"
+            <a href="html/overview.svg"
             target="_blank">
-                <img src="/GeoDCAT-AP/930/releases/3.0.0/html/overview.jpg"/>
+                <img src="html/overview.svg"/>
             </a>
             <figcaption>UML diagram overview of the terms defined in the 930 namespace</figcaption>
         </figure>
@@ -861,6 +834,88 @@ Party who has processed the data in a manner such that the resource has been mod
 				</td>
 				<td> 
 				<a href="http://xmlns.com/foaf/0.1/Agent"><div class="shorten">http://xmlns.com/foaf/0.1/Agent</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+		    </tbody>
+        </table>
+	<p/>
+
+     
+
+   
+
+    <h3 id="purpose">purpose</h3>
+    <table class="def" id="table-term-purpose">
+                    <thead>
+                        <tr >
+                            <th class="" style="width:5%">
+					<a href="https://github.com/SEMICeu/GeoDCAT-AP/issues/new?title=Issue%20for%20purpose&body=Explain%20your%20issue"}}>
+					   <img src="html/callout.png" loading="lazy" alt="(create issue)" width="20" height="20"/>
+					</a>
+                            </th>
+                            <th class="" style="width:20%">
+                                Property
+                            </th>
+                            <th class="" style="width:75%">
+				<a href="http://data.europa.eu/930/purpose"
+					   data-toggle="tooltip"
+					   data-content="http://data.europa.eu/930/purpose"
+					   data-placement="right">purpose</a>
+                            </th> 
+                        </tr>
+                    </thead>
+		    <tbody> 
+                        <tr id="purpose.uri">
+                                <td></td>
+                                <td>
+				   URI
+				</td>
+				<td>
+				http://data.europa.eu/930/purpose
+				</td>
+			</tr>
+                        <tr id="purpose.label">
+                                <td></td>
+                                <td>
+				   label
+				</td>
+				<td>
+				purpose
+				</td>
+			</tr>
+                        <tr id="purpose.definition">
+                                <td></td>
+                                <td>
+				   definition
+				</td>
+				<td>
+				Summary of the intentions for which the dataset was developed.
+				</td>
+			</tr>
+			
+			
+                        <tr id="purpose.domain">
+                                <td></td>
+                                <td>
+				   domain
+				</td>
+				<td> 
+				<a href="http://www.w3.org/ns/dcat#Resource"><div class="shorten">http://www.w3.org/ns/dcat#Resource</div></a>
+                                
+				</td>
+			</tr>
+			
+			
+                        <tr id="purpose.range">
+                                <td></td>
+                                <td>
+				   range
+				</td>
+				<td> 
+				<a href="http://www.w3.org/2000/01/rdf-schema#Literal"><div class="shorten">http://www.w3.org/2000/01/rdf-schema#Literal</div></a>
                                 
 				</td>
 			</tr>
@@ -2083,6 +2138,9 @@ Past and current contributors are :
 	 	Jitka Faugnerova 
 		, 
            
+	 	Pavlina Fragkou
+		, 
+           
 	 	Benoit Fricheteau 
 		, 
            
@@ -2242,6 +2300,9 @@ Past and current contributors are :
 	 	Mihai Paunescu 
 		, 
            
+	 	Andrea Perego
+		, 
+           
 	 	Barbara Phiesel 
 		, 
            
@@ -2285,6 +2346,9 @@ Past and current contributors are :
 		, 
            
 	 	Danica Saponja 
+		, 
+           
+	 	Arthur Schiltz
 		, 
            
 	 	Giampaolo Sellitto 
