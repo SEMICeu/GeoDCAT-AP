@@ -6,9 +6,9 @@ GeoDCAT-AP is an extension of [DCAT-AP](https://joinup.ec.europa.eu/solution/dca
 
 GeoDCAT-AP is a joint initiative of the [European Commission's Joint Research Centre (JRC)](https://ec.europa.eu/jrc/), [DG ENV](https://commission.europa.eu/about-european-commission/departments-and-executive-agencies/environment_en), the [Publications Office of the European Union (PO)](https://publications.europa.eu/), [DG CONNECT](https://ec.europa.eu/info/departments/communications-networks-content-and-technology) and [DG DIGIT](https://commission.europa.eu/about-european-commission/departments-and-executive-agencies/digital-services_en) in the context of the [Interoperable Europe Programme](https://joinup.ec.europa.eu/interoperable-europe) (former ISA² programme).
 
-The latest version of GeoDCAT-AP (v3.0.0) is available:
+The latest version of GeoDCAT-AP (v3.1.0) is available:
 
-[https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/](https://semiceu.github.io/GeoDCAT-AP/releases/3.0.0/)
+[https://semiceu.github.io/GeoDCAT-AP/releases/3.1.0/](https://semiceu.github.io/GeoDCAT-AP/releases/3.1.0/)
 
 Any problems encountered, or suggestions for new functionalities can be submitted as [issues on the GeoDCAT-AP repository on GitHub](https://github.com/SEMICeu/GeoDCAT-AP/issues). A short guideline for submitting issues can be found at [SEMICeu/DCAT-AP/wiki/Submission-guidelines](https://github.com/SEMICeu/DCAT-AP/wiki/Submission-guidelines). 
 
@@ -24,7 +24,7 @@ Any problems encountered, or suggestions for new functionalities can be submitte
 Additional GeoDCAT-AP implementations are documented in the [dedicated page on Joinup](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/geodcat-application-profile-data-portals-europe/document/geodcat-ap-implementations).
 
 ## Licence
-Copyright © 2025 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the GeoDCAT-AP repository on GitHub.
+Copyright © 2026 European Union. All material in this repository is published under the licence CC-BY 4.0, unless explicitly otherwise mentioned. Any problems encountered, or suggestions for new functionalities can be submitted as issues on the GeoDCAT-AP repository on GitHub.
 
 ## Webinar Overview
 This section offers an overview of the webinars and events related to GeoDCAT-AP.
