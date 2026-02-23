@@ -29,7 +29,11 @@ Copyright © 2026 European Union. All material in this repository is published u
 ## Webinar Overview
 This section offers an overview of the webinars and events related to GeoDCAT-AP.
 
-The table below shows webinars and events related to **latest version of GeoDCAT-AP**:
+For **GeoDCAT-AP 3.1.0**, no webinars were held, the discussions took place mainly in GitHub issues, and during the [ISO & GeoDCAT-AP metadata Implementation Pilot](https://github.com/INSPIRE-MIF/GeoDCAT-AP-pilot), carried out by the INSPIRE community.
+
+The table below shows webinars and events related to **GeoDCAT-AP 3.0.0**:
+<details closed>
+  <summary>Click to open table</summary>
 <table>  
 <tbody>  
 <tr>  
@@ -73,7 +77,8 @@ The table below shows webinars and events related to **latest version of GeoDCAT
 </td>  
 </tr>  
 </tbody>  
-</table>  
+</table>
+</details>
 
 The table below shows webinars and events related to **previous versions of GeoDCAT-AP**:
 <details closed>
